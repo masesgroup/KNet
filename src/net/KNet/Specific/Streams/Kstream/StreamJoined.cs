@@ -87,7 +87,7 @@ namespace MASES.KNet.Streams.Kstream
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/StreamJoined.html#as(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/StreamJoined.html#as(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <returns><see cref="StreamJoined{K, V1, V2, TJVMK, TJVMV1, TJVMV2}"/></returns>
@@ -98,7 +98,7 @@ namespace MASES.KNet.Streams.Kstream
             return new StreamJoined<K, V1, V2, TJVMK, TJVMV1, TJVMV2>(cons);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/StreamJoined.html#with(org.apache.kafka.common.serialization.Serde,org.apache.kafka.common.serialization.Serde,org.apache.kafka.common.serialization.Serde)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/StreamJoined.html#with(org.apache.kafka.common.serialization.Serde,org.apache.kafka.common.serialization.Serde,org.apache.kafka.common.serialization.Serde)"/>
         /// </summary>
         /// <param name="arg0"><see cref="ISerDes{K, TJVMK}"/></param>
         /// <param name="arg1"><see cref="ISerDes{V1, TJVMV1}"/></param>
@@ -110,7 +110,7 @@ namespace MASES.KNet.Streams.Kstream
             return new StreamJoined<K, V1, V2, TJVMK, TJVMV1, TJVMV2>(cons);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/StreamJoined.html#with(org.apache.kafka.streams.state.DslStoreSuppliers)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/StreamJoined.html#with(org.apache.kafka.streams.state.DslStoreSuppliers)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.State.DslStoreSuppliers"/></param>
         /// <returns><see cref="StreamJoined{K, V1, V2, TJVMK, TJVMV1, TJVMV2}"/></returns>
@@ -120,7 +120,7 @@ namespace MASES.KNet.Streams.Kstream
             return new StreamJoined<K, V1, V2, TJVMK, TJVMV1, TJVMV2>(cons);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/StreamJoined.html#with(org.apache.kafka.streams.state.WindowBytesStoreSupplier,org.apache.kafka.streams.state.WindowBytesStoreSupplier)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/StreamJoined.html#with(org.apache.kafka.streams.state.WindowBytesStoreSupplier,org.apache.kafka.streams.state.WindowBytesStoreSupplier)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.State.WindowBytesStoreSupplier"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.State.WindowBytesStoreSupplier"/></param>
@@ -135,7 +135,7 @@ namespace MASES.KNet.Streams.Kstream
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/StreamJoined.html#withDslStoreSuppliers(org.apache.kafka.streams.state.DslStoreSuppliers)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/StreamJoined.html#withDslStoreSuppliers(org.apache.kafka.streams.state.DslStoreSuppliers)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.State.DslStoreSuppliers"/></param>
         /// <returns><see cref="StreamJoined{K, V1, V2, TJVMK, TJVMV1, TJVMV2}"/></returns>
@@ -146,7 +146,7 @@ namespace MASES.KNet.Streams.Kstream
             return this;
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/StreamJoined.html#withKeySerde(org.apache.kafka.common.serialization.Serde)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/StreamJoined.html#withKeySerde(org.apache.kafka.common.serialization.Serde)"/>
         /// </summary>
         /// <param name="arg0"><see cref="ISerDes{K, TJVMK}"/></param>
         /// <returns><see cref="StreamJoined{K, V1, V2, TJVMK, TJVMV1, TJVMV2}"/></returns>
@@ -157,7 +157,7 @@ namespace MASES.KNet.Streams.Kstream
             return this;
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/StreamJoined.html#withLoggingDisabled()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/StreamJoined.html#withLoggingDisabled()"/>
         /// </summary>
         /// <returns><see cref="StreamJoined{K, V1, V2, TJVMK, TJVMV1, TJVMV2}"/></returns>
         public StreamJoined<K, V1, V2, TJVMK, TJVMV1, TJVMV2> WithLoggingDisabled()
@@ -167,7 +167,7 @@ namespace MASES.KNet.Streams.Kstream
             return this;
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/StreamJoined.html#withLoggingEnabled(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/StreamJoined.html#withLoggingEnabled(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <returns><see cref="StreamJoined{K, V1, V2, TJVMK, TJVMV1, TJVMV2}"/></returns>
@@ -178,7 +178,7 @@ namespace MASES.KNet.Streams.Kstream
             return this;
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/StreamJoined.html#withOtherStoreSupplier(org.apache.kafka.streams.state.WindowBytesStoreSupplier)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/StreamJoined.html#withOtherStoreSupplier(org.apache.kafka.streams.state.WindowBytesStoreSupplier)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.State.WindowBytesStoreSupplier"/></param>
         /// <returns><see cref="StreamJoined{K, V1, V2, TJVMK, TJVMV1, TJVMV2}"/></returns>
@@ -189,7 +189,7 @@ namespace MASES.KNet.Streams.Kstream
             return this;
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/StreamJoined.html#withOtherValueSerde(org.apache.kafka.common.serialization.Serde)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/StreamJoined.html#withOtherValueSerde(org.apache.kafka.common.serialization.Serde)"/>
         /// </summary>
         /// <param name="arg0"><see cref="ISerDes{V2, TJVMV2}"/></param>
         /// <returns><see cref="StreamJoined{K, V1, V2, TJVMK, TJVMV1, TJVMV2}"/></returns>
@@ -200,7 +200,7 @@ namespace MASES.KNet.Streams.Kstream
             return this;
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/StreamJoined.html#withStoreName(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/StreamJoined.html#withStoreName(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <returns><see cref="StreamJoined{K, V1, V2, TJVMK, TJVMV1, TJVMV2}"/></returns>
@@ -212,7 +212,7 @@ namespace MASES.KNet.Streams.Kstream
             return this;
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/StreamJoined.html#withThisStoreSupplier(org.apache.kafka.streams.state.WindowBytesStoreSupplier)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/StreamJoined.html#withThisStoreSupplier(org.apache.kafka.streams.state.WindowBytesStoreSupplier)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.State.WindowBytesStoreSupplier"/></param>
         /// <returns><see cref="StreamJoined{K, V1, V2, TJVMK, TJVMV1, TJVMV2}"/></returns>
@@ -223,7 +223,7 @@ namespace MASES.KNet.Streams.Kstream
             return this;
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/StreamJoined.html#withValueSerde(org.apache.kafka.common.serialization.Serde)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/StreamJoined.html#withValueSerde(org.apache.kafka.common.serialization.Serde)"/>
         /// </summary>
         /// <param name="arg0"><see cref="ISerDes{V1, TJVMV1}"/></param>
         /// <returns><see cref="StreamJoined{K, V1, V2, TJVMK, TJVMV1, TJVMV2}"/></returns>

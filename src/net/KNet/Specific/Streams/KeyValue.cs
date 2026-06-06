@@ -107,7 +107,7 @@ namespace MASES.KNet.Streams
         }
 
         /// <summary>
-        /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/KeyValue.html#key"/>
+        /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/KeyValue.html#key"/>
         /// </summary>
         public K Key
         {
@@ -126,7 +126,7 @@ namespace MASES.KNet.Streams
             }
         }
         /// <summary>
-        /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/KeyValue.html#value"/>
+        /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/KeyValue.html#value"/>
         /// </summary>
         public V Value
         {
