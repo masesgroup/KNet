@@ -52,7 +52,7 @@ namespace MASES.KNet.Streams.State
                 if (input is IJavaObject obj)
                 {
                     return new TimestampedKeyValue<K, V, TJVMK, TJVMV>(_factory,
-                                                                       KeyValueSupport<TJVMK, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV>>.Create(obj),
+                                                                       JVMBridgeBase.WrapsDirect<Org.Apache.Kafka.Streams.KeyValue<TJVMK, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV>>>(obj),
                                                                        keySerDes, true);
                 }
                 throw new InvalidCastException($"input is not a valid IJavaObject");
@@ -96,7 +96,7 @@ namespace MASES.KNet.Streams.State
                 if (input is IJavaObject obj)
                 {
                     return new TimestampedKeyValue<K, V, TJVMK, TJVMV>(_factory,
-                                                                       KeyValueSupport<TJVMK, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV>>.Create(obj),
+                                                                       JVMBridgeBase.WrapsDirect<Org.Apache.Kafka.Streams.KeyValue<TJVMK, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV>>>(obj),
                                                                        _keySerDes, false);
                 }
                 throw new InvalidCastException($"input is not a valid IJavaObject");
@@ -161,7 +161,7 @@ namespace MASES.KNet.Streams.State
             IGenericSerDesFactory factory = Factory;
             _keySerDes ??= factory?.BuildKeySerDes<K, TJVMK>();
             var kv = _iterator.Next();
-            return new TimestampedKeyValue<K, V, TJVMK, TJVMV>(factory, KeyValueSupport<TJVMK, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV>>.Create(kv), _keySerDes, false);
+            return new TimestampedKeyValue<K, V, TJVMK, TJVMV>(factory, kv, _keySerDes, false);
         }
         /// <summary>
         /// <see href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Iterator.html#remove()"/>
