@@ -150,6 +150,7 @@ namespace MASES.KNet.Streams.State
         public TimestampedWindowedKeyValue<K, V, TJVMK, TJVMV> Next()
         {
             var kv = _iterator.Next();
+            if (kv == null) return null;
             return new TimestampedWindowedKeyValue<K, V, TJVMK, TJVMV>(Factory, kv);
         }
         /// <summary>
