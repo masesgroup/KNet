@@ -175,6 +175,7 @@ namespace MASES.KNet.Streams.State
             _keySerDes ??= factory?.BuildKeySerDes<K, TJVMK>();
             _valueSerDes ??= factory?.BuildValueSerDes<V, TJVMV>();
             var kv = _iterator.Next();
+            if (kv == null) return null;
             return new KeyValue<K, V, TJVMK, TJVMV>(factory, KeyValueSupport<TJVMK, TJVMV>.Create(kv), _keySerDes, _valueSerDes, false);
         }
         /// <summary>
