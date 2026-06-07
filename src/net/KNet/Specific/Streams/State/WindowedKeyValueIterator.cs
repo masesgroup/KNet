@@ -163,6 +163,7 @@ namespace MASES.KNet.Streams.State
             IGenericSerDesFactory factory = Factory;
             _valueSerDes ??= factory?.BuildValueSerDes<V, TJVMV>();
             var kv = _iterator.Next();
+            if (kv == null) return null;
             return new WindowedKeyValue<K, V, TJVMK, TJVMV>(factory, KeyValueSupport<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, TJVMV>.Create(kv), _valueSerDes, false);
         }
         /// <summary>
