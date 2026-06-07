@@ -17,7 +17,6 @@
 */
 
 using MASES.KNet.Serialization;
-using Org.Apache.Kafka.Streams;
 using System;
 using System.Threading;
 
@@ -30,9 +29,9 @@ namespace MASES.KNet.Streams
     /// <typeparam name="V">The value type</typeparam>
     /// <typeparam name="TJVMK">The JVM type of <typeparamref name="K"/></typeparam>
     /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
-    public sealed class KeyValue<K, V, TJVMK, TJVMV> : IKNetInnerReference<KeyValue<TJVMK, TJVMV>>, IGenericSerDesFactoryApplier, IDisposable
+    public sealed class KeyValue<K, V, TJVMK, TJVMV> : IKNetInnerReference<Org.Apache.Kafka.Streams.KeyValue<TJVMK, TJVMV>>, IGenericSerDesFactoryApplier, IDisposable
     {
-        KeyValue<TJVMK, TJVMV> _inner = null;
+        Org.Apache.Kafka.Streams.KeyValue<TJVMK, TJVMV> _inner = null;
         K _key;
         bool _keyStored;
         V _value;
@@ -43,7 +42,7 @@ namespace MASES.KNet.Streams
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set => _factory = value; }
 
         internal KeyValue(IGenericSerDesFactory factory,
-                          KeyValue<TJVMK, TJVMV> value,
+                          Org.Apache.Kafka.Streams.KeyValue<TJVMK, TJVMV> value,
                           ISerDes<K, TJVMK> keySerDes,
                           ISerDes<V, TJVMV> valueSerDes,
                           bool fromPrefetched)
@@ -70,7 +69,7 @@ namespace MASES.KNet.Streams
         }
 
         /// <inheritdoc/>
-        public KeyValue<TJVMK, TJVMV> InnerReference => _inner;
+        public Org.Apache.Kafka.Streams.KeyValue<TJVMK, TJVMV> InnerReference => _inner;
 
         volatile int _disposed; // 0 = live, 1 = disposed
         /// <summary>
