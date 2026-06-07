@@ -161,6 +161,7 @@ namespace MASES.KNet.Streams.State
             IGenericSerDesFactory factory = Factory;
             _keySerDes ??= factory?.BuildKeySerDes<K, TJVMK>();
             var kv = _iterator.Next();
+            if (kv == null) return null;
             return new TimestampedKeyValue<K, V, TJVMK, TJVMV>(factory, kv, _keySerDes, false);
         }
         /// <summary>
