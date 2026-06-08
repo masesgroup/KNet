@@ -32,9 +32,9 @@ namespace MASES.KNet.Streams
     /// <typeparam name="V">The value type</typeparam>
     /// <typeparam name="TJVMK">The JVM type of <typeparamref name="K"/></typeparam>
     /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
-    public sealed class TimestampedKeyValue<K, V, TJVMK, TJVMV> : IKNetInnerReference<KeyValueSupport<TJVMK, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV>>>, IGenericSerDesFactoryApplier, IDisposable
+    public sealed class TimestampedKeyValue<K, V, TJVMK, TJVMV> : IKNetInnerReference<Org.Apache.Kafka.Streams.KeyValue<TJVMK, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV>>>, IGenericSerDesFactoryApplier, IDisposable
     {
-        KeyValueSupport<TJVMK, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV>> _inner = null;
+        Org.Apache.Kafka.Streams.KeyValue<TJVMK, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV>> _inner = null;
 
         K _key;
         bool _keyStored = false;
@@ -44,7 +44,7 @@ namespace MASES.KNet.Streams
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set => _factory = value; }
 
         internal TimestampedKeyValue(IGenericSerDesFactory factory,
-                                     KeyValueSupport<TJVMK, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV>> value,
+                                     Org.Apache.Kafka.Streams.KeyValue<TJVMK, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV>> value,
                                      ISerDes<K, TJVMK> keySerDes,
                                      bool fromPrefetched)
         {
@@ -54,7 +54,7 @@ namespace MASES.KNet.Streams
             if (fromPrefetched)
             {
                 _keySerDes ??= _factory?.BuildKeySerDes<K, TJVMK>();
-                var key = _inner.Key;
+                var key = _inner.key;
                 using var disposable = key as IDisposable;
                 _key = _keySerDes.Deserialize((Java.Lang.String)null, key);
                 _keyStored = true;
@@ -62,7 +62,7 @@ namespace MASES.KNet.Streams
         }
 
         /// <inheritdoc/>
-        public KeyValueSupport<TJVMK, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV>> InnerReference => _inner;
+        public Org.Apache.Kafka.Streams.KeyValue<TJVMK, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV>> InnerReference => _inner;
 
         volatile int _disposed; // 0 = live, 1 = disposed
         /// <summary>
@@ -110,7 +110,7 @@ namespace MASES.KNet.Streams
                 if (!_keyStored)
                 {
                     _keySerDes ??= _factory?.BuildKeySerDes<K, TJVMK>();
-                    var key = _inner.Key;
+                    var key = _inner.key;
                     using var disposable = key as IDisposable;
                     _key = _keySerDes.Deserialize((Java.Lang.String)null, key);
                     _keyStored = true;
@@ -126,7 +126,7 @@ namespace MASES.KNet.Streams
             get
             {
                 CheckDisposed();
-                _value ??= new ValueAndTimestamp<V, TJVMV>(_factory, _inner.Value);
+                _value ??= new ValueAndTimestamp<V, TJVMV>(_factory, _inner.value);
                 return _value;
             }
         }
