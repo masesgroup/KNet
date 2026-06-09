@@ -82,19 +82,19 @@ namespace MASES.KNet.Connect
         /// Converts an <see cref="IEnumerable{SinkRecord}"/> in <see cref="IEnumerable{T}"/> of <see cref="SinkRecord{Object, TValue}"/>
         /// </summary>
         /// <param name="source">The <see cref="IEnumerable{SinkRecord}"/> to convert</param>
-        /// <remarks><paramref name="source"/> cannot be used after <see cref="CastDirectAndDetach{TValue}(IEnumerable{SinkRecord})"/> is invoked</remarks>
-        public static IEnumerable<SinkRecord<object, TValue>> CastDirectAndDetach<TValue>(this IEnumerable<SinkRecord> source)
+        /// <remarks><paramref name="source"/> cannot be used after <see cref="CastDirectAndDispose{TValue}(IEnumerable{SinkRecord})"/> is invoked</remarks>
+        public static IEnumerable<SinkRecord<object, TValue>> CastDirectAndDispose<TValue>(this IEnumerable<SinkRecord> source)
         {
-            return source.Select((o) => o.CastDirectAndDetach<SinkRecord<object, TValue>>());
+            return source.Select((o) => o.CastDirectAndDispose<SinkRecord<object, TValue>>());
         }
         /// <summary>
         /// Converts an <see cref="IEnumerable{SinkRecord}"/> in <see cref="IEnumerable{T}"/> of <see cref="SinkRecord{TKey, TValue}"/>
         /// </summary>
         /// <param name="source">The <see cref="IEnumerable{SinkRecord}"/> to convert</param>
-        /// <remarks><paramref name="source"/> cannot be used after <see cref="CastDirectAndDetach{TKey, TValue}(IEnumerable{SinkRecord})"/> is invoked</remarks>
-        public static IEnumerable<SinkRecord<TKey, TValue>> CastDirectAndDetach<TKey, TValue>(this IEnumerable<SinkRecord> source)
+        /// <remarks><paramref name="source"/> cannot be used after <see cref="CastDirectAndDispose{TKey, TValue}(IEnumerable{SinkRecord})"/> is invoked</remarks>
+        public static IEnumerable<SinkRecord<TKey, TValue>> CastDirectAndDispose<TKey, TValue>(this IEnumerable<SinkRecord> source)
         {
-            return source.Select((o) => o.CastDirectAndDetach<SinkRecord<TKey, TValue>>());
+            return source.Select((o) => o.CastDirectAndDispose<SinkRecord<TKey, TValue>>());
         }
     }
 }
