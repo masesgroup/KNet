@@ -117,7 +117,7 @@
 			<plugin>
 				<groupId>org.codehaus.gmavenplus</groupId>
 				<artifactId>gmavenplus-plugin</artifactId>
-				<version>5.0.0</version>
+				<version>4.3.1</version>
 				<executions>
 					<execution>
 						<phase>generate-resources</phase>
