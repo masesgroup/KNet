@@ -42,7 +42,7 @@ namespace MASES.KNet.Streams.Kstream
             CountingMaterialized<K, TJVMK> cont = new();
             if (cont is IKNetMaterialized<TJVMK, Java.Lang.Long> setStore)
             {
-                setStore.SetStore(mat.CastDirectAndDetach<Org.Apache.Kafka.Streams.Kstream.Materialized<TJVMK, Java.Lang.Long, Org.Apache.Kafka.Streams.State.KeyValueStore<Org.Apache.Kafka.Common.Utils.Bytes, byte[]>>>());
+                setStore.SetStore(mat.CastDirectAndDispose<Org.Apache.Kafka.Streams.Kstream.Materialized<TJVMK, Java.Lang.Long, Org.Apache.Kafka.Streams.State.KeyValueStore<Org.Apache.Kafka.Common.Utils.Bytes, byte[]>>>());
             }
             return cont;
         }
@@ -80,7 +80,7 @@ namespace MASES.KNet.Streams.Kstream
             Materialized<K, V, TJVMK, TJVMV> cont = new();
             if (cont is IKNetMaterialized<TJVMK, TJVMV> setStore)
             {
-                setStore.SetStore(mat.CastDirectAndDetach<Org.Apache.Kafka.Streams.Kstream.Materialized<TJVMK, TJVMV, Org.Apache.Kafka.Streams.State.KeyValueStore<Org.Apache.Kafka.Common.Utils.Bytes, byte[]>>>());
+                setStore.SetStore(mat.CastDirectAndDispose<Org.Apache.Kafka.Streams.Kstream.Materialized<TJVMK, TJVMV, Org.Apache.Kafka.Streams.State.KeyValueStore<Org.Apache.Kafka.Common.Utils.Bytes, byte[]>>>());
             }
             return cont;
         }
@@ -225,7 +225,7 @@ namespace MASES.KNet.Streams.Kstream
             TContainer cont = new();
             if (cont is IKNetMaterialized<TJVMK, TJVMV> setStore)
             {
-                setStore.SetStore(mat.CastDirectAndDetach<Org.Apache.Kafka.Streams.Kstream.Materialized<TJVMK, TJVMV, Org.Apache.Kafka.Streams.State.KeyValueStore<Org.Apache.Kafka.Common.Utils.Bytes, byte[]>>>());
+                setStore.SetStore(mat.CastDirectAndDispose<Org.Apache.Kafka.Streams.Kstream.Materialized<TJVMK, TJVMV, Org.Apache.Kafka.Streams.State.KeyValueStore<Org.Apache.Kafka.Common.Utils.Bytes, byte[]>>>());
             }
             return cont;
         }
@@ -240,7 +240,7 @@ namespace MASES.KNet.Streams.Kstream
             TContainer cont = new();
             if (cont is IKNetMaterialized<TJVMK, TJVMV> setStore)
             {
-                setStore.SetStore(mat.CastDirectAndDetach<Org.Apache.Kafka.Streams.Kstream.Materialized<TJVMK, TJVMV, Org.Apache.Kafka.Streams.State.KeyValueStore<Org.Apache.Kafka.Common.Utils.Bytes, byte[]>>>());
+                setStore.SetStore(mat.CastDirectAndDispose<Org.Apache.Kafka.Streams.Kstream.Materialized<TJVMK, TJVMV, Org.Apache.Kafka.Streams.State.KeyValueStore<Org.Apache.Kafka.Common.Utils.Bytes, byte[]>>>());
             }
             return cont;
         }
