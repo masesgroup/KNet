@@ -141,6 +141,8 @@ PrivateData = @{
 
     PSData = @{
 
+        Prerelease = 'rc.1'
+        
         Tags = @('KNetPS', 'PSEdition_Core', 'PSEdition_Desktop', 'Windows', 'Linux', 'ZooKeeper', 'Apache', 'Kafka', 'ApacheKafka', 'Admin', 'Consumer', 'Producer')
 
         LicenseUri = 'https://github.com/masesgroup/KNet/blob/master/LICENSE'
