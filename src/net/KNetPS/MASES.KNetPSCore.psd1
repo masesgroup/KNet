@@ -10,7 +10,7 @@
 ModuleToProcess = 'MASES.KNetPS.dll'
 
 # Version number of this module.
-ModuleVersion = '2.9.11'
+ModuleVersion = '2.9.12'
 
 # ID used to uniquely identify this module
 GUID = 'F7C13891-7BC6-4025-ACF5-04509852F87D'
@@ -140,6 +140,8 @@ FileList = ''
 PrivateData = @{
 
     PSData = @{
+
+        Prerelease = 'rc1'
 
         Tags = @('KNetPS', 'PSEdition_Core', 'Windows', 'Linux', 'ZooKeeper', 'Apache', 'Kafka', 'ApacheKafka', 'Admin', 'Consumer', 'Producer')
 
