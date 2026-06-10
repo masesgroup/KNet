@@ -28,12 +28,19 @@ namespace MASES.KNet.Streams.State
         /// <summary>
         /// Supporting class for <see cref="QueryableStoreTypes"/>
         /// </summary>
-        /// <typeparam name="TKNetManagedStore"></typeparam>
-        /// <typeparam name="TStore"></typeparam>
-        public class StoreType<TKNetManagedStore, TStore> where TKNetManagedStore : ManagedStore<TStore>, IGenericSerDesFactoryApplier, new()
+        /// <typeparam name="TKNetManagedStore">A class extending <see cref="ManagedStore{TStore}"/> </typeparam>
+        /// <typeparam name="TStore">The standard Kafka backing store</typeparam>
+        public class StoreType<TKNetManagedStore, TStore> : System.IDisposable
+            where TKNetManagedStore : ManagedStore<TStore>, IGenericSerDesFactoryApplier
         {
-            internal StoreType(Org.Apache.Kafka.Streams.State.QueryableStoreType<TStore> store) { Store = store; }
-            internal Org.Apache.Kafka.Streams.State.QueryableStoreType<TStore> Store;
+            Org.Apache.Kafka.Streams.State.QueryableStoreType<TStore> _store;
+            internal StoreType(Org.Apache.Kafka.Streams.State.QueryableStoreType<TStore> store) { _store = store; }
+            internal Org.Apache.Kafka.Streams.State.QueryableStoreType<TStore> Store => _store;
+            /// <inheritdoc/>
+            void System.IDisposable.Dispose()
+            {
+                _store?.Dispose();
+            }
         }
 
         /// <summary>
