@@ -196,9 +196,9 @@ namespace MASES.KNet.Streams
             where TKNetManagedStore : ManagedStore<TStore>, IGenericSerDesFactoryApplier, new()
         {
             TKNetManagedStore store = new();
-            var substore = _inner.Store<TStore>(arg0);
             if (store is IManagedStore<TStore> knetManagedStore)
             {
+                var substore = _inner.Store<TStore>(arg0);
                 knetManagedStore.SetData(_factory, substore);
             }
             return store;
@@ -209,11 +209,11 @@ namespace MASES.KNet.Streams
             where TKNetManagedStore : ManagedStore<TStore>, IGenericSerDesFactoryApplier, new()
         {
             using Java.Lang.String jStorageId = storageId;
-            var sqp = Org.Apache.Kafka.Streams.StoreQueryParameters<TStore>.FromNameAndType(jStorageId, storeType.Store);
+            using var sqp = Org.Apache.Kafka.Streams.StoreQueryParameters<TStore>.FromNameAndType(jStorageId, storeType.Store);
             TKNetManagedStore store = new();
-            var substore = _inner.Store<TStore>(sqp);
             if (store is IManagedStore<TStore> knetManagedStore)
             {
+                var substore = _inner.Store<TStore>(sqp);
                 knetManagedStore.SetData(_factory, substore);
             }
             return store;
