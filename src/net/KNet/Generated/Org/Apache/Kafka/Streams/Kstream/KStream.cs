@@ -714,7 +714,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Kstream.Produced"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KStream"/></returns>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public Org.Apache.Kafka.Streams.Kstream.KStream Through(Java.Lang.String arg0, Org.Apache.Kafka.Streams.Kstream.Produced arg1)
         {
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KStream>("through", "(Ljava/lang/String;Lorg/apache/kafka/streams/kstream/Produced;)Lorg/apache/kafka/streams/kstream/KStream;", arg0, arg1);
@@ -724,7 +724,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KStream"/></returns>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public Org.Apache.Kafka.Streams.Kstream.KStream Through(Java.Lang.String arg0)
         {
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KStream>("through", "(Ljava/lang/String;)Lorg/apache/kafka/streams/kstream/KStream;", arg0);
@@ -735,7 +735,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.Named"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Kstream.Predicate"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KStream"/></returns>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public Org.Apache.Kafka.Streams.Kstream.KStream[] Branch(Org.Apache.Kafka.Streams.Kstream.Named arg0, params Org.Apache.Kafka.Streams.Kstream.Predicate[] arg1)
         {
             return IExecuteWithSignatureArray<Org.Apache.Kafka.Streams.Kstream.KStream>("branch", "(Lorg/apache/kafka/streams/kstream/Named;[Lorg/apache/kafka/streams/kstream/Predicate;)[Lorg/apache/kafka/streams/kstream/KStream;", MASES.JNet.Specific.Extensions.JNetCoreExtensions.VarArgRebuild(arg1, arg0));
@@ -745,7 +745,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.Predicate"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KStream"/></returns>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public Org.Apache.Kafka.Streams.Kstream.KStream[] Branch(params Org.Apache.Kafka.Streams.Kstream.Predicate[] arg0)
         {
             return IExecuteWithSignatureArray<Org.Apache.Kafka.Streams.Kstream.KStream>("branch", "([Lorg/apache/kafka/streams/kstream/Predicate;)[Lorg/apache/kafka/streams/kstream/KStream;", arg0);
@@ -816,7 +816,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Processor.ProcessorSupplier"/></param>
         /// <param name="arg1"><see cref="Java.Lang.String"/></param>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public void Process(Org.Apache.Kafka.Streams.Processor.ProcessorSupplier arg0, params Java.Lang.String[] arg1)
         {
             IExecuteWithSignature("process", "(Lorg/apache/kafka/streams/processor/ProcessorSupplier;[Ljava/lang/String;)V", MASES.JNet.Specific.Extensions.JNetCoreExtensions.VarArgRebuild(arg1, arg0));
@@ -827,7 +827,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Processor.ProcessorSupplier"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Kstream.Named"/></param>
         /// <param name="arg2"><see cref="Java.Lang.String"/></param>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public void Process(Org.Apache.Kafka.Streams.Processor.ProcessorSupplier arg0, Org.Apache.Kafka.Streams.Kstream.Named arg1, params Java.Lang.String[] arg2)
         {
             IExecuteWithSignature("process", "(Lorg/apache/kafka/streams/processor/ProcessorSupplier;Lorg/apache/kafka/streams/kstream/Named;[Ljava/lang/String;)V", MASES.JNet.Specific.Extensions.JNetCoreExtensions.VarArgRebuild(arg2, arg0, arg1));
@@ -1792,7 +1792,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Kstream.Produced"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KStream"/></returns>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public Org.Apache.Kafka.Streams.Kstream.KStream<K, V> Through(Java.Lang.String arg0, Org.Apache.Kafka.Streams.Kstream.Produced<K, V> arg1)
         {
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KStream<K, V>>("through", "(Ljava/lang/String;Lorg/apache/kafka/streams/kstream/Produced;)Lorg/apache/kafka/streams/kstream/KStream;", arg0, arg1);
@@ -1802,7 +1802,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KStream"/></returns>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public Org.Apache.Kafka.Streams.Kstream.KStream<K, V> Through(Java.Lang.String arg0)
         {
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.KStream<K, V>>("through", "(Ljava/lang/String;)Lorg/apache/kafka/streams/kstream/KStream;", arg0);
@@ -1815,7 +1815,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <typeparam name="Arg1objectSuperK"><typeparamref name="K"/></typeparam>
         /// <typeparam name="Arg1objectSuperV"><typeparamref name="V"/></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KStream"/></returns>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public Org.Apache.Kafka.Streams.Kstream.KStream<K, V>[] Branch<Arg1objectSuperK, Arg1objectSuperV>(Org.Apache.Kafka.Streams.Kstream.Named arg0, params Org.Apache.Kafka.Streams.Kstream.Predicate<Arg1objectSuperK, Arg1objectSuperV>[] arg1) where Arg1objectSuperK : K where Arg1objectSuperV : V
         {
             return IExecuteWithSignatureArray<Org.Apache.Kafka.Streams.Kstream.KStream<K, V>>("branch", "(Lorg/apache/kafka/streams/kstream/Named;[Lorg/apache/kafka/streams/kstream/Predicate;)[Lorg/apache/kafka/streams/kstream/KStream;", MASES.JNet.Specific.Extensions.JNetCoreExtensions.VarArgRebuild(arg1, arg0));
@@ -1827,7 +1827,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <typeparam name="Arg0objectSuperK"><typeparamref name="K"/></typeparam>
         /// <typeparam name="Arg0objectSuperV"><typeparamref name="V"/></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.KStream"/></returns>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public Org.Apache.Kafka.Streams.Kstream.KStream<K, V>[] Branch<Arg0objectSuperK, Arg0objectSuperV>(params Org.Apache.Kafka.Streams.Kstream.Predicate<Arg0objectSuperK, Arg0objectSuperV>[] arg0) where Arg0objectSuperK : K where Arg0objectSuperV : V
         {
             return IExecuteWithSignatureArray<Org.Apache.Kafka.Streams.Kstream.KStream<K, V>>("branch", "([Lorg/apache/kafka/streams/kstream/Predicate;)[Lorg/apache/kafka/streams/kstream/KStream;", arg0);
@@ -1904,7 +1904,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <param name="arg1"><see cref="Java.Lang.String"/></param>
         /// <typeparam name="Arg0objectSuperK"><typeparamref name="K"/></typeparam>
         /// <typeparam name="Arg0objectSuperV"><typeparamref name="V"/></typeparam>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public void Process<Arg0objectSuperK, Arg0objectSuperV>(Org.Apache.Kafka.Streams.Processor.ProcessorSupplier<Arg0objectSuperK, Arg0objectSuperV> arg0, params Java.Lang.String[] arg1) where Arg0objectSuperK : K where Arg0objectSuperV : V
         {
             IExecuteWithSignature("process", "(Lorg/apache/kafka/streams/processor/ProcessorSupplier;[Ljava/lang/String;)V", MASES.JNet.Specific.Extensions.JNetCoreExtensions.VarArgRebuild(arg1, arg0));
@@ -1917,7 +1917,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <param name="arg2"><see cref="Java.Lang.String"/></param>
         /// <typeparam name="Arg0objectSuperK"><typeparamref name="K"/></typeparam>
         /// <typeparam name="Arg0objectSuperV"><typeparamref name="V"/></typeparam>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public void Process<Arg0objectSuperK, Arg0objectSuperV>(Org.Apache.Kafka.Streams.Processor.ProcessorSupplier<Arg0objectSuperK, Arg0objectSuperV> arg0, Org.Apache.Kafka.Streams.Kstream.Named arg1, params Java.Lang.String[] arg2) where Arg0objectSuperK : K where Arg0objectSuperV : V
         {
             IExecuteWithSignature("process", "(Lorg/apache/kafka/streams/processor/ProcessorSupplier;Lorg/apache/kafka/streams/kstream/Named;[Ljava/lang/String;)V", MASES.JNet.Specific.Extensions.JNetCoreExtensions.VarArgRebuild(arg2, arg0, arg1));

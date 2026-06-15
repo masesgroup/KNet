@@ -309,7 +309,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRecords"/></returns>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public Org.Apache.Kafka.Clients.Consumer.ConsumerRecords Poll(long arg0)
         {
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Consumer.ConsumerRecords>("poll", "(J)Lorg/apache/kafka/clients/consumer/ConsumerRecords;", arg0);
@@ -320,7 +320,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.TopicPartition"/></param>
         /// <param name="arg1"><see cref="Java.Time.Duration"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata"/></returns>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata Committed(Org.Apache.Kafka.Common.TopicPartition arg0, Java.Time.Duration arg1)
         {
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata>("committed", "(Lorg/apache/kafka/common/TopicPartition;Ljava/time/Duration;)Lorg/apache/kafka/clients/consumer/OffsetAndMetadata;", arg0, arg1);
@@ -330,7 +330,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.TopicPartition"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata"/></returns>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata Committed(Org.Apache.Kafka.Common.TopicPartition arg0)
         {
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata>("committed", "(Lorg/apache/kafka/common/TopicPartition;)Lorg/apache/kafka/clients/consumer/OffsetAndMetadata;", arg0);
@@ -784,7 +784,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRecords"/></returns>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public Org.Apache.Kafka.Clients.Consumer.ConsumerRecords<K, V> Poll(long arg0)
         {
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Consumer.ConsumerRecords<K, V>>("poll", "(J)Lorg/apache/kafka/clients/consumer/ConsumerRecords;", arg0);
@@ -795,7 +795,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.TopicPartition"/></param>
         /// <param name="arg1"><see cref="Java.Time.Duration"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata"/></returns>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata Committed(Org.Apache.Kafka.Common.TopicPartition arg0, Java.Time.Duration arg1)
         {
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata>("committed", "(Lorg/apache/kafka/common/TopicPartition;Ljava/time/Duration;)Lorg/apache/kafka/clients/consumer/OffsetAndMetadata;", arg0, arg1);
@@ -805,7 +805,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.TopicPartition"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata"/></returns>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata Committed(Org.Apache.Kafka.Common.TopicPartition arg0)
         {
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata>("committed", "(Lorg/apache/kafka/common/TopicPartition;)Lorg/apache/kafka/clients/consumer/OffsetAndMetadata;", arg0);

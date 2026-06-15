@@ -29,7 +29,7 @@ namespace Org.Apache.Kafka.Streams.State
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/state/StreamsMetadata.html"/>
     /// </summary>
-    [global::System.Obsolete()]
+    [global::System.Obsolete("Deprecated in JVM")]
     public partial class StreamsMetadata : MASES.JCOBridge.C2JBridge.JVMBridgeBase<StreamsMetadata>
     {
         const string _bridgeClassName = "org.apache.kafka.streams.state.StreamsMetadata";

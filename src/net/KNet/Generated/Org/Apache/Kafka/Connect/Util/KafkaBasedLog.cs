@@ -129,7 +129,7 @@ namespace Org.Apache.Kafka.Connect.Util
         /// <param name="arg3"><see cref="Org.Apache.Kafka.Connect.Util.Callback"/></param>
         /// <param name="arg4"><see cref="Org.Apache.Kafka.Common.Utils.Time"/></param>
         /// <param name="arg5"><see cref="Java.Lang.Runnable"/></param>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public KafkaBasedLog(Java.Lang.String arg0, Java.Util.Map arg1, Java.Util.Map arg2, Org.Apache.Kafka.Connect.Util.Callback arg3, Org.Apache.Kafka.Common.Utils.Time arg4, Java.Lang.Runnable arg5) : base(JVMBridgeBase.InitializerInstance)
         {
             InvokeInitializer(arg0, arg1, arg2, arg3, arg4, arg5);
@@ -311,7 +311,7 @@ namespace Org.Apache.Kafka.Connect.Util
         /// <param name="arg3"><see cref="Org.Apache.Kafka.Connect.Util.Callback"/></param>
         /// <param name="arg4"><see cref="Org.Apache.Kafka.Common.Utils.Time"/></param>
         /// <param name="arg5"><see cref="Java.Lang.Runnable"/></param>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public KafkaBasedLog(Java.Lang.String arg0, Java.Util.Map<Java.Lang.String, object> arg1, Java.Util.Map<Java.Lang.String, object> arg2, Org.Apache.Kafka.Connect.Util.Callback<Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<K, V>> arg3, Org.Apache.Kafka.Common.Utils.Time arg4, Java.Lang.Runnable arg5) : base(JVMBridgeBase.InitializerInstance)
         {
             InvokeInitializer(arg0, arg1, arg2, arg3, arg4, arg5);

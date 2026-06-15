@@ -29,7 +29,7 @@ namespace Org.Apache.Kafka.Streams.Processor
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/processor/ProcessorSupplier.html"/>
     /// </summary>
-    [global::System.Obsolete()]
+    [global::System.Obsolete("Deprecated in JVM")]
     public partial class ProcessorSupplier : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ProcessorSupplier>
     {
         const string _bridgeClassName = "org.apache.kafka.streams.processor.ProcessorSupplier";
@@ -66,7 +66,7 @@ namespace Org.Apache.Kafka.Streams.Processor
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
-    [global::System.Obsolete()]
+    [global::System.Obsolete("Deprecated in JVM")]
     public partial class ProcessorSupplier<K, V> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ProcessorSupplier<K, V>>
     {
         const string _bridgeClassName = "org.apache.kafka.streams.processor.ProcessorSupplier";
@@ -197,7 +197,7 @@ namespace Org.Apache.Kafka.Streams.Processor
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/processor/ProcessorSupplier.html#get--"/>
         /// </summary>
-        /// <returns><see cref="object"/></returns>
+        /// <returns><see cref="Org.Apache.Kafka.Streams.Processor.Processor{K, V}"/></returns>
         public Org.Apache.Kafka.Streams.Processor.Processor<K, V> Get()
         {
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Processor.Processor<K, V>>("get", "()Ljava/lang/Object;");

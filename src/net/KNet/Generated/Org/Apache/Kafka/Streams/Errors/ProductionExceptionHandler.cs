@@ -171,7 +171,7 @@ namespace Org.Apache.Kafka.Streams.Errors
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Producer.ProducerRecord"/></param>
         /// <param name="arg1"><see cref="Java.Lang.Exception"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Errors.ProductionExceptionHandler.ProductionExceptionHandlerResponse"/></returns>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public Org.Apache.Kafka.Streams.Errors.ProductionExceptionHandler.ProductionExceptionHandlerResponse Handle(Org.Apache.Kafka.Clients.Producer.ProducerRecord<byte[], byte[]> arg0, MASES.JCOBridge.C2JBridge.JVMBridgeException arg1)
         {
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Errors.ProductionExceptionHandler.ProductionExceptionHandlerResponse>("handle", "(Lorg/apache/kafka/clients/producer/ProducerRecord;Ljava/lang/Exception;)Lorg/apache/kafka/streams/errors/ProductionExceptionHandler$ProductionExceptionHandlerResponse;", arg0, arg1);
@@ -193,7 +193,7 @@ namespace Org.Apache.Kafka.Streams.Errors
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Producer.ProducerRecord"/></param>
         /// <param name="arg1"><see cref="Java.Lang.Exception"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Errors.ProductionExceptionHandler.ProductionExceptionHandlerResponse"/></returns>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public Org.Apache.Kafka.Streams.Errors.ProductionExceptionHandler.ProductionExceptionHandlerResponse HandleSerializationException(Org.Apache.Kafka.Clients.Producer.ProducerRecord arg0, MASES.JCOBridge.C2JBridge.JVMBridgeException arg1)
         {
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Errors.ProductionExceptionHandler.ProductionExceptionHandlerResponse>("handleSerializationException", "(Lorg/apache/kafka/clients/producer/ProducerRecord;Ljava/lang/Exception;)Lorg/apache/kafka/streams/errors/ProductionExceptionHandler$ProductionExceptionHandlerResponse;", arg0, arg1);

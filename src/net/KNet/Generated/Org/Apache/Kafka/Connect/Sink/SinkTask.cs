@@ -161,7 +161,7 @@ namespace Org.Apache.Kafka.Connect.Sink
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.2/org/apache/kafka/connect/sink/SinkTask.html#onPartitionsAssigned-java.util.Collection-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public void OnPartitionsAssigned(Java.Util.Collection<Org.Apache.Kafka.Common.TopicPartition> arg0)
         {
             IExecuteWithSignature("onPartitionsAssigned", "(Ljava/util/Collection;)V", arg0);
@@ -170,7 +170,7 @@ namespace Org.Apache.Kafka.Connect.Sink
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/3.9.2/org/apache/kafka/connect/sink/SinkTask.html#onPartitionsRevoked-java.util.Collection-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public void OnPartitionsRevoked(Java.Util.Collection<Org.Apache.Kafka.Common.TopicPartition> arg0)
         {
             IExecuteWithSignature("onPartitionsRevoked", "(Ljava/util/Collection;)V", arg0);

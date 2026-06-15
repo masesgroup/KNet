@@ -93,7 +93,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         /// <param name="arg4"><see cref="Java.Lang.Long"/></param>
         /// <param name="arg5"><see cref="int"/></param>
         /// <param name="arg6"><see cref="int"/></param>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public RecordMetadata(Org.Apache.Kafka.Common.TopicPartition arg0, long arg1, long arg2, long arg3, Java.Lang.Long arg4, int arg5, int arg6) : base(JVMBridgeBase.InitializerInstance)
         {
             InvokeInitializer(arg0, arg1, arg2, arg3, arg4, arg5, arg6);

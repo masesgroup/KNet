@@ -160,7 +160,7 @@ namespace Org.Rocksdb
         /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/ReadOptions.html#managed--"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public bool Managed()
         {
             return IExecuteWithSignature<bool>("managed", "()Z");
@@ -331,7 +331,7 @@ namespace Org.Rocksdb
         /// </summary>
         /// <param name="arg0"><see cref="bool"/></param>
         /// <returns><see cref="Org.Rocksdb.ReadOptions"/></returns>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public Org.Rocksdb.ReadOptions SetManaged(bool arg0)
         {
             return IExecuteWithSignature<Org.Rocksdb.ReadOptions>("setManaged", "(Z)Lorg/rocksdb/ReadOptions;", arg0);

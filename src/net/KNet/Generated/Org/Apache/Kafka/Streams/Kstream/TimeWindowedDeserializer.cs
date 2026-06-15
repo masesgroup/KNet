@@ -132,7 +132,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/kstream/TimeWindowedDeserializer.html#org.apache.kafka.streams.kstream.TimeWindowedDeserializer(org.apache.kafka.common.serialization.Deserializer)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Serialization.Deserializer"/></param>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public TimeWindowedDeserializer(Org.Apache.Kafka.Common.Serialization.Deserializer arg0) : base(JVMBridgeBase.InitializerInstance)
         {
             InvokeInitializer(arg0);
@@ -254,7 +254,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/kstream/TimeWindowedDeserializer.html#org.apache.kafka.streams.kstream.TimeWindowedDeserializer(org.apache.kafka.common.serialization.Deserializer)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Serialization.Deserializer"/></param>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public TimeWindowedDeserializer(Org.Apache.Kafka.Common.Serialization.Deserializer<T> arg0) : base(JVMBridgeBase.InitializerInstance)
         {
             InvokeInitializer(arg0);

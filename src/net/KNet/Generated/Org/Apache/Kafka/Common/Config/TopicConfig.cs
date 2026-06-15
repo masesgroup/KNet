@@ -216,12 +216,12 @@ namespace Org.Apache.Kafka.Common.Config
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/common/config/TopicConfig.html#MESSAGE_FORMAT_VERSION_CONFIG"/>
         /// </summary>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public static Java.Lang.String MESSAGE_FORMAT_VERSION_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "MESSAGE_FORMAT_VERSION_CONFIG"); } set { SSetField(LocalBridgeClazz, "MESSAGE_FORMAT_VERSION_CONFIG", value); } }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/common/config/TopicConfig.html#MESSAGE_FORMAT_VERSION_DOC"/>
         /// </summary>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public static Java.Lang.String MESSAGE_FORMAT_VERSION_DOC { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "MESSAGE_FORMAT_VERSION_DOC"); } set { SSetField(LocalBridgeClazz, "MESSAGE_FORMAT_VERSION_DOC", value); } }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/common/config/TopicConfig.html#MESSAGE_TIMESTAMP_AFTER_MAX_MS_CONFIG"/>
@@ -242,12 +242,12 @@ namespace Org.Apache.Kafka.Common.Config
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/common/config/TopicConfig.html#MESSAGE_TIMESTAMP_DIFFERENCE_MAX_MS_CONFIG"/>
         /// </summary>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public static Java.Lang.String MESSAGE_TIMESTAMP_DIFFERENCE_MAX_MS_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "MESSAGE_TIMESTAMP_DIFFERENCE_MAX_MS_CONFIG"); } set { SSetField(LocalBridgeClazz, "MESSAGE_TIMESTAMP_DIFFERENCE_MAX_MS_CONFIG", value); } }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/common/config/TopicConfig.html#MESSAGE_TIMESTAMP_DIFFERENCE_MAX_MS_DOC"/>
         /// </summary>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public static Java.Lang.String MESSAGE_TIMESTAMP_DIFFERENCE_MAX_MS_DOC { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "MESSAGE_TIMESTAMP_DIFFERENCE_MAX_MS_DOC"); } set { SSetField(LocalBridgeClazz, "MESSAGE_TIMESTAMP_DIFFERENCE_MAX_MS_DOC", value); } }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/common/config/TopicConfig.html#MESSAGE_TIMESTAMP_TYPE_CONFIG"/>

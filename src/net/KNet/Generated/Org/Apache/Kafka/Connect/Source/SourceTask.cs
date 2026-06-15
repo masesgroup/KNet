@@ -178,7 +178,7 @@ namespace Org.Apache.Kafka.Connect.Source
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Source.SourceRecord"/></param>
         /// <exception cref="Java.Lang.InterruptedException"/>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public void CommitRecord(Org.Apache.Kafka.Connect.Source.SourceRecord arg0)
         {
             IExecuteWithSignature("commitRecord", "(Lorg/apache/kafka/connect/source/SourceRecord;)V", arg0);

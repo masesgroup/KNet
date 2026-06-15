@@ -105,7 +105,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/admin/ListConsumerGroupOffsetsOptions.html#topicPartitions--"/>
         /// </summary>
         /// <returns><see cref="Java.Util.List"/></returns>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public Java.Util.List<Org.Apache.Kafka.Common.TopicPartition> TopicPartitions()
         {
             return IExecuteWithSignature<Java.Util.List<Org.Apache.Kafka.Common.TopicPartition>>("topicPartitions", "()Ljava/util/List;");
@@ -124,7 +124,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.List"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.ListConsumerGroupOffsetsOptions"/></returns>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public Org.Apache.Kafka.Clients.Admin.ListConsumerGroupOffsetsOptions TopicPartitions(Java.Util.List<Org.Apache.Kafka.Common.TopicPartition> arg0)
         {
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.ListConsumerGroupOffsetsOptions>("topicPartitions", "(Ljava/util/List;)Lorg/apache/kafka/clients/admin/ListConsumerGroupOffsetsOptions;", arg0);

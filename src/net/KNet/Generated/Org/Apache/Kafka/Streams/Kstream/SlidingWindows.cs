@@ -103,7 +103,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <param name="arg1"><see cref="Java.Time.Duration"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.SlidingWindows"/></returns>
         /// <exception cref="Java.Lang.IllegalArgumentException"/>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public static Org.Apache.Kafka.Streams.Kstream.SlidingWindows WithTimeDifferenceAndGrace(Java.Time.Duration arg0, Java.Time.Duration arg1)
         {
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.SlidingWindows>(LocalBridgeClazz, "withTimeDifferenceAndGrace", "(Ljava/time/Duration;Ljava/time/Duration;)Lorg/apache/kafka/streams/kstream/SlidingWindows;", arg0, arg1);

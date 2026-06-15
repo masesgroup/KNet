@@ -149,7 +149,7 @@ namespace Org.Apache.Kafka.Streams.Errors
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRecord"/></param>
         /// <param name="arg2"><see cref="Java.Lang.Exception"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Errors.DeserializationExceptionHandler.DeserializationHandlerResponse"/></returns>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public Org.Apache.Kafka.Streams.Errors.DeserializationExceptionHandler.DeserializationHandlerResponse Handle(Org.Apache.Kafka.Streams.Processor.ProcessorContext arg0, Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<byte[], byte[]> arg1, MASES.JCOBridge.C2JBridge.JVMBridgeException arg2)
         {
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Errors.DeserializationExceptionHandler.DeserializationHandlerResponse>("handle", "(Lorg/apache/kafka/streams/processor/ProcessorContext;Lorg/apache/kafka/clients/consumer/ConsumerRecord;Ljava/lang/Exception;)Lorg/apache/kafka/streams/errors/DeserializationExceptionHandler$DeserializationHandlerResponse;", arg0, arg1, arg2);

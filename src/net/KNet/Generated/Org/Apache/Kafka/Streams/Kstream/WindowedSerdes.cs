@@ -275,7 +275,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <param name="arg0"><see cref="Java.Lang.Class"/></param>
         /// <typeparam name="T"></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></returns>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public static Org.Apache.Kafka.Common.Serialization.Serde<Org.Apache.Kafka.Streams.Kstream.Windowed<T>> TimeWindowedSerdeFrom<T>(Java.Lang.Class arg0)
         {
             return SExecuteWithSignature<Org.Apache.Kafka.Common.Serialization.Serde<Org.Apache.Kafka.Streams.Kstream.Windowed<T>>>(LocalBridgeClazz, "timeWindowedSerdeFrom", "(Ljava/lang/Class;)Lorg/apache/kafka/common/serialization/Serde;", arg0);
@@ -286,7 +286,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <param name="arg0"><see cref="Java.Lang.Class"/></param>
         /// <typeparam name="T"></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></returns>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public static Org.Apache.Kafka.Common.Serialization.Serde<Org.Apache.Kafka.Streams.Kstream.Windowed<T>> TimeWindowedSerdeFromDirect<T>(Java.Lang.Class arg0)
         {
             return SExecuteWithSignature<Org.Apache.Kafka.Common.Serialization.SerdeDirect<Org.Apache.Kafka.Streams.Kstream.Windowed<T>>, Org.Apache.Kafka.Common.Serialization.Serde<Org.Apache.Kafka.Streams.Kstream.Windowed<T>>>(LocalBridgeClazz, "timeWindowedSerdeFrom", "(Ljava/lang/Class;)Lorg/apache/kafka/common/serialization/Serde;", arg0);
@@ -461,7 +461,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/kstream/WindowedSerdes.TimeWindowedSerde.html#org.apache.kafka.streams.kstream.WindowedSerdes$TimeWindowedSerde(org.apache.kafka.common.serialization.Serde)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></param>
-            [global::System.Obsolete()]
+            [global::System.Obsolete("Deprecated in JVM")]
             public TimeWindowedSerde(Org.Apache.Kafka.Common.Serialization.Serde arg0) : base(JVMBridgeBase.InitializerInstance)
             {
                 InvokeInitializer(arg0);
@@ -547,7 +547,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/kstream/WindowedSerdes.TimeWindowedSerde.html#org.apache.kafka.streams.kstream.WindowedSerdes$TimeWindowedSerde(org.apache.kafka.common.serialization.Serde)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></param>
-            [global::System.Obsolete()]
+            [global::System.Obsolete("Deprecated in JVM")]
             public TimeWindowedSerde(Org.Apache.Kafka.Common.Serialization.Serde<T> arg0) : base(JVMBridgeBase.InitializerInstance)
             {
                 InvokeInitializer(arg0);

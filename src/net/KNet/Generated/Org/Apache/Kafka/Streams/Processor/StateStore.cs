@@ -147,7 +147,7 @@ namespace Org.Apache.Kafka.Streams.Processor
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Processor.ProcessorContext"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Processor.StateStore"/></param>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public void Init(Org.Apache.Kafka.Streams.Processor.ProcessorContext arg0, Org.Apache.Kafka.Streams.Processor.StateStore arg1)
         {
             IExecuteWithSignature("init", "(Lorg/apache/kafka/streams/processor/ProcessorContext;Lorg/apache/kafka/streams/processor/StateStore;)V", arg0, arg1);

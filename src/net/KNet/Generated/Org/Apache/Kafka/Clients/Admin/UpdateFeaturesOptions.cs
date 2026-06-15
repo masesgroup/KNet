@@ -97,7 +97,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/admin/UpdateFeaturesOptions.html#dryRun--"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public bool DryRun()
         {
             return IExecuteWithSignature<bool>("dryRun", "()Z");
@@ -115,7 +115,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         /// <param name="arg0"><see cref="bool"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.UpdateFeaturesOptions"/></returns>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public Org.Apache.Kafka.Clients.Admin.UpdateFeaturesOptions DryRun(bool arg0)
         {
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.UpdateFeaturesOptions>("dryRun", "(Z)Lorg/apache/kafka/clients/admin/UpdateFeaturesOptions;", arg0);
