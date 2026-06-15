@@ -89,7 +89,7 @@
 
 
   <h1 id="MASES_KNet_Streams_Processor_Api_Record_4" data-uid="MASES.KNet.Streams.Processor.Api.Record`4" class="text-break">
-Class Record&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/Api/Record.cs/#L31"><i class="bi bi-code-slash"></i></a>
+Class Record&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/Api/Record.cs/#L33"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -102,7 +102,7 @@ Class Record&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-secondary" 
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class Record&lt;K, V, TJVMK, TJVMV&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class Record&lt;K, V, TJVMK, TJVMV&gt; : IKNetInnerReference&lt;Record&lt;TJVMK, TJVMV&gt;&gt;, IDisposable</code></pre>
   </div>
 
 
@@ -131,33 +131,15 @@ Class Record&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-secondary" 
     </dd>
   </dl>
 
-
-
-  <dl class="typelist inheritedMembers">
-    <dt>Inherited Members</dt>
+  <dl class="typelist implements">
+    <dt>Implements</dt>
     <dd>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
-    </div>
-  </dd></dl>
+      <div><a class="xref" href="MASES.KNet.IKNetInnerReference-1.html">IKNetInnerReference</a>&lt;<a class="xref" href="Org.Apache.Kafka.Streams.Processor.Api.Record-2.html">Record</a>&lt;TJVMK, TJVMV&gt;&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+    </dd>
+  </dl>
+
+
 
 
 
@@ -172,10 +154,10 @@ Class Record&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-secondary" 
 
   <h3 id="MASES_KNet_Streams_Processor_Api_Record_4_DateTime" data-uid="MASES.KNet.Streams.Processor.Api.Record`4.DateTime">
   DateTime
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/Api/Record.cs/#L106"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/Api/Record.cs/#L170"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/processor/api/Record.html#timestamp()">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/processor/api/Record.html#timestamp()</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/api/Record.html#timestamp()">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/api/Record.html#timestamp()</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -204,10 +186,10 @@ Class Record&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-secondary" 
 
   <h3 id="MASES_KNet_Streams_Processor_Api_Record_4_Headers" data-uid="MASES.KNet.Streams.Processor.Api.Record`4.Headers">
   Headers
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/Api/Record.cs/#L111"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/Api/Record.cs/#L175"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/processor/api/Record.html#headers()">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/processor/api/Record.html#headers()</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/api/Record.html#headers()">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/api/Record.html#headers()</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -233,14 +215,46 @@ Class Record&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-secondary" 
 
 
 
+  <a id="MASES_KNet_Streams_Processor_Api_Record_4_InnerReference_" data-uid="MASES.KNet.Streams.Processor.Api.Record`4.InnerReference*"></a>
+
+  <h3 id="MASES_KNet_Streams_Processor_Api_Record_4_InnerReference" data-uid="MASES.KNet.Streams.Processor.Api.Record`4.InnerReference">
+  InnerReference
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/Api/Record.cs/#L47"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The underlying inner reference used from KNet object instance</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Record&lt;TJVMK, TJVMV&gt; InnerReference { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Streams.Processor.Api.Record-2.html">Record</a>&lt;TJVMK, TJVMV&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="MASES_KNet_Streams_Processor_Api_Record_4_Key_" data-uid="MASES.KNet.Streams.Processor.Api.Record`4.Key*"></a>
 
   <h3 id="MASES_KNet_Streams_Processor_Api_Record_4_Key" data-uid="MASES.KNet.Streams.Processor.Api.Record`4.Key">
   Key
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/Api/Record.cs/#L79"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/Api/Record.cs/#L133"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/processor/api/Record.html#key()">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/processor/api/Record.html#key()</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/api/Record.html#key()">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/api/Record.html#key()</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -270,10 +284,10 @@ Class Record&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-secondary" 
 
   <h3 id="MASES_KNet_Streams_Processor_Api_Record_4_Timestamp" data-uid="MASES.KNet.Streams.Processor.Api.Record`4.Timestamp">
   Timestamp
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/Api/Record.cs/#L102"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/Api/Record.cs/#L166"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/processor/api/Record.html#timestamp()">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/processor/api/Record.html#timestamp()</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/api/Record.html#timestamp()">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/api/Record.html#timestamp()</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -302,10 +316,10 @@ Class Record&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-secondary" 
 
   <h3 id="MASES_KNet_Streams_Processor_Api_Record_4_Value" data-uid="MASES.KNet.Streams.Processor.Api.Record`4.Value">
   Value
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/Api/Record.cs/#L91"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/Api/Record.cs/#L150"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/processor/api/Record.html#value()">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/processor/api/Record.html#value()</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/api/Record.html#value()">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/api/Record.html#value()</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -335,14 +349,107 @@ Class Record&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-secondary" 
 </h2>
 
 
+  <a id="MASES_KNet_Streams_Processor_Api_Record_4_CheckDisposed_" data-uid="MASES.KNet.Streams.Processor.Api.Record`4.CheckDisposed*"></a>
+
+  <h3 id="MASES_KNet_Streams_Processor_Api_Record_4_CheckDisposed" data-uid="MASES.KNet.Streams.Processor.Api.Record`4.CheckDisposed">
+  CheckDisposed()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/Api/Record.cs/#L56"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Test if this instance was disposed</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void CheckDisposed()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.objectdisposedexception">ObjectDisposedException</a></dt>
+    <dd><p>When this instance was disposed</p>
+</dd>
+  </dl>
+
+
+
+  <a id="MASES_KNet_Streams_Processor_Api_Record_4_Dispose_" data-uid="MASES.KNet.Streams.Processor.Api.Record`4.Dispose*"></a>
+
+  <h3 id="MASES_KNet_Streams_Processor_Api_Record_4_Dispose" data-uid="MASES.KNet.Streams.Processor.Api.Record`4.Dispose">
+  Dispose()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/Api/Record.cs/#L59"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_Processor_Api_Record_4_Dispose_" data-uid="MASES.KNet.Streams.Processor.Api.Record`4.Dispose*"></a>
+
+  <h3 id="MASES_KNet_Streams_Processor_Api_Record_4_Dispose_System_Boolean_" data-uid="MASES.KNet.Streams.Processor.Api.Record`4.Dispose(System.Boolean)">
+  Dispose(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/Api/Record.cs/#L70"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Implements the pattern described in <a href="https://learn.microsoft.com/en-en/dotnet/standard/garbage-collection/implementing-dispose">https://learn.microsoft.com/en-en/dotnet/standard/garbage-collection/implementing-dispose</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void Dispose(bool disposing)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>disposing</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>The disposing parameter is a <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">bool</a> that indicates whether the method call comes from a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable.dispose">Dispose()</a> method (its value is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>) or from a finalizer (its value is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>)</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="MASES_KNet_Streams_Processor_Api_Record_4_WithDateTime_" data-uid="MASES.KNet.Streams.Processor.Api.Record`4.WithDateTime*"></a>
 
   <h3 id="MASES_KNet_Streams_Processor_Api_Record_4_WithDateTime_System_DateTime_" data-uid="MASES.KNet.Streams.Processor.Api.Record`4.WithDateTime(System.DateTime)">
   WithDateTime(DateTime)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/Api/Record.cs/#L137"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/Api/Record.cs/#L203"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/processor/api/Record.html#withTimestamp(long)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/processor/api/Record.html#withTimestamp(long)</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/api/Record.html#withTimestamp(long)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/api/Record.html#withTimestamp(long)</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -378,10 +485,10 @@ Class Record&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-secondary" 
 
   <h3 id="MASES_KNet_Streams_Processor_Api_Record_4_WithHeaders_Org_Apache_Kafka_Common_Header_Headers_" data-uid="MASES.KNet.Streams.Processor.Api.Record`4.WithHeaders(Org.Apache.Kafka.Common.Header.Headers)">
   WithHeaders(Headers)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/Api/Record.cs/#L117"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/Api/Record.cs/#L181"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/processor/api/Record.html#withHeaders(org.apache.kafka.common.header.Headers)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/processor/api/Record.html#withHeaders(org.apache.kafka.common.header.Headers)</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/api/Record.html#withHeaders(org.apache.kafka.common.header.Headers)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/api/Record.html#withHeaders(org.apache.kafka.common.header.Headers)</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -417,10 +524,10 @@ Class Record&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-secondary" 
 
   <h3 id="MASES_KNet_Streams_Processor_Api_Record_4_WithKey__2___0_" data-uid="MASES.KNet.Streams.Processor.Api.Record`4.WithKey``2(``0)">
   WithKey&lt;NewK, TJVMNewK&gt;(NewK)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/Api/Record.cs/#L56"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/Api/Record.cs/#L98"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/processor/api/Record.html#withKey(java.lang.Object)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/processor/api/Record.html#withKey(java.lang.Object)</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/api/Record.html#withKey(java.lang.Object)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/api/Record.html#withKey(java.lang.Object)</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -464,10 +571,10 @@ Class Record&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-secondary" 
 
   <h3 id="MASES_KNet_Streams_Processor_Api_Record_4_WithTimestamp_System_Int64_" data-uid="MASES.KNet.Streams.Processor.Api.Record`4.WithTimestamp(System.Int64)">
   WithTimestamp(long)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/Api/Record.cs/#L127"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/Api/Record.cs/#L192"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/processor/api/Record.html#withTimestamp(long)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/processor/api/Record.html#withTimestamp(long)</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/api/Record.html#withTimestamp(long)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/api/Record.html#withTimestamp(long)</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -503,10 +610,10 @@ Class Record&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-secondary" 
 
   <h3 id="MASES_KNet_Streams_Processor_Api_Record_4_WithValue__2___0_" data-uid="MASES.KNet.Streams.Processor.Api.Record`4.WithValue``2(``0)">
   WithValue&lt;NewV, TJVMNewV&gt;(NewV)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/Api/Record.cs/#L69"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/Api/Record.cs/#L117"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/processor/api/Record.html#withValue(java.lang.Object)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/processor/api/Record.html#withValue(java.lang.Object)</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/api/Record.html#withValue(java.lang.Object)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/api/Record.html#withValue(java.lang.Object)</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -554,7 +661,7 @@ Class Record&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-secondary" 
 
   <h3 id="MASES_KNet_Streams_Processor_Api_Record_4_op_Implicit_MASES_KNet_Streams_Processor_Api_Record__0__1__2__3___Org_Apache_Kafka_Streams_Processor_Api_Record__2__3_" data-uid="MASES.KNet.Streams.Processor.Api.Record`4.op_Implicit(MASES.KNet.Streams.Processor.Api.Record{`0,`1,`2,`3})~Org.Apache.Kafka.Streams.Processor.Api.Record{`2,`3}">
   implicit operator Record&lt;TJVMK, TJVMV&gt;(Record&lt;K, V, TJVMK, TJVMV&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/Api/Record.cs/#L47"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/Api/Record.cs/#L89"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Converter from <a class="xref" href="MASES.KNet.Streams.Processor.Api.Record-4.html">Record&lt;K, V, TJVMK, TJVMV&gt;</a> to <a class="xref" href="Org.Apache.Kafka.Streams.Processor.Api.Record-2.html">Record&lt;K, V&gt;</a></p>
@@ -591,7 +698,7 @@ Class Record&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-secondary" 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/Api/Record.cs/#L31" class="edit-link">Edit this page</a>
+          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/Api/Record.cs/#L33" class="edit-link">Edit this page</a>
         </div>
 
 

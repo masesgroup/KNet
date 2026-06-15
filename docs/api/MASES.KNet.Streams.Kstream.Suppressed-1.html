@@ -89,7 +89,7 @@
 
 
   <h1 id="MASES_KNet_Streams_Kstream_Suppressed_1" data-uid="MASES.KNet.Streams.Kstream.Suppressed`1" class="text-break">
-Class Suppressed&lt;K&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Suppressed.cs/#L75"><i class="bi bi-code-slash"></i></a>
+Class Suppressed&lt;K&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Suppressed.cs/#L115"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -102,7 +102,7 @@ Class Suppressed&lt;K&gt;  <a class="header-action link-secondary" title="View s
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class Suppressed&lt;K&gt; : Suppressed&lt;K, byte[]&gt;, IGenericSerDesFactoryApplier</code></pre>
+    <pre><code class="lang-csharp hljs">public class Suppressed&lt;K&gt; : Suppressed&lt;K, byte[]&gt;, IKNetInnerReference&lt;Suppressed&lt;byte[]&gt;&gt;, IGenericSerDesFactoryApplier, IDisposable</code></pre>
   </div>
 
 
@@ -125,7 +125,9 @@ Class Suppressed&lt;K&gt;  <a class="header-action link-secondary" title="View s
   <dl class="typelist implements">
     <dt>Implements</dt>
     <dd>
+      <div><a class="xref" href="MASES.KNet.IKNetInnerReference-1.html">IKNetInnerReference</a>&lt;<a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Suppressed-1.html">Suppressed</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;&gt;</div>
       <div><a class="xref" href="MASES.KNet.Serialization.IGenericSerDesFactoryApplier.html">IGenericSerDesFactoryApplier</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
     </dd>
   </dl>
 
@@ -134,31 +136,22 @@ Class Suppressed&lt;K&gt;  <a class="header-action link-secondary" title="View s
     <dt>Inherited Members</dt>
     <dd>
     <div>
+      <a class="xref" href="MASES.KNet.Streams.Kstream.Suppressed-2.html#MASES_KNet_Streams_Kstream_Suppressed_2_InnerReference">Suppressed&lt;K, byte[]&gt;.InnerReference</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Streams.Kstream.Suppressed-2.html#MASES_KNet_Streams_Kstream_Suppressed_2_CheckDisposed">Suppressed&lt;K, byte[]&gt;.CheckDisposed()</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Streams.Kstream.Suppressed-2.html#MASES_KNet_Streams_Kstream_Suppressed_2_Dispose">Suppressed&lt;K, byte[]&gt;.Dispose()</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Streams.Kstream.Suppressed-2.html#MASES_KNet_Streams_Kstream_Suppressed_2_Dispose_System_Boolean_">Suppressed&lt;K, byte[]&gt;.Dispose(bool)</a>
+    </div>
+    <div>
       <a class="xref" href="MASES.KNet.Streams.Kstream.Suppressed-2.html#MASES_KNet_Streams_Kstream_Suppressed_2_UntilTimeLimit_System_TimeSpan_Org_Apache_Kafka_Streams_Kstream_Suppressed_BufferConfig_">Suppressed&lt;K, byte[]&gt;.UntilTimeLimit(TimeSpan, Suppressed.BufferConfig)</a>
     </div>
     <div>
       <a class="xref" href="MASES.KNet.Streams.Kstream.Suppressed-2.html#MASES_KNet_Streams_Kstream_Suppressed_2_UntilWindowCloses_Org_Apache_Kafka_Streams_Kstream_Suppressed_StrictBufferConfig_">Suppressed&lt;K, byte[]&gt;.UntilWindowCloses(Suppressed.StrictBufferConfig)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
     </div>
   </dd></dl>
 
@@ -171,7 +164,7 @@ Class Suppressed&lt;K&gt;  <a class="header-action link-secondary" title="View s
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Suppressed.cs/#L75" class="edit-link">Edit this page</a>
+          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Suppressed.cs/#L115" class="edit-link">Edit this page</a>
         </div>
 
 
