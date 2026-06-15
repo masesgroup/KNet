@@ -89,7 +89,7 @@
 
 
   <h1 id="Org_Apache_Kafka_Connect_Mirror_MirrorSourceConfig" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorSourceConfig" class="text-break">
-Class MirrorSourceConfig  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorSourceConfig.cs/#L70"><i class="bi bi-code-slash"></i></a>
+Class MirrorSourceConfig  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorSourceConfig.cs/#L63"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -102,7 +102,7 @@ Class MirrorSourceConfig  <a class="header-action link-secondary" title="View so
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class MirrorSourceConfig : MirrorConnectorConfig, IDynamicMetaObjectProvider, IJVMBridgeCore, IEquatable&lt;IJVMBridgeBase&gt;, IDisposable, IJVMBridgeBaseStatic, IJVMBridgeBase, IJVMBridgeDefinition, IJVMBridgeMain</code></pre>
+    <pre><code class="lang-csharp hljs">public class MirrorSourceConfig : MirrorConnectorConfig, IDynamicMetaObjectProvider, IJVMBridgeCore, IEquatable&lt;IJVMBridgeBaseInstance&gt;, IDisposable, IJVMBridgeBaseStatic, IJVMBridgeBase, IJVMBridgeBaseInstance, IJVMBridgeDefinition, IJVMBridgeMain</code></pre>
   </div>
 
 
@@ -126,10 +126,11 @@ Class MirrorSourceConfig  <a class="header-action link-secondary" title="View so
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.idynamicmetaobjectprovider">IDynamicMetaObjectProvider</a></div>
       <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeCore.html">IJVMBridgeCore</a></div>
-      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBase.html">IJVMBridgeBase</a>&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBaseInstance.html">IJVMBridgeBaseInstance</a>&gt;</div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
       <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic.html">IJVMBridgeBaseStatic</a></div>
       <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBase.html">IJVMBridgeBase</a></div>
+      <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBaseInstance.html">IJVMBridgeBaseInstance</a></div>
       <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html">IJVMBridgeDefinition</a></div>
       <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeMain.html">IJVMBridgeMain</a></div>
     </dd>
@@ -224,6 +225,15 @@ Class MirrorSourceConfig  <a class="header-action link-secondary" title="View so
       <a class="xref" href="Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig.html#Org_Apache_Kafka_Connect_Mirror_MirrorConnectorConfig_Main_Java_Lang_String___">MirrorConnectorConfig.Main(String[])</a>
     </div>
     <div>
+      <a class="xref" href="Org.Apache.Kafka.Common.Config.AbstractConfig.html#Org_Apache_Kafka_Common_Config_AbstractConfig_CreatePoolableInstance_Org_Apache_Kafka_Common_Config_ConfigDef_Java_Util_Map_System_Object_System_Object__System_Boolean_">AbstractConfig.CreatePoolableInstance(ConfigDef, Map&lt;object, object&gt;, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Common.Config.AbstractConfig.html#Org_Apache_Kafka_Common_Config_AbstractConfig_CreatePoolableInstance_Org_Apache_Kafka_Common_Config_ConfigDef_Java_Util_Map_System_Object_System_Object__Java_Util_Map_Java_Lang_String_System_Object__System_Boolean_">AbstractConfig.CreatePoolableInstance(ConfigDef, Map&lt;object, object&gt;, Map&lt;String, object&gt;, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Common.Config.AbstractConfig.html#Org_Apache_Kafka_Common_Config_AbstractConfig_CreatePoolableInstance_Org_Apache_Kafka_Common_Config_ConfigDef_Java_Util_Map_System_Object_System_Object__">AbstractConfig.CreatePoolableInstance(ConfigDef, Map&lt;object, object&gt;)</a>
+    </div>
+    <div>
       <a class="xref" href="Org.Apache.Kafka.Common.Config.AbstractConfig.html#Org_Apache_Kafka_Common_Config_AbstractConfig_AUTOMATIC_CONFIG_PROVIDERS_PROPERTY">AbstractConfig.AUTOMATIC_CONFIG_PROVIDERS_PROPERTY</a>
     </div>
     <div>
@@ -313,381 +323,6 @@ Class MirrorSourceConfig  <a class="header-action link-secondary" title="View so
     <div>
       <a class="xref" href="Org.Apache.Kafka.Common.Config.AbstractConfig.html#Org_Apache_Kafka_Common_Config_AbstractConfig_LogUnused">AbstractConfig.LogUnused()</a>
     </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AbstractConfig&gt;.SExecute(IJavaType, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AbstractConfig&gt;.SExecuteWithSignature(IJavaType, string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AbstractConfig&gt;.SExecute(string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AbstractConfig&gt;.SExecuteWithSignature(string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AbstractConfig&gt;.SExecute&lt;TReturn&gt;(IJavaType, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AbstractConfig&gt;.SExecuteWithSignature&lt;TReturn&gt;(IJavaType, string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AbstractConfig&gt;.SExecute&lt;TReturn&gt;(string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AbstractConfig&gt;.SExecuteWithSignature&lt;TReturn&gt;(string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AbstractConfig&gt;.SExecute(Type, IJavaType, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AbstractConfig&gt;.SExecuteWithSignature(Type, IJavaType, string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AbstractConfig&gt;.SExecute(Type, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AbstractConfig&gt;.SExecuteWithSignature(Type, string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AbstractConfig&gt;.SExecute&lt;TNewClass, TReturn&gt;(IJavaType, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AbstractConfig&gt;.SExecuteWithSignature&lt;TNewClass, TReturn&gt;(IJavaType, string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AbstractConfig&gt;.SExecute&lt;TNewClass, TReturn&gt;(string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AbstractConfig&gt;.SExecuteWithSignature&lt;TNewClass, TReturn&gt;(string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AbstractConfig&gt;.SExecute&lt;TReturn&gt;(Type, IJavaType, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AbstractConfig&gt;.SExecuteWithSignature&lt;TReturn&gt;(Type, IJavaType, string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AbstractConfig&gt;.SExecute&lt;TReturn&gt;(Type, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AbstractConfig&gt;.SExecuteWithSignature&lt;TReturn&gt;(Type, string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AbstractConfig&gt;.SExecute&lt;TNewClass, TReturn, TConverter&gt;(IJavaType, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AbstractConfig&gt;.SExecuteWithSignature&lt;TNewClass, TReturn, TConverter&gt;(IJavaType, string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AbstractConfig&gt;.SExecute&lt;TNewClass, TReturn, TConverter&gt;(string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AbstractConfig&gt;.SExecuteWithSignature&lt;TNewClass, TReturn, TConverter&gt;(string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AbstractConfig&gt;.SExecute&lt;TReturn, TConverter&gt;(Type, IJavaType, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AbstractConfig&gt;.SExecuteWithSignature&lt;TReturn, TConverter&gt;(Type, IJavaType, string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AbstractConfig&gt;.SExecute&lt;TReturn, TConverter&gt;(Type, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AbstractConfig&gt;.SExecuteWithSignature&lt;TReturn, TConverter&gt;(Type, string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AbstractConfig&gt;.SExecuteArray&lt;TArrayType&gt;(IJavaType, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AbstractConfig&gt;.SExecuteWithSignatureArray&lt;TArrayType&gt;(IJavaType, string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AbstractConfig&gt;.SExecuteArray&lt;TArrayType&gt;(string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AbstractConfig&gt;.SExecuteWithSignatureArray&lt;TArrayType&gt;(string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AbstractConfig&gt;.SGetField(IJavaType, string)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AbstractConfig&gt;.SGetField(string)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AbstractConfig&gt;.SGetField&lt;TReturn&gt;(IJavaType, string)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AbstractConfig&gt;.SGetField&lt;TReturn&gt;(string)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AbstractConfig&gt;.SGetFieldArray&lt;TReturn&gt;(IJavaType, string)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AbstractConfig&gt;.SGetFieldArray&lt;TReturn&gt;(string)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AbstractConfig&gt;.SSetField(IJavaType, string, object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AbstractConfig&gt;.SSetField(string, object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AbstractConfig&gt;.SSetField&lt;TValue&gt;(IJavaType, string, TValue)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AbstractConfig&gt;.SSetField&lt;TValue&gt;(string, TValue)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AbstractConfig&gt;.IsAssignableFrom(string)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_IsAssignableFrom_MASES_JCOBridge_C2JBridge_JVMInterop_IJavaType_">JVMBridgeBase&lt;AbstractConfig&gt;.IsAssignableFrom(IJavaType)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_IsAssignableFrom__1">JVMBridgeBase&lt;AbstractConfig&gt;.IsAssignableFrom&lt;T&gt;()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">JVMBridgeBase&lt;AbstractConfig&gt;.New(params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AbstractConfig&gt;.NewWithSignature(string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AbstractConfig&gt;.NewAndWrapsDirect&lt;TNewClass&gt;(string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AbstractConfig&gt;.NewWithSignatureAndWrapsDirect&lt;TNewClass&gt;(string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_Execute__1___0___">JVMBridgeBase&lt;AbstractConfig&gt;.Execute&lt;T&gt;(params T[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_DynBridgeClazz">JVMBridgeBase&lt;AbstractConfig&gt;.DynBridgeClazz</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_BridgeClazz">JVMBridgeBase&lt;AbstractConfig&gt;.BridgeClazz</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ReferenceEqualsJVM_MASES_JCOBridge_C2JBridge_JVMBridgeBase_MASES_JCOBridge_C2JBridge_JVMBridgeBase_">JVMBridgeBase.ReferenceEqualsJVM(JVMBridgeBase, JVMBridgeBase)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.ClazzOf&lt;TClass&gt;(bool)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">JVMBridgeBase.ClazzOf&lt;TClass&gt;(out Exception, bool)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ClazzOf(string, bool)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ClazzOf(string, out Exception, bool)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_RuntimeClassNameOf__1">JVMBridgeBase.RuntimeClassNameOf&lt;T&gt;()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.RuntimeClassNameOf(Type)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ClassNameOf__1">JVMBridgeBase.ClassNameOf&lt;T&gt;()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ClassOf__1">JVMBridgeBase.ClassOf&lt;T&gt;()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_WrapsDirect__1_MASES_JCOBridge_C2JBridge_JVMInterop_IJavaObject_">JVMBridgeBase.WrapsDirect&lt;TNewClass&gt;(IJavaObject)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Wraps__1_MASES_JCOBridge_C2JBridge_JVMInterop_IJavaObject_">JVMBridgeBase.Wraps&lt;TNewClass&gt;(IJavaObject)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.Wraps(Type, IJavaObject, string)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Wraps__2_MASES_JCOBridge_C2JBridge_JVMInterop_IJavaObject_">JVMBridgeBase.Wraps&lt;TNewClass, TReturn&gt;(IJavaObject)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.Wraps&lt;TReturn&gt;(Type, IJavaObject, string)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Wraps__3_MASES_JCOBridge_C2JBridge_JVMInterop_IJavaObject_">JVMBridgeBase.Wraps&lt;TNewClass, TReturn, TConverter&gt;(IJavaObject)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.Wraps&lt;TReturn, TConverter&gt;(Type, IJavaObject)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_MonitorEnter">JVMBridgeBase.MonitorEnter()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_MonitorExit">JVMBridgeBase.MonitorExit()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IsInstanceOf(string)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsInstanceOf_MASES_JCOBridge_C2JBridge_JVMInterop_IJavaType_">JVMBridgeBase.IsInstanceOf(IJavaType)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsInstanceOf__1">JVMBridgeBase.IsInstanceOf&lt;T&gt;()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_RuntimeIsInstanceOf__1">JVMBridgeBase.RuntimeIsInstanceOf&lt;T&gt;()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_CastTo__1">JVMBridgeBase.CastTo&lt;TNewClass&gt;()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_CastDirect__1">JVMBridgeBase.CastDirect&lt;TNewClass&gt;()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Dispose">JVMBridgeBase.Dispose()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.Dispose(bool)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ToString">JVMBridgeBase.ToString()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Equals_MASES_JCOBridge_C2JBridge_IJVMBridgeBase_">JVMBridgeBase.Equals(IJVMBridgeBase)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">JVMBridgeBase.Equals(object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_GetHashCode">JVMBridgeBase.GetHashCode()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Notify">JVMBridgeBase.Notify()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_NotifyAll">JVMBridgeBase.NotifyAll()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Wait">JVMBridgeBase.Wait()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">JVMBridgeBase.Wait(long)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">JVMBridgeBase.Wait(long, int)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecute(string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignature(string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecute&lt;TReturn&gt;(string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignature&lt;TReturn&gt;(string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecute&lt;TNewClass, TReturn&gt;(string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignature&lt;TNewClass, TReturn&gt;(string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecute&lt;TNewClass, TReturn, TConverter&gt;(string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignature&lt;TNewClass, TReturn, TConverter&gt;(string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteArray&lt;TArrayType&gt;(string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignatureArray&lt;TArrayType&gt;(string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IGetField(string)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IGetField&lt;TReturn&gt;(string)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IGetFieldArray&lt;TReturn&gt;(string)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ISetField(string, object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ISetField&lt;TValue&gt;(string, TValue)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">JVMBridgeBase.Throw&lt;TException&gt;(params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">JVMBridgeBase.BiThrow&lt;TException&gt;(params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_DynBridgeInstance">JVMBridgeBase.DynBridgeInstance</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeInstance">JVMBridgeBase.BridgeInstance</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeListener">JVMBridgeBase.IsBridgeListener</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trygetmember">DynamicObject.TryGetMember(GetMemberBinder, out object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trysetmember">DynamicObject.TrySetMember(SetMemberBinder, object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trydeletemember">DynamicObject.TryDeleteMember(DeleteMemberBinder)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryinvokemember">DynamicObject.TryInvokeMember(InvokeMemberBinder, object[], out object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryconvert">DynamicObject.TryConvert(ConvertBinder, out object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trycreateinstance">DynamicObject.TryCreateInstance(CreateInstanceBinder, object[], out object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryinvoke">DynamicObject.TryInvoke(InvokeBinder, object[], out object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trybinaryoperation">DynamicObject.TryBinaryOperation(BinaryOperationBinder, object, out object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryunaryoperation">DynamicObject.TryUnaryOperation(UnaryOperationBinder, out object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trygetindex">DynamicObject.TryGetIndex(GetIndexBinder, object[], out object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trysetindex">DynamicObject.TrySetIndex(SetIndexBinder, object[], object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trydeleteindex">DynamicObject.TryDeleteIndex(DeleteIndexBinder, object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.getdynamicmembernames">DynamicObject.GetDynamicMemberNames()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.getmetaobject">DynamicObject.GetMetaObject(Expression)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
-    </div>
   </dd></dl>
 
 
@@ -701,36 +336,9 @@ Class MirrorSourceConfig  <a class="header-action link-secondary" title="View so
 
   <a id="Org_Apache_Kafka_Connect_Mirror_MirrorSourceConfig__ctor_" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorSourceConfig.#ctor*"></a>
 
-  <h3 id="Org_Apache_Kafka_Connect_Mirror_MirrorSourceConfig__ctor" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorSourceConfig.#ctor">
-  MirrorSourceConfig()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorSourceConfig.cs/#L38"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public MirrorSourceConfig()</code></pre>
-  </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <a id="Org_Apache_Kafka_Connect_Mirror_MirrorSourceConfig__ctor_" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorSourceConfig.#ctor*"></a>
-
   <h3 id="Org_Apache_Kafka_Connect_Mirror_MirrorSourceConfig__ctor_Java_Util_Map_Java_Lang_String_Java_Lang_String__" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorSourceConfig.#ctor(Java.Util.Map{Java.Lang.String,Java.Lang.String})">
   MirrorSourceConfig(Map&lt;String, String&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorSourceConfig.cs/#L77"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorSourceConfig.cs/#L70"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.2/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#org.apache.kafka.connect.mirror.MirrorSourceConfig(java.util.Map)">https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.2/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#org.apache.kafka.connect.mirror.MirrorSourceConfig(java.util.Map)</a></p>
@@ -763,10 +371,10 @@ Class MirrorSourceConfig  <a class="header-action link-secondary" title="View so
 
   <h3 id="Org_Apache_Kafka_Connect_Mirror_MirrorSourceConfig__ctor_MASES_JCOBridge_C2JBridge_IJVMBridgeBaseInitializer_" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorSourceConfig.#ctor(MASES.JCOBridge.C2JBridge.IJVMBridgeBaseInitializer)">
   MirrorSourceConfig(IJVMBridgeBaseInitializer)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorSourceConfig.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorSourceConfig.cs/#L39"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Internal constructor: used internally from JCOBridge</p>
+  <div class="markdown level1 summary"><p>Initializer used internally by JCOBridge. Do not use directly.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -828,38 +436,6 @@ public MirrorSourceConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
 
 
-  <a id="Org_Apache_Kafka_Connect_Mirror_MirrorSourceConfig__ctor_" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorSourceConfig.#ctor*"></a>
-
-  <h3 id="Org_Apache_Kafka_Connect_Mirror_MirrorSourceConfig__ctor_System_Object___" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorSourceConfig.#ctor(System.Object[])">
-  MirrorSourceConfig(params object[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorSourceConfig.cs/#L47"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public MirrorSourceConfig(params object[] args)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>args</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>[]</dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
   <h2 class="section" id="properties">Properties
 </h2>
 
@@ -868,7 +444,7 @@ public MirrorSourceConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Mirror_MirrorSourceConfig_ADD_SOURCE_ALIAS_TO_METRICS" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorSourceConfig.ADD_SOURCE_ALIAS_TO_METRICS">
   ADD_SOURCE_ALIAS_TO_METRICS
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorSourceConfig.cs/#L137"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorSourceConfig.cs/#L132"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.2/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#ADD_SOURCE_ALIAS_TO_METRICS">https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.2/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#ADD_SOURCE_ALIAS_TO_METRICS</a></p>
@@ -876,7 +452,7 @@ public MirrorSourceConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static String ADD_SOURCE_ALIAS_TO_METRICS { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static String ADD_SOURCE_ALIAS_TO_METRICS { get; set; }</code></pre>
   </div>
 
 
@@ -900,7 +476,7 @@ public MirrorSourceConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Mirror_MirrorSourceConfig_ADD_SOURCE_ALIAS_TO_METRICS_DEFAULT" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorSourceConfig.ADD_SOURCE_ALIAS_TO_METRICS_DEFAULT">
   ADD_SOURCE_ALIAS_TO_METRICS_DEFAULT
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorSourceConfig.cs/#L101"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorSourceConfig.cs/#L108"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.2/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#ADD_SOURCE_ALIAS_TO_METRICS_DEFAULT">https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.2/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#ADD_SOURCE_ALIAS_TO_METRICS_DEFAULT</a></p>
@@ -908,7 +484,7 @@ public MirrorSourceConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool ADD_SOURCE_ALIAS_TO_METRICS_DEFAULT { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static bool ADD_SOURCE_ALIAS_TO_METRICS_DEFAULT { get; set; }</code></pre>
   </div>
 
 
@@ -932,7 +508,7 @@ public MirrorSourceConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Mirror_MirrorSourceConfig_BridgeClassName" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorSourceConfig.BridgeClassName">
   BridgeClassName
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorSourceConfig.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorSourceConfig.cs/#L47"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Java class name to be instantiated</p>
@@ -964,7 +540,7 @@ public MirrorSourceConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Mirror_MirrorSourceConfig_CONFIG_PROPERTIES_EXCLUDE" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorSourceConfig.CONFIG_PROPERTIES_EXCLUDE">
   CONFIG_PROPERTIES_EXCLUDE
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorSourceConfig.cs/#L143"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorSourceConfig.cs/#L136"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.2/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#CONFIG_PROPERTIES_EXCLUDE">https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.2/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#CONFIG_PROPERTIES_EXCLUDE</a></p>
@@ -972,7 +548,7 @@ public MirrorSourceConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static String CONFIG_PROPERTIES_EXCLUDE { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static String CONFIG_PROPERTIES_EXCLUDE { get; set; }</code></pre>
   </div>
 
 
@@ -996,7 +572,7 @@ public MirrorSourceConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Mirror_MirrorSourceConfig_CONFIG_PROPERTIES_EXCLUDE_ALIAS" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorSourceConfig.CONFIG_PROPERTIES_EXCLUDE_ALIAS">
   CONFIG_PROPERTIES_EXCLUDE_ALIAS
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorSourceConfig.cs/#L149"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorSourceConfig.cs/#L140"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.2/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#CONFIG_PROPERTIES_EXCLUDE_ALIAS">https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.2/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#CONFIG_PROPERTIES_EXCLUDE_ALIAS</a></p>
@@ -1004,7 +580,7 @@ public MirrorSourceConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static String CONFIG_PROPERTIES_EXCLUDE_ALIAS { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static String CONFIG_PROPERTIES_EXCLUDE_ALIAS { get; set; }</code></pre>
   </div>
 
 
@@ -1028,7 +604,7 @@ public MirrorSourceConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Mirror_MirrorSourceConfig_CONFIG_PROPERTIES_EXCLUDE_DEFAULT" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorSourceConfig.CONFIG_PROPERTIES_EXCLUDE_DEFAULT">
   CONFIG_PROPERTIES_EXCLUDE_DEFAULT
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorSourceConfig.cs/#L155"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorSourceConfig.cs/#L144"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.2/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#CONFIG_PROPERTIES_EXCLUDE_DEFAULT">https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.2/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#CONFIG_PROPERTIES_EXCLUDE_DEFAULT</a></p>
@@ -1036,7 +612,7 @@ public MirrorSourceConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static String CONFIG_PROPERTIES_EXCLUDE_DEFAULT { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static String CONFIG_PROPERTIES_EXCLUDE_DEFAULT { get; set; }</code></pre>
   </div>
 
 
@@ -1060,7 +636,7 @@ public MirrorSourceConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Mirror_MirrorSourceConfig_CONFIG_PROPERTY_FILTER_CLASS" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorSourceConfig.CONFIG_PROPERTY_FILTER_CLASS">
   CONFIG_PROPERTY_FILTER_CLASS
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorSourceConfig.cs/#L161"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorSourceConfig.cs/#L148"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.2/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#CONFIG_PROPERTY_FILTER_CLASS">https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.2/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#CONFIG_PROPERTY_FILTER_CLASS</a></p>
@@ -1068,7 +644,7 @@ public MirrorSourceConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static String CONFIG_PROPERTY_FILTER_CLASS { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static String CONFIG_PROPERTY_FILTER_CLASS { get; set; }</code></pre>
   </div>
 
 
@@ -1092,7 +668,7 @@ public MirrorSourceConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Mirror_MirrorSourceConfig_CONFIG_PROPERTY_FILTER_CLASS_DEFAULT" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorSourceConfig.CONFIG_PROPERTY_FILTER_CLASS_DEFAULT">
   CONFIG_PROPERTY_FILTER_CLASS_DEFAULT
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorSourceConfig.cs/#L131"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorSourceConfig.cs/#L128"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.2/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#CONFIG_PROPERTY_FILTER_CLASS_DEFAULT">https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.2/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#CONFIG_PROPERTY_FILTER_CLASS_DEFAULT</a></p>
@@ -1100,7 +676,7 @@ public MirrorSourceConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Class CONFIG_PROPERTY_FILTER_CLASS_DEFAULT { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static Class CONFIG_PROPERTY_FILTER_CLASS_DEFAULT { get; set; }</code></pre>
   </div>
 
 
@@ -1124,7 +700,7 @@ public MirrorSourceConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Mirror_MirrorSourceConfig_CONSUMER_POLL_TIMEOUT_MILLIS" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorSourceConfig.CONSUMER_POLL_TIMEOUT_MILLIS">
   CONSUMER_POLL_TIMEOUT_MILLIS
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorSourceConfig.cs/#L167"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorSourceConfig.cs/#L152"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.2/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#CONSUMER_POLL_TIMEOUT_MILLIS">https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.2/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#CONSUMER_POLL_TIMEOUT_MILLIS</a></p>
@@ -1132,7 +708,7 @@ public MirrorSourceConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static String CONSUMER_POLL_TIMEOUT_MILLIS { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static String CONSUMER_POLL_TIMEOUT_MILLIS { get; set; }</code></pre>
   </div>
 
 
@@ -1156,7 +732,7 @@ public MirrorSourceConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Mirror_MirrorSourceConfig_CONSUMER_POLL_TIMEOUT_MILLIS_DEFAULT" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorSourceConfig.CONSUMER_POLL_TIMEOUT_MILLIS_DEFAULT">
   CONSUMER_POLL_TIMEOUT_MILLIS_DEFAULT
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorSourceConfig.cs/#L305"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorSourceConfig.cs/#L249"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.2/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#CONSUMER_POLL_TIMEOUT_MILLIS_DEFAULT">https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.2/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#CONSUMER_POLL_TIMEOUT_MILLIS_DEFAULT</a></p>
@@ -1164,7 +740,7 @@ public MirrorSourceConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static long CONSUMER_POLL_TIMEOUT_MILLIS_DEFAULT { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static long CONSUMER_POLL_TIMEOUT_MILLIS_DEFAULT { get; set; }</code></pre>
   </div>
 
 
@@ -1188,7 +764,7 @@ public MirrorSourceConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Mirror_MirrorSourceConfig_IsBridgeAbstract" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorSourceConfig.IsBridgeAbstract">
   IsBridgeAbstract
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorSourceConfig.cs/#L56"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorSourceConfig.cs/#L49"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> is an abstract class, i.e. cannot be created an instance</p>
@@ -1220,10 +796,10 @@ public MirrorSourceConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Mirror_MirrorSourceConfig_IsBridgeCloseable" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorSourceConfig.IsBridgeCloseable">
   IsBridgeCloseable
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorSourceConfig.cs/#L58"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorSourceConfig.cs/#L51"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> implements Closeable</p>
+  <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> implements java.lang.AutoCloseable</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -1252,7 +828,7 @@ public MirrorSourceConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Mirror_MirrorSourceConfig_IsBridgeInterface" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorSourceConfig.IsBridgeInterface">
   IsBridgeInterface
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorSourceConfig.cs/#L60"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorSourceConfig.cs/#L53"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> is an interface, i.e. does not have any public constructor</p>
@@ -1284,7 +860,7 @@ public MirrorSourceConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Mirror_MirrorSourceConfig_IsBridgeStatic" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorSourceConfig.IsBridgeStatic">
   IsBridgeStatic
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorSourceConfig.cs/#L62"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorSourceConfig.cs/#L55"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> is a static class, i.e. does not have any public constructor</p>
@@ -1316,7 +892,7 @@ public MirrorSourceConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Mirror_MirrorSourceConfig_NEVER_USE_INCREMENTAL_ALTER_CONFIGS" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorSourceConfig.NEVER_USE_INCREMENTAL_ALTER_CONFIGS">
   NEVER_USE_INCREMENTAL_ALTER_CONFIGS
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorSourceConfig.cs/#L173"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorSourceConfig.cs/#L156"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.2/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#NEVER_USE_INCREMENTAL_ALTER_CONFIGS">https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.2/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#NEVER_USE_INCREMENTAL_ALTER_CONFIGS</a></p>
@@ -1324,7 +900,7 @@ public MirrorSourceConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static String NEVER_USE_INCREMENTAL_ALTER_CONFIGS { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static String NEVER_USE_INCREMENTAL_ALTER_CONFIGS { get; set; }</code></pre>
   </div>
 
 
@@ -1348,7 +924,7 @@ public MirrorSourceConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Mirror_MirrorSourceConfig_OFFSET_LAG_MAX" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorSourceConfig.OFFSET_LAG_MAX">
   OFFSET_LAG_MAX
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorSourceConfig.cs/#L179"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorSourceConfig.cs/#L160"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.2/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#OFFSET_LAG_MAX">https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.2/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#OFFSET_LAG_MAX</a></p>
@@ -1356,7 +932,7 @@ public MirrorSourceConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static String OFFSET_LAG_MAX { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static String OFFSET_LAG_MAX { get; set; }</code></pre>
   </div>
 
 
@@ -1380,7 +956,7 @@ public MirrorSourceConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Mirror_MirrorSourceConfig_OFFSET_LAG_MAX_DEFAULT" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorSourceConfig.OFFSET_LAG_MAX_DEFAULT">
   OFFSET_LAG_MAX_DEFAULT
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorSourceConfig.cs/#L311"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorSourceConfig.cs/#L253"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.2/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#OFFSET_LAG_MAX_DEFAULT">https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.2/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#OFFSET_LAG_MAX_DEFAULT</a></p>
@@ -1388,7 +964,7 @@ public MirrorSourceConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static long OFFSET_LAG_MAX_DEFAULT { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static long OFFSET_LAG_MAX_DEFAULT { get; set; }</code></pre>
   </div>
 
 
@@ -1412,7 +988,7 @@ public MirrorSourceConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Mirror_MirrorSourceConfig_OFFSET_SYNCS_SOURCE_ADMIN_ROLE" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorSourceConfig.OFFSET_SYNCS_SOURCE_ADMIN_ROLE">
   OFFSET_SYNCS_SOURCE_ADMIN_ROLE
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorSourceConfig.cs/#L185"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorSourceConfig.cs/#L164"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.2/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#OFFSET_SYNCS_SOURCE_ADMIN_ROLE">https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.2/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#OFFSET_SYNCS_SOURCE_ADMIN_ROLE</a></p>
@@ -1420,7 +996,7 @@ public MirrorSourceConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static String OFFSET_SYNCS_SOURCE_ADMIN_ROLE { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static String OFFSET_SYNCS_SOURCE_ADMIN_ROLE { get; set; }</code></pre>
   </div>
 
 
@@ -1444,7 +1020,7 @@ public MirrorSourceConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Mirror_MirrorSourceConfig_OFFSET_SYNCS_SOURCE_PRODUCER_ROLE" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorSourceConfig.OFFSET_SYNCS_SOURCE_PRODUCER_ROLE">
   OFFSET_SYNCS_SOURCE_PRODUCER_ROLE
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorSourceConfig.cs/#L191"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorSourceConfig.cs/#L168"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.2/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#OFFSET_SYNCS_SOURCE_PRODUCER_ROLE">https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.2/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#OFFSET_SYNCS_SOURCE_PRODUCER_ROLE</a></p>
@@ -1452,7 +1028,7 @@ public MirrorSourceConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static String OFFSET_SYNCS_SOURCE_PRODUCER_ROLE { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static String OFFSET_SYNCS_SOURCE_PRODUCER_ROLE { get; set; }</code></pre>
   </div>
 
 
@@ -1476,7 +1052,7 @@ public MirrorSourceConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Mirror_MirrorSourceConfig_OFFSET_SYNCS_TARGET_ADMIN_ROLE" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorSourceConfig.OFFSET_SYNCS_TARGET_ADMIN_ROLE">
   OFFSET_SYNCS_TARGET_ADMIN_ROLE
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorSourceConfig.cs/#L197"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorSourceConfig.cs/#L172"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.2/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#OFFSET_SYNCS_TARGET_ADMIN_ROLE">https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.2/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#OFFSET_SYNCS_TARGET_ADMIN_ROLE</a></p>
@@ -1484,7 +1060,7 @@ public MirrorSourceConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static String OFFSET_SYNCS_TARGET_ADMIN_ROLE { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static String OFFSET_SYNCS_TARGET_ADMIN_ROLE { get; set; }</code></pre>
   </div>
 
 
@@ -1508,7 +1084,7 @@ public MirrorSourceConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Mirror_MirrorSourceConfig_OFFSET_SYNCS_TARGET_PRODUCER_ROLE" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorSourceConfig.OFFSET_SYNCS_TARGET_PRODUCER_ROLE">
   OFFSET_SYNCS_TARGET_PRODUCER_ROLE
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorSourceConfig.cs/#L203"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorSourceConfig.cs/#L176"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.2/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#OFFSET_SYNCS_TARGET_PRODUCER_ROLE">https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.2/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#OFFSET_SYNCS_TARGET_PRODUCER_ROLE</a></p>
@@ -1516,7 +1092,7 @@ public MirrorSourceConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static String OFFSET_SYNCS_TARGET_PRODUCER_ROLE { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static String OFFSET_SYNCS_TARGET_PRODUCER_ROLE { get; set; }</code></pre>
   </div>
 
 
@@ -1540,7 +1116,7 @@ public MirrorSourceConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Mirror_MirrorSourceConfig_OFFSET_SYNCS_TOPIC_REPLICATION_FACTOR" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorSourceConfig.OFFSET_SYNCS_TOPIC_REPLICATION_FACTOR">
   OFFSET_SYNCS_TOPIC_REPLICATION_FACTOR
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorSourceConfig.cs/#L209"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorSourceConfig.cs/#L180"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.2/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#OFFSET_SYNCS_TOPIC_REPLICATION_FACTOR">https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.2/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#OFFSET_SYNCS_TOPIC_REPLICATION_FACTOR</a></p>
@@ -1548,7 +1124,7 @@ public MirrorSourceConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static String OFFSET_SYNCS_TOPIC_REPLICATION_FACTOR { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static String OFFSET_SYNCS_TOPIC_REPLICATION_FACTOR { get; set; }</code></pre>
   </div>
 
 
@@ -1572,7 +1148,7 @@ public MirrorSourceConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Mirror_MirrorSourceConfig_OFFSET_SYNCS_TOPIC_REPLICATION_FACTOR_DEFAULT" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorSourceConfig.OFFSET_SYNCS_TOPIC_REPLICATION_FACTOR_DEFAULT">
   OFFSET_SYNCS_TOPIC_REPLICATION_FACTOR_DEFAULT
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorSourceConfig.cs/#L335"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorSourceConfig.cs/#L269"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.2/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#OFFSET_SYNCS_TOPIC_REPLICATION_FACTOR_DEFAULT">https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.2/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#OFFSET_SYNCS_TOPIC_REPLICATION_FACTOR_DEFAULT</a></p>
@@ -1580,7 +1156,7 @@ public MirrorSourceConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static short OFFSET_SYNCS_TOPIC_REPLICATION_FACTOR_DEFAULT { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static short OFFSET_SYNCS_TOPIC_REPLICATION_FACTOR_DEFAULT { get; set; }</code></pre>
   </div>
 
 
@@ -1604,7 +1180,7 @@ public MirrorSourceConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Mirror_MirrorSourceConfig_OFFSET_SYNCS_TOPIC_REPLICATION_FACTOR_DOC" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorSourceConfig.OFFSET_SYNCS_TOPIC_REPLICATION_FACTOR_DOC">
   OFFSET_SYNCS_TOPIC_REPLICATION_FACTOR_DOC
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorSourceConfig.cs/#L215"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorSourceConfig.cs/#L184"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.2/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#OFFSET_SYNCS_TOPIC_REPLICATION_FACTOR_DOC">https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.2/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#OFFSET_SYNCS_TOPIC_REPLICATION_FACTOR_DOC</a></p>
@@ -1612,7 +1188,7 @@ public MirrorSourceConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static String OFFSET_SYNCS_TOPIC_REPLICATION_FACTOR_DOC { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static String OFFSET_SYNCS_TOPIC_REPLICATION_FACTOR_DOC { get; set; }</code></pre>
   </div>
 
 
@@ -1636,7 +1212,7 @@ public MirrorSourceConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Mirror_MirrorSourceConfig_REFRESH_TOPICS_ENABLED" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorSourceConfig.REFRESH_TOPICS_ENABLED">
   REFRESH_TOPICS_ENABLED
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorSourceConfig.cs/#L221"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorSourceConfig.cs/#L188"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.2/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#REFRESH_TOPICS_ENABLED">https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.2/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#REFRESH_TOPICS_ENABLED</a></p>
@@ -1644,7 +1220,7 @@ public MirrorSourceConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static String REFRESH_TOPICS_ENABLED { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static String REFRESH_TOPICS_ENABLED { get; set; }</code></pre>
   </div>
 
 
@@ -1668,7 +1244,7 @@ public MirrorSourceConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Mirror_MirrorSourceConfig_REFRESH_TOPICS_ENABLED_DEFAULT" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorSourceConfig.REFRESH_TOPICS_ENABLED_DEFAULT">
   REFRESH_TOPICS_ENABLED_DEFAULT
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorSourceConfig.cs/#L107"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorSourceConfig.cs/#L112"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.2/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#REFRESH_TOPICS_ENABLED_DEFAULT">https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.2/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#REFRESH_TOPICS_ENABLED_DEFAULT</a></p>
@@ -1676,7 +1252,7 @@ public MirrorSourceConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool REFRESH_TOPICS_ENABLED_DEFAULT { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static bool REFRESH_TOPICS_ENABLED_DEFAULT { get; set; }</code></pre>
   </div>
 
 
@@ -1700,7 +1276,7 @@ public MirrorSourceConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Mirror_MirrorSourceConfig_REFRESH_TOPICS_INTERVAL_SECONDS" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorSourceConfig.REFRESH_TOPICS_INTERVAL_SECONDS">
   REFRESH_TOPICS_INTERVAL_SECONDS
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorSourceConfig.cs/#L227"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorSourceConfig.cs/#L192"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.2/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#REFRESH_TOPICS_INTERVAL_SECONDS">https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.2/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#REFRESH_TOPICS_INTERVAL_SECONDS</a></p>
@@ -1708,7 +1284,7 @@ public MirrorSourceConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static String REFRESH_TOPICS_INTERVAL_SECONDS { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static String REFRESH_TOPICS_INTERVAL_SECONDS { get; set; }</code></pre>
   </div>
 
 
@@ -1732,7 +1308,7 @@ public MirrorSourceConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Mirror_MirrorSourceConfig_REFRESH_TOPICS_INTERVAL_SECONDS_DEFAULT" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorSourceConfig.REFRESH_TOPICS_INTERVAL_SECONDS_DEFAULT">
   REFRESH_TOPICS_INTERVAL_SECONDS_DEFAULT
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorSourceConfig.cs/#L317"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorSourceConfig.cs/#L257"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.2/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#REFRESH_TOPICS_INTERVAL_SECONDS_DEFAULT">https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.2/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#REFRESH_TOPICS_INTERVAL_SECONDS_DEFAULT</a></p>
@@ -1740,7 +1316,7 @@ public MirrorSourceConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static long REFRESH_TOPICS_INTERVAL_SECONDS_DEFAULT { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static long REFRESH_TOPICS_INTERVAL_SECONDS_DEFAULT { get; set; }</code></pre>
   </div>
 
 
@@ -1764,7 +1340,7 @@ public MirrorSourceConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Mirror_MirrorSourceConfig_REPLICATION_FACTOR" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorSourceConfig.REPLICATION_FACTOR">
   REPLICATION_FACTOR
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorSourceConfig.cs/#L233"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorSourceConfig.cs/#L196"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.2/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#REPLICATION_FACTOR">https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.2/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#REPLICATION_FACTOR</a></p>
@@ -1772,7 +1348,7 @@ public MirrorSourceConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static String REPLICATION_FACTOR { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static String REPLICATION_FACTOR { get; set; }</code></pre>
   </div>
 
 
@@ -1796,7 +1372,7 @@ public MirrorSourceConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Mirror_MirrorSourceConfig_REPLICATION_FACTOR_DEFAULT" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorSourceConfig.REPLICATION_FACTOR_DEFAULT">
   REPLICATION_FACTOR_DEFAULT
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorSourceConfig.cs/#L125"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorSourceConfig.cs/#L124"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.2/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#REPLICATION_FACTOR_DEFAULT">https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.2/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#REPLICATION_FACTOR_DEFAULT</a></p>
@@ -1804,7 +1380,7 @@ public MirrorSourceConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static int REPLICATION_FACTOR_DEFAULT { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static int REPLICATION_FACTOR_DEFAULT { get; set; }</code></pre>
   </div>
 
 
@@ -1828,7 +1404,7 @@ public MirrorSourceConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Mirror_MirrorSourceConfig_REQUEST_INCREMENTAL_ALTER_CONFIGS" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorSourceConfig.REQUEST_INCREMENTAL_ALTER_CONFIGS">
   REQUEST_INCREMENTAL_ALTER_CONFIGS
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorSourceConfig.cs/#L239"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorSourceConfig.cs/#L200"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.2/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#REQUEST_INCREMENTAL_ALTER_CONFIGS">https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.2/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#REQUEST_INCREMENTAL_ALTER_CONFIGS</a></p>
@@ -1836,7 +1412,7 @@ public MirrorSourceConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static String REQUEST_INCREMENTAL_ALTER_CONFIGS { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static String REQUEST_INCREMENTAL_ALTER_CONFIGS { get; set; }</code></pre>
   </div>
 
 
@@ -1860,7 +1436,7 @@ public MirrorSourceConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Mirror_MirrorSourceConfig_REQUIRE_INCREMENTAL_ALTER_CONFIGS" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorSourceConfig.REQUIRE_INCREMENTAL_ALTER_CONFIGS">
   REQUIRE_INCREMENTAL_ALTER_CONFIGS
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorSourceConfig.cs/#L245"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorSourceConfig.cs/#L204"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.2/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#REQUIRE_INCREMENTAL_ALTER_CONFIGS">https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.2/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#REQUIRE_INCREMENTAL_ALTER_CONFIGS</a></p>
@@ -1868,7 +1444,7 @@ public MirrorSourceConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static String REQUIRE_INCREMENTAL_ALTER_CONFIGS { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static String REQUIRE_INCREMENTAL_ALTER_CONFIGS { get; set; }</code></pre>
   </div>
 
 
@@ -1892,7 +1468,7 @@ public MirrorSourceConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Mirror_MirrorSourceConfig_SYNC_TOPIC_ACLS_ENABLED" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorSourceConfig.SYNC_TOPIC_ACLS_ENABLED">
   SYNC_TOPIC_ACLS_ENABLED
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorSourceConfig.cs/#L251"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorSourceConfig.cs/#L208"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.2/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#SYNC_TOPIC_ACLS_ENABLED">https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.2/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#SYNC_TOPIC_ACLS_ENABLED</a></p>
@@ -1900,7 +1476,7 @@ public MirrorSourceConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static String SYNC_TOPIC_ACLS_ENABLED { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static String SYNC_TOPIC_ACLS_ENABLED { get; set; }</code></pre>
   </div>
 
 
@@ -1924,7 +1500,7 @@ public MirrorSourceConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Mirror_MirrorSourceConfig_SYNC_TOPIC_ACLS_ENABLED_DEFAULT" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorSourceConfig.SYNC_TOPIC_ACLS_ENABLED_DEFAULT">
   SYNC_TOPIC_ACLS_ENABLED_DEFAULT
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorSourceConfig.cs/#L113"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorSourceConfig.cs/#L116"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.2/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#SYNC_TOPIC_ACLS_ENABLED_DEFAULT">https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.2/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#SYNC_TOPIC_ACLS_ENABLED_DEFAULT</a></p>
@@ -1932,7 +1508,7 @@ public MirrorSourceConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool SYNC_TOPIC_ACLS_ENABLED_DEFAULT { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static bool SYNC_TOPIC_ACLS_ENABLED_DEFAULT { get; set; }</code></pre>
   </div>
 
 
@@ -1956,7 +1532,7 @@ public MirrorSourceConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Mirror_MirrorSourceConfig_SYNC_TOPIC_ACLS_INTERVAL_SECONDS" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorSourceConfig.SYNC_TOPIC_ACLS_INTERVAL_SECONDS">
   SYNC_TOPIC_ACLS_INTERVAL_SECONDS
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorSourceConfig.cs/#L257"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorSourceConfig.cs/#L212"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.2/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#SYNC_TOPIC_ACLS_INTERVAL_SECONDS">https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.2/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#SYNC_TOPIC_ACLS_INTERVAL_SECONDS</a></p>
@@ -1964,7 +1540,7 @@ public MirrorSourceConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static String SYNC_TOPIC_ACLS_INTERVAL_SECONDS { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static String SYNC_TOPIC_ACLS_INTERVAL_SECONDS { get; set; }</code></pre>
   </div>
 
 
@@ -1988,7 +1564,7 @@ public MirrorSourceConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Mirror_MirrorSourceConfig_SYNC_TOPIC_ACLS_INTERVAL_SECONDS_DEFAULT" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorSourceConfig.SYNC_TOPIC_ACLS_INTERVAL_SECONDS_DEFAULT">
   SYNC_TOPIC_ACLS_INTERVAL_SECONDS_DEFAULT
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorSourceConfig.cs/#L323"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorSourceConfig.cs/#L261"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.2/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#SYNC_TOPIC_ACLS_INTERVAL_SECONDS_DEFAULT">https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.2/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#SYNC_TOPIC_ACLS_INTERVAL_SECONDS_DEFAULT</a></p>
@@ -1996,7 +1572,7 @@ public MirrorSourceConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static long SYNC_TOPIC_ACLS_INTERVAL_SECONDS_DEFAULT { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static long SYNC_TOPIC_ACLS_INTERVAL_SECONDS_DEFAULT { get; set; }</code></pre>
   </div>
 
 
@@ -2020,7 +1596,7 @@ public MirrorSourceConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Mirror_MirrorSourceConfig_SYNC_TOPIC_CONFIGS_ENABLED" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorSourceConfig.SYNC_TOPIC_CONFIGS_ENABLED">
   SYNC_TOPIC_CONFIGS_ENABLED
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorSourceConfig.cs/#L263"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorSourceConfig.cs/#L216"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.2/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#SYNC_TOPIC_CONFIGS_ENABLED">https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.2/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#SYNC_TOPIC_CONFIGS_ENABLED</a></p>
@@ -2028,7 +1604,7 @@ public MirrorSourceConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static String SYNC_TOPIC_CONFIGS_ENABLED { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static String SYNC_TOPIC_CONFIGS_ENABLED { get; set; }</code></pre>
   </div>
 
 
@@ -2052,7 +1628,7 @@ public MirrorSourceConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Mirror_MirrorSourceConfig_SYNC_TOPIC_CONFIGS_ENABLED_DEFAULT" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorSourceConfig.SYNC_TOPIC_CONFIGS_ENABLED_DEFAULT">
   SYNC_TOPIC_CONFIGS_ENABLED_DEFAULT
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorSourceConfig.cs/#L119"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorSourceConfig.cs/#L120"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.2/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#SYNC_TOPIC_CONFIGS_ENABLED_DEFAULT">https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.2/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#SYNC_TOPIC_CONFIGS_ENABLED_DEFAULT</a></p>
@@ -2060,7 +1636,7 @@ public MirrorSourceConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool SYNC_TOPIC_CONFIGS_ENABLED_DEFAULT { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static bool SYNC_TOPIC_CONFIGS_ENABLED_DEFAULT { get; set; }</code></pre>
   </div>
 
 
@@ -2084,7 +1660,7 @@ public MirrorSourceConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Mirror_MirrorSourceConfig_SYNC_TOPIC_CONFIGS_INTERVAL_SECONDS" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorSourceConfig.SYNC_TOPIC_CONFIGS_INTERVAL_SECONDS">
   SYNC_TOPIC_CONFIGS_INTERVAL_SECONDS
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorSourceConfig.cs/#L269"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorSourceConfig.cs/#L220"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.2/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#SYNC_TOPIC_CONFIGS_INTERVAL_SECONDS">https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.2/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#SYNC_TOPIC_CONFIGS_INTERVAL_SECONDS</a></p>
@@ -2092,7 +1668,7 @@ public MirrorSourceConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static String SYNC_TOPIC_CONFIGS_INTERVAL_SECONDS { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static String SYNC_TOPIC_CONFIGS_INTERVAL_SECONDS { get; set; }</code></pre>
   </div>
 
 
@@ -2116,7 +1692,7 @@ public MirrorSourceConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Mirror_MirrorSourceConfig_SYNC_TOPIC_CONFIGS_INTERVAL_SECONDS_DEFAULT" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorSourceConfig.SYNC_TOPIC_CONFIGS_INTERVAL_SECONDS_DEFAULT">
   SYNC_TOPIC_CONFIGS_INTERVAL_SECONDS_DEFAULT
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorSourceConfig.cs/#L329"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorSourceConfig.cs/#L265"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.2/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#SYNC_TOPIC_CONFIGS_INTERVAL_SECONDS_DEFAULT">https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.2/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#SYNC_TOPIC_CONFIGS_INTERVAL_SECONDS_DEFAULT</a></p>
@@ -2124,7 +1700,7 @@ public MirrorSourceConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static long SYNC_TOPIC_CONFIGS_INTERVAL_SECONDS_DEFAULT { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static long SYNC_TOPIC_CONFIGS_INTERVAL_SECONDS_DEFAULT { get; set; }</code></pre>
   </div>
 
 
@@ -2148,7 +1724,7 @@ public MirrorSourceConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Mirror_MirrorSourceConfig_TOPICS" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorSourceConfig.TOPICS">
   TOPICS
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorSourceConfig.cs/#L275"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorSourceConfig.cs/#L224"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.2/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#TOPICS">https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.2/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#TOPICS</a></p>
@@ -2156,7 +1732,7 @@ public MirrorSourceConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static String TOPICS { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static String TOPICS { get; set; }</code></pre>
   </div>
 
 
@@ -2180,7 +1756,7 @@ public MirrorSourceConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Mirror_MirrorSourceConfig_TOPICS_DEFAULT" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorSourceConfig.TOPICS_DEFAULT">
   TOPICS_DEFAULT
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorSourceConfig.cs/#L281"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorSourceConfig.cs/#L228"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.2/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#TOPICS_DEFAULT">https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.2/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#TOPICS_DEFAULT</a></p>
@@ -2188,7 +1764,7 @@ public MirrorSourceConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static String TOPICS_DEFAULT { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static String TOPICS_DEFAULT { get; set; }</code></pre>
   </div>
 
 
@@ -2212,7 +1788,7 @@ public MirrorSourceConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Mirror_MirrorSourceConfig_TOPICS_EXCLUDE" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorSourceConfig.TOPICS_EXCLUDE">
   TOPICS_EXCLUDE
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorSourceConfig.cs/#L287"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorSourceConfig.cs/#L232"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.2/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#TOPICS_EXCLUDE">https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.2/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#TOPICS_EXCLUDE</a></p>
@@ -2220,7 +1796,7 @@ public MirrorSourceConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static String TOPICS_EXCLUDE { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static String TOPICS_EXCLUDE { get; set; }</code></pre>
   </div>
 
 
@@ -2244,7 +1820,7 @@ public MirrorSourceConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Mirror_MirrorSourceConfig_TOPICS_EXCLUDE_ALIAS" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorSourceConfig.TOPICS_EXCLUDE_ALIAS">
   TOPICS_EXCLUDE_ALIAS
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorSourceConfig.cs/#L293"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorSourceConfig.cs/#L236"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.2/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#TOPICS_EXCLUDE_ALIAS">https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.2/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#TOPICS_EXCLUDE_ALIAS</a></p>
@@ -2252,7 +1828,7 @@ public MirrorSourceConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static String TOPICS_EXCLUDE_ALIAS { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static String TOPICS_EXCLUDE_ALIAS { get; set; }</code></pre>
   </div>
 
 
@@ -2276,7 +1852,7 @@ public MirrorSourceConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Mirror_MirrorSourceConfig_TOPICS_EXCLUDE_DEFAULT" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorSourceConfig.TOPICS_EXCLUDE_DEFAULT">
   TOPICS_EXCLUDE_DEFAULT
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorSourceConfig.cs/#L299"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorSourceConfig.cs/#L240"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.2/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#TOPICS_EXCLUDE_DEFAULT">https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.2/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#TOPICS_EXCLUDE_DEFAULT</a></p>
@@ -2284,7 +1860,7 @@ public MirrorSourceConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static String TOPICS_EXCLUDE_DEFAULT { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static String TOPICS_EXCLUDE_DEFAULT { get; set; }</code></pre>
   </div>
 
 
@@ -2304,11 +1880,124 @@ public MirrorSourceConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
 
 
+  <a id="Org_Apache_Kafka_Connect_Mirror_MirrorSourceConfig_USE_INCREMENTAL_ALTER_CONFIGS_" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorSourceConfig.USE_INCREMENTAL_ALTER_CONFIGS*"></a>
+
+  <h3 id="Org_Apache_Kafka_Connect_Mirror_MirrorSourceConfig_USE_INCREMENTAL_ALTER_CONFIGS" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorSourceConfig.USE_INCREMENTAL_ALTER_CONFIGS">
+  USE_INCREMENTAL_ALTER_CONFIGS
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorSourceConfig.cs/#L244"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.2/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#USE_INCREMENTAL_ALTER_CONFIGS">https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.2/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#USE_INCREMENTAL_ALTER_CONFIGS</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Deprecated in JVM&quot;)]
+public static String USE_INCREMENTAL_ALTER_CONFIGS { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Org_Apache_Kafka_Connect_Mirror_MirrorSourceConfig_CreatePoolableInstance_" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorSourceConfig.CreatePoolableInstance*"></a>
+
+  <h3 id="Org_Apache_Kafka_Connect_Mirror_MirrorSourceConfig_CreatePoolableInstance_Java_Util_Map_Java_Lang_String_Java_Lang_String__" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorSourceConfig.CreatePoolableInstance(Java.Util.Map{Java.Lang.String,Java.Lang.String})">
+  CreatePoolableInstance(Map&lt;String, String&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorSourceConfig.cs/#L77"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>HPA initializer for MirrorSourceConfig(Java.Util.Map%3CJava.Lang.String, Java.Lang.String%3E arg0)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static MirrorSourceConfig CreatePoolableInstance(Map&lt;String, String&gt; arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>, <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Connect.Mirror.MirrorSourceConfig.html">MirrorSourceConfig</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Connect_Mirror_MirrorSourceConfig_CreatePoolableInstance_" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorSourceConfig.CreatePoolableInstance*"></a>
+
+  <h3 id="Org_Apache_Kafka_Connect_Mirror_MirrorSourceConfig_CreatePoolableInstance_Org_Apache_Kafka_Common_Config_ConfigDef_Java_Util_Map_Java_Lang_String_Java_Lang_String__" data-uid="Org.Apache.Kafka.Connect.Mirror.MirrorSourceConfig.CreatePoolableInstance(Org.Apache.Kafka.Common.Config.ConfigDef,Java.Util.Map{Java.Lang.String,Java.Lang.String})">
+  CreatePoolableInstance(ConfigDef, Map&lt;String, String&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorSourceConfig.cs/#L93"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>HPA initializer for MirrorSourceConfig(Org.Apache.Kafka.Common.Config.ConfigDef arg0, Java.Util.Map%3CJava.Lang.String, Java.Lang.String%3E arg1)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static MirrorSourceConfig CreatePoolableInstance(ConfigDef arg0, Map&lt;String, String&gt; arg1)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="Org.Apache.Kafka.Common.Config.ConfigDef.html">ConfigDef</a></dt>
+    <dd></dd>
+    <dt><code>arg1</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>, <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Connect.Mirror.MirrorSourceConfig.html">MirrorSourceConfig</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorSourceConfig.cs/#L70" class="edit-link">Edit this page</a>
+          <a href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Mirror/MirrorSourceConfig.cs/#L63" class="edit-link">Edit this page</a>
         </div>
 
 

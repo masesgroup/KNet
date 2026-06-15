@@ -89,7 +89,7 @@
 
 
   <h1 id="MASES_KNet_Streams_Kstream_StreamJoined_6" data-uid="MASES.KNet.Streams.Kstream.StreamJoined`6" class="text-break">
-Class StreamJoined&lt;K, V1, V2, TJVMK, TJVMV1, TJVMV2&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Streams/Kstream/StreamJoined.cs/#L32"><i class="bi bi-code-slash"></i></a>
+Class StreamJoined&lt;K, V1, V2, TJVMK, TJVMV1, TJVMV2&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Streams/Kstream/StreamJoined.cs/#L34"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -102,7 +102,7 @@ Class StreamJoined&lt;K, V1, V2, TJVMK, TJVMV1, TJVMV2&gt;  <a class="header-act
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class StreamJoined&lt;K, V1, V2, TJVMK, TJVMV1, TJVMV2&gt; : IGenericSerDesFactoryApplier</code></pre>
+    <pre><code class="lang-csharp hljs">public class StreamJoined&lt;K, V1, V2, TJVMK, TJVMV1, TJVMV2&gt; : IKNetInnerReference&lt;StreamJoined&lt;TJVMK, TJVMV1, TJVMV2&gt;&gt;, IGenericSerDesFactoryApplier, IDisposable</code></pre>
   </div>
 
 
@@ -137,36 +137,49 @@ Class StreamJoined&lt;K, V1, V2, TJVMK, TJVMV1, TJVMV2&gt;  <a class="header-act
   <dl class="typelist implements">
     <dt>Implements</dt>
     <dd>
+      <div><a class="xref" href="MASES.KNet.IKNetInnerReference-1.html">IKNetInnerReference</a>&lt;<a class="xref" href="Org.Apache.Kafka.Streams.Kstream.StreamJoined-3.html">StreamJoined</a>&lt;TJVMK, TJVMV1, TJVMV2&gt;&gt;</div>
       <div><a class="xref" href="MASES.KNet.Serialization.IGenericSerDesFactoryApplier.html">IGenericSerDesFactoryApplier</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
     </dd>
   </dl>
 
 
-  <dl class="typelist inheritedMembers">
-    <dt>Inherited Members</dt>
-    <dd>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
-    </div>
-  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="MASES_KNet_Streams_Kstream_StreamJoined_6_InnerReference_" data-uid="MASES.KNet.Streams.Kstream.StreamJoined`6.InnerReference*"></a>
+
+  <h3 id="MASES_KNet_Streams_Kstream_StreamJoined_6_InnerReference" data-uid="MASES.KNet.Streams.Kstream.StreamJoined`6.InnerReference">
+  InnerReference
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Streams/Kstream/StreamJoined.cs/#L46"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The underlying inner reference used from KNet object instance</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StreamJoined&lt;TJVMK, TJVMV1, TJVMV2&gt; InnerReference { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.StreamJoined-3.html">StreamJoined</a>&lt;TJVMK, TJVMV1, TJVMV2&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
 
 
 
@@ -181,7 +194,7 @@ Class StreamJoined&lt;K, V1, V2, TJVMK, TJVMV1, TJVMV2&gt;  <a class="header-act
 
   <h3 id="MASES_KNet_Streams_Kstream_StreamJoined_6_As_System_String_" data-uid="MASES.KNet.Streams.Kstream.StreamJoined`6.As(System.String)">
   As(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Streams/Kstream/StreamJoined.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Streams/Kstream/StreamJoined.cs/#L94"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/kstream/StreamJoined.html#as(java.lang.String)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/kstream/StreamJoined.html#as(java.lang.String)</a></p>
@@ -216,11 +229,104 @@ Class StreamJoined&lt;K, V1, V2, TJVMK, TJVMV1, TJVMV2&gt;  <a class="header-act
 
 
 
+  <a id="MASES_KNet_Streams_Kstream_StreamJoined_6_CheckDisposed_" data-uid="MASES.KNet.Streams.Kstream.StreamJoined`6.CheckDisposed*"></a>
+
+  <h3 id="MASES_KNet_Streams_Kstream_StreamJoined_6_CheckDisposed" data-uid="MASES.KNet.Streams.Kstream.StreamJoined`6.CheckDisposed">
+  CheckDisposed()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Streams/Kstream/StreamJoined.cs/#L55"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Test if this instance was disposed</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void CheckDisposed()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.objectdisposedexception">ObjectDisposedException</a></dt>
+    <dd><p>When this instance was disposed</p>
+</dd>
+  </dl>
+
+
+
+  <a id="MASES_KNet_Streams_Kstream_StreamJoined_6_Dispose_" data-uid="MASES.KNet.Streams.Kstream.StreamJoined`6.Dispose*"></a>
+
+  <h3 id="MASES_KNet_Streams_Kstream_StreamJoined_6_Dispose" data-uid="MASES.KNet.Streams.Kstream.StreamJoined`6.Dispose">
+  Dispose()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Streams/Kstream/StreamJoined.cs/#L58"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_Kstream_StreamJoined_6_Dispose_" data-uid="MASES.KNet.Streams.Kstream.StreamJoined`6.Dispose*"></a>
+
+  <h3 id="MASES_KNet_Streams_Kstream_StreamJoined_6_Dispose_System_Boolean_" data-uid="MASES.KNet.Streams.Kstream.StreamJoined`6.Dispose(System.Boolean)">
+  Dispose(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Streams/Kstream/StreamJoined.cs/#L69"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Implements the pattern described in <a href="https://learn.microsoft.com/en-en/dotnet/standard/garbage-collection/implementing-dispose">https://learn.microsoft.com/en-en/dotnet/standard/garbage-collection/implementing-dispose</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void Dispose(bool disposing)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>disposing</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>The disposing parameter is a <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">bool</a> that indicates whether the method call comes from a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable.dispose">Dispose()</a> method (its value is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>) or from a finalizer (its value is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>)</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="MASES_KNet_Streams_Kstream_StreamJoined_6_With_" data-uid="MASES.KNet.Streams.Kstream.StreamJoined`6.With*"></a>
 
   <h3 id="MASES_KNet_Streams_Kstream_StreamJoined_6_With_MASES_KNet_Serialization_ISerDes__0__3__MASES_KNet_Serialization_ISerDes__1__4__MASES_KNet_Serialization_ISerDes__2__5__" data-uid="MASES.KNet.Streams.Kstream.StreamJoined`6.With(MASES.KNet.Serialization.ISerDes{`0,`3},MASES.KNet.Serialization.ISerDes{`1,`4},MASES.KNet.Serialization.ISerDes{`2,`5})">
   With(ISerDes&lt;K, TJVMK&gt;, ISerDes&lt;V1, TJVMV1&gt;, ISerDes&lt;V2, TJVMV2&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Streams/Kstream/StreamJoined.cs/#L66"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Streams/Kstream/StreamJoined.cs/#L107"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/kstream/StreamJoined.html#with(org.apache.kafka.common.serialization.Serde,org.apache.kafka.common.serialization.Serde,org.apache.kafka.common.serialization.Serde)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/kstream/StreamJoined.html#with(org.apache.kafka.common.serialization.Serde,org.apache.kafka.common.serialization.Serde,org.apache.kafka.common.serialization.Serde)</a></p>
@@ -265,7 +371,7 @@ Class StreamJoined&lt;K, V1, V2, TJVMK, TJVMV1, TJVMV2&gt;  <a class="header-act
 
   <h3 id="MASES_KNet_Streams_Kstream_StreamJoined_6_With_Org_Apache_Kafka_Streams_State_DslStoreSuppliers_" data-uid="MASES.KNet.Streams.Kstream.StreamJoined`6.With(Org.Apache.Kafka.Streams.State.DslStoreSuppliers)">
   With(DslStoreSuppliers)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Streams/Kstream/StreamJoined.cs/#L76"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Streams/Kstream/StreamJoined.cs/#L117"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/kstream/StreamJoined.html#with(org.apache.kafka.streams.state.DslStoreSuppliers)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/kstream/StreamJoined.html#with(org.apache.kafka.streams.state.DslStoreSuppliers)</a></p>
@@ -304,7 +410,7 @@ Class StreamJoined&lt;K, V1, V2, TJVMK, TJVMV1, TJVMV2&gt;  <a class="header-act
 
   <h3 id="MASES_KNet_Streams_Kstream_StreamJoined_6_With_Org_Apache_Kafka_Streams_State_WindowBytesStoreSupplier_Org_Apache_Kafka_Streams_State_WindowBytesStoreSupplier_" data-uid="MASES.KNet.Streams.Kstream.StreamJoined`6.With(Org.Apache.Kafka.Streams.State.WindowBytesStoreSupplier,Org.Apache.Kafka.Streams.State.WindowBytesStoreSupplier)">
   With(WindowBytesStoreSupplier, WindowBytesStoreSupplier)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Streams/Kstream/StreamJoined.cs/#L87"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Streams/Kstream/StreamJoined.cs/#L128"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/kstream/StreamJoined.html#with(org.apache.kafka.streams.state.WindowBytesStoreSupplier,org.apache.kafka.streams.state.WindowBytesStoreSupplier)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/kstream/StreamJoined.html#with(org.apache.kafka.streams.state.WindowBytesStoreSupplier,org.apache.kafka.streams.state.WindowBytesStoreSupplier)</a></p>
@@ -346,7 +452,7 @@ Class StreamJoined&lt;K, V1, V2, TJVMK, TJVMV1, TJVMV2&gt;  <a class="header-act
 
   <h3 id="MASES_KNet_Streams_Kstream_StreamJoined_6_WithDslStoreSuppliers_Org_Apache_Kafka_Streams_State_DslStoreSuppliers_" data-uid="MASES.KNet.Streams.Kstream.StreamJoined`6.WithDslStoreSuppliers(Org.Apache.Kafka.Streams.State.DslStoreSuppliers)">
   WithDslStoreSuppliers(DslStoreSuppliers)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Streams/Kstream/StreamJoined.cs/#L101"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Streams/Kstream/StreamJoined.cs/#L142"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/kstream/StreamJoined.html#withDslStoreSuppliers(org.apache.kafka.streams.state.DslStoreSuppliers)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/kstream/StreamJoined.html#withDslStoreSuppliers(org.apache.kafka.streams.state.DslStoreSuppliers)</a></p>
@@ -385,7 +491,7 @@ Class StreamJoined&lt;K, V1, V2, TJVMK, TJVMV1, TJVMV2&gt;  <a class="header-act
 
   <h3 id="MASES_KNet_Streams_Kstream_StreamJoined_6_WithKeySerde_MASES_KNet_Serialization_ISerDes__0__3__" data-uid="MASES.KNet.Streams.Kstream.StreamJoined`6.WithKeySerde(MASES.KNet.Serialization.ISerDes{`0,`3})">
   WithKeySerde(ISerDes&lt;K, TJVMK&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Streams/Kstream/StreamJoined.cs/#L111"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Streams/Kstream/StreamJoined.cs/#L153"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/kstream/StreamJoined.html#withKeySerde(org.apache.kafka.common.serialization.Serde)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/kstream/StreamJoined.html#withKeySerde(org.apache.kafka.common.serialization.Serde)</a></p>
@@ -424,7 +530,7 @@ Class StreamJoined&lt;K, V1, V2, TJVMK, TJVMV1, TJVMV2&gt;  <a class="header-act
 
   <h3 id="MASES_KNet_Streams_Kstream_StreamJoined_6_WithLoggingDisabled" data-uid="MASES.KNet.Streams.Kstream.StreamJoined`6.WithLoggingDisabled">
   WithLoggingDisabled()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Streams/Kstream/StreamJoined.cs/#L120"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Streams/Kstream/StreamJoined.cs/#L163"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/kstream/StreamJoined.html#withLoggingDisabled()">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/kstream/StreamJoined.html#withLoggingDisabled()</a></p>
@@ -457,7 +563,7 @@ Class StreamJoined&lt;K, V1, V2, TJVMK, TJVMV1, TJVMV2&gt;  <a class="header-act
 
   <h3 id="MASES_KNet_Streams_Kstream_StreamJoined_6_WithLoggingEnabled_Java_Util_Map_Java_Lang_String_Java_Lang_String__" data-uid="MASES.KNet.Streams.Kstream.StreamJoined`6.WithLoggingEnabled(Java.Util.Map{Java.Lang.String,Java.Lang.String})">
   WithLoggingEnabled(Map&lt;String, String&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Streams/Kstream/StreamJoined.cs/#L130"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Streams/Kstream/StreamJoined.cs/#L174"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/kstream/StreamJoined.html#withLoggingEnabled(java.util.Map)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/kstream/StreamJoined.html#withLoggingEnabled(java.util.Map)</a></p>
@@ -496,7 +602,7 @@ Class StreamJoined&lt;K, V1, V2, TJVMK, TJVMV1, TJVMV2&gt;  <a class="header-act
 
   <h3 id="MASES_KNet_Streams_Kstream_StreamJoined_6_WithOtherStoreSupplier_Org_Apache_Kafka_Streams_State_WindowBytesStoreSupplier_" data-uid="MASES.KNet.Streams.Kstream.StreamJoined`6.WithOtherStoreSupplier(Org.Apache.Kafka.Streams.State.WindowBytesStoreSupplier)">
   WithOtherStoreSupplier(WindowBytesStoreSupplier)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Streams/Kstream/StreamJoined.cs/#L140"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Streams/Kstream/StreamJoined.cs/#L185"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/kstream/StreamJoined.html#withOtherStoreSupplier(org.apache.kafka.streams.state.WindowBytesStoreSupplier)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/kstream/StreamJoined.html#withOtherStoreSupplier(org.apache.kafka.streams.state.WindowBytesStoreSupplier)</a></p>
@@ -535,7 +641,7 @@ Class StreamJoined&lt;K, V1, V2, TJVMK, TJVMV1, TJVMV2&gt;  <a class="header-act
 
   <h3 id="MASES_KNet_Streams_Kstream_StreamJoined_6_WithOtherValueSerde_MASES_KNet_Serialization_ISerDes__2__5__" data-uid="MASES.KNet.Streams.Kstream.StreamJoined`6.WithOtherValueSerde(MASES.KNet.Serialization.ISerDes{`2,`5})">
   WithOtherValueSerde(ISerDes&lt;V2, TJVMV2&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Streams/Kstream/StreamJoined.cs/#L150"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Streams/Kstream/StreamJoined.cs/#L196"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/kstream/StreamJoined.html#withOtherValueSerde(org.apache.kafka.common.serialization.Serde)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/kstream/StreamJoined.html#withOtherValueSerde(org.apache.kafka.common.serialization.Serde)</a></p>
@@ -574,7 +680,7 @@ Class StreamJoined&lt;K, V1, V2, TJVMK, TJVMV1, TJVMV2&gt;  <a class="header-act
 
   <h3 id="MASES_KNet_Streams_Kstream_StreamJoined_6_WithStoreName_System_String_" data-uid="MASES.KNet.Streams.Kstream.StreamJoined`6.WithStoreName(System.String)">
   WithStoreName(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Streams/Kstream/StreamJoined.cs/#L160"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Streams/Kstream/StreamJoined.cs/#L207"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/kstream/StreamJoined.html#withStoreName(java.lang.String)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/kstream/StreamJoined.html#withStoreName(java.lang.String)</a></p>
@@ -613,7 +719,7 @@ Class StreamJoined&lt;K, V1, V2, TJVMK, TJVMV1, TJVMV2&gt;  <a class="header-act
 
   <h3 id="MASES_KNet_Streams_Kstream_StreamJoined_6_WithThisStoreSupplier_Org_Apache_Kafka_Streams_State_WindowBytesStoreSupplier_" data-uid="MASES.KNet.Streams.Kstream.StreamJoined`6.WithThisStoreSupplier(Org.Apache.Kafka.Streams.State.WindowBytesStoreSupplier)">
   WithThisStoreSupplier(WindowBytesStoreSupplier)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Streams/Kstream/StreamJoined.cs/#L170"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Streams/Kstream/StreamJoined.cs/#L219"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/kstream/StreamJoined.html#withThisStoreSupplier(org.apache.kafka.streams.state.WindowBytesStoreSupplier)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/kstream/StreamJoined.html#withThisStoreSupplier(org.apache.kafka.streams.state.WindowBytesStoreSupplier)</a></p>
@@ -652,7 +758,7 @@ Class StreamJoined&lt;K, V1, V2, TJVMK, TJVMV1, TJVMV2&gt;  <a class="header-act
 
   <h3 id="MASES_KNet_Streams_Kstream_StreamJoined_6_WithValueSerde_MASES_KNet_Serialization_ISerDes__1__4__" data-uid="MASES.KNet.Streams.Kstream.StreamJoined`6.WithValueSerde(MASES.KNet.Serialization.ISerDes{`1,`4})">
   WithValueSerde(ISerDes&lt;V1, TJVMV1&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Streams/Kstream/StreamJoined.cs/#L180"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Streams/Kstream/StreamJoined.cs/#L230"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/kstream/StreamJoined.html#withValueSerde(org.apache.kafka.common.serialization.Serde)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/kstream/StreamJoined.html#withValueSerde(org.apache.kafka.common.serialization.Serde)</a></p>
@@ -695,7 +801,7 @@ Class StreamJoined&lt;K, V1, V2, TJVMK, TJVMV1, TJVMV2&gt;  <a class="header-act
 
   <h3 id="MASES_KNet_Streams_Kstream_StreamJoined_6_op_Implicit_MASES_KNet_Streams_Kstream_StreamJoined__0__1__2__3__4__5___Org_Apache_Kafka_Streams_Kstream_StreamJoined__3__4__5_" data-uid="MASES.KNet.Streams.Kstream.StreamJoined`6.op_Implicit(MASES.KNet.Streams.Kstream.StreamJoined{`0,`1,`2,`3,`4,`5})~Org.Apache.Kafka.Streams.Kstream.StreamJoined{`3,`4,`5}">
   implicit operator StreamJoined&lt;TJVMK, TJVMV1, TJVMV2&gt;(StreamJoined&lt;K, V1, V2, TJVMK, TJVMV1, TJVMV2&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Streams/Kstream/StreamJoined.cs/#L46"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Streams/Kstream/StreamJoined.cs/#L86"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Converter from <a class="xref" href="MASES.KNet.Streams.Kstream.StreamJoined-6.html">StreamJoined&lt;K, V1, V2, TJVMK, TJVMV1, TJVMV2&gt;</a> to <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.StreamJoined-3.html">StreamJoined&lt;K, V1, V2&gt;</a></p>
@@ -732,7 +838,7 @@ Class StreamJoined&lt;K, V1, V2, TJVMK, TJVMV1, TJVMV2&gt;  <a class="header-act
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Streams/Kstream/StreamJoined.cs/#L32" class="edit-link">Edit this page</a>
+          <a href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Streams/Kstream/StreamJoined.cs/#L34" class="edit-link">Edit this page</a>
         </div>
 
 

@@ -89,7 +89,7 @@
 
 
   <h1 id="Org_Rocksdb_Transaction" data-uid="Org.Rocksdb.Transaction" class="text-break">
-Class Transaction  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L152"><i class="bi bi-code-slash"></i></a>
+Class Transaction  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L131"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -102,7 +102,7 @@ Class Transaction  <a class="header-action link-secondary" title="View source" h
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class Transaction : RocksObject, IDynamicMetaObjectProvider, IJVMBridgeCore, IEquatable&lt;IJVMBridgeBase&gt;, IDisposable, IJVMBridgeBaseStatic, IJVMBridgeBase, IJVMBridgeDefinition, IAutoCloseable</code></pre>
+    <pre><code class="lang-csharp hljs">public class Transaction : RocksObject, IDynamicMetaObjectProvider, IJVMBridgeCore, IEquatable&lt;IJVMBridgeBaseInstance&gt;, IDisposable, IJVMBridgeBaseStatic, IJVMBridgeBase, IJVMBridgeBaseInstance, IJVMBridgeDefinition, IAutoCloseable</code></pre>
   </div>
 
 
@@ -128,10 +128,11 @@ Class Transaction  <a class="header-action link-secondary" title="View source" h
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.idynamicmetaobjectprovider">IDynamicMetaObjectProvider</a></div>
       <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeCore.html">IJVMBridgeCore</a></div>
-      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBase.html">IJVMBridgeBase</a>&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBaseInstance.html">IJVMBridgeBaseInstance</a>&gt;</div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
       <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic.html">IJVMBridgeBaseStatic</a></div>
       <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBase.html">IJVMBridgeBase</a></div>
+      <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBaseInstance.html">IJVMBridgeBaseInstance</a></div>
       <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html">IJVMBridgeDefinition</a></div>
       <div><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.IAutoCloseable.html">IAutoCloseable</a></div>
     </dd>
@@ -148,382 +149,10 @@ Class Transaction  <a class="header-action link-secondary" title="View source" h
       <a class="xref" href="Org.Rocksdb.AbstractImmutableNativeReference.html#Org_Rocksdb_AbstractImmutableNativeReference_IsOwningHandle">AbstractImmutableNativeReference.IsOwningHandle()</a>
     </div>
     <div>
+      <a class="xref" href="Org.Rocksdb.AbstractNativeReference.html#Org_Rocksdb_AbstractNativeReference_CreatePoolableInstance">AbstractNativeReference.CreatePoolableInstance()</a>
+    </div>
+    <div>
       <a class="xref" href="Org.Rocksdb.AbstractNativeReference.html#Org_Rocksdb_AbstractNativeReference_Close">AbstractNativeReference.Close()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecute(IJavaType, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignature(IJavaType, string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecute(string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignature(string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecute&lt;TReturn&gt;(IJavaType, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignature&lt;TReturn&gt;(IJavaType, string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecute&lt;TReturn&gt;(string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignature&lt;TReturn&gt;(string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AutoCloseable&gt;.SExecute(Type, IJavaType, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignature(Type, IJavaType, string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AutoCloseable&gt;.SExecute(Type, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignature(Type, string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecute&lt;TNewClass, TReturn&gt;(IJavaType, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignature&lt;TNewClass, TReturn&gt;(IJavaType, string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecute&lt;TNewClass, TReturn&gt;(string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignature&lt;TNewClass, TReturn&gt;(string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AutoCloseable&gt;.SExecute&lt;TReturn&gt;(Type, IJavaType, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignature&lt;TReturn&gt;(Type, IJavaType, string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AutoCloseable&gt;.SExecute&lt;TReturn&gt;(Type, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignature&lt;TReturn&gt;(Type, string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecute&lt;TNewClass, TReturn, TConverter&gt;(IJavaType, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignature&lt;TNewClass, TReturn, TConverter&gt;(IJavaType, string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecute&lt;TNewClass, TReturn, TConverter&gt;(string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignature&lt;TNewClass, TReturn, TConverter&gt;(string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AutoCloseable&gt;.SExecute&lt;TReturn, TConverter&gt;(Type, IJavaType, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignature&lt;TReturn, TConverter&gt;(Type, IJavaType, string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AutoCloseable&gt;.SExecute&lt;TReturn, TConverter&gt;(Type, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignature&lt;TReturn, TConverter&gt;(Type, string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteArray&lt;TArrayType&gt;(IJavaType, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignatureArray&lt;TArrayType&gt;(IJavaType, string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteArray&lt;TArrayType&gt;(string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SExecuteWithSignatureArray&lt;TArrayType&gt;(string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SGetField(IJavaType, string)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SGetField(string)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SGetField&lt;TReturn&gt;(IJavaType, string)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SGetField&lt;TReturn&gt;(string)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SGetFieldArray&lt;TReturn&gt;(IJavaType, string)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SGetFieldArray&lt;TReturn&gt;(string)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SSetField(IJavaType, string, object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SSetField(string, object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SSetField&lt;TValue&gt;(IJavaType, string, TValue)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.SSetField&lt;TValue&gt;(string, TValue)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.IsAssignableFrom(string)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_IsAssignableFrom_MASES_JCOBridge_C2JBridge_JVMInterop_IJavaType_">JVMBridgeBase&lt;AutoCloseable&gt;.IsAssignableFrom(IJavaType)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_IsAssignableFrom__1">JVMBridgeBase&lt;AutoCloseable&gt;.IsAssignableFrom&lt;T&gt;()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">JVMBridgeBase&lt;AutoCloseable&gt;.New(params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.NewWithSignature(string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.NewAndWrapsDirect&lt;TNewClass&gt;(string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AutoCloseable&gt;.NewWithSignatureAndWrapsDirect&lt;TNewClass&gt;(string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_Execute__1___0___">JVMBridgeBase&lt;AutoCloseable&gt;.Execute&lt;T&gt;(params T[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_DynBridgeClazz">JVMBridgeBase&lt;AutoCloseable&gt;.DynBridgeClazz</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_BridgeClazz">JVMBridgeBase&lt;AutoCloseable&gt;.BridgeClazz</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ReferenceEqualsJVM_MASES_JCOBridge_C2JBridge_JVMBridgeBase_MASES_JCOBridge_C2JBridge_JVMBridgeBase_">JVMBridgeBase.ReferenceEqualsJVM(JVMBridgeBase, JVMBridgeBase)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.ClazzOf&lt;TClass&gt;(bool)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">JVMBridgeBase.ClazzOf&lt;TClass&gt;(out Exception, bool)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ClazzOf(string, bool)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ClazzOf(string, out Exception, bool)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_RuntimeClassNameOf__1">JVMBridgeBase.RuntimeClassNameOf&lt;T&gt;()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.RuntimeClassNameOf(Type)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ClassNameOf__1">JVMBridgeBase.ClassNameOf&lt;T&gt;()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ClassOf__1">JVMBridgeBase.ClassOf&lt;T&gt;()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_WrapsDirect__1_MASES_JCOBridge_C2JBridge_JVMInterop_IJavaObject_">JVMBridgeBase.WrapsDirect&lt;TNewClass&gt;(IJavaObject)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Wraps__1_MASES_JCOBridge_C2JBridge_JVMInterop_IJavaObject_">JVMBridgeBase.Wraps&lt;TNewClass&gt;(IJavaObject)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.Wraps(Type, IJavaObject, string)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Wraps__2_MASES_JCOBridge_C2JBridge_JVMInterop_IJavaObject_">JVMBridgeBase.Wraps&lt;TNewClass, TReturn&gt;(IJavaObject)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.Wraps&lt;TReturn&gt;(Type, IJavaObject, string)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Wraps__3_MASES_JCOBridge_C2JBridge_JVMInterop_IJavaObject_">JVMBridgeBase.Wraps&lt;TNewClass, TReturn, TConverter&gt;(IJavaObject)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.Wraps&lt;TReturn, TConverter&gt;(Type, IJavaObject)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_MonitorEnter">JVMBridgeBase.MonitorEnter()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_MonitorExit">JVMBridgeBase.MonitorExit()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IsInstanceOf(string)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsInstanceOf_MASES_JCOBridge_C2JBridge_JVMInterop_IJavaType_">JVMBridgeBase.IsInstanceOf(IJavaType)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsInstanceOf__1">JVMBridgeBase.IsInstanceOf&lt;T&gt;()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_RuntimeIsInstanceOf__1">JVMBridgeBase.RuntimeIsInstanceOf&lt;T&gt;()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_CastTo__1">JVMBridgeBase.CastTo&lt;TNewClass&gt;()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_CastDirect__1">JVMBridgeBase.CastDirect&lt;TNewClass&gt;()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Dispose">JVMBridgeBase.Dispose()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.Dispose(bool)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ToString">JVMBridgeBase.ToString()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Equals_MASES_JCOBridge_C2JBridge_IJVMBridgeBase_">JVMBridgeBase.Equals(IJVMBridgeBase)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">JVMBridgeBase.Equals(object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_GetHashCode">JVMBridgeBase.GetHashCode()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Notify">JVMBridgeBase.Notify()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_NotifyAll">JVMBridgeBase.NotifyAll()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Wait">JVMBridgeBase.Wait()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">JVMBridgeBase.Wait(long)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">JVMBridgeBase.Wait(long, int)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecute(string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignature(string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecute&lt;TReturn&gt;(string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignature&lt;TReturn&gt;(string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecute&lt;TNewClass, TReturn&gt;(string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignature&lt;TNewClass, TReturn&gt;(string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecute&lt;TNewClass, TReturn, TConverter&gt;(string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignature&lt;TNewClass, TReturn, TConverter&gt;(string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteArray&lt;TArrayType&gt;(string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignatureArray&lt;TArrayType&gt;(string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IGetField(string)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IGetField&lt;TReturn&gt;(string)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IGetFieldArray&lt;TReturn&gt;(string)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ISetField(string, object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ISetField&lt;TValue&gt;(string, TValue)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">JVMBridgeBase.Throw&lt;TException&gt;(params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">JVMBridgeBase.BiThrow&lt;TException&gt;(params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_DynBridgeInstance">JVMBridgeBase.DynBridgeInstance</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeInstance">JVMBridgeBase.BridgeInstance</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeListener">JVMBridgeBase.IsBridgeListener</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trygetmember">DynamicObject.TryGetMember(GetMemberBinder, out object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trysetmember">DynamicObject.TrySetMember(SetMemberBinder, object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trydeletemember">DynamicObject.TryDeleteMember(DeleteMemberBinder)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryinvokemember">DynamicObject.TryInvokeMember(InvokeMemberBinder, object[], out object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryconvert">DynamicObject.TryConvert(ConvertBinder, out object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trycreateinstance">DynamicObject.TryCreateInstance(CreateInstanceBinder, object[], out object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryinvoke">DynamicObject.TryInvoke(InvokeBinder, object[], out object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trybinaryoperation">DynamicObject.TryBinaryOperation(BinaryOperationBinder, object, out object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryunaryoperation">DynamicObject.TryUnaryOperation(UnaryOperationBinder, out object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trygetindex">DynamicObject.TryGetIndex(GetIndexBinder, object[], out object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trysetindex">DynamicObject.TrySetIndex(SetIndexBinder, object[], object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trydeleteindex">DynamicObject.TryDeleteIndex(DeleteIndexBinder, object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.getdynamicmembernames">DynamicObject.GetDynamicMemberNames()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.getmetaobject">DynamicObject.GetMetaObject(Expression)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
     </div>
   </dd></dl>
 
@@ -538,39 +167,12 @@ Class Transaction  <a class="header-action link-secondary" title="View source" h
 
   <a id="Org_Rocksdb_Transaction__ctor_" data-uid="Org.Rocksdb.Transaction.#ctor*"></a>
 
-  <h3 id="Org_Rocksdb_Transaction__ctor" data-uid="Org.Rocksdb.Transaction.#ctor">
-  Transaction()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L38"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Transaction()</code></pre>
-  </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <a id="Org_Rocksdb_Transaction__ctor_" data-uid="Org.Rocksdb.Transaction.#ctor*"></a>
-
   <h3 id="Org_Rocksdb_Transaction__ctor_MASES_JCOBridge_C2JBridge_IJVMBridgeBaseInitializer_" data-uid="Org.Rocksdb.Transaction.#ctor(MASES.JCOBridge.C2JBridge.IJVMBridgeBaseInitializer)">
   Transaction(IJVMBridgeBaseInitializer)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L39"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Internal constructor: used internally from JCOBridge</p>
+  <div class="markdown level1 summary"><p>Initializer used internally by JCOBridge. Do not use directly.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -596,38 +198,6 @@ public Transaction(IJVMBridgeBaseInitializer initializer)</code></pre>
 
 
 
-  <a id="Org_Rocksdb_Transaction__ctor_" data-uid="Org.Rocksdb.Transaction.#ctor*"></a>
-
-  <h3 id="Org_Rocksdb_Transaction__ctor_System_Object___" data-uid="Org.Rocksdb.Transaction.#ctor(System.Object[])">
-  Transaction(params object[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L47"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Transaction(params object[] args)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>args</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>[]</dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
   <h2 class="section" id="properties">Properties
 </h2>
 
@@ -636,7 +206,7 @@ public Transaction(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_Transaction_BridgeClassName" data-uid="Org.Rocksdb.Transaction.BridgeClassName">
   BridgeClassName
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L47"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Java class name to be instantiated</p>
@@ -668,7 +238,7 @@ public Transaction(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_Transaction_CommitTimeWriteBatch" data-uid="Org.Rocksdb.Transaction.CommitTimeWriteBatch">
   CommitTimeWriteBatch
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L174"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L153"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#getCommitTimeWriteBatch--">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#getCommitTimeWriteBatch--</a></p>
@@ -700,7 +270,7 @@ public Transaction(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_Transaction_ElapsedTime" data-uid="Org.Rocksdb.Transaction.ElapsedTime">
   ElapsedTime
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L181"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L160"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#getElapsedTime--">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#getElapsedTime--</a></p>
@@ -732,7 +302,7 @@ public Transaction(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_Transaction_ID" data-uid="Org.Rocksdb.Transaction.ID">
   ID
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L195"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L174"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#getID--">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#getID--</a></p>
@@ -764,7 +334,7 @@ public Transaction(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_Transaction_Id" data-uid="Org.Rocksdb.Transaction.Id">
   Id
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L188"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L167"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#getId--">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#getId--</a></p>
@@ -796,7 +366,7 @@ public Transaction(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_Transaction_IsBridgeAbstract" data-uid="Org.Rocksdb.Transaction.IsBridgeAbstract">
   IsBridgeAbstract
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L56"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L49"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> is an abstract class, i.e. cannot be created an instance</p>
@@ -828,10 +398,10 @@ public Transaction(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_Transaction_IsBridgeCloseable" data-uid="Org.Rocksdb.Transaction.IsBridgeCloseable">
   IsBridgeCloseable
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L58"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L51"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> implements Closeable</p>
+  <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> implements java.lang.AutoCloseable</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -860,7 +430,7 @@ public Transaction(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_Transaction_IsBridgeInterface" data-uid="Org.Rocksdb.Transaction.IsBridgeInterface">
   IsBridgeInterface
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L60"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L53"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> is an interface, i.e. does not have any public constructor</p>
@@ -892,7 +462,7 @@ public Transaction(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_Transaction_IsBridgeStatic" data-uid="Org.Rocksdb.Transaction.IsBridgeStatic">
   IsBridgeStatic
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L62"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L55"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> is a static class, i.e. does not have any public constructor</p>
@@ -924,7 +494,7 @@ public Transaction(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_Transaction_LogNumber" data-uid="Org.Rocksdb.Transaction.LogNumber">
   LogNumber
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L202"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L181"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#getLogNumber--">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#getLogNumber--</a> <a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#setLogNumber-long-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#setLogNumber-long-</a></p>
@@ -956,7 +526,7 @@ public Transaction(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_Transaction_Name" data-uid="Org.Rocksdb.Transaction.Name">
   Name
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L209"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L188"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#getName--">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#getName--</a> <a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#setName-java.lang.String-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#setName-java.lang.String-</a></p>
@@ -988,7 +558,7 @@ public Transaction(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_Transaction_NumDeletes" data-uid="Org.Rocksdb.Transaction.NumDeletes">
   NumDeletes
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L216"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L195"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#getNumDeletes--">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#getNumDeletes--</a></p>
@@ -1020,7 +590,7 @@ public Transaction(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_Transaction_NumKeys" data-uid="Org.Rocksdb.Transaction.NumKeys">
   NumKeys
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L223"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L202"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#getNumKeys--">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#getNumKeys--</a></p>
@@ -1052,7 +622,7 @@ public Transaction(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_Transaction_NumMerges" data-uid="Org.Rocksdb.Transaction.NumMerges">
   NumMerges
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L230"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L209"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#getNumMerges--">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#getNumMerges--</a></p>
@@ -1084,7 +654,7 @@ public Transaction(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_Transaction_NumPuts" data-uid="Org.Rocksdb.Transaction.NumPuts">
   NumPuts
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L237"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L216"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#getNumPuts--">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#getNumPuts--</a></p>
@@ -1116,7 +686,7 @@ public Transaction(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_Transaction_Snapshot" data-uid="Org.Rocksdb.Transaction.Snapshot">
   Snapshot
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L244"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L223"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#getSnapshot--">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#getSnapshot--</a></p>
@@ -1148,7 +718,7 @@ public Transaction(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_Transaction_State" data-uid="Org.Rocksdb.Transaction.State">
   State
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L251"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L230"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#getState--">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#getState--</a></p>
@@ -1180,7 +750,7 @@ public Transaction(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_Transaction_WaitingTxns" data-uid="Org.Rocksdb.Transaction.WaitingTxns">
   WaitingTxns
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L258"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L237"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#getWaitingTxns--">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#getWaitingTxns--</a></p>
@@ -1212,7 +782,7 @@ public Transaction(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_Transaction_WriteBatch" data-uid="Org.Rocksdb.Transaction.WriteBatch">
   WriteBatch
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L265"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L244"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#getWriteBatch--">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#getWriteBatch--</a></p>
@@ -1244,7 +814,7 @@ public Transaction(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_Transaction_WriteOptions" data-uid="Org.Rocksdb.Transaction.WriteOptions">
   WriteOptions
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L272"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L251"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#getWriteOptions--">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#getWriteOptions--</a> <a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#setWriteOptions-org.rocksdb.WriteOptions-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#setWriteOptions-org.rocksdb.WriteOptions-</a></p>
@@ -1280,7 +850,7 @@ public Transaction(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_Transaction_ClearSnapshot" data-uid="Org.Rocksdb.Transaction.ClearSnapshot">
   ClearSnapshot()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L414"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L443"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#clearSnapshot--">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#clearSnapshot--</a></p>
@@ -1307,7 +877,7 @@ public Transaction(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_Transaction_Commit" data-uid="Org.Rocksdb.Transaction.Commit">
   Commit()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L422"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L451"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#commit--">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#commit--</a></p>
@@ -1339,7 +909,7 @@ public Transaction(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_Transaction_Delete_Org_Rocksdb_ColumnFamilyHandle_System_Byte___" data-uid="Org.Rocksdb.Transaction.Delete(Org.Rocksdb.ColumnFamilyHandle,System.Byte[])">
   Delete(ColumnFamilyHandle, byte[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L461"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L490"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#delete-org.rocksdb.ColumnFamilyHandle-byte[]-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#delete-org.rocksdb.ColumnFamilyHandle-byte[]-</a></p>
@@ -1380,7 +950,7 @@ public Transaction(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_Transaction_Delete_Org_Rocksdb_ColumnFamilyHandle_System_Byte___System_Boolean_" data-uid="Org.Rocksdb.Transaction.Delete(Org.Rocksdb.ColumnFamilyHandle,System.Byte[],System.Boolean)">
   Delete(ColumnFamilyHandle, byte[], bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L451"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L480"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#delete-org.rocksdb.ColumnFamilyHandle-byte[]-boolean-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#delete-org.rocksdb.ColumnFamilyHandle-byte[]-boolean-</a></p>
@@ -1424,7 +994,7 @@ public Transaction(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_Transaction_Delete_Org_Rocksdb_ColumnFamilyHandle_System_Byte_____" data-uid="Org.Rocksdb.Transaction.Delete(Org.Rocksdb.ColumnFamilyHandle,System.Byte[][])">
   Delete(ColumnFamilyHandle, byte[][])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L482"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L511"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#delete-org.rocksdb.ColumnFamilyHandle-byte[][]-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#delete-org.rocksdb.ColumnFamilyHandle-byte[][]-</a></p>
@@ -1465,7 +1035,7 @@ public Transaction(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_Transaction_Delete_Org_Rocksdb_ColumnFamilyHandle_System_Byte_____System_Boolean_" data-uid="Org.Rocksdb.Transaction.Delete(Org.Rocksdb.ColumnFamilyHandle,System.Byte[][],System.Boolean)">
   Delete(ColumnFamilyHandle, byte[][], bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L472"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L501"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#delete-org.rocksdb.ColumnFamilyHandle-byte[][]-boolean-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#delete-org.rocksdb.ColumnFamilyHandle-byte[][]-boolean-</a></p>
@@ -1509,7 +1079,7 @@ public Transaction(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_Transaction_Delete_System_Byte___" data-uid="Org.Rocksdb.Transaction.Delete(System.Byte[])">
   Delete(byte[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L431"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L460"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#delete-byte[]-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#delete-byte[]-</a></p>
@@ -1547,7 +1117,7 @@ public Transaction(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_Transaction_Delete_System_Byte_____" data-uid="Org.Rocksdb.Transaction.Delete(System.Byte[][])">
   Delete(byte[][])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L440"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L469"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#delete-byte[][]-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#delete-byte[][]-</a></p>
@@ -1585,7 +1155,7 @@ public Transaction(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_Transaction_DeleteUntracked_Org_Rocksdb_ColumnFamilyHandle_System_Byte___" data-uid="Org.Rocksdb.Transaction.DeleteUntracked(Org.Rocksdb.ColumnFamilyHandle,System.Byte[])">
   DeleteUntracked(ColumnFamilyHandle, byte[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L510"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L539"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#deleteUntracked-org.rocksdb.ColumnFamilyHandle-byte[]-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#deleteUntracked-org.rocksdb.ColumnFamilyHandle-byte[]-</a></p>
@@ -1626,7 +1196,7 @@ public Transaction(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_Transaction_DeleteUntracked_Org_Rocksdb_ColumnFamilyHandle_System_Byte_____" data-uid="Org.Rocksdb.Transaction.DeleteUntracked(Org.Rocksdb.ColumnFamilyHandle,System.Byte[][])">
   DeleteUntracked(ColumnFamilyHandle, byte[][])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L520"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L549"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#deleteUntracked-org.rocksdb.ColumnFamilyHandle-byte[][]-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#deleteUntracked-org.rocksdb.ColumnFamilyHandle-byte[][]-</a></p>
@@ -1667,7 +1237,7 @@ public Transaction(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_Transaction_DeleteUntracked_System_Byte___" data-uid="Org.Rocksdb.Transaction.DeleteUntracked(System.Byte[])">
   DeleteUntracked(byte[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L491"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L520"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#deleteUntracked-byte[]-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#deleteUntracked-byte[]-</a></p>
@@ -1705,7 +1275,7 @@ public Transaction(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_Transaction_DeleteUntracked_System_Byte_____" data-uid="Org.Rocksdb.Transaction.DeleteUntracked(System.Byte[][])">
   DeleteUntracked(byte[][])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L500"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L529"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#deleteUntracked-byte[][]-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#deleteUntracked-byte[][]-</a></p>
@@ -1743,7 +1313,7 @@ public Transaction(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_Transaction_DisableIndexing" data-uid="Org.Rocksdb.Transaction.DisableIndexing">
   DisableIndexing()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L527"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L556"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#disableIndexing--">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#disableIndexing--</a></p>
@@ -1770,7 +1340,7 @@ public Transaction(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_Transaction_EnableIndexing" data-uid="Org.Rocksdb.Transaction.EnableIndexing">
   EnableIndexing()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L534"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L563"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#enableIndexing--">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#enableIndexing--</a></p>
@@ -1797,7 +1367,7 @@ public Transaction(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_Transaction_Get_Org_Rocksdb_ColumnFamilyHandle_Org_Rocksdb_ReadOptions_System_Byte___" data-uid="Org.Rocksdb.Transaction.Get(Org.Rocksdb.ColumnFamilyHandle,Org.Rocksdb.ReadOptions,System.Byte[])">
   Get(ColumnFamilyHandle, ReadOptions, byte[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L292"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L271"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#get-org.rocksdb.ColumnFamilyHandle-org.rocksdb.ReadOptions-byte[]-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#get-org.rocksdb.ColumnFamilyHandle-org.rocksdb.ReadOptions-byte[]-</a></p>
@@ -1847,7 +1417,7 @@ public Transaction(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_Transaction_Get_Org_Rocksdb_ReadOptions_System_Byte___" data-uid="Org.Rocksdb.Transaction.Get(Org.Rocksdb.ReadOptions,System.Byte[])">
   Get(ReadOptions, byte[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L303"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L282"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#get-org.rocksdb.ReadOptions-byte[]-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#get-org.rocksdb.ReadOptions-byte[]-</a></p>
@@ -1894,7 +1464,7 @@ public Transaction(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_Transaction_GetForUpdate_Org_Rocksdb_ReadOptions_Org_Rocksdb_ColumnFamilyHandle_System_Byte___System_Boolean_" data-uid="Org.Rocksdb.Transaction.GetForUpdate(Org.Rocksdb.ReadOptions,Org.Rocksdb.ColumnFamilyHandle,System.Byte[],System.Boolean)">
   GetForUpdate(ReadOptions, ColumnFamilyHandle, byte[], bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L342"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L321"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#getForUpdate-org.rocksdb.ReadOptions-org.rocksdb.ColumnFamilyHandle-byte[]-boolean-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#getForUpdate-org.rocksdb.ReadOptions-org.rocksdb.ColumnFamilyHandle-byte[]-boolean-</a></p>
@@ -1947,7 +1517,7 @@ public Transaction(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_Transaction_GetForUpdate_Org_Rocksdb_ReadOptions_Org_Rocksdb_ColumnFamilyHandle_System_Byte___System_Boolean_System_Boolean_" data-uid="Org.Rocksdb.Transaction.GetForUpdate(Org.Rocksdb.ReadOptions,Org.Rocksdb.ColumnFamilyHandle,System.Byte[],System.Boolean,System.Boolean)">
   GetForUpdate(ReadOptions, ColumnFamilyHandle, byte[], bool, bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L329"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L308"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#getForUpdate-org.rocksdb.ReadOptions-org.rocksdb.ColumnFamilyHandle-byte[]-boolean-boolean-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#getForUpdate-org.rocksdb.ReadOptions-org.rocksdb.ColumnFamilyHandle-byte[]-boolean-boolean-</a></p>
@@ -2003,7 +1573,7 @@ public Transaction(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_Transaction_GetForUpdate_Org_Rocksdb_ReadOptions_System_Byte___System_Boolean_" data-uid="Org.Rocksdb.Transaction.GetForUpdate(Org.Rocksdb.ReadOptions,System.Byte[],System.Boolean)">
   GetForUpdate(ReadOptions, byte[], bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L315"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L294"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#getForUpdate-org.rocksdb.ReadOptions-byte[]-boolean-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#getForUpdate-org.rocksdb.ReadOptions-byte[]-boolean-</a></p>
@@ -2053,7 +1623,7 @@ public Transaction(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_Transaction_GetIterator_Org_Rocksdb_ReadOptions_" data-uid="Org.Rocksdb.Transaction.GetIterator(Org.Rocksdb.ReadOptions)">
   GetIterator(ReadOptions)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L407"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L436"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#getIterator-org.rocksdb.ReadOptions-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#getIterator-org.rocksdb.ReadOptions-</a></p>
@@ -2092,7 +1662,7 @@ public Transaction(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_Transaction_GetIterator_Org_Rocksdb_ReadOptions_Org_Rocksdb_ColumnFamilyHandle_" data-uid="Org.Rocksdb.Transaction.GetIterator(Org.Rocksdb.ReadOptions,Org.Rocksdb.ColumnFamilyHandle)">
   GetIterator(ReadOptions, ColumnFamilyHandle)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L398"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L427"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#getIterator-org.rocksdb.ReadOptions-org.rocksdb.ColumnFamilyHandle-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#getIterator-org.rocksdb.ReadOptions-org.rocksdb.ColumnFamilyHandle-</a></p>
@@ -2134,7 +1704,7 @@ public Transaction(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_Transaction_IsDeadlockDetect" data-uid="Org.Rocksdb.Transaction.IsDeadlockDetect">
   IsDeadlockDetect()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L280"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L259"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#isDeadlockDetect--">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#isDeadlockDetect--</a></p>
@@ -2167,7 +1737,7 @@ public Transaction(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_Transaction_Merge_Org_Rocksdb_ColumnFamilyHandle_System_Byte___System_Byte___" data-uid="Org.Rocksdb.Transaction.Merge(Org.Rocksdb.ColumnFamilyHandle,System.Byte[],System.Byte[])">
   Merge(ColumnFamilyHandle, byte[], byte[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L567"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L596"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#merge-org.rocksdb.ColumnFamilyHandle-byte[]-byte[]-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#merge-org.rocksdb.ColumnFamilyHandle-byte[]-byte[]-</a></p>
@@ -2211,7 +1781,7 @@ public Transaction(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_Transaction_Merge_Org_Rocksdb_ColumnFamilyHandle_System_Byte___System_Byte___System_Boolean_" data-uid="Org.Rocksdb.Transaction.Merge(Org.Rocksdb.ColumnFamilyHandle,System.Byte[],System.Byte[],System.Boolean)">
   Merge(ColumnFamilyHandle, byte[], byte[], bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L556"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L585"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#merge-org.rocksdb.ColumnFamilyHandle-byte[]-byte[]-boolean-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#merge-org.rocksdb.ColumnFamilyHandle-byte[]-byte[]-boolean-</a></p>
@@ -2258,7 +1828,7 @@ public Transaction(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_Transaction_Merge_System_Byte___System_Byte___" data-uid="Org.Rocksdb.Transaction.Merge(System.Byte[],System.Byte[])">
   Merge(byte[], byte[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L544"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L573"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#merge-byte[]-byte[]-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#merge-byte[]-byte[]-</a></p>
@@ -2299,7 +1869,7 @@ public Transaction(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_Transaction_MergeUntracked_Org_Rocksdb_ColumnFamilyHandle_System_Byte___System_Byte___" data-uid="Org.Rocksdb.Transaction.MergeUntracked(Org.Rocksdb.ColumnFamilyHandle,System.Byte[],System.Byte[])">
   MergeUntracked(ColumnFamilyHandle, byte[], byte[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L588"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L617"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#mergeUntracked-org.rocksdb.ColumnFamilyHandle-byte[]-byte[]-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#mergeUntracked-org.rocksdb.ColumnFamilyHandle-byte[]-byte[]-</a></p>
@@ -2343,7 +1913,7 @@ public Transaction(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_Transaction_MergeUntracked_System_Byte___System_Byte___" data-uid="Org.Rocksdb.Transaction.MergeUntracked(System.Byte[],System.Byte[])">
   MergeUntracked(byte[], byte[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L577"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L606"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#mergeUntracked-byte[]-byte[]-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#mergeUntracked-byte[]-byte[]-</a></p>
@@ -2380,11 +1950,110 @@ public Transaction(IJVMBridgeBaseInitializer initializer)</code></pre>
 
 
 
+  <a id="Org_Rocksdb_Transaction_MultiGet_" data-uid="Org.Rocksdb.Transaction.MultiGet*"></a>
+
+  <h3 id="Org_Rocksdb_Transaction_MultiGet_Org_Rocksdb_ReadOptions_Java_Util_List_Org_Rocksdb_ColumnFamilyHandle__System_Byte_____" data-uid="Org.Rocksdb.Transaction.MultiGet(Org.Rocksdb.ReadOptions,Java.Util.List{Org.Rocksdb.ColumnFamilyHandle},System.Byte[][])">
+  MultiGet(ReadOptions, List&lt;ColumnFamilyHandle&gt;, byte[][])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L345"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#multiGet-org.rocksdb.ReadOptions-java.util.List-byte[][]-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#multiGet-org.rocksdb.ReadOptions-java.util.List-byte[][]-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Deprecated in JVM&quot;)]
+public byte[] MultiGet(ReadOptions arg0, List&lt;ColumnFamilyHandle&gt; arg1, byte[][] arg2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="Org.Rocksdb.ReadOptions.html">ReadOptions</a></dt>
+    <dd><p><a class="xref" href="Org.Rocksdb.ReadOptions.html">ReadOptions</a></p>
+</dd>
+    <dt><code>arg1</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.List-1.html">List</a>&lt;<a class="xref" href="Org.Rocksdb.ColumnFamilyHandle.html">ColumnFamilyHandle</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.List.html">List</a></p>
+</dd>
+    <dt><code>arg2</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[][]</dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Rocksdb.RocksDBException.html">RocksDBException</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+  <a id="Org_Rocksdb_Transaction_MultiGet_" data-uid="Org.Rocksdb.Transaction.MultiGet*"></a>
+
+  <h3 id="Org_Rocksdb_Transaction_MultiGet_Org_Rocksdb_ReadOptions_System_Byte_____" data-uid="Org.Rocksdb.Transaction.MultiGet(Org.Rocksdb.ReadOptions,System.Byte[][])">
+  MultiGet(ReadOptions, byte[][])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L332"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#multiGet-org.rocksdb.ReadOptions-byte[][]-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#multiGet-org.rocksdb.ReadOptions-byte[][]-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Deprecated in JVM&quot;)]
+public byte[] MultiGet(ReadOptions arg0, byte[][] arg1)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="Org.Rocksdb.ReadOptions.html">ReadOptions</a></dt>
+    <dd><p><a class="xref" href="Org.Rocksdb.ReadOptions.html">ReadOptions</a></p>
+</dd>
+    <dt><code>arg1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[][]</dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Rocksdb.RocksDBException.html">RocksDBException</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
   <a id="Org_Rocksdb_Transaction_MultiGetAsList_" data-uid="Org.Rocksdb.Transaction.MultiGetAsList*"></a>
 
   <h3 id="Org_Rocksdb_Transaction_MultiGetAsList_Org_Rocksdb_ReadOptions_Java_Util_List_Org_Rocksdb_ColumnFamilyHandle__Java_Util_List_System_Byte____" data-uid="Org.Rocksdb.Transaction.MultiGetAsList(Org.Rocksdb.ReadOptions,Java.Util.List{Org.Rocksdb.ColumnFamilyHandle},Java.Util.List{System.Byte[]})">
   MultiGetAsList(ReadOptions, List&lt;ColumnFamilyHandle&gt;, List&lt;byte[]&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L365"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L394"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#multiGetAsList-org.rocksdb.ReadOptions-java.util.List-java.util.List-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#multiGetAsList-org.rocksdb.ReadOptions-java.util.List-java.util.List-</a></p>
@@ -2434,7 +2103,7 @@ public Transaction(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_Transaction_MultiGetAsList_Org_Rocksdb_ReadOptions_Java_Util_List_System_Byte____" data-uid="Org.Rocksdb.Transaction.MultiGetAsList(Org.Rocksdb.ReadOptions,Java.Util.List{System.Byte[]})">
   MultiGetAsList(ReadOptions, List&lt;byte[]&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L353"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L382"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#multiGetAsList-org.rocksdb.ReadOptions-java.util.List-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#multiGetAsList-org.rocksdb.ReadOptions-java.util.List-</a></p>
@@ -2477,11 +2146,110 @@ public Transaction(IJVMBridgeBaseInitializer initializer)</code></pre>
 
 
 
+  <a id="Org_Rocksdb_Transaction_MultiGetForUpdate_" data-uid="Org.Rocksdb.Transaction.MultiGetForUpdate*"></a>
+
+  <h3 id="Org_Rocksdb_Transaction_MultiGetForUpdate_Org_Rocksdb_ReadOptions_Java_Util_List_Org_Rocksdb_ColumnFamilyHandle__System_Byte_____" data-uid="Org.Rocksdb.Transaction.MultiGetForUpdate(Org.Rocksdb.ReadOptions,Java.Util.List{Org.Rocksdb.ColumnFamilyHandle},System.Byte[][])">
+  MultiGetForUpdate(ReadOptions, List&lt;ColumnFamilyHandle&gt;, byte[][])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L370"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#multiGetForUpdate-org.rocksdb.ReadOptions-java.util.List-byte[][]-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#multiGetForUpdate-org.rocksdb.ReadOptions-java.util.List-byte[][]-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Deprecated in JVM&quot;)]
+public byte[] MultiGetForUpdate(ReadOptions arg0, List&lt;ColumnFamilyHandle&gt; arg1, byte[][] arg2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="Org.Rocksdb.ReadOptions.html">ReadOptions</a></dt>
+    <dd><p><a class="xref" href="Org.Rocksdb.ReadOptions.html">ReadOptions</a></p>
+</dd>
+    <dt><code>arg1</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.List-1.html">List</a>&lt;<a class="xref" href="Org.Rocksdb.ColumnFamilyHandle.html">ColumnFamilyHandle</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.List.html">List</a></p>
+</dd>
+    <dt><code>arg2</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[][]</dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Rocksdb.RocksDBException.html">RocksDBException</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+  <a id="Org_Rocksdb_Transaction_MultiGetForUpdate_" data-uid="Org.Rocksdb.Transaction.MultiGetForUpdate*"></a>
+
+  <h3 id="Org_Rocksdb_Transaction_MultiGetForUpdate_Org_Rocksdb_ReadOptions_System_Byte_____" data-uid="Org.Rocksdb.Transaction.MultiGetForUpdate(Org.Rocksdb.ReadOptions,System.Byte[][])">
+  MultiGetForUpdate(ReadOptions, byte[][])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L357"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#multiGetForUpdate-org.rocksdb.ReadOptions-byte[][]-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#multiGetForUpdate-org.rocksdb.ReadOptions-byte[][]-</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Deprecated in JVM&quot;)]
+public byte[] MultiGetForUpdate(ReadOptions arg0, byte[][] arg1)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="Org.Rocksdb.ReadOptions.html">ReadOptions</a></dt>
+    <dd><p><a class="xref" href="Org.Rocksdb.ReadOptions.html">ReadOptions</a></p>
+</dd>
+    <dt><code>arg1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[][]</dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Rocksdb.RocksDBException.html">RocksDBException</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
   <a id="Org_Rocksdb_Transaction_MultiGetForUpdateAsList_" data-uid="Org.Rocksdb.Transaction.MultiGetForUpdateAsList*"></a>
 
   <h3 id="Org_Rocksdb_Transaction_MultiGetForUpdateAsList_Org_Rocksdb_ReadOptions_Java_Util_List_Org_Rocksdb_ColumnFamilyHandle__Java_Util_List_System_Byte____" data-uid="Org.Rocksdb.Transaction.MultiGetForUpdateAsList(Org.Rocksdb.ReadOptions,Java.Util.List{Org.Rocksdb.ColumnFamilyHandle},Java.Util.List{System.Byte[]})">
   MultiGetForUpdateAsList(ReadOptions, List&lt;ColumnFamilyHandle&gt;, List&lt;byte[]&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L388"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L417"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#multiGetForUpdateAsList-org.rocksdb.ReadOptions-java.util.List-java.util.List-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#multiGetForUpdateAsList-org.rocksdb.ReadOptions-java.util.List-java.util.List-</a></p>
@@ -2531,7 +2299,7 @@ public Transaction(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_Transaction_MultiGetForUpdateAsList_Org_Rocksdb_ReadOptions_Java_Util_List_System_Byte____" data-uid="Org.Rocksdb.Transaction.MultiGetForUpdateAsList(Org.Rocksdb.ReadOptions,Java.Util.List{System.Byte[]})">
   MultiGetForUpdateAsList(ReadOptions, List&lt;byte[]&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L376"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L405"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#multiGetForUpdateAsList-org.rocksdb.ReadOptions-java.util.List-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#multiGetForUpdateAsList-org.rocksdb.ReadOptions-java.util.List-</a></p>
@@ -2578,7 +2346,7 @@ public Transaction(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_Transaction_Prepare" data-uid="Org.Rocksdb.Transaction.Prepare">
   Prepare()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L596"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L625"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#prepare--">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#prepare--</a></p>
@@ -2610,7 +2378,7 @@ public Transaction(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_Transaction_Put_Org_Rocksdb_ColumnFamilyHandle_System_Byte___System_Byte___" data-uid="Org.Rocksdb.Transaction.Put(Org.Rocksdb.ColumnFamilyHandle,System.Byte[],System.Byte[])">
   Put(ColumnFamilyHandle, byte[], byte[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L639"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L668"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#put-org.rocksdb.ColumnFamilyHandle-byte[]-byte[]-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#put-org.rocksdb.ColumnFamilyHandle-byte[]-byte[]-</a></p>
@@ -2654,7 +2422,7 @@ public Transaction(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_Transaction_Put_Org_Rocksdb_ColumnFamilyHandle_System_Byte___System_Byte___System_Boolean_" data-uid="Org.Rocksdb.Transaction.Put(Org.Rocksdb.ColumnFamilyHandle,System.Byte[],System.Byte[],System.Boolean)">
   Put(ColumnFamilyHandle, byte[], byte[], bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L628"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L657"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#put-org.rocksdb.ColumnFamilyHandle-byte[]-byte[]-boolean-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#put-org.rocksdb.ColumnFamilyHandle-byte[]-byte[]-boolean-</a></p>
@@ -2701,7 +2469,7 @@ public Transaction(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_Transaction_Put_Org_Rocksdb_ColumnFamilyHandle_System_Byte_____System_Byte_____" data-uid="Org.Rocksdb.Transaction.Put(Org.Rocksdb.ColumnFamilyHandle,System.Byte[][],System.Byte[][])">
   Put(ColumnFamilyHandle, byte[][], byte[][])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L662"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L691"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#put-org.rocksdb.ColumnFamilyHandle-byte[][]-byte[][]-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#put-org.rocksdb.ColumnFamilyHandle-byte[][]-byte[][]-</a></p>
@@ -2745,7 +2513,7 @@ public Transaction(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_Transaction_Put_Org_Rocksdb_ColumnFamilyHandle_System_Byte_____System_Byte_____System_Boolean_" data-uid="Org.Rocksdb.Transaction.Put(Org.Rocksdb.ColumnFamilyHandle,System.Byte[][],System.Byte[][],System.Boolean)">
   Put(ColumnFamilyHandle, byte[][], byte[][], bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L651"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L680"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#put-org.rocksdb.ColumnFamilyHandle-byte[][]-byte[][]-boolean-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#put-org.rocksdb.ColumnFamilyHandle-byte[][]-byte[][]-boolean-</a></p>
@@ -2792,7 +2560,7 @@ public Transaction(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_Transaction_Put_System_Byte___System_Byte___" data-uid="Org.Rocksdb.Transaction.Put(System.Byte[],System.Byte[])">
   Put(byte[], byte[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L606"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L635"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#put-byte[]-byte[]-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#put-byte[]-byte[]-</a></p>
@@ -2833,7 +2601,7 @@ public Transaction(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_Transaction_Put_System_Byte_____System_Byte_____" data-uid="Org.Rocksdb.Transaction.Put(System.Byte[][],System.Byte[][])">
   Put(byte[][], byte[][])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L616"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L645"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#put-byte[][]-byte[][]-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#put-byte[][]-byte[][]-</a></p>
@@ -2874,7 +2642,7 @@ public Transaction(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_Transaction_PutLogData_System_Byte___" data-uid="Org.Rocksdb.Transaction.PutLogData(System.Byte[])">
   PutLogData(byte[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L670"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L699"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#putLogData-byte[]-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#putLogData-byte[]-</a></p>
@@ -2907,7 +2675,7 @@ public Transaction(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_Transaction_PutUntracked_Org_Rocksdb_ColumnFamilyHandle_System_Byte___System_Byte___" data-uid="Org.Rocksdb.Transaction.PutUntracked(Org.Rocksdb.ColumnFamilyHandle,System.Byte[],System.Byte[])">
   PutUntracked(ColumnFamilyHandle, byte[], byte[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L701"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L730"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#putUntracked-org.rocksdb.ColumnFamilyHandle-byte[]-byte[]-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#putUntracked-org.rocksdb.ColumnFamilyHandle-byte[]-byte[]-</a></p>
@@ -2951,7 +2719,7 @@ public Transaction(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_Transaction_PutUntracked_Org_Rocksdb_ColumnFamilyHandle_System_Byte_____System_Byte_____" data-uid="Org.Rocksdb.Transaction.PutUntracked(Org.Rocksdb.ColumnFamilyHandle,System.Byte[][],System.Byte[][])">
   PutUntracked(ColumnFamilyHandle, byte[][], byte[][])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L712"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L741"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#putUntracked-org.rocksdb.ColumnFamilyHandle-byte[][]-byte[][]-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#putUntracked-org.rocksdb.ColumnFamilyHandle-byte[][]-byte[][]-</a></p>
@@ -2995,7 +2763,7 @@ public Transaction(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_Transaction_PutUntracked_System_Byte___System_Byte___" data-uid="Org.Rocksdb.Transaction.PutUntracked(System.Byte[],System.Byte[])">
   PutUntracked(byte[], byte[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L680"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L709"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#putUntracked-byte[]-byte[]-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#putUntracked-byte[]-byte[]-</a></p>
@@ -3036,7 +2804,7 @@ public Transaction(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_Transaction_PutUntracked_System_Byte_____System_Byte_____" data-uid="Org.Rocksdb.Transaction.PutUntracked(System.Byte[][],System.Byte[][])">
   PutUntracked(byte[][], byte[][])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L690"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L719"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#putUntracked-byte[][]-byte[][]-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#putUntracked-byte[][]-byte[][]-</a></p>
@@ -3077,7 +2845,7 @@ public Transaction(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_Transaction_RebuildFromWriteBatch_Org_Rocksdb_WriteBatch_" data-uid="Org.Rocksdb.Transaction.RebuildFromWriteBatch(Org.Rocksdb.WriteBatch)">
   RebuildFromWriteBatch(WriteBatch)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L721"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L750"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#rebuildFromWriteBatch-org.rocksdb.WriteBatch-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#rebuildFromWriteBatch-org.rocksdb.WriteBatch-</a></p>
@@ -3115,7 +2883,7 @@ public Transaction(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_Transaction_Rollback" data-uid="Org.Rocksdb.Transaction.Rollback">
   Rollback()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L729"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L758"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#rollback--">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#rollback--</a></p>
@@ -3147,7 +2915,7 @@ public Transaction(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_Transaction_RollbackToSavePoint" data-uid="Org.Rocksdb.Transaction.RollbackToSavePoint">
   RollbackToSavePoint()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L737"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L766"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#rollbackToSavePoint--">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#rollbackToSavePoint--</a></p>
@@ -3179,7 +2947,7 @@ public Transaction(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_Transaction_SetLockTimeout_System_Int64_" data-uid="Org.Rocksdb.Transaction.SetLockTimeout(System.Int64)">
   SetLockTimeout(long)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L745"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L774"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#setLockTimeout-long-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#setLockTimeout-long-</a></p>
@@ -3212,7 +2980,7 @@ public Transaction(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_Transaction_SetSavePoint" data-uid="Org.Rocksdb.Transaction.SetSavePoint">
   SetSavePoint()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L753"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L782"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#setSavePoint--">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#setSavePoint--</a></p>
@@ -3244,7 +3012,7 @@ public Transaction(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_Transaction_SetSnapshot" data-uid="Org.Rocksdb.Transaction.SetSnapshot">
   SetSnapshot()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L760"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L789"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#setSnapshot--">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#setSnapshot--</a></p>
@@ -3271,7 +3039,7 @@ public Transaction(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_Transaction_SetSnapshotOnNextOperation" data-uid="Org.Rocksdb.Transaction.SetSnapshotOnNextOperation">
   SetSnapshotOnNextOperation()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L767"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L796"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#setSnapshotOnNextOperation--">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#setSnapshotOnNextOperation--</a></p>
@@ -3298,7 +3066,7 @@ public Transaction(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_Transaction_SetSnapshotOnNextOperation_Org_Rocksdb_AbstractTransactionNotifier_" data-uid="Org.Rocksdb.Transaction.SetSnapshotOnNextOperation(Org.Rocksdb.AbstractTransactionNotifier)">
   SetSnapshotOnNextOperation(AbstractTransactionNotifier)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L775"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L804"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#setSnapshotOnNextOperation-org.rocksdb.AbstractTransactionNotifier-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#setSnapshotOnNextOperation-org.rocksdb.AbstractTransactionNotifier-</a></p>
@@ -3331,7 +3099,7 @@ public Transaction(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_Transaction_SingleDelete_Org_Rocksdb_ColumnFamilyHandle_System_Byte___" data-uid="Org.Rocksdb.Transaction.SingleDelete(Org.Rocksdb.ColumnFamilyHandle,System.Byte[])">
   SingleDelete(ColumnFamilyHandle, byte[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L814"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L843"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#singleDelete-org.rocksdb.ColumnFamilyHandle-byte[]-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#singleDelete-org.rocksdb.ColumnFamilyHandle-byte[]-</a></p>
@@ -3372,7 +3140,7 @@ public Transaction(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_Transaction_SingleDelete_Org_Rocksdb_ColumnFamilyHandle_System_Byte___System_Boolean_" data-uid="Org.Rocksdb.Transaction.SingleDelete(Org.Rocksdb.ColumnFamilyHandle,System.Byte[],System.Boolean)">
   SingleDelete(ColumnFamilyHandle, byte[], bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L804"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L833"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#singleDelete-org.rocksdb.ColumnFamilyHandle-byte[]-boolean-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#singleDelete-org.rocksdb.ColumnFamilyHandle-byte[]-boolean-</a></p>
@@ -3416,7 +3184,7 @@ public Transaction(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_Transaction_SingleDelete_Org_Rocksdb_ColumnFamilyHandle_System_Byte_____" data-uid="Org.Rocksdb.Transaction.SingleDelete(Org.Rocksdb.ColumnFamilyHandle,System.Byte[][])">
   SingleDelete(ColumnFamilyHandle, byte[][])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L835"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L864"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#singleDelete-org.rocksdb.ColumnFamilyHandle-byte[][]-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#singleDelete-org.rocksdb.ColumnFamilyHandle-byte[][]-</a></p>
@@ -3457,7 +3225,7 @@ public Transaction(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_Transaction_SingleDelete_Org_Rocksdb_ColumnFamilyHandle_System_Byte_____System_Boolean_" data-uid="Org.Rocksdb.Transaction.SingleDelete(Org.Rocksdb.ColumnFamilyHandle,System.Byte[][],System.Boolean)">
   SingleDelete(ColumnFamilyHandle, byte[][], bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L825"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L854"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#singleDelete-org.rocksdb.ColumnFamilyHandle-byte[][]-boolean-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#singleDelete-org.rocksdb.ColumnFamilyHandle-byte[][]-boolean-</a></p>
@@ -3501,7 +3269,7 @@ public Transaction(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_Transaction_SingleDelete_System_Byte___" data-uid="Org.Rocksdb.Transaction.SingleDelete(System.Byte[])">
   SingleDelete(byte[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L784"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L813"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#singleDelete-byte[]-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#singleDelete-byte[]-</a></p>
@@ -3539,7 +3307,7 @@ public Transaction(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_Transaction_SingleDelete_System_Byte_____" data-uid="Org.Rocksdb.Transaction.SingleDelete(System.Byte[][])">
   SingleDelete(byte[][])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L793"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L822"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#singleDelete-byte[][]-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#singleDelete-byte[][]-</a></p>
@@ -3577,7 +3345,7 @@ public Transaction(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_Transaction_UndoGetForUpdate_Org_Rocksdb_ColumnFamilyHandle_System_Byte___" data-uid="Org.Rocksdb.Transaction.UndoGetForUpdate(Org.Rocksdb.ColumnFamilyHandle,System.Byte[])">
   UndoGetForUpdate(ColumnFamilyHandle, byte[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L852"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L881"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#undoGetForUpdate-org.rocksdb.ColumnFamilyHandle-byte[]-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#undoGetForUpdate-org.rocksdb.ColumnFamilyHandle-byte[]-</a></p>
@@ -3613,7 +3381,7 @@ public Transaction(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_Transaction_UndoGetForUpdate_System_Byte___" data-uid="Org.Rocksdb.Transaction.UndoGetForUpdate(System.Byte[])">
   UndoGetForUpdate(byte[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L843"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L872"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#undoGetForUpdate-byte[]-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/Transaction.html#undoGetForUpdate-byte[]-</a></p>
@@ -3646,7 +3414,7 @@ public Transaction(IJVMBridgeBaseInitializer initializer)</code></pre>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L152" class="edit-link">Edit this page</a>
+          <a href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/Transaction.cs/#L131" class="edit-link">Edit this page</a>
         </div>
 
 

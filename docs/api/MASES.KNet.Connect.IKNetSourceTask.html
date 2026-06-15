@@ -89,7 +89,7 @@
 
 
   <h1 id="MASES_KNet_Connect_IKNetSourceTask" data-uid="MASES.KNet.Connect.IKNetSourceTask" class="text-break">
-Interface IKNetSourceTask  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L31"><i class="bi bi-code-slash"></i></a>
+Interface IKNetSourceTask  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L32"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -219,7 +219,7 @@ Interface IKNetSourceTask  <a class="header-action link-secondary" title="View s
 
   <h3 id="MASES_KNet_Connect_IKNetSourceTask_UseOnlyAsync" data-uid="MASES.KNet.Connect.IKNetSourceTask.UseOnlyAsync">
   UseOnlyAsync
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L46"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L47"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Implement the method to declare if out-of-sync feature will be used: it will be set once within <a class="xref" href="MASES.KNet.Connect.KNetSourceTask-1.html">KNetSourceTask&lt;TTask&gt;</a> invocation of <a class="xref" href="MASES.KNet.Connect.KNetTask.html#MASES_KNet_Connect_KNetTask_Start_MASES_KNet_IKNetConfigurationFromMap_">Start(IKNetConfigurationFromMap)</a></p>
@@ -259,7 +259,7 @@ Interface IKNetSourceTask  <a class="header-action link-secondary" title="View s
 
   <h3 id="MASES_KNet_Connect_IKNetSourceTask_CreateAndPushRecordAsync__1_System_String_Org_Apache_Kafka_Connect_Data_Schema___0_System_DateTime_Java_Util_Map_Java_Lang_String_System_Object__Java_Util_Map_Java_Lang_String_System_Object__" data-uid="MASES.KNet.Connect.IKNetSourceTask.CreateAndPushRecordAsync``1(System.String,Org.Apache.Kafka.Connect.Data.Schema,``0,System.DateTime,Java.Util.Map{Java.Lang.String,System.Object},Java.Util.Map{Java.Lang.String,System.Object})">
   CreateAndPushRecordAsync&lt;TValue&gt;(string, Schema, TValue, DateTime, Map&lt;String, object&gt;, Map&lt;String, object&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L268"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L269"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-2.html">SourceRecord&lt;TKey, TValue&gt;</a> and push it to JVM in async mode using <a class="xref" href="MASES.KNet.Connect.IKNetSourceTask.html#MASES_KNet_Connect_IKNetSourceTask_PushRecordAsync_Org_Apache_Kafka_Connect_Source_SourceRecord_">PushRecordAsync(SourceRecord)</a>, i.e. without waiting the invocation of <a class="xref" href="MASES.KNet.Connect.KNetSourceTask-1.html#MASES_KNet_Connect_KNetSourceTask_1_Poll">Poll()</a> to return back the list of <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord.html">SourceRecord</a></p>
@@ -316,7 +316,7 @@ Interface IKNetSourceTask  <a class="header-action link-secondary" title="View s
 
   <h3 id="MASES_KNet_Connect_IKNetSourceTask_CreateAndPushRecordAsync__1_System_String_System_Nullable_System_Int32__Org_Apache_Kafka_Connect_Data_Schema___0_System_DateTime_Java_Util_Map_Java_Lang_String_System_Object__Java_Util_Map_Java_Lang_String_System_Object__" data-uid="MASES.KNet.Connect.IKNetSourceTask.CreateAndPushRecordAsync``1(System.String,System.Nullable{System.Int32},Org.Apache.Kafka.Connect.Data.Schema,``0,System.DateTime,Java.Util.Map{Java.Lang.String,System.Object},Java.Util.Map{Java.Lang.String,System.Object})">
   CreateAndPushRecordAsync&lt;TValue&gt;(string, int?, Schema, TValue, DateTime, Map&lt;String, object&gt;, Map&lt;String, object&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L312"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L313"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-2.html">SourceRecord&lt;TKey, TValue&gt;</a> and push it to JVM in async mode using <a class="xref" href="MASES.KNet.Connect.IKNetSourceTask.html#MASES_KNet_Connect_IKNetSourceTask_PushRecordAsync_Org_Apache_Kafka_Connect_Source_SourceRecord_">PushRecordAsync(SourceRecord)</a>, i.e. without waiting the invocation of <a class="xref" href="MASES.KNet.Connect.KNetSourceTask-1.html#MASES_KNet_Connect_KNetSourceTask_1_Poll">Poll()</a> to return back the list of <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord.html">SourceRecord</a></p>
@@ -376,7 +376,7 @@ Interface IKNetSourceTask  <a class="header-action link-secondary" title="View s
 
   <h3 id="MASES_KNet_Connect_IKNetSourceTask_CreateAndPushRecordAsync__2_System_String_Org_Apache_Kafka_Connect_Data_Schema___0_Org_Apache_Kafka_Connect_Data_Schema___1_Java_Util_Map_Java_Lang_String_System_Object__Java_Util_Map_Java_Lang_String_System_Object__" data-uid="MASES.KNet.Connect.IKNetSourceTask.CreateAndPushRecordAsync``2(System.String,Org.Apache.Kafka.Connect.Data.Schema,``0,Org.Apache.Kafka.Connect.Data.Schema,``1,Java.Util.Map{Java.Lang.String,System.Object},Java.Util.Map{Java.Lang.String,System.Object})">
   CreateAndPushRecordAsync&lt;TKey, TValue&gt;(string, Schema, TKey, Schema, TValue, Map&lt;String, object&gt;, Map&lt;String, object&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L178"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L179"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-2.html">SourceRecord&lt;TKey, TValue&gt;</a> and push it to JVM in async mode using <a class="xref" href="MASES.KNet.Connect.IKNetSourceTask.html#MASES_KNet_Connect_IKNetSourceTask_PushRecordAsync_Org_Apache_Kafka_Connect_Source_SourceRecord_">PushRecordAsync(SourceRecord)</a>, i.e. without waiting the invocation of <a class="xref" href="MASES.KNet.Connect.KNetSourceTask-1.html#MASES_KNet_Connect_KNetSourceTask_1_Poll">Poll()</a> to return back the list of <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord.html">SourceRecord</a></p>
@@ -439,7 +439,7 @@ Interface IKNetSourceTask  <a class="header-action link-secondary" title="View s
 
   <h3 id="MASES_KNet_Connect_IKNetSourceTask_CreateAndPushRecordAsync__2_System_String_Org_Apache_Kafka_Connect_Data_Schema___1_Java_Util_Map_Java_Lang_String_System_Object__Java_Util_Map_Java_Lang_String_System_Object__" data-uid="MASES.KNet.Connect.IKNetSourceTask.CreateAndPushRecordAsync``2(System.String,Org.Apache.Kafka.Connect.Data.Schema,``1,Java.Util.Map{Java.Lang.String,System.Object},Java.Util.Map{Java.Lang.String,System.Object})">
   CreateAndPushRecordAsync&lt;TKey, TValue&gt;(string, Schema, TValue, Map&lt;String, object&gt;, Map&lt;String, object&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L131"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L132"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-2.html">SourceRecord&lt;TKey, TValue&gt;</a> and push it to JVM in async mode using <a class="xref" href="MASES.KNet.Connect.IKNetSourceTask.html#MASES_KNet_Connect_IKNetSourceTask_PushRecordAsync_Org_Apache_Kafka_Connect_Source_SourceRecord_">PushRecordAsync(SourceRecord)</a>, i.e. without waiting the invocation of <a class="xref" href="MASES.KNet.Connect.KNetSourceTask-1.html#MASES_KNet_Connect_KNetSourceTask_1_Poll">Poll()</a> to return back the list of <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord.html">SourceRecord</a></p>
@@ -496,7 +496,7 @@ Interface IKNetSourceTask  <a class="header-action link-secondary" title="View s
 
   <h3 id="MASES_KNet_Connect_IKNetSourceTask_CreateAndPushRecordAsync__2_System_String_System_Nullable_System_Int32__Org_Apache_Kafka_Connect_Data_Schema___0_Org_Apache_Kafka_Connect_Data_Schema___1_Java_Util_Map_Java_Lang_String_System_Object__Java_Util_Map_Java_Lang_String_System_Object__" data-uid="MASES.KNet.Connect.IKNetSourceTask.CreateAndPushRecordAsync``2(System.String,System.Nullable{System.Int32},Org.Apache.Kafka.Connect.Data.Schema,``0,Org.Apache.Kafka.Connect.Data.Schema,``1,Java.Util.Map{Java.Lang.String,System.Object},Java.Util.Map{Java.Lang.String,System.Object})">
   CreateAndPushRecordAsync&lt;TKey, TValue&gt;(string, int?, Schema, TKey, Schema, TValue, Map&lt;String, object&gt;, Map&lt;String, object&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L227"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L228"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-2.html">SourceRecord&lt;TKey, TValue&gt;</a> and push it to JVM in async mode using <a class="xref" href="MASES.KNet.Connect.IKNetSourceTask.html#MASES_KNet_Connect_IKNetSourceTask_PushRecordAsync_Org_Apache_Kafka_Connect_Source_SourceRecord_">PushRecordAsync(SourceRecord)</a>, i.e. without waiting the invocation of <a class="xref" href="MASES.KNet.Connect.KNetSourceTask-1.html#MASES_KNet_Connect_KNetSourceTask_1_Poll">Poll()</a> to return back the list of <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord.html">SourceRecord</a></p>
@@ -562,7 +562,7 @@ Interface IKNetSourceTask  <a class="header-action link-secondary" title="View s
 
   <h3 id="MASES_KNet_Connect_IKNetSourceTask_CreateAndPushRecordAsync__2_System_String_System_Nullable_System_Int32__Org_Apache_Kafka_Connect_Data_Schema___0_Org_Apache_Kafka_Connect_Data_Schema___1_System_DateTime_Java_Util_Map_Java_Lang_String_System_Object__Java_Util_Map_Java_Lang_String_System_Object__" data-uid="MASES.KNet.Connect.IKNetSourceTask.CreateAndPushRecordAsync``2(System.String,System.Nullable{System.Int32},Org.Apache.Kafka.Connect.Data.Schema,``0,Org.Apache.Kafka.Connect.Data.Schema,``1,System.DateTime,Java.Util.Map{Java.Lang.String,System.Object},Java.Util.Map{Java.Lang.String,System.Object})">
   CreateAndPushRecordAsync&lt;TKey, TValue&gt;(string, int?, Schema, TKey, Schema, TValue, DateTime, Map&lt;String, object&gt;, Map&lt;String, object&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L365"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L366"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-2.html">SourceRecord&lt;TKey, TValue&gt;</a> and push it to JVM in async mode using <a class="xref" href="MASES.KNet.Connect.IKNetSourceTask.html#MASES_KNet_Connect_IKNetSourceTask_PushRecordAsync_Org_Apache_Kafka_Connect_Source_SourceRecord_">PushRecordAsync(SourceRecord)</a>, i.e. without waiting the invocation of <a class="xref" href="MASES.KNet.Connect.KNetSourceTask-1.html#MASES_KNet_Connect_KNetSourceTask_1_Poll">Poll()</a> to return back the list of <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord.html">SourceRecord</a></p>
@@ -631,7 +631,7 @@ Interface IKNetSourceTask  <a class="header-action link-secondary" title="View s
 
   <h3 id="MASES_KNet_Connect_IKNetSourceTask_CreateAndPushRecordAsync__2_System_String_System_Nullable_System_Int32__Org_Apache_Kafka_Connect_Data_Schema___0_Org_Apache_Kafka_Connect_Data_Schema___1_System_DateTime_Org_Apache_Kafka_Connect_Header_Headers_Java_Util_Map_Java_Lang_String_System_Object__Java_Util_Map_Java_Lang_String_System_Object__" data-uid="MASES.KNet.Connect.IKNetSourceTask.CreateAndPushRecordAsync``2(System.String,System.Nullable{System.Int32},Org.Apache.Kafka.Connect.Data.Schema,``0,Org.Apache.Kafka.Connect.Data.Schema,``1,System.DateTime,Org.Apache.Kafka.Connect.Header.Headers,Java.Util.Map{Java.Lang.String,System.Object},Java.Util.Map{Java.Lang.String,System.Object})">
   CreateAndPushRecordAsync&lt;TKey, TValue&gt;(string, int?, Schema, TKey, Schema, TValue, DateTime, Headers, Map&lt;String, object&gt;, Map&lt;String, object&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L421"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L422"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-2.html">SourceRecord&lt;TKey, TValue&gt;</a> and push it to JVM in async mode using <a class="xref" href="MASES.KNet.Connect.IKNetSourceTask.html#MASES_KNet_Connect_IKNetSourceTask_PushRecordAsync_Org_Apache_Kafka_Connect_Source_SourceRecord_">PushRecordAsync(SourceRecord)</a>, i.e. without waiting the invocation of <a class="xref" href="MASES.KNet.Connect.KNetSourceTask-1.html#MASES_KNet_Connect_KNetSourceTask_1_Poll">Poll()</a> to return back the list of <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord.html">SourceRecord</a></p>
@@ -703,7 +703,7 @@ Interface IKNetSourceTask  <a class="header-action link-secondary" title="View s
 
   <h3 id="MASES_KNet_Connect_IKNetSourceTask_CreateAndPushRecordAsync__2_System_String_System_Nullable_System_Int32__Org_Apache_Kafka_Connect_Data_Schema___1_Java_Util_Map_Java_Lang_String_System_Object__Java_Util_Map_Java_Lang_String_System_Object__" data-uid="MASES.KNet.Connect.IKNetSourceTask.CreateAndPushRecordAsync``2(System.String,System.Nullable{System.Int32},Org.Apache.Kafka.Connect.Data.Schema,``1,Java.Util.Map{Java.Lang.String,System.Object},Java.Util.Map{Java.Lang.String,System.Object})">
   CreateAndPushRecordAsync&lt;TKey, TValue&gt;(string, int?, Schema, TValue, Map&lt;String, object&gt;, Map&lt;String, object&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L89"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L90"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-2.html">SourceRecord&lt;TKey, TValue&gt;</a> and push it to JVM in async mode using <a class="xref" href="MASES.KNet.Connect.IKNetSourceTask.html#MASES_KNet_Connect_IKNetSourceTask_PushRecordAsync_Org_Apache_Kafka_Connect_Source_SourceRecord_">PushRecordAsync(SourceRecord)</a>, i.e. without waiting the invocation of <a class="xref" href="MASES.KNet.Connect.KNetSourceTask-1.html#MASES_KNet_Connect_KNetSourceTask_1_Poll">Poll()</a> to return back the list of <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord.html">SourceRecord</a></p>
@@ -763,7 +763,7 @@ Interface IKNetSourceTask  <a class="header-action link-secondary" title="View s
 
   <h3 id="MASES_KNet_Connect_IKNetSourceTask_CreateAndPushRecordAsync__3_Java_Util_Map_Java_Lang_String___0__Java_Util_Map_Java_Lang_String___1__System_String_Org_Apache_Kafka_Connect_Data_Schema___2_System_DateTime_" data-uid="MASES.KNet.Connect.IKNetSourceTask.CreateAndPushRecordAsync``3(Java.Util.Map{Java.Lang.String,``0},Java.Util.Map{Java.Lang.String,``1},System.String,Org.Apache.Kafka.Connect.Data.Schema,``2,System.DateTime)">
   CreateAndPushRecordAsync&lt;TKeySource, TOffset, TValue&gt;(Map&lt;String, TKeySource&gt;, Map&lt;String, TOffset&gt;, string, Schema, TValue, DateTime)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L689"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L690"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-4.html">SourceRecord&lt;TKeySource, TOffset, TKey, TValue&gt;</a> and push it to JVM in async mode using <a class="xref" href="MASES.KNet.Connect.IKNetSourceTask.html#MASES_KNet_Connect_IKNetSourceTask_PushRecordAsync_Org_Apache_Kafka_Connect_Source_SourceRecord_">PushRecordAsync(SourceRecord)</a>, i.e. without waiting the invocation of <a class="xref" href="MASES.KNet.Connect.KNetSourceTask-1.html#MASES_KNet_Connect_KNetSourceTask_1_Poll">Poll()</a> to return back the list of <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord.html">SourceRecord</a></p>
@@ -827,7 +827,7 @@ For example, a database connector might specify the <code class="paramref">sourc
 
   <h3 id="MASES_KNet_Connect_IKNetSourceTask_CreateAndPushRecordAsync__3_Java_Util_Map_Java_Lang_String___0__Java_Util_Map_Java_Lang_String___1__System_String_System_Nullable_System_Int32__Org_Apache_Kafka_Connect_Data_Schema___2_System_DateTime_" data-uid="MASES.KNet.Connect.IKNetSourceTask.CreateAndPushRecordAsync``3(Java.Util.Map{Java.Lang.String,``0},Java.Util.Map{Java.Lang.String,``1},System.String,System.Nullable{System.Int32},Org.Apache.Kafka.Connect.Data.Schema,``2,System.DateTime)">
   CreateAndPushRecordAsync&lt;TKeySource, TOffset, TValue&gt;(Map&lt;String, TKeySource&gt;, Map&lt;String, TOffset&gt;, string, int?, Schema, TValue, DateTime)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L742"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L743"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-4.html">SourceRecord&lt;TKeySource, TOffset, TKey, TValue&gt;</a> and push it to JVM in async mode using <a class="xref" href="MASES.KNet.Connect.IKNetSourceTask.html#MASES_KNet_Connect_IKNetSourceTask_PushRecordAsync_Org_Apache_Kafka_Connect_Source_SourceRecord_">PushRecordAsync(SourceRecord)</a>, i.e. without waiting the invocation of <a class="xref" href="MASES.KNet.Connect.KNetSourceTask-1.html#MASES_KNet_Connect_KNetSourceTask_1_Poll">Poll()</a> to return back the list of <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord.html">SourceRecord</a></p>
@@ -894,7 +894,7 @@ For example, a database connector might specify the <code class="paramref">sourc
 
   <h3 id="MASES_KNet_Connect_IKNetSourceTask_CreateAndPushRecordAsync__4_Java_Util_Map_Java_Lang_String___0__Java_Util_Map_Java_Lang_String___1__System_String_Org_Apache_Kafka_Connect_Data_Schema___2_Org_Apache_Kafka_Connect_Data_Schema___3_" data-uid="MASES.KNet.Connect.IKNetSourceTask.CreateAndPushRecordAsync``4(Java.Util.Map{Java.Lang.String,``0},Java.Util.Map{Java.Lang.String,``1},System.String,Org.Apache.Kafka.Connect.Data.Schema,``2,Org.Apache.Kafka.Connect.Data.Schema,``3)">
   CreateAndPushRecordAsync&lt;TKeySource, TOffset, TKey, TValue&gt;(Map&lt;String, TKeySource&gt;, Map&lt;String, TOffset&gt;, string, Schema, TKey, Schema, TValue)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L580"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L581"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-4.html">SourceRecord&lt;TKeySource, TOffset, TKey, TValue&gt;</a> and push it to JVM in async mode using <a class="xref" href="MASES.KNet.Connect.IKNetSourceTask.html#MASES_KNet_Connect_IKNetSourceTask_PushRecordAsync_Org_Apache_Kafka_Connect_Source_SourceRecord_">PushRecordAsync(SourceRecord)</a>, i.e. without waiting the invocation of <a class="xref" href="MASES.KNet.Connect.KNetSourceTask-1.html#MASES_KNet_Connect_KNetSourceTask_1_Poll">Poll()</a> to return back the list of <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord.html">SourceRecord</a></p>
@@ -964,7 +964,7 @@ For example, a database connector might specify the <code class="paramref">sourc
 
   <h3 id="MASES_KNet_Connect_IKNetSourceTask_CreateAndPushRecordAsync__4_Java_Util_Map_Java_Lang_String___0__Java_Util_Map_Java_Lang_String___1__System_String_Org_Apache_Kafka_Connect_Data_Schema___3_" data-uid="MASES.KNet.Connect.IKNetSourceTask.CreateAndPushRecordAsync``4(Java.Util.Map{Java.Lang.String,``0},Java.Util.Map{Java.Lang.String,``1},System.String,Org.Apache.Kafka.Connect.Data.Schema,``3)">
   CreateAndPushRecordAsync&lt;TKeySource, TOffset, TKey, TValue&gt;(Map&lt;String, TKeySource&gt;, Map&lt;String, TOffset&gt;, string, Schema, TValue)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L524"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L525"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-4.html">SourceRecord&lt;TKeySource, TOffset, TKey, TValue&gt;</a> and push it to JVM in async mode using <a class="xref" href="MASES.KNet.Connect.IKNetSourceTask.html#MASES_KNet_Connect_IKNetSourceTask_PushRecordAsync_Org_Apache_Kafka_Connect_Source_SourceRecord_">PushRecordAsync(SourceRecord)</a>, i.e. without waiting the invocation of <a class="xref" href="MASES.KNet.Connect.KNetSourceTask-1.html#MASES_KNet_Connect_KNetSourceTask_1_Poll">Poll()</a> to return back the list of <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord.html">SourceRecord</a></p>
@@ -1028,7 +1028,7 @@ For example, a database connector might specify the <code class="paramref">sourc
 
   <h3 id="MASES_KNet_Connect_IKNetSourceTask_CreateAndPushRecordAsync__4_Java_Util_Map_Java_Lang_String___0__Java_Util_Map_Java_Lang_String___1__System_String_System_Nullable_System_Int32__Org_Apache_Kafka_Connect_Data_Schema___2_Org_Apache_Kafka_Connect_Data_Schema___3_" data-uid="MASES.KNet.Connect.IKNetSourceTask.CreateAndPushRecordAsync``4(Java.Util.Map{Java.Lang.String,``0},Java.Util.Map{Java.Lang.String,``1},System.String,System.Nullable{System.Int32},Org.Apache.Kafka.Connect.Data.Schema,``2,Org.Apache.Kafka.Connect.Data.Schema,``3)">
   CreateAndPushRecordAsync&lt;TKeySource, TOffset, TKey, TValue&gt;(Map&lt;String, TKeySource&gt;, Map&lt;String, TOffset&gt;, string, int?, Schema, TKey, Schema, TValue)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L639"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L640"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-4.html">SourceRecord&lt;TKeySource, TOffset, TKey, TValue&gt;</a> and push it to JVM in async mode using <a class="xref" href="MASES.KNet.Connect.IKNetSourceTask.html#MASES_KNet_Connect_IKNetSourceTask_PushRecordAsync_Org_Apache_Kafka_Connect_Source_SourceRecord_">PushRecordAsync(SourceRecord)</a>, i.e. without waiting the invocation of <a class="xref" href="MASES.KNet.Connect.KNetSourceTask-1.html#MASES_KNet_Connect_KNetSourceTask_1_Poll">Poll()</a> to return back the list of <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord.html">SourceRecord</a></p>
@@ -1101,7 +1101,7 @@ For example, a database connector might specify the <code class="paramref">sourc
 
   <h3 id="MASES_KNet_Connect_IKNetSourceTask_CreateAndPushRecordAsync__4_Java_Util_Map_Java_Lang_String___0__Java_Util_Map_Java_Lang_String___1__System_String_System_Nullable_System_Int32__Org_Apache_Kafka_Connect_Data_Schema___2_Org_Apache_Kafka_Connect_Data_Schema___3_System_DateTime_" data-uid="MASES.KNet.Connect.IKNetSourceTask.CreateAndPushRecordAsync``4(Java.Util.Map{Java.Lang.String,``0},Java.Util.Map{Java.Lang.String,``1},System.String,System.Nullable{System.Int32},Org.Apache.Kafka.Connect.Data.Schema,``2,Org.Apache.Kafka.Connect.Data.Schema,``3,System.DateTime)">
   CreateAndPushRecordAsync&lt;TKeySource, TOffset, TKey, TValue&gt;(Map&lt;String, TKeySource&gt;, Map&lt;String, TOffset&gt;, string, int?, Schema, TKey, Schema, TValue, DateTime)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L810"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L811"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-4.html">SourceRecord&lt;TKeySource, TOffset, TKey, TValue&gt;</a> and push it to JVM in async mode using <a class="xref" href="MASES.KNet.Connect.IKNetSourceTask.html#MASES_KNet_Connect_IKNetSourceTask_PushRecordAsync_Org_Apache_Kafka_Connect_Source_SourceRecord_">PushRecordAsync(SourceRecord)</a>, i.e. without waiting the invocation of <a class="xref" href="MASES.KNet.Connect.KNetSourceTask-1.html#MASES_KNet_Connect_KNetSourceTask_1_Poll">Poll()</a> to return back the list of <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord.html">SourceRecord</a></p>
@@ -1177,7 +1177,7 @@ For example, a database connector might specify the <code class="paramref">sourc
 
   <h3 id="MASES_KNet_Connect_IKNetSourceTask_CreateAndPushRecordAsync__4_Java_Util_Map_Java_Lang_String___0__Java_Util_Map_Java_Lang_String___1__System_String_System_Nullable_System_Int32__Org_Apache_Kafka_Connect_Data_Schema___2_Org_Apache_Kafka_Connect_Data_Schema___3_System_DateTime_Org_Apache_Kafka_Connect_Header_Headers_" data-uid="MASES.KNet.Connect.IKNetSourceTask.CreateAndPushRecordAsync``4(Java.Util.Map{Java.Lang.String,``0},Java.Util.Map{Java.Lang.String,``1},System.String,System.Nullable{System.Int32},Org.Apache.Kafka.Connect.Data.Schema,``2,Org.Apache.Kafka.Connect.Data.Schema,``3,System.DateTime,Org.Apache.Kafka.Connect.Header.Headers)">
   CreateAndPushRecordAsync&lt;TKeySource, TOffset, TKey, TValue&gt;(Map&lt;String, TKeySource&gt;, Map&lt;String, TOffset&gt;, string, int?, Schema, TKey, Schema, TValue, DateTime, Headers)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L884"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L885"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-4.html">SourceRecord&lt;TKeySource, TOffset, TKey, TValue&gt;</a> and push it to JVM in async mode using <a class="xref" href="MASES.KNet.Connect.IKNetSourceTask.html#MASES_KNet_Connect_IKNetSourceTask_PushRecordAsync_Org_Apache_Kafka_Connect_Source_SourceRecord_">PushRecordAsync(SourceRecord)</a>, i.e. without waiting the invocation of <a class="xref" href="MASES.KNet.Connect.KNetSourceTask-1.html#MASES_KNet_Connect_KNetSourceTask_1_Poll">Poll()</a> to return back the list of <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord.html">SourceRecord</a></p>
@@ -1256,7 +1256,7 @@ For example, a database connector might specify the <code class="paramref">sourc
 
   <h3 id="MASES_KNet_Connect_IKNetSourceTask_CreateAndPushRecordAsync__4_Java_Util_Map_Java_Lang_String___0__Java_Util_Map_Java_Lang_String___1__System_String_System_Nullable_System_Int32__Org_Apache_Kafka_Connect_Data_Schema___3_" data-uid="MASES.KNet.Connect.IKNetSourceTask.CreateAndPushRecordAsync``4(Java.Util.Map{Java.Lang.String,``0},Java.Util.Map{Java.Lang.String,``1},System.String,System.Nullable{System.Int32},Org.Apache.Kafka.Connect.Data.Schema,``3)">
   CreateAndPushRecordAsync&lt;TKeySource, TOffset, TKey, TValue&gt;(Map&lt;String, TKeySource&gt;, Map&lt;String, TOffset&gt;, string, int?, Schema, TValue)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L474"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L475"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-4.html">SourceRecord&lt;TKeySource, TOffset, TKey, TValue&gt;</a> and push it to JVM in async mode using <a class="xref" href="MASES.KNet.Connect.IKNetSourceTask.html#MASES_KNet_Connect_IKNetSourceTask_PushRecordAsync_Org_Apache_Kafka_Connect_Source_SourceRecord_">PushRecordAsync(SourceRecord)</a>, i.e. without waiting the invocation of <a class="xref" href="MASES.KNet.Connect.KNetSourceTask-1.html#MASES_KNet_Connect_KNetSourceTask_1_Poll">Poll()</a> to return back the list of <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord.html">SourceRecord</a></p>
@@ -1323,7 +1323,7 @@ For example, a database connector might specify the <code class="paramref">sourc
 
   <h3 id="MASES_KNet_Connect_IKNetSourceTask_CreateAndPushRecord__1_System_String_Org_Apache_Kafka_Connect_Data_Schema___0_System_DateTime_Java_Util_Map_Java_Lang_String_System_Object__Java_Util_Map_Java_Lang_String_System_Object__" data-uid="MASES.KNet.Connect.IKNetSourceTask.CreateAndPushRecord``1(System.String,Org.Apache.Kafka.Connect.Data.Schema,``0,System.DateTime,Java.Util.Map{Java.Lang.String,System.Object},Java.Util.Map{Java.Lang.String,System.Object})">
   CreateAndPushRecord&lt;TValue&gt;(string, Schema, TValue, DateTime, Map&lt;String, object&gt;, Map&lt;String, object&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L255"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L256"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-2.html">SourceRecord&lt;TKey, TValue&gt;</a> and push it to JVM</p>
@@ -1380,7 +1380,7 @@ For example, a database connector might specify the <code class="paramref">sourc
 
   <h3 id="MASES_KNet_Connect_IKNetSourceTask_CreateAndPushRecord__1_System_String_System_Nullable_System_Int32__Org_Apache_Kafka_Connect_Data_Schema___0_System_DateTime_Java_Util_Map_Java_Lang_String_System_Object__Java_Util_Map_Java_Lang_String_System_Object__" data-uid="MASES.KNet.Connect.IKNetSourceTask.CreateAndPushRecord``1(System.String,System.Nullable{System.Int32},Org.Apache.Kafka.Connect.Data.Schema,``0,System.DateTime,Java.Util.Map{Java.Lang.String,System.Object},Java.Util.Map{Java.Lang.String,System.Object})">
   CreateAndPushRecord&lt;TValue&gt;(string, int?, Schema, TValue, DateTime, Map&lt;String, object&gt;, Map&lt;String, object&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L298"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L299"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-2.html">SourceRecord&lt;TKey, TValue&gt;</a> and push it to JVM</p>
@@ -1440,7 +1440,7 @@ For example, a database connector might specify the <code class="paramref">sourc
 
   <h3 id="MASES_KNet_Connect_IKNetSourceTask_CreateAndPushRecord__2_System_String_Org_Apache_Kafka_Connect_Data_Schema___0_Org_Apache_Kafka_Connect_Data_Schema___1_Java_Util_Map_Java_Lang_String_System_Object__Java_Util_Map_Java_Lang_String_System_Object__" data-uid="MASES.KNet.Connect.IKNetSourceTask.CreateAndPushRecord``2(System.String,Org.Apache.Kafka.Connect.Data.Schema,``0,Org.Apache.Kafka.Connect.Data.Schema,``1,Java.Util.Map{Java.Lang.String,System.Object},Java.Util.Map{Java.Lang.String,System.Object})">
   CreateAndPushRecord&lt;TKey, TValue&gt;(string, Schema, TKey, Schema, TValue, Map&lt;String, object&gt;, Map&lt;String, object&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L163"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L164"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-2.html">SourceRecord&lt;TKey, TValue&gt;</a> and push it to JVM</p>
@@ -1503,7 +1503,7 @@ For example, a database connector might specify the <code class="paramref">sourc
 
   <h3 id="MASES_KNet_Connect_IKNetSourceTask_CreateAndPushRecord__2_System_String_Org_Apache_Kafka_Connect_Data_Schema___1_Java_Util_Map_Java_Lang_String_System_Object__Java_Util_Map_Java_Lang_String_System_Object__" data-uid="MASES.KNet.Connect.IKNetSourceTask.CreateAndPushRecord``2(System.String,Org.Apache.Kafka.Connect.Data.Schema,``1,Java.Util.Map{Java.Lang.String,System.Object},Java.Util.Map{Java.Lang.String,System.Object})">
   CreateAndPushRecord&lt;TKey, TValue&gt;(string, Schema, TValue, Map&lt;String, object&gt;, Map&lt;String, object&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L117"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L118"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-2.html">SourceRecord&lt;TKey, TValue&gt;</a> and push it to JVM</p>
@@ -1560,7 +1560,7 @@ For example, a database connector might specify the <code class="paramref">sourc
 
   <h3 id="MASES_KNet_Connect_IKNetSourceTask_CreateAndPushRecord__2_System_String_System_Nullable_System_Int32__Org_Apache_Kafka_Connect_Data_Schema___0_Org_Apache_Kafka_Connect_Data_Schema___1_Java_Util_Map_Java_Lang_String_System_Object__Java_Util_Map_Java_Lang_String_System_Object__" data-uid="MASES.KNet.Connect.IKNetSourceTask.CreateAndPushRecord``2(System.String,System.Nullable{System.Int32},Org.Apache.Kafka.Connect.Data.Schema,``0,Org.Apache.Kafka.Connect.Data.Schema,``1,Java.Util.Map{Java.Lang.String,System.Object},Java.Util.Map{Java.Lang.String,System.Object})">
   CreateAndPushRecord&lt;TKey, TValue&gt;(string, int?, Schema, TKey, Schema, TValue, Map&lt;String, object&gt;, Map&lt;String, object&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L211"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L212"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-2.html">SourceRecord&lt;TKey, TValue&gt;</a> and push it to JVM</p>
@@ -1626,7 +1626,7 @@ For example, a database connector might specify the <code class="paramref">sourc
 
   <h3 id="MASES_KNet_Connect_IKNetSourceTask_CreateAndPushRecord__2_System_String_System_Nullable_System_Int32__Org_Apache_Kafka_Connect_Data_Schema___0_Org_Apache_Kafka_Connect_Data_Schema___1_System_DateTime_Java_Util_Map_Java_Lang_String_System_Object__Java_Util_Map_Java_Lang_String_System_Object__" data-uid="MASES.KNet.Connect.IKNetSourceTask.CreateAndPushRecord``2(System.String,System.Nullable{System.Int32},Org.Apache.Kafka.Connect.Data.Schema,``0,Org.Apache.Kafka.Connect.Data.Schema,``1,System.DateTime,Java.Util.Map{Java.Lang.String,System.Object},Java.Util.Map{Java.Lang.String,System.Object})">
   CreateAndPushRecord&lt;TKey, TValue&gt;(string, int?, Schema, TKey, Schema, TValue, DateTime, Map&lt;String, object&gt;, Map&lt;String, object&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L348"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L349"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-2.html">SourceRecord&lt;TKey, TValue&gt;</a> and push it to JVM</p>
@@ -1695,7 +1695,7 @@ For example, a database connector might specify the <code class="paramref">sourc
 
   <h3 id="MASES_KNet_Connect_IKNetSourceTask_CreateAndPushRecord__2_System_String_System_Nullable_System_Int32__Org_Apache_Kafka_Connect_Data_Schema___0_Org_Apache_Kafka_Connect_Data_Schema___1_System_DateTime_Org_Apache_Kafka_Connect_Header_Headers_Java_Util_Map_Java_Lang_String_System_Object__Java_Util_Map_Java_Lang_String_System_Object__" data-uid="MASES.KNet.Connect.IKNetSourceTask.CreateAndPushRecord``2(System.String,System.Nullable{System.Int32},Org.Apache.Kafka.Connect.Data.Schema,``0,Org.Apache.Kafka.Connect.Data.Schema,``1,System.DateTime,Org.Apache.Kafka.Connect.Header.Headers,Java.Util.Map{Java.Lang.String,System.Object},Java.Util.Map{Java.Lang.String,System.Object})">
   CreateAndPushRecord&lt;TKey, TValue&gt;(string, int?, Schema, TKey, Schema, TValue, DateTime, Headers, Map&lt;String, object&gt;, Map&lt;String, object&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L403"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L404"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-2.html">SourceRecord&lt;TKey, TValue&gt;</a> and push it to JVM</p>
@@ -1767,7 +1767,7 @@ For example, a database connector might specify the <code class="paramref">sourc
 
   <h3 id="MASES_KNet_Connect_IKNetSourceTask_CreateAndPushRecord__2_System_String_System_Nullable_System_Int32__Org_Apache_Kafka_Connect_Data_Schema___1_Java_Util_Map_Java_Lang_String_System_Object__Java_Util_Map_Java_Lang_String_System_Object__" data-uid="MASES.KNet.Connect.IKNetSourceTask.CreateAndPushRecord``2(System.String,System.Nullable{System.Int32},Org.Apache.Kafka.Connect.Data.Schema,``1,Java.Util.Map{Java.Lang.String,System.Object},Java.Util.Map{Java.Lang.String,System.Object})">
   CreateAndPushRecord&lt;TKey, TValue&gt;(string, int?, Schema, TValue, Map&lt;String, object&gt;, Map&lt;String, object&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L75"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L76"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-2.html">SourceRecord&lt;TKey, TValue&gt;</a> and push it to JVM</p>
@@ -1827,7 +1827,7 @@ For example, a database connector might specify the <code class="paramref">sourc
 
   <h3 id="MASES_KNet_Connect_IKNetSourceTask_CreateAndPushRecord__3_Java_Util_Map_Java_Lang_String___0__Java_Util_Map_Java_Lang_String___1__System_String_Org_Apache_Kafka_Connect_Data_Schema___2_System_DateTime_" data-uid="MASES.KNet.Connect.IKNetSourceTask.CreateAndPushRecord``3(Java.Util.Map{Java.Lang.String,``0},Java.Util.Map{Java.Lang.String,``1},System.String,Org.Apache.Kafka.Connect.Data.Schema,``2,System.DateTime)">
   CreateAndPushRecord&lt;TKeySource, TOffset, TValue&gt;(Map&lt;String, TKeySource&gt;, Map&lt;String, TOffset&gt;, string, Schema, TValue, DateTime)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L673"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L674"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-4.html">SourceRecord&lt;TKeySource, TOffset, TKey, TValue&gt;</a> and push it to JVM</p>
@@ -1891,7 +1891,7 @@ For example, a database connector might specify the <code class="paramref">sourc
 
   <h3 id="MASES_KNet_Connect_IKNetSourceTask_CreateAndPushRecord__3_Java_Util_Map_Java_Lang_String___0__Java_Util_Map_Java_Lang_String___1__System_String_System_Nullable_System_Int32__Org_Apache_Kafka_Connect_Data_Schema___2_System_DateTime_" data-uid="MASES.KNet.Connect.IKNetSourceTask.CreateAndPushRecord``3(Java.Util.Map{Java.Lang.String,``0},Java.Util.Map{Java.Lang.String,``1},System.String,System.Nullable{System.Int32},Org.Apache.Kafka.Connect.Data.Schema,``2,System.DateTime)">
   CreateAndPushRecord&lt;TKeySource, TOffset, TValue&gt;(Map&lt;String, TKeySource&gt;, Map&lt;String, TOffset&gt;, string, int?, Schema, TValue, DateTime)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L725"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L726"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-4.html">SourceRecord&lt;TKeySource, TOffset, TKey, TValue&gt;</a> and push it to JVM</p>
@@ -1958,7 +1958,7 @@ For example, a database connector might specify the <code class="paramref">sourc
 
   <h3 id="MASES_KNet_Connect_IKNetSourceTask_CreateAndPushRecord__4_Java_Util_Map_Java_Lang_String___0__Java_Util_Map_Java_Lang_String___1__System_String_Org_Apache_Kafka_Connect_Data_Schema___2_Org_Apache_Kafka_Connect_Data_Schema___3_" data-uid="MASES.KNet.Connect.IKNetSourceTask.CreateAndPushRecord``4(Java.Util.Map{Java.Lang.String,``0},Java.Util.Map{Java.Lang.String,``1},System.String,Org.Apache.Kafka.Connect.Data.Schema,``2,Org.Apache.Kafka.Connect.Data.Schema,``3)">
   CreateAndPushRecord&lt;TKeySource, TOffset, TKey, TValue&gt;(Map&lt;String, TKeySource&gt;, Map&lt;String, TOffset&gt;, string, Schema, TKey, Schema, TValue)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L562"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L563"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-4.html">SourceRecord&lt;TKeySource, TOffset, TKey, TValue&gt;</a> and push it to JVM</p>
@@ -2028,7 +2028,7 @@ For example, a database connector might specify the <code class="paramref">sourc
 
   <h3 id="MASES_KNet_Connect_IKNetSourceTask_CreateAndPushRecord__4_Java_Util_Map_Java_Lang_String___0__Java_Util_Map_Java_Lang_String___1__System_String_Org_Apache_Kafka_Connect_Data_Schema___3_" data-uid="MASES.KNet.Connect.IKNetSourceTask.CreateAndPushRecord``4(Java.Util.Map{Java.Lang.String,``0},Java.Util.Map{Java.Lang.String,``1},System.String,Org.Apache.Kafka.Connect.Data.Schema,``3)">
   CreateAndPushRecord&lt;TKeySource, TOffset, TKey, TValue&gt;(Map&lt;String, TKeySource&gt;, Map&lt;String, TOffset&gt;, string, Schema, TValue)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L508"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L509"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-4.html">SourceRecord&lt;TKeySource, TOffset, TKey, TValue&gt;</a> and push it to JVM</p>
@@ -2092,7 +2092,7 @@ For example, a database connector might specify the <code class="paramref">sourc
 
   <h3 id="MASES_KNet_Connect_IKNetSourceTask_CreateAndPushRecord__4_Java_Util_Map_Java_Lang_String___0__Java_Util_Map_Java_Lang_String___1__System_String_System_Nullable_System_Int32__Org_Apache_Kafka_Connect_Data_Schema___2_Org_Apache_Kafka_Connect_Data_Schema___3_" data-uid="MASES.KNet.Connect.IKNetSourceTask.CreateAndPushRecord``4(Java.Util.Map{Java.Lang.String,``0},Java.Util.Map{Java.Lang.String,``1},System.String,System.Nullable{System.Int32},Org.Apache.Kafka.Connect.Data.Schema,``2,Org.Apache.Kafka.Connect.Data.Schema,``3)">
   CreateAndPushRecord&lt;TKeySource, TOffset, TKey, TValue&gt;(Map&lt;String, TKeySource&gt;, Map&lt;String, TOffset&gt;, string, int?, Schema, TKey, Schema, TValue)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L620"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L621"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-4.html">SourceRecord&lt;TKeySource, TOffset, TKey, TValue&gt;</a> and push it to JVM</p>
@@ -2165,7 +2165,7 @@ For example, a database connector might specify the <code class="paramref">sourc
 
   <h3 id="MASES_KNet_Connect_IKNetSourceTask_CreateAndPushRecord__4_Java_Util_Map_Java_Lang_String___0__Java_Util_Map_Java_Lang_String___1__System_String_System_Nullable_System_Int32__Org_Apache_Kafka_Connect_Data_Schema___2_Org_Apache_Kafka_Connect_Data_Schema___3_System_DateTime_" data-uid="MASES.KNet.Connect.IKNetSourceTask.CreateAndPushRecord``4(Java.Util.Map{Java.Lang.String,``0},Java.Util.Map{Java.Lang.String,``1},System.String,System.Nullable{System.Int32},Org.Apache.Kafka.Connect.Data.Schema,``2,Org.Apache.Kafka.Connect.Data.Schema,``3,System.DateTime)">
   CreateAndPushRecord&lt;TKeySource, TOffset, TKey, TValue&gt;(Map&lt;String, TKeySource&gt;, Map&lt;String, TOffset&gt;, string, int?, Schema, TKey, Schema, TValue, DateTime)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L787"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L788"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-4.html">SourceRecord&lt;TKeySource, TOffset, TKey, TValue&gt;</a> and push it to JVM</p>
@@ -2241,7 +2241,7 @@ For example, a database connector might specify the <code class="paramref">sourc
 
   <h3 id="MASES_KNet_Connect_IKNetSourceTask_CreateAndPushRecord__4_Java_Util_Map_Java_Lang_String___0__Java_Util_Map_Java_Lang_String___1__System_String_System_Nullable_System_Int32__Org_Apache_Kafka_Connect_Data_Schema___2_Org_Apache_Kafka_Connect_Data_Schema___3_System_DateTime_Org_Apache_Kafka_Connect_Header_Headers_" data-uid="MASES.KNet.Connect.IKNetSourceTask.CreateAndPushRecord``4(Java.Util.Map{Java.Lang.String,``0},Java.Util.Map{Java.Lang.String,``1},System.String,System.Nullable{System.Int32},Org.Apache.Kafka.Connect.Data.Schema,``2,Org.Apache.Kafka.Connect.Data.Schema,``3,System.DateTime,Org.Apache.Kafka.Connect.Header.Headers)">
   CreateAndPushRecord&lt;TKeySource, TOffset, TKey, TValue&gt;(Map&lt;String, TKeySource&gt;, Map&lt;String, TOffset&gt;, string, int?, Schema, TKey, Schema, TValue, DateTime, Headers)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L860"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L861"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-4.html">SourceRecord&lt;TKeySource, TOffset, TKey, TValue&gt;</a> and push it to JVM</p>
@@ -2320,7 +2320,7 @@ For example, a database connector might specify the <code class="paramref">sourc
 
   <h3 id="MASES_KNet_Connect_IKNetSourceTask_CreateAndPushRecord__4_Java_Util_Map_Java_Lang_String___0__Java_Util_Map_Java_Lang_String___1__System_String_System_Nullable_System_Int32__Org_Apache_Kafka_Connect_Data_Schema___3_" data-uid="MASES.KNet.Connect.IKNetSourceTask.CreateAndPushRecord``4(Java.Util.Map{Java.Lang.String,``0},Java.Util.Map{Java.Lang.String,``1},System.String,System.Nullable{System.Int32},Org.Apache.Kafka.Connect.Data.Schema,``3)">
   CreateAndPushRecord&lt;TKeySource, TOffset, TKey, TValue&gt;(Map&lt;String, TKeySource&gt;, Map&lt;String, TOffset&gt;, string, int?, Schema, TValue)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L457"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L458"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-4.html">SourceRecord&lt;TKeySource, TOffset, TKey, TValue&gt;</a> and push it to JVM</p>
@@ -2387,7 +2387,7 @@ For example, a database connector might specify the <code class="paramref">sourc
 
   <h3 id="MASES_KNet_Connect_IKNetSourceTask_CreateRecord__1_System_String_Org_Apache_Kafka_Connect_Data_Schema___0_System_DateTime_Java_Util_Map_Java_Lang_String_System_Object__Java_Util_Map_Java_Lang_String_System_Object__" data-uid="MASES.KNet.Connect.IKNetSourceTask.CreateRecord``1(System.String,Org.Apache.Kafka.Connect.Data.Schema,``0,System.DateTime,Java.Util.Map{Java.Lang.String,System.Object},Java.Util.Map{Java.Lang.String,System.Object})">
   CreateRecord&lt;TValue&gt;(string, Schema, TValue, DateTime, Map&lt;String, object&gt;, Map&lt;String, object&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L242"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L243"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-2.html">SourceRecord&lt;TKey, TValue&gt;</a></p>
@@ -2450,7 +2450,7 @@ For example, a database connector might specify the <code class="paramref">sourc
 
   <h3 id="MASES_KNet_Connect_IKNetSourceTask_CreateRecord__1_System_String_System_Nullable_System_Int32__Org_Apache_Kafka_Connect_Data_Schema___0_System_DateTime_Java_Util_Map_Java_Lang_String_System_Object__Java_Util_Map_Java_Lang_String_System_Object__" data-uid="MASES.KNet.Connect.IKNetSourceTask.CreateRecord``1(System.String,System.Nullable{System.Int32},Org.Apache.Kafka.Connect.Data.Schema,``0,System.DateTime,Java.Util.Map{Java.Lang.String,System.Object},Java.Util.Map{Java.Lang.String,System.Object})">
   CreateRecord&lt;TValue&gt;(string, int?, Schema, TValue, DateTime, Map&lt;String, object&gt;, Map&lt;String, object&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L284"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L285"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-2.html">SourceRecord&lt;TKey, TValue&gt;</a></p>
@@ -2516,7 +2516,7 @@ For example, a database connector might specify the <code class="paramref">sourc
 
   <h3 id="MASES_KNet_Connect_IKNetSourceTask_CreateRecord__2_System_String_Org_Apache_Kafka_Connect_Data_Schema___0_Org_Apache_Kafka_Connect_Data_Schema___1_Java_Util_Map_Java_Lang_String_System_Object__Java_Util_Map_Java_Lang_String_System_Object__" data-uid="MASES.KNet.Connect.IKNetSourceTask.CreateRecord``2(System.String,Org.Apache.Kafka.Connect.Data.Schema,``0,Org.Apache.Kafka.Connect.Data.Schema,``1,Java.Util.Map{Java.Lang.String,System.Object},Java.Util.Map{Java.Lang.String,System.Object})">
   CreateRecord&lt;TKey, TValue&gt;(string, Schema, TKey, Schema, TValue, Map&lt;String, object&gt;, Map&lt;String, object&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L148"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L149"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-2.html">SourceRecord&lt;TKey, TValue&gt;</a></p>
@@ -2585,7 +2585,7 @@ For example, a database connector might specify the <code class="paramref">sourc
 
   <h3 id="MASES_KNet_Connect_IKNetSourceTask_CreateRecord__2_System_String_Org_Apache_Kafka_Connect_Data_Schema___1_Java_Util_Map_Java_Lang_String_System_Object__Java_Util_Map_Java_Lang_String_System_Object__" data-uid="MASES.KNet.Connect.IKNetSourceTask.CreateRecord``2(System.String,Org.Apache.Kafka.Connect.Data.Schema,``1,Java.Util.Map{Java.Lang.String,System.Object},Java.Util.Map{Java.Lang.String,System.Object})">
   CreateRecord&lt;TKey, TValue&gt;(string, Schema, TValue, Map&lt;String, object&gt;, Map&lt;String, object&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L104"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L105"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-2.html">SourceRecord&lt;TKey, TValue&gt;</a></p>
@@ -2648,7 +2648,7 @@ For example, a database connector might specify the <code class="paramref">sourc
 
   <h3 id="MASES_KNet_Connect_IKNetSourceTask_CreateRecord__2_System_String_System_Nullable_System_Int32__Org_Apache_Kafka_Connect_Data_Schema___0_Org_Apache_Kafka_Connect_Data_Schema___1_Java_Util_Map_Java_Lang_String_System_Object__Java_Util_Map_Java_Lang_String_System_Object__" data-uid="MASES.KNet.Connect.IKNetSourceTask.CreateRecord``2(System.String,System.Nullable{System.Int32},Org.Apache.Kafka.Connect.Data.Schema,``0,Org.Apache.Kafka.Connect.Data.Schema,``1,Java.Util.Map{Java.Lang.String,System.Object},Java.Util.Map{Java.Lang.String,System.Object})">
   CreateRecord&lt;TKey, TValue&gt;(string, int?, Schema, TKey, Schema, TValue, Map&lt;String, object&gt;, Map&lt;String, object&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L195"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L196"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-2.html">SourceRecord&lt;TKey, TValue&gt;</a></p>
@@ -2720,7 +2720,7 @@ For example, a database connector might specify the <code class="paramref">sourc
 
   <h3 id="MASES_KNet_Connect_IKNetSourceTask_CreateRecord__2_System_String_System_Nullable_System_Int32__Org_Apache_Kafka_Connect_Data_Schema___0_Org_Apache_Kafka_Connect_Data_Schema___1_System_DateTime_Java_Util_Map_Java_Lang_String_System_Object__Java_Util_Map_Java_Lang_String_System_Object__" data-uid="MASES.KNet.Connect.IKNetSourceTask.CreateRecord``2(System.String,System.Nullable{System.Int32},Org.Apache.Kafka.Connect.Data.Schema,``0,Org.Apache.Kafka.Connect.Data.Schema,``1,System.DateTime,Java.Util.Map{Java.Lang.String,System.Object},Java.Util.Map{Java.Lang.String,System.Object})">
   CreateRecord&lt;TKey, TValue&gt;(string, int?, Schema, TKey, Schema, TValue, DateTime, Map&lt;String, object&gt;, Map&lt;String, object&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L331"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L332"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-2.html">SourceRecord&lt;TKey, TValue&gt;</a></p>
@@ -2795,7 +2795,7 @@ For example, a database connector might specify the <code class="paramref">sourc
 
   <h3 id="MASES_KNet_Connect_IKNetSourceTask_CreateRecord__2_System_String_System_Nullable_System_Int32__Org_Apache_Kafka_Connect_Data_Schema___0_Org_Apache_Kafka_Connect_Data_Schema___1_System_DateTime_Org_Apache_Kafka_Connect_Header_Headers_Java_Util_Map_Java_Lang_String_System_Object__Java_Util_Map_Java_Lang_String_System_Object__" data-uid="MASES.KNet.Connect.IKNetSourceTask.CreateRecord``2(System.String,System.Nullable{System.Int32},Org.Apache.Kafka.Connect.Data.Schema,``0,Org.Apache.Kafka.Connect.Data.Schema,``1,System.DateTime,Org.Apache.Kafka.Connect.Header.Headers,Java.Util.Map{Java.Lang.String,System.Object},Java.Util.Map{Java.Lang.String,System.Object})">
   CreateRecord&lt;TKey, TValue&gt;(string, int?, Schema, TKey, Schema, TValue, DateTime, Headers, Map&lt;String, object&gt;, Map&lt;String, object&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L385"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L386"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-2.html">SourceRecord&lt;TKey, TValue&gt;</a></p>
@@ -2873,7 +2873,7 @@ For example, a database connector might specify the <code class="paramref">sourc
 
   <h3 id="MASES_KNet_Connect_IKNetSourceTask_CreateRecord__2_System_String_System_Nullable_System_Int32__Org_Apache_Kafka_Connect_Data_Schema___1_Java_Util_Map_Java_Lang_String_System_Object__Java_Util_Map_Java_Lang_String_System_Object__" data-uid="MASES.KNet.Connect.IKNetSourceTask.CreateRecord``2(System.String,System.Nullable{System.Int32},Org.Apache.Kafka.Connect.Data.Schema,``1,Java.Util.Map{Java.Lang.String,System.Object},Java.Util.Map{Java.Lang.String,System.Object})">
   CreateRecord&lt;TKey, TValue&gt;(string, int?, Schema, TValue, Map&lt;String, object&gt;, Map&lt;String, object&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L61"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L62"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-2.html">SourceRecord&lt;TKey, TValue&gt;</a></p>
@@ -2939,7 +2939,7 @@ For example, a database connector might specify the <code class="paramref">sourc
 
   <h3 id="MASES_KNet_Connect_IKNetSourceTask_CreateRecord__3_Java_Util_Map_Java_Lang_String___0__Java_Util_Map_Java_Lang_String___1__System_String_Org_Apache_Kafka_Connect_Data_Schema___2_System_DateTime_" data-uid="MASES.KNet.Connect.IKNetSourceTask.CreateRecord``3(Java.Util.Map{Java.Lang.String,``0},Java.Util.Map{Java.Lang.String,``1},System.String,Org.Apache.Kafka.Connect.Data.Schema,``2,System.DateTime)">
   CreateRecord&lt;TKeySource, TOffset, TValue&gt;(Map&lt;String, TKeySource&gt;, Map&lt;String, TOffset&gt;, string, Schema, TValue, DateTime)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L657"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L658"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-4.html">SourceRecord&lt;TKeySource, TOffset, TKey, TValue&gt;</a></p>
@@ -3009,7 +3009,7 @@ For example, a database connector might specify the <code class="paramref">sourc
 
   <h3 id="MASES_KNet_Connect_IKNetSourceTask_CreateRecord__3_Java_Util_Map_Java_Lang_String___0__Java_Util_Map_Java_Lang_String___1__System_String_System_Nullable_System_Int32__Org_Apache_Kafka_Connect_Data_Schema___2_System_DateTime_" data-uid="MASES.KNet.Connect.IKNetSourceTask.CreateRecord``3(Java.Util.Map{Java.Lang.String,``0},Java.Util.Map{Java.Lang.String,``1},System.String,System.Nullable{System.Int32},Org.Apache.Kafka.Connect.Data.Schema,``2,System.DateTime)">
   CreateRecord&lt;TKeySource, TOffset, TValue&gt;(Map&lt;String, TKeySource&gt;, Map&lt;String, TOffset&gt;, string, int?, Schema, TValue, DateTime)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L708"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L709"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-4.html">SourceRecord&lt;TKeySource, TOffset, TKey, TValue&gt;</a></p>
@@ -3082,7 +3082,7 @@ For example, a database connector might specify the <code class="paramref">sourc
 
   <h3 id="MASES_KNet_Connect_IKNetSourceTask_CreateRecord__4_Java_Util_Map_Java_Lang_String___0__Java_Util_Map_Java_Lang_String___1__System_String_Org_Apache_Kafka_Connect_Data_Schema___2_Org_Apache_Kafka_Connect_Data_Schema___3_" data-uid="MASES.KNet.Connect.IKNetSourceTask.CreateRecord``4(Java.Util.Map{Java.Lang.String,``0},Java.Util.Map{Java.Lang.String,``1},System.String,Org.Apache.Kafka.Connect.Data.Schema,``2,Org.Apache.Kafka.Connect.Data.Schema,``3)">
   CreateRecord&lt;TKeySource, TOffset, TKey, TValue&gt;(Map&lt;String, TKeySource&gt;, Map&lt;String, TOffset&gt;, string, Schema, TKey, Schema, TValue)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L544"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L545"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-4.html">SourceRecord&lt;TKeySource, TOffset, TKey, TValue&gt;</a></p>
@@ -3158,7 +3158,7 @@ For example, a database connector might specify the <code class="paramref">sourc
 
   <h3 id="MASES_KNet_Connect_IKNetSourceTask_CreateRecord__4_Java_Util_Map_Java_Lang_String___0__Java_Util_Map_Java_Lang_String___1__System_String_Org_Apache_Kafka_Connect_Data_Schema___3_" data-uid="MASES.KNet.Connect.IKNetSourceTask.CreateRecord``4(Java.Util.Map{Java.Lang.String,``0},Java.Util.Map{Java.Lang.String,``1},System.String,Org.Apache.Kafka.Connect.Data.Schema,``3)">
   CreateRecord&lt;TKeySource, TOffset, TKey, TValue&gt;(Map&lt;String, TKeySource&gt;, Map&lt;String, TOffset&gt;, string, Schema, TValue)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L492"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L493"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-4.html">SourceRecord&lt;TKeySource, TOffset, TKey, TValue&gt;</a></p>
@@ -3228,7 +3228,7 @@ For example, a database connector might specify the <code class="paramref">sourc
 
   <h3 id="MASES_KNet_Connect_IKNetSourceTask_CreateRecord__4_Java_Util_Map_Java_Lang_String___0__Java_Util_Map_Java_Lang_String___1__System_String_System_Nullable_System_Int32__Org_Apache_Kafka_Connect_Data_Schema___2_Org_Apache_Kafka_Connect_Data_Schema___3_" data-uid="MASES.KNet.Connect.IKNetSourceTask.CreateRecord``4(Java.Util.Map{Java.Lang.String,``0},Java.Util.Map{Java.Lang.String,``1},System.String,System.Nullable{System.Int32},Org.Apache.Kafka.Connect.Data.Schema,``2,Org.Apache.Kafka.Connect.Data.Schema,``3)">
   CreateRecord&lt;TKeySource, TOffset, TKey, TValue&gt;(Map&lt;String, TKeySource&gt;, Map&lt;String, TOffset&gt;, string, int?, Schema, TKey, Schema, TValue)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L601"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L602"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-4.html">SourceRecord&lt;TKeySource, TOffset, TKey, TValue&gt;</a></p>
@@ -3307,7 +3307,7 @@ For example, a database connector might specify the <code class="paramref">sourc
 
   <h3 id="MASES_KNet_Connect_IKNetSourceTask_CreateRecord__4_Java_Util_Map_Java_Lang_String___0__Java_Util_Map_Java_Lang_String___1__System_String_System_Nullable_System_Int32__Org_Apache_Kafka_Connect_Data_Schema___2_Org_Apache_Kafka_Connect_Data_Schema___3_System_DateTime_" data-uid="MASES.KNet.Connect.IKNetSourceTask.CreateRecord``4(Java.Util.Map{Java.Lang.String,``0},Java.Util.Map{Java.Lang.String,``1},System.String,System.Nullable{System.Int32},Org.Apache.Kafka.Connect.Data.Schema,``2,Org.Apache.Kafka.Connect.Data.Schema,``3,System.DateTime)">
   CreateRecord&lt;TKeySource, TOffset, TKey, TValue&gt;(Map&lt;String, TKeySource&gt;, Map&lt;String, TOffset&gt;, string, int?, Schema, TKey, Schema, TValue, DateTime)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L764"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L765"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-4.html">SourceRecord&lt;TKeySource, TOffset, TKey, TValue&gt;</a></p>
@@ -3389,7 +3389,7 @@ For example, a database connector might specify the <code class="paramref">sourc
 
   <h3 id="MASES_KNet_Connect_IKNetSourceTask_CreateRecord__4_Java_Util_Map_Java_Lang_String___0__Java_Util_Map_Java_Lang_String___1__System_String_System_Nullable_System_Int32__Org_Apache_Kafka_Connect_Data_Schema___2_Org_Apache_Kafka_Connect_Data_Schema___3_System_DateTime_Org_Apache_Kafka_Connect_Header_Headers_" data-uid="MASES.KNet.Connect.IKNetSourceTask.CreateRecord``4(Java.Util.Map{Java.Lang.String,``0},Java.Util.Map{Java.Lang.String,``1},System.String,System.Nullable{System.Int32},Org.Apache.Kafka.Connect.Data.Schema,``2,Org.Apache.Kafka.Connect.Data.Schema,``3,System.DateTime,Org.Apache.Kafka.Connect.Header.Headers)">
   CreateRecord&lt;TKeySource, TOffset, TKey, TValue&gt;(Map&lt;String, TKeySource&gt;, Map&lt;String, TOffset&gt;, string, int?, Schema, TKey, Schema, TValue, DateTime, Headers)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L836"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L837"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-4.html">SourceRecord&lt;TKeySource, TOffset, TKey, TValue&gt;</a></p>
@@ -3474,7 +3474,7 @@ For example, a database connector might specify the <code class="paramref">sourc
 
   <h3 id="MASES_KNet_Connect_IKNetSourceTask_CreateRecord__4_Java_Util_Map_Java_Lang_String___0__Java_Util_Map_Java_Lang_String___1__System_String_System_Nullable_System_Int32__Org_Apache_Kafka_Connect_Data_Schema___3_" data-uid="MASES.KNet.Connect.IKNetSourceTask.CreateRecord``4(Java.Util.Map{Java.Lang.String,``0},Java.Util.Map{Java.Lang.String,``1},System.String,System.Nullable{System.Int32},Org.Apache.Kafka.Connect.Data.Schema,``3)">
   CreateRecord&lt;TKeySource, TOffset, TKey, TValue&gt;(Map&lt;String, TKeySource&gt;, Map&lt;String, TOffset&gt;, string, int?, Schema, TValue)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L440"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L441"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Org.Apache.Kafka.Connect.Source.SourceRecord-4.html">SourceRecord&lt;TKeySource, TOffset, TKey, TValue&gt;</a></p>
@@ -3547,7 +3547,7 @@ For example, a database connector might specify the <code class="paramref">sourc
 
   <h3 id="MASES_KNet_Connect_IKNetSourceTask_PushRecordAsync_Org_Apache_Kafka_Connect_Source_SourceRecord_" data-uid="MASES.KNet.Connect.IKNetSourceTask.PushRecordAsync(Org.Apache.Kafka.Connect.Source.SourceRecord)">
   PushRecordAsync(SourceRecord)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L39"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L40"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>If <a class="xref" href="MASES.KNet.Connect.IKNetSourceTask.html#MASES_KNet_Connect_IKNetSourceTask_UseOnlyAsync">UseOnlyAsync</a> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>, each <code class="paramref">record</code> is accumulated in a list outside the scope of <a class="xref" href="MASES.KNet.Connect.KNetSourceTask-1.html#MASES_KNet_Connect_KNetSourceTask_1_Poll">Poll()</a> invocation.
@@ -3584,7 +3584,7 @@ The method can be useful in condition where records are generated in parallel, e
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L31" class="edit-link">Edit this page</a>
+          <a href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Connect/KNetSourceTask.cs/#L32" class="edit-link">Edit this page</a>
         </div>
 
 
