@@ -18,7 +18,7 @@
 		<None Include="..\..\documentation\articles\usageSerDes.md" Pack="true" PackagePath="\" />
 	</ItemGroup>
 	<ItemGroup>
-	  <PackageReference Include="Google.Protobuf" Version="3.35.0" />
+	  <PackageReference Include="Google.Protobuf" Version="3.35.1" />
 	  <PackageReference Include="Microsoft.SourceLink.GitHub" Version="10.0.300">
 	    <PrivateAssets>all</PrivateAssets>
 	    <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
