@@ -571,7 +571,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Admin.ListConsumerGroupsOptions"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.ListConsumerGroupsResult"/></returns>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public Org.Apache.Kafka.Clients.Admin.ListConsumerGroupsResult ListConsumerGroups(Org.Apache.Kafka.Clients.Admin.ListConsumerGroupsOptions arg0)
         {
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.ListConsumerGroupsResult>("listConsumerGroups", "(Lorg/apache/kafka/clients/admin/ListConsumerGroupsOptions;)Lorg/apache/kafka/clients/admin/ListConsumerGroupsResult;", arg0);

@@ -332,7 +332,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/consumer/Consumer.html#close(java.time.Duration)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Time.Duration"/></param>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public void Close(Java.Time.Duration arg0)
         {
             IExecuteWithSignature("close", "(Ljava/time/Duration;)V", arg0);
@@ -818,7 +818,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/consumer/Consumer.html#close(java.time.Duration)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Time.Duration"/></param>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public void Close(Java.Time.Duration arg0)
         {
             IExecuteWithSignature("close", "(Ljava/time/Duration;)V", arg0);

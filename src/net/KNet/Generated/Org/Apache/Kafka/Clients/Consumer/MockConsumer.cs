@@ -118,7 +118,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/consumer/MockConsumer.html#%3Cinit%3E(org.apache.kafka.clients.consumer.OffsetResetStrategy)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Consumer.OffsetResetStrategy"/></param>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public MockConsumer(Org.Apache.Kafka.Clients.Consumer.OffsetResetStrategy arg0) : base(JVMBridgeBase.InitializerInstance)
         {
             InvokeInitializer(arg0);
@@ -396,7 +396,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/consumer/MockConsumer.html#close(java.time.Duration)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Time.Duration"/></param>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public void Close(Java.Time.Duration arg0)
         {
             IExecuteWithSignature("close", "(Ljava/time/Duration;)V", arg0);
@@ -762,7 +762,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/consumer/MockConsumer.html#%3Cinit%3E(org.apache.kafka.clients.consumer.OffsetResetStrategy)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Consumer.OffsetResetStrategy"/></param>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public MockConsumer(Org.Apache.Kafka.Clients.Consumer.OffsetResetStrategy arg0) : base(JVMBridgeBase.InitializerInstance)
         {
             InvokeInitializer(arg0);
@@ -1045,7 +1045,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/consumer/MockConsumer.html#close(java.time.Duration)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Time.Duration"/></param>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public void Close(Java.Time.Duration arg0)
         {
             IExecuteWithSignature("close", "(Ljava/time/Duration;)V", arg0);

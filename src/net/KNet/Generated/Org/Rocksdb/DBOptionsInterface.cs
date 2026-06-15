@@ -381,7 +381,7 @@ namespace Org.Rocksdb
         /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/DBOptionsInterface.html#maxBackgroundFlushes()"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public int MaxBackgroundFlushes()
         {
             return IExecuteWithSignature<int>("maxBackgroundFlushes", "()I");
@@ -963,7 +963,7 @@ namespace Org.Rocksdb
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <returns><see cref="Org.Rocksdb.DBOptionsInterface"/></returns>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public Org.Rocksdb.DBOptionsInterface SetMaxBackgroundFlushes(int arg0)
         {
             return IExecuteWithSignature<Org.Rocksdb.DBOptionsInterface>("setMaxBackgroundFlushes", "(I)Lorg/rocksdb/DBOptionsInterface;", arg0);
@@ -1567,7 +1567,7 @@ namespace Org.Rocksdb
         /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/DBOptionsInterface.html#maxBackgroundFlushes()"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public int MaxBackgroundFlushes()
         {
             return IExecuteWithSignature<int>("maxBackgroundFlushes", "()I");
@@ -2149,7 +2149,7 @@ namespace Org.Rocksdb
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <returns><typeparamref name="T"/></returns>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public T SetMaxBackgroundFlushes(int arg0)
         {
             return IExecuteWithSignature<T>("setMaxBackgroundFlushes", "(I)Lorg/rocksdb/DBOptionsInterface;", arg0);

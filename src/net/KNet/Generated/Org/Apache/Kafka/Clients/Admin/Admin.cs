@@ -563,7 +563,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Admin.ListClientMetricsResourcesOptions"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.ListClientMetricsResourcesResult"/></returns>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public Org.Apache.Kafka.Clients.Admin.ListClientMetricsResourcesResult ListClientMetricsResources(Org.Apache.Kafka.Clients.Admin.ListClientMetricsResourcesOptions arg0)
         {
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.ListClientMetricsResourcesResult>("listClientMetricsResources", "(Lorg/apache/kafka/clients/admin/ListClientMetricsResourcesOptions;)Lorg/apache/kafka/clients/admin/ListClientMetricsResourcesResult;", arg0);
@@ -593,7 +593,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Admin.ListConsumerGroupsOptions"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.ListConsumerGroupsResult"/></returns>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public Org.Apache.Kafka.Clients.Admin.ListConsumerGroupsResult ListConsumerGroups(Org.Apache.Kafka.Clients.Admin.ListConsumerGroupsOptions arg0)
         {
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.ListConsumerGroupsResult>("listConsumerGroups", "(Lorg/apache/kafka/clients/admin/ListConsumerGroupsOptions;)Lorg/apache/kafka/clients/admin/ListConsumerGroupsResult;", arg0);
@@ -1200,7 +1200,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/admin/Admin.html#listClientMetricsResources()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.ListClientMetricsResourcesResult"/></returns>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public Org.Apache.Kafka.Clients.Admin.ListClientMetricsResourcesResult ListClientMetricsResources()
         {
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.ListClientMetricsResourcesResult>("listClientMetricsResources", "()Lorg/apache/kafka/clients/admin/ListClientMetricsResourcesResult;");
@@ -1245,7 +1245,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/admin/Admin.html#listConsumerGroups()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.ListConsumerGroupsResult"/></returns>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public Org.Apache.Kafka.Clients.Admin.ListConsumerGroupsResult ListConsumerGroups()
         {
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.ListConsumerGroupsResult>("listConsumerGroups", "()Lorg/apache/kafka/clients/admin/ListConsumerGroupsResult;");
