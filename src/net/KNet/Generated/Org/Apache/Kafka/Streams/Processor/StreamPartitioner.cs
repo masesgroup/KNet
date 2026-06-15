@@ -48,7 +48,7 @@ namespace Org.Apache.Kafka.Streams.Processor
         }
 
         /// <summary>
-        /// <see langword="true"/> if the user has overridden <see cref="ListenerShallManageEvent(int, object)"/> in a subclass.
+        /// <see langword="true"/> if the user has overridden <see cref="MASES.JCOBridge.C2JBridge.JVMBridgeListener.ListenerShallManageEvent(int, object)"/> in a subclass.
         /// Cached at construction to avoid per-event reflection cost. When <see langword="true"/>, the first gate always
         /// returns <see langword="true"/> so that the second gate is reached regardless of whether individual event handlers are registered.
         /// </summary>
@@ -58,12 +58,11 @@ namespace Org.Apache.Kafka.Streams.Processor
         /// <remarks>
         /// Evaluated in order:
         /// <list type="number">
-        /// <item><see cref="ListenerShallManageEventIndex"/> delegate — index-based, no string conversion, lowest overhead.</item>
-        /// <item><see cref="ListenerShallManageEventName"/> delegate — name-based, resolves via <see cref="ConvertListenerEventIndexToEventName"/>.</item>
-        /// <item><see cref="ListenerShallManageEventHandlers"/> — returns <see langword="true"/> if the specific event has a registered delegate or a virtual method override.</item>
+        /// <item><see cref="MASES.JCOBridge.C2JBridge.JVMBridgeListener.ListenerShallManageEventIndex"/> delegate — index-based, no string conversion, lowest overhead.</item>
+        /// <item><see cref="MASES.JCOBridge.C2JBridge.JVMBridgeListener.ListenerShallManageEventName"/> delegate — name-based, resolves via <see cref="MASES.JCOBridge.C2JBridge.JVMBridgeListener.ConvertListenerEventIndexToEventName"/>.</item>
         /// <item><see cref="_hasStreamPartitionerSecondGate"/> — returns <see langword="true"/> if the second gate is overridden, ensuring all events reach it.</item>
-        /// <item><see cref="ListenerShallManageEventIndexWithData"/> delegate with data — index-based, no string conversion, lowest overhead.</item>
-        /// <item><see cref="ListenerShallManageEventNameWithData"/> delegate with data — name-based, resolves via <see cref="ConvertListenerEventIndexToEventName"/>.</item>
+        /// <item><see cref="MASES.JCOBridge.C2JBridge.JVMBridgeListener.ListenerShallManageEventIndexWithData"/> delegate with data — index-based, no string conversion, lowest overhead.</item>
+        /// <item><see cref="MASES.JCOBridge.C2JBridge.JVMBridgeListener.ListenerShallManageEventNameWithData"/> delegate with data — name-based, resolves via <see cref="MASES.JCOBridge.C2JBridge.JVMBridgeListener.ConvertListenerEventIndexToEventName"/>.</item>
         /// </list>
         /// </remarks>
         protected override bool ListenerShallManageEvent(int eventIndex)
@@ -96,8 +95,8 @@ namespace Org.Apache.Kafka.Streams.Processor
     /// When the JVM returns an instance of this listener type, JCOBridge needs a concrete CLR class to wrap it.
     /// A full listener implementation cannot be used in this scenario because it would require user-provided handler code
     /// that is not available at the point of construction. This class provides a minimal, handler-free wrapper:
-    /// <see cref="InitializeHandlers"/> is a no-op, <see cref="ListenerShallManageEvent(int)"/> unconditionally
-    /// returns <see langword="false"/> discarding all events immediately, and <see cref="AutoInit"/> is <see langword="false"/>
+    /// <see cref="InitializeHandlers"/> is a no-op, <see cref="MASES.JCOBridge.C2JBridge.JVMBridgeListener.ListenerShallManageEvent(int)"/> unconditionally
+    /// returns <see langword="false"/> discarding all events immediately, and <see cref="MASES.JCOBridge.C2JBridge.JVMBridgeListener.AutoInit"/> is <see langword="false"/>
     /// to prevent automatic JVM-side registration.
     /// <para>Do not use this class directly to register event handlers — use <see cref="StreamPartitioner"/> instead.</para>
     /// </remarks>
@@ -143,6 +142,7 @@ namespace Org.Apache.Kafka.Streams.Processor
     }
     #endregion
 
+
     #region StreamPartitioner<K, V> declaration
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/processor/StreamPartitioner.html"/>
@@ -168,7 +168,7 @@ namespace Org.Apache.Kafka.Streams.Processor
         }
 
         /// <summary>
-        /// <see langword="true"/> if the user has overridden <see cref="ListenerShallManageEvent(int, object)"/> in a subclass.
+        /// <see langword="true"/> if the user has overridden <see cref="MASES.JCOBridge.C2JBridge.JVMBridgeListener.ListenerShallManageEvent(int, object)"/> in a subclass.
         /// Cached at construction to avoid per-event reflection cost. When <see langword="true"/>, the first gate always
         /// returns <see langword="true"/> so that the second gate is reached regardless of whether individual event handlers are registered.
         /// </summary>
@@ -178,12 +178,11 @@ namespace Org.Apache.Kafka.Streams.Processor
         /// <remarks>
         /// Evaluated in order:
         /// <list type="number">
-        /// <item><see cref="ListenerShallManageEventIndex"/> delegate — index-based, no string conversion, lowest overhead.</item>
-        /// <item><see cref="ListenerShallManageEventName"/> delegate — name-based, resolves via <see cref="ConvertListenerEventIndexToEventName"/>.</item>
-        /// <item><see cref="ListenerShallManageEventHandlers"/> — returns <see langword="true"/> if the specific event has a registered delegate or a virtual method override.</item>
+        /// <item><see cref="MASES.JCOBridge.C2JBridge.JVMBridgeListener.ListenerShallManageEventIndex"/> delegate — index-based, no string conversion, lowest overhead.</item>
+        /// <item><see cref="MASES.JCOBridge.C2JBridge.JVMBridgeListener.ListenerShallManageEventName"/> delegate — name-based, resolves via <see cref="MASES.JCOBridge.C2JBridge.JVMBridgeListener.ConvertListenerEventIndexToEventName"/>.</item>
         /// <item><see cref="_hasStreamPartitionerSecondGate"/> — returns <see langword="true"/> if the second gate is overridden, ensuring all events reach it.</item>
-        /// <item><see cref="ListenerShallManageEventIndexWithData"/> delegate with data — index-based, no string conversion, lowest overhead.</item>
-        /// <item><see cref="ListenerShallManageEventNameWithData"/> delegate with data — name-based, resolves via <see cref="ConvertListenerEventIndexToEventName"/>.</item>
+        /// <item><see cref="MASES.JCOBridge.C2JBridge.JVMBridgeListener.ListenerShallManageEventIndexWithData"/> delegate with data — index-based, no string conversion, lowest overhead.</item>
+        /// <item><see cref="MASES.JCOBridge.C2JBridge.JVMBridgeListener.ListenerShallManageEventNameWithData"/> delegate with data — name-based, resolves via <see cref="MASES.JCOBridge.C2JBridge.JVMBridgeListener.ConvertListenerEventIndexToEventName"/>.</item>
         /// </list>
         /// </remarks>
         protected override bool ListenerShallManageEvent(int eventIndex)
@@ -216,8 +215,8 @@ namespace Org.Apache.Kafka.Streams.Processor
     /// When the JVM returns an instance of this listener type, JCOBridge needs a concrete CLR class to wrap it.
     /// A full listener implementation cannot be used in this scenario because it would require user-provided handler code
     /// that is not available at the point of construction. This class provides a minimal, handler-free wrapper:
-    /// <see cref="InitializeHandlers"/> is a no-op, <see cref="ListenerShallManageEvent(int)"/> unconditionally
-    /// returns <see langword="false"/> discarding all events immediately, and <see cref="AutoInit"/> is <see langword="false"/>
+    /// <see cref="InitializeHandlers"/> is a no-op, <see cref="MASES.JCOBridge.C2JBridge.JVMBridgeListener.ListenerShallManageEvent(int)"/> unconditionally
+    /// returns <see langword="false"/> discarding all events immediately, and <see cref="MASES.JCOBridge.C2JBridge.JVMBridgeListener.AutoInit"/> is <see langword="false"/>
     /// to prevent automatic JVM-side registration.
     /// <para>Do not use this class directly to register event handlers — use <see cref="StreamPartitioner"/> instead.</para>
     /// </remarks>
@@ -262,6 +261,7 @@ namespace Org.Apache.Kafka.Streams.Processor
         public override bool IsBridgeStatic => false;
     }
     #endregion
+
 
     #region StreamPartitioner implementation
     public partial class StreamPartitioner
@@ -317,7 +317,7 @@ namespace Org.Apache.Kafka.Streams.Processor
         /// </summary>
         /// <remarks>Set <see cref="OnPartitionDispose"/> when the event handler returns a JVM-backed object
         /// that is no longer needed after the call. The handler receives the return value and is responsible for calling
-        /// <see cref="IDisposable.Dispose"/> on it, releasing the underlying JVM global reference immediately
+        /// <see cref="global::System.IDisposable.Dispose"/> on it, releasing the underlying JVM global reference immediately
         /// instead of waiting for the .NET garbage collector to finalize it.
         /// If not set, the return value is not disposed automatically.</remarks>
         public global::System.Action<Java.Lang.Integer> OnPartitionDispose { get; set; } = null;
@@ -355,7 +355,7 @@ namespace Org.Apache.Kafka.Streams.Processor
         /// <param name="arg2"><see cref="object"/></param>
         /// <param name="arg3"><see cref="int"/></param>
         /// <returns><see cref="Java.Lang.Integer"/></returns>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public virtual Java.Lang.Integer Partition(Java.Lang.String arg0, object arg1, object arg2, int arg3)
         {
             return default;
@@ -388,7 +388,7 @@ namespace Org.Apache.Kafka.Streams.Processor
         /// </summary>
         /// <remarks>Set <see cref="OnPartitionsDispose"/> when the event handler returns a JVM-backed object
         /// that is no longer needed after the call. The handler receives the return value and is responsible for calling
-        /// <see cref="IDisposable.Dispose"/> on it, releasing the underlying JVM global reference immediately
+        /// <see cref="global::System.IDisposable.Dispose"/> on it, releasing the underlying JVM global reference immediately
         /// instead of waiting for the .NET garbage collector to finalize it.
         /// If not set, the return value is not disposed automatically.</remarks>
         public global::System.Action<Java.Util.Optional> OnPartitionsDispose { get; set; } = null;
@@ -470,7 +470,7 @@ namespace Org.Apache.Kafka.Streams.Processor
         /// <param name="arg2"><see cref="object"/></param>
         /// <param name="arg3"><see cref="int"/></param>
         /// <returns><see cref="Java.Lang.Integer"/></returns>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public override Java.Lang.Integer Partition(Java.Lang.String arg0, object arg1, object arg2, int arg3)
         {
             return IExecuteWithSignature<Java.Lang.Integer>("partition", "(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;I)Ljava/lang/Integer;", arg0, arg1, arg2, arg3);
@@ -570,7 +570,7 @@ namespace Org.Apache.Kafka.Streams.Processor
         /// </summary>
         /// <remarks>Set <see cref="OnPartitionDispose"/> when the event handler returns a JVM-backed object
         /// that is no longer needed after the call. The handler receives the return value and is responsible for calling
-        /// <see cref="IDisposable.Dispose"/> on it, releasing the underlying JVM global reference immediately
+        /// <see cref="global::System.IDisposable.Dispose"/> on it, releasing the underlying JVM global reference immediately
         /// instead of waiting for the .NET garbage collector to finalize it.
         /// If not set, the return value is not disposed automatically.</remarks>
         public global::System.Action<Java.Lang.Integer> OnPartitionDispose { get; set; } = null;
@@ -608,7 +608,7 @@ namespace Org.Apache.Kafka.Streams.Processor
         /// <param name="arg2"><typeparamref name="V"/></param>
         /// <param name="arg3"><see cref="int"/></param>
         /// <returns><see cref="Java.Lang.Integer"/></returns>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public virtual Java.Lang.Integer Partition(Java.Lang.String arg0, K arg1, V arg2, int arg3)
         {
             return default;
@@ -641,7 +641,7 @@ namespace Org.Apache.Kafka.Streams.Processor
         /// </summary>
         /// <remarks>Set <see cref="OnPartitionsDispose"/> when the event handler returns a JVM-backed object
         /// that is no longer needed after the call. The handler receives the return value and is responsible for calling
-        /// <see cref="IDisposable.Dispose"/> on it, releasing the underlying JVM global reference immediately
+        /// <see cref="global::System.IDisposable.Dispose"/> on it, releasing the underlying JVM global reference immediately
         /// instead of waiting for the .NET garbage collector to finalize it.
         /// If not set, the return value is not disposed automatically.</remarks>
         public global::System.Action<Java.Util.Optional<Java.Util.Set<Java.Lang.Integer>>> OnPartitionsDispose { get; set; } = null;
@@ -723,7 +723,7 @@ namespace Org.Apache.Kafka.Streams.Processor
         /// <param name="arg2"><typeparamref name="V"/></param>
         /// <param name="arg3"><see cref="int"/></param>
         /// <returns><see cref="Java.Lang.Integer"/></returns>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public override Java.Lang.Integer Partition(Java.Lang.String arg0, K arg1, V arg2, int arg3)
         {
             return IExecuteWithSignature<Java.Lang.Integer>("partition", "(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;I)Ljava/lang/Integer;", arg0, arg1, arg2, arg3);

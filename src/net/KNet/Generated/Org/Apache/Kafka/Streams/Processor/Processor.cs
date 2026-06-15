@@ -29,7 +29,7 @@ namespace Org.Apache.Kafka.Streams.Processor
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/processor/Processor.html"/>
     /// </summary>
-    [global::System.Obsolete()]
+    [global::System.Obsolete("Deprecated in JVM")]
     public partial class Processor : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Processor>
     {
         const string _bridgeClassName = "org.apache.kafka.streams.processor.Processor";
@@ -66,7 +66,7 @@ namespace Org.Apache.Kafka.Streams.Processor
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
-    [global::System.Obsolete()]
+    [global::System.Obsolete("Deprecated in JVM")]
     public partial class Processor<K, V> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Processor<K, V>>
     {
         const string _bridgeClassName = "org.apache.kafka.streams.processor.Processor";

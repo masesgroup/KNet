@@ -141,7 +141,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Admin.AlterConfigsOptions"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.AlterConfigsResult"/></returns>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public Org.Apache.Kafka.Clients.Admin.AlterConfigsResult AlterConfigs(Java.Util.Map<Org.Apache.Kafka.Common.Config.ConfigResource, Org.Apache.Kafka.Clients.Admin.Config> arg0, Org.Apache.Kafka.Clients.Admin.AlterConfigsOptions arg1)
         {
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.AlterConfigsResult>("alterConfigs", "(Ljava/util/Map;Lorg/apache/kafka/clients/admin/AlterConfigsOptions;)Lorg/apache/kafka/clients/admin/AlterConfigsResult;", arg0, arg1);

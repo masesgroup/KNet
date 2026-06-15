@@ -29,7 +29,7 @@ namespace Org.Apache.Kafka.Clients.Producer
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/producer/UniformStickyPartitioner.html"/>
     /// </summary>
-    [global::System.Obsolete()]
+    [global::System.Obsolete("Deprecated in JVM")]
     public partial class UniformStickyPartitioner : MASES.JCOBridge.C2JBridge.JVMBridgeBase<UniformStickyPartitioner>
     {
         const string _bridgeClassName = "org.apache.kafka.clients.producer.UniformStickyPartitioner";

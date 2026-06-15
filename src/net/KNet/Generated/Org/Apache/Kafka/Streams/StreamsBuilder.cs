@@ -283,7 +283,7 @@ namespace Org.Apache.Kafka.Streams
         /// <typeparam name="K"></typeparam>
         /// <typeparam name="V"></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.StreamsBuilder"/></returns>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public Org.Apache.Kafka.Streams.StreamsBuilder AddGlobalStore<K, V>(Org.Apache.Kafka.Streams.State.StoreBuilder arg0, Java.Lang.String arg1, Org.Apache.Kafka.Streams.Kstream.Consumed<K, V> arg2, Org.Apache.Kafka.Streams.Processor.ProcessorSupplier<K, V> arg3)
         {
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.StreamsBuilder>("addGlobalStore", "(Lorg/apache/kafka/streams/state/StoreBuilder;Ljava/lang/String;Lorg/apache/kafka/streams/kstream/Consumed;Lorg/apache/kafka/streams/processor/ProcessorSupplier;)Lorg/apache/kafka/streams/StreamsBuilder;", arg0, arg1, arg2, arg3);

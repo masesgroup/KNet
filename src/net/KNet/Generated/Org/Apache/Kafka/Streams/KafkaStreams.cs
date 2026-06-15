@@ -146,7 +146,7 @@ namespace Org.Apache.Kafka.Streams
             }
 
             /// <summary>
-            /// <see langword="true"/> if the user has overridden <see cref="ListenerShallManageEvent(int, object)"/> in a subclass.
+            /// <see langword="true"/> if the user has overridden <see cref="MASES.JCOBridge.C2JBridge.JVMBridgeListener.ListenerShallManageEvent(int, object)"/> in a subclass.
             /// Cached at construction to avoid per-event reflection cost. When <see langword="true"/>, the first gate always
             /// returns <see langword="true"/> so that the second gate is reached regardless of whether individual event handlers are registered.
             /// </summary>
@@ -156,12 +156,11 @@ namespace Org.Apache.Kafka.Streams
             /// <remarks>
             /// Evaluated in order:
             /// <list type="number">
-            /// <item><see cref="ListenerShallManageEventIndex"/> delegate — index-based, no string conversion, lowest overhead.</item>
-            /// <item><see cref="ListenerShallManageEventName"/> delegate — name-based, resolves via <see cref="ConvertListenerEventIndexToEventName"/>.</item>
-            /// <item><see cref="ListenerShallManageEventHandlers"/> — returns <see langword="true"/> if the specific event has a registered delegate or a virtual method override.</item>
+            /// <item><see cref="MASES.JCOBridge.C2JBridge.JVMBridgeListener.ListenerShallManageEventIndex"/> delegate — index-based, no string conversion, lowest overhead.</item>
+            /// <item><see cref="MASES.JCOBridge.C2JBridge.JVMBridgeListener.ListenerShallManageEventName"/> delegate — name-based, resolves via <see cref="MASES.JCOBridge.C2JBridge.JVMBridgeListener.ConvertListenerEventIndexToEventName"/>.</item>
             /// <item><see cref="_hasStateListenerSecondGate"/> — returns <see langword="true"/> if the second gate is overridden, ensuring all events reach it.</item>
-            /// <item><see cref="ListenerShallManageEventIndexWithData"/> delegate with data — index-based, no string conversion, lowest overhead.</item>
-            /// <item><see cref="ListenerShallManageEventNameWithData"/> delegate with data — name-based, resolves via <see cref="ConvertListenerEventIndexToEventName"/>.</item>
+            /// <item><see cref="MASES.JCOBridge.C2JBridge.JVMBridgeListener.ListenerShallManageEventIndexWithData"/> delegate with data — index-based, no string conversion, lowest overhead.</item>
+            /// <item><see cref="MASES.JCOBridge.C2JBridge.JVMBridgeListener.ListenerShallManageEventNameWithData"/> delegate with data — name-based, resolves via <see cref="MASES.JCOBridge.C2JBridge.JVMBridgeListener.ConvertListenerEventIndexToEventName"/>.</item>
             /// </list>
             /// </remarks>
             protected override bool ListenerShallManageEvent(int eventIndex)
@@ -194,8 +193,8 @@ namespace Org.Apache.Kafka.Streams
         /// When the JVM returns an instance of this listener type, JCOBridge needs a concrete CLR class to wrap it.
         /// A full listener implementation cannot be used in this scenario because it would require user-provided handler code
         /// that is not available at the point of construction. This class provides a minimal, handler-free wrapper:
-        /// <see cref="InitializeHandlers"/> is a no-op, <see cref="ListenerShallManageEvent(int)"/> unconditionally
-        /// returns <see langword="false"/> discarding all events immediately, and <see cref="AutoInit"/> is <see langword="false"/>
+        /// <see cref="InitializeHandlers"/> is a no-op, <see cref="MASES.JCOBridge.C2JBridge.JVMBridgeListener.ListenerShallManageEvent(int)"/> unconditionally
+        /// returns <see langword="false"/> discarding all events immediately, and <see cref="MASES.JCOBridge.C2JBridge.JVMBridgeListener.AutoInit"/> is <see langword="false"/>
         /// to prevent automatic JVM-side registration.
         /// <para>Do not use this class directly to register event handlers — use <see cref="StateListener"/> instead.</para>
         /// </remarks>
@@ -241,6 +240,7 @@ namespace Org.Apache.Kafka.Streams
         }
         #endregion
 
+    
     
     }
     #endregion
@@ -440,7 +440,7 @@ namespace Org.Apache.Kafka.Streams
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/KafkaStreams.html#allMetadata--"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Collection"/></returns>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public Java.Util.Collection<Org.Apache.Kafka.Streams.State.StreamsMetadata> AllMetadata()
         {
             return IExecuteWithSignature<Java.Util.Collection<Org.Apache.Kafka.Streams.State.StreamsMetadata>>("allMetadata", "()Ljava/util/Collection;");
@@ -450,7 +450,7 @@ namespace Org.Apache.Kafka.Streams
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Java.Util.Collection"/></returns>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public Java.Util.Collection<Org.Apache.Kafka.Streams.State.StreamsMetadata> AllMetadataForStore(Java.Lang.String arg0)
         {
             return IExecuteWithSignature<Java.Util.Collection<Org.Apache.Kafka.Streams.State.StreamsMetadata>>("allMetadataForStore", "(Ljava/lang/String;)Ljava/util/Collection;", arg0);
@@ -518,7 +518,7 @@ namespace Org.Apache.Kafka.Streams
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/KafkaStreams.html#localThreadsMetadata--"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Set"/></returns>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public Java.Util.Set<Org.Apache.Kafka.Streams.Processor.ThreadMetadata> LocalThreadsMetadata()
         {
             return IExecuteWithSignature<Java.Util.Set<Org.Apache.Kafka.Streams.Processor.ThreadMetadata>>("localThreadsMetadata", "()Ljava/util/Set;");
@@ -633,7 +633,7 @@ namespace Org.Apache.Kafka.Streams
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/KafkaStreams.html#setUncaughtExceptionHandler-java.lang.Thread.UncaughtExceptionHandler-"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.Thread.UncaughtExceptionHandler"/></param>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public void SetUncaughtExceptionHandler(Java.Lang.Thread.UncaughtExceptionHandler arg0)
         {
             IExecuteWithSignature("setUncaughtExceptionHandler", "(Ljava/lang/Thread$UncaughtExceptionHandler;)V", arg0);

@@ -718,17 +718,17 @@ namespace Org.Rocksdb
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/TickerType.html#STALL_L0_NUM_FILES_MICROS"/>
         /// </summary>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public static Org.Rocksdb.TickerType STALL_L0_NUM_FILES_MICROS { get { return SGetField<Org.Rocksdb.TickerType>(LocalBridgeClazz, "STALL_L0_NUM_FILES_MICROS"); } set { SSetField(LocalBridgeClazz, "STALL_L0_NUM_FILES_MICROS", value); } }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/TickerType.html#STALL_L0_SLOWDOWN_MICROS"/>
         /// </summary>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public static Org.Rocksdb.TickerType STALL_L0_SLOWDOWN_MICROS { get { return SGetField<Org.Rocksdb.TickerType>(LocalBridgeClazz, "STALL_L0_SLOWDOWN_MICROS"); } set { SSetField(LocalBridgeClazz, "STALL_L0_SLOWDOWN_MICROS", value); } }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/TickerType.html#STALL_MEMTABLE_COMPACTION_MICROS"/>
         /// </summary>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public static Org.Rocksdb.TickerType STALL_MEMTABLE_COMPACTION_MICROS { get { return SGetField<Org.Rocksdb.TickerType>(LocalBridgeClazz, "STALL_MEMTABLE_COMPACTION_MICROS"); } set { SSetField(LocalBridgeClazz, "STALL_MEMTABLE_COMPACTION_MICROS", value); } }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/TickerType.html#STALL_MICROS"/>

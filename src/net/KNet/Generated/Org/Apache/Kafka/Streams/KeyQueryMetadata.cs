@@ -104,7 +104,7 @@ namespace Org.Apache.Kafka.Streams
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/KeyQueryMetadata.html#getPartition--"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public int GetPartition()
         {
             return IExecuteWithSignature<int>("getPartition", "()I");
@@ -121,7 +121,7 @@ namespace Org.Apache.Kafka.Streams
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/KeyQueryMetadata.html#getStandbyHosts--"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Set"/></returns>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public Java.Util.Set<Org.Apache.Kafka.Streams.State.HostInfo> GetStandbyHosts()
         {
             return IExecuteWithSignature<Java.Util.Set<Org.Apache.Kafka.Streams.State.HostInfo>>("getStandbyHosts", "()Ljava/util/Set;");
@@ -146,7 +146,7 @@ namespace Org.Apache.Kafka.Streams
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/KeyQueryMetadata.html#getActiveHost--"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Streams.State.HostInfo"/></returns>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public Org.Apache.Kafka.Streams.State.HostInfo GetActiveHost()
         {
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.State.HostInfo>("getActiveHost", "()Lorg/apache/kafka/streams/state/HostInfo;");

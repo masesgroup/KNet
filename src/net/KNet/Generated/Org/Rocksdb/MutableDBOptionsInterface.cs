@@ -134,7 +134,7 @@ namespace Org.Rocksdb
         /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/MutableDBOptionsInterface.html#maxBackgroundCompactions--"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public int MaxBackgroundCompactions()
         {
             return IExecuteWithSignature<int>("maxBackgroundCompactions", "()I");
@@ -285,7 +285,7 @@ namespace Org.Rocksdb
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <returns><see cref="Org.Rocksdb.MutableDBOptionsInterface"/></returns>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public Org.Rocksdb.MutableDBOptionsInterface SetMaxBackgroundCompactions(int arg0)
         {
             return IExecuteWithSignature<Org.Rocksdb.MutableDBOptionsInterface>("setMaxBackgroundCompactions", "(I)Lorg/rocksdb/MutableDBOptionsInterface;", arg0);
@@ -444,7 +444,7 @@ namespace Org.Rocksdb
         /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/MutableDBOptionsInterface.html#maxBackgroundCompactions--"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public int MaxBackgroundCompactions()
         {
             return IExecuteWithSignature<int>("maxBackgroundCompactions", "()I");
@@ -595,7 +595,7 @@ namespace Org.Rocksdb
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <returns><typeparamref name="T"/></returns>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public T SetMaxBackgroundCompactions(int arg0)
         {
             return IExecuteWithSignature<T>("setMaxBackgroundCompactions", "(I)Lorg/rocksdb/MutableDBOptionsInterface;", arg0);

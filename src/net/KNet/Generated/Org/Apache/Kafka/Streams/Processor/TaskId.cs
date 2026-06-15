@@ -107,12 +107,12 @@ namespace Org.Apache.Kafka.Streams.Processor
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/processor/TaskId.html#partition"/>
         /// </summary>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public int partition { get { return IGetField<int>("partition"); } set { ISetField("partition", value); } }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/processor/TaskId.html#topicGroupId"/>
         /// </summary>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public int topicGroupId { get { return IGetField<int>("topicGroupId"); } set { ISetField("topicGroupId", value); } }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/processor/TaskId.html#NAMED_TOPOLOGY_DELIMITER"/>
@@ -138,7 +138,7 @@ namespace Org.Apache.Kafka.Streams.Processor
         /// <param name="arg1"><see cref="int"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Processor.TaskId"/></returns>
         /// <exception cref="Java.Io.IOException"/>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public static Org.Apache.Kafka.Streams.Processor.TaskId ReadFrom(Java.Io.DataInputStream arg0, int arg1)
         {
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.Processor.TaskId>(LocalBridgeClazz, "readFrom", "(Ljava/io/DataInputStream;I)Lorg/apache/kafka/streams/processor/TaskId;", arg0, arg1);
@@ -149,7 +149,7 @@ namespace Org.Apache.Kafka.Streams.Processor
         /// <param name="arg0"><see cref="Java.Nio.ByteBuffer"/></param>
         /// <param name="arg1"><see cref="int"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Processor.TaskId"/></returns>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public static Org.Apache.Kafka.Streams.Processor.TaskId ReadFrom(Java.Nio.ByteBuffer arg0, int arg1)
         {
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.Processor.TaskId>(LocalBridgeClazz, "readFrom", "(Ljava/nio/ByteBuffer;I)Lorg/apache/kafka/streams/processor/TaskId;", arg0, arg1);
@@ -206,7 +206,7 @@ namespace Org.Apache.Kafka.Streams.Processor
         /// <param name="arg0"><see cref="Java.Io.DataOutputStream"/></param>
         /// <param name="arg1"><see cref="int"/></param>
         /// <exception cref="Java.Io.IOException"/>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public void WriteTo(Java.Io.DataOutputStream arg0, int arg1)
         {
             IExecuteWithSignature("writeTo", "(Ljava/io/DataOutputStream;I)V", arg0, arg1);
@@ -216,7 +216,7 @@ namespace Org.Apache.Kafka.Streams.Processor
         /// </summary>
         /// <param name="arg0"><see cref="Java.Nio.ByteBuffer"/></param>
         /// <param name="arg1"><see cref="int"/></param>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public void WriteTo(Java.Nio.ByteBuffer arg0, int arg1)
         {
             IExecuteWithSignature("writeTo", "(Ljava/nio/ByteBuffer;I)V", arg0, arg1);

@@ -29,7 +29,7 @@ namespace Org.Apache.Kafka.Common.Security.Oauthbearer.Secured
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/common/security/oauthbearer/secured/OAuthBearerValidatorCallbackHandler.html"/>
     /// </summary>
-    [global::System.Obsolete()]
+    [global::System.Obsolete("Deprecated in JVM")]
     public partial class OAuthBearerValidatorCallbackHandler : Org.Apache.Kafka.Common.Security.Oauthbearer.OAuthBearerValidatorCallbackHandler
     {
         const string _bridgeClassName = "org.apache.kafka.common.security.oauthbearer.secured.OAuthBearerValidatorCallbackHandler";

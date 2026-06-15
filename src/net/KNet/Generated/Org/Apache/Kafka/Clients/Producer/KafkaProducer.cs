@@ -291,7 +291,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="Java.Lang.String"/></param>
         /// <exception cref="Org.Apache.Kafka.Common.Errors.ProducerFencedException"/>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public void SendOffsetsToTransaction(Java.Util.Map arg0, Java.Lang.String arg1)
         {
             IExecuteWithSignature("sendOffsetsToTransaction", "(Ljava/util/Map;Ljava/lang/String;)V", arg0, arg1);
@@ -518,7 +518,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="Java.Lang.String"/></param>
         /// <exception cref="Org.Apache.Kafka.Common.Errors.ProducerFencedException"/>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public void SendOffsetsToTransaction(Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Clients.Consumer.OffsetAndMetadata> arg0, Java.Lang.String arg1)
         {
             IExecuteWithSignature("sendOffsetsToTransaction", "(Ljava/util/Map;Ljava/lang/String;)V", arg0, arg1);

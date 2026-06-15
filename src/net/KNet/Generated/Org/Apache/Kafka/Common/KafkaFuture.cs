@@ -199,7 +199,7 @@ namespace Org.Apache.Kafka.Common
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/common/KafkaFuture.Function.html"/>
         /// </summary>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public partial class Function : Org.Apache.Kafka.Common.KafkaFuture.BaseFunction
         {
             const string _bridgeClassName = "org.apache.kafka.common.KafkaFuture$Function";
@@ -236,7 +236,7 @@ namespace Org.Apache.Kafka.Common
         /// </summary>
         /// <typeparam name="A"></typeparam>
         /// <typeparam name="B"></typeparam>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public partial class Function<A, B> : Org.Apache.Kafka.Common.KafkaFuture.BaseFunction<A, B>
         {
             const string _bridgeClassName = "org.apache.kafka.common.KafkaFuture$Function";

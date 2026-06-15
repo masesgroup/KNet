@@ -29,7 +29,7 @@ namespace Org.Apache.Kafka.Common.Errors
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/common/errors/NotLeaderForPartitionException.html"/>
     /// </summary>
-    [global::System.Obsolete()]
+    [global::System.Obsolete("Deprecated in JVM")]
     public partial class NotLeaderForPartitionException : Org.Apache.Kafka.Common.Errors.InvalidMetadataException
     {
         /// <inheritdoc cref="global::System.Exception()"/>

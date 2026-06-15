@@ -158,7 +158,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <param name="arg9"><see cref="object"/></param>
         /// <param name="arg10"><see cref="Org.Apache.Kafka.Common.Header.Headers"/></param>
         /// <param name="arg11"><see cref="Java.Util.Optional"/></param>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public ConsumerRecord(Java.Lang.String arg0, int arg1, long arg2, long arg3, Org.Apache.Kafka.Common.Record.TimestampType arg4, Java.Lang.Long arg5, int arg6, int arg7, object arg8, object arg9, Org.Apache.Kafka.Common.Header.Headers arg10, Java.Util.Optional arg11) : base(JVMBridgeBase.InitializerInstance)
         {
             InvokeInitializer(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11);
@@ -184,7 +184,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <param name="arg8"><see cref="object"/></param>
         /// <param name="arg9"><see cref="object"/></param>
         /// <param name="arg10"><see cref="Org.Apache.Kafka.Common.Header.Headers"/></param>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public ConsumerRecord(Java.Lang.String arg0, int arg1, long arg2, long arg3, Org.Apache.Kafka.Common.Record.TimestampType arg4, Java.Lang.Long arg5, int arg6, int arg7, object arg8, object arg9, Org.Apache.Kafka.Common.Header.Headers arg10) : base(JVMBridgeBase.InitializerInstance)
         {
             InvokeInitializer(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10);
@@ -209,7 +209,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <param name="arg7"><see cref="int"/></param>
         /// <param name="arg8"><see cref="object"/></param>
         /// <param name="arg9"><see cref="object"/></param>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public ConsumerRecord(Java.Lang.String arg0, int arg1, long arg2, long arg3, Org.Apache.Kafka.Common.Record.TimestampType arg4, long arg5, int arg6, int arg7, object arg8, object arg9) : base(JVMBridgeBase.InitializerInstance)
         {
             InvokeInitializer(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
@@ -232,7 +232,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerRecord.html#NULL_CHECKSUM"/>
         /// </summary>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public static int NULL_CHECKSUM { get { return SGetField<int>(LocalBridgeClazz, "NULL_CHECKSUM"); } set { SSetField(LocalBridgeClazz, "NULL_CHECKSUM", value); } }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerRecord.html#NULL_SIZE"/>
@@ -412,7 +412,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <param name="arg9"><typeparamref name="V"/></param>
         /// <param name="arg10"><see cref="Org.Apache.Kafka.Common.Header.Headers"/></param>
         /// <param name="arg11"><see cref="Java.Util.Optional"/></param>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public ConsumerRecord(Java.Lang.String arg0, int arg1, long arg2, long arg3, Org.Apache.Kafka.Common.Record.TimestampType arg4, Java.Lang.Long arg5, int arg6, int arg7, K arg8, V arg9, Org.Apache.Kafka.Common.Header.Headers arg10, Java.Util.Optional<Java.Lang.Integer> arg11) : base(JVMBridgeBase.InitializerInstance)
         {
             InvokeInitializer(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11);
@@ -438,7 +438,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <param name="arg8"><typeparamref name="K"/></param>
         /// <param name="arg9"><typeparamref name="V"/></param>
         /// <param name="arg10"><see cref="Org.Apache.Kafka.Common.Header.Headers"/></param>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public ConsumerRecord(Java.Lang.String arg0, int arg1, long arg2, long arg3, Org.Apache.Kafka.Common.Record.TimestampType arg4, Java.Lang.Long arg5, int arg6, int arg7, K arg8, V arg9, Org.Apache.Kafka.Common.Header.Headers arg10) : base(JVMBridgeBase.InitializerInstance)
         {
             InvokeInitializer(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10);
@@ -463,7 +463,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <param name="arg7"><see cref="int"/></param>
         /// <param name="arg8"><typeparamref name="K"/></param>
         /// <param name="arg9"><typeparamref name="V"/></param>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public ConsumerRecord(Java.Lang.String arg0, int arg1, long arg2, long arg3, Org.Apache.Kafka.Common.Record.TimestampType arg4, long arg5, int arg6, int arg7, K arg8, V arg9) : base(JVMBridgeBase.InitializerInstance)
         {
             InvokeInitializer(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9);
@@ -490,7 +490,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerRecord.html#NULL_CHECKSUM"/>
         /// </summary>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public static int NULL_CHECKSUM { get { return SGetField<int>(LocalBridgeClazz, "NULL_CHECKSUM"); } set { SSetField(LocalBridgeClazz, "NULL_CHECKSUM", value); } }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerRecord.html#NULL_SIZE"/>

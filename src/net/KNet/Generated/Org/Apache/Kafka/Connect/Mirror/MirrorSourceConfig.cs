@@ -241,7 +241,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.2/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#USE_INCREMENTAL_ALTER_CONFIGS"/>
         /// </summary>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public static Java.Lang.String USE_INCREMENTAL_ALTER_CONFIGS { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "USE_INCREMENTAL_ALTER_CONFIGS"); } set { SSetField(LocalBridgeClazz, "USE_INCREMENTAL_ALTER_CONFIGS", value); } }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/3.9.2/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#CONSUMER_POLL_TIMEOUT_MILLIS_DEFAULT"/>

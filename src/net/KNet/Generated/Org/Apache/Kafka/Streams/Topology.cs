@@ -155,7 +155,7 @@ namespace Org.Apache.Kafka.Streams
         /// <typeparam name="K"></typeparam>
         /// <typeparam name="V"></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Topology"/></returns>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public Org.Apache.Kafka.Streams.Topology AddGlobalStore<K, V>(Org.Apache.Kafka.Streams.State.StoreBuilder arg0, Java.Lang.String arg1, Org.Apache.Kafka.Common.Serialization.Deserializer<K> arg2, Org.Apache.Kafka.Common.Serialization.Deserializer<V> arg3, Java.Lang.String arg4, Java.Lang.String arg5, Org.Apache.Kafka.Streams.Processor.ProcessorSupplier<K, V> arg6)
         {
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Topology>("addGlobalStore", "(Lorg/apache/kafka/streams/state/StoreBuilder;Ljava/lang/String;Lorg/apache/kafka/common/serialization/Deserializer;Lorg/apache/kafka/common/serialization/Deserializer;Ljava/lang/String;Ljava/lang/String;Lorg/apache/kafka/streams/processor/ProcessorSupplier;)Lorg/apache/kafka/streams/Topology;", arg0, arg1, arg2, arg3, arg4, arg5, arg6);
@@ -174,7 +174,7 @@ namespace Org.Apache.Kafka.Streams
         /// <typeparam name="K"></typeparam>
         /// <typeparam name="V"></typeparam>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Topology"/></returns>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public Org.Apache.Kafka.Streams.Topology AddGlobalStore<K, V>(Org.Apache.Kafka.Streams.State.StoreBuilder arg0, Java.Lang.String arg1, Org.Apache.Kafka.Streams.Processor.TimestampExtractor arg2, Org.Apache.Kafka.Common.Serialization.Deserializer<K> arg3, Org.Apache.Kafka.Common.Serialization.Deserializer<V> arg4, Java.Lang.String arg5, Java.Lang.String arg6, Org.Apache.Kafka.Streams.Processor.ProcessorSupplier<K, V> arg7)
         {
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Topology>("addGlobalStore", "(Lorg/apache/kafka/streams/state/StoreBuilder;Ljava/lang/String;Lorg/apache/kafka/streams/processor/TimestampExtractor;Lorg/apache/kafka/common/serialization/Deserializer;Lorg/apache/kafka/common/serialization/Deserializer;Ljava/lang/String;Ljava/lang/String;Lorg/apache/kafka/streams/processor/ProcessorSupplier;)Lorg/apache/kafka/streams/Topology;", arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
@@ -297,7 +297,7 @@ namespace Org.Apache.Kafka.Streams
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Processor.ProcessorSupplier"/></param>
         /// <param name="arg2"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Topology"/></returns>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public Org.Apache.Kafka.Streams.Topology AddProcessor(Java.Lang.String arg0, Org.Apache.Kafka.Streams.Processor.ProcessorSupplier arg1, params Java.Lang.String[] arg2)
         {
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Topology>("addProcessor", "(Ljava/lang/String;Lorg/apache/kafka/streams/processor/ProcessorSupplier;[Ljava/lang/String;)Lorg/apache/kafka/streams/Topology;", MASES.JNet.Specific.Extensions.JNetCoreExtensions.VarArgRebuild(arg2, arg0, arg1));
