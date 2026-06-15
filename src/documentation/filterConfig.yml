@@ -1,4 +1,13 @@
 apiRules:
+- include:
+    uidRegex: ^Java\.
+    type: Member
+- include:
+    uidRegex: ^Javax\.
+    type: Member
 - exclude:
     uidRegex: ^MASES\.JCOBridge\.
+    type: Member
+- exclude:
+    uidRegex: ^System\.Dynamic\.DynamicObject
     type: Member
