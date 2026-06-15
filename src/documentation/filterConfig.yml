@@ -1,8 +1,8 @@
 apiRules:
-- include:
+- exclude:
     uidRegex: ^Java\.
     type: Member
-- include:
+- exclude:
     uidRegex: ^Javax\.
     type: Member
 - exclude:
