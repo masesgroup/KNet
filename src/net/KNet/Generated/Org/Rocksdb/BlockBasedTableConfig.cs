@@ -129,7 +129,7 @@ namespace Org.Rocksdb
         /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/BlockBasedTableConfig.html#hashIndexAllowCollision()"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public bool HashIndexAllowCollision()
         {
             return IExecuteWithSignature<bool>("hashIndexAllowCollision", "()Z");
@@ -226,7 +226,7 @@ namespace Org.Rocksdb
         /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/BlockBasedTableConfig.html#cacheNumShardBits()"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public int CacheNumShardBits()
         {
             return IExecuteWithSignature<int>("cacheNumShardBits", "()I");
@@ -259,7 +259,7 @@ namespace Org.Rocksdb
         /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/BlockBasedTableConfig.html#blockCacheSize()"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public long BlockCacheSize()
         {
             return IExecuteWithSignature<long>("blockCacheSize", "()J");
@@ -303,7 +303,7 @@ namespace Org.Rocksdb
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <returns><see cref="Org.Rocksdb.BlockBasedTableConfig"/></returns>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public Org.Rocksdb.BlockBasedTableConfig SetBlockCacheSize(long arg0)
         {
             return IExecuteWithSignature<Org.Rocksdb.BlockBasedTableConfig>("setBlockCacheSize", "(J)Lorg/rocksdb/BlockBasedTableConfig;", arg0);
@@ -358,7 +358,7 @@ namespace Org.Rocksdb
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <returns><see cref="Org.Rocksdb.BlockBasedTableConfig"/></returns>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public Org.Rocksdb.BlockBasedTableConfig SetCacheNumShardBits(int arg0)
         {
             return IExecuteWithSignature<Org.Rocksdb.BlockBasedTableConfig>("setCacheNumShardBits", "(I)Lorg/rocksdb/BlockBasedTableConfig;", arg0);
@@ -404,7 +404,7 @@ namespace Org.Rocksdb
         /// </summary>
         /// <param name="arg0"><see cref="Org.Rocksdb.Filter"/></param>
         /// <returns><see cref="Org.Rocksdb.BlockBasedTableConfig"/></returns>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public Org.Rocksdb.BlockBasedTableConfig SetFilter(Org.Rocksdb.Filter arg0)
         {
             return IExecuteWithSignature<Org.Rocksdb.BlockBasedTableConfig>("setFilter", "(Lorg/rocksdb/Filter;)Lorg/rocksdb/BlockBasedTableConfig;", arg0);
@@ -432,7 +432,7 @@ namespace Org.Rocksdb
         /// </summary>
         /// <param name="arg0"><see cref="bool"/></param>
         /// <returns><see cref="Org.Rocksdb.BlockBasedTableConfig"/></returns>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public Org.Rocksdb.BlockBasedTableConfig SetHashIndexAllowCollision(bool arg0)
         {
             return IExecuteWithSignature<Org.Rocksdb.BlockBasedTableConfig>("setHashIndexAllowCollision", "(Z)Lorg/rocksdb/BlockBasedTableConfig;", arg0);

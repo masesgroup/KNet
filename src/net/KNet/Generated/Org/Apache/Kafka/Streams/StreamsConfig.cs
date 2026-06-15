@@ -123,7 +123,7 @@ namespace Org.Apache.Kafka.Streams
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/StreamsConfig.html#DUMMY_THREAD_INDEX"/>
         /// </summary>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public static int DUMMY_THREAD_INDEX { get { return SGetField<int>(LocalBridgeClazz, "DUMMY_THREAD_INDEX"); } set { SSetField(LocalBridgeClazz, "DUMMY_THREAD_INDEX", value); } }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/StreamsConfig.html#MAX_RACK_AWARE_ASSIGNMENT_TAG_KEY_LENGTH"/>
@@ -172,7 +172,7 @@ namespace Org.Apache.Kafka.Streams
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/StreamsConfig.html#BUFFERED_RECORDS_PER_PARTITION_DOC"/>
         /// </summary>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public static Java.Lang.String BUFFERED_RECORDS_PER_PARTITION_DOC { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "BUFFERED_RECORDS_PER_PARTITION_DOC"); } set { SSetField(LocalBridgeClazz, "BUFFERED_RECORDS_PER_PARTITION_DOC", value); } }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/StreamsConfig.html#BUILT_IN_METRICS_VERSION_CONFIG"/>
@@ -181,12 +181,12 @@ namespace Org.Apache.Kafka.Streams
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/StreamsConfig.html#CACHE_MAX_BYTES_BUFFERING_CONFIG"/>
         /// </summary>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public static Java.Lang.String CACHE_MAX_BYTES_BUFFERING_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "CACHE_MAX_BYTES_BUFFERING_CONFIG"); } set { SSetField(LocalBridgeClazz, "CACHE_MAX_BYTES_BUFFERING_CONFIG", value); } }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/StreamsConfig.html#CACHE_MAX_BYTES_BUFFERING_DOC"/>
         /// </summary>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public static Java.Lang.String CACHE_MAX_BYTES_BUFFERING_DOC { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "CACHE_MAX_BYTES_BUFFERING_DOC"); } set { SSetField(LocalBridgeClazz, "CACHE_MAX_BYTES_BUFFERING_DOC", value); } }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/StreamsConfig.html#CLIENT_ID_CONFIG"/>
@@ -215,32 +215,32 @@ namespace Org.Apache.Kafka.Streams
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/StreamsConfig.html#DEFAULT_CLIENT_SUPPLIER_DOC"/>
         /// </summary>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public static Java.Lang.String DEFAULT_CLIENT_SUPPLIER_DOC { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "DEFAULT_CLIENT_SUPPLIER_DOC"); } set { SSetField(LocalBridgeClazz, "DEFAULT_CLIENT_SUPPLIER_DOC", value); } }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/StreamsConfig.html#DEFAULT_DESERIALIZATION_EXCEPTION_HANDLER_CLASS_CONFIG"/>
         /// </summary>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public static Java.Lang.String DEFAULT_DESERIALIZATION_EXCEPTION_HANDLER_CLASS_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "DEFAULT_DESERIALIZATION_EXCEPTION_HANDLER_CLASS_CONFIG"); } set { SSetField(LocalBridgeClazz, "DEFAULT_DESERIALIZATION_EXCEPTION_HANDLER_CLASS_CONFIG", value); } }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/StreamsConfig.html#DEFAULT_DESERIALIZATION_EXCEPTION_HANDLER_CLASS_DOC"/>
         /// </summary>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public static Java.Lang.String DEFAULT_DESERIALIZATION_EXCEPTION_HANDLER_CLASS_DOC { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "DEFAULT_DESERIALIZATION_EXCEPTION_HANDLER_CLASS_DOC"); } set { SSetField(LocalBridgeClazz, "DEFAULT_DESERIALIZATION_EXCEPTION_HANDLER_CLASS_DOC", value); } }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/StreamsConfig.html#DEFAULT_DSL_STORE"/>
         /// </summary>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public static Java.Lang.String DEFAULT_DSL_STORE { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "DEFAULT_DSL_STORE"); } set { SSetField(LocalBridgeClazz, "DEFAULT_DSL_STORE", value); } }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/StreamsConfig.html#DEFAULT_DSL_STORE_CONFIG"/>
         /// </summary>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public static Java.Lang.String DEFAULT_DSL_STORE_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "DEFAULT_DSL_STORE_CONFIG"); } set { SSetField(LocalBridgeClazz, "DEFAULT_DSL_STORE_CONFIG", value); } }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/StreamsConfig.html#DEFAULT_DSL_STORE_DOC"/>
         /// </summary>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public static Java.Lang.String DEFAULT_DSL_STORE_DOC { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "DEFAULT_DSL_STORE_DOC"); } set { SSetField(LocalBridgeClazz, "DEFAULT_DSL_STORE_DOC", value); } }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/StreamsConfig.html#DEFAULT_GROUP_PROTOCOL"/>
@@ -253,7 +253,7 @@ namespace Org.Apache.Kafka.Streams
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/StreamsConfig.html#DEFAULT_PRODUCTION_EXCEPTION_HANDLER_CLASS_CONFIG"/>
         /// </summary>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public static Java.Lang.String DEFAULT_PRODUCTION_EXCEPTION_HANDLER_CLASS_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "DEFAULT_PRODUCTION_EXCEPTION_HANDLER_CLASS_CONFIG"); } set { SSetField(LocalBridgeClazz, "DEFAULT_PRODUCTION_EXCEPTION_HANDLER_CLASS_CONFIG", value); } }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/StreamsConfig.html#DEFAULT_TIMESTAMP_EXTRACTOR_CLASS_CONFIG"/>
@@ -262,7 +262,7 @@ namespace Org.Apache.Kafka.Streams
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/StreamsConfig.html#DEFAULT_TIMESTAMP_EXTRACTOR_CLASS_DOC"/>
         /// </summary>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public static Java.Lang.String DEFAULT_TIMESTAMP_EXTRACTOR_CLASS_DOC { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "DEFAULT_TIMESTAMP_EXTRACTOR_CLASS_DOC"); } set { SSetField(LocalBridgeClazz, "DEFAULT_TIMESTAMP_EXTRACTOR_CLASS_DOC", value); } }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/StreamsConfig.html#DEFAULT_VALUE_SERDE_CLASS_CONFIG"/>
@@ -283,7 +283,7 @@ namespace Org.Apache.Kafka.Streams
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/StreamsConfig.html#ENABLE_METRICS_PUSH_DOC"/>
         /// </summary>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public static Java.Lang.String ENABLE_METRICS_PUSH_DOC { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "ENABLE_METRICS_PUSH_DOC"); } set { SSetField(LocalBridgeClazz, "ENABLE_METRICS_PUSH_DOC", value); } }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/StreamsConfig.html#ENSURE_EXPLICIT_INTERNAL_RESOURCE_NAMING_CONFIG"/>
@@ -308,7 +308,7 @@ namespace Org.Apache.Kafka.Streams
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/StreamsConfig.html#IN_MEMORY"/>
         /// </summary>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public static Java.Lang.String IN_MEMORY { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "IN_MEMORY"); } set { SSetField(LocalBridgeClazz, "IN_MEMORY", value); } }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/StreamsConfig.html#LOG_SUMMARY_INTERVAL_MS_CONFIG"/>
@@ -325,7 +325,7 @@ namespace Org.Apache.Kafka.Streams
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/StreamsConfig.html#MAX_TASK_IDLE_MS_DOC"/>
         /// </summary>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public static Java.Lang.String MAX_TASK_IDLE_MS_DOC { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "MAX_TASK_IDLE_MS_DOC"); } set { SSetField(LocalBridgeClazz, "MAX_TASK_IDLE_MS_DOC", value); } }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/StreamsConfig.html#MAX_WARMUP_REPLICAS_CONFIG"/>
@@ -390,7 +390,7 @@ namespace Org.Apache.Kafka.Streams
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/StreamsConfig.html#PROCESSING_EXCEPTION_HANDLER_CLASS_DOC"/>
         /// </summary>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public static Java.Lang.String PROCESSING_EXCEPTION_HANDLER_CLASS_DOC { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "PROCESSING_EXCEPTION_HANDLER_CLASS_DOC"); } set { SSetField(LocalBridgeClazz, "PROCESSING_EXCEPTION_HANDLER_CLASS_DOC", value); } }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/StreamsConfig.html#PROCESSING_GUARANTEE_CONFIG"/>
@@ -415,7 +415,7 @@ namespace Org.Apache.Kafka.Streams
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/StreamsConfig.html#RACK_AWARE_ASSIGNMENT_NON_OVERLAP_COST_DOC"/>
         /// </summary>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public static Java.Lang.String RACK_AWARE_ASSIGNMENT_NON_OVERLAP_COST_DOC { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "RACK_AWARE_ASSIGNMENT_NON_OVERLAP_COST_DOC"); } set { SSetField(LocalBridgeClazz, "RACK_AWARE_ASSIGNMENT_NON_OVERLAP_COST_DOC", value); } }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/StreamsConfig.html#RACK_AWARE_ASSIGNMENT_STRATEGY_BALANCE_SUBTOPOLOGY"/>
@@ -428,7 +428,7 @@ namespace Org.Apache.Kafka.Streams
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/StreamsConfig.html#RACK_AWARE_ASSIGNMENT_STRATEGY_DOC"/>
         /// </summary>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public static Java.Lang.String RACK_AWARE_ASSIGNMENT_STRATEGY_DOC { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "RACK_AWARE_ASSIGNMENT_STRATEGY_DOC"); } set { SSetField(LocalBridgeClazz, "RACK_AWARE_ASSIGNMENT_STRATEGY_DOC", value); } }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/StreamsConfig.html#RACK_AWARE_ASSIGNMENT_STRATEGY_MIN_TRAFFIC"/>
@@ -449,7 +449,7 @@ namespace Org.Apache.Kafka.Streams
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/StreamsConfig.html#RACK_AWARE_ASSIGNMENT_TRAFFIC_COST_DOC"/>
         /// </summary>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public static Java.Lang.String RACK_AWARE_ASSIGNMENT_TRAFFIC_COST_DOC { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "RACK_AWARE_ASSIGNMENT_TRAFFIC_COST_DOC"); } set { SSetField(LocalBridgeClazz, "RACK_AWARE_ASSIGNMENT_TRAFFIC_COST_DOC", value); } }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/StreamsConfig.html#RECEIVE_BUFFER_CONFIG"/>
@@ -490,7 +490,7 @@ namespace Org.Apache.Kafka.Streams
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/StreamsConfig.html#ROCKS_DB"/>
         /// </summary>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public static Java.Lang.String ROCKS_DB { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "ROCKS_DB"); } set { SSetField(LocalBridgeClazz, "ROCKS_DB", value); } }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/StreamsConfig.html#ROCKSDB_CONFIG_SETTER_CLASS_CONFIG"/>
@@ -523,7 +523,7 @@ namespace Org.Apache.Kafka.Streams
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/StreamsConfig.html#STATESTORE_CACHE_MAX_BYTES_DOC"/>
         /// </summary>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public static Java.Lang.String STATESTORE_CACHE_MAX_BYTES_DOC { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "STATESTORE_CACHE_MAX_BYTES_DOC"); } set { SSetField(LocalBridgeClazz, "STATESTORE_CACHE_MAX_BYTES_DOC", value); } }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/StreamsConfig.html#TASK_ASSIGNOR_CLASS_CONFIG"/>
@@ -536,7 +536,7 @@ namespace Org.Apache.Kafka.Streams
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/StreamsConfig.html#TASK_TIMEOUT_MS_DOC"/>
         /// </summary>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public static Java.Lang.String TASK_TIMEOUT_MS_DOC { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "TASK_TIMEOUT_MS_DOC"); } set { SSetField(LocalBridgeClazz, "TASK_TIMEOUT_MS_DOC", value); } }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/StreamsConfig.html#TOPIC_PREFIX"/>
@@ -621,7 +621,7 @@ namespace Org.Apache.Kafka.Streams
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/StreamsConfig.html#WINDOW_SIZE_MS_CONFIG"/>
         /// </summary>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public static Java.Lang.String WINDOW_SIZE_MS_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "WINDOW_SIZE_MS_CONFIG"); } set { SSetField(LocalBridgeClazz, "WINDOW_SIZE_MS_CONFIG", value); } }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/StreamsConfig.html#WINDOW_STORE_CHANGE_LOG_ADDITIONAL_RETENTION_MS_CONFIG"/>
@@ -630,7 +630,7 @@ namespace Org.Apache.Kafka.Streams
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/StreamsConfig.html#WINDOWED_INNER_CLASS_SERDE"/>
         /// </summary>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public static Java.Lang.String WINDOWED_INNER_CLASS_SERDE { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "WINDOWED_INNER_CLASS_SERDE"); } set { SSetField(LocalBridgeClazz, "WINDOWED_INNER_CLASS_SERDE", value); } }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/StreamsConfig.html#MAX_TASK_IDLE_MS_DISABLED"/>
@@ -838,7 +838,7 @@ namespace Org.Apache.Kafka.Streams
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/StreamsConfig.html#defaultDeserializationExceptionHandler()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Errors.DeserializationExceptionHandler"/></returns>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public Org.Apache.Kafka.Streams.Errors.DeserializationExceptionHandler DefaultDeserializationExceptionHandler()
         {
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Errors.DeserializationExceptionHandler>("defaultDeserializationExceptionHandler", "()Lorg/apache/kafka/streams/errors/DeserializationExceptionHandler;");
@@ -863,7 +863,7 @@ namespace Org.Apache.Kafka.Streams
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/StreamsConfig.html#defaultProductionExceptionHandler()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Errors.ProductionExceptionHandler"/></returns>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public Org.Apache.Kafka.Streams.Errors.ProductionExceptionHandler DefaultProductionExceptionHandler()
         {
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Errors.ProductionExceptionHandler>("defaultProductionExceptionHandler", "()Lorg/apache/kafka/streams/errors/ProductionExceptionHandler;");

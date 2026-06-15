@@ -275,7 +275,7 @@ namespace Org.Rocksdb
         /// <param name="arg2"><see cref="byte"/></param>
         /// <returns><see cref="byte"/></returns>
         /// <exception cref="Org.Rocksdb.RocksDBException"/>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public byte[] Get(Org.Rocksdb.ColumnFamilyHandle arg0, Org.Rocksdb.ReadOptions arg1, byte[] arg2)
         {
             return IExecuteWithSignatureArray<byte>("get", "(Lorg/rocksdb/ColumnFamilyHandle;Lorg/rocksdb/ReadOptions;[B)[B", arg0, arg1, arg2);
@@ -349,7 +349,7 @@ namespace Org.Rocksdb
         /// <param name="arg1"><see cref="byte"/></param>
         /// <returns><see cref="byte"/></returns>
         /// <exception cref="Org.Rocksdb.RocksDBException"/>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public byte[] MultiGet(Org.Rocksdb.ReadOptions arg0, byte[][] arg1)
         {
             return IExecuteWithSignatureArray<byte>("multiGet", "(Lorg/rocksdb/ReadOptions;[[B)[[B", arg0, arg1);
@@ -362,7 +362,7 @@ namespace Org.Rocksdb
         /// <param name="arg2"><see cref="byte"/></param>
         /// <returns><see cref="byte"/></returns>
         /// <exception cref="Org.Rocksdb.RocksDBException"/>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public byte[] MultiGet(Org.Rocksdb.ReadOptions arg0, Java.Util.List<Org.Rocksdb.ColumnFamilyHandle> arg1, byte[][] arg2)
         {
             return IExecuteWithSignatureArray<byte>("multiGet", "(Lorg/rocksdb/ReadOptions;Ljava/util/List;[[B)[[B", arg0, arg1, arg2);
@@ -374,7 +374,7 @@ namespace Org.Rocksdb
         /// <param name="arg1"><see cref="byte"/></param>
         /// <returns><see cref="byte"/></returns>
         /// <exception cref="Org.Rocksdb.RocksDBException"/>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public byte[] MultiGetForUpdate(Org.Rocksdb.ReadOptions arg0, byte[][] arg1)
         {
             return IExecuteWithSignatureArray<byte>("multiGetForUpdate", "(Lorg/rocksdb/ReadOptions;[[B)[[B", arg0, arg1);
@@ -387,7 +387,7 @@ namespace Org.Rocksdb
         /// <param name="arg2"><see cref="byte"/></param>
         /// <returns><see cref="byte"/></returns>
         /// <exception cref="Org.Rocksdb.RocksDBException"/>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public byte[] MultiGetForUpdate(Org.Rocksdb.ReadOptions arg0, Java.Util.List<Org.Rocksdb.ColumnFamilyHandle> arg1, byte[][] arg2)
         {
             return IExecuteWithSignatureArray<byte>("multiGetForUpdate", "(Lorg/rocksdb/ReadOptions;Ljava/util/List;[[B)[[B", arg0, arg1, arg2);

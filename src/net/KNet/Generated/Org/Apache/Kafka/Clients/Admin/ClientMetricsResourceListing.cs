@@ -29,7 +29,7 @@ namespace Org.Apache.Kafka.Clients.Admin
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/admin/ClientMetricsResourceListing.html"/>
     /// </summary>
-    [global::System.Obsolete()]
+    [global::System.Obsolete("Deprecated in JVM")]
     public partial class ClientMetricsResourceListing : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ClientMetricsResourceListing>
     {
         const string _bridgeClassName = "org.apache.kafka.clients.admin.ClientMetricsResourceListing";

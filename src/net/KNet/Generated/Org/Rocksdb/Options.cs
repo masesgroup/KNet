@@ -616,7 +616,7 @@ namespace Org.Rocksdb
         /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/Options.html#maxBackgroundCompactions()"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public int MaxBackgroundCompactions()
         {
             return IExecuteWithSignature<int>("maxBackgroundCompactions", "()I");
@@ -625,7 +625,7 @@ namespace Org.Rocksdb
         /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/Options.html#maxBackgroundFlushes()"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public int MaxBackgroundFlushes()
         {
             return IExecuteWithSignature<int>("maxBackgroundFlushes", "()I");
@@ -2053,7 +2053,7 @@ namespace Org.Rocksdb
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <returns><see cref="Org.Rocksdb.DBOptionsInterface"/></returns>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public Org.Rocksdb.DBOptionsInterface SetMaxBackgroundFlushes(int arg0)
         {
             return IExecuteWithSignature<Org.Rocksdb.DBOptionsInterface>("setMaxBackgroundFlushes", "(I)Lorg/rocksdb/DBOptionsInterface;", arg0);
@@ -2439,7 +2439,7 @@ namespace Org.Rocksdb
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <returns><see cref="Org.Rocksdb.MutableDBOptionsInterface"/></returns>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public Org.Rocksdb.MutableDBOptionsInterface SetMaxBackgroundCompactions(int arg0)
         {
             return IExecuteWithSignature<Org.Rocksdb.MutableDBOptionsInterface>("setMaxBackgroundCompactions", "(I)Lorg/rocksdb/MutableDBOptionsInterface;", arg0);

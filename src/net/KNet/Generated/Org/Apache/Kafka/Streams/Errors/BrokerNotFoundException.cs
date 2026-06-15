@@ -29,7 +29,7 @@ namespace Org.Apache.Kafka.Streams.Errors
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/errors/BrokerNotFoundException.html"/>
     /// </summary>
-    [global::System.Obsolete()]
+    [global::System.Obsolete("Deprecated in JVM")]
     public partial class BrokerNotFoundException : Org.Apache.Kafka.Streams.Errors.StreamsException
     {
         /// <inheritdoc cref="global::System.Exception()"/>

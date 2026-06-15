@@ -29,7 +29,7 @@ namespace Org.Apache.Kafka.Clients.Admin
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/admin/ListConsumerGroupsOptions.html"/>
     /// </summary>
-    [global::System.Obsolete()]
+    [global::System.Obsolete("Deprecated in JVM")]
     public partial class ListConsumerGroupsOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions<Org.Apache.Kafka.Clients.Admin.ListConsumerGroupsOptions>
     {
         const string _bridgeClassName = "org.apache.kafka.clients.admin.ListConsumerGroupsOptions";
@@ -98,7 +98,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/admin/ListConsumerGroupsOptions.html#states()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Set"/></returns>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public Java.Util.Set<Org.Apache.Kafka.Common.ConsumerGroupState> States()
         {
             return IExecuteWithSignature<Java.Util.Set<Org.Apache.Kafka.Common.ConsumerGroupState>>("states", "()Ljava/util/Set;");
@@ -133,7 +133,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Set"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.ListConsumerGroupsOptions"/></returns>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public Org.Apache.Kafka.Clients.Admin.ListConsumerGroupsOptions InStates(Java.Util.Set<Org.Apache.Kafka.Common.ConsumerGroupState> arg0)
         {
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.ListConsumerGroupsOptions>("inStates", "(Ljava/util/Set;)Lorg/apache/kafka/clients/admin/ListConsumerGroupsOptions;", arg0);

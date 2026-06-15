@@ -73,7 +73,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <param name="arg4"><see cref="Org.Apache.Kafka.Common.ConsumerGroupState"/></param>
         /// <param name="arg5"><see cref="Org.Apache.Kafka.Common.Node"/></param>
         /// <param name="arg6"><see cref="Java.Util.Set"/></param>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public ConsumerGroupDescription(Java.Lang.String arg0, bool arg1, Java.Util.Collection<Org.Apache.Kafka.Clients.Admin.MemberDescription> arg2, Java.Lang.String arg3, Org.Apache.Kafka.Common.ConsumerGroupState arg4, Org.Apache.Kafka.Common.Node arg5, Java.Util.Set<Org.Apache.Kafka.Common.Acl.AclOperation> arg6) : base(JVMBridgeBase.InitializerInstance)
         {
             InvokeInitializer(arg0, arg1, arg2, arg3, arg4, arg5, arg6);
@@ -94,7 +94,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <param name="arg3"><see cref="Java.Lang.String"/></param>
         /// <param name="arg4"><see cref="Org.Apache.Kafka.Common.ConsumerGroupState"/></param>
         /// <param name="arg5"><see cref="Org.Apache.Kafka.Common.Node"/></param>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public ConsumerGroupDescription(Java.Lang.String arg0, bool arg1, Java.Util.Collection<Org.Apache.Kafka.Clients.Admin.MemberDescription> arg2, Java.Lang.String arg3, Org.Apache.Kafka.Common.ConsumerGroupState arg4, Org.Apache.Kafka.Common.Node arg5) : base(JVMBridgeBase.InitializerInstance)
         {
             InvokeInitializer(arg0, arg1, arg2, arg3, arg4, arg5);
@@ -117,7 +117,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <param name="arg5"><see cref="Org.Apache.Kafka.Common.ConsumerGroupState"/></param>
         /// <param name="arg6"><see cref="Org.Apache.Kafka.Common.Node"/></param>
         /// <param name="arg7"><see cref="Java.Util.Set"/></param>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public ConsumerGroupDescription(Java.Lang.String arg0, bool arg1, Java.Util.Collection<Org.Apache.Kafka.Clients.Admin.MemberDescription> arg2, Java.Lang.String arg3, Org.Apache.Kafka.Common.GroupType arg4, Org.Apache.Kafka.Common.ConsumerGroupState arg5, Org.Apache.Kafka.Common.Node arg6, Java.Util.Set<Org.Apache.Kafka.Common.Acl.AclOperation> arg7) : base(JVMBridgeBase.InitializerInstance)
         {
             InvokeInitializer(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
@@ -229,7 +229,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/admin/ConsumerGroupDescription.html#state()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.ConsumerGroupState"/></returns>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public Org.Apache.Kafka.Common.ConsumerGroupState State()
         {
             return IExecuteWithSignature<Org.Apache.Kafka.Common.ConsumerGroupState>("state", "()Lorg/apache/kafka/common/ConsumerGroupState;");

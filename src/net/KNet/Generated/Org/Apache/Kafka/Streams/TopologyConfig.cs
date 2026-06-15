@@ -262,7 +262,7 @@ namespace Org.Apache.Kafka.Streams
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/TopologyConfig.html#parseStoreType()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Materialized.StoreType"/></returns>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public Org.Apache.Kafka.Streams.Kstream.Materialized.StoreType ParseStoreType()
         {
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.Materialized.StoreType>("parseStoreType", "()Lorg/apache/kafka/streams/kstream/Materialized$StoreType;");

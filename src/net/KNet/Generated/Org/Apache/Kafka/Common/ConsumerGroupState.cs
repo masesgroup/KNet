@@ -29,7 +29,7 @@ namespace Org.Apache.Kafka.Common
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/ConsumerGroupState.html"/>
     /// </summary>
-    [global::System.Obsolete()]
+    [global::System.Obsolete("Deprecated in JVM")]
     public partial class ConsumerGroupState : Java.Lang.Enum<Org.Apache.Kafka.Common.ConsumerGroupState>
     {
         const string _bridgeClassName = "org.apache.kafka.common.ConsumerGroupState";
