@@ -1,6 +1,7 @@
 {
   "metadata": [
     {
+      "filter": "filterConfig.yml",
       "src": [
         {
           "files": [ "**.csproj" ],
