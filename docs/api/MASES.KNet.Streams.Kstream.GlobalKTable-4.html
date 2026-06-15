@@ -89,7 +89,7 @@
 
 
   <h1 id="MASES_KNet_Streams_Kstream_GlobalKTable_4" data-uid="MASES.KNet.Streams.Kstream.GlobalKTable`4" class="text-break">
-Class GlobalKTable&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Streams/Kstream/GlobalKTable.cs/#L30"><i class="bi bi-code-slash"></i></a>
+Class GlobalKTable&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Streams/Kstream/GlobalKTable.cs/#L32"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -102,7 +102,7 @@ Class GlobalKTable&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-secon
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class GlobalKTable&lt;K, V, TJVMK, TJVMV&gt; : IGenericSerDesFactoryApplier</code></pre>
+    <pre><code class="lang-csharp hljs">public class GlobalKTable&lt;K, V, TJVMK, TJVMV&gt; : IKNetInnerReference&lt;GlobalKTable&lt;TJVMK, TJVMV&gt;&gt;, IGenericSerDesFactoryApplier, IDisposable</code></pre>
   </div>
 
 
@@ -132,36 +132,13 @@ Class GlobalKTable&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-secon
   <dl class="typelist implements">
     <dt>Implements</dt>
     <dd>
+      <div><a class="xref" href="MASES.KNet.IKNetInnerReference-1.html">IKNetInnerReference</a>&lt;<a class="xref" href="Org.Apache.Kafka.Streams.Kstream.GlobalKTable-2.html">GlobalKTable</a>&lt;TJVMK, TJVMV&gt;&gt;</div>
       <div><a class="xref" href="MASES.KNet.Serialization.IGenericSerDesFactoryApplier.html">IGenericSerDesFactoryApplier</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
     </dd>
   </dl>
 
 
-  <dl class="typelist inheritedMembers">
-    <dt>Inherited Members</dt>
-    <dd>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
-    </div>
-  </dd></dl>
 
 
 
@@ -172,11 +149,43 @@ Class GlobalKTable&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-secon
 </h2>
 
 
+  <a id="MASES_KNet_Streams_Kstream_GlobalKTable_4_InnerReference_" data-uid="MASES.KNet.Streams.Kstream.GlobalKTable`4.InnerReference*"></a>
+
+  <h3 id="MASES_KNet_Streams_Kstream_GlobalKTable_4_InnerReference" data-uid="MASES.KNet.Streams.Kstream.GlobalKTable`4.InnerReference">
+  InnerReference
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Streams/Kstream/GlobalKTable.cs/#L46"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The underlying inner reference used from KNet object instance</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GlobalKTable&lt;TJVMK, TJVMV&gt; InnerReference { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.GlobalKTable-2.html">GlobalKTable</a>&lt;TJVMK, TJVMV&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="MASES_KNet_Streams_Kstream_GlobalKTable_4_QueryableStoreName_" data-uid="MASES.KNet.Streams.Kstream.GlobalKTable`4.QueryableStoreName*"></a>
 
   <h3 id="MASES_KNet_Streams_Kstream_GlobalKTable_4_QueryableStoreName" data-uid="MASES.KNet.Streams.Kstream.GlobalKTable`4.QueryableStoreName">
   QueryableStoreName
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Streams/Kstream/GlobalKTable.cs/#L49"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Streams/Kstream/GlobalKTable.cs/#L89"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/kstream/GlobalKTable.html#queryableStoreName--">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/kstream/GlobalKTable.html#queryableStoreName--</a></p>
@@ -205,6 +214,103 @@ Class GlobalKTable&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-secon
 
 
 
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="MASES_KNet_Streams_Kstream_GlobalKTable_4_CheckDisposed_" data-uid="MASES.KNet.Streams.Kstream.GlobalKTable`4.CheckDisposed*"></a>
+
+  <h3 id="MASES_KNet_Streams_Kstream_GlobalKTable_4_CheckDisposed" data-uid="MASES.KNet.Streams.Kstream.GlobalKTable`4.CheckDisposed">
+  CheckDisposed()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Streams/Kstream/GlobalKTable.cs/#L55"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Test if this instance was disposed</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void CheckDisposed()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.objectdisposedexception">ObjectDisposedException</a></dt>
+    <dd><p>When this instance was disposed</p>
+</dd>
+  </dl>
+
+
+
+  <a id="MASES_KNet_Streams_Kstream_GlobalKTable_4_Dispose_" data-uid="MASES.KNet.Streams.Kstream.GlobalKTable`4.Dispose*"></a>
+
+  <h3 id="MASES_KNet_Streams_Kstream_GlobalKTable_4_Dispose" data-uid="MASES.KNet.Streams.Kstream.GlobalKTable`4.Dispose">
+  Dispose()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Streams/Kstream/GlobalKTable.cs/#L58"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_Kstream_GlobalKTable_4_Dispose_" data-uid="MASES.KNet.Streams.Kstream.GlobalKTable`4.Dispose*"></a>
+
+  <h3 id="MASES_KNet_Streams_Kstream_GlobalKTable_4_Dispose_System_Boolean_" data-uid="MASES.KNet.Streams.Kstream.GlobalKTable`4.Dispose(System.Boolean)">
+  Dispose(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Streams/Kstream/GlobalKTable.cs/#L69"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Implements the pattern described in <a href="https://learn.microsoft.com/en-en/dotnet/standard/garbage-collection/implementing-dispose">https://learn.microsoft.com/en-en/dotnet/standard/garbage-collection/implementing-dispose</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void Dispose(bool disposing)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>disposing</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>The disposing parameter is a <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">bool</a> that indicates whether the method call comes from a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable.dispose">Dispose()</a> method (its value is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>) or from a finalizer (its value is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>)</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
   <h2 class="section" id="operators">Operators
 </h2>
 
@@ -213,7 +319,7 @@ Class GlobalKTable&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-secon
 
   <h3 id="MASES_KNet_Streams_Kstream_GlobalKTable_4_op_Implicit_MASES_KNet_Streams_Kstream_GlobalKTable__0__1__2__3___Org_Apache_Kafka_Streams_Kstream_GlobalKTable__2__3_" data-uid="MASES.KNet.Streams.Kstream.GlobalKTable`4.op_Implicit(MASES.KNet.Streams.Kstream.GlobalKTable{`0,`1,`2,`3})~Org.Apache.Kafka.Streams.Kstream.GlobalKTable{`2,`3}">
   implicit operator GlobalKTable&lt;TJVMK, TJVMV&gt;(GlobalKTable&lt;K, V, TJVMK, TJVMV&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Streams/Kstream/GlobalKTable.cs/#L46"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Streams/Kstream/GlobalKTable.cs/#L86"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Converter from <a class="xref" href="MASES.KNet.Streams.Kstream.GlobalKTable-4.html">GlobalKTable&lt;K, V, TJVMK, TJVMV&gt;</a> to <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.GlobalKTable-2.html">GlobalKTable&lt;K, V&gt;</a></p>
@@ -250,7 +356,7 @@ Class GlobalKTable&lt;K, V, TJVMK, TJVMV&gt;  <a class="header-action link-secon
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Streams/Kstream/GlobalKTable.cs/#L30" class="edit-link">Edit this page</a>
+          <a href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Streams/Kstream/GlobalKTable.cs/#L32" class="edit-link">Edit this page</a>
         </div>
 
 

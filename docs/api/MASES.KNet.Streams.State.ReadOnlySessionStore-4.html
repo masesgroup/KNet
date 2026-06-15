@@ -89,7 +89,7 @@
 
 
   <h1 id="MASES_KNet_Streams_State_ReadOnlySessionStore_4" data-uid="MASES.KNet.Streams.State.ReadOnlySessionStore`4" class="text-break">
-Class ReadOnlySessionStore&lt;K, AGG, TJVMK, TJVMAGG&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Streams/State/ReadOnlySessionStore.cs/#L30"><i class="bi bi-code-slash"></i></a>
+Class ReadOnlySessionStore&lt;K, AGG, TJVMK, TJVMAGG&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Streams/State/ReadOnlySessionStore.cs/#L31"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -102,7 +102,7 @@ Class ReadOnlySessionStore&lt;K, AGG, TJVMK, TJVMAGG&gt;  <a class="header-actio
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ReadOnlySessionStore&lt;K, AGG, TJVMK, TJVMAGG&gt; : ManagedStore&lt;ReadOnlySessionStore&lt;TJVMK, TJVMAGG&gt;&gt;, IManagedStore&lt;ReadOnlySessionStore&lt;TJVMK, TJVMAGG&gt;&gt;, IGenericSerDesFactoryApplier</code></pre>
+    <pre><code class="lang-csharp hljs">public class ReadOnlySessionStore&lt;K, AGG, TJVMK, TJVMAGG&gt; : ManagedStore&lt;ReadOnlySessionStore&lt;TJVMK, TJVMAGG&gt;&gt;, IManagedStore&lt;ReadOnlySessionStore&lt;TJVMK, TJVMAGG&gt;&gt;, IDisposable, IGenericSerDesFactoryApplier</code></pre>
   </div>
 
 
@@ -136,6 +136,7 @@ Class ReadOnlySessionStore&lt;K, AGG, TJVMK, TJVMAGG&gt;  <a class="header-actio
     <dt>Implements</dt>
     <dd>
       <div><a class="xref" href="MASES.KNet.Streams.State.IManagedStore-1.html">IManagedStore</a>&lt;<a class="xref" href="Org.Apache.Kafka.Streams.State.ReadOnlySessionStore-2.html">ReadOnlySessionStore</a>&lt;TJVMK, TJVMAGG&gt;&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
       <div><a class="xref" href="MASES.KNet.Serialization.IGenericSerDesFactoryApplier.html">IGenericSerDesFactoryApplier</a></div>
     </dd>
   </dl>
@@ -157,25 +158,7 @@ Class ReadOnlySessionStore&lt;K, AGG, TJVMK, TJVMAGG&gt;  <a class="header-actio
       <a class="xref" href="MASES.KNet.Streams.State.ManagedStore-1.html#MASES_KNet_Streams_State_ManagedStore_1_Factory">ManagedStore&lt;ReadOnlySessionStore&lt;TJVMK, TJVMAGG&gt;&gt;.Factory</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+      <a class="xref" href="MASES.KNet.Streams.State.ManagedStore-1.html#MASES_KNet_Streams_State_ManagedStore_1_Dispose">ManagedStore&lt;ReadOnlySessionStore&lt;TJVMK, TJVMAGG&gt;&gt;.Dispose()</a>
     </div>
   </dd></dl>
 
@@ -192,7 +175,7 @@ Class ReadOnlySessionStore&lt;K, AGG, TJVMK, TJVMAGG&gt;  <a class="header-actio
 
   <h3 id="MASES_KNet_Streams_State_ReadOnlySessionStore_4_BackwardFetch__0_" data-uid="MASES.KNet.Streams.State.ReadOnlySessionStore`4.BackwardFetch(`0)">
   BackwardFetch(K)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Streams/State/ReadOnlySessionStore.cs/#L114"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Streams/State/ReadOnlySessionStore.cs/#L129"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/state/ReadOnlySessionStore.html#backwardFetch(java.lang.Object)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/state/ReadOnlySessionStore.html#backwardFetch(java.lang.Object)</a></p>
@@ -231,7 +214,7 @@ Class ReadOnlySessionStore&lt;K, AGG, TJVMK, TJVMAGG&gt;  <a class="header-actio
 
   <h3 id="MASES_KNet_Streams_State_ReadOnlySessionStore_4_BackwardFetch__0__0_" data-uid="MASES.KNet.Streams.State.ReadOnlySessionStore`4.BackwardFetch(`0,`0)">
   BackwardFetch(K, K)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Streams/State/ReadOnlySessionStore.cs/#L100"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Streams/State/ReadOnlySessionStore.cs/#L112"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/state/ReadOnlySessionStore.html#backwardFetch(java.lang.Object,java.lang.Object)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/state/ReadOnlySessionStore.html#backwardFetch(java.lang.Object,java.lang.Object)</a></p>
@@ -273,7 +256,7 @@ Class ReadOnlySessionStore&lt;K, AGG, TJVMK, TJVMAGG&gt;  <a class="header-actio
 
   <h3 id="MASES_KNet_Streams_State_ReadOnlySessionStore_4_BackwardFindSessions__0_Java_Time_Instant_Java_Time_Instant_" data-uid="MASES.KNet.Streams.State.ReadOnlySessionStore`4.BackwardFindSessions(`0,Java.Time.Instant,Java.Time.Instant)">
   BackwardFindSessions(K, Instant, Instant)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Streams/State/ReadOnlySessionStore.cs/#L129"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Streams/State/ReadOnlySessionStore.cs/#L146"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/state/ReadOnlySessionStore.html#backwardFindSessions(java.lang.Object,java.time.Instant,java.time.Instant)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/state/ReadOnlySessionStore.html#backwardFindSessions(java.lang.Object,java.time.Instant,java.time.Instant)</a></p>
@@ -318,7 +301,7 @@ Class ReadOnlySessionStore&lt;K, AGG, TJVMK, TJVMAGG&gt;  <a class="header-actio
 
   <h3 id="MASES_KNet_Streams_State_ReadOnlySessionStore_4_BackwardFindSessions__0_System_Int64_System_Int64_" data-uid="MASES.KNet.Streams.State.ReadOnlySessionStore`4.BackwardFindSessions(`0,System.Int64,System.Int64)">
   BackwardFindSessions(K, long, long)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Streams/State/ReadOnlySessionStore.cs/#L178"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Streams/State/ReadOnlySessionStore.cs/#L203"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/state/ReadOnlySessionStore.html#backwardFindSessions(java.lang.Object,long,long)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/state/ReadOnlySessionStore.html#backwardFindSessions(java.lang.Object,long,long)</a></p>
@@ -363,7 +346,7 @@ Class ReadOnlySessionStore&lt;K, AGG, TJVMK, TJVMAGG&gt;  <a class="header-actio
 
   <h3 id="MASES_KNet_Streams_State_ReadOnlySessionStore_4_BackwardFindSessions__0__0_Java_Time_Instant_Java_Time_Instant_" data-uid="MASES.KNet.Streams.State.ReadOnlySessionStore`4.BackwardFindSessions(`0,`0,Java.Time.Instant,Java.Time.Instant)">
   BackwardFindSessions(K, K, Instant, Instant)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Streams/State/ReadOnlySessionStore.cs/#L145"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Streams/State/ReadOnlySessionStore.cs/#L164"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/state/ReadOnlySessionStore.html#backwardFindSessions(java.lang.Object,java.lang.Object,java.time.Instant,java.time.Instant)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/state/ReadOnlySessionStore.html#backwardFindSessions(java.lang.Object,java.lang.Object,java.time.Instant,java.time.Instant)</a></p>
@@ -411,7 +394,7 @@ Class ReadOnlySessionStore&lt;K, AGG, TJVMK, TJVMAGG&gt;  <a class="header-actio
 
   <h3 id="MASES_KNet_Streams_State_ReadOnlySessionStore_4_BackwardFindSessions__0__0_System_Int64_System_Int64_" data-uid="MASES.KNet.Streams.State.ReadOnlySessionStore`4.BackwardFindSessions(`0,`0,System.Int64,System.Int64)">
   BackwardFindSessions(K, K, long, long)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Streams/State/ReadOnlySessionStore.cs/#L162"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Streams/State/ReadOnlySessionStore.cs/#L184"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/state/ReadOnlySessionStore.html#backwardFindSessions(java.lang.Object,java.lang.Object,long,long)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/state/ReadOnlySessionStore.html#backwardFindSessions(java.lang.Object,java.lang.Object,long,long)</a></p>
@@ -459,7 +442,7 @@ Class ReadOnlySessionStore&lt;K, AGG, TJVMK, TJVMAGG&gt;  <a class="header-actio
 
   <h3 id="MASES_KNet_Streams_State_ReadOnlySessionStore_4_Fetch__0_" data-uid="MASES.KNet.Streams.State.ReadOnlySessionStore`4.Fetch(`0)">
   Fetch(K)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Streams/State/ReadOnlySessionStore.cs/#L52"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Streams/State/ReadOnlySessionStore.cs/#L56"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/state/ReadOnlySessionStore.html#fetch(java.lang.Object)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/state/ReadOnlySessionStore.html#fetch(java.lang.Object)</a></p>
@@ -498,7 +481,7 @@ Class ReadOnlySessionStore&lt;K, AGG, TJVMK, TJVMAGG&gt;  <a class="header-actio
 
   <h3 id="MASES_KNet_Streams_State_ReadOnlySessionStore_4_Fetch__0__0_" data-uid="MASES.KNet.Streams.State.ReadOnlySessionStore`4.Fetch(`0,`0)">
   Fetch(K, K)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Streams/State/ReadOnlySessionStore.cs/#L38"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Streams/State/ReadOnlySessionStore.cs/#L39"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/state/ReadOnlySessionStore.html#fetch(java.lang.Object,java.lang.Object)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/state/ReadOnlySessionStore.html#fetch(java.lang.Object,java.lang.Object)</a></p>
@@ -540,7 +523,7 @@ Class ReadOnlySessionStore&lt;K, AGG, TJVMK, TJVMAGG&gt;  <a class="header-actio
 
   <h3 id="MASES_KNet_Streams_State_ReadOnlySessionStore_4_FetchSession__0_Java_Time_Instant_Java_Time_Instant_" data-uid="MASES.KNet.Streams.State.ReadOnlySessionStore`4.FetchSession(`0,Java.Time.Instant,Java.Time.Instant)">
   FetchSession(K, Instant, Instant)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Streams/State/ReadOnlySessionStore.cs/#L67"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Streams/State/ReadOnlySessionStore.cs/#L73"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/state/ReadOnlySessionStore.html#fetchSession(java.lang.Object,java.time.Instant,java.time.Instant)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/state/ReadOnlySessionStore.html#fetchSession(java.lang.Object,java.time.Instant,java.time.Instant)</a></p>
@@ -585,7 +568,7 @@ Class ReadOnlySessionStore&lt;K, AGG, TJVMK, TJVMAGG&gt;  <a class="header-actio
 
   <h3 id="MASES_KNet_Streams_State_ReadOnlySessionStore_4_FetchSession__0_System_Int64_System_Int64_" data-uid="MASES.KNet.Streams.State.ReadOnlySessionStore`4.FetchSession(`0,System.Int64,System.Int64)">
   FetchSession(K, long, long)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Streams/State/ReadOnlySessionStore.cs/#L84"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Streams/State/ReadOnlySessionStore.cs/#L93"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/state/ReadOnlySessionStore.html#fetchSession(java.lang.Object,long,long)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/state/ReadOnlySessionStore.html#fetchSession(java.lang.Object,long,long)</a></p>
@@ -630,7 +613,7 @@ Class ReadOnlySessionStore&lt;K, AGG, TJVMK, TJVMAGG&gt;  <a class="header-actio
 
   <h3 id="MASES_KNet_Streams_State_ReadOnlySessionStore_4_FindSessions__0_Java_Time_Instant_Java_Time_Instant_" data-uid="MASES.KNet.Streams.State.ReadOnlySessionStore`4.FindSessions(`0,Java.Time.Instant,Java.Time.Instant)">
   FindSessions(K, Instant, Instant)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Streams/State/ReadOnlySessionStore.cs/#L193"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Streams/State/ReadOnlySessionStore.cs/#L220"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/state/ReadOnlySessionStore.html#findSessions(java.lang.Object,java.time.Instant,java.time.Instant)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/state/ReadOnlySessionStore.html#findSessions(java.lang.Object,java.time.Instant,java.time.Instant)</a></p>
@@ -675,7 +658,7 @@ Class ReadOnlySessionStore&lt;K, AGG, TJVMK, TJVMAGG&gt;  <a class="header-actio
 
   <h3 id="MASES_KNet_Streams_State_ReadOnlySessionStore_4_FindSessions__0_System_Int64_System_Int64_" data-uid="MASES.KNet.Streams.State.ReadOnlySessionStore`4.FindSessions(`0,System.Int64,System.Int64)">
   FindSessions(K, long, long)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Streams/State/ReadOnlySessionStore.cs/#L242"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Streams/State/ReadOnlySessionStore.cs/#L277"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/state/ReadOnlySessionStore.html#findSessions(java.lang.Object,long,long)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/state/ReadOnlySessionStore.html#findSessions(java.lang.Object,long,long)</a></p>
@@ -720,7 +703,7 @@ Class ReadOnlySessionStore&lt;K, AGG, TJVMK, TJVMAGG&gt;  <a class="header-actio
 
   <h3 id="MASES_KNet_Streams_State_ReadOnlySessionStore_4_FindSessions__0__0_Java_Time_Instant_Java_Time_Instant_" data-uid="MASES.KNet.Streams.State.ReadOnlySessionStore`4.FindSessions(`0,`0,Java.Time.Instant,Java.Time.Instant)">
   FindSessions(K, K, Instant, Instant)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Streams/State/ReadOnlySessionStore.cs/#L209"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Streams/State/ReadOnlySessionStore.cs/#L238"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/state/ReadOnlySessionStore.html#findSessions(java.lang.Object,java.lang.Object,java.time.Instant,java.time.Instant)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/state/ReadOnlySessionStore.html#findSessions(java.lang.Object,java.lang.Object,java.time.Instant,java.time.Instant)</a></p>
@@ -768,7 +751,7 @@ Class ReadOnlySessionStore&lt;K, AGG, TJVMK, TJVMAGG&gt;  <a class="header-actio
 
   <h3 id="MASES_KNet_Streams_State_ReadOnlySessionStore_4_FindSessions__0__0_System_Int64_System_Int64_" data-uid="MASES.KNet.Streams.State.ReadOnlySessionStore`4.FindSessions(`0,`0,System.Int64,System.Int64)">
   FindSessions(K, K, long, long)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Streams/State/ReadOnlySessionStore.cs/#L226"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Streams/State/ReadOnlySessionStore.cs/#L258"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/state/ReadOnlySessionStore.html#findSessions(java.lang.Object,java.lang.Object,long,long)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/state/ReadOnlySessionStore.html#findSessions(java.lang.Object,java.lang.Object,long,long)</a></p>
@@ -816,7 +799,7 @@ Class ReadOnlySessionStore&lt;K, AGG, TJVMK, TJVMAGG&gt;  <a class="header-actio
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Streams/State/ReadOnlySessionStore.cs/#L30" class="edit-link">Edit this page</a>
+          <a href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Streams/State/ReadOnlySessionStore.cs/#L31" class="edit-link">Edit this page</a>
         </div>
 
 

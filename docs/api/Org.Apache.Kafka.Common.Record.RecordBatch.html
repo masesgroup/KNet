@@ -89,7 +89,7 @@
 
 
   <h1 id="Org_Apache_Kafka_Common_Record_RecordBatch" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch" class="text-break">
-Class RecordBatch  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L90"><i class="bi bi-code-slash"></i></a>
+Class RecordBatch  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L81"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -102,7 +102,7 @@ Class RecordBatch  <a class="header-action link-secondary" title="View source" h
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class RecordBatch : Iterable&lt;Record&gt;, IDynamicMetaObjectProvider, IJVMBridgeCore, IEquatable&lt;IJVMBridgeBase&gt;, IDisposable, IJVMBridgeBaseStatic, IJVMBridgeBase, IJVMBridgeDefinition, IEnumerableExtension, IEnumerable&lt;Record&gt;, IEnumerable, IAsyncEnumerable&lt;Record&gt;, IIterable&lt;Record&gt;, IRecordBatch</code></pre>
+    <pre><code class="lang-csharp hljs">public class RecordBatch : Iterable&lt;Record&gt;, IDynamicMetaObjectProvider, IJVMBridgeCore, IEquatable&lt;IJVMBridgeBaseInstance&gt;, IDisposable, IJVMBridgeBaseStatic, IJVMBridgeBase, IJVMBridgeBaseInstance, IJVMBridgeDefinition, IEnumerableExtension, IEnumerable&lt;Record&gt;, IEnumerable, IAsyncEnumerable&lt;Record&gt;, IIterable&lt;Record&gt;, IRecordBatch</code></pre>
   </div>
 
 
@@ -128,10 +128,11 @@ Class RecordBatch  <a class="header-action link-secondary" title="View source" h
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.idynamicmetaobjectprovider">IDynamicMetaObjectProvider</a></div>
       <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeCore.html">IJVMBridgeCore</a></div>
-      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBase.html">IJVMBridgeBase</a>&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBaseInstance.html">IJVMBridgeBaseInstance</a>&gt;</div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
       <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic.html">IJVMBridgeBaseStatic</a></div>
       <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBase.html">IJVMBridgeBase</a></div>
+      <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBaseInstance.html">IJVMBridgeBaseInstance</a></div>
       <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html">IJVMBridgeDefinition</a></div>
       <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IEnumerableExtension.html">IEnumerableExtension</a></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.Record.Record.html">Record</a>&gt;</div>
@@ -153,391 +154,7 @@ Class RecordBatch  <a class="header-action link-secondary" title="View source" h
     <dt>Inherited Members</dt>
     <dd>
     <div>
-      <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Iterable-1.html#Java_Lang_Iterable_1_Iterator">Iterable&lt;Record&gt;.Iterator()</a>
-    </div>
-    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">JNetAsyncEnumerable&lt;Iterable&lt;Record&gt;, Record&gt;.GetAsyncEnumerator(CancellationToken)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBaseEnumerable-2.html#MASES_JCOBridge_C2JBridge_JVMBridgeBaseEnumerable_2_GetEnumerator">JVMBridgeBaseEnumerable&lt;Iterable&lt;Record&gt;, Record&gt;.GetEnumerator()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBaseEnumerable-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBaseEnumerable_1_GetEnumerator">JVMBridgeBaseEnumerable&lt;Iterable&lt;Record&gt;&gt;.GetEnumerator()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Iterable&lt;Record&gt;&gt;.SExecute(IJavaType, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Iterable&lt;Record&gt;&gt;.SExecuteWithSignature(IJavaType, string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Iterable&lt;Record&gt;&gt;.SExecute(string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Iterable&lt;Record&gt;&gt;.SExecuteWithSignature(string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Iterable&lt;Record&gt;&gt;.SExecute&lt;TReturn&gt;(IJavaType, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Iterable&lt;Record&gt;&gt;.SExecuteWithSignature&lt;TReturn&gt;(IJavaType, string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Iterable&lt;Record&gt;&gt;.SExecute&lt;TReturn&gt;(string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Iterable&lt;Record&gt;&gt;.SExecuteWithSignature&lt;TReturn&gt;(string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;Iterable&lt;Record&gt;&gt;.SExecute(Type, IJavaType, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;Iterable&lt;Record&gt;&gt;.SExecuteWithSignature(Type, IJavaType, string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;Iterable&lt;Record&gt;&gt;.SExecute(Type, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;Iterable&lt;Record&gt;&gt;.SExecuteWithSignature(Type, string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Iterable&lt;Record&gt;&gt;.SExecute&lt;TNewClass, TReturn&gt;(IJavaType, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Iterable&lt;Record&gt;&gt;.SExecuteWithSignature&lt;TNewClass, TReturn&gt;(IJavaType, string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Iterable&lt;Record&gt;&gt;.SExecute&lt;TNewClass, TReturn&gt;(string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Iterable&lt;Record&gt;&gt;.SExecuteWithSignature&lt;TNewClass, TReturn&gt;(string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;Iterable&lt;Record&gt;&gt;.SExecute&lt;TReturn&gt;(Type, IJavaType, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;Iterable&lt;Record&gt;&gt;.SExecuteWithSignature&lt;TReturn&gt;(Type, IJavaType, string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;Iterable&lt;Record&gt;&gt;.SExecute&lt;TReturn&gt;(Type, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;Iterable&lt;Record&gt;&gt;.SExecuteWithSignature&lt;TReturn&gt;(Type, string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Iterable&lt;Record&gt;&gt;.SExecute&lt;TNewClass, TReturn, TConverter&gt;(IJavaType, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Iterable&lt;Record&gt;&gt;.SExecuteWithSignature&lt;TNewClass, TReturn, TConverter&gt;(IJavaType, string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Iterable&lt;Record&gt;&gt;.SExecute&lt;TNewClass, TReturn, TConverter&gt;(string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Iterable&lt;Record&gt;&gt;.SExecuteWithSignature&lt;TNewClass, TReturn, TConverter&gt;(string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;Iterable&lt;Record&gt;&gt;.SExecute&lt;TReturn, TConverter&gt;(Type, IJavaType, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;Iterable&lt;Record&gt;&gt;.SExecuteWithSignature&lt;TReturn, TConverter&gt;(Type, IJavaType, string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;Iterable&lt;Record&gt;&gt;.SExecute&lt;TReturn, TConverter&gt;(Type, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;Iterable&lt;Record&gt;&gt;.SExecuteWithSignature&lt;TReturn, TConverter&gt;(Type, string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Iterable&lt;Record&gt;&gt;.SExecuteArray&lt;TArrayType&gt;(IJavaType, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Iterable&lt;Record&gt;&gt;.SExecuteWithSignatureArray&lt;TArrayType&gt;(IJavaType, string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Iterable&lt;Record&gt;&gt;.SExecuteArray&lt;TArrayType&gt;(string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Iterable&lt;Record&gt;&gt;.SExecuteWithSignatureArray&lt;TArrayType&gt;(string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Iterable&lt;Record&gt;&gt;.SGetField(IJavaType, string)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Iterable&lt;Record&gt;&gt;.SGetField(string)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Iterable&lt;Record&gt;&gt;.SGetField&lt;TReturn&gt;(IJavaType, string)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Iterable&lt;Record&gt;&gt;.SGetField&lt;TReturn&gt;(string)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Iterable&lt;Record&gt;&gt;.SGetFieldArray&lt;TReturn&gt;(IJavaType, string)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Iterable&lt;Record&gt;&gt;.SGetFieldArray&lt;TReturn&gt;(string)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Iterable&lt;Record&gt;&gt;.SSetField(IJavaType, string, object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Iterable&lt;Record&gt;&gt;.SSetField(string, object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Iterable&lt;Record&gt;&gt;.SSetField&lt;TValue&gt;(IJavaType, string, TValue)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Iterable&lt;Record&gt;&gt;.SSetField&lt;TValue&gt;(string, TValue)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Iterable&lt;Record&gt;&gt;.IsAssignableFrom(string)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_IsAssignableFrom_MASES_JCOBridge_C2JBridge_JVMInterop_IJavaType_">JVMBridgeBase&lt;Iterable&lt;Record&gt;&gt;.IsAssignableFrom(IJavaType)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_IsAssignableFrom__1">JVMBridgeBase&lt;Iterable&lt;Record&gt;&gt;.IsAssignableFrom&lt;T&gt;()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">JVMBridgeBase&lt;Iterable&lt;Record&gt;&gt;.New(params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Iterable&lt;Record&gt;&gt;.NewWithSignature(string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Iterable&lt;Record&gt;&gt;.NewAndWrapsDirect&lt;TNewClass&gt;(string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;Iterable&lt;Record&gt;&gt;.NewWithSignatureAndWrapsDirect&lt;TNewClass&gt;(string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_Execute__1___0___">JVMBridgeBase&lt;Iterable&lt;Record&gt;&gt;.Execute&lt;T&gt;(params T[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_DynBridgeClazz">JVMBridgeBase&lt;Iterable&lt;Record&gt;&gt;.DynBridgeClazz</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_BridgeClazz">JVMBridgeBase&lt;Iterable&lt;Record&gt;&gt;.BridgeClazz</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ReferenceEqualsJVM_MASES_JCOBridge_C2JBridge_JVMBridgeBase_MASES_JCOBridge_C2JBridge_JVMBridgeBase_">JVMBridgeBase.ReferenceEqualsJVM(JVMBridgeBase, JVMBridgeBase)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.ClazzOf&lt;TClass&gt;(bool)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">JVMBridgeBase.ClazzOf&lt;TClass&gt;(out Exception, bool)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ClazzOf(string, bool)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ClazzOf(string, out Exception, bool)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_RuntimeClassNameOf__1">JVMBridgeBase.RuntimeClassNameOf&lt;T&gt;()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.RuntimeClassNameOf(Type)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ClassNameOf__1">JVMBridgeBase.ClassNameOf&lt;T&gt;()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ClassOf__1">JVMBridgeBase.ClassOf&lt;T&gt;()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_WrapsDirect__1_MASES_JCOBridge_C2JBridge_JVMInterop_IJavaObject_">JVMBridgeBase.WrapsDirect&lt;TNewClass&gt;(IJavaObject)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Wraps__1_MASES_JCOBridge_C2JBridge_JVMInterop_IJavaObject_">JVMBridgeBase.Wraps&lt;TNewClass&gt;(IJavaObject)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.Wraps(Type, IJavaObject, string)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Wraps__2_MASES_JCOBridge_C2JBridge_JVMInterop_IJavaObject_">JVMBridgeBase.Wraps&lt;TNewClass, TReturn&gt;(IJavaObject)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.Wraps&lt;TReturn&gt;(Type, IJavaObject, string)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Wraps__3_MASES_JCOBridge_C2JBridge_JVMInterop_IJavaObject_">JVMBridgeBase.Wraps&lt;TNewClass, TReturn, TConverter&gt;(IJavaObject)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.Wraps&lt;TReturn, TConverter&gt;(Type, IJavaObject)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_MonitorEnter">JVMBridgeBase.MonitorEnter()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_MonitorExit">JVMBridgeBase.MonitorExit()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IsInstanceOf(string)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsInstanceOf_MASES_JCOBridge_C2JBridge_JVMInterop_IJavaType_">JVMBridgeBase.IsInstanceOf(IJavaType)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsInstanceOf__1">JVMBridgeBase.IsInstanceOf&lt;T&gt;()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_RuntimeIsInstanceOf__1">JVMBridgeBase.RuntimeIsInstanceOf&lt;T&gt;()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_CastTo__1">JVMBridgeBase.CastTo&lt;TNewClass&gt;()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_CastDirect__1">JVMBridgeBase.CastDirect&lt;TNewClass&gt;()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Dispose">JVMBridgeBase.Dispose()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.Dispose(bool)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ToString">JVMBridgeBase.ToString()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Equals_MASES_JCOBridge_C2JBridge_IJVMBridgeBase_">JVMBridgeBase.Equals(IJVMBridgeBase)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">JVMBridgeBase.Equals(object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_GetHashCode">JVMBridgeBase.GetHashCode()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Notify">JVMBridgeBase.Notify()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_NotifyAll">JVMBridgeBase.NotifyAll()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Wait">JVMBridgeBase.Wait()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">JVMBridgeBase.Wait(long)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">JVMBridgeBase.Wait(long, int)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecute(string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignature(string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecute&lt;TReturn&gt;(string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignature&lt;TReturn&gt;(string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecute&lt;TNewClass, TReturn&gt;(string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignature&lt;TNewClass, TReturn&gt;(string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecute&lt;TNewClass, TReturn, TConverter&gt;(string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignature&lt;TNewClass, TReturn, TConverter&gt;(string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteArray&lt;TArrayType&gt;(string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignatureArray&lt;TArrayType&gt;(string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IGetField(string)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IGetField&lt;TReturn&gt;(string)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IGetFieldArray&lt;TReturn&gt;(string)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ISetField(string, object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ISetField&lt;TValue&gt;(string, TValue)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">JVMBridgeBase.Throw&lt;TException&gt;(params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">JVMBridgeBase.BiThrow&lt;TException&gt;(params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_DynBridgeInstance">JVMBridgeBase.DynBridgeInstance</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeInstance">JVMBridgeBase.BridgeInstance</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeListener">JVMBridgeBase.IsBridgeListener</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trygetmember">DynamicObject.TryGetMember(GetMemberBinder, out object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trysetmember">DynamicObject.TrySetMember(SetMemberBinder, object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trydeletemember">DynamicObject.TryDeleteMember(DeleteMemberBinder)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryinvokemember">DynamicObject.TryInvokeMember(InvokeMemberBinder, object[], out object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryconvert">DynamicObject.TryConvert(ConvertBinder, out object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trycreateinstance">DynamicObject.TryCreateInstance(CreateInstanceBinder, object[], out object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryinvoke">DynamicObject.TryInvoke(InvokeBinder, object[], out object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trybinaryoperation">DynamicObject.TryBinaryOperation(BinaryOperationBinder, object, out object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryunaryoperation">DynamicObject.TryUnaryOperation(UnaryOperationBinder, out object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trygetindex">DynamicObject.TryGetIndex(GetIndexBinder, object[], out object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trysetindex">DynamicObject.TrySetIndex(SetIndexBinder, object[], object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trydeleteindex">DynamicObject.TryDeleteIndex(DeleteIndexBinder, object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.getdynamicmembernames">DynamicObject.GetDynamicMemberNames()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.getmetaobject">DynamicObject.GetMetaObject(Expression)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
     </div>
   </dd></dl>
 
@@ -552,40 +169,12 @@ Class RecordBatch  <a class="header-action link-secondary" title="View source" h
 
   <a id="Org_Apache_Kafka_Common_Record_RecordBatch__ctor_" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.#ctor*"></a>
 
-  <h3 id="Org_Apache_Kafka_Common_Record_RecordBatch__ctor" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.#ctor">
-  RecordBatch()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L38"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Obsolete(&quot;RecordBatch class represents, in .NET, an instance of a JVM interface or abstract class. This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.&quot;)]
-public RecordBatch()</code></pre>
-  </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <a id="Org_Apache_Kafka_Common_Record_RecordBatch__ctor_" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.#ctor*"></a>
-
   <h3 id="Org_Apache_Kafka_Common_Record_RecordBatch__ctor_MASES_JCOBridge_C2JBridge_IJVMBridgeBaseInitializer_" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.#ctor(MASES.JCOBridge.C2JBridge.IJVMBridgeBaseInitializer)">
   RecordBatch(IJVMBridgeBaseInitializer)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L43"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L39"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Internal constructor: used internally from JCOBridge</p>
+  <div class="markdown level1 summary"><p>Initializer used internally by JCOBridge. Do not use directly.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -611,39 +200,6 @@ public RecordBatch(IJVMBridgeBaseInitializer initializer)</code></pre>
 
 
 
-  <a id="Org_Apache_Kafka_Common_Record_RecordBatch__ctor_" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.#ctor*"></a>
-
-  <h3 id="Org_Apache_Kafka_Common_Record_RecordBatch__ctor_System_Object___" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.#ctor(System.Object[])">
-  RecordBatch(params object[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L48"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Obsolete(&quot;RecordBatch class represents, in .NET, an instance of a JVM interface or abstract class. This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.&quot;)]
-public RecordBatch(params object[] args)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>args</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>[]</dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
   <h2 class="section" id="properties">Properties
 </h2>
 
@@ -652,7 +208,7 @@ public RecordBatch(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Common_Record_RecordBatch_BridgeClassName" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.BridgeClassName">
   BridgeClassName
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L56"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L47"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Java class name to be instantiated</p>
@@ -684,7 +240,7 @@ public RecordBatch(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Common_Record_RecordBatch_CURRENT_MAGIC_VALUE" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.CURRENT_MAGIC_VALUE">
   CURRENT_MAGIC_VALUE
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L104"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L95"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/common/record/RecordBatch.html#CURRENT_MAGIC_VALUE">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/common/record/RecordBatch.html#CURRENT_MAGIC_VALUE</a></p>
@@ -692,7 +248,7 @@ public RecordBatch(params object[] args)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static byte CURRENT_MAGIC_VALUE { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static byte CURRENT_MAGIC_VALUE { get; set; }</code></pre>
   </div>
 
 
@@ -716,7 +272,7 @@ public RecordBatch(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Common_Record_RecordBatch_IsBridgeAbstract" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.IsBridgeAbstract">
   IsBridgeAbstract
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L58"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L49"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> is an abstract class, i.e. cannot be created an instance</p>
@@ -748,10 +304,10 @@ public RecordBatch(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Common_Record_RecordBatch_IsBridgeCloseable" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.IsBridgeCloseable">
   IsBridgeCloseable
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L60"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L51"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> implements Closeable</p>
+  <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> implements java.lang.AutoCloseable</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -780,7 +336,7 @@ public RecordBatch(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Common_Record_RecordBatch_IsBridgeInterface" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.IsBridgeInterface">
   IsBridgeInterface
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L62"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L53"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> is an interface, i.e. does not have any public constructor</p>
@@ -812,7 +368,7 @@ public RecordBatch(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Common_Record_RecordBatch_IsBridgeStatic" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.IsBridgeStatic">
   IsBridgeStatic
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L64"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L55"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> is a static class, i.e. does not have any public constructor</p>
@@ -844,7 +400,7 @@ public RecordBatch(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Common_Record_RecordBatch_MAGIC_VALUE_V0" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.MAGIC_VALUE_V0">
   MAGIC_VALUE_V0
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L110"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L99"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/common/record/RecordBatch.html#MAGIC_VALUE_V0">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/common/record/RecordBatch.html#MAGIC_VALUE_V0</a></p>
@@ -852,7 +408,7 @@ public RecordBatch(params object[] args)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static byte MAGIC_VALUE_V0 { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static byte MAGIC_VALUE_V0 { get; set; }</code></pre>
   </div>
 
 
@@ -876,7 +432,7 @@ public RecordBatch(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Common_Record_RecordBatch_MAGIC_VALUE_V1" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.MAGIC_VALUE_V1">
   MAGIC_VALUE_V1
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L116"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L103"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/common/record/RecordBatch.html#MAGIC_VALUE_V1">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/common/record/RecordBatch.html#MAGIC_VALUE_V1</a></p>
@@ -884,7 +440,7 @@ public RecordBatch(params object[] args)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static byte MAGIC_VALUE_V1 { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static byte MAGIC_VALUE_V1 { get; set; }</code></pre>
   </div>
 
 
@@ -908,7 +464,7 @@ public RecordBatch(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Common_Record_RecordBatch_MAGIC_VALUE_V2" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.MAGIC_VALUE_V2">
   MAGIC_VALUE_V2
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L122"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L107"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/common/record/RecordBatch.html#MAGIC_VALUE_V2">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/common/record/RecordBatch.html#MAGIC_VALUE_V2</a></p>
@@ -916,7 +472,7 @@ public RecordBatch(params object[] args)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static byte MAGIC_VALUE_V2 { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static byte MAGIC_VALUE_V2 { get; set; }</code></pre>
   </div>
 
 
@@ -940,7 +496,7 @@ public RecordBatch(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Common_Record_RecordBatch_NO_PARTITION_LEADER_EPOCH" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.NO_PARTITION_LEADER_EPOCH">
   NO_PARTITION_LEADER_EPOCH
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L128"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L111"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/common/record/RecordBatch.html#NO_PARTITION_LEADER_EPOCH">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/common/record/RecordBatch.html#NO_PARTITION_LEADER_EPOCH</a></p>
@@ -948,7 +504,7 @@ public RecordBatch(params object[] args)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static int NO_PARTITION_LEADER_EPOCH { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static int NO_PARTITION_LEADER_EPOCH { get; set; }</code></pre>
   </div>
 
 
@@ -972,7 +528,7 @@ public RecordBatch(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Common_Record_RecordBatch_NO_PRODUCER_EPOCH" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.NO_PRODUCER_EPOCH">
   NO_PRODUCER_EPOCH
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L152"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L127"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/common/record/RecordBatch.html#NO_PRODUCER_EPOCH">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/common/record/RecordBatch.html#NO_PRODUCER_EPOCH</a></p>
@@ -980,7 +536,7 @@ public RecordBatch(params object[] args)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static short NO_PRODUCER_EPOCH { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static short NO_PRODUCER_EPOCH { get; set; }</code></pre>
   </div>
 
 
@@ -1004,7 +560,7 @@ public RecordBatch(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Common_Record_RecordBatch_NO_PRODUCER_ID" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.NO_PRODUCER_ID">
   NO_PRODUCER_ID
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L140"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L119"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/common/record/RecordBatch.html#NO_PRODUCER_ID">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/common/record/RecordBatch.html#NO_PRODUCER_ID</a></p>
@@ -1012,7 +568,7 @@ public RecordBatch(params object[] args)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static long NO_PRODUCER_ID { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static long NO_PRODUCER_ID { get; set; }</code></pre>
   </div>
 
 
@@ -1036,7 +592,7 @@ public RecordBatch(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Common_Record_RecordBatch_NO_SEQUENCE" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.NO_SEQUENCE">
   NO_SEQUENCE
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L134"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L115"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/common/record/RecordBatch.html#NO_SEQUENCE">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/common/record/RecordBatch.html#NO_SEQUENCE</a></p>
@@ -1044,7 +600,7 @@ public RecordBatch(params object[] args)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static int NO_SEQUENCE { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static int NO_SEQUENCE { get; set; }</code></pre>
   </div>
 
 
@@ -1068,7 +624,7 @@ public RecordBatch(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Common_Record_RecordBatch_NO_TIMESTAMP" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.NO_TIMESTAMP">
   NO_TIMESTAMP
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L146"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L123"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/common/record/RecordBatch.html#NO_TIMESTAMP">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/common/record/RecordBatch.html#NO_TIMESTAMP</a></p>
@@ -1076,7 +632,7 @@ public RecordBatch(params object[] args)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static long NO_TIMESTAMP { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static long NO_TIMESTAMP { get; set; }</code></pre>
   </div>
 
 
@@ -1104,7 +660,7 @@ public RecordBatch(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Common_Record_RecordBatch_BaseOffset" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.BaseOffset">
   BaseOffset()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L263"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L236"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/common/record/RecordBatch.html#baseOffset--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/common/record/RecordBatch.html#baseOffset--</a></p>
@@ -1137,7 +693,7 @@ public RecordBatch(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Common_Record_RecordBatch_BaseSequence" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.BaseSequence">
   BaseSequence()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L215"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L188"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/common/record/RecordBatch.html#baseSequence--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/common/record/RecordBatch.html#baseSequence--</a></p>
@@ -1170,7 +726,7 @@ public RecordBatch(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Common_Record_RecordBatch_Checksum" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.Checksum">
   Checksum()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L271"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L244"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/common/record/RecordBatch.html#checksum--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/common/record/RecordBatch.html#checksum--</a></p>
@@ -1203,7 +759,7 @@ public RecordBatch(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Common_Record_RecordBatch_CompressionType" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.CompressionType">
   CompressionType()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L311"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L284"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/common/record/RecordBatch.html#compressionType--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/common/record/RecordBatch.html#compressionType--</a></p>
@@ -1236,7 +792,7 @@ public RecordBatch(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Common_Record_RecordBatch_CountOrNull" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.CountOrNull">
   CountOrNull()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L247"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L220"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/common/record/RecordBatch.html#countOrNull--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/common/record/RecordBatch.html#countOrNull--</a></p>
@@ -1269,7 +825,7 @@ public RecordBatch(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Common_Record_RecordBatch_DeleteHorizonMs" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.DeleteHorizonMs">
   DeleteHorizonMs()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L255"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L228"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/common/record/RecordBatch.html#deleteHorizonMs--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/common/record/RecordBatch.html#deleteHorizonMs--</a></p>
@@ -1302,7 +858,7 @@ public RecordBatch(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Common_Record_RecordBatch_EnsureValid" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.EnsureValid">
   EnsureValid()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L343"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L316"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/common/record/RecordBatch.html#ensureValid--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/common/record/RecordBatch.html#ensureValid--</a></p>
@@ -1329,7 +885,7 @@ public RecordBatch(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Common_Record_RecordBatch_HasProducerId" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.HasProducerId">
   HasProducerId()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L167"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L140"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/common/record/RecordBatch.html#hasProducerId--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/common/record/RecordBatch.html#hasProducerId--</a></p>
@@ -1362,7 +918,7 @@ public RecordBatch(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Common_Record_RecordBatch_IsCompressed" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.IsCompressed">
   IsCompressed()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L175"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L148"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/common/record/RecordBatch.html#isCompressed--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/common/record/RecordBatch.html#isCompressed--</a></p>
@@ -1395,7 +951,7 @@ public RecordBatch(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Common_Record_RecordBatch_IsControlBatch" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.IsControlBatch">
   IsControlBatch()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L183"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L156"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/common/record/RecordBatch.html#isControlBatch--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/common/record/RecordBatch.html#isControlBatch--</a></p>
@@ -1428,7 +984,7 @@ public RecordBatch(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Common_Record_RecordBatch_IsTransactional" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.IsTransactional">
   IsTransactional()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L191"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L164"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/common/record/RecordBatch.html#isTransactional--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/common/record/RecordBatch.html#isTransactional--</a></p>
@@ -1461,7 +1017,7 @@ public RecordBatch(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Common_Record_RecordBatch_IsValid" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.IsValid">
   IsValid()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L199"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L172"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/common/record/RecordBatch.html#isValid--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/common/record/RecordBatch.html#isValid--</a></p>
@@ -1494,7 +1050,7 @@ public RecordBatch(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Common_Record_RecordBatch_LastOffset" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.LastOffset">
   LastOffset()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L279"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L252"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/common/record/RecordBatch.html#lastOffset--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/common/record/RecordBatch.html#lastOffset--</a></p>
@@ -1527,7 +1083,7 @@ public RecordBatch(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Common_Record_RecordBatch_LastSequence" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.LastSequence">
   LastSequence()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L223"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L196"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/common/record/RecordBatch.html#lastSequence--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/common/record/RecordBatch.html#lastSequence--</a></p>
@@ -1560,7 +1116,7 @@ public RecordBatch(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Common_Record_RecordBatch_Magic" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.Magic">
   Magic()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L207"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L180"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/common/record/RecordBatch.html#magic--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/common/record/RecordBatch.html#magic--</a></p>
@@ -1593,7 +1149,7 @@ public RecordBatch(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Common_Record_RecordBatch_MaxTimestamp" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.MaxTimestamp">
   MaxTimestamp()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L287"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L260"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/common/record/RecordBatch.html#maxTimestamp--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/common/record/RecordBatch.html#maxTimestamp--</a></p>
@@ -1626,7 +1182,7 @@ public RecordBatch(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Common_Record_RecordBatch_NextOffset" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.NextOffset">
   NextOffset()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L295"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L268"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/common/record/RecordBatch.html#nextOffset--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/common/record/RecordBatch.html#nextOffset--</a></p>
@@ -1659,7 +1215,7 @@ public RecordBatch(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Common_Record_RecordBatch_OffsetOfMaxTimestamp" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.OffsetOfMaxTimestamp">
   OffsetOfMaxTimestamp()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L359"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L332"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/common/record/RecordBatch.html#offsetOfMaxTimestamp--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/common/record/RecordBatch.html#offsetOfMaxTimestamp--</a></p>
@@ -1692,7 +1248,7 @@ public RecordBatch(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Common_Record_RecordBatch_PartitionLeaderEpoch" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.PartitionLeaderEpoch">
   PartitionLeaderEpoch()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L231"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L204"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/common/record/RecordBatch.html#partitionLeaderEpoch--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/common/record/RecordBatch.html#partitionLeaderEpoch--</a></p>
@@ -1725,7 +1281,7 @@ public RecordBatch(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Common_Record_RecordBatch_ProducerEpoch" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.ProducerEpoch">
   ProducerEpoch()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L336"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L309"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/common/record/RecordBatch.html#producerEpoch--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/common/record/RecordBatch.html#producerEpoch--</a></p>
@@ -1758,7 +1314,7 @@ public RecordBatch(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Common_Record_RecordBatch_ProducerId" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.ProducerId">
   ProducerId()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L303"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L276"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/common/record/RecordBatch.html#producerId--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/common/record/RecordBatch.html#producerId--</a></p>
@@ -1791,7 +1347,7 @@ public RecordBatch(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Common_Record_RecordBatch_SizeInBytes" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.SizeInBytes">
   SizeInBytes()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L239"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L212"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/common/record/RecordBatch.html#sizeInBytes--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/common/record/RecordBatch.html#sizeInBytes--</a></p>
@@ -1824,7 +1380,7 @@ public RecordBatch(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Common_Record_RecordBatch_StreamingIterator_Org_Apache_Kafka_Common_Utils_BufferSupplier_" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.StreamingIterator(Org.Apache.Kafka.Common.Utils.BufferSupplier)">
   StreamingIterator(BufferSupplier)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L328"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L301"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/common/record/RecordBatch.html#streamingIterator-org.apache.kafka.common.utils.BufferSupplier-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/common/record/RecordBatch.html#streamingIterator-org.apache.kafka.common.utils.BufferSupplier-</a></p>
@@ -1863,7 +1419,7 @@ public RecordBatch(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Common_Record_RecordBatch_TimestampType" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.TimestampType">
   TimestampType()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L319"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L292"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/common/record/RecordBatch.html#timestampType--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/common/record/RecordBatch.html#timestampType--</a></p>
@@ -1896,7 +1452,7 @@ public RecordBatch(params object[] args)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Common_Record_RecordBatch_WriteTo_Java_Nio_ByteBuffer_" data-uid="Org.Apache.Kafka.Common.Record.RecordBatch.WriteTo(Java.Nio.ByteBuffer)">
   WriteTo(ByteBuffer)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L351"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L324"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/common/record/RecordBatch.html#writeTo-java.nio.ByteBuffer-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/common/record/RecordBatch.html#writeTo-java.nio.ByteBuffer-</a></p>
@@ -1929,7 +1485,7 @@ public RecordBatch(params object[] args)</code></pre>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L90" class="edit-link">Edit this page</a>
+          <a href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Common/Record/RecordBatch.cs/#L81" class="edit-link">Edit this page</a>
         </div>
 
 

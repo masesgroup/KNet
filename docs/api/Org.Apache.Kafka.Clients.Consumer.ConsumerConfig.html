@@ -89,7 +89,7 @@
 
 
   <h1 id="Org_Apache_Kafka_Clients_Consumer_ConsumerConfig" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig" class="text-break">
-Class ConsumerConfig  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L70"><i class="bi bi-code-slash"></i></a>
+Class ConsumerConfig  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L63"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -102,7 +102,7 @@ Class ConsumerConfig  <a class="header-action link-secondary" title="View source
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ConsumerConfig : AbstractConfig, IDynamicMetaObjectProvider, IJVMBridgeCore, IEquatable&lt;IJVMBridgeBase&gt;, IDisposable, IJVMBridgeBaseStatic, IJVMBridgeBase, IJVMBridgeDefinition, IJVMBridgeMain</code></pre>
+    <pre><code class="lang-csharp hljs">public class ConsumerConfig : AbstractConfig, IDynamicMetaObjectProvider, IJVMBridgeCore, IEquatable&lt;IJVMBridgeBaseInstance&gt;, IDisposable, IJVMBridgeBaseStatic, IJVMBridgeBase, IJVMBridgeBaseInstance, IJVMBridgeDefinition, IJVMBridgeMain</code></pre>
   </div>
 
 
@@ -125,10 +125,11 @@ Class ConsumerConfig  <a class="header-action link-secondary" title="View source
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.idynamicmetaobjectprovider">IDynamicMetaObjectProvider</a></div>
       <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeCore.html">IJVMBridgeCore</a></div>
-      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBase.html">IJVMBridgeBase</a>&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBaseInstance.html">IJVMBridgeBaseInstance</a>&gt;</div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
       <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic.html">IJVMBridgeBaseStatic</a></div>
       <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBase.html">IJVMBridgeBase</a></div>
+      <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBaseInstance.html">IJVMBridgeBaseInstance</a></div>
       <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html">IJVMBridgeDefinition</a></div>
       <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeMain.html">IJVMBridgeMain</a></div>
     </dd>
@@ -138,6 +139,15 @@ Class ConsumerConfig  <a class="header-action link-secondary" title="View source
   <dl class="typelist inheritedMembers">
     <dt>Inherited Members</dt>
     <dd>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Common.Config.AbstractConfig.html#Org_Apache_Kafka_Common_Config_AbstractConfig_CreatePoolableInstance_Org_Apache_Kafka_Common_Config_ConfigDef_Java_Util_Map_System_Object_System_Object__System_Boolean_">AbstractConfig.CreatePoolableInstance(ConfigDef, Map&lt;object, object&gt;, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Common.Config.AbstractConfig.html#Org_Apache_Kafka_Common_Config_AbstractConfig_CreatePoolableInstance_Org_Apache_Kafka_Common_Config_ConfigDef_Java_Util_Map_System_Object_System_Object__Java_Util_Map_Java_Lang_String_System_Object__System_Boolean_">AbstractConfig.CreatePoolableInstance(ConfigDef, Map&lt;object, object&gt;, Map&lt;String, object&gt;, bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="Org.Apache.Kafka.Common.Config.AbstractConfig.html#Org_Apache_Kafka_Common_Config_AbstractConfig_CreatePoolableInstance_Org_Apache_Kafka_Common_Config_ConfigDef_Java_Util_Map_System_Object_System_Object__">AbstractConfig.CreatePoolableInstance(ConfigDef, Map&lt;object, object&gt;)</a>
+    </div>
     <div>
       <a class="xref" href="Org.Apache.Kafka.Common.Config.AbstractConfig.html#Org_Apache_Kafka_Common_Config_AbstractConfig_AUTOMATIC_CONFIG_PROVIDERS_PROPERTY">AbstractConfig.AUTOMATIC_CONFIG_PROVIDERS_PROPERTY</a>
     </div>
@@ -228,381 +238,6 @@ Class ConsumerConfig  <a class="header-action link-secondary" title="View source
     <div>
       <a class="xref" href="Org.Apache.Kafka.Common.Config.AbstractConfig.html#Org_Apache_Kafka_Common_Config_AbstractConfig_LogUnused">AbstractConfig.LogUnused()</a>
     </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AbstractConfig&gt;.SExecute(IJavaType, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AbstractConfig&gt;.SExecuteWithSignature(IJavaType, string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AbstractConfig&gt;.SExecute(string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AbstractConfig&gt;.SExecuteWithSignature(string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AbstractConfig&gt;.SExecute&lt;TReturn&gt;(IJavaType, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AbstractConfig&gt;.SExecuteWithSignature&lt;TReturn&gt;(IJavaType, string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AbstractConfig&gt;.SExecute&lt;TReturn&gt;(string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AbstractConfig&gt;.SExecuteWithSignature&lt;TReturn&gt;(string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AbstractConfig&gt;.SExecute(Type, IJavaType, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AbstractConfig&gt;.SExecuteWithSignature(Type, IJavaType, string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AbstractConfig&gt;.SExecute(Type, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AbstractConfig&gt;.SExecuteWithSignature(Type, string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AbstractConfig&gt;.SExecute&lt;TNewClass, TReturn&gt;(IJavaType, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AbstractConfig&gt;.SExecuteWithSignature&lt;TNewClass, TReturn&gt;(IJavaType, string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AbstractConfig&gt;.SExecute&lt;TNewClass, TReturn&gt;(string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AbstractConfig&gt;.SExecuteWithSignature&lt;TNewClass, TReturn&gt;(string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AbstractConfig&gt;.SExecute&lt;TReturn&gt;(Type, IJavaType, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AbstractConfig&gt;.SExecuteWithSignature&lt;TReturn&gt;(Type, IJavaType, string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AbstractConfig&gt;.SExecute&lt;TReturn&gt;(Type, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AbstractConfig&gt;.SExecuteWithSignature&lt;TReturn&gt;(Type, string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AbstractConfig&gt;.SExecute&lt;TNewClass, TReturn, TConverter&gt;(IJavaType, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AbstractConfig&gt;.SExecuteWithSignature&lt;TNewClass, TReturn, TConverter&gt;(IJavaType, string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AbstractConfig&gt;.SExecute&lt;TNewClass, TReturn, TConverter&gt;(string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AbstractConfig&gt;.SExecuteWithSignature&lt;TNewClass, TReturn, TConverter&gt;(string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AbstractConfig&gt;.SExecute&lt;TReturn, TConverter&gt;(Type, IJavaType, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AbstractConfig&gt;.SExecuteWithSignature&lt;TReturn, TConverter&gt;(Type, IJavaType, string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AbstractConfig&gt;.SExecute&lt;TReturn, TConverter&gt;(Type, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;AbstractConfig&gt;.SExecuteWithSignature&lt;TReturn, TConverter&gt;(Type, string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AbstractConfig&gt;.SExecuteArray&lt;TArrayType&gt;(IJavaType, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AbstractConfig&gt;.SExecuteWithSignatureArray&lt;TArrayType&gt;(IJavaType, string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AbstractConfig&gt;.SExecuteArray&lt;TArrayType&gt;(string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AbstractConfig&gt;.SExecuteWithSignatureArray&lt;TArrayType&gt;(string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AbstractConfig&gt;.SGetField(IJavaType, string)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AbstractConfig&gt;.SGetField(string)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AbstractConfig&gt;.SGetField&lt;TReturn&gt;(IJavaType, string)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AbstractConfig&gt;.SGetField&lt;TReturn&gt;(string)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AbstractConfig&gt;.SGetFieldArray&lt;TReturn&gt;(IJavaType, string)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AbstractConfig&gt;.SGetFieldArray&lt;TReturn&gt;(string)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AbstractConfig&gt;.SSetField(IJavaType, string, object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AbstractConfig&gt;.SSetField(string, object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AbstractConfig&gt;.SSetField&lt;TValue&gt;(IJavaType, string, TValue)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AbstractConfig&gt;.SSetField&lt;TValue&gt;(string, TValue)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AbstractConfig&gt;.IsAssignableFrom(string)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_IsAssignableFrom_MASES_JCOBridge_C2JBridge_JVMInterop_IJavaType_">JVMBridgeBase&lt;AbstractConfig&gt;.IsAssignableFrom(IJavaType)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_IsAssignableFrom__1">JVMBridgeBase&lt;AbstractConfig&gt;.IsAssignableFrom&lt;T&gt;()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">JVMBridgeBase&lt;AbstractConfig&gt;.New(params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AbstractConfig&gt;.NewWithSignature(string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AbstractConfig&gt;.NewAndWrapsDirect&lt;TNewClass&gt;(string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;AbstractConfig&gt;.NewWithSignatureAndWrapsDirect&lt;TNewClass&gt;(string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_Execute__1___0___">JVMBridgeBase&lt;AbstractConfig&gt;.Execute&lt;T&gt;(params T[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_DynBridgeClazz">JVMBridgeBase&lt;AbstractConfig&gt;.DynBridgeClazz</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_BridgeClazz">JVMBridgeBase&lt;AbstractConfig&gt;.BridgeClazz</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ReferenceEqualsJVM_MASES_JCOBridge_C2JBridge_JVMBridgeBase_MASES_JCOBridge_C2JBridge_JVMBridgeBase_">JVMBridgeBase.ReferenceEqualsJVM(JVMBridgeBase, JVMBridgeBase)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.ClazzOf&lt;TClass&gt;(bool)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">JVMBridgeBase.ClazzOf&lt;TClass&gt;(out Exception, bool)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ClazzOf(string, bool)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ClazzOf(string, out Exception, bool)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_RuntimeClassNameOf__1">JVMBridgeBase.RuntimeClassNameOf&lt;T&gt;()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.RuntimeClassNameOf(Type)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ClassNameOf__1">JVMBridgeBase.ClassNameOf&lt;T&gt;()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ClassOf__1">JVMBridgeBase.ClassOf&lt;T&gt;()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_WrapsDirect__1_MASES_JCOBridge_C2JBridge_JVMInterop_IJavaObject_">JVMBridgeBase.WrapsDirect&lt;TNewClass&gt;(IJavaObject)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Wraps__1_MASES_JCOBridge_C2JBridge_JVMInterop_IJavaObject_">JVMBridgeBase.Wraps&lt;TNewClass&gt;(IJavaObject)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.Wraps(Type, IJavaObject, string)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Wraps__2_MASES_JCOBridge_C2JBridge_JVMInterop_IJavaObject_">JVMBridgeBase.Wraps&lt;TNewClass, TReturn&gt;(IJavaObject)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.Wraps&lt;TReturn&gt;(Type, IJavaObject, string)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Wraps__3_MASES_JCOBridge_C2JBridge_JVMInterop_IJavaObject_">JVMBridgeBase.Wraps&lt;TNewClass, TReturn, TConverter&gt;(IJavaObject)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.Wraps&lt;TReturn, TConverter&gt;(Type, IJavaObject)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_MonitorEnter">JVMBridgeBase.MonitorEnter()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_MonitorExit">JVMBridgeBase.MonitorExit()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IsInstanceOf(string)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsInstanceOf_MASES_JCOBridge_C2JBridge_JVMInterop_IJavaType_">JVMBridgeBase.IsInstanceOf(IJavaType)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsInstanceOf__1">JVMBridgeBase.IsInstanceOf&lt;T&gt;()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_RuntimeIsInstanceOf__1">JVMBridgeBase.RuntimeIsInstanceOf&lt;T&gt;()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_CastTo__1">JVMBridgeBase.CastTo&lt;TNewClass&gt;()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_CastDirect__1">JVMBridgeBase.CastDirect&lt;TNewClass&gt;()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Dispose">JVMBridgeBase.Dispose()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.Dispose(bool)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ToString">JVMBridgeBase.ToString()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Equals_MASES_JCOBridge_C2JBridge_IJVMBridgeBase_">JVMBridgeBase.Equals(IJVMBridgeBase)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">JVMBridgeBase.Equals(object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_GetHashCode">JVMBridgeBase.GetHashCode()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Notify">JVMBridgeBase.Notify()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_NotifyAll">JVMBridgeBase.NotifyAll()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Wait">JVMBridgeBase.Wait()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">JVMBridgeBase.Wait(long)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">JVMBridgeBase.Wait(long, int)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecute(string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignature(string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecute&lt;TReturn&gt;(string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignature&lt;TReturn&gt;(string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecute&lt;TNewClass, TReturn&gt;(string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignature&lt;TNewClass, TReturn&gt;(string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecute&lt;TNewClass, TReturn, TConverter&gt;(string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignature&lt;TNewClass, TReturn, TConverter&gt;(string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteArray&lt;TArrayType&gt;(string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignatureArray&lt;TArrayType&gt;(string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IGetField(string)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IGetField&lt;TReturn&gt;(string)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IGetFieldArray&lt;TReturn&gt;(string)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ISetField(string, object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ISetField&lt;TValue&gt;(string, TValue)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">JVMBridgeBase.Throw&lt;TException&gt;(params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">JVMBridgeBase.BiThrow&lt;TException&gt;(params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_DynBridgeInstance">JVMBridgeBase.DynBridgeInstance</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeInstance">JVMBridgeBase.BridgeInstance</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeListener">JVMBridgeBase.IsBridgeListener</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trygetmember">DynamicObject.TryGetMember(GetMemberBinder, out object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trysetmember">DynamicObject.TrySetMember(SetMemberBinder, object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trydeletemember">DynamicObject.TryDeleteMember(DeleteMemberBinder)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryinvokemember">DynamicObject.TryInvokeMember(InvokeMemberBinder, object[], out object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryconvert">DynamicObject.TryConvert(ConvertBinder, out object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trycreateinstance">DynamicObject.TryCreateInstance(CreateInstanceBinder, object[], out object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryinvoke">DynamicObject.TryInvoke(InvokeBinder, object[], out object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trybinaryoperation">DynamicObject.TryBinaryOperation(BinaryOperationBinder, object, out object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryunaryoperation">DynamicObject.TryUnaryOperation(UnaryOperationBinder, out object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trygetindex">DynamicObject.TryGetIndex(GetIndexBinder, object[], out object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trysetindex">DynamicObject.TrySetIndex(SetIndexBinder, object[], object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trydeleteindex">DynamicObject.TryDeleteIndex(DeleteIndexBinder, object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.getdynamicmembernames">DynamicObject.GetDynamicMemberNames()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.getmetaobject">DynamicObject.GetMetaObject(Expression)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
-    </div>
   </dd></dl>
 
 
@@ -616,36 +251,9 @@ Class ConsumerConfig  <a class="header-action link-secondary" title="View source
 
   <a id="Org_Apache_Kafka_Clients_Consumer_ConsumerConfig__ctor_" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.#ctor*"></a>
 
-  <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerConfig__ctor" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.#ctor">
-  ConsumerConfig()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L38"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ConsumerConfig()</code></pre>
-  </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <a id="Org_Apache_Kafka_Clients_Consumer_ConsumerConfig__ctor_" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.#ctor*"></a>
-
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerConfig__ctor_Java_Util_Map_Java_Lang_String_System_Object__" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.#ctor(Java.Util.Map{Java.Lang.String,System.Object})">
   ConsumerConfig(Map&lt;String, object&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L77"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L70"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#org.apache.kafka.clients.consumer.ConsumerConfig(java.util.Map)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#org.apache.kafka.clients.consumer.ConsumerConfig(java.util.Map)</a></p>
@@ -711,10 +319,10 @@ Class ConsumerConfig  <a class="header-action link-secondary" title="View source
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerConfig__ctor_MASES_JCOBridge_C2JBridge_IJVMBridgeBaseInitializer_" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.#ctor(MASES.JCOBridge.C2JBridge.IJVMBridgeBaseInitializer)">
   ConsumerConfig(IJVMBridgeBaseInitializer)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L39"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Internal constructor: used internally from JCOBridge</p>
+  <div class="markdown level1 summary"><p>Initializer used internally by JCOBridge. Do not use directly.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -740,38 +348,6 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
 
 
-  <a id="Org_Apache_Kafka_Clients_Consumer_ConsumerConfig__ctor_" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.#ctor*"></a>
-
-  <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerConfig__ctor_System_Object___" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.#ctor(System.Object[])">
-  ConsumerConfig(params object[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L47"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ConsumerConfig(params object[] args)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>args</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>[]</dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-
   <h2 class="section" id="properties">Properties
 </h2>
 
@@ -780,7 +356,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_ALLOW_AUTO_CREATE_TOPICS_CONFIG" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.ALLOW_AUTO_CREATE_TOPICS_CONFIG">
   ALLOW_AUTO_CREATE_TOPICS_CONFIG
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L142"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L135"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#ALLOW_AUTO_CREATE_TOPICS_CONFIG">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#ALLOW_AUTO_CREATE_TOPICS_CONFIG</a></p>
@@ -788,7 +364,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static String ALLOW_AUTO_CREATE_TOPICS_CONFIG { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static String ALLOW_AUTO_CREATE_TOPICS_CONFIG { get; set; }</code></pre>
   </div>
 
 
@@ -812,7 +388,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_ASSIGN_FROM_SUBSCRIBED_ASSIGNORS" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.ASSIGN_FROM_SUBSCRIBED_ASSIGNORS">
   ASSIGN_FROM_SUBSCRIBED_ASSIGNORS
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L484"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L368"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#ASSIGN_FROM_SUBSCRIBED_ASSIGNORS">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#ASSIGN_FROM_SUBSCRIBED_ASSIGNORS</a></p>
@@ -820,7 +396,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static List ASSIGN_FROM_SUBSCRIBED_ASSIGNORS { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static List ASSIGN_FROM_SUBSCRIBED_ASSIGNORS { get; set; }</code></pre>
   </div>
 
 
@@ -844,7 +420,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_AUTO_COMMIT_INTERVAL_MS_CONFIG" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.AUTO_COMMIT_INTERVAL_MS_CONFIG">
   AUTO_COMMIT_INTERVAL_MS_CONFIG
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L148"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L139"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#AUTO_COMMIT_INTERVAL_MS_CONFIG">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#AUTO_COMMIT_INTERVAL_MS_CONFIG</a></p>
@@ -852,7 +428,40 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static String AUTO_COMMIT_INTERVAL_MS_CONFIG { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static String AUTO_COMMIT_INTERVAL_MS_CONFIG { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_AUTO_INCLUDE_JMX_REPORTER_CONFIG_" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.AUTO_INCLUDE_JMX_REPORTER_CONFIG*"></a>
+
+  <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_AUTO_INCLUDE_JMX_REPORTER_CONFIG" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.AUTO_INCLUDE_JMX_REPORTER_CONFIG">
+  AUTO_INCLUDE_JMX_REPORTER_CONFIG
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L143"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#AUTO_INCLUDE_JMX_REPORTER_CONFIG">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#AUTO_INCLUDE_JMX_REPORTER_CONFIG</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Deprecated in JVM&quot;)]
+public static String AUTO_INCLUDE_JMX_REPORTER_CONFIG { get; set; }</code></pre>
   </div>
 
 
@@ -876,7 +485,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_AUTO_OFFSET_RESET_CONFIG" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.AUTO_OFFSET_RESET_CONFIG">
   AUTO_OFFSET_RESET_CONFIG
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L154"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L148"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#AUTO_OFFSET_RESET_CONFIG">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#AUTO_OFFSET_RESET_CONFIG</a></p>
@@ -884,7 +493,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static String AUTO_OFFSET_RESET_CONFIG { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static String AUTO_OFFSET_RESET_CONFIG { get; set; }</code></pre>
   </div>
 
 
@@ -908,7 +517,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_AUTO_OFFSET_RESET_DOC" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.AUTO_OFFSET_RESET_DOC">
   AUTO_OFFSET_RESET_DOC
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L160"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L152"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#AUTO_OFFSET_RESET_DOC">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#AUTO_OFFSET_RESET_DOC</a></p>
@@ -916,7 +525,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static String AUTO_OFFSET_RESET_DOC { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static String AUTO_OFFSET_RESET_DOC { get; set; }</code></pre>
   </div>
 
 
@@ -940,7 +549,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_BOOTSTRAP_SERVERS_CONFIG" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG">
   BOOTSTRAP_SERVERS_CONFIG
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L166"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L156"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#BOOTSTRAP_SERVERS_CONFIG">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#BOOTSTRAP_SERVERS_CONFIG</a></p>
@@ -948,7 +557,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static String BOOTSTRAP_SERVERS_CONFIG { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static String BOOTSTRAP_SERVERS_CONFIG { get; set; }</code></pre>
   </div>
 
 
@@ -972,7 +581,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_BridgeClassName" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.BridgeClassName">
   BridgeClassName
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L47"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Java class name to be instantiated</p>
@@ -1004,7 +613,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_CHECK_CRCS_CONFIG" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.CHECK_CRCS_CONFIG">
   CHECK_CRCS_CONFIG
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L172"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L160"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#CHECK_CRCS_CONFIG">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#CHECK_CRCS_CONFIG</a></p>
@@ -1012,7 +621,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static String CHECK_CRCS_CONFIG { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static String CHECK_CRCS_CONFIG { get; set; }</code></pre>
   </div>
 
 
@@ -1036,7 +645,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_CLIENT_DNS_LOOKUP_CONFIG" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.CLIENT_DNS_LOOKUP_CONFIG">
   CLIENT_DNS_LOOKUP_CONFIG
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L178"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L164"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#CLIENT_DNS_LOOKUP_CONFIG">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#CLIENT_DNS_LOOKUP_CONFIG</a></p>
@@ -1044,7 +653,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static String CLIENT_DNS_LOOKUP_CONFIG { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static String CLIENT_DNS_LOOKUP_CONFIG { get; set; }</code></pre>
   </div>
 
 
@@ -1068,7 +677,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_CLIENT_ID_CONFIG" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.CLIENT_ID_CONFIG">
   CLIENT_ID_CONFIG
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L184"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L168"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#CLIENT_ID_CONFIG">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#CLIENT_ID_CONFIG</a></p>
@@ -1076,7 +685,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static String CLIENT_ID_CONFIG { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static String CLIENT_ID_CONFIG { get; set; }</code></pre>
   </div>
 
 
@@ -1100,7 +709,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_CLIENT_RACK_CONFIG" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.CLIENT_RACK_CONFIG">
   CLIENT_RACK_CONFIG
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L190"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L172"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#CLIENT_RACK_CONFIG">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#CLIENT_RACK_CONFIG</a></p>
@@ -1108,7 +717,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static String CLIENT_RACK_CONFIG { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static String CLIENT_RACK_CONFIG { get; set; }</code></pre>
   </div>
 
 
@@ -1132,7 +741,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_CONNECTIONS_MAX_IDLE_MS_CONFIG" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.CONNECTIONS_MAX_IDLE_MS_CONFIG">
   CONNECTIONS_MAX_IDLE_MS_CONFIG
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L196"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L176"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#CONNECTIONS_MAX_IDLE_MS_CONFIG">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#CONNECTIONS_MAX_IDLE_MS_CONFIG</a></p>
@@ -1140,7 +749,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static String CONNECTIONS_MAX_IDLE_MS_CONFIG { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static String CONNECTIONS_MAX_IDLE_MS_CONFIG { get; set; }</code></pre>
   </div>
 
 
@@ -1164,7 +773,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_DEFAULT_ALLOW_AUTO_CREATE_TOPICS" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.DEFAULT_ALLOW_AUTO_CREATE_TOPICS">
   DEFAULT_ALLOW_AUTO_CREATE_TOPICS
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L100"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L107"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#DEFAULT_ALLOW_AUTO_CREATE_TOPICS">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#DEFAULT_ALLOW_AUTO_CREATE_TOPICS</a></p>
@@ -1172,7 +781,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool DEFAULT_ALLOW_AUTO_CREATE_TOPICS { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static bool DEFAULT_ALLOW_AUTO_CREATE_TOPICS { get; set; }</code></pre>
   </div>
 
 
@@ -1196,7 +805,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_DEFAULT_API_TIMEOUT_MS_CONFIG" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.DEFAULT_API_TIMEOUT_MS_CONFIG">
   DEFAULT_API_TIMEOUT_MS_CONFIG
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L202"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L180"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#DEFAULT_API_TIMEOUT_MS_CONFIG">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#DEFAULT_API_TIMEOUT_MS_CONFIG</a></p>
@@ -1204,7 +813,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static String DEFAULT_API_TIMEOUT_MS_CONFIG { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static String DEFAULT_API_TIMEOUT_MS_CONFIG { get; set; }</code></pre>
   </div>
 
 
@@ -1228,7 +837,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_DEFAULT_CLIENT_RACK" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.DEFAULT_CLIENT_RACK">
   DEFAULT_CLIENT_RACK
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L208"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L184"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#DEFAULT_CLIENT_RACK">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#DEFAULT_CLIENT_RACK</a></p>
@@ -1236,7 +845,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static String DEFAULT_CLIENT_RACK { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static String DEFAULT_CLIENT_RACK { get; set; }</code></pre>
   </div>
 
 
@@ -1260,7 +869,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_DEFAULT_EXCLUDE_INTERNAL_TOPICS" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.DEFAULT_EXCLUDE_INTERNAL_TOPICS">
   DEFAULT_EXCLUDE_INTERNAL_TOPICS
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L106"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L111"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#DEFAULT_EXCLUDE_INTERNAL_TOPICS">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#DEFAULT_EXCLUDE_INTERNAL_TOPICS</a></p>
@@ -1268,7 +877,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool DEFAULT_EXCLUDE_INTERNAL_TOPICS { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static bool DEFAULT_EXCLUDE_INTERNAL_TOPICS { get; set; }</code></pre>
   </div>
 
 
@@ -1292,7 +901,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_DEFAULT_FETCH_MAX_BYTES" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.DEFAULT_FETCH_MAX_BYTES">
   DEFAULT_FETCH_MAX_BYTES
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L112"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L115"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#DEFAULT_FETCH_MAX_BYTES">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#DEFAULT_FETCH_MAX_BYTES</a></p>
@@ -1300,7 +909,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static int DEFAULT_FETCH_MAX_BYTES { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static int DEFAULT_FETCH_MAX_BYTES { get; set; }</code></pre>
   </div>
 
 
@@ -1324,7 +933,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_DEFAULT_FETCH_MAX_WAIT_MS" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.DEFAULT_FETCH_MAX_WAIT_MS">
   DEFAULT_FETCH_MAX_WAIT_MS
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L118"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L119"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#DEFAULT_FETCH_MAX_WAIT_MS">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#DEFAULT_FETCH_MAX_WAIT_MS</a></p>
@@ -1332,7 +941,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static int DEFAULT_FETCH_MAX_WAIT_MS { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static int DEFAULT_FETCH_MAX_WAIT_MS { get; set; }</code></pre>
   </div>
 
 
@@ -1356,7 +965,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_DEFAULT_FETCH_MIN_BYTES" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.DEFAULT_FETCH_MIN_BYTES">
   DEFAULT_FETCH_MIN_BYTES
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L124"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L123"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#DEFAULT_FETCH_MIN_BYTES">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#DEFAULT_FETCH_MIN_BYTES</a></p>
@@ -1364,7 +973,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static int DEFAULT_FETCH_MIN_BYTES { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static int DEFAULT_FETCH_MIN_BYTES { get; set; }</code></pre>
   </div>
 
 
@@ -1388,7 +997,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_DEFAULT_GROUP_PROTOCOL" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.DEFAULT_GROUP_PROTOCOL">
   DEFAULT_GROUP_PROTOCOL
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L214"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L188"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#DEFAULT_GROUP_PROTOCOL">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#DEFAULT_GROUP_PROTOCOL</a></p>
@@ -1396,7 +1005,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static String DEFAULT_GROUP_PROTOCOL { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static String DEFAULT_GROUP_PROTOCOL { get; set; }</code></pre>
   </div>
 
 
@@ -1420,7 +1029,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_DEFAULT_GROUP_REMOTE_ASSIGNOR" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.DEFAULT_GROUP_REMOTE_ASSIGNOR">
   DEFAULT_GROUP_REMOTE_ASSIGNOR
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L220"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L192"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#DEFAULT_GROUP_REMOTE_ASSIGNOR">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#DEFAULT_GROUP_REMOTE_ASSIGNOR</a></p>
@@ -1428,7 +1037,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static String DEFAULT_GROUP_REMOTE_ASSIGNOR { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static String DEFAULT_GROUP_REMOTE_ASSIGNOR { get; set; }</code></pre>
   </div>
 
 
@@ -1452,7 +1061,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_DEFAULT_ISOLATION_LEVEL" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.DEFAULT_ISOLATION_LEVEL">
   DEFAULT_ISOLATION_LEVEL
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L226"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L196"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#DEFAULT_ISOLATION_LEVEL">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#DEFAULT_ISOLATION_LEVEL</a></p>
@@ -1460,7 +1069,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static String DEFAULT_ISOLATION_LEVEL { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static String DEFAULT_ISOLATION_LEVEL { get; set; }</code></pre>
   </div>
 
 
@@ -1484,7 +1093,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_DEFAULT_MAX_PARTITION_FETCH_BYTES" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.DEFAULT_MAX_PARTITION_FETCH_BYTES">
   DEFAULT_MAX_PARTITION_FETCH_BYTES
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L130"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L127"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#DEFAULT_MAX_PARTITION_FETCH_BYTES">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#DEFAULT_MAX_PARTITION_FETCH_BYTES</a></p>
@@ -1492,7 +1101,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static int DEFAULT_MAX_PARTITION_FETCH_BYTES { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static int DEFAULT_MAX_PARTITION_FETCH_BYTES { get; set; }</code></pre>
   </div>
 
 
@@ -1516,7 +1125,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_DEFAULT_MAX_POLL_RECORDS" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.DEFAULT_MAX_POLL_RECORDS">
   DEFAULT_MAX_POLL_RECORDS
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L136"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L131"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#DEFAULT_MAX_POLL_RECORDS">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#DEFAULT_MAX_POLL_RECORDS</a></p>
@@ -1524,7 +1133,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static int DEFAULT_MAX_POLL_RECORDS { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static int DEFAULT_MAX_POLL_RECORDS { get; set; }</code></pre>
   </div>
 
 
@@ -1548,7 +1157,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_ENABLE_AUTO_COMMIT_CONFIG" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.ENABLE_AUTO_COMMIT_CONFIG">
   ENABLE_AUTO_COMMIT_CONFIG
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L232"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L200"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#ENABLE_AUTO_COMMIT_CONFIG">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#ENABLE_AUTO_COMMIT_CONFIG</a></p>
@@ -1556,7 +1165,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static String ENABLE_AUTO_COMMIT_CONFIG { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static String ENABLE_AUTO_COMMIT_CONFIG { get; set; }</code></pre>
   </div>
 
 
@@ -1580,7 +1189,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_ENABLE_METRICS_PUSH_CONFIG" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.ENABLE_METRICS_PUSH_CONFIG">
   ENABLE_METRICS_PUSH_CONFIG
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L238"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L204"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#ENABLE_METRICS_PUSH_CONFIG">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#ENABLE_METRICS_PUSH_CONFIG</a></p>
@@ -1588,7 +1197,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static String ENABLE_METRICS_PUSH_CONFIG { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static String ENABLE_METRICS_PUSH_CONFIG { get; set; }</code></pre>
   </div>
 
 
@@ -1612,7 +1221,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_ENABLE_METRICS_PUSH_DOC" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.ENABLE_METRICS_PUSH_DOC">
   ENABLE_METRICS_PUSH_DOC
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L244"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L208"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#ENABLE_METRICS_PUSH_DOC">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#ENABLE_METRICS_PUSH_DOC</a></p>
@@ -1620,7 +1229,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static String ENABLE_METRICS_PUSH_DOC { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static String ENABLE_METRICS_PUSH_DOC { get; set; }</code></pre>
   </div>
 
 
@@ -1644,7 +1253,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_EXCLUDE_INTERNAL_TOPICS_CONFIG" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.EXCLUDE_INTERNAL_TOPICS_CONFIG">
   EXCLUDE_INTERNAL_TOPICS_CONFIG
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L250"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L212"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#EXCLUDE_INTERNAL_TOPICS_CONFIG">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#EXCLUDE_INTERNAL_TOPICS_CONFIG</a></p>
@@ -1652,7 +1261,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static String EXCLUDE_INTERNAL_TOPICS_CONFIG { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static String EXCLUDE_INTERNAL_TOPICS_CONFIG { get; set; }</code></pre>
   </div>
 
 
@@ -1676,7 +1285,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_FETCH_MAX_BYTES_CONFIG" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.FETCH_MAX_BYTES_CONFIG">
   FETCH_MAX_BYTES_CONFIG
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L256"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L216"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#FETCH_MAX_BYTES_CONFIG">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#FETCH_MAX_BYTES_CONFIG</a></p>
@@ -1684,7 +1293,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static String FETCH_MAX_BYTES_CONFIG { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static String FETCH_MAX_BYTES_CONFIG { get; set; }</code></pre>
   </div>
 
 
@@ -1708,7 +1317,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_FETCH_MAX_WAIT_MS_CONFIG" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.FETCH_MAX_WAIT_MS_CONFIG">
   FETCH_MAX_WAIT_MS_CONFIG
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L262"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L220"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#FETCH_MAX_WAIT_MS_CONFIG">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#FETCH_MAX_WAIT_MS_CONFIG</a></p>
@@ -1716,7 +1325,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static String FETCH_MAX_WAIT_MS_CONFIG { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static String FETCH_MAX_WAIT_MS_CONFIG { get; set; }</code></pre>
   </div>
 
 
@@ -1740,7 +1349,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_FETCH_MIN_BYTES_CONFIG" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.FETCH_MIN_BYTES_CONFIG">
   FETCH_MIN_BYTES_CONFIG
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L268"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L224"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#FETCH_MIN_BYTES_CONFIG">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#FETCH_MIN_BYTES_CONFIG</a></p>
@@ -1748,7 +1357,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static String FETCH_MIN_BYTES_CONFIG { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static String FETCH_MIN_BYTES_CONFIG { get; set; }</code></pre>
   </div>
 
 
@@ -1772,7 +1381,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_GROUP_ID_CONFIG" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.GROUP_ID_CONFIG">
   GROUP_ID_CONFIG
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L274"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L228"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#GROUP_ID_CONFIG">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#GROUP_ID_CONFIG</a></p>
@@ -1780,7 +1389,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static String GROUP_ID_CONFIG { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static String GROUP_ID_CONFIG { get; set; }</code></pre>
   </div>
 
 
@@ -1804,7 +1413,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_GROUP_INSTANCE_ID_CONFIG" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.GROUP_INSTANCE_ID_CONFIG">
   GROUP_INSTANCE_ID_CONFIG
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L280"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L232"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#GROUP_INSTANCE_ID_CONFIG">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#GROUP_INSTANCE_ID_CONFIG</a></p>
@@ -1812,7 +1421,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static String GROUP_INSTANCE_ID_CONFIG { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static String GROUP_INSTANCE_ID_CONFIG { get; set; }</code></pre>
   </div>
 
 
@@ -1836,7 +1445,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_GROUP_PROTOCOL_CONFIG" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.GROUP_PROTOCOL_CONFIG">
   GROUP_PROTOCOL_CONFIG
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L286"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L236"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#GROUP_PROTOCOL_CONFIG">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#GROUP_PROTOCOL_CONFIG</a></p>
@@ -1844,7 +1453,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static String GROUP_PROTOCOL_CONFIG { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static String GROUP_PROTOCOL_CONFIG { get; set; }</code></pre>
   </div>
 
 
@@ -1868,7 +1477,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_GROUP_PROTOCOL_DOC" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.GROUP_PROTOCOL_DOC">
   GROUP_PROTOCOL_DOC
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L292"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L240"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#GROUP_PROTOCOL_DOC">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#GROUP_PROTOCOL_DOC</a></p>
@@ -1876,7 +1485,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static String GROUP_PROTOCOL_DOC { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static String GROUP_PROTOCOL_DOC { get; set; }</code></pre>
   </div>
 
 
@@ -1900,7 +1509,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_GROUP_REMOTE_ASSIGNOR_CONFIG" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.GROUP_REMOTE_ASSIGNOR_CONFIG">
   GROUP_REMOTE_ASSIGNOR_CONFIG
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L298"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L244"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#GROUP_REMOTE_ASSIGNOR_CONFIG">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#GROUP_REMOTE_ASSIGNOR_CONFIG</a></p>
@@ -1908,7 +1517,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static String GROUP_REMOTE_ASSIGNOR_CONFIG { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static String GROUP_REMOTE_ASSIGNOR_CONFIG { get; set; }</code></pre>
   </div>
 
 
@@ -1932,7 +1541,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_GROUP_REMOTE_ASSIGNOR_DOC" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.GROUP_REMOTE_ASSIGNOR_DOC">
   GROUP_REMOTE_ASSIGNOR_DOC
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L304"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L248"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#GROUP_REMOTE_ASSIGNOR_DOC">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#GROUP_REMOTE_ASSIGNOR_DOC</a></p>
@@ -1940,7 +1549,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static String GROUP_REMOTE_ASSIGNOR_DOC { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static String GROUP_REMOTE_ASSIGNOR_DOC { get; set; }</code></pre>
   </div>
 
 
@@ -1964,7 +1573,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_HEARTBEAT_INTERVAL_MS_CONFIG" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.HEARTBEAT_INTERVAL_MS_CONFIG">
   HEARTBEAT_INTERVAL_MS_CONFIG
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L310"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L252"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#HEARTBEAT_INTERVAL_MS_CONFIG">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#HEARTBEAT_INTERVAL_MS_CONFIG</a></p>
@@ -1972,7 +1581,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static String HEARTBEAT_INTERVAL_MS_CONFIG { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static String HEARTBEAT_INTERVAL_MS_CONFIG { get; set; }</code></pre>
   </div>
 
 
@@ -1996,7 +1605,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_INTERCEPTOR_CLASSES_CONFIG" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.INTERCEPTOR_CLASSES_CONFIG">
   INTERCEPTOR_CLASSES_CONFIG
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L316"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L256"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#INTERCEPTOR_CLASSES_CONFIG">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#INTERCEPTOR_CLASSES_CONFIG</a></p>
@@ -2004,7 +1613,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static String INTERCEPTOR_CLASSES_CONFIG { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static String INTERCEPTOR_CLASSES_CONFIG { get; set; }</code></pre>
   </div>
 
 
@@ -2028,7 +1637,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_INTERCEPTOR_CLASSES_DOC" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.INTERCEPTOR_CLASSES_DOC">
   INTERCEPTOR_CLASSES_DOC
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L322"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L260"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#INTERCEPTOR_CLASSES_DOC">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#INTERCEPTOR_CLASSES_DOC</a></p>
@@ -2036,7 +1645,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static String INTERCEPTOR_CLASSES_DOC { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static String INTERCEPTOR_CLASSES_DOC { get; set; }</code></pre>
   </div>
 
 
@@ -2060,7 +1669,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_ISOLATION_LEVEL_CONFIG" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.ISOLATION_LEVEL_CONFIG">
   ISOLATION_LEVEL_CONFIG
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L328"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L264"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#ISOLATION_LEVEL_CONFIG">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#ISOLATION_LEVEL_CONFIG</a></p>
@@ -2068,7 +1677,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static String ISOLATION_LEVEL_CONFIG { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static String ISOLATION_LEVEL_CONFIG { get; set; }</code></pre>
   </div>
 
 
@@ -2092,7 +1701,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_ISOLATION_LEVEL_DOC" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.ISOLATION_LEVEL_DOC">
   ISOLATION_LEVEL_DOC
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L334"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L268"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#ISOLATION_LEVEL_DOC">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#ISOLATION_LEVEL_DOC</a></p>
@@ -2100,7 +1709,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static String ISOLATION_LEVEL_DOC { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static String ISOLATION_LEVEL_DOC { get; set; }</code></pre>
   </div>
 
 
@@ -2124,7 +1733,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_IsBridgeAbstract" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.IsBridgeAbstract">
   IsBridgeAbstract
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L56"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L49"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> is an abstract class, i.e. cannot be created an instance</p>
@@ -2156,10 +1765,10 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_IsBridgeCloseable" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.IsBridgeCloseable">
   IsBridgeCloseable
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L58"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L51"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> implements Closeable</p>
+  <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> implements java.lang.AutoCloseable</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -2188,7 +1797,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_IsBridgeInterface" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.IsBridgeInterface">
   IsBridgeInterface
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L60"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L53"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> is an interface, i.e. does not have any public constructor</p>
@@ -2220,7 +1829,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_IsBridgeStatic" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.IsBridgeStatic">
   IsBridgeStatic
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L62"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L55"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> is a static class, i.e. does not have any public constructor</p>
@@ -2252,7 +1861,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_KEY_DESERIALIZER_CLASS_CONFIG" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG">
   KEY_DESERIALIZER_CLASS_CONFIG
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L340"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L272"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#KEY_DESERIALIZER_CLASS_CONFIG">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#KEY_DESERIALIZER_CLASS_CONFIG</a></p>
@@ -2260,7 +1869,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static String KEY_DESERIALIZER_CLASS_CONFIG { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static String KEY_DESERIALIZER_CLASS_CONFIG { get; set; }</code></pre>
   </div>
 
 
@@ -2284,7 +1893,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_KEY_DESERIALIZER_CLASS_DOC" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.KEY_DESERIALIZER_CLASS_DOC">
   KEY_DESERIALIZER_CLASS_DOC
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L346"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L276"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#KEY_DESERIALIZER_CLASS_DOC">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#KEY_DESERIALIZER_CLASS_DOC</a></p>
@@ -2292,7 +1901,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static String KEY_DESERIALIZER_CLASS_DOC { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static String KEY_DESERIALIZER_CLASS_DOC { get; set; }</code></pre>
   </div>
 
 
@@ -2316,7 +1925,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_MAX_PARTITION_FETCH_BYTES_CONFIG" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.MAX_PARTITION_FETCH_BYTES_CONFIG">
   MAX_PARTITION_FETCH_BYTES_CONFIG
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L352"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L280"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#MAX_PARTITION_FETCH_BYTES_CONFIG">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#MAX_PARTITION_FETCH_BYTES_CONFIG</a></p>
@@ -2324,7 +1933,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static String MAX_PARTITION_FETCH_BYTES_CONFIG { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static String MAX_PARTITION_FETCH_BYTES_CONFIG { get; set; }</code></pre>
   </div>
 
 
@@ -2348,7 +1957,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_MAX_POLL_INTERVAL_MS_CONFIG" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.MAX_POLL_INTERVAL_MS_CONFIG">
   MAX_POLL_INTERVAL_MS_CONFIG
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L358"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L284"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#MAX_POLL_INTERVAL_MS_CONFIG">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#MAX_POLL_INTERVAL_MS_CONFIG</a></p>
@@ -2356,7 +1965,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static String MAX_POLL_INTERVAL_MS_CONFIG { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static String MAX_POLL_INTERVAL_MS_CONFIG { get; set; }</code></pre>
   </div>
 
 
@@ -2380,7 +1989,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_MAX_POLL_RECORDS_CONFIG" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.MAX_POLL_RECORDS_CONFIG">
   MAX_POLL_RECORDS_CONFIG
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L364"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L288"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#MAX_POLL_RECORDS_CONFIG">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#MAX_POLL_RECORDS_CONFIG</a></p>
@@ -2388,7 +1997,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static String MAX_POLL_RECORDS_CONFIG { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static String MAX_POLL_RECORDS_CONFIG { get; set; }</code></pre>
   </div>
 
 
@@ -2412,7 +2021,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_METADATA_MAX_AGE_CONFIG" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.METADATA_MAX_AGE_CONFIG">
   METADATA_MAX_AGE_CONFIG
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L370"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L292"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#METADATA_MAX_AGE_CONFIG">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#METADATA_MAX_AGE_CONFIG</a></p>
@@ -2420,7 +2029,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static String METADATA_MAX_AGE_CONFIG { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static String METADATA_MAX_AGE_CONFIG { get; set; }</code></pre>
   </div>
 
 
@@ -2444,7 +2053,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_METRICS_NUM_SAMPLES_CONFIG" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.METRICS_NUM_SAMPLES_CONFIG">
   METRICS_NUM_SAMPLES_CONFIG
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L382"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L300"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#METRICS_NUM_SAMPLES_CONFIG">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#METRICS_NUM_SAMPLES_CONFIG</a></p>
@@ -2452,7 +2061,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static String METRICS_NUM_SAMPLES_CONFIG { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static String METRICS_NUM_SAMPLES_CONFIG { get; set; }</code></pre>
   </div>
 
 
@@ -2476,7 +2085,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_METRICS_RECORDING_LEVEL_CONFIG" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.METRICS_RECORDING_LEVEL_CONFIG">
   METRICS_RECORDING_LEVEL_CONFIG
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L388"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L304"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#METRICS_RECORDING_LEVEL_CONFIG">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#METRICS_RECORDING_LEVEL_CONFIG</a></p>
@@ -2484,7 +2093,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static String METRICS_RECORDING_LEVEL_CONFIG { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static String METRICS_RECORDING_LEVEL_CONFIG { get; set; }</code></pre>
   </div>
 
 
@@ -2508,7 +2117,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_METRICS_SAMPLE_WINDOW_MS_CONFIG" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.METRICS_SAMPLE_WINDOW_MS_CONFIG">
   METRICS_SAMPLE_WINDOW_MS_CONFIG
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L394"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L308"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#METRICS_SAMPLE_WINDOW_MS_CONFIG">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#METRICS_SAMPLE_WINDOW_MS_CONFIG</a></p>
@@ -2516,7 +2125,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static String METRICS_SAMPLE_WINDOW_MS_CONFIG { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static String METRICS_SAMPLE_WINDOW_MS_CONFIG { get; set; }</code></pre>
   </div>
 
 
@@ -2540,7 +2149,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_METRIC_REPORTER_CLASSES_CONFIG" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.METRIC_REPORTER_CLASSES_CONFIG">
   METRIC_REPORTER_CLASSES_CONFIG
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L376"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L296"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#METRIC_REPORTER_CLASSES_CONFIG">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#METRIC_REPORTER_CLASSES_CONFIG</a></p>
@@ -2548,7 +2157,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static String METRIC_REPORTER_CLASSES_CONFIG { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static String METRIC_REPORTER_CLASSES_CONFIG { get; set; }</code></pre>
   </div>
 
 
@@ -2572,7 +2181,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_PARTITION_ASSIGNMENT_STRATEGY_CONFIG" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.PARTITION_ASSIGNMENT_STRATEGY_CONFIG">
   PARTITION_ASSIGNMENT_STRATEGY_CONFIG
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L400"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L312"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#PARTITION_ASSIGNMENT_STRATEGY_CONFIG">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#PARTITION_ASSIGNMENT_STRATEGY_CONFIG</a></p>
@@ -2580,7 +2189,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static String PARTITION_ASSIGNMENT_STRATEGY_CONFIG { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static String PARTITION_ASSIGNMENT_STRATEGY_CONFIG { get; set; }</code></pre>
   </div>
 
 
@@ -2604,7 +2213,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_RECEIVE_BUFFER_CONFIG" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.RECEIVE_BUFFER_CONFIG">
   RECEIVE_BUFFER_CONFIG
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L406"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L316"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#RECEIVE_BUFFER_CONFIG">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#RECEIVE_BUFFER_CONFIG</a></p>
@@ -2612,7 +2221,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static String RECEIVE_BUFFER_CONFIG { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static String RECEIVE_BUFFER_CONFIG { get; set; }</code></pre>
   </div>
 
 
@@ -2636,7 +2245,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_RECONNECT_BACKOFF_MAX_MS_CONFIG" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.RECONNECT_BACKOFF_MAX_MS_CONFIG">
   RECONNECT_BACKOFF_MAX_MS_CONFIG
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L412"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L320"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#RECONNECT_BACKOFF_MAX_MS_CONFIG">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#RECONNECT_BACKOFF_MAX_MS_CONFIG</a></p>
@@ -2644,7 +2253,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static String RECONNECT_BACKOFF_MAX_MS_CONFIG { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static String RECONNECT_BACKOFF_MAX_MS_CONFIG { get; set; }</code></pre>
   </div>
 
 
@@ -2668,7 +2277,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_RECONNECT_BACKOFF_MS_CONFIG" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.RECONNECT_BACKOFF_MS_CONFIG">
   RECONNECT_BACKOFF_MS_CONFIG
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L418"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L324"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#RECONNECT_BACKOFF_MS_CONFIG">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#RECONNECT_BACKOFF_MS_CONFIG</a></p>
@@ -2676,7 +2285,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static String RECONNECT_BACKOFF_MS_CONFIG { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static String RECONNECT_BACKOFF_MS_CONFIG { get; set; }</code></pre>
   </div>
 
 
@@ -2700,7 +2309,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_REQUEST_TIMEOUT_MS_CONFIG" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.REQUEST_TIMEOUT_MS_CONFIG">
   REQUEST_TIMEOUT_MS_CONFIG
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L424"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L328"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#REQUEST_TIMEOUT_MS_CONFIG">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#REQUEST_TIMEOUT_MS_CONFIG</a></p>
@@ -2708,7 +2317,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static String REQUEST_TIMEOUT_MS_CONFIG { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static String REQUEST_TIMEOUT_MS_CONFIG { get; set; }</code></pre>
   </div>
 
 
@@ -2732,7 +2341,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_RETRY_BACKOFF_MAX_MS_CONFIG" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.RETRY_BACKOFF_MAX_MS_CONFIG">
   RETRY_BACKOFF_MAX_MS_CONFIG
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L430"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L332"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#RETRY_BACKOFF_MAX_MS_CONFIG">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#RETRY_BACKOFF_MAX_MS_CONFIG</a></p>
@@ -2740,7 +2349,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static String RETRY_BACKOFF_MAX_MS_CONFIG { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static String RETRY_BACKOFF_MAX_MS_CONFIG { get; set; }</code></pre>
   </div>
 
 
@@ -2764,7 +2373,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_RETRY_BACKOFF_MS_CONFIG" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.RETRY_BACKOFF_MS_CONFIG">
   RETRY_BACKOFF_MS_CONFIG
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L436"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L336"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#RETRY_BACKOFF_MS_CONFIG">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#RETRY_BACKOFF_MS_CONFIG</a></p>
@@ -2772,7 +2381,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static String RETRY_BACKOFF_MS_CONFIG { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static String RETRY_BACKOFF_MS_CONFIG { get; set; }</code></pre>
   </div>
 
 
@@ -2796,7 +2405,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_SECURITY_PROVIDERS_CONFIG" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.SECURITY_PROVIDERS_CONFIG">
   SECURITY_PROVIDERS_CONFIG
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L442"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L340"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#SECURITY_PROVIDERS_CONFIG">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#SECURITY_PROVIDERS_CONFIG</a></p>
@@ -2804,7 +2413,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static String SECURITY_PROVIDERS_CONFIG { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static String SECURITY_PROVIDERS_CONFIG { get; set; }</code></pre>
   </div>
 
 
@@ -2828,7 +2437,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_SEND_BUFFER_CONFIG" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.SEND_BUFFER_CONFIG">
   SEND_BUFFER_CONFIG
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L448"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L344"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#SEND_BUFFER_CONFIG">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#SEND_BUFFER_CONFIG</a></p>
@@ -2836,7 +2445,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static String SEND_BUFFER_CONFIG { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static String SEND_BUFFER_CONFIG { get; set; }</code></pre>
   </div>
 
 
@@ -2860,7 +2469,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_SESSION_TIMEOUT_MS_CONFIG" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.SESSION_TIMEOUT_MS_CONFIG">
   SESSION_TIMEOUT_MS_CONFIG
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L454"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L348"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#SESSION_TIMEOUT_MS_CONFIG">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#SESSION_TIMEOUT_MS_CONFIG</a></p>
@@ -2868,7 +2477,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static String SESSION_TIMEOUT_MS_CONFIG { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static String SESSION_TIMEOUT_MS_CONFIG { get; set; }</code></pre>
   </div>
 
 
@@ -2892,7 +2501,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_SOCKET_CONNECTION_SETUP_TIMEOUT_MAX_MS_CONFIG" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.SOCKET_CONNECTION_SETUP_TIMEOUT_MAX_MS_CONFIG">
   SOCKET_CONNECTION_SETUP_TIMEOUT_MAX_MS_CONFIG
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L460"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L352"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#SOCKET_CONNECTION_SETUP_TIMEOUT_MAX_MS_CONFIG">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#SOCKET_CONNECTION_SETUP_TIMEOUT_MAX_MS_CONFIG</a></p>
@@ -2900,7 +2509,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static String SOCKET_CONNECTION_SETUP_TIMEOUT_MAX_MS_CONFIG { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static String SOCKET_CONNECTION_SETUP_TIMEOUT_MAX_MS_CONFIG { get; set; }</code></pre>
   </div>
 
 
@@ -2924,7 +2533,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_SOCKET_CONNECTION_SETUP_TIMEOUT_MS_CONFIG" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.SOCKET_CONNECTION_SETUP_TIMEOUT_MS_CONFIG">
   SOCKET_CONNECTION_SETUP_TIMEOUT_MS_CONFIG
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L466"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L356"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#SOCKET_CONNECTION_SETUP_TIMEOUT_MS_CONFIG">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#SOCKET_CONNECTION_SETUP_TIMEOUT_MS_CONFIG</a></p>
@@ -2932,7 +2541,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static String SOCKET_CONNECTION_SETUP_TIMEOUT_MS_CONFIG { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static String SOCKET_CONNECTION_SETUP_TIMEOUT_MS_CONFIG { get; set; }</code></pre>
   </div>
 
 
@@ -2956,7 +2565,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_VALUE_DESERIALIZER_CLASS_CONFIG" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG">
   VALUE_DESERIALIZER_CLASS_CONFIG
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L472"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L360"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#VALUE_DESERIALIZER_CLASS_CONFIG">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#VALUE_DESERIALIZER_CLASS_CONFIG</a></p>
@@ -2964,7 +2573,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static String VALUE_DESERIALIZER_CLASS_CONFIG { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static String VALUE_DESERIALIZER_CLASS_CONFIG { get; set; }</code></pre>
   </div>
 
 
@@ -2988,7 +2597,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_VALUE_DESERIALIZER_CLASS_DOC" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.VALUE_DESERIALIZER_CLASS_DOC">
   VALUE_DESERIALIZER_CLASS_DOC
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L478"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L364"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#VALUE_DESERIALIZER_CLASS_DOC">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#VALUE_DESERIALIZER_CLASS_DOC</a></p>
@@ -2996,7 +2605,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static String VALUE_DESERIALIZER_CLASS_DOC { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static String VALUE_DESERIALIZER_CLASS_DOC { get; set; }</code></pre>
   </div>
 
 
@@ -3024,7 +2633,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_AppendDeserializerToConfig_Java_Util_Map_Java_Lang_String_System_Object__Org_Apache_Kafka_Common_Serialization_Deserializer_System_Object__Org_Apache_Kafka_Common_Serialization_Deserializer_System_Object__" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.AppendDeserializerToConfig(Java.Util.Map{Java.Lang.String,System.Object},Org.Apache.Kafka.Common.Serialization.Deserializer{System.Object},Org.Apache.Kafka.Common.Serialization.Deserializer{System.Object})">
   AppendDeserializerToConfig(Map&lt;String, object&gt;, Deserializer&lt;object&gt;, Deserializer&lt;object&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L498"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L380"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#appendDeserializerToConfig-java.util.Map-org.apache.kafka.common.serialization.Deserializer-org.apache.kafka.common.serialization.Deserializer-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#appendDeserializerToConfig-java.util.Map-org.apache.kafka.common.serialization.Deserializer-org.apache.kafka.common.serialization.Deserializer-</a></p>
@@ -3069,7 +2678,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_ConfigDef" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.ConfigDef">
   ConfigDef()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L514"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L396"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#configDef--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#configDef--</a></p>
@@ -3102,7 +2711,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_ConfigNames" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.ConfigNames">
   ConfigNames()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L506"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L388"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#configNames--">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#configNames--</a></p>
@@ -3131,11 +2740,85 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 
 
 
+  <a id="Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_CreatePoolableInstance_" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.CreatePoolableInstance*"></a>
+
+  <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_CreatePoolableInstance_Java_Util_Map_Java_Lang_String_System_Object__" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.CreatePoolableInstance(Java.Util.Map{Java.Lang.String,System.Object})">
+  CreatePoolableInstance(Map&lt;String, object&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L77"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>HPA initializer for ConsumerConfig(Java.Util.Map%3CJava.Lang.String, object%3E arg0)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ConsumerConfig CreatePoolableInstance(Map&lt;String, object&gt; arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.html">ConsumerConfig</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_CreatePoolableInstance_" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.CreatePoolableInstance*"></a>
+
+  <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_CreatePoolableInstance_Java_Util_Properties_" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.CreatePoolableInstance(Java.Util.Properties)">
+  CreatePoolableInstance(Properties)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L92"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>HPA initializer for ConsumerConfig(Java.Util.Properties arg0)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ConsumerConfig CreatePoolableInstance(Properties arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Properties.html">Properties</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.html">ConsumerConfig</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_Main_" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.Main*"></a>
 
   <h3 id="Org_Apache_Kafka_Clients_Consumer_ConsumerConfig_Main_Java_Lang_String___" data-uid="Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.Main(Java.Lang.String[])">
   Main(String[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L522"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L404"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#main-java.lang.String[]-">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerConfig.html#main-java.lang.String[]-</a></p>
@@ -3168,7 +2851,7 @@ public ConsumerConfig(IJVMBridgeBaseInitializer initializer)</code></pre>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L70" class="edit-link">Edit this page</a>
+          <a href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Consumer/ConsumerConfig.cs/#L63" class="edit-link">Edit this page</a>
         </div>
 
 

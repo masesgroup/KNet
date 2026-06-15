@@ -1314,6 +1314,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/MASES.KNet.IKNetInnerReference-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.KNet.IKNetInnerReference-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.KNet.IKNetInnerReference<T>",
+      "Summary": "<p sourcefile=\"api/MASES.KNet.IKNetInnerReference-1.yml\" sourcestartlinenumber=\"1\">Defines a way to retrieve the underlying inner reference used from KNet object instance</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/MASES.KNet.KNetCore-1.yml",
       "output": {
         ".html": {
@@ -3061,20 +3075,6 @@
       "IsMRef": true,
       "Title": "MASES.KNet.Streams.KeyValue<K, V, TJVMK, TJVMV>",
       "Summary": "<p sourcefile=\"api/MASES.KNet.Streams.KeyValue-4.yml\" sourcestartlinenumber=\"1\">KNet implementation of <xref href=\"Org.Apache.Kafka.Streams.KeyValue%602\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNet.Streams.KeyValueSupport-2.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MASES.KNet.Streams.KeyValueSupport-2.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "MASES.KNet.Streams.KeyValueSupport<K, V>",
-      "Summary": "<p sourcefile=\"api/MASES.KNet.Streams.KeyValueSupport-2.yml\" sourcestartlinenumber=\"1\">Support class for <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/KeyValue.html#org.apache.kafka.streams.KeyValue\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/KeyValue.html#org.apache.kafka.streams.KeyValue</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -7344,7 +7344,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Clients.Consumer.ConsumerInterceptorDirect<K, V>",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Clients.Consumer.ConsumerInterceptorDirect-2.yml\" sourcestartlinenumber=\"1\">Direct override of <xref href=\"Org.Apache.Kafka.Clients.Consumer.ConsumerInterceptor\" data-throw-if-not-resolved=\"false\"></xref> or its generic type if there is one</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Clients.Consumer.ConsumerInterceptorDirect-2.yml\" sourcestartlinenumber=\"1\">Concrete CLR representation of <xref href=\"Org.Apache.Kafka.Clients.Consumer.ConsumerInterceptor\" data-throw-if-not-resolved=\"false\"></xref> returned by the JVM.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -7358,7 +7358,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Clients.Consumer.ConsumerInterceptorDirect",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Clients.Consumer.ConsumerInterceptorDirect.yml\" sourcestartlinenumber=\"1\">Direct override of <xref href=\"Org.Apache.Kafka.Clients.Consumer.ConsumerInterceptor\" data-throw-if-not-resolved=\"false\"></xref> or its generic type if there is one</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Clients.Consumer.ConsumerInterceptorDirect.yml\" sourcestartlinenumber=\"1\">Concrete CLR representation of <xref href=\"Org.Apache.Kafka.Clients.Consumer.ConsumerInterceptor\" data-throw-if-not-resolved=\"false\"></xref> returned by the JVM.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -7456,7 +7456,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignorDirect",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignorDirect.yml\" sourcestartlinenumber=\"1\">Direct override of <xref href=\"Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor\" data-throw-if-not-resolved=\"false\"></xref> or its generic type if there is one</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignorDirect.yml\" sourcestartlinenumber=\"1\">Concrete CLR representation of <xref href=\"Org.Apache.Kafka.Clients.Consumer.ConsumerPartitionAssignor\" data-throw-if-not-resolved=\"false\"></xref> returned by the JVM.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -7484,7 +7484,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Clients.Consumer.ConsumerRebalanceListenerDirect",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Clients.Consumer.ConsumerRebalanceListenerDirect.yml\" sourcestartlinenumber=\"1\">Direct override of <xref href=\"Org.Apache.Kafka.Clients.Consumer.ConsumerRebalanceListener\" data-throw-if-not-resolved=\"false\"></xref> or its generic type if there is one</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Clients.Consumer.ConsumerRebalanceListenerDirect.yml\" sourcestartlinenumber=\"1\">Concrete CLR representation of <xref href=\"Org.Apache.Kafka.Clients.Consumer.ConsumerRebalanceListener\" data-throw-if-not-resolved=\"false\"></xref> returned by the JVM.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -7890,7 +7890,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Clients.Consumer.OffsetCommitCallbackDirect",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Clients.Consumer.OffsetCommitCallbackDirect.yml\" sourcestartlinenumber=\"1\">Direct override of <xref href=\"Org.Apache.Kafka.Clients.Consumer.OffsetCommitCallback\" data-throw-if-not-resolved=\"false\"></xref> or its generic type if there is one</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Clients.Consumer.OffsetCommitCallbackDirect.yml\" sourcestartlinenumber=\"1\">Concrete CLR representation of <xref href=\"Org.Apache.Kafka.Clients.Consumer.OffsetCommitCallback\" data-throw-if-not-resolved=\"false\"></xref> returned by the JVM.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -8310,7 +8310,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Clients.Producer.CallbackDirect",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Clients.Producer.CallbackDirect.yml\" sourcestartlinenumber=\"1\">Direct override of <xref href=\"Org.Apache.Kafka.Clients.Producer.Callback\" data-throw-if-not-resolved=\"false\"></xref> or its generic type if there is one</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Clients.Producer.CallbackDirect.yml\" sourcestartlinenumber=\"1\">Concrete CLR representation of <xref href=\"Org.Apache.Kafka.Clients.Producer.Callback\" data-throw-if-not-resolved=\"false\"></xref> returned by the JVM.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -8464,7 +8464,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Clients.Producer.PartitionerDirect",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Clients.Producer.PartitionerDirect.yml\" sourcestartlinenumber=\"1\">Direct override of <xref href=\"Org.Apache.Kafka.Clients.Producer.Partitioner\" data-throw-if-not-resolved=\"false\"></xref> or its generic type if there is one</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Clients.Producer.PartitionerDirect.yml\" sourcestartlinenumber=\"1\">Concrete CLR representation of <xref href=\"Org.Apache.Kafka.Clients.Producer.Partitioner\" data-throw-if-not-resolved=\"false\"></xref> returned by the JVM.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -8548,7 +8548,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Clients.Producer.ProducerInterceptorDirect<K, V>",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Clients.Producer.ProducerInterceptorDirect-2.yml\" sourcestartlinenumber=\"1\">Direct override of <xref href=\"Org.Apache.Kafka.Clients.Producer.ProducerInterceptor\" data-throw-if-not-resolved=\"false\"></xref> or its generic type if there is one</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Clients.Producer.ProducerInterceptorDirect-2.yml\" sourcestartlinenumber=\"1\">Concrete CLR representation of <xref href=\"Org.Apache.Kafka.Clients.Producer.ProducerInterceptor\" data-throw-if-not-resolved=\"false\"></xref> returned by the JVM.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -8562,7 +8562,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Clients.Producer.ProducerInterceptorDirect",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Clients.Producer.ProducerInterceptorDirect.yml\" sourcestartlinenumber=\"1\">Direct override of <xref href=\"Org.Apache.Kafka.Clients.Producer.ProducerInterceptor\" data-throw-if-not-resolved=\"false\"></xref> or its generic type if there is one</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Clients.Producer.ProducerInterceptorDirect.yml\" sourcestartlinenumber=\"1\">Concrete CLR representation of <xref href=\"Org.Apache.Kafka.Clients.Producer.ProducerInterceptor\" data-throw-if-not-resolved=\"false\"></xref> returned by the JVM.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -8619,6 +8619,20 @@
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Clients.Producer.RoundRobinPartitioner",
       "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Clients.Producer.RoundRobinPartitioner.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/producer/RoundRobinPartitioner.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/producer/RoundRobinPartitioner.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Clients.Producer.UniformStickyPartitioner.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Clients.Producer.UniformStickyPartitioner.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Apache.Kafka.Clients.Producer.UniformStickyPartitioner",
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Clients.Producer.UniformStickyPartitioner.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/producer/UniformStickyPartitioner.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/producer/UniformStickyPartitioner.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -9010,7 +9024,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Common.ClusterResourceListenerDirect",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Common.ClusterResourceListenerDirect.yml\" sourcestartlinenumber=\"1\">Direct override of <xref href=\"Org.Apache.Kafka.Common.ClusterResourceListener\" data-throw-if-not-resolved=\"false\"></xref> or its generic type if there is one</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Common.ClusterResourceListenerDirect.yml\" sourcestartlinenumber=\"1\">Concrete CLR representation of <xref href=\"Org.Apache.Kafka.Common.ClusterResourceListener\" data-throw-if-not-resolved=\"false\"></xref> returned by the JVM.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -9066,7 +9080,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Common.Config.ConfigChangeCallbackDirect",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Common.Config.ConfigChangeCallbackDirect.yml\" sourcestartlinenumber=\"1\">Direct override of <xref href=\"Org.Apache.Kafka.Common.Config.ConfigChangeCallback\" data-throw-if-not-resolved=\"false\"></xref> or its generic type if there is one</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Common.Config.ConfigChangeCallbackDirect.yml\" sourcestartlinenumber=\"1\">Concrete CLR representation of <xref href=\"Org.Apache.Kafka.Common.Config.ConfigChangeCallback\" data-throw-if-not-resolved=\"false\"></xref> returned by the JVM.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -10858,7 +10872,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Common.Errors.NotLeaderForPartitionException",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Common.Errors.NotLeaderForPartitionException.yml\" sourcestartlinenumber=\"1\">Obsolote exception</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Common.Errors.NotLeaderForPartitionException.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/common/errors/NotLeaderForPartitionException.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/common/errors/NotLeaderForPartitionException.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -11982,6 +11996,34 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Common.KafkaFuture.Function-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Common.KafkaFuture.Function-2.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Apache.Kafka.Common.KafkaFuture.Function<A, B>",
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Common.KafkaFuture.Function-2.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/common/KafkaFuture.Function.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/common/KafkaFuture.Function.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Common.KafkaFuture.Function.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Common.KafkaFuture.Function.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Apache.Kafka.Common.KafkaFuture.Function",
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Common.KafkaFuture.Function.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/common/KafkaFuture.Function.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/common/KafkaFuture.Function.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Org.Apache.Kafka.Common.KafkaFuture.yml",
       "output": {
         ".html": {
@@ -12454,7 +12496,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Common.Metrics.MetricsReporterDirect",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Common.Metrics.MetricsReporterDirect.yml\" sourcestartlinenumber=\"1\">Direct override of <xref href=\"Org.Apache.Kafka.Common.Metrics.MetricsReporter\" data-throw-if-not-resolved=\"false\"></xref> or its generic type if there is one</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Common.Metrics.MetricsReporterDirect.yml\" sourcestartlinenumber=\"1\">Concrete CLR representation of <xref href=\"Org.Apache.Kafka.Common.Metrics.MetricsReporter\" data-throw-if-not-resolved=\"false\"></xref> returned by the JVM.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -14362,6 +14404,48 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Common.Security.Oauthbearer.Secured.OAuthBearerLoginCallbackHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Common.Security.Oauthbearer.Secured.OAuthBearerLoginCallbackHandler.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Apache.Kafka.Common.Security.Oauthbearer.Secured.OAuthBearerLoginCallbackHandler",
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Common.Security.Oauthbearer.Secured.OAuthBearerLoginCallbackHandler.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/common/security/oauthbearer/secured/OAuthBearerLoginCallbackHandler.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/common/security/oauthbearer/secured/OAuthBearerLoginCallbackHandler.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Common.Security.Oauthbearer.Secured.OAuthBearerValidatorCallbackHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Common.Security.Oauthbearer.Secured.OAuthBearerValidatorCallbackHandler.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Apache.Kafka.Common.Security.Oauthbearer.Secured.OAuthBearerValidatorCallbackHandler",
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Common.Security.Oauthbearer.Secured.OAuthBearerValidatorCallbackHandler.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/common/security/oauthbearer/secured/OAuthBearerValidatorCallbackHandler.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/common/security/oauthbearer/secured/OAuthBearerValidatorCallbackHandler.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Common.Security.Oauthbearer.Secured.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Common.Security.Oauthbearer.Secured.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Apache.Kafka.Common.Security.Oauthbearer.Secured",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Org.Apache.Kafka.Common.Security.Oauthbearer.yml",
       "output": {
         ".html": {
@@ -14848,7 +14932,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Common.Serialization.DeserializerDirect<T>",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Common.Serialization.DeserializerDirect-1.yml\" sourcestartlinenumber=\"1\">Direct override of <xref href=\"Org.Apache.Kafka.Common.Serialization.Deserializer\" data-throw-if-not-resolved=\"false\"></xref> or its generic type if there is one</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Common.Serialization.DeserializerDirect-1.yml\" sourcestartlinenumber=\"1\">Concrete CLR representation of <xref href=\"Org.Apache.Kafka.Common.Serialization.Deserializer\" data-throw-if-not-resolved=\"false\"></xref> returned by the JVM.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -14862,7 +14946,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Common.Serialization.DeserializerDirect",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Common.Serialization.DeserializerDirect.yml\" sourcestartlinenumber=\"1\">Direct override of <xref href=\"Org.Apache.Kafka.Common.Serialization.Deserializer\" data-throw-if-not-resolved=\"false\"></xref> or its generic type if there is one</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Common.Serialization.DeserializerDirect.yml\" sourcestartlinenumber=\"1\">Concrete CLR representation of <xref href=\"Org.Apache.Kafka.Common.Serialization.Deserializer\" data-throw-if-not-resolved=\"false\"></xref> returned by the JVM.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -15142,7 +15226,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Common.Serialization.SerdeDirect<T>",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Common.Serialization.SerdeDirect-1.yml\" sourcestartlinenumber=\"1\">Direct override of <xref href=\"Org.Apache.Kafka.Common.Serialization.Serde\" data-throw-if-not-resolved=\"false\"></xref> or its generic type if there is one</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Common.Serialization.SerdeDirect-1.yml\" sourcestartlinenumber=\"1\">Concrete CLR representation of <xref href=\"Org.Apache.Kafka.Common.Serialization.Serde\" data-throw-if-not-resolved=\"false\"></xref> returned by the JVM.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -15156,7 +15240,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Common.Serialization.SerdeDirect",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Common.Serialization.SerdeDirect.yml\" sourcestartlinenumber=\"1\">Direct override of <xref href=\"Org.Apache.Kafka.Common.Serialization.Serde\" data-throw-if-not-resolved=\"false\"></xref> or its generic type if there is one</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Common.Serialization.SerdeDirect.yml\" sourcestartlinenumber=\"1\">Concrete CLR representation of <xref href=\"Org.Apache.Kafka.Common.Serialization.Serde\" data-throw-if-not-resolved=\"false\"></xref> returned by the JVM.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -15436,7 +15520,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Common.Serialization.SerializerDirect<T>",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Common.Serialization.SerializerDirect-1.yml\" sourcestartlinenumber=\"1\">Direct override of <xref href=\"Org.Apache.Kafka.Common.Serialization.Serializer\" data-throw-if-not-resolved=\"false\"></xref> or its generic type if there is one</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Common.Serialization.SerializerDirect-1.yml\" sourcestartlinenumber=\"1\">Concrete CLR representation of <xref href=\"Org.Apache.Kafka.Common.Serialization.Serializer\" data-throw-if-not-resolved=\"false\"></xref> returned by the JVM.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -15450,7 +15534,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Common.Serialization.SerializerDirect",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Common.Serialization.SerializerDirect.yml\" sourcestartlinenumber=\"1\">Direct override of <xref href=\"Org.Apache.Kafka.Common.Serialization.Serializer\" data-throw-if-not-resolved=\"false\"></xref> or its generic type if there is one</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Common.Serialization.SerializerDirect.yml\" sourcestartlinenumber=\"1\">Concrete CLR representation of <xref href=\"Org.Apache.Kafka.Common.Serialization.Serializer\" data-throw-if-not-resolved=\"false\"></xref> returned by the JVM.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -20518,7 +20602,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Metadata.FeatureLevelListenerDirect",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Metadata.FeatureLevelListenerDirect.yml\" sourcestartlinenumber=\"1\">Direct override of <xref href=\"Org.Apache.Kafka.Metadata.FeatureLevelListener\" data-throw-if-not-resolved=\"false\"></xref> or its generic type if there is one</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Metadata.FeatureLevelListenerDirect.yml\" sourcestartlinenumber=\"1\">Concrete CLR representation of <xref href=\"Org.Apache.Kafka.Metadata.FeatureLevelListener\" data-throw-if-not-resolved=\"false\"></xref> returned by the JVM.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -21526,7 +21610,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Raft.RaftClient.ListenerDirect<T>",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Raft.RaftClient.ListenerDirect-1.yml\" sourcestartlinenumber=\"1\">Direct override of <xref href=\"Org.Apache.Kafka.Raft.RaftClient.Listener\" data-throw-if-not-resolved=\"false\"></xref> or its generic type if there is one</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Raft.RaftClient.ListenerDirect-1.yml\" sourcestartlinenumber=\"1\">Concrete CLR representation of <xref href=\"Org.Apache.Kafka.Raft.RaftClient.Listener\" data-throw-if-not-resolved=\"false\"></xref> returned by the JVM.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -21540,7 +21624,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Raft.RaftClient.ListenerDirect",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Raft.RaftClient.ListenerDirect.yml\" sourcestartlinenumber=\"1\">Direct override of <xref href=\"Org.Apache.Kafka.Raft.RaftClient.Listener\" data-throw-if-not-resolved=\"false\"></xref> or its generic type if there is one</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Raft.RaftClient.ListenerDirect.yml\" sourcestartlinenumber=\"1\">Concrete CLR representation of <xref href=\"Org.Apache.Kafka.Raft.RaftClient.Listener\" data-throw-if-not-resolved=\"false\"></xref> returned by the JVM.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -22842,7 +22926,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.Errors.StreamsUncaughtExceptionHandlerDirect",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Errors.StreamsUncaughtExceptionHandlerDirect.yml\" sourcestartlinenumber=\"1\">Direct override of <xref href=\"Org.Apache.Kafka.Streams.Errors.StreamsUncaughtExceptionHandler\" data-throw-if-not-resolved=\"false\"></xref> or its generic type if there is one</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Errors.StreamsUncaughtExceptionHandlerDirect.yml\" sourcestartlinenumber=\"1\">Concrete CLR representation of <xref href=\"Org.Apache.Kafka.Streams.Errors.StreamsUncaughtExceptionHandler\" data-throw-if-not-resolved=\"false\"></xref> returned by the JVM.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -23080,7 +23164,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.KafkaClientSupplierDirect",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.KafkaClientSupplierDirect.yml\" sourcestartlinenumber=\"1\">Direct override of <xref href=\"Org.Apache.Kafka.Streams.KafkaClientSupplier\" data-throw-if-not-resolved=\"false\"></xref> or its generic type if there is one</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.KafkaClientSupplierDirect.yml\" sourcestartlinenumber=\"1\">Concrete CLR representation of <xref href=\"Org.Apache.Kafka.Streams.KafkaClientSupplier\" data-throw-if-not-resolved=\"false\"></xref> returned by the JVM.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -23150,7 +23234,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.KafkaStreams.StateListenerDirect",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.KafkaStreams.StateListenerDirect.yml\" sourcestartlinenumber=\"1\">Direct override of <xref href=\"Org.Apache.Kafka.Streams.KafkaStreams.StateListener\" data-throw-if-not-resolved=\"false\"></xref> or its generic type if there is one</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.KafkaStreams.StateListenerDirect.yml\" sourcestartlinenumber=\"1\">Concrete CLR representation of <xref href=\"Org.Apache.Kafka.Streams.KafkaStreams.StateListener\" data-throw-if-not-resolved=\"false\"></xref> returned by the JVM.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -23248,7 +23332,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.Kstream.AggregatorDirect<K, V, VAgg>",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Kstream.AggregatorDirect-3.yml\" sourcestartlinenumber=\"1\">Direct override of <xref href=\"Org.Apache.Kafka.Streams.Kstream.Aggregator\" data-throw-if-not-resolved=\"false\"></xref> or its generic type if there is one</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Kstream.AggregatorDirect-3.yml\" sourcestartlinenumber=\"1\">Concrete CLR representation of <xref href=\"Org.Apache.Kafka.Streams.Kstream.Aggregator\" data-throw-if-not-resolved=\"false\"></xref> returned by the JVM.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -23262,7 +23346,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.Kstream.AggregatorDirect",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Kstream.AggregatorDirect.yml\" sourcestartlinenumber=\"1\">Direct override of <xref href=\"Org.Apache.Kafka.Streams.Kstream.Aggregator\" data-throw-if-not-resolved=\"false\"></xref> or its generic type if there is one</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Kstream.AggregatorDirect.yml\" sourcestartlinenumber=\"1\">Concrete CLR representation of <xref href=\"Org.Apache.Kafka.Streams.Kstream.Aggregator\" data-throw-if-not-resolved=\"false\"></xref> returned by the JVM.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -23444,7 +23528,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.Kstream.ForeachActionDirect<K, V>",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Kstream.ForeachActionDirect-2.yml\" sourcestartlinenumber=\"1\">Direct override of <xref href=\"Org.Apache.Kafka.Streams.Kstream.ForeachAction\" data-throw-if-not-resolved=\"false\"></xref> or its generic type if there is one</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Kstream.ForeachActionDirect-2.yml\" sourcestartlinenumber=\"1\">Concrete CLR representation of <xref href=\"Org.Apache.Kafka.Streams.Kstream.ForeachAction\" data-throw-if-not-resolved=\"false\"></xref> returned by the JVM.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -23458,7 +23542,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.Kstream.ForeachActionDirect",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Kstream.ForeachActionDirect.yml\" sourcestartlinenumber=\"1\">Direct override of <xref href=\"Org.Apache.Kafka.Streams.Kstream.ForeachAction\" data-throw-if-not-resolved=\"false\"></xref> or its generic type if there is one</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Kstream.ForeachActionDirect.yml\" sourcestartlinenumber=\"1\">Concrete CLR representation of <xref href=\"Org.Apache.Kafka.Streams.Kstream.ForeachAction\" data-throw-if-not-resolved=\"false\"></xref> returned by the JVM.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -23725,20 +23809,6 @@
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.Kstream.IMerger<K, V>",
       "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Kstream.IMerger-2.yml\" sourcestartlinenumber=\"1\">Listener for Kafka Merger. Extends <xref href=\"MASES.JCOBridge.C2JBridge.IJVMBridgeBase\" data-throw-if-not-resolved=\"false\"></xref></p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Org.Apache.Kafka.Streams.Kstream.INamedOperation-1.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Org.Apache.Kafka.Streams.Kstream.INamedOperation-1.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Org.Apache.Kafka.Streams.Kstream.INamedOperation<T>",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Kstream.INamedOperation-1.yml\" sourcestartlinenumber=\"1\"><a href=\"https://kafka.apache.org/34/javadoc/org/apache/kafka/streams/kstream/NamedOperation.html\">https://kafka.apache.org/34/javadoc/org/apache/kafka/streams/kstream/NamedOperation.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -24018,7 +24088,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.Kstream.InitializerDirect<VAgg>",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Kstream.InitializerDirect-1.yml\" sourcestartlinenumber=\"1\">Direct override of <xref href=\"Org.Apache.Kafka.Streams.Kstream.Initializer\" data-throw-if-not-resolved=\"false\"></xref> or its generic type if there is one</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Kstream.InitializerDirect-1.yml\" sourcestartlinenumber=\"1\">Concrete CLR representation of <xref href=\"Org.Apache.Kafka.Streams.Kstream.Initializer\" data-throw-if-not-resolved=\"false\"></xref> returned by the JVM.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -24032,7 +24102,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.Kstream.InitializerDirect",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Kstream.InitializerDirect.yml\" sourcestartlinenumber=\"1\">Direct override of <xref href=\"Org.Apache.Kafka.Streams.Kstream.Initializer\" data-throw-if-not-resolved=\"false\"></xref> or its generic type if there is one</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Kstream.InitializerDirect.yml\" sourcestartlinenumber=\"1\">Concrete CLR representation of <xref href=\"Org.Apache.Kafka.Streams.Kstream.Initializer\" data-throw-if-not-resolved=\"false\"></xref> returned by the JVM.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -24270,7 +24340,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.Kstream.KeyValueMapperDirect<K, V, VR>",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Kstream.KeyValueMapperDirect-3.yml\" sourcestartlinenumber=\"1\">Direct override of <xref href=\"Org.Apache.Kafka.Streams.Kstream.KeyValueMapper\" data-throw-if-not-resolved=\"false\"></xref> or its generic type if there is one</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Kstream.KeyValueMapperDirect-3.yml\" sourcestartlinenumber=\"1\">Concrete CLR representation of <xref href=\"Org.Apache.Kafka.Streams.Kstream.KeyValueMapper\" data-throw-if-not-resolved=\"false\"></xref> returned by the JVM.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -24284,7 +24354,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.Kstream.KeyValueMapperDirect",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Kstream.KeyValueMapperDirect.yml\" sourcestartlinenumber=\"1\">Direct override of <xref href=\"Org.Apache.Kafka.Streams.Kstream.KeyValueMapper\" data-throw-if-not-resolved=\"false\"></xref> or its generic type if there is one</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Kstream.KeyValueMapperDirect.yml\" sourcestartlinenumber=\"1\">Concrete CLR representation of <xref href=\"Org.Apache.Kafka.Streams.Kstream.KeyValueMapper\" data-throw-if-not-resolved=\"false\"></xref> returned by the JVM.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -24368,7 +24438,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.Kstream.MergerDirect<K, V>",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Kstream.MergerDirect-2.yml\" sourcestartlinenumber=\"1\">Direct override of <xref href=\"Org.Apache.Kafka.Streams.Kstream.Merger\" data-throw-if-not-resolved=\"false\"></xref> or its generic type if there is one</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Kstream.MergerDirect-2.yml\" sourcestartlinenumber=\"1\">Concrete CLR representation of <xref href=\"Org.Apache.Kafka.Streams.Kstream.Merger\" data-throw-if-not-resolved=\"false\"></xref> returned by the JVM.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -24382,7 +24452,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.Kstream.MergerDirect",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Kstream.MergerDirect.yml\" sourcestartlinenumber=\"1\">Direct override of <xref href=\"Org.Apache.Kafka.Streams.Kstream.Merger\" data-throw-if-not-resolved=\"false\"></xref> or its generic type if there is one</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Kstream.MergerDirect.yml\" sourcestartlinenumber=\"1\">Concrete CLR representation of <xref href=\"Org.Apache.Kafka.Streams.Kstream.Merger\" data-throw-if-not-resolved=\"false\"></xref> returned by the JVM.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -24397,34 +24467,6 @@
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.Kstream.Named",
       "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Kstream.Named.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/kstream/Named.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/kstream/Named.html</a></p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Org.Apache.Kafka.Streams.Kstream.NamedOperation-1.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Org.Apache.Kafka.Streams.Kstream.NamedOperation-1.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Org.Apache.Kafka.Streams.Kstream.NamedOperation<T>",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Kstream.NamedOperation-1.yml\" sourcestartlinenumber=\"1\"><a href=\"https://kafka.apache.org/34/javadoc/org/apache/kafka/streams/kstream/NamedOperation.html\">https://kafka.apache.org/34/javadoc/org/apache/kafka/streams/kstream/NamedOperation.html</a></p>\n"
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Org.Apache.Kafka.Streams.Kstream.NamedOperation.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Org.Apache.Kafka.Streams.Kstream.NamedOperation.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "Org.Apache.Kafka.Streams.Kstream.NamedOperation",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Kstream.NamedOperation.yml\" sourcestartlinenumber=\"1\"><a href=\"https://kafka.apache.org/34/javadoc/org/apache/kafka/streams/kstream/NamedOperation.html\">https://kafka.apache.org/34/javadoc/org/apache/kafka/streams/kstream/NamedOperation.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -24466,7 +24508,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.Kstream.PredicateDirect<K, V>",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Kstream.PredicateDirect-2.yml\" sourcestartlinenumber=\"1\">Direct override of <xref href=\"Org.Apache.Kafka.Streams.Kstream.Predicate\" data-throw-if-not-resolved=\"false\"></xref> or its generic type if there is one</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Kstream.PredicateDirect-2.yml\" sourcestartlinenumber=\"1\">Concrete CLR representation of <xref href=\"Org.Apache.Kafka.Streams.Kstream.Predicate\" data-throw-if-not-resolved=\"false\"></xref> returned by the JVM.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -24480,7 +24522,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.Kstream.PredicateDirect",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Kstream.PredicateDirect.yml\" sourcestartlinenumber=\"1\">Direct override of <xref href=\"Org.Apache.Kafka.Streams.Kstream.Predicate\" data-throw-if-not-resolved=\"false\"></xref> or its generic type if there is one</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Kstream.PredicateDirect.yml\" sourcestartlinenumber=\"1\">Concrete CLR representation of <xref href=\"Org.Apache.Kafka.Streams.Kstream.Predicate\" data-throw-if-not-resolved=\"false\"></xref> returned by the JVM.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -24578,7 +24620,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.Kstream.ReducerDirect<V>",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Kstream.ReducerDirect-1.yml\" sourcestartlinenumber=\"1\">Direct override of <xref href=\"Org.Apache.Kafka.Streams.Kstream.Reducer\" data-throw-if-not-resolved=\"false\"></xref> or its generic type if there is one</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Kstream.ReducerDirect-1.yml\" sourcestartlinenumber=\"1\">Concrete CLR representation of <xref href=\"Org.Apache.Kafka.Streams.Kstream.Reducer\" data-throw-if-not-resolved=\"false\"></xref> returned by the JVM.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -24592,7 +24634,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.Kstream.ReducerDirect",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Kstream.ReducerDirect.yml\" sourcestartlinenumber=\"1\">Direct override of <xref href=\"Org.Apache.Kafka.Streams.Kstream.Reducer\" data-throw-if-not-resolved=\"false\"></xref> or its generic type if there is one</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Kstream.ReducerDirect.yml\" sourcestartlinenumber=\"1\">Concrete CLR representation of <xref href=\"Org.Apache.Kafka.Streams.Kstream.Reducer\" data-throw-if-not-resolved=\"false\"></xref> returned by the JVM.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -25068,7 +25110,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.Kstream.TransformerDirect<K, V, R>",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Kstream.TransformerDirect-3.yml\" sourcestartlinenumber=\"1\">Direct override of <xref href=\"Org.Apache.Kafka.Streams.Kstream.Transformer\" data-throw-if-not-resolved=\"false\"></xref> or its generic type if there is one</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Kstream.TransformerDirect-3.yml\" sourcestartlinenumber=\"1\">Concrete CLR representation of <xref href=\"Org.Apache.Kafka.Streams.Kstream.Transformer\" data-throw-if-not-resolved=\"false\"></xref> returned by the JVM.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -25082,7 +25124,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.Kstream.TransformerDirect",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Kstream.TransformerDirect.yml\" sourcestartlinenumber=\"1\">Direct override of <xref href=\"Org.Apache.Kafka.Streams.Kstream.Transformer\" data-throw-if-not-resolved=\"false\"></xref> or its generic type if there is one</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Kstream.TransformerDirect.yml\" sourcestartlinenumber=\"1\">Concrete CLR representation of <xref href=\"Org.Apache.Kafka.Streams.Kstream.Transformer\" data-throw-if-not-resolved=\"false\"></xref> returned by the JVM.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -25152,7 +25194,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.Kstream.ValueJoinerDirect<V1, V2, VR>",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Kstream.ValueJoinerDirect-3.yml\" sourcestartlinenumber=\"1\">Direct override of <xref href=\"Org.Apache.Kafka.Streams.Kstream.ValueJoiner\" data-throw-if-not-resolved=\"false\"></xref> or its generic type if there is one</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Kstream.ValueJoinerDirect-3.yml\" sourcestartlinenumber=\"1\">Concrete CLR representation of <xref href=\"Org.Apache.Kafka.Streams.Kstream.ValueJoiner\" data-throw-if-not-resolved=\"false\"></xref> returned by the JVM.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -25166,7 +25208,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.Kstream.ValueJoinerDirect",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Kstream.ValueJoinerDirect.yml\" sourcestartlinenumber=\"1\">Direct override of <xref href=\"Org.Apache.Kafka.Streams.Kstream.ValueJoiner\" data-throw-if-not-resolved=\"false\"></xref> or its generic type if there is one</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Kstream.ValueJoinerDirect.yml\" sourcestartlinenumber=\"1\">Concrete CLR representation of <xref href=\"Org.Apache.Kafka.Streams.Kstream.ValueJoiner\" data-throw-if-not-resolved=\"false\"></xref> returned by the JVM.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -25208,7 +25250,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.Kstream.ValueJoinerWithKeyDirect<K1, V1, V2, VR>",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Kstream.ValueJoinerWithKeyDirect-4.yml\" sourcestartlinenumber=\"1\">Direct override of <xref href=\"Org.Apache.Kafka.Streams.Kstream.ValueJoinerWithKey\" data-throw-if-not-resolved=\"false\"></xref> or its generic type if there is one</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Kstream.ValueJoinerWithKeyDirect-4.yml\" sourcestartlinenumber=\"1\">Concrete CLR representation of <xref href=\"Org.Apache.Kafka.Streams.Kstream.ValueJoinerWithKey\" data-throw-if-not-resolved=\"false\"></xref> returned by the JVM.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -25222,7 +25264,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.Kstream.ValueJoinerWithKeyDirect",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Kstream.ValueJoinerWithKeyDirect.yml\" sourcestartlinenumber=\"1\">Direct override of <xref href=\"Org.Apache.Kafka.Streams.Kstream.ValueJoinerWithKey\" data-throw-if-not-resolved=\"false\"></xref> or its generic type if there is one</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Kstream.ValueJoinerWithKeyDirect.yml\" sourcestartlinenumber=\"1\">Concrete CLR representation of <xref href=\"Org.Apache.Kafka.Streams.Kstream.ValueJoinerWithKey\" data-throw-if-not-resolved=\"false\"></xref> returned by the JVM.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -25264,7 +25306,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.Kstream.ValueMapperDirect<V, VR>",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Kstream.ValueMapperDirect-2.yml\" sourcestartlinenumber=\"1\">Direct override of <xref href=\"Org.Apache.Kafka.Streams.Kstream.ValueMapper\" data-throw-if-not-resolved=\"false\"></xref> or its generic type if there is one</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Kstream.ValueMapperDirect-2.yml\" sourcestartlinenumber=\"1\">Concrete CLR representation of <xref href=\"Org.Apache.Kafka.Streams.Kstream.ValueMapper\" data-throw-if-not-resolved=\"false\"></xref> returned by the JVM.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -25278,7 +25320,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.Kstream.ValueMapperDirect",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Kstream.ValueMapperDirect.yml\" sourcestartlinenumber=\"1\">Direct override of <xref href=\"Org.Apache.Kafka.Streams.Kstream.ValueMapper\" data-throw-if-not-resolved=\"false\"></xref> or its generic type if there is one</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Kstream.ValueMapperDirect.yml\" sourcestartlinenumber=\"1\">Concrete CLR representation of <xref href=\"Org.Apache.Kafka.Streams.Kstream.ValueMapper\" data-throw-if-not-resolved=\"false\"></xref> returned by the JVM.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -25320,7 +25362,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.Kstream.ValueMapperWithKeyDirect<K, V, VR>",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Kstream.ValueMapperWithKeyDirect-3.yml\" sourcestartlinenumber=\"1\">Direct override of <xref href=\"Org.Apache.Kafka.Streams.Kstream.ValueMapperWithKey\" data-throw-if-not-resolved=\"false\"></xref> or its generic type if there is one</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Kstream.ValueMapperWithKeyDirect-3.yml\" sourcestartlinenumber=\"1\">Concrete CLR representation of <xref href=\"Org.Apache.Kafka.Streams.Kstream.ValueMapperWithKey\" data-throw-if-not-resolved=\"false\"></xref> returned by the JVM.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -25334,7 +25376,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.Kstream.ValueMapperWithKeyDirect",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Kstream.ValueMapperWithKeyDirect.yml\" sourcestartlinenumber=\"1\">Direct override of <xref href=\"Org.Apache.Kafka.Streams.Kstream.ValueMapperWithKey\" data-throw-if-not-resolved=\"false\"></xref> or its generic type if there is one</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Kstream.ValueMapperWithKeyDirect.yml\" sourcestartlinenumber=\"1\">Concrete CLR representation of <xref href=\"Org.Apache.Kafka.Streams.Kstream.ValueMapperWithKey\" data-throw-if-not-resolved=\"false\"></xref> returned by the JVM.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -25376,7 +25418,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.Kstream.ValueTransformerDirect<V, VR>",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Kstream.ValueTransformerDirect-2.yml\" sourcestartlinenumber=\"1\">Direct override of <xref href=\"Org.Apache.Kafka.Streams.Kstream.ValueTransformer\" data-throw-if-not-resolved=\"false\"></xref> or its generic type if there is one</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Kstream.ValueTransformerDirect-2.yml\" sourcestartlinenumber=\"1\">Concrete CLR representation of <xref href=\"Org.Apache.Kafka.Streams.Kstream.ValueTransformer\" data-throw-if-not-resolved=\"false\"></xref> returned by the JVM.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -25390,7 +25432,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.Kstream.ValueTransformerDirect",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Kstream.ValueTransformerDirect.yml\" sourcestartlinenumber=\"1\">Direct override of <xref href=\"Org.Apache.Kafka.Streams.Kstream.ValueTransformer\" data-throw-if-not-resolved=\"false\"></xref> or its generic type if there is one</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Kstream.ValueTransformerDirect.yml\" sourcestartlinenumber=\"1\">Concrete CLR representation of <xref href=\"Org.Apache.Kafka.Streams.Kstream.ValueTransformer\" data-throw-if-not-resolved=\"false\"></xref> returned by the JVM.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -25446,7 +25488,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.Kstream.ValueTransformerWithKeyDirect<K, V, VR>",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Kstream.ValueTransformerWithKeyDirect-3.yml\" sourcestartlinenumber=\"1\">Direct override of <xref href=\"Org.Apache.Kafka.Streams.Kstream.ValueTransformerWithKey\" data-throw-if-not-resolved=\"false\"></xref> or its generic type if there is one</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Kstream.ValueTransformerWithKeyDirect-3.yml\" sourcestartlinenumber=\"1\">Concrete CLR representation of <xref href=\"Org.Apache.Kafka.Streams.Kstream.ValueTransformerWithKey\" data-throw-if-not-resolved=\"false\"></xref> returned by the JVM.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -25460,7 +25502,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.Kstream.ValueTransformerWithKeyDirect",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Kstream.ValueTransformerWithKeyDirect.yml\" sourcestartlinenumber=\"1\">Direct override of <xref href=\"Org.Apache.Kafka.Streams.Kstream.ValueTransformerWithKey\" data-throw-if-not-resolved=\"false\"></xref> or its generic type if there is one</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Kstream.ValueTransformerWithKeyDirect.yml\" sourcestartlinenumber=\"1\">Concrete CLR representation of <xref href=\"Org.Apache.Kafka.Streams.Kstream.ValueTransformerWithKey\" data-throw-if-not-resolved=\"false\"></xref> returned by the JVM.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -25646,6 +25688,34 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Streams.Processor.AbstractProcessor-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Streams.Processor.AbstractProcessor-2.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Apache.Kafka.Streams.Processor.AbstractProcessor<K, V>",
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Processor.AbstractProcessor-2.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/processor/AbstractProcessor.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/processor/AbstractProcessor.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Streams.Processor.AbstractProcessor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Streams.Processor.AbstractProcessor.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Apache.Kafka.Streams.Processor.AbstractProcessor",
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Processor.AbstractProcessor.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/processor/AbstractProcessor.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/processor/AbstractProcessor.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Org.Apache.Kafka.Streams.Processor.Api.ContextualFixedKeyProcessor-3.yml",
       "output": {
         ".html": {
@@ -25768,7 +25838,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.Processor.Api.FixedKeyProcessorDirect<KIn, VIn, VOut>",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Processor.Api.FixedKeyProcessorDirect-3.yml\" sourcestartlinenumber=\"1\">Direct override of <xref href=\"Org.Apache.Kafka.Streams.Processor.Api.FixedKeyProcessor\" data-throw-if-not-resolved=\"false\"></xref> or its generic type if there is one</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Processor.Api.FixedKeyProcessorDirect-3.yml\" sourcestartlinenumber=\"1\">Concrete CLR representation of <xref href=\"Org.Apache.Kafka.Streams.Processor.Api.FixedKeyProcessor\" data-throw-if-not-resolved=\"false\"></xref> returned by the JVM.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -25782,7 +25852,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.Processor.Api.FixedKeyProcessorDirect",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Processor.Api.FixedKeyProcessorDirect.yml\" sourcestartlinenumber=\"1\">Direct override of <xref href=\"Org.Apache.Kafka.Streams.Processor.Api.FixedKeyProcessor\" data-throw-if-not-resolved=\"false\"></xref> or its generic type if there is one</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Processor.Api.FixedKeyProcessorDirect.yml\" sourcestartlinenumber=\"1\">Concrete CLR representation of <xref href=\"Org.Apache.Kafka.Streams.Processor.Api.FixedKeyProcessor\" data-throw-if-not-resolved=\"false\"></xref> returned by the JVM.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -26048,7 +26118,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.Processor.Api.ProcessorDirect<KIn, VIn, KOut, VOut>",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Processor.Api.ProcessorDirect-4.yml\" sourcestartlinenumber=\"1\">Direct override of <xref href=\"Org.Apache.Kafka.Streams.Processor.Api.Processor\" data-throw-if-not-resolved=\"false\"></xref> or its generic type if there is one</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Processor.Api.ProcessorDirect-4.yml\" sourcestartlinenumber=\"1\">Concrete CLR representation of <xref href=\"Org.Apache.Kafka.Streams.Processor.Api.Processor\" data-throw-if-not-resolved=\"false\"></xref> returned by the JVM.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -26062,7 +26132,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.Processor.Api.ProcessorDirect",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Processor.Api.ProcessorDirect.yml\" sourcestartlinenumber=\"1\">Direct override of <xref href=\"Org.Apache.Kafka.Streams.Processor.Api.Processor\" data-throw-if-not-resolved=\"false\"></xref> or its generic type if there is one</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Processor.Api.ProcessorDirect.yml\" sourcestartlinenumber=\"1\">Concrete CLR representation of <xref href=\"Org.Apache.Kafka.Streams.Processor.Api.Processor\" data-throw-if-not-resolved=\"false\"></xref> returned by the JVM.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -26468,7 +26538,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.Processor.BatchingStateRestoreCallbackDirect",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Processor.BatchingStateRestoreCallbackDirect.yml\" sourcestartlinenumber=\"1\">Direct override of <xref href=\"Org.Apache.Kafka.Streams.Processor.BatchingStateRestoreCallback\" data-throw-if-not-resolved=\"false\"></xref> or its generic type if there is one</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Processor.BatchingStateRestoreCallbackDirect.yml\" sourcestartlinenumber=\"1\">Concrete CLR representation of <xref href=\"Org.Apache.Kafka.Streams.Processor.BatchingStateRestoreCallback\" data-throw-if-not-resolved=\"false\"></xref> returned by the JVM.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -26584,6 +26654,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Streams.Processor.IProcessor-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Streams.Processor.IProcessor-2.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Apache.Kafka.Streams.Processor.IProcessor<K, V>",
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Processor.IProcessor-2.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/processor/Processor.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/processor/Processor.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Org.Apache.Kafka.Streams.Processor.IProcessorContext.yml",
       "output": {
         ".html": {
@@ -26595,6 +26679,20 @@
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.Processor.IProcessorContext",
       "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Processor.IProcessorContext.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/processor/ProcessorContext.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/processor/ProcessorContext.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Streams.Processor.IProcessorSupplier-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Streams.Processor.IProcessorSupplier-2.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Apache.Kafka.Streams.Processor.IProcessorSupplier<K, V>",
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Processor.IProcessorSupplier-2.yml\" sourcestartlinenumber=\"1\">.NET interface skeleton to be manually developed following <a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/processor/ProcessorSupplier.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/processor/ProcessorSupplier.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -26766,6 +26864,34 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Streams.Processor.Processor-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Streams.Processor.Processor-2.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Apache.Kafka.Streams.Processor.Processor<K, V>",
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Processor.Processor-2.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/processor/Processor.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/processor/Processor.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Streams.Processor.Processor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Streams.Processor.Processor.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Apache.Kafka.Streams.Processor.Processor",
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Processor.Processor.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/processor/Processor.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/processor/Processor.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Org.Apache.Kafka.Streams.Processor.ProcessorContext.yml",
       "output": {
         ".html": {
@@ -26777,6 +26903,34 @@
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.Processor.ProcessorContext",
       "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Processor.ProcessorContext.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/processor/ProcessorContext.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/processor/ProcessorContext.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Streams.Processor.ProcessorSupplier-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Streams.Processor.ProcessorSupplier-2.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Apache.Kafka.Streams.Processor.ProcessorSupplier<K, V>",
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Processor.ProcessorSupplier-2.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/processor/ProcessorSupplier.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/processor/ProcessorSupplier.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Streams.Processor.ProcessorSupplier.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Streams.Processor.ProcessorSupplier.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Apache.Kafka.Streams.Processor.ProcessorSupplier",
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Processor.ProcessorSupplier.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/processor/ProcessorSupplier.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/processor/ProcessorSupplier.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -26818,7 +26972,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.Processor.PunctuatorDirect",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Processor.PunctuatorDirect.yml\" sourcestartlinenumber=\"1\">Direct override of <xref href=\"Org.Apache.Kafka.Streams.Processor.Punctuator\" data-throw-if-not-resolved=\"false\"></xref> or its generic type if there is one</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Processor.PunctuatorDirect.yml\" sourcestartlinenumber=\"1\">Concrete CLR representation of <xref href=\"Org.Apache.Kafka.Streams.Processor.Punctuator\" data-throw-if-not-resolved=\"false\"></xref> returned by the JVM.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -26874,7 +27028,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.Processor.StandbyUpdateListenerDirect",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Processor.StandbyUpdateListenerDirect.yml\" sourcestartlinenumber=\"1\">Direct override of <xref href=\"Org.Apache.Kafka.Streams.Processor.StandbyUpdateListener\" data-throw-if-not-resolved=\"false\"></xref> or its generic type if there is one</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Processor.StandbyUpdateListenerDirect.yml\" sourcestartlinenumber=\"1\">Concrete CLR representation of <xref href=\"Org.Apache.Kafka.Streams.Processor.StandbyUpdateListener\" data-throw-if-not-resolved=\"false\"></xref> returned by the JVM.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -26902,7 +27056,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.Processor.StateRestoreCallbackDirect",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Processor.StateRestoreCallbackDirect.yml\" sourcestartlinenumber=\"1\">Direct override of <xref href=\"Org.Apache.Kafka.Streams.Processor.StateRestoreCallback\" data-throw-if-not-resolved=\"false\"></xref> or its generic type if there is one</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Processor.StateRestoreCallbackDirect.yml\" sourcestartlinenumber=\"1\">Concrete CLR representation of <xref href=\"Org.Apache.Kafka.Streams.Processor.StateRestoreCallback\" data-throw-if-not-resolved=\"false\"></xref> returned by the JVM.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -26930,7 +27084,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.Processor.StateRestoreListenerDirect",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Processor.StateRestoreListenerDirect.yml\" sourcestartlinenumber=\"1\">Direct override of <xref href=\"Org.Apache.Kafka.Streams.Processor.StateRestoreListener\" data-throw-if-not-resolved=\"false\"></xref> or its generic type if there is one</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Processor.StateRestoreListenerDirect.yml\" sourcestartlinenumber=\"1\">Concrete CLR representation of <xref href=\"Org.Apache.Kafka.Streams.Processor.StateRestoreListener\" data-throw-if-not-resolved=\"false\"></xref> returned by the JVM.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -27000,7 +27154,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.Processor.StreamPartitionerDirect<K, V>",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Processor.StreamPartitionerDirect-2.yml\" sourcestartlinenumber=\"1\">Direct override of <xref href=\"Org.Apache.Kafka.Streams.Processor.StreamPartitioner\" data-throw-if-not-resolved=\"false\"></xref> or its generic type if there is one</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Processor.StreamPartitionerDirect-2.yml\" sourcestartlinenumber=\"1\">Concrete CLR representation of <xref href=\"Org.Apache.Kafka.Streams.Processor.StreamPartitioner\" data-throw-if-not-resolved=\"false\"></xref> returned by the JVM.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -27014,7 +27168,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.Processor.StreamPartitionerDirect",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Processor.StreamPartitionerDirect.yml\" sourcestartlinenumber=\"1\">Direct override of <xref href=\"Org.Apache.Kafka.Streams.Processor.StreamPartitioner\" data-throw-if-not-resolved=\"false\"></xref> or its generic type if there is one</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Processor.StreamPartitionerDirect.yml\" sourcestartlinenumber=\"1\">Concrete CLR representation of <xref href=\"Org.Apache.Kafka.Streams.Processor.StreamPartitioner\" data-throw-if-not-resolved=\"false\"></xref> returned by the JVM.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -27029,6 +27183,34 @@
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.Processor.TaskId",
       "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Processor.TaskId.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/processor/TaskId.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/processor/TaskId.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Streams.Processor.TaskMetadata.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Streams.Processor.TaskMetadata.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Apache.Kafka.Streams.Processor.TaskMetadata",
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Processor.TaskMetadata.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/processor/TaskMetadata.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/processor/TaskMetadata.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Streams.Processor.ThreadMetadata.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Streams.Processor.ThreadMetadata.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Apache.Kafka.Streams.Processor.ThreadMetadata",
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Processor.ThreadMetadata.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/processor/ThreadMetadata.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/processor/ThreadMetadata.html</a></p>\n"
     },
     {
       "type": "ManagedReference",
@@ -27056,7 +27238,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.Processor.TimestampExtractorDirect",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Processor.TimestampExtractorDirect.yml\" sourcestartlinenumber=\"1\">Direct override of <xref href=\"Org.Apache.Kafka.Streams.Processor.TimestampExtractor\" data-throw-if-not-resolved=\"false\"></xref> or its generic type if there is one</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Processor.TimestampExtractorDirect.yml\" sourcestartlinenumber=\"1\">Concrete CLR representation of <xref href=\"Org.Apache.Kafka.Streams.Processor.TimestampExtractor\" data-throw-if-not-resolved=\"false\"></xref> returned by the JVM.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -27112,7 +27294,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.Processor.TopicNameExtractorDirect<K, V>",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Processor.TopicNameExtractorDirect-2.yml\" sourcestartlinenumber=\"1\">Direct override of <xref href=\"Org.Apache.Kafka.Streams.Processor.TopicNameExtractor\" data-throw-if-not-resolved=\"false\"></xref> or its generic type if there is one</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Processor.TopicNameExtractorDirect-2.yml\" sourcestartlinenumber=\"1\">Concrete CLR representation of <xref href=\"Org.Apache.Kafka.Streams.Processor.TopicNameExtractor\" data-throw-if-not-resolved=\"false\"></xref> returned by the JVM.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -27126,7 +27308,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Apache.Kafka.Streams.Processor.TopicNameExtractorDirect",
-      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Processor.TopicNameExtractorDirect.yml\" sourcestartlinenumber=\"1\">Direct override of <xref href=\"Org.Apache.Kafka.Streams.Processor.TopicNameExtractor\" data-throw-if-not-resolved=\"false\"></xref> or its generic type if there is one</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.Processor.TopicNameExtractorDirect.yml\" sourcestartlinenumber=\"1\">Concrete CLR representation of <xref href=\"Org.Apache.Kafka.Streams.Processor.TopicNameExtractor\" data-throw-if-not-resolved=\"false\"></xref> returned by the JVM.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -28572,6 +28754,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Org.Apache.Kafka.Streams.State.StreamsMetadata.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Org.Apache.Kafka.Streams.State.StreamsMetadata.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Org.Apache.Kafka.Streams.State.StreamsMetadata",
+      "Summary": "<p sourcefile=\"api/Org.Apache.Kafka.Streams.State.StreamsMetadata.yml\" sourcestartlinenumber=\"1\"><a href=\"https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/state/StreamsMetadata.html\">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/state/StreamsMetadata.html</a></p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Org.Apache.Kafka.Streams.State.TimestampedBytesStore.yml",
       "output": {
         ".html": {
@@ -30010,7 +30206,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Rocksdb.AbstractEventListenerDirect",
-      "Summary": "<p sourcefile=\"api/Org.Rocksdb.AbstractEventListenerDirect.yml\" sourcestartlinenumber=\"1\">Direct override of <xref href=\"Org.Rocksdb.AbstractEventListener\" data-throw-if-not-resolved=\"false\"></xref> or its generic type if there is one</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.AbstractEventListenerDirect.yml\" sourcestartlinenumber=\"1\">Concrete CLR representation of <xref href=\"Org.Rocksdb.AbstractEventListener\" data-throw-if-not-resolved=\"false\"></xref> returned by the JVM.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -30850,7 +31046,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "Org.Rocksdb.EventListenerDirect",
-      "Summary": "<p sourcefile=\"api/Org.Rocksdb.EventListenerDirect.yml\" sourcestartlinenumber=\"1\">Direct override of <xref href=\"Org.Rocksdb.EventListener\" data-throw-if-not-resolved=\"false\"></xref> or its generic type if there is one</p>\n"
+      "Summary": "<p sourcefile=\"api/Org.Rocksdb.EventListenerDirect.yml\" sourcestartlinenumber=\"1\">Concrete CLR representation of <xref href=\"Org.Rocksdb.EventListener\" data-throw-if-not-resolved=\"false\"></xref> returned by the JVM.</p>\n"
     },
     {
       "type": "ManagedReference",

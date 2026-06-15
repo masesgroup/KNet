@@ -89,7 +89,7 @@
 
 
   <h1 id="Org_Apache_Kafka_Streams_Processor_IStreamPartitioner_2" data-uid="Org.Apache.Kafka.Streams.Processor.IStreamPartitioner`2" class="text-break">
-Interface IStreamPartitioner&lt;K, V&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/StreamPartitioner.cs/#L304"><i class="bi bi-code-slash"></i></a>
+Interface IStreamPartitioner&lt;K, V&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/StreamPartitioner.cs/#L505"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -102,7 +102,7 @@ Interface IStreamPartitioner&lt;K, V&gt;  <a class="header-action link-secondary
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface IStreamPartitioner&lt;K, V&gt; : IJVMBridgeBase, IJVMBridgeDefinition</code></pre>
+    <pre><code class="lang-csharp hljs">public interface IStreamPartitioner&lt;K, V&gt; : IJVMBridgeBase, IJVMBridgeBaseInstance, IJVMBridgeDefinition</code></pre>
   </div>
 
 
@@ -120,58 +120,6 @@ Interface IStreamPartitioner&lt;K, V&gt;  <a class="header-action link-secondary
 
 
 
-  <dl class="typelist inheritedMembers">
-    <dt>Inherited Members</dt>
-    <dd>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBase.html#MASES_JCOBridge_C2JBridge_IJVMBridgeBase_MonitorEnter">IJVMBridgeBase.MonitorEnter()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBase.html#MASES_JCOBridge_C2JBridge_IJVMBridgeBase_MonitorExit">IJVMBridgeBase.MonitorExit()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">IJVMBridgeBase.IsInstanceOf(string)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBase.html#MASES_JCOBridge_C2JBridge_IJVMBridgeBase_IsInstanceOf_MASES_JCOBridge_C2JBridge_JVMInterop_IJavaType_">IJVMBridgeBase.IsInstanceOf(IJavaType)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBase.html#MASES_JCOBridge_C2JBridge_IJVMBridgeBase_IsInstanceOf__1">IJVMBridgeBase.IsInstanceOf&lt;T&gt;()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBase.html#MASES_JCOBridge_C2JBridge_IJVMBridgeBase_RuntimeIsInstanceOf__1">IJVMBridgeBase.RuntimeIsInstanceOf&lt;T&gt;()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBase.html#MASES_JCOBridge_C2JBridge_IJVMBridgeBase_CastTo__1">IJVMBridgeBase.CastTo&lt;TNewClass&gt;()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBase.html#MASES_JCOBridge_C2JBridge_IJVMBridgeBase_CastDirect__1">IJVMBridgeBase.CastDirect&lt;TNewClass&gt;()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBase.html#MASES_JCOBridge_C2JBridge_IJVMBridgeBase_DynBridgeInstance">IJVMBridgeBase.DynBridgeInstance</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBase.html#MASES_JCOBridge_C2JBridge_IJVMBridgeBase_BridgeInstance">IJVMBridgeBase.BridgeInstance</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">IJVMBridgeDefinition.BridgeClassName</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_IsBridgeInterface">IJVMBridgeDefinition.IsBridgeInterface</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_IsBridgeAbstract">IJVMBridgeDefinition.IsBridgeAbstract</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_IsBridgeStatic">IJVMBridgeDefinition.IsBridgeStatic</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_IsBridgeCloseable">IJVMBridgeDefinition.IsBridgeCloseable</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_IsBridgeListener">IJVMBridgeDefinition.IsBridgeListener</a>
-    </div>
-  </dd></dl>
 
 
 
@@ -194,7 +142,7 @@ Interface IStreamPartitioner&lt;K, V&gt;  <a class="header-action link-secondary
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">int Partition(String topic, K key, V value, int numPartitions)</code></pre>
+    <pre><code class="lang-csharp hljs">Integer Partition(String topic, K key, V value, int numPartitions)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -215,7 +163,7 @@ Interface IStreamPartitioner&lt;K, V&gt;  <a class="header-action link-secondary
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Integer.html">Integer</a></dt>
     <dd><p>an integer between 0 and <code class="paramref">numPartitions</code> -1, or -1 if the default partitioning logic should be used</p>
 </dd>
   </dl>
@@ -282,7 +230,7 @@ Interface IStreamPartitioner&lt;K, V&gt;  <a class="header-action link-secondary
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/StreamPartitioner.cs/#L304" class="edit-link">Edit this page</a>
+          <a href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/StreamPartitioner.cs/#L505" class="edit-link">Edit this page</a>
         </div>
 
 

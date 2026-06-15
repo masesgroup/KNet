@@ -89,7 +89,7 @@
 
 
   <h1 id="Org_Rocksdb_EventListener" data-uid="Org.Rocksdb.EventListener" class="text-break">
-Class EventListener  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/EventListener.cs/#L120"><i class="bi bi-code-slash"></i></a>
+Class EventListener  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/EventListener.cs/#L165"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -102,7 +102,7 @@ Class EventListener  <a class="header-action link-secondary" title="View source"
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class EventListener : JVMBridgeListener, IDynamicMetaObjectProvider, IJVMBridgeCore, IEquatable&lt;IJVMBridgeBase&gt;, IDisposable, IJVMBridgeBaseStatic, IJVMBridgeBase, IJVMBridgeDefinition, IEventListener</code></pre>
+    <pre><code class="lang-csharp hljs">public class EventListener : JVMBridgeListener, IDynamicMetaObjectProvider, IJVMBridgeCore, IEquatable&lt;IJVMBridgeBaseInstance&gt;, IDisposable, IJVMBridgeBaseStatic, IJVMBridgeBase, IJVMBridgeBaseInstance, IJVMBridgeDefinition, IEventListener</code></pre>
   </div>
 
 
@@ -125,10 +125,11 @@ Class EventListener  <a class="header-action link-secondary" title="View source"
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.idynamicmetaobjectprovider">IDynamicMetaObjectProvider</a></div>
       <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeCore.html">IJVMBridgeCore</a></div>
-      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBase.html">IJVMBridgeBase</a>&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBaseInstance.html">IJVMBridgeBaseInstance</a>&gt;</div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
       <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic.html">IJVMBridgeBaseStatic</a></div>
       <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBase.html">IJVMBridgeBase</a></div>
+      <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBaseInstance.html">IJVMBridgeBaseInstance</a></div>
       <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html">IJVMBridgeDefinition</a></div>
       <div><a class="xref" href="Org.Rocksdb.IEventListener.html">IEventListener</a></div>
     </dd>
@@ -141,406 +142,6 @@ Class EventListener  <a class="header-action link-secondary" title="View source"
     </dd>
   </dl>
 
-  <dl class="typelist inheritedMembers">
-    <dt>Inherited Members</dt>
-    <dd>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeListener.AddEventHandler(string, EventHandler)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeListener.AddEventHandler&lt;TDataClass&gt;(string, EventHandler&lt;CLRListenerEventArgs&lt;TDataClass&gt;&gt;)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeListener.Dispose(bool)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeListener.html#MASES_JCOBridge_C2JBridge_JVMBridgeListener_AutoInit">JVMBridgeListener.AutoInit</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeListener.html#MASES_JCOBridge_C2JBridge_JVMBridgeListener_IsBridgeStatic">JVMBridgeListener.IsBridgeStatic</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeListener.html#MASES_JCOBridge_C2JBridge_JVMBridgeListener_IsBridgeCloseable">JVMBridgeListener.IsBridgeCloseable</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeListener.html#MASES_JCOBridge_C2JBridge_JVMBridgeListener_IsBridgeListener">JVMBridgeListener.IsBridgeListener</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecute(IJavaType, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecuteWithSignature(IJavaType, string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecute(string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecuteWithSignature(string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecute&lt;TReturn&gt;(IJavaType, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecuteWithSignature&lt;TReturn&gt;(IJavaType, string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecute&lt;TReturn&gt;(string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecuteWithSignature&lt;TReturn&gt;(string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecute(Type, IJavaType, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecuteWithSignature(Type, IJavaType, string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecute(Type, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecuteWithSignature(Type, string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecute&lt;TNewClass, TReturn&gt;(IJavaType, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecuteWithSignature&lt;TNewClass, TReturn&gt;(IJavaType, string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecute&lt;TNewClass, TReturn&gt;(string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecuteWithSignature&lt;TNewClass, TReturn&gt;(string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecute&lt;TReturn&gt;(Type, IJavaType, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecuteWithSignature&lt;TReturn&gt;(Type, IJavaType, string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecute&lt;TReturn&gt;(Type, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecuteWithSignature&lt;TReturn&gt;(Type, string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecute&lt;TNewClass, TReturn, TConverter&gt;(IJavaType, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecuteWithSignature&lt;TNewClass, TReturn, TConverter&gt;(IJavaType, string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecute&lt;TNewClass, TReturn, TConverter&gt;(string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecuteWithSignature&lt;TNewClass, TReturn, TConverter&gt;(string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecute&lt;TReturn, TConverter&gt;(Type, IJavaType, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecuteWithSignature&lt;TReturn, TConverter&gt;(Type, IJavaType, string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecute&lt;TReturn, TConverter&gt;(Type, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecuteWithSignature&lt;TReturn, TConverter&gt;(Type, string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecuteArray&lt;TArrayType&gt;(IJavaType, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecuteWithSignatureArray&lt;TArrayType&gt;(IJavaType, string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecuteArray&lt;TArrayType&gt;(string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SExecuteWithSignatureArray&lt;TArrayType&gt;(string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SGetField(IJavaType, string)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SGetField(string)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SGetField&lt;TReturn&gt;(IJavaType, string)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SGetField&lt;TReturn&gt;(string)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SGetFieldArray&lt;TReturn&gt;(IJavaType, string)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SGetFieldArray&lt;TReturn&gt;(string)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SSetField(IJavaType, string, object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SSetField(string, object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SSetField&lt;TValue&gt;(IJavaType, string, TValue)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.SSetField&lt;TValue&gt;(string, TValue)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.IsAssignableFrom(string)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_IsAssignableFrom_MASES_JCOBridge_C2JBridge_JVMInterop_IJavaType_">JVMBridgeBase&lt;JVMBridgeListener&gt;.IsAssignableFrom(IJavaType)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_IsAssignableFrom__1">JVMBridgeBase&lt;JVMBridgeListener&gt;.IsAssignableFrom&lt;T&gt;()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">JVMBridgeBase&lt;JVMBridgeListener&gt;.New(params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.NewWithSignature(string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.NewAndWrapsDirect&lt;TNewClass&gt;(string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase&lt;JVMBridgeListener&gt;.NewWithSignatureAndWrapsDirect&lt;TNewClass&gt;(string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_Execute__1___0___">JVMBridgeBase&lt;JVMBridgeListener&gt;.Execute&lt;T&gt;(params T[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_DynBridgeClazz">JVMBridgeBase&lt;JVMBridgeListener&gt;.DynBridgeClazz</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_1_BridgeClazz">JVMBridgeBase&lt;JVMBridgeListener&gt;.BridgeClazz</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ReferenceEqualsJVM_MASES_JCOBridge_C2JBridge_JVMBridgeBase_MASES_JCOBridge_C2JBridge_JVMBridgeBase_">JVMBridgeBase.ReferenceEqualsJVM(JVMBridgeBase, JVMBridgeBase)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">JVMBridgeBase.ClazzOf&lt;TClass&gt;(bool)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">JVMBridgeBase.ClazzOf&lt;TClass&gt;(out Exception, bool)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ClazzOf(string, bool)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ClazzOf(string, out Exception, bool)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_RuntimeClassNameOf__1">JVMBridgeBase.RuntimeClassNameOf&lt;T&gt;()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.RuntimeClassNameOf(Type)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ClassNameOf__1">JVMBridgeBase.ClassNameOf&lt;T&gt;()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ClassOf__1">JVMBridgeBase.ClassOf&lt;T&gt;()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_WrapsDirect__1_MASES_JCOBridge_C2JBridge_JVMInterop_IJavaObject_">JVMBridgeBase.WrapsDirect&lt;TNewClass&gt;(IJavaObject)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Wraps__1_MASES_JCOBridge_C2JBridge_JVMInterop_IJavaObject_">JVMBridgeBase.Wraps&lt;TNewClass&gt;(IJavaObject)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.Wraps(Type, IJavaObject, string)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Wraps__2_MASES_JCOBridge_C2JBridge_JVMInterop_IJavaObject_">JVMBridgeBase.Wraps&lt;TNewClass, TReturn&gt;(IJavaObject)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.Wraps&lt;TReturn&gt;(Type, IJavaObject, string)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Wraps__3_MASES_JCOBridge_C2JBridge_JVMInterop_IJavaObject_">JVMBridgeBase.Wraps&lt;TNewClass, TReturn, TConverter&gt;(IJavaObject)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">JVMBridgeBase.Wraps&lt;TReturn, TConverter&gt;(Type, IJavaObject)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_MonitorEnter">JVMBridgeBase.MonitorEnter()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_MonitorExit">JVMBridgeBase.MonitorExit()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IsInstanceOf(string)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsInstanceOf_MASES_JCOBridge_C2JBridge_JVMInterop_IJavaType_">JVMBridgeBase.IsInstanceOf(IJavaType)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsInstanceOf__1">JVMBridgeBase.IsInstanceOf&lt;T&gt;()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_RuntimeIsInstanceOf__1">JVMBridgeBase.RuntimeIsInstanceOf&lt;T&gt;()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_CastTo__1">JVMBridgeBase.CastTo&lt;TNewClass&gt;()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_CastDirect__1">JVMBridgeBase.CastDirect&lt;TNewClass&gt;()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Dispose">JVMBridgeBase.Dispose()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_ToString">JVMBridgeBase.ToString()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Equals_MASES_JCOBridge_C2JBridge_IJVMBridgeBase_">JVMBridgeBase.Equals(IJVMBridgeBase)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">JVMBridgeBase.Equals(object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_GetHashCode">JVMBridgeBase.GetHashCode()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Notify">JVMBridgeBase.Notify()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_NotifyAll">JVMBridgeBase.NotifyAll()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_Wait">JVMBridgeBase.Wait()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">JVMBridgeBase.Wait(long)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">JVMBridgeBase.Wait(long, int)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecute(string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignature(string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecute&lt;TReturn&gt;(string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignature&lt;TReturn&gt;(string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecute&lt;TNewClass, TReturn&gt;(string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignature&lt;TNewClass, TReturn&gt;(string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecute&lt;TNewClass, TReturn, TConverter&gt;(string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignature&lt;TNewClass, TReturn, TConverter&gt;(string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteArray&lt;TArrayType&gt;(string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IExecuteWithSignatureArray&lt;TArrayType&gt;(string, string, params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IGetField(string)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IGetField&lt;TReturn&gt;(string)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.IGetFieldArray&lt;TReturn&gt;(string)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ISetField(string, object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">JVMBridgeBase.ISetField&lt;TValue&gt;(string, TValue)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">JVMBridgeBase.Throw&lt;TException&gt;(params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">JVMBridgeBase.BiThrow&lt;TException&gt;(params object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_DynBridgeInstance">JVMBridgeBase.DynBridgeInstance</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_BridgeInstance">JVMBridgeBase.BridgeInstance</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeInterface">JVMBridgeBase.IsBridgeInterface</a>
-    </div>
-    <div>
-      <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html#MASES_JCOBridge_C2JBridge_JVMBridgeBase_IsBridgeAbstract">JVMBridgeBase.IsBridgeAbstract</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trygetmember">DynamicObject.TryGetMember(GetMemberBinder, out object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trysetmember">DynamicObject.TrySetMember(SetMemberBinder, object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trydeletemember">DynamicObject.TryDeleteMember(DeleteMemberBinder)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryinvokemember">DynamicObject.TryInvokeMember(InvokeMemberBinder, object[], out object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryconvert">DynamicObject.TryConvert(ConvertBinder, out object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trycreateinstance">DynamicObject.TryCreateInstance(CreateInstanceBinder, object[], out object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryinvoke">DynamicObject.TryInvoke(InvokeBinder, object[], out object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trybinaryoperation">DynamicObject.TryBinaryOperation(BinaryOperationBinder, object, out object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.tryunaryoperation">DynamicObject.TryUnaryOperation(UnaryOperationBinder, out object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trygetindex">DynamicObject.TryGetIndex(GetIndexBinder, object[], out object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trysetindex">DynamicObject.TrySetIndex(SetIndexBinder, object[], object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.trydeleteindex">DynamicObject.TryDeleteIndex(DeleteIndexBinder, object[])</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.getdynamicmembernames">DynamicObject.GetDynamicMemberNames()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject.getmetaobject">DynamicObject.GetMetaObject(Expression)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
-    </div>
-  </dd></dl>
 
 
 
@@ -553,44 +154,17 @@ Class EventListener  <a class="header-action link-secondary" title="View source"
 
   <a id="Org_Rocksdb_EventListener__ctor_" data-uid="Org.Rocksdb.EventListener.#ctor*"></a>
 
-  <h3 id="Org_Rocksdb_EventListener__ctor" data-uid="Org.Rocksdb.EventListener.#ctor">
-  EventListener()
+  <h3 id="Org_Rocksdb_EventListener__ctor_MASES_JCOBridge_C2JBridge_IJVMBridgeBaseInitializer_" data-uid="Org.Rocksdb.EventListener.#ctor(MASES.JCOBridge.C2JBridge.IJVMBridgeBaseInitializer)">
+  EventListener(IJVMBridgeBaseInitializer)
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/EventListener.cs/#L37"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge</p>
+  <div class="markdown level1 summary"><p>Initializer used internally by JCOBridge. Do not use directly.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public EventListener()</code></pre>
-  </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <a id="Org_Rocksdb_EventListener__ctor_" data-uid="Org.Rocksdb.EventListener.#ctor*"></a>
-
-  <h3 id="Org_Rocksdb_EventListener__ctor_MASES_JCOBridge_C2JBridge_IJVMBridgeBaseInitializer_" data-uid="Org.Rocksdb.EventListener.#ctor(MASES.JCOBridge.C2JBridge.IJVMBridgeBaseInitializer)">
-  EventListener(IJVMBridgeBaseInitializer)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/EventListener.cs/#L41"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Internal constructor: used internally from JCOBridge</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Obsolete(&quot;This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.&quot;)]
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;This public initializer is needed for JCOBridge internal use, other uses can produce unidentifiable behaviors.&quot;)]
 public EventListener(IJVMBridgeBaseInitializer initializer)</code></pre>
   </div>
 
@@ -615,10 +189,10 @@ public EventListener(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_EventListener__ctor_System_Object___" data-uid="Org.Rocksdb.EventListener.#ctor(System.Object[])">
   EventListener(params object[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/EventListener.cs/#L46"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/EventListener.cs/#L43"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class</p>
+  <div class="markdown level1 summary"><p>Generic constructor used by JCOBridge when a derived class needs to forward arguments to the base JVMBridgeBase class.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -651,7 +225,7 @@ public EventListener(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_EventListener_BridgeClassName" data-uid="Org.Rocksdb.EventListener.BridgeClassName">
   BridgeClassName
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/EventListener.cs/#L53"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/EventListener.cs/#L82"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Java class name to be instantiated</p>
@@ -683,7 +257,7 @@ public EventListener(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_EventListener_OnOnBackgroundError" data-uid="Org.Rocksdb.EventListener.OnOnBackgroundError">
   OnOnBackgroundError
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/EventListener.cs/#L223"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/EventListener.cs/#L379"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/EventListener.html#onBackgroundError-org.rocksdb.BackgroundErrorReason-org.rocksdb.Status-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/EventListener.html#onBackgroundError-org.rocksdb.BackgroundErrorReason-org.rocksdb.Status-</a></p>
@@ -708,7 +282,8 @@ public EventListener(IJVMBridgeBaseInitializer initializer)</code></pre>
 
 
   <h4 class="section" id="Org_Rocksdb_EventListener_OnOnBackgroundError_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>If <a class="xref" href="Org.Rocksdb.EventListener.html#Org_Rocksdb_EventListener_OnOnBackgroundError">OnOnBackgroundError</a> has a value it takes precedence over corresponding class method</p>
+  <div class="markdown level1 remarks"><p>Assign a delegate to handle the event without subclassing. If both this handler and a virtual method override are present,
+the delegate takes precedence. Set to <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> to delegate to the virtual method.</p>
 </div>
 
 
@@ -718,7 +293,7 @@ public EventListener(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_EventListener_OnOnColumnFamilyHandleDeletionStarted" data-uid="Org.Rocksdb.EventListener.OnOnColumnFamilyHandleDeletionStarted">
   OnOnColumnFamilyHandleDeletionStarted
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/EventListener.cs/#L248"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/EventListener.cs/#L422"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/EventListener.html#onColumnFamilyHandleDeletionStarted-org.rocksdb.ColumnFamilyHandle-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/EventListener.html#onColumnFamilyHandleDeletionStarted-org.rocksdb.ColumnFamilyHandle-</a></p>
@@ -743,7 +318,8 @@ public EventListener(IJVMBridgeBaseInitializer initializer)</code></pre>
 
 
   <h4 class="section" id="Org_Rocksdb_EventListener_OnOnColumnFamilyHandleDeletionStarted_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>If <a class="xref" href="Org.Rocksdb.EventListener.html#Org_Rocksdb_EventListener_OnOnColumnFamilyHandleDeletionStarted">OnOnColumnFamilyHandleDeletionStarted</a> has a value it takes precedence over corresponding class method</p>
+  <div class="markdown level1 remarks"><p>Assign a delegate to handle the event without subclassing. If both this handler and a virtual method override are present,
+the delegate takes precedence. Set to <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> to delegate to the virtual method.</p>
 </div>
 
 
@@ -753,7 +329,7 @@ public EventListener(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_EventListener_OnOnCompactionBegin" data-uid="Org.Rocksdb.EventListener.OnOnCompactionBegin">
   OnOnCompactionBegin
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/EventListener.cs/#L272"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/EventListener.cs/#L464"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/EventListener.html#onCompactionBegin-org.rocksdb.RocksDB-org.rocksdb.CompactionJobInfo-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/EventListener.html#onCompactionBegin-org.rocksdb.RocksDB-org.rocksdb.CompactionJobInfo-</a></p>
@@ -778,7 +354,8 @@ public EventListener(IJVMBridgeBaseInitializer initializer)</code></pre>
 
 
   <h4 class="section" id="Org_Rocksdb_EventListener_OnOnCompactionBegin_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>If <a class="xref" href="Org.Rocksdb.EventListener.html#Org_Rocksdb_EventListener_OnOnCompactionBegin">OnOnCompactionBegin</a> has a value it takes precedence over corresponding class method</p>
+  <div class="markdown level1 remarks"><p>Assign a delegate to handle the event without subclassing. If both this handler and a virtual method override are present,
+the delegate takes precedence. Set to <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> to delegate to the virtual method.</p>
 </div>
 
 
@@ -788,7 +365,7 @@ public EventListener(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_EventListener_OnOnCompactionCompleted" data-uid="Org.Rocksdb.EventListener.OnOnCompactionCompleted">
   OnOnCompactionCompleted
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/EventListener.cs/#L297"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/EventListener.cs/#L507"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/EventListener.html#onCompactionCompleted-org.rocksdb.RocksDB-org.rocksdb.CompactionJobInfo-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/EventListener.html#onCompactionCompleted-org.rocksdb.RocksDB-org.rocksdb.CompactionJobInfo-</a></p>
@@ -813,7 +390,8 @@ public EventListener(IJVMBridgeBaseInitializer initializer)</code></pre>
 
 
   <h4 class="section" id="Org_Rocksdb_EventListener_OnOnCompactionCompleted_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>If <a class="xref" href="Org.Rocksdb.EventListener.html#Org_Rocksdb_EventListener_OnOnCompactionCompleted">OnOnCompactionCompleted</a> has a value it takes precedence over corresponding class method</p>
+  <div class="markdown level1 remarks"><p>Assign a delegate to handle the event without subclassing. If both this handler and a virtual method override are present,
+the delegate takes precedence. Set to <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> to delegate to the virtual method.</p>
 </div>
 
 
@@ -823,7 +401,7 @@ public EventListener(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_EventListener_OnOnErrorRecoveryBegin" data-uid="Org.Rocksdb.EventListener.OnOnErrorRecoveryBegin">
   OnOnErrorRecoveryBegin
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/EventListener.cs/#L173"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/EventListener.cs/#L271"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/EventListener.html#onErrorRecoveryBegin-org.rocksdb.BackgroundErrorReason-org.rocksdb.Status-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/EventListener.html#onErrorRecoveryBegin-org.rocksdb.BackgroundErrorReason-org.rocksdb.Status-</a></p>
@@ -848,7 +426,47 @@ public EventListener(IJVMBridgeBaseInitializer initializer)</code></pre>
 
 
   <h4 class="section" id="Org_Rocksdb_EventListener_OnOnErrorRecoveryBegin_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>If <a class="xref" href="Org.Rocksdb.EventListener.html#Org_Rocksdb_EventListener_OnOnErrorRecoveryBegin">OnOnErrorRecoveryBegin</a> has a value it takes precedence over corresponding class method</p>
+  <div class="markdown level1 remarks"><p>Assign a delegate to handle the event without subclassing. If both this handler and a virtual method override are present,
+the delegate takes precedence. Set to <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> to delegate to the virtual method.</p>
+</div>
+
+
+
+
+  <a id="Org_Rocksdb_EventListener_OnOnErrorRecoveryBeginDispose_" data-uid="Org.Rocksdb.EventListener.OnOnErrorRecoveryBeginDispose*"></a>
+
+  <h3 id="Org_Rocksdb_EventListener_OnOnErrorRecoveryBeginDispose" data-uid="Org.Rocksdb.EventListener.OnOnErrorRecoveryBeginDispose">
+  OnOnErrorRecoveryBeginDispose
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/EventListener.cs/#L281"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Optional handler invoked after the event handler returns, to dispose the JVM object returned by this event.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Action&lt;bool&gt; OnOnErrorRecoveryBeginDispose { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Org_Rocksdb_EventListener_OnOnErrorRecoveryBeginDispose_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Set <a class="xref" href="Org.Rocksdb.EventListener.html#Org_Rocksdb_EventListener_OnOnErrorRecoveryBeginDispose">OnOnErrorRecoveryBeginDispose</a> when the event handler returns a JVM-backed object
+that is no longer needed after the call. The handler receives the return value and is responsible for calling
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable.dispose">Dispose()</a> on it, releasing the underlying JVM global reference immediately
+instead of waiting for the .NET garbage collector to finalize it.
+If not set, the return value is not disposed automatically.</p>
 </div>
 
 
@@ -858,7 +476,7 @@ public EventListener(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_EventListener_OnOnErrorRecoveryCompleted" data-uid="Org.Rocksdb.EventListener.OnOnErrorRecoveryCompleted">
   OnOnErrorRecoveryCompleted
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/EventListener.cs/#L322"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/EventListener.cs/#L550"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/EventListener.html#onErrorRecoveryCompleted-org.rocksdb.Status-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/EventListener.html#onErrorRecoveryCompleted-org.rocksdb.Status-</a></p>
@@ -883,7 +501,8 @@ public EventListener(IJVMBridgeBaseInitializer initializer)</code></pre>
 
 
   <h4 class="section" id="Org_Rocksdb_EventListener_OnOnErrorRecoveryCompleted_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>If <a class="xref" href="Org.Rocksdb.EventListener.html#Org_Rocksdb_EventListener_OnOnErrorRecoveryCompleted">OnOnErrorRecoveryCompleted</a> has a value it takes precedence over corresponding class method</p>
+  <div class="markdown level1 remarks"><p>Assign a delegate to handle the event without subclassing. If both this handler and a virtual method override are present,
+the delegate takes precedence. Set to <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> to delegate to the virtual method.</p>
 </div>
 
 
@@ -893,7 +512,7 @@ public EventListener(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_EventListener_OnOnExternalFileIngested" data-uid="Org.Rocksdb.EventListener.OnOnExternalFileIngested">
   OnOnExternalFileIngested
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/EventListener.cs/#L346"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/EventListener.cs/#L592"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/EventListener.html#onExternalFileIngested-org.rocksdb.RocksDB-org.rocksdb.ExternalFileIngestionInfo-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/EventListener.html#onExternalFileIngested-org.rocksdb.RocksDB-org.rocksdb.ExternalFileIngestionInfo-</a></p>
@@ -918,7 +537,8 @@ public EventListener(IJVMBridgeBaseInitializer initializer)</code></pre>
 
 
   <h4 class="section" id="Org_Rocksdb_EventListener_OnOnExternalFileIngested_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>If <a class="xref" href="Org.Rocksdb.EventListener.html#Org_Rocksdb_EventListener_OnOnExternalFileIngested">OnOnExternalFileIngested</a> has a value it takes precedence over corresponding class method</p>
+  <div class="markdown level1 remarks"><p>Assign a delegate to handle the event without subclassing. If both this handler and a virtual method override are present,
+the delegate takes precedence. Set to <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> to delegate to the virtual method.</p>
 </div>
 
 
@@ -928,7 +548,7 @@ public EventListener(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_EventListener_OnOnFileCloseFinish" data-uid="Org.Rocksdb.EventListener.OnOnFileCloseFinish">
   OnOnFileCloseFinish
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/EventListener.cs/#L371"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/EventListener.cs/#L635"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/EventListener.html#onFileCloseFinish-org.rocksdb.FileOperationInfo-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/EventListener.html#onFileCloseFinish-org.rocksdb.FileOperationInfo-</a></p>
@@ -953,7 +573,8 @@ public EventListener(IJVMBridgeBaseInitializer initializer)</code></pre>
 
 
   <h4 class="section" id="Org_Rocksdb_EventListener_OnOnFileCloseFinish_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>If <a class="xref" href="Org.Rocksdb.EventListener.html#Org_Rocksdb_EventListener_OnOnFileCloseFinish">OnOnFileCloseFinish</a> has a value it takes precedence over corresponding class method</p>
+  <div class="markdown level1 remarks"><p>Assign a delegate to handle the event without subclassing. If both this handler and a virtual method override are present,
+the delegate takes precedence. Set to <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> to delegate to the virtual method.</p>
 </div>
 
 
@@ -963,7 +584,7 @@ public EventListener(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_EventListener_OnOnFileFlushFinish" data-uid="Org.Rocksdb.EventListener.OnOnFileFlushFinish">
   OnOnFileFlushFinish
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/EventListener.cs/#L395"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/EventListener.cs/#L677"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/EventListener.html#onFileFlushFinish-org.rocksdb.FileOperationInfo-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/EventListener.html#onFileFlushFinish-org.rocksdb.FileOperationInfo-</a></p>
@@ -988,7 +609,8 @@ public EventListener(IJVMBridgeBaseInitializer initializer)</code></pre>
 
 
   <h4 class="section" id="Org_Rocksdb_EventListener_OnOnFileFlushFinish_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>If <a class="xref" href="Org.Rocksdb.EventListener.html#Org_Rocksdb_EventListener_OnOnFileFlushFinish">OnOnFileFlushFinish</a> has a value it takes precedence over corresponding class method</p>
+  <div class="markdown level1 remarks"><p>Assign a delegate to handle the event without subclassing. If both this handler and a virtual method override are present,
+the delegate takes precedence. Set to <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> to delegate to the virtual method.</p>
 </div>
 
 
@@ -998,7 +620,7 @@ public EventListener(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_EventListener_OnOnFileRangeSyncFinish" data-uid="Org.Rocksdb.EventListener.OnOnFileRangeSyncFinish">
   OnOnFileRangeSyncFinish
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/EventListener.cs/#L419"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/EventListener.cs/#L719"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/EventListener.html#onFileRangeSyncFinish-org.rocksdb.FileOperationInfo-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/EventListener.html#onFileRangeSyncFinish-org.rocksdb.FileOperationInfo-</a></p>
@@ -1023,7 +645,8 @@ public EventListener(IJVMBridgeBaseInitializer initializer)</code></pre>
 
 
   <h4 class="section" id="Org_Rocksdb_EventListener_OnOnFileRangeSyncFinish_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>If <a class="xref" href="Org.Rocksdb.EventListener.html#Org_Rocksdb_EventListener_OnOnFileRangeSyncFinish">OnOnFileRangeSyncFinish</a> has a value it takes precedence over corresponding class method</p>
+  <div class="markdown level1 remarks"><p>Assign a delegate to handle the event without subclassing. If both this handler and a virtual method override are present,
+the delegate takes precedence. Set to <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> to delegate to the virtual method.</p>
 </div>
 
 
@@ -1033,7 +656,7 @@ public EventListener(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_EventListener_OnOnFileReadFinish" data-uid="Org.Rocksdb.EventListener.OnOnFileReadFinish">
   OnOnFileReadFinish
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/EventListener.cs/#L443"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/EventListener.cs/#L761"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/EventListener.html#onFileReadFinish-org.rocksdb.FileOperationInfo-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/EventListener.html#onFileReadFinish-org.rocksdb.FileOperationInfo-</a></p>
@@ -1058,7 +681,8 @@ public EventListener(IJVMBridgeBaseInitializer initializer)</code></pre>
 
 
   <h4 class="section" id="Org_Rocksdb_EventListener_OnOnFileReadFinish_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>If <a class="xref" href="Org.Rocksdb.EventListener.html#Org_Rocksdb_EventListener_OnOnFileReadFinish">OnOnFileReadFinish</a> has a value it takes precedence over corresponding class method</p>
+  <div class="markdown level1 remarks"><p>Assign a delegate to handle the event without subclassing. If both this handler and a virtual method override are present,
+the delegate takes precedence. Set to <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> to delegate to the virtual method.</p>
 </div>
 
 
@@ -1068,7 +692,7 @@ public EventListener(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_EventListener_OnOnFileSyncFinish" data-uid="Org.Rocksdb.EventListener.OnOnFileSyncFinish">
   OnOnFileSyncFinish
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/EventListener.cs/#L467"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/EventListener.cs/#L803"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/EventListener.html#onFileSyncFinish-org.rocksdb.FileOperationInfo-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/EventListener.html#onFileSyncFinish-org.rocksdb.FileOperationInfo-</a></p>
@@ -1093,7 +717,8 @@ public EventListener(IJVMBridgeBaseInitializer initializer)</code></pre>
 
 
   <h4 class="section" id="Org_Rocksdb_EventListener_OnOnFileSyncFinish_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>If <a class="xref" href="Org.Rocksdb.EventListener.html#Org_Rocksdb_EventListener_OnOnFileSyncFinish">OnOnFileSyncFinish</a> has a value it takes precedence over corresponding class method</p>
+  <div class="markdown level1 remarks"><p>Assign a delegate to handle the event without subclassing. If both this handler and a virtual method override are present,
+the delegate takes precedence. Set to <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> to delegate to the virtual method.</p>
 </div>
 
 
@@ -1103,7 +728,7 @@ public EventListener(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_EventListener_OnOnFileTruncateFinish" data-uid="Org.Rocksdb.EventListener.OnOnFileTruncateFinish">
   OnOnFileTruncateFinish
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/EventListener.cs/#L491"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/EventListener.cs/#L845"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/EventListener.html#onFileTruncateFinish-org.rocksdb.FileOperationInfo-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/EventListener.html#onFileTruncateFinish-org.rocksdb.FileOperationInfo-</a></p>
@@ -1128,7 +753,8 @@ public EventListener(IJVMBridgeBaseInitializer initializer)</code></pre>
 
 
   <h4 class="section" id="Org_Rocksdb_EventListener_OnOnFileTruncateFinish_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>If <a class="xref" href="Org.Rocksdb.EventListener.html#Org_Rocksdb_EventListener_OnOnFileTruncateFinish">OnOnFileTruncateFinish</a> has a value it takes precedence over corresponding class method</p>
+  <div class="markdown level1 remarks"><p>Assign a delegate to handle the event without subclassing. If both this handler and a virtual method override are present,
+the delegate takes precedence. Set to <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> to delegate to the virtual method.</p>
 </div>
 
 
@@ -1138,7 +764,7 @@ public EventListener(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_EventListener_OnOnFileWriteFinish" data-uid="Org.Rocksdb.EventListener.OnOnFileWriteFinish">
   OnOnFileWriteFinish
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/EventListener.cs/#L515"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/EventListener.cs/#L887"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/EventListener.html#onFileWriteFinish-org.rocksdb.FileOperationInfo-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/EventListener.html#onFileWriteFinish-org.rocksdb.FileOperationInfo-</a></p>
@@ -1163,7 +789,8 @@ public EventListener(IJVMBridgeBaseInitializer initializer)</code></pre>
 
 
   <h4 class="section" id="Org_Rocksdb_EventListener_OnOnFileWriteFinish_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>If <a class="xref" href="Org.Rocksdb.EventListener.html#Org_Rocksdb_EventListener_OnOnFileWriteFinish">OnOnFileWriteFinish</a> has a value it takes precedence over corresponding class method</p>
+  <div class="markdown level1 remarks"><p>Assign a delegate to handle the event without subclassing. If both this handler and a virtual method override are present,
+the delegate takes precedence. Set to <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> to delegate to the virtual method.</p>
 </div>
 
 
@@ -1173,7 +800,7 @@ public EventListener(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_EventListener_OnOnFlushBegin" data-uid="Org.Rocksdb.EventListener.OnOnFlushBegin">
   OnOnFlushBegin
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/EventListener.cs/#L539"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/EventListener.cs/#L929"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/EventListener.html#onFlushBegin-org.rocksdb.RocksDB-org.rocksdb.FlushJobInfo-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/EventListener.html#onFlushBegin-org.rocksdb.RocksDB-org.rocksdb.FlushJobInfo-</a></p>
@@ -1198,7 +825,8 @@ public EventListener(IJVMBridgeBaseInitializer initializer)</code></pre>
 
 
   <h4 class="section" id="Org_Rocksdb_EventListener_OnOnFlushBegin_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>If <a class="xref" href="Org.Rocksdb.EventListener.html#Org_Rocksdb_EventListener_OnOnFlushBegin">OnOnFlushBegin</a> has a value it takes precedence over corresponding class method</p>
+  <div class="markdown level1 remarks"><p>Assign a delegate to handle the event without subclassing. If both this handler and a virtual method override are present,
+the delegate takes precedence. Set to <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> to delegate to the virtual method.</p>
 </div>
 
 
@@ -1208,7 +836,7 @@ public EventListener(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_EventListener_OnOnFlushCompleted" data-uid="Org.Rocksdb.EventListener.OnOnFlushCompleted">
   OnOnFlushCompleted
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/EventListener.cs/#L564"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/EventListener.cs/#L972"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/EventListener.html#onFlushCompleted-org.rocksdb.RocksDB-org.rocksdb.FlushJobInfo-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/EventListener.html#onFlushCompleted-org.rocksdb.RocksDB-org.rocksdb.FlushJobInfo-</a></p>
@@ -1233,7 +861,8 @@ public EventListener(IJVMBridgeBaseInitializer initializer)</code></pre>
 
 
   <h4 class="section" id="Org_Rocksdb_EventListener_OnOnFlushCompleted_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>If <a class="xref" href="Org.Rocksdb.EventListener.html#Org_Rocksdb_EventListener_OnOnFlushCompleted">OnOnFlushCompleted</a> has a value it takes precedence over corresponding class method</p>
+  <div class="markdown level1 remarks"><p>Assign a delegate to handle the event without subclassing. If both this handler and a virtual method override are present,
+the delegate takes precedence. Set to <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> to delegate to the virtual method.</p>
 </div>
 
 
@@ -1243,7 +872,7 @@ public EventListener(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_EventListener_OnOnMemTableSealed" data-uid="Org.Rocksdb.EventListener.OnOnMemTableSealed">
   OnOnMemTableSealed
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/EventListener.cs/#L589"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/EventListener.cs/#L1015"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/EventListener.html#onMemTableSealed-org.rocksdb.MemTableInfo-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/EventListener.html#onMemTableSealed-org.rocksdb.MemTableInfo-</a></p>
@@ -1268,7 +897,8 @@ public EventListener(IJVMBridgeBaseInitializer initializer)</code></pre>
 
 
   <h4 class="section" id="Org_Rocksdb_EventListener_OnOnMemTableSealed_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>If <a class="xref" href="Org.Rocksdb.EventListener.html#Org_Rocksdb_EventListener_OnOnMemTableSealed">OnOnMemTableSealed</a> has a value it takes precedence over corresponding class method</p>
+  <div class="markdown level1 remarks"><p>Assign a delegate to handle the event without subclassing. If both this handler and a virtual method override are present,
+the delegate takes precedence. Set to <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> to delegate to the virtual method.</p>
 </div>
 
 
@@ -1278,7 +908,7 @@ public EventListener(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_EventListener_OnOnStallConditionsChanged" data-uid="Org.Rocksdb.EventListener.OnOnStallConditionsChanged">
   OnOnStallConditionsChanged
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/EventListener.cs/#L613"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/EventListener.cs/#L1057"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/EventListener.html#onStallConditionsChanged-org.rocksdb.WriteStallInfo-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/EventListener.html#onStallConditionsChanged-org.rocksdb.WriteStallInfo-</a></p>
@@ -1303,7 +933,8 @@ public EventListener(IJVMBridgeBaseInitializer initializer)</code></pre>
 
 
   <h4 class="section" id="Org_Rocksdb_EventListener_OnOnStallConditionsChanged_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>If <a class="xref" href="Org.Rocksdb.EventListener.html#Org_Rocksdb_EventListener_OnOnStallConditionsChanged">OnOnStallConditionsChanged</a> has a value it takes precedence over corresponding class method</p>
+  <div class="markdown level1 remarks"><p>Assign a delegate to handle the event without subclassing. If both this handler and a virtual method override are present,
+the delegate takes precedence. Set to <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> to delegate to the virtual method.</p>
 </div>
 
 
@@ -1313,7 +944,7 @@ public EventListener(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_EventListener_OnOnTableFileCreated" data-uid="Org.Rocksdb.EventListener.OnOnTableFileCreated">
   OnOnTableFileCreated
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/EventListener.cs/#L637"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/EventListener.cs/#L1099"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/EventListener.html#onTableFileCreated-org.rocksdb.TableFileCreationInfo-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/EventListener.html#onTableFileCreated-org.rocksdb.TableFileCreationInfo-</a></p>
@@ -1338,7 +969,8 @@ public EventListener(IJVMBridgeBaseInitializer initializer)</code></pre>
 
 
   <h4 class="section" id="Org_Rocksdb_EventListener_OnOnTableFileCreated_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>If <a class="xref" href="Org.Rocksdb.EventListener.html#Org_Rocksdb_EventListener_OnOnTableFileCreated">OnOnTableFileCreated</a> has a value it takes precedence over corresponding class method</p>
+  <div class="markdown level1 remarks"><p>Assign a delegate to handle the event without subclassing. If both this handler and a virtual method override are present,
+the delegate takes precedence. Set to <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> to delegate to the virtual method.</p>
 </div>
 
 
@@ -1348,7 +980,7 @@ public EventListener(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_EventListener_OnOnTableFileCreationStarted" data-uid="Org.Rocksdb.EventListener.OnOnTableFileCreationStarted">
   OnOnTableFileCreationStarted
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/EventListener.cs/#L661"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/EventListener.cs/#L1141"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/EventListener.html#onTableFileCreationStarted-org.rocksdb.TableFileCreationBriefInfo-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/EventListener.html#onTableFileCreationStarted-org.rocksdb.TableFileCreationBriefInfo-</a></p>
@@ -1373,7 +1005,8 @@ public EventListener(IJVMBridgeBaseInitializer initializer)</code></pre>
 
 
   <h4 class="section" id="Org_Rocksdb_EventListener_OnOnTableFileCreationStarted_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>If <a class="xref" href="Org.Rocksdb.EventListener.html#Org_Rocksdb_EventListener_OnOnTableFileCreationStarted">OnOnTableFileCreationStarted</a> has a value it takes precedence over corresponding class method</p>
+  <div class="markdown level1 remarks"><p>Assign a delegate to handle the event without subclassing. If both this handler and a virtual method override are present,
+the delegate takes precedence. Set to <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> to delegate to the virtual method.</p>
 </div>
 
 
@@ -1383,7 +1016,7 @@ public EventListener(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_EventListener_OnOnTableFileDeleted" data-uid="Org.Rocksdb.EventListener.OnOnTableFileDeleted">
   OnOnTableFileDeleted
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/EventListener.cs/#L685"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/EventListener.cs/#L1183"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/EventListener.html#onTableFileDeleted-org.rocksdb.TableFileDeletionInfo-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/EventListener.html#onTableFileDeleted-org.rocksdb.TableFileDeletionInfo-</a></p>
@@ -1408,7 +1041,8 @@ public EventListener(IJVMBridgeBaseInitializer initializer)</code></pre>
 
 
   <h4 class="section" id="Org_Rocksdb_EventListener_OnOnTableFileDeleted_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>If <a class="xref" href="Org.Rocksdb.EventListener.html#Org_Rocksdb_EventListener_OnOnTableFileDeleted">OnOnTableFileDeleted</a> has a value it takes precedence over corresponding class method</p>
+  <div class="markdown level1 remarks"><p>Assign a delegate to handle the event without subclassing. If both this handler and a virtual method override are present,
+the delegate takes precedence. Set to <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> to delegate to the virtual method.</p>
 </div>
 
 
@@ -1418,7 +1052,7 @@ public EventListener(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_EventListener_OnShouldBeNotifiedOnFileIO" data-uid="Org.Rocksdb.EventListener.OnShouldBeNotifiedOnFileIO">
   OnShouldBeNotifiedOnFileIO
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/EventListener.cs/#L199"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/EventListener.cs/#L326"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Handler for <a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/EventListener.html#shouldBeNotifiedOnFileIO--">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/EventListener.html#shouldBeNotifiedOnFileIO--</a></p>
@@ -1443,7 +1077,47 @@ public EventListener(IJVMBridgeBaseInitializer initializer)</code></pre>
 
 
   <h4 class="section" id="Org_Rocksdb_EventListener_OnShouldBeNotifiedOnFileIO_remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>If <a class="xref" href="Org.Rocksdb.EventListener.html#Org_Rocksdb_EventListener_OnShouldBeNotifiedOnFileIO">OnShouldBeNotifiedOnFileIO</a> has a value it takes precedence over corresponding class method</p>
+  <div class="markdown level1 remarks"><p>Assign a delegate to handle the event without subclassing. If both this handler and a virtual method override are present,
+the delegate takes precedence. Set to <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> to delegate to the virtual method.</p>
+</div>
+
+
+
+
+  <a id="Org_Rocksdb_EventListener_OnShouldBeNotifiedOnFileIODispose_" data-uid="Org.Rocksdb.EventListener.OnShouldBeNotifiedOnFileIODispose*"></a>
+
+  <h3 id="Org_Rocksdb_EventListener_OnShouldBeNotifiedOnFileIODispose" data-uid="Org.Rocksdb.EventListener.OnShouldBeNotifiedOnFileIODispose">
+  OnShouldBeNotifiedOnFileIODispose
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/EventListener.cs/#L336"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Optional handler invoked after the event handler returns, to dispose the JVM object returned by this event.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Action&lt;bool&gt; OnShouldBeNotifiedOnFileIODispose { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Org_Rocksdb_EventListener_OnShouldBeNotifiedOnFileIODispose_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Set <a class="xref" href="Org.Rocksdb.EventListener.html#Org_Rocksdb_EventListener_OnShouldBeNotifiedOnFileIODispose">OnShouldBeNotifiedOnFileIODispose</a> when the event handler returns a JVM-backed object
+that is no longer needed after the call. The handler receives the return value and is responsible for calling
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable.dispose">Dispose()</a> on it, releasing the underlying JVM global reference immediately
+instead of waiting for the .NET garbage collector to finalize it.
+If not set, the return value is not disposed automatically.</p>
 </div>
 
 
@@ -1455,9 +1129,9 @@ public EventListener(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <a id="Org_Rocksdb_EventListener_InitializeHandlers_" data-uid="Org.Rocksdb.EventListener.InitializeHandlers*"></a>
 
-  <h3 id="Org_Rocksdb_EventListener_InitializeHandlers" data-uid="Org.Rocksdb.EventListener.InitializeHandlers">
-  InitializeHandlers()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/EventListener.cs/#L142"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Org_Rocksdb_EventListener_InitializeHandlers_System_Type_" data-uid="Org.Rocksdb.EventListener.InitializeHandlers(System.Type)">
+  InitializeHandlers(Type)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/EventListener.cs/#L187"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Handlers initializer for <a class="xref" href="Org.Rocksdb.EventListener.html">EventListener</a></p>
@@ -1465,10 +1139,96 @@ public EventListener(IJVMBridgeBaseInitializer initializer)</code></pre>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected virtual void InitializeHandlers()</code></pre>
+    <pre><code class="lang-csharp hljs">protected virtual void InitializeHandlers(Type listenerRuntimeType)</code></pre>
   </div>
 
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>listenerRuntimeType</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd></dd>
+  </dl>
 
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Rocksdb_EventListener_ListenerShallManageEvent_" data-uid="Org.Rocksdb.EventListener.ListenerShallManageEvent*"></a>
+
+  <h3 id="Org_Rocksdb_EventListener_ListenerShallManageEvent_System_Int32_" data-uid="Org.Rocksdb.EventListener.ListenerShallManageEvent(System.Int32)">
+  ListenerShallManageEvent(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/EventListener.cs/#L68"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Invoked from the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeListener.html">JVMBridgeListener</a> on each received event to notify the user which can decide to abort the execution for the specific event returning <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override bool ListenerShallManageEvent(int eventIndex)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>eventIndex</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The index of the event triggered as returned from <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">AddEventHandler(string, EventHandler)</a> or <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">AddEventHandler&lt;TDataClass&gt;(string, EventHandler&lt;CLRListenerEventArgs&lt;TDataClass&gt;&gt;)</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Returns <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> to continue event evaluation, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a> to return the control to the JVM</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Org_Rocksdb_EventListener_ListenerShallManageEvent_System_Int32__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>By default every event continues the execution and reads the data from JVM; this implies an extra cost which can be limited using <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">ListenerShallManageEvent(int)</a> or the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeListener.html#MASES_JCOBridge_C2JBridge_JVMBridgeListener_ListenerShallManageEventIndex">ListenerShallManageEventIndex</a>/<a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeListener.html#MASES_JCOBridge_C2JBridge_JVMBridgeListener_ListenerShallManageEventName">ListenerShallManageEventName</a> handlers.
+Returning <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a> the control is immediately returned to the JVM, anyway the user has received the notification. It can be useful in scenarios where the user is interested in few events
+and the other are simply discarded to optimize the execution speed.
+By default, this function invokes <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeListener.html#MASES_JCOBridge_C2JBridge_JVMBridgeListener_ListenerShallManageEventIndex">ListenerShallManageEventIndex</a>, then try <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeListener.html#MASES_JCOBridge_C2JBridge_JVMBridgeListener_ListenerShallManageEventName">ListenerShallManageEventName</a> if they are set or return <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a></p>
+</div>
+
+
+
+
+  <a id="Org_Rocksdb_EventListener_ListenerShallManageEventHandlers_" data-uid="Org.Rocksdb.EventListener.ListenerShallManageEventHandlers*"></a>
+
+  <h3 id="Org_Rocksdb_EventListener_ListenerShallManageEventHandlers_System_Int32_" data-uid="Org.Rocksdb.EventListener.ListenerShallManageEventHandlers(System.Int32)">
+  ListenerShallManageEventHandlers(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/EventListener.cs/#L236"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual bool ListenerShallManageEventHandlers(int eventIndex)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>eventIndex</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
 
 
 
@@ -1484,7 +1244,7 @@ public EventListener(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_EventListener_OnBackgroundError_Org_Rocksdb_BackgroundErrorReason_Org_Rocksdb_Status_" data-uid="Org.Rocksdb.EventListener.OnBackgroundError(Org.Rocksdb.BackgroundErrorReason,Org.Rocksdb.Status)">
   OnBackgroundError(BackgroundErrorReason, Status)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/EventListener.cs/#L239"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/EventListener.cs/#L410"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/EventListener.html#onBackgroundError-org.rocksdb.BackgroundErrorReason-org.rocksdb.Status-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/EventListener.html#onBackgroundError-org.rocksdb.BackgroundErrorReason-org.rocksdb.Status-</a></p>
@@ -1520,7 +1280,7 @@ public EventListener(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_EventListener_OnColumnFamilyHandleDeletionStarted_Org_Rocksdb_ColumnFamilyHandle_" data-uid="Org.Rocksdb.EventListener.OnColumnFamilyHandleDeletionStarted(Org.Rocksdb.ColumnFamilyHandle)">
   OnColumnFamilyHandleDeletionStarted(ColumnFamilyHandle)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/EventListener.cs/#L263"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/EventListener.cs/#L452"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/EventListener.html#onColumnFamilyHandleDeletionStarted-org.rocksdb.ColumnFamilyHandle-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/EventListener.html#onColumnFamilyHandleDeletionStarted-org.rocksdb.ColumnFamilyHandle-</a></p>
@@ -1553,7 +1313,7 @@ public EventListener(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_EventListener_OnCompactionBegin_Org_Rocksdb_RocksDB_Org_Rocksdb_CompactionJobInfo_" data-uid="Org.Rocksdb.EventListener.OnCompactionBegin(Org.Rocksdb.RocksDB,Org.Rocksdb.CompactionJobInfo)">
   OnCompactionBegin(RocksDB, CompactionJobInfo)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/EventListener.cs/#L288"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/EventListener.cs/#L495"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/EventListener.html#onCompactionBegin-org.rocksdb.RocksDB-org.rocksdb.CompactionJobInfo-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/EventListener.html#onCompactionBegin-org.rocksdb.RocksDB-org.rocksdb.CompactionJobInfo-</a></p>
@@ -1589,7 +1349,7 @@ public EventListener(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_EventListener_OnCompactionCompleted_Org_Rocksdb_RocksDB_Org_Rocksdb_CompactionJobInfo_" data-uid="Org.Rocksdb.EventListener.OnCompactionCompleted(Org.Rocksdb.RocksDB,Org.Rocksdb.CompactionJobInfo)">
   OnCompactionCompleted(RocksDB, CompactionJobInfo)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/EventListener.cs/#L313"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/EventListener.cs/#L538"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/EventListener.html#onCompactionCompleted-org.rocksdb.RocksDB-org.rocksdb.CompactionJobInfo-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/EventListener.html#onCompactionCompleted-org.rocksdb.RocksDB-org.rocksdb.CompactionJobInfo-</a></p>
@@ -1625,7 +1385,7 @@ public EventListener(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_EventListener_OnErrorRecoveryBegin_Org_Rocksdb_BackgroundErrorReason_Org_Rocksdb_Status_" data-uid="Org.Rocksdb.EventListener.OnErrorRecoveryBegin(Org.Rocksdb.BackgroundErrorReason,Org.Rocksdb.Status)">
   OnErrorRecoveryBegin(BackgroundErrorReason, Status)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/EventListener.cs/#L190"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/EventListener.cs/#L314"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/EventListener.html#onErrorRecoveryBegin-org.rocksdb.BackgroundErrorReason-org.rocksdb.Status-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/EventListener.html#onErrorRecoveryBegin-org.rocksdb.BackgroundErrorReason-org.rocksdb.Status-</a></p>
@@ -1667,7 +1427,7 @@ public EventListener(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_EventListener_OnErrorRecoveryCompleted_Org_Rocksdb_Status_" data-uid="Org.Rocksdb.EventListener.OnErrorRecoveryCompleted(Org.Rocksdb.Status)">
   OnErrorRecoveryCompleted(Status)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/EventListener.cs/#L337"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/EventListener.cs/#L580"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/EventListener.html#onErrorRecoveryCompleted-org.rocksdb.Status-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/EventListener.html#onErrorRecoveryCompleted-org.rocksdb.Status-</a></p>
@@ -1700,7 +1460,7 @@ public EventListener(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_EventListener_OnExternalFileIngested_Org_Rocksdb_RocksDB_Org_Rocksdb_ExternalFileIngestionInfo_" data-uid="Org.Rocksdb.EventListener.OnExternalFileIngested(Org.Rocksdb.RocksDB,Org.Rocksdb.ExternalFileIngestionInfo)">
   OnExternalFileIngested(RocksDB, ExternalFileIngestionInfo)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/EventListener.cs/#L362"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/EventListener.cs/#L623"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/EventListener.html#onExternalFileIngested-org.rocksdb.RocksDB-org.rocksdb.ExternalFileIngestionInfo-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/EventListener.html#onExternalFileIngested-org.rocksdb.RocksDB-org.rocksdb.ExternalFileIngestionInfo-</a></p>
@@ -1736,7 +1496,7 @@ public EventListener(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_EventListener_OnFileCloseFinish_Org_Rocksdb_FileOperationInfo_" data-uid="Org.Rocksdb.EventListener.OnFileCloseFinish(Org.Rocksdb.FileOperationInfo)">
   OnFileCloseFinish(FileOperationInfo)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/EventListener.cs/#L386"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/EventListener.cs/#L665"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/EventListener.html#onFileCloseFinish-org.rocksdb.FileOperationInfo-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/EventListener.html#onFileCloseFinish-org.rocksdb.FileOperationInfo-</a></p>
@@ -1769,7 +1529,7 @@ public EventListener(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_EventListener_OnFileFlushFinish_Org_Rocksdb_FileOperationInfo_" data-uid="Org.Rocksdb.EventListener.OnFileFlushFinish(Org.Rocksdb.FileOperationInfo)">
   OnFileFlushFinish(FileOperationInfo)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/EventListener.cs/#L410"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/EventListener.cs/#L707"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/EventListener.html#onFileFlushFinish-org.rocksdb.FileOperationInfo-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/EventListener.html#onFileFlushFinish-org.rocksdb.FileOperationInfo-</a></p>
@@ -1802,7 +1562,7 @@ public EventListener(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_EventListener_OnFileRangeSyncFinish_Org_Rocksdb_FileOperationInfo_" data-uid="Org.Rocksdb.EventListener.OnFileRangeSyncFinish(Org.Rocksdb.FileOperationInfo)">
   OnFileRangeSyncFinish(FileOperationInfo)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/EventListener.cs/#L434"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/EventListener.cs/#L749"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/EventListener.html#onFileRangeSyncFinish-org.rocksdb.FileOperationInfo-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/EventListener.html#onFileRangeSyncFinish-org.rocksdb.FileOperationInfo-</a></p>
@@ -1835,7 +1595,7 @@ public EventListener(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_EventListener_OnFileReadFinish_Org_Rocksdb_FileOperationInfo_" data-uid="Org.Rocksdb.EventListener.OnFileReadFinish(Org.Rocksdb.FileOperationInfo)">
   OnFileReadFinish(FileOperationInfo)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/EventListener.cs/#L458"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/EventListener.cs/#L791"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/EventListener.html#onFileReadFinish-org.rocksdb.FileOperationInfo-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/EventListener.html#onFileReadFinish-org.rocksdb.FileOperationInfo-</a></p>
@@ -1868,7 +1628,7 @@ public EventListener(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_EventListener_OnFileSyncFinish_Org_Rocksdb_FileOperationInfo_" data-uid="Org.Rocksdb.EventListener.OnFileSyncFinish(Org.Rocksdb.FileOperationInfo)">
   OnFileSyncFinish(FileOperationInfo)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/EventListener.cs/#L482"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/EventListener.cs/#L833"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/EventListener.html#onFileSyncFinish-org.rocksdb.FileOperationInfo-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/EventListener.html#onFileSyncFinish-org.rocksdb.FileOperationInfo-</a></p>
@@ -1901,7 +1661,7 @@ public EventListener(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_EventListener_OnFileTruncateFinish_Org_Rocksdb_FileOperationInfo_" data-uid="Org.Rocksdb.EventListener.OnFileTruncateFinish(Org.Rocksdb.FileOperationInfo)">
   OnFileTruncateFinish(FileOperationInfo)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/EventListener.cs/#L506"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/EventListener.cs/#L875"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/EventListener.html#onFileTruncateFinish-org.rocksdb.FileOperationInfo-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/EventListener.html#onFileTruncateFinish-org.rocksdb.FileOperationInfo-</a></p>
@@ -1934,7 +1694,7 @@ public EventListener(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_EventListener_OnFileWriteFinish_Org_Rocksdb_FileOperationInfo_" data-uid="Org.Rocksdb.EventListener.OnFileWriteFinish(Org.Rocksdb.FileOperationInfo)">
   OnFileWriteFinish(FileOperationInfo)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/EventListener.cs/#L530"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/EventListener.cs/#L917"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/EventListener.html#onFileWriteFinish-org.rocksdb.FileOperationInfo-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/EventListener.html#onFileWriteFinish-org.rocksdb.FileOperationInfo-</a></p>
@@ -1967,7 +1727,7 @@ public EventListener(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_EventListener_OnFlushBegin_Org_Rocksdb_RocksDB_Org_Rocksdb_FlushJobInfo_" data-uid="Org.Rocksdb.EventListener.OnFlushBegin(Org.Rocksdb.RocksDB,Org.Rocksdb.FlushJobInfo)">
   OnFlushBegin(RocksDB, FlushJobInfo)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/EventListener.cs/#L555"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/EventListener.cs/#L960"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/EventListener.html#onFlushBegin-org.rocksdb.RocksDB-org.rocksdb.FlushJobInfo-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/EventListener.html#onFlushBegin-org.rocksdb.RocksDB-org.rocksdb.FlushJobInfo-</a></p>
@@ -2003,7 +1763,7 @@ public EventListener(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_EventListener_OnFlushCompleted_Org_Rocksdb_RocksDB_Org_Rocksdb_FlushJobInfo_" data-uid="Org.Rocksdb.EventListener.OnFlushCompleted(Org.Rocksdb.RocksDB,Org.Rocksdb.FlushJobInfo)">
   OnFlushCompleted(RocksDB, FlushJobInfo)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/EventListener.cs/#L580"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/EventListener.cs/#L1003"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/EventListener.html#onFlushCompleted-org.rocksdb.RocksDB-org.rocksdb.FlushJobInfo-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/EventListener.html#onFlushCompleted-org.rocksdb.RocksDB-org.rocksdb.FlushJobInfo-</a></p>
@@ -2039,7 +1799,7 @@ public EventListener(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_EventListener_OnMemTableSealed_Org_Rocksdb_MemTableInfo_" data-uid="Org.Rocksdb.EventListener.OnMemTableSealed(Org.Rocksdb.MemTableInfo)">
   OnMemTableSealed(MemTableInfo)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/EventListener.cs/#L604"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/EventListener.cs/#L1045"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/EventListener.html#onMemTableSealed-org.rocksdb.MemTableInfo-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/EventListener.html#onMemTableSealed-org.rocksdb.MemTableInfo-</a></p>
@@ -2072,7 +1832,7 @@ public EventListener(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_EventListener_OnStallConditionsChanged_Org_Rocksdb_WriteStallInfo_" data-uid="Org.Rocksdb.EventListener.OnStallConditionsChanged(Org.Rocksdb.WriteStallInfo)">
   OnStallConditionsChanged(WriteStallInfo)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/EventListener.cs/#L628"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/EventListener.cs/#L1087"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/EventListener.html#onStallConditionsChanged-org.rocksdb.WriteStallInfo-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/EventListener.html#onStallConditionsChanged-org.rocksdb.WriteStallInfo-</a></p>
@@ -2105,7 +1865,7 @@ public EventListener(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_EventListener_OnTableFileCreated_Org_Rocksdb_TableFileCreationInfo_" data-uid="Org.Rocksdb.EventListener.OnTableFileCreated(Org.Rocksdb.TableFileCreationInfo)">
   OnTableFileCreated(TableFileCreationInfo)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/EventListener.cs/#L652"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/EventListener.cs/#L1129"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/EventListener.html#onTableFileCreated-org.rocksdb.TableFileCreationInfo-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/EventListener.html#onTableFileCreated-org.rocksdb.TableFileCreationInfo-</a></p>
@@ -2138,7 +1898,7 @@ public EventListener(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_EventListener_OnTableFileCreationStarted_Org_Rocksdb_TableFileCreationBriefInfo_" data-uid="Org.Rocksdb.EventListener.OnTableFileCreationStarted(Org.Rocksdb.TableFileCreationBriefInfo)">
   OnTableFileCreationStarted(TableFileCreationBriefInfo)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/EventListener.cs/#L676"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/EventListener.cs/#L1171"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/EventListener.html#onTableFileCreationStarted-org.rocksdb.TableFileCreationBriefInfo-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/EventListener.html#onTableFileCreationStarted-org.rocksdb.TableFileCreationBriefInfo-</a></p>
@@ -2171,7 +1931,7 @@ public EventListener(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_EventListener_OnTableFileDeleted_Org_Rocksdb_TableFileDeletionInfo_" data-uid="Org.Rocksdb.EventListener.OnTableFileDeleted(Org.Rocksdb.TableFileDeletionInfo)">
   OnTableFileDeleted(TableFileDeletionInfo)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/EventListener.cs/#L700"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/EventListener.cs/#L1213"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/EventListener.html#onTableFileDeleted-org.rocksdb.TableFileDeletionInfo-">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/EventListener.html#onTableFileDeleted-org.rocksdb.TableFileDeletionInfo-</a></p>
@@ -2204,7 +1964,7 @@ public EventListener(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Rocksdb_EventListener_ShouldBeNotifiedOnFileIO" data-uid="Org.Rocksdb.EventListener.ShouldBeNotifiedOnFileIO">
   ShouldBeNotifiedOnFileIO()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/EventListener.cs/#L214"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/EventListener.cs/#L367"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/EventListener.html#shouldBeNotifiedOnFileIO--">https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/7.9.2/org/rocksdb/EventListener.html#shouldBeNotifiedOnFileIO--</a></p>
@@ -2237,7 +1997,7 @@ public EventListener(IJVMBridgeBaseInitializer initializer)</code></pre>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/EventListener.cs/#L120" class="edit-link">Edit this page</a>
+          <a href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Generated/Org/Rocksdb/EventListener.cs/#L165" class="edit-link">Edit this page</a>
         </div>
 
 

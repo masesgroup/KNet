@@ -102,7 +102,7 @@ Interface IManagedStore&lt;TStore&gt;  <a class="header-action link-secondary" t
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface IManagedStore&lt;TStore&gt; : IGenericSerDesFactoryApplier</code></pre>
+    <pre><code class="lang-csharp hljs">public interface IManagedStore&lt;TStore&gt; : IGenericSerDesFactoryApplier, IDisposable</code></pre>
   </div>
 
 
@@ -122,6 +122,9 @@ Interface IManagedStore&lt;TStore&gt;  <a class="header-action link-secondary" t
     <dd>
     <div>
       <a class="xref" href="MASES.KNet.Serialization.IGenericSerDesFactoryApplier.html#MASES_KNet_Serialization_IGenericSerDesFactoryApplier_Factory">IGenericSerDesFactoryApplier.Factory</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable.dispose">IDisposable.Dispose()</a>
     </div>
   </dd></dl>
 

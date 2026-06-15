@@ -89,7 +89,7 @@
 
 
   <h1 id="MASES_KNet_Streams_Kstream_TableJoined_2" data-uid="MASES.KNet.Streams.Kstream.TableJoined`2" class="text-break">
-Class TableJoined&lt;K, KO&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Streams/Kstream/TableJoined.cs/#L102"><i class="bi bi-code-slash"></i></a>
+Class TableJoined&lt;K, KO&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Streams/Kstream/TableJoined.cs/#L145"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -102,7 +102,7 @@ Class TableJoined&lt;K, KO&gt;  <a class="header-action link-secondary" title="V
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class TableJoined&lt;K, KO&gt; : TableJoined&lt;K, KO, byte[], byte[]&gt;, IGenericSerDesFactoryApplier</code></pre>
+    <pre><code class="lang-csharp hljs">public class TableJoined&lt;K, KO&gt; : TableJoined&lt;K, KO, byte[], byte[]&gt;, IKNetInnerReference&lt;TableJoined&lt;byte[], byte[]&gt;&gt;, IGenericSerDesFactoryApplier, IDisposable</code></pre>
   </div>
 
 
@@ -127,7 +127,9 @@ Class TableJoined&lt;K, KO&gt;  <a class="header-action link-secondary" title="V
   <dl class="typelist implements">
     <dt>Implements</dt>
     <dd>
+      <div><a class="xref" href="MASES.KNet.IKNetInnerReference-1.html">IKNetInnerReference</a>&lt;<a class="xref" href="Org.Apache.Kafka.Streams.Kstream.TableJoined-2.html">TableJoined</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[], <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;&gt;</div>
       <div><a class="xref" href="MASES.KNet.Serialization.IGenericSerDesFactoryApplier.html">IGenericSerDesFactoryApplier</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
     </dd>
   </dl>
 
@@ -135,6 +137,18 @@ Class TableJoined&lt;K, KO&gt;  <a class="header-action link-secondary" title="V
   <dl class="typelist inheritedMembers">
     <dt>Inherited Members</dt>
     <dd>
+    <div>
+      <a class="xref" href="MASES.KNet.Streams.Kstream.TableJoined-4.html#MASES_KNet_Streams_Kstream_TableJoined_4_InnerReference">TableJoined&lt;K, KO, byte[], byte[]&gt;.InnerReference</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Streams.Kstream.TableJoined-4.html#MASES_KNet_Streams_Kstream_TableJoined_4_CheckDisposed">TableJoined&lt;K, KO, byte[], byte[]&gt;.CheckDisposed()</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Streams.Kstream.TableJoined-4.html#MASES_KNet_Streams_Kstream_TableJoined_4_Dispose">TableJoined&lt;K, KO, byte[], byte[]&gt;.Dispose()</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Streams.Kstream.TableJoined-4.html#MASES_KNet_Streams_Kstream_TableJoined_4_Dispose_System_Boolean_">TableJoined&lt;K, KO, byte[], byte[]&gt;.Dispose(bool)</a>
+    </div>
     <div>
       <a class="xref" href="MASES.KNet.Streams.Kstream.TableJoined-4.html#MASES_KNet_Streams_Kstream_TableJoined_4_As_System_String_">TableJoined&lt;K, KO, byte[], byte[]&gt;.As(string)</a>
     </div>
@@ -147,27 +161,6 @@ Class TableJoined&lt;K, KO&gt;  <a class="header-action link-secondary" title="V
     <div>
       <a class="xref" href="MASES.KNet.Streams.Kstream.TableJoined-4.html#MASES_KNet_Streams_Kstream_TableJoined_4_WithPartitioner_MASES_KNet_Streams_Processor_StreamPartitionerNoValue__0__2__">TableJoined&lt;K, KO, byte[], byte[]&gt;.WithPartitioner(StreamPartitionerNoValue&lt;K, byte[]&gt;)</a>
     </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
-    </div>
   </dd></dl>
 
 
@@ -179,7 +172,7 @@ Class TableJoined&lt;K, KO&gt;  <a class="header-action link-secondary" title="V
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Streams/Kstream/TableJoined.cs/#L102" class="edit-link">Edit this page</a>
+          <a href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Specific/Streams/Kstream/TableJoined.cs/#L145" class="edit-link">Edit this page</a>
         </div>
 
 
