@@ -164,6 +164,13 @@ public final class RaftClient_Listener implements org.mases.jcobridge.IJCListene
         if (_handleCommitIndex <= 0) _handleCommitIndex = getEventIndex("handleCommit");
         raiseEvent(_handleCommitIndex, eventDataExchange, arg0); if (!eventDataExchange.getHasOverride()) throw new UnsupportedOperationException("The method shall be implemented in .NET side since does not have a default implementation within the JVM");
     }
+    int _handleLoadBootstrapIndex = 0;
+    //@Override
+    public void handleLoadBootstrap(org.apache.kafka.snapshot.SnapshotReader arg0) {
+        org.mases.jnet.developed.JNetEventResult eventDataExchange = new org.mases.jnet.developed.JNetEventResult();
+        if (_handleLoadBootstrapIndex <= 0) _handleLoadBootstrapIndex = getEventIndex("handleLoadBootstrap");
+        raiseEvent(_handleLoadBootstrapIndex, eventDataExchange, arg0); if (!eventDataExchange.getHasOverride()) throw new UnsupportedOperationException("The method shall be implemented in .NET side since does not have a default implementation within the JVM");
+    }
     int _handleLoadSnapshotIndex = 0;
     //@Override
     public void handleLoadSnapshot(org.apache.kafka.snapshot.SnapshotReader arg0) {
