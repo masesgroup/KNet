@@ -33,7 +33,7 @@ namespace MASES.KNet.Streams.Kstream
     /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
     public class Branched<K, V, TJVMK, TJVMV> : IKNetInnerReference<Org.Apache.Kafka.Streams.Kstream.Branched<TJVMK, TJVMV>>, IGenericSerDesFactoryApplier, IDisposable
     {
-        readonly Org.Apache.Kafka.Streams.Kstream.Branched<TJVMK, TJVMV> _inner;
+        Org.Apache.Kafka.Streams.Kstream.Branched<TJVMK, TJVMV> _inner;
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set => _factory = value; }
 
@@ -74,6 +74,7 @@ namespace MASES.KNet.Streams.Kstream
             if (disposing)
             {
                 _inner?.Dispose();
+                _inner = null;
             }
         }
 
@@ -86,7 +87,7 @@ namespace MASES.KNet.Streams.Kstream
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/Branched.html#as(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/Branched.html#as(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <returns><see cref="Branched{K, V, TJVMK, TJVMV}"/></returns>
@@ -97,7 +98,7 @@ namespace MASES.KNet.Streams.Kstream
             return new Branched<K, V, TJVMK, TJVMV>(cons);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/Branched.html#withConsumer(java.util.function.Consumer,java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/Branched.html#withConsumer(java.util.function.Consumer,java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="KStreamConsumer{K, V, TJVMK, TJVMV}"/></param>
         /// <param name="arg1"><see cref="string"/></param>
@@ -109,7 +110,7 @@ namespace MASES.KNet.Streams.Kstream
             return new Branched<K, V, TJVMK, TJVMV>(cons);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/Branched.html#withConsumer(java.util.function.Consumer)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/Branched.html#withConsumer(java.util.function.Consumer)"/>
         /// </summary>
         /// <param name="arg0"><see cref="KStreamConsumer{K, V}"/></param>
         /// <returns><see cref="Branched{K, V, TJVMK, TJVMV}"/></returns>
@@ -119,7 +120,7 @@ namespace MASES.KNet.Streams.Kstream
             return new Branched<K, V, TJVMK, TJVMV>(cons);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/Branched.html#withFunction(java.util.function.Function,java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/Branched.html#withFunction(java.util.function.Function,java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="KStreamFunction{K, V}"/></param>
         /// <param name="arg1"><see cref="string"/></param>
@@ -131,7 +132,7 @@ namespace MASES.KNet.Streams.Kstream
             return new Branched<K, V, TJVMK, TJVMV>(cons);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/Branched.html#withFunction(java.util.function.Function)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/Branched.html#withFunction(java.util.function.Function)"/>
         /// </summary>
         /// <param name="arg0"><see cref="KStreamFunction{K, V, TJVMK, TJVMV}"/></param>
         /// <returns><see cref="Branched{K, V, TJVMK, TJVMV}"/></returns>

@@ -39,7 +39,7 @@ namespace MASES.KNet.Streams.Processor
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set => _factory = value; }
         /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/processor/TimestampExtractor.html#extract(org.apache.kafka.clients.consumer.ConsumerRecord,long)"/>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/TimestampExtractor.html#extract(org.apache.kafka.clients.consumer.ConsumerRecord,long)"/>
         /// </summary>
         /// <remarks>If <see cref="OnExtract"/> has a value it takes precedence over corresponding class method</remarks>
         public new System.Func<TimestampExtractor<K, V, TJVMK, TJVMV>, DateTime> OnExtract { get; set; } = null;
@@ -57,7 +57,7 @@ namespace MASES.KNet.Streams.Processor
         {
             _keySerializer ??= _factory?.BuildKeySerDes<K, TJVMK>();
             _valueSerializer ??= _factory?.BuildValueSerDes<V, TJVMV>();
-            var record = arg0.Cast<Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<TJVMK, TJVMV>>(); // KNet consider the data within Apache Kafka Streams defined always as byte[]
+            var record = arg0.CastDirectAndDispose<Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<TJVMK, TJVMV>>(); // KNet consider the data within Apache Kafka Streams defined always as byte[]
 
             _record = new ConsumerRecord<K, V, TJVMK, TJVMV>(record, _factory);
             _partitionTime = (arg1 == -1) ? null : DateTimeOffset.FromUnixTimeMilliseconds(arg1).DateTime;

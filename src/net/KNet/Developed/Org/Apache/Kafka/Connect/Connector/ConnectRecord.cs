@@ -45,10 +45,6 @@ namespace Org.Apache.Kafka.Connect.Connector
         public override string BridgeClassName => "org.apache.kafka.connect.connector.ConnectRecord";
 
         /// <summary>
-        /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
-        /// </summary>
-        public ConnectRecord() { }
-        /// <summary>
         /// Internal constructor: used internally from JCOBridge
         /// </summary>
         [global::System.Obsolete("This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
@@ -74,19 +70,13 @@ namespace Org.Apache.Kafka.Connect.Connector
         {
         }
         /// <summary>
-        /// Generic constructor: it is useful for JCOBridge when there is a derived class which needs to pass arguments to the highest JVMBridgeBase class
-        /// </summary>
-        protected ConnectRecord(params object[] args) : base(args)
-        {
-        }
-        /// <summary>
         /// Topic
         /// </summary>
-        public string Topic => IExecute<string>("topic");
+        public Java.Lang.String Topic => IExecuteWithSignature<Java.Lang.String>("topic", "()Ljava/lang/String;");
         /// <summary>
         /// Partition
         /// </summary>
-        public int KafkaPartition => IExecute<int>("kafkaPartition");
+        public Java.Lang.Integer KafkaPartition =>  IExecuteWithSignature<Java.Lang.Integer>("kafkaPartition", "()Ljava/lang/Integer;");
         /// <summary>
         /// Key
         /// </summary>
@@ -94,7 +84,7 @@ namespace Org.Apache.Kafka.Connect.Connector
         /// <summary>
         /// KeySchema
         /// </summary>
-        public Schema KeySchema => IExecute<Schema>("keySchema");
+        public Schema KeySchema => IExecuteWithSignature<Org.Apache.Kafka.Connect.Data.Schema>("keySchema", "()Lorg/apache/kafka/connect/data/Schema;");
         /// <summary>
         /// Value
         /// </summary>
@@ -102,7 +92,7 @@ namespace Org.Apache.Kafka.Connect.Connector
         /// <summary>
         /// ValueSchema
         /// </summary>
-        public Schema ValueSchema => IExecute<Schema>("valueSchema");
+        public Schema ValueSchema => IExecuteWithSignature<Org.Apache.Kafka.Connect.Data.Schema>("valueSchema", "()Lorg/apache/kafka/connect/data/Schema;");
         /// <summary>
         /// Timestamp
         /// </summary>
@@ -110,13 +100,13 @@ namespace Org.Apache.Kafka.Connect.Connector
         /// <summary>
         /// The <see cref="Headers"/>
         /// </summary>
-        public Headers Headers => IExecute<Headers>("headers");
+        public Headers Headers => IExecuteWithSignature<Org.Apache.Kafka.Connect.Header.Headers>("headers", "()Lorg/apache/kafka/connect/header/Headers;");
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.2.0/org/apache/kafka/connect/connector/ConnectRecord.html#newRecord(java.lang.String,java.lang.Integer,org.apache.kafka.connect.data.Schema,java.lang.Object,org.apache.kafka.connect.data.Schema,java.lang.Object,java.lang.Long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.2.1/org/apache/kafka/connect/connector/ConnectRecord.html#newRecord(java.lang.String,java.lang.Integer,org.apache.kafka.connect.data.Schema,java.lang.Object,org.apache.kafka.connect.data.Schema,java.lang.Object,java.lang.Long)"/>
         /// </summary>
         public R NewRecord(string topic, int kafkaPartition, Schema keySchema, TKey key, Schema valueSchema, TValue value, DateTime timestamp) => IExecute<R>("newRecord", topic, kafkaPartition, keySchema, key, valueSchema, value, new DateTimeOffset(timestamp).ToUnixTimeMilliseconds());
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.2.0/org/apache/kafka/connect/connector/ConnectRecord.html#newRecord(java.lang.String,java.lang.Integer,org.apache.kafka.connect.data.Schema,java.lang.Object,org.apache.kafka.connect.data.Schema,java.lang.Object,java.lang.Long,java.lang.Iterable)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.2.1/org/apache/kafka/connect/connector/ConnectRecord.html#newRecord(java.lang.String,java.lang.Integer,org.apache.kafka.connect.data.Schema,java.lang.Object,org.apache.kafka.connect.data.Schema,java.lang.Object,java.lang.Long,java.lang.Iterable)"/>
         /// </summary>
         public R NewRecord(string topic, int kafkaPartition, Schema keySchema, TKey key, Schema valueSchema, TValue value, DateTime timestamp, Headers headers) => IExecute<R>("newRecord", topic, kafkaPartition, keySchema, key, valueSchema, value, new DateTimeOffset(timestamp).ToUnixTimeMilliseconds(), headers);
     }

@@ -76,6 +76,7 @@ namespace MASES.KNet.Streams.State
             {
                 disposable.Dispose();
             }
+            _store = default;
         }
     }
 }

@@ -31,17 +31,17 @@ namespace MASES.KNet.Streams.State
     public class TimestampedKeyValueStore<K, V, TJVMK, TJVMV> : ManagedStore<Org.Apache.Kafka.Streams.State.ReadOnlyKeyValueStore<TJVMK, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV>>>
     {
         /// <summary>
-        /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#approximateNumEntries()"/>
+        /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#approximateNumEntries()"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public virtual long ApproximateNumEntries() => Store.ApproximateNumEntries();
         /// <summary>
-        /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#all()"/>
+        /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#all()"/>
         /// </summary>
         /// <returns><see cref="KeyValueIterator{K, V, TJVMK, TJVMV}"/></returns>
         public virtual TimestampedKeyValueIterator<K, V, TJVMK, TJVMV> All() => new(Factory, Store.All());
         /// <summary>
-        /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#range(java.lang.Object,java.lang.Object)"/>
+        /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#range(java.lang.Object,java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="K"/></param>
         /// <param name="arg1"><typeparamref name="V"/></param>
@@ -51,15 +51,15 @@ namespace MASES.KNet.Streams.State
             IGenericSerDesFactory factory = Factory;
             var _keySerDes = factory?.BuildKeySerDes<K, TJVMK>();
 
-            var r0 = _keySerDes.Serialize(null, arg0);
-            var r1 = _keySerDes.Serialize(null, arg1);
+            var r0 = _keySerDes.Serialize((Java.Lang.String)null, arg0);
+            var r1 = _keySerDes.Serialize((Java.Lang.String)null, arg1);
             using var disposable0 = r0 as IDisposable;
             using var disposable1 = r1 as IDisposable;
 
             return new(factory, Store.Range(r0, r1));
         }
         /// <summary>
-        /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#get(java.lang.Object)"/>
+        /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#get(java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="K"/></param>
         /// <returns><typeparamref name="V"/></returns>
@@ -68,7 +68,7 @@ namespace MASES.KNet.Streams.State
             IGenericSerDesFactory factory = Factory;
             var _keySerDes = factory?.BuildKeySerDes<K, TJVMK>();
 
-            var r0 = _keySerDes.Serialize(null, arg0);
+            var r0 = _keySerDes.Serialize((Java.Lang.String)null, arg0);
             var res = Store.Get(r0);
             using var disposable0 = r0 as IDisposable;
             using var disposable1 = res as IDisposable;
@@ -76,23 +76,23 @@ namespace MASES.KNet.Streams.State
             return new ValueAndTimestamp<V, TJVMV>(factory, res);
         }
         /// <summary>
-        /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#prefixScan(java.lang.Object,org.apache.kafka.common.serialization.Serializer)"/>
+        /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#prefixScan(java.lang.Object,org.apache.kafka.common.serialization.Serializer)"/>
         /// </summary>
         /// <returns><see cref="TimestampedKeyValueIterator{K, V, TJVMK, TJVMV}"/></returns>
         public TimestampedKeyValueIterator<K, V, TJVMK, TJVMV> PrefixScan<P, TJVMP>(P arg0, ISerDes<P, TJVMP> arg1)
         {
-            var r0 = arg1.Serialize(null, arg0);
+            var r0 = arg1.Serialize((Java.Lang.String)null, arg0);
             using var disposable0 = r0 as IDisposable;
 
             return new(Factory, Store.PrefixScan(r0, arg1.KafkaSerializer));
         }
         /// <summary>
-        /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#reverseAll()"/>
+        /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#reverseAll()"/>
         /// </summary>
         /// <returns><see cref="KeyValueIterator{K, V, TJVMK, TJVMV}"/></returns>
         public virtual TimestampedKeyValueIterator<K, V, TJVMK, TJVMV> ReverseAll() => new(Factory, Store.ReverseAll());
         /// <summary>
-        /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#reverseRange(java.lang.Object,java.lang.Object)"/>
+        /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#reverseRange(java.lang.Object,java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="K"/></param>
         /// <param name="arg1"><typeparamref name="K"/></param>
@@ -102,8 +102,8 @@ namespace MASES.KNet.Streams.State
             IGenericSerDesFactory factory = Factory;
             var _keySerDes = factory?.BuildKeySerDes<K, TJVMK>();
 
-            var r0 = _keySerDes.Serialize(null, arg0);
-            var r1 = _keySerDes.Serialize(null, arg1);
+            var r0 = _keySerDes.Serialize((Java.Lang.String)null, arg0);
+            var r1 = _keySerDes.Serialize((Java.Lang.String)null, arg1);
             using var disposable0 = r0 as IDisposable;
             using var disposable1 = r1 as IDisposable;
 

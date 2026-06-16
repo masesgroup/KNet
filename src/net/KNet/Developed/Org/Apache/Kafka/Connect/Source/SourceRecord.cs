@@ -199,10 +199,6 @@ namespace Org.Apache.Kafka.Connect.Source
     public class SourceRecord<TKey, TValue> : SourceRecord<object, object, TKey, TValue>
     {
         /// <summary>
-        /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
-        /// </summary>
-        public SourceRecord() { }
-        /// <summary>
         /// Internal constructor: used internally from JCOBridge
         /// </summary>
         [global::System.Obsolete("This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
@@ -331,10 +327,6 @@ namespace Org.Apache.Kafka.Connect.Source
     public class SourceRecord<TKeySource, TOffset, TKey, TValue> : ConnectRecord<SourceRecord<TKey?, TValue?>, TKey?, TValue?>
     {
         /// <summary>
-        /// Default constructor: even if the corresponding Java class does not have one, it is mandatory for JCOBridge
-        /// </summary>
-        public SourceRecord() { }
-        /// <summary>
         /// Internal constructor: used internally from JCOBridge
         /// </summary>
         [global::System.Obsolete("This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.")]
@@ -360,9 +352,9 @@ namespace Org.Apache.Kafka.Connect.Source
         /// <param name="valueSchema">The schema for the value; may be null</param>
         /// <param name="value">The value; may be null</param>
         public SourceRecord(Map<Java.Lang.String, TKeySource> sourcePartition, Map<Java.Lang.String, TOffset> sourceOffset,
-                            string topic, int? partition, Schema valueSchema, TValue? value)
-            : base(sourcePartition, sourceOffset, topic, partition, valueSchema, value)
+                            string topic, int? partition, Schema valueSchema, TValue? value) : base(JVMBridgeBase.InitializerInstance)
         {
+            InvokeInitializer(sourcePartition, sourceOffset, topic, partition, valueSchema, value);
         }
         /// <summary>
         /// Creates a new <see cref="SourceRecord{TKey, TOffset}"/>
@@ -373,9 +365,9 @@ namespace Org.Apache.Kafka.Connect.Source
         /// <param name="valueSchema">The schema for the value; may be null</param>
         /// <param name="value">The value; may be null</param>
         public SourceRecord(Map<Java.Lang.String, TKeySource> sourcePartition, Map<Java.Lang.String, TOffset> sourceOffset,
-                            string topic, Schema valueSchema, TValue? value)
-            : base(sourcePartition, sourceOffset, topic, valueSchema, value)
+                            string topic, Schema valueSchema, TValue? value) : base(JVMBridgeBase.InitializerInstance)
         {
+            InvokeInitializer(sourcePartition, sourceOffset, topic, valueSchema, value);
         }
         /// <summary>
         /// Creates a new <see cref="SourceRecord{TKey, TOffset}"/>
@@ -388,9 +380,9 @@ namespace Org.Apache.Kafka.Connect.Source
         /// <param name="valueSchema">The schema for the value; may be null</param>
         /// <param name="value">The value; may be null</param>
         public SourceRecord(Map<Java.Lang.String, TKeySource> sourcePartition, Map<Java.Lang.String, TOffset> sourceOffset,
-                            string topic, Schema keySchema, TKey? key, Schema valueSchema, TValue? value)
-            : base(sourcePartition, sourceOffset, topic, keySchema, key, valueSchema, value)
+                            string topic, Schema keySchema, TKey? key, Schema valueSchema, TValue? value) : base(JVMBridgeBase.InitializerInstance)
         {
+            InvokeInitializer(sourcePartition, sourceOffset, topic, keySchema, key, valueSchema, value);
         }
         /// <summary>
         /// Creates a new <see cref="SourceRecord{TKey, TOffset}"/>
@@ -405,9 +397,9 @@ namespace Org.Apache.Kafka.Connect.Source
         /// <param name="value">The value; may be null</param>
         public SourceRecord(Map<Java.Lang.String, TKeySource> sourcePartition, Map<Java.Lang.String, TOffset> sourceOffset,
                             string topic, int? partition,
-                            Schema keySchema, TKey? key, Schema valueSchema, TValue? value)
-                 : base(sourcePartition, sourceOffset, topic, partition, keySchema, key, valueSchema, value)
+                            Schema keySchema, TKey? key, Schema valueSchema, TValue? value) : base(JVMBridgeBase.InitializerInstance)
         {
+            InvokeInitializer(sourcePartition, sourceOffset, topic, partition, keySchema, key, valueSchema, value);
         }
         /// <summary>
         /// Creates a new <see cref="SourceRecord{TKey, TOffset}"/>
@@ -425,9 +417,9 @@ namespace Org.Apache.Kafka.Connect.Source
                             string topic, int? partition,
                             Schema keySchema, TKey? key,
                             Schema valueSchema, TValue? value,
-                            DateTime timestamp)
-                  : base(sourcePartition, sourceOffset, topic, partition, keySchema, key, valueSchema, value, new DateTimeOffset(timestamp).ToUnixTimeMilliseconds())
+                            DateTime timestamp) : base(JVMBridgeBase.InitializerInstance)
         {
+            InvokeInitializer(sourcePartition, sourceOffset, topic, partition, keySchema, key, valueSchema, value, new DateTimeOffset(timestamp).ToUnixTimeMilliseconds());
         }
         /// <summary>
         /// Creates a new <see cref="SourceRecord{TKey, TOffset}"/>
@@ -446,9 +438,9 @@ namespace Org.Apache.Kafka.Connect.Source
                             string topic, int? partition,
                             Schema keySchema, TKey? key,
                             Schema valueSchema, TValue? value,
-                            DateTime timestamp, Headers headers)
-              : base(sourcePartition, sourceOffset, topic, partition, keySchema, key, valueSchema, value, new DateTimeOffset(timestamp).ToUnixTimeMilliseconds(), headers)
+                            DateTime timestamp, Headers headers) : base(JVMBridgeBase.InitializerInstance)
         {
+            InvokeInitializer(sourcePartition, sourceOffset, topic, partition, keySchema, key, valueSchema, value, new DateTimeOffset(timestamp).ToUnixTimeMilliseconds(), headers);
         }
         /// <summary>
         /// The source partition

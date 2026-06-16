@@ -17,6 +17,7 @@
 */
 
 using Java.Util;
+using MASES.JCOBridge.C2JBridge;
 using MASES.KNet.Serialization;
 using System;
 using System.Collections.Generic;
@@ -73,7 +74,7 @@ namespace MASES.KNet.Streams.Kstream
         }
 
         /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/KeyValueMapper.html#apply(java.lang.Object,java.lang.Object)"/>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/KeyValueMapper.html#apply(java.lang.Object,java.lang.Object)"/>
         /// </summary>
         /// <remarks>If <see cref="OnApply"/> has a value it takes precedence over corresponding class method</remarks>
         public new System.Func<K, V, VR> OnApply { get; set; } = null;
@@ -86,8 +87,8 @@ namespace MASES.KNet.Streams.Kstream
             _vSerializer ??= Factory?.BuildValueSerDes<V, TJVMV>();
             _vrSerializer ??= Factory?.BuildValueSerDes<VR, TJVMVR>();
             var methodToExecute = (OnApply != null) ? OnApply : Apply;
-            var res = methodToExecute(_kSerializer.Deserialize(null, arg0), _vSerializer.Deserialize(null, arg1));
-            return _vrSerializer.Serialize(null, res);
+            var res = methodToExecute(_kSerializer.Deserialize((Java.Lang.String)null, arg0), _vSerializer.Deserialize((Java.Lang.String)null, arg1));
+            return _vrSerializer.Serialize((Java.Lang.String)null, res);
         }
         /// <inheritdoc cref="Org.Apache.Kafka.Streams.Kstream.KeyValueMapper{K, V, VR}.Apply(K, V)"/>
         public virtual VR Apply(K arg0, V arg1)
@@ -124,7 +125,7 @@ namespace MASES.KNet.Streams.Kstream
             _kSerializer ??= Factory?.BuildKeySerDes<K, TJVMK>();
             _vSerializer ??= Factory?.BuildValueSerDes<V, TJVMV>();
             var methodToExecute = (OnApply != null) ? OnApply : Apply;
-            var res = methodToExecute(_kSerializer.Deserialize(null, arg0), _vSerializer.Deserialize(null, arg1));
+            var res = methodToExecute(_kSerializer.Deserialize((Java.Lang.String)null, arg0), _vSerializer.Deserialize((Java.Lang.String)null, arg1));
             return res;
         }
     }
@@ -156,7 +157,7 @@ namespace MASES.KNet.Streams.Kstream
         ISerDes<KR, TJVMKR> _krSerializer = null;
         ISerDes<VR, TJVMVR> _vrSerializer = null;
         /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/KeyValueMapper.html#apply(java.lang.Object,java.lang.Object)"/>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/KeyValueMapper.html#apply(java.lang.Object,java.lang.Object)"/>
         /// </summary>
         /// <remarks>If <see cref="OnApply"/> has a value it takes precedence over corresponding class method</remarks>
         public new System.Func<K, V, (KR, VR)> OnApply { get; set; } = null;
@@ -169,9 +170,9 @@ namespace MASES.KNet.Streams.Kstream
             _vrSerializer ??= Factory?.BuildValueSerDes<VR, TJVMVR>();
 
             var methodToExecute = (OnApply != null) ? OnApply : Apply;
-            var res = methodToExecute(_kSerializer.Deserialize(null, arg0), _vSerializer.Deserialize(null, arg1));
-            var jKR = _krSerializer.Serialize(null, res.Item1);
-            var jVR = _vrSerializer.Serialize(null, res.Item2);
+            var res = methodToExecute(_kSerializer.Deserialize((Java.Lang.String)null, arg0), _vSerializer.Deserialize((Java.Lang.String)null, arg1));
+            var jKR = _krSerializer.Serialize((Java.Lang.String)null, res.Item1);
+            var jVR = _vrSerializer.Serialize((Java.Lang.String)null, res.Item2);
 
             using var disposable0 = jKR as IDisposable;
             using var disposable1 = jVR as IDisposable;
@@ -214,7 +215,7 @@ namespace MASES.KNet.Streams.Kstream
         ISerDes<KR, TJVMKR> _krSerializer = null;
         ISerDes<VR, TJVMVR> _vrSerializer = null;
         /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/KeyValueMapper.html#apply(java.lang.Object,java.lang.Object)"/>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/KeyValueMapper.html#apply(java.lang.Object,java.lang.Object)"/>
         /// </summary>
         /// <remarks>If <see cref="OnApply"/> has a value it takes precedence over corresponding class method</remarks>
         public new System.Func<K, V, IEnumerable<(KR, VR)>> OnApply { get; set; } = null;
@@ -227,16 +228,16 @@ namespace MASES.KNet.Streams.Kstream
             _vrSerializer ??= Factory?.BuildValueSerDes<VR, TJVMVR>();
 
             var methodToExecute = (OnApply != null) ? OnApply : Apply;
-            var res = methodToExecute(_kSerializer.Deserialize(null, arg0), _vSerializer.Deserialize(null, arg1));
-            var result = new ArrayList<Org.Apache.Kafka.Streams.KeyValue<TJVMKR, TJVMVR>>();
+            var res = methodToExecute(_kSerializer.Deserialize((Java.Lang.String)null, arg0), _vSerializer.Deserialize((Java.Lang.String)null, arg1));
+            var result = ArrayList<Org.Apache.Kafka.Streams.KeyValue<TJVMKR, TJVMVR>>.CreatePoolableInstance();
             foreach (var item in res)
             {
-                var jKR = _krSerializer.Serialize(null, item.Item1);
-                var jVR = _vrSerializer.Serialize(null, item.Item2);
+                var jKR = _krSerializer.Serialize((Java.Lang.String)null, item.Item1);
+                var jVR = _vrSerializer.Serialize((Java.Lang.String)null, item.Item2);
 
                 using var disposable0 = jKR as IDisposable;
                 using var disposable1 = jVR as IDisposable;
-                using var data = new Org.Apache.Kafka.Streams.KeyValue<TJVMKR, TJVMVR>(jKR, jVR);
+                using var data = Org.Apache.Kafka.Streams.KeyValue<TJVMKR, TJVMVR>.CreatePoolableInstance(jKR, jVR);
                 result.Add(data);
             }
             return result;

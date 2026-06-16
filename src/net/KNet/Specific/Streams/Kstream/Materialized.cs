@@ -32,7 +32,7 @@ namespace MASES.KNet.Streams.Kstream
     public sealed class CountingMaterialized<K, TJVMK> : Materialized<K, long, TJVMK, Java.Lang.Long, CountingMaterialized<K, TJVMK>>
     {
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/Materialized.html#with(org.apache.kafka.common.serialization.Serde,org.apache.kafka.common.serialization.Serde)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/Materialized.html#with(org.apache.kafka.common.serialization.Serde,org.apache.kafka.common.serialization.Serde)"/>
         /// </summary>
         /// <param name="arg0"><see cref="ISerDes{K, TJVMK}"/></param>
         /// <returns><see cref="Materialized{K, V, TJVMK}"/></returns>
@@ -42,13 +42,13 @@ namespace MASES.KNet.Streams.Kstream
             CountingMaterialized<K, TJVMK> cont = new();
             if (cont is IKNetMaterialized<TJVMK, Java.Lang.Long> setStore)
             {
-                setStore.SetStore(mat.Cast<Org.Apache.Kafka.Streams.Kstream.Materialized<TJVMK, Java.Lang.Long, Org.Apache.Kafka.Streams.State.KeyValueStore<Org.Apache.Kafka.Common.Utils.Bytes, byte[]>>>());
+                setStore.SetStore(mat.CastDirectAndDispose<Org.Apache.Kafka.Streams.Kstream.Materialized<TJVMK, Java.Lang.Long, Org.Apache.Kafka.Streams.State.KeyValueStore<Org.Apache.Kafka.Common.Utils.Bytes, byte[]>>>());
             }
             return cont;
         }
 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/Materialized.html#withValueSerde(org.apache.kafka.common.serialization.Serde)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/Materialized.html#withValueSerde(org.apache.kafka.common.serialization.Serde)"/>
         /// </summary>
         /// <param name="arg0"><see cref="ISerDes{V, TJVMK}"/></param>
         /// <returns><see cref="Materialized{K, V, TJVMK}"/></returns>
@@ -69,7 +69,7 @@ namespace MASES.KNet.Streams.Kstream
     public sealed class Materialized<K, V, TJVMK, TJVMV> : Materialized<K, V, TJVMK, TJVMV, Materialized<K, V, TJVMK, TJVMV>>
     {
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/Materialized.html#with(org.apache.kafka.common.serialization.Serde,org.apache.kafka.common.serialization.Serde)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/Materialized.html#with(org.apache.kafka.common.serialization.Serde,org.apache.kafka.common.serialization.Serde)"/>
         /// </summary>
         /// <param name="arg0"><see cref="ISerDes{K, TJVMK}"/></param>
         /// <param name="arg1"><see cref="ISerDes{V, TJVMV}"/></param>
@@ -80,13 +80,13 @@ namespace MASES.KNet.Streams.Kstream
             Materialized<K, V, TJVMK, TJVMV> cont = new();
             if (cont is IKNetMaterialized<TJVMK, TJVMV> setStore)
             {
-                setStore.SetStore(mat.Cast<Org.Apache.Kafka.Streams.Kstream.Materialized<TJVMK, TJVMV, Org.Apache.Kafka.Streams.State.KeyValueStore<Org.Apache.Kafka.Common.Utils.Bytes, byte[]>>>());
+                setStore.SetStore(mat.CastDirectAndDispose<Org.Apache.Kafka.Streams.Kstream.Materialized<TJVMK, TJVMV, Org.Apache.Kafka.Streams.State.KeyValueStore<Org.Apache.Kafka.Common.Utils.Bytes, byte[]>>>());
             }
             return cont;
         }
 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/Materialized.html#withValueSerde(org.apache.kafka.common.serialization.Serde)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/Materialized.html#withValueSerde(org.apache.kafka.common.serialization.Serde)"/>
         /// </summary>
         /// <param name="arg0"><see cref="ISerDes{V, TJVMV}"/></param>
         /// <returns><see cref="Materialized{K, V, TJVMK}"/></returns>
@@ -215,7 +215,7 @@ namespace MASES.KNet.Streams.Kstream
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/Materialized.html#as(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/Materialized.html#as(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <returns><typeparamref name="TContainer"/></returns>
@@ -225,12 +225,12 @@ namespace MASES.KNet.Streams.Kstream
             TContainer cont = new();
             if (cont is IKNetMaterialized<TJVMK, TJVMV> setStore)
             {
-                setStore.SetStore(mat.Cast<Org.Apache.Kafka.Streams.Kstream.Materialized<TJVMK, TJVMV, Org.Apache.Kafka.Streams.State.KeyValueStore<Org.Apache.Kafka.Common.Utils.Bytes, byte[]>>>());
+                setStore.SetStore(mat.CastDirectAndDispose<Org.Apache.Kafka.Streams.Kstream.Materialized<TJVMK, TJVMV, Org.Apache.Kafka.Streams.State.KeyValueStore<Org.Apache.Kafka.Common.Utils.Bytes, byte[]>>>());
             }
             return cont;
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/Materialized.html#as(org.apache.kafka.streams.kstream.Materialized.StoreType)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/Materialized.html#as(org.apache.kafka.streams.kstream.Materialized.StoreType)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.Materialized.StoreType"/></param>
         /// <returns><typeparamref name="TContainer"/></returns>
@@ -240,13 +240,13 @@ namespace MASES.KNet.Streams.Kstream
             TContainer cont = new();
             if (cont is IKNetMaterialized<TJVMK, TJVMV> setStore)
             {
-                setStore.SetStore(mat.Cast<Org.Apache.Kafka.Streams.Kstream.Materialized<TJVMK, TJVMV, Org.Apache.Kafka.Streams.State.KeyValueStore<Org.Apache.Kafka.Common.Utils.Bytes, byte[]>>>());
+                setStore.SetStore(mat.CastDirectAndDispose<Org.Apache.Kafka.Streams.Kstream.Materialized<TJVMK, TJVMV, Org.Apache.Kafka.Streams.State.KeyValueStore<Org.Apache.Kafka.Common.Utils.Bytes, byte[]>>>());
             }
             return cont;
         }
 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/Materialized.html#as(org.apache.kafka.streams.state.KeyValueBytesStoreSupplier)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/Materialized.html#as(org.apache.kafka.streams.state.KeyValueBytesStoreSupplier)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.State.KeyValueBytesStoreSupplier"/></param>
         /// <returns><typeparamref name="TContainer"/></returns>
@@ -261,7 +261,7 @@ namespace MASES.KNet.Streams.Kstream
             return cont;
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/Materialized.html#as(org.apache.kafka.streams.state.SessionBytesStoreSupplier)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/Materialized.html#as(org.apache.kafka.streams.state.SessionBytesStoreSupplier)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.State.SessionBytesStoreSupplier"/></param>
         /// <returns><typeparamref name="TContainer"/></returns>
@@ -276,7 +276,7 @@ namespace MASES.KNet.Streams.Kstream
             return cont;
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/Materialized.html#as(org.apache.kafka.streams.state.WindowBytesStoreSupplier)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/Materialized.html#as(org.apache.kafka.streams.state.WindowBytesStoreSupplier)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.State.WindowBytesStoreSupplier"/></param>
         /// <returns><typeparamref name="TContainer"/></returns>
@@ -295,7 +295,7 @@ namespace MASES.KNet.Streams.Kstream
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/Materialized.html#withCachingDisabled()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/Materialized.html#withCachingDisabled()"/>
         /// </summary>
         /// <returns><typeparamref name="TContainer"/></returns>
         public TContainer WithCachingDisabled()
@@ -307,7 +307,7 @@ namespace MASES.KNet.Streams.Kstream
             return this as TContainer;
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/Materialized.html#withCachingEnabled()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/Materialized.html#withCachingEnabled()"/>
         /// </summary>
         /// <returns><typeparamref name="TContainer"/></returns>
         public TContainer WithCachingEnabled()
@@ -319,7 +319,7 @@ namespace MASES.KNet.Streams.Kstream
             return this as TContainer;
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/Materialized.html#withKeySerde(org.apache.kafka.common.serialization.Serde)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/Materialized.html#withKeySerde(org.apache.kafka.common.serialization.Serde)"/>
         /// </summary>
         /// <param name="arg0"><see cref="ISerDes{K, TJVMK}"/></param>
         /// <returns><typeparamref name="TContainer"/></returns>
@@ -332,7 +332,7 @@ namespace MASES.KNet.Streams.Kstream
             return this as TContainer;
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/Materialized.html#withLoggingDisabled()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/Materialized.html#withLoggingDisabled()"/>
         /// </summary>
         /// <returns><typeparamref name="TContainer"/></returns>
         public TContainer WithLoggingDisabled()
@@ -344,7 +344,7 @@ namespace MASES.KNet.Streams.Kstream
             return this as TContainer;
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/Materialized.html#withLoggingEnabled(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/Materialized.html#withLoggingEnabled(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <returns><typeparamref name="TContainer"/></returns>
@@ -357,7 +357,7 @@ namespace MASES.KNet.Streams.Kstream
             return this as TContainer;
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/Materialized.html#withRetention(java.time.Duration)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/Materialized.html#withRetention(java.time.Duration)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Time.Duration"/></param>
         /// <returns><typeparamref name="TContainer"/></returns>
@@ -371,7 +371,7 @@ namespace MASES.KNet.Streams.Kstream
             return this as TContainer;
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/Materialized.html#withStoreType(org.apache.kafka.streams.kstream.Materialized.StoreType)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/Materialized.html#withStoreType(org.apache.kafka.streams.kstream.Materialized.StoreType)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.Materialized.StoreType"/></param>
         /// <returns><typeparamref name="TContainer"/></returns>

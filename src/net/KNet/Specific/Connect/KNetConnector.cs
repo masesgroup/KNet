@@ -235,7 +235,7 @@ namespace MASES.KNet.Connect
             {
                 using Java.Lang.String key = item.Key;
                 using Java.Lang.String value = item.Value;
-                props.Put(key, value);
+                props.Put(key, value).DisposeIfDisposable();
             }
             return retVal;
         }

@@ -31,7 +31,7 @@ namespace MASES.KNet.Streams.Processor.Api
 	/// <typeparam name="TJVMVForward">The JVM type of <typeparamref name="VForward"/></typeparam>
 	public class ProcessorContext<KForward, VForward, TJVMKForward, TJVMVForward> : IKNetInnerReference<Org.Apache.Kafka.Streams.Processor.Api.ProcessorContext<TJVMKForward, TJVMVForward>>, IDisposable
 	{
-		readonly Org.Apache.Kafka.Streams.Processor.Api.ProcessorContext<TJVMKForward, TJVMVForward> _context;
+		Org.Apache.Kafka.Streams.Processor.Api.ProcessorContext<TJVMKForward, TJVMVForward> _context;
 
 		internal ProcessorContext(Org.Apache.Kafka.Streams.Processor.Api.ProcessorContext<TJVMKForward, TJVMVForward> context)
 		{
@@ -70,6 +70,7 @@ namespace MASES.KNet.Streams.Processor.Api
 			if (disposing)
 			{
 				_context?.Dispose();
+				_context = null;
 			}
 		}
 
@@ -83,7 +84,7 @@ namespace MASES.KNet.Streams.Processor.Api
 		#region ProcessorContext
 
 		/// <summary>
-		/// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/processor/api/ProcessorContext.html#forward(org.apache.kafka.streams.processor.api.Record,java.lang.String)"/>
+		/// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/api/ProcessorContext.html#forward(org.apache.kafka.streams.processor.api.Record,java.lang.String)"/>
 		/// </summary>
 		/// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Processor.Api.Record"/></param>
 		/// <param name="arg1"><see cref="string"/></param>
@@ -98,7 +99,7 @@ namespace MASES.KNet.Streams.Processor.Api
             _context.Forward<TJVMK, TJVMV>(arg0, jString);
 		}
 		/// <summary>
-		/// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/processor/api/ProcessorContext.html#forward(org.apache.kafka.streams.processor.api.Record)"/>
+		/// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/api/ProcessorContext.html#forward(org.apache.kafka.streams.processor.api.Record)"/>
 		/// </summary>
 		/// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Processor.Api.Record"/></param>
 		/// <typeparam name="K"><typeparamref name="KForward"/></typeparam>
@@ -116,7 +117,7 @@ namespace MASES.KNet.Streams.Processor.Api
 		#region ProcessingContext
 
 		/// <summary>
-		/// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/processor/api/ProcessingContext.html#getStateStore(java.lang.String)"/>
+		/// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/api/ProcessingContext.html#getStateStore(java.lang.String)"/>
 		/// </summary>
 		/// <param name="arg0"><see cref="string"/></param>
 		/// <typeparam name="S"><see cref="Org.Apache.Kafka.Streams.Processor.IStateStore"/></typeparam>
@@ -128,23 +129,23 @@ namespace MASES.KNet.Streams.Processor.Api
             return _context.GetStateStore<S>(jString);
 		}
 		/// <summary>
-		/// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/processor/api/ProcessingContext.html#stateDir()"/>
+		/// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/api/ProcessingContext.html#stateDir()"/>
 		/// </summary>
 		/// <returns><see cref="Java.Io.File"/></returns>
 		public Java.Io.File StateDir { get { CheckDisposed(); return _context.StateDir(); } }
 
 		/// <summary>
-		/// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/processor/api/ProcessingContext.html#applicationId()"/>
+		/// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/api/ProcessingContext.html#applicationId()"/>
 		/// </summary>
 		/// <returns><see cref="string"/></returns>
 		public string ApplicationId { get { CheckDisposed(); using var appId = _context.ApplicationId(); return appId; } }
 		/// <summary>
-		/// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/processor/api/ProcessingContext.html#appConfigs()"/>
+		/// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/api/ProcessingContext.html#appConfigs()"/>
 		/// </summary>
 		/// <returns><see cref="Java.Util.Map"/></returns>
 		public Java.Util.Map<Java.Lang.String, object> AppConfigs { get { CheckDisposed(); return _context.AppConfigs(); } }
 		/// <summary>
-		/// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/processor/api/ProcessingContext.html#appConfigsWithPrefix(java.lang.String)"/>
+		/// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/api/ProcessingContext.html#appConfigsWithPrefix(java.lang.String)"/>
 		/// </summary>
 		/// <param name="arg0"><see cref="string"/></param>
 		/// <returns><see cref="Java.Util.Map"/></returns>
@@ -155,7 +156,7 @@ namespace MASES.KNet.Streams.Processor.Api
             return _context.AppConfigsWithPrefix(jString);
 		}
 		/// <summary>
-		/// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/processor/api/ProcessingContext.html#recordMetadata()"/>
+		/// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/api/ProcessingContext.html#recordMetadata()"/>
 		/// </summary>
 		/// <returns><see cref="Java.Util.Optional"/></returns>
 		public Org.Apache.Kafka.Streams.Processor.Api.RecordMetadata RecordMetadata
@@ -168,37 +169,37 @@ namespace MASES.KNet.Streams.Processor.Api
 			}
 		}
 		/// <summary>
-		/// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/processor/api/ProcessingContext.html#currentStreamTimeMs()"/>
+		/// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/api/ProcessingContext.html#currentStreamTimeMs()"/>
 		/// </summary>
 		/// <returns><see cref="long"/></returns>
 		public long CurrentStreamTimeMs { get { CheckDisposed(); return _context.CurrentStreamTimeMs(); } }
 		/// <summary>
-		/// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/processor/api/ProcessingContext.html#currentStreamTimeMs()"/>
+		/// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/api/ProcessingContext.html#currentStreamTimeMs()"/>
 		/// </summary>
 		/// <returns><see cref="DateTime"/></returns>
 		public DateTime CurrentStreamDateTime { get { CheckDisposed(); return DateTimeOffset.FromUnixTimeMilliseconds(_context.CurrentStreamTimeMs()).DateTime; } }
 		/// <summary>
-		/// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/processor/api/ProcessingContext.html#currentSystemTimeMs()"/>
+		/// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/api/ProcessingContext.html#currentSystemTimeMs()"/>
 		/// </summary>
 		/// <returns><see cref="long"/></returns>
 		public long CurrentSystemTimeMs { get { CheckDisposed(); return _context.CurrentSystemTimeMs(); } }
 		/// <summary>
-		/// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/processor/api/ProcessingContext.html#currentSystemTimeMs()"/>
+		/// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/api/ProcessingContext.html#currentSystemTimeMs()"/>
 		/// </summary>
 		/// <returns><see cref="DateTime"/></returns>
 		public DateTime CurrentSystemDateTime { get { CheckDisposed(); return DateTimeOffset.FromUnixTimeMilliseconds(_context.CurrentSystemTimeMs()).DateTime; } }
 		/// <summary>
-		/// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/processor/api/ProcessingContext.html#keySerde()"/>
+		/// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/api/ProcessingContext.html#keySerde()"/>
 		/// </summary>
 		/// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></returns>
 		public Org.Apache.Kafka.Common.Serialization.Serde<object> KeySerde { get { CheckDisposed(); return _context.KeySerde(); } }
 		/// <summary>
-		/// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/processor/api/ProcessingContext.html#valueSerde()"/>
+		/// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/api/ProcessingContext.html#valueSerde()"/>
 		/// </summary>
 		/// <returns><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></returns>
 		public Org.Apache.Kafka.Common.Serialization.Serde<object> ValueSerde { get { CheckDisposed(); return _context.ValueSerde(); } }
 		/// <summary>
-		/// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/processor/api/ProcessingContext.html#schedule(java.time.Duration,org.apache.kafka.streams.processor.PunctuationType,org.apache.kafka.streams.processor.Punctuator)"/>
+		/// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/api/ProcessingContext.html#schedule(java.time.Duration,org.apache.kafka.streams.processor.PunctuationType,org.apache.kafka.streams.processor.Punctuator)"/>
 		/// </summary>
 		/// <param name="arg0"><see cref="Java.Time.Duration"/></param>
 		/// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Processor.PunctuationType"/></param>
@@ -210,17 +211,17 @@ namespace MASES.KNet.Streams.Processor.Api
 			return _context.Schedule(arg0, arg1, arg2);
 		}
 		/// <summary>
-		/// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/processor/api/ProcessingContext.html#taskId()"/>
+		/// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/api/ProcessingContext.html#taskId()"/>
 		/// </summary>
 		/// <returns><see cref="Org.Apache.Kafka.Streams.Processor.TaskId"/></returns>
 		public Org.Apache.Kafka.Streams.Processor.TaskId TaskId { get { CheckDisposed(); return _context.TaskId(); } }
 		/// <summary>
-		/// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/processor/api/ProcessingContext.html#metrics()"/>
+		/// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/api/ProcessingContext.html#metrics()"/>
 		/// </summary>
 		/// <returns><see cref="Org.Apache.Kafka.Streams.StreamsMetrics"/></returns>
 		public Org.Apache.Kafka.Streams.StreamsMetrics Metrics { get { CheckDisposed(); return _context.Metrics(); } }
 		/// <summary>
-		/// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/processor/api/ProcessingContext.html#commit()"/>
+		/// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/api/ProcessingContext.html#commit()"/>
 		/// </summary>
 		public void Commit() { CheckDisposed(); _context.Commit(); }
 		#endregion

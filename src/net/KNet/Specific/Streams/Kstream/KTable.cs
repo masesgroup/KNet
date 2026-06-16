@@ -32,7 +32,7 @@ namespace MASES.KNet.Streams.Kstream
     /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
     public class KTable<K, V, TJVMK, TJVMV> : IKNetInnerReference<Org.Apache.Kafka.Streams.Kstream.KTable<TJVMK, TJVMV>>, IGenericSerDesFactoryApplier, IDisposable
     {
-        readonly Org.Apache.Kafka.Streams.Kstream.KTable<TJVMK, TJVMV> _inner;
+        Org.Apache.Kafka.Streams.Kstream.KTable<TJVMK, TJVMV> _inner;
 
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set => _factory = value; }
@@ -75,6 +75,7 @@ namespace MASES.KNet.Streams.Kstream
             if (disposing)
             {
                 _inner?.Dispose();
+                _inner = null;
             }
         }
 
@@ -86,7 +87,7 @@ namespace MASES.KNet.Streams.Kstream
         public static implicit operator Org.Apache.Kafka.Streams.Kstream.KTable<TJVMK, TJVMV>(KTable<K, V, TJVMK, TJVMV> t) => t._inner;
 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/KTable.html#groupBy(org.apache.kafka.streams.kstream.KeyValueMapper,org.apache.kafka.streams.kstream.Grouped)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/KTable.html#groupBy(org.apache.kafka.streams.kstream.KeyValueMapper,org.apache.kafka.streams.kstream.Grouped)"/>
         /// </summary>
         /// <param name="arg0"><see cref="KeyValueMapper{K, V, VR, TJVMK, TJVMV, TJVMVR}"/></param>
         /// <param name="arg1"><see cref="Grouped{KR, VR, TJVMK, TJVMV}"/></param>
@@ -105,7 +106,7 @@ namespace MASES.KNet.Streams.Kstream
             return new KGroupedTable<KR, VR, TJVMKR, TJVMVR>(_factory, _inner.GroupBy<TJVMKR, TJVMVR, TJVMK, TJVMV, Org.Apache.Kafka.Streams.KeyValue<TJVMKR, TJVMVR>, TJVMKR, TJVMVR>(arg0, arg1));
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/KTable.html#groupBy(org.apache.kafka.streams.kstream.KeyValueMapper)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/KTable.html#groupBy(org.apache.kafka.streams.kstream.KeyValueMapper)"/>
         /// </summary>
         /// <param name="arg0"><see cref="KeyValueMapper{K, V, VR, TJVMK, TJVMV, TJVMVR}"/></param>
         /// <typeparam name="KR"></typeparam>
@@ -122,7 +123,7 @@ namespace MASES.KNet.Streams.Kstream
             return new KGroupedTable<KR, VR, TJVMKR, TJVMVR>(_factory, _inner.GroupBy<TJVMKR, TJVMVR, TJVMK, TJVMV, Org.Apache.Kafka.Streams.KeyValue<TJVMKR, TJVMVR>, TJVMKR, TJVMVR>(arg0));
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/KTable.html#toStream(org.apache.kafka.streams.kstream.KeyValueMapper,org.apache.kafka.streams.kstream.Named)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/KTable.html#toStream(org.apache.kafka.streams.kstream.KeyValueMapper,org.apache.kafka.streams.kstream.Named)"/>
         /// </summary>
         /// <param name="arg0"><see cref="KeyValueMapper{K, V, VR, TJVMK, TJVMV, TJVMVR}"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Kstream.Named"/></param>
@@ -139,7 +140,7 @@ namespace MASES.KNet.Streams.Kstream
             return new KStream<KR, V, TJVMKR, TJVMV>(_factory, _inner.ToStream<TJVMKR, TJVMK, TJVMV, TJVMKR>(arg0, arg1));
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/KTable.html#toStream(org.apache.kafka.streams.kstream.KeyValueMapper)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/KTable.html#toStream(org.apache.kafka.streams.kstream.KeyValueMapper)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.KeyValueMapper"/></param>
         /// <typeparam name="KR"></typeparam>
@@ -155,7 +156,7 @@ namespace MASES.KNet.Streams.Kstream
             return new KStream<KR, V, TJVMKR, TJVMV>(_factory, _inner.ToStream<TJVMKR, TJVMK, TJVMV, TJVMKR>(arg0));
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/KTable.html#join(org.apache.kafka.streams.kstream.KTable,org.apache.kafka.streams.kstream.ValueJoiner,org.apache.kafka.streams.kstream.Materialized)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/KTable.html#join(org.apache.kafka.streams.kstream.KTable,org.apache.kafka.streams.kstream.ValueJoiner,org.apache.kafka.streams.kstream.Materialized)"/>
         /// </summary>
         /// <param name="arg0"><see cref="KTable{K, V, TJVMK, TJVMV}"/></param>
         /// <param name="arg1"><see cref="ValueJoiner{V1, V2, VR}"/></param>
@@ -176,7 +177,7 @@ namespace MASES.KNet.Streams.Kstream
             return new KTable<K, VR, TJVMK, TJVMVR>(_factory, _inner.Join<TJVMVR, TJVMVO, TJVMV, TJVMVO, TJVMVR>(arg0, arg1, arg2));
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/KTable.html#join(org.apache.kafka.streams.kstream.KTable,org.apache.kafka.streams.kstream.ValueJoiner,org.apache.kafka.streams.kstream.Named,org.apache.kafka.streams.kstream.Materialized)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/KTable.html#join(org.apache.kafka.streams.kstream.KTable,org.apache.kafka.streams.kstream.ValueJoiner,org.apache.kafka.streams.kstream.Named,org.apache.kafka.streams.kstream.Materialized)"/>
         /// </summary>
         /// <param name="arg0"><see cref="KTable{K, V, TJVMK, TJVMV}"/></param>
         /// <param name="arg1"><see cref="ValueJoiner{V1, V2, VR, TJVMV1, TJVMV2, TJVMVR}"/></param>
@@ -198,7 +199,7 @@ namespace MASES.KNet.Streams.Kstream
             return new KTable<K, VR, TJVMK, TJVMVR>(_factory, _inner.Join<TJVMVR, TJVMVO, TJVMV, TJVMVO, TJVMVR>(arg0, arg1, arg2, arg3));
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/KTable.html#join(org.apache.kafka.streams.kstream.KTable,org.apache.kafka.streams.kstream.ValueJoiner,org.apache.kafka.streams.kstream.Named)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/KTable.html#join(org.apache.kafka.streams.kstream.KTable,org.apache.kafka.streams.kstream.ValueJoiner,org.apache.kafka.streams.kstream.Named)"/>
         /// </summary>
         /// <param name="arg0"><see cref="KTable{K, V, TJVMK, TJVMV}"/></param>
         /// <param name="arg1"><see cref="ValueJoiner{V1, V2, VR, TJVMV1, TJVMV2, TJVMVR}"/></param>
@@ -218,7 +219,7 @@ namespace MASES.KNet.Streams.Kstream
             return new KTable<K, VR, TJVMK, TJVMVR>(_factory, _inner.Join<TJVMVR, TJVMVO, TJVMV, TJVMVO, TJVMVR>(arg0, arg1, arg2));
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/KTable.html#join(org.apache.kafka.streams.kstream.KTable,org.apache.kafka.streams.kstream.ValueJoiner)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/KTable.html#join(org.apache.kafka.streams.kstream.KTable,org.apache.kafka.streams.kstream.ValueJoiner)"/>
         /// </summary>
         /// <param name="arg0"><see cref="KTable{K, V, TJVMK, TJVMV}"/></param>
         /// <param name="arg1"><see cref="ValueJoiner{V1, V2, VR, TJVMV1, TJVMV2, TJVMVR}"/></param>
@@ -237,7 +238,7 @@ namespace MASES.KNet.Streams.Kstream
             return new KTable<K, VR, TJVMK, TJVMVR>(_factory, _inner.Join<TJVMVR, TJVMVO, TJVMV, TJVMVO, TJVMVR>(arg0, arg1));
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/KTable.html#leftJoin(org.apache.kafka.streams.kstream.KTable,org.apache.kafka.streams.kstream.ValueJoiner,org.apache.kafka.streams.kstream.Materialized)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/KTable.html#leftJoin(org.apache.kafka.streams.kstream.KTable,org.apache.kafka.streams.kstream.ValueJoiner,org.apache.kafka.streams.kstream.Materialized)"/>
         /// </summary>
         /// <param name="arg0"><see cref="KTable{K, V, TJVMK, TJVMV}"/></param>
         /// <param name="arg1"><see cref="ValueJoiner{V1, V2, VR, TJVMV1, TJVMV2, TJVMVR}"/></param>
@@ -258,7 +259,7 @@ namespace MASES.KNet.Streams.Kstream
             return new KTable<K, VR, TJVMK, TJVMVR>(_factory, _inner.LeftJoin<TJVMVR, TJVMVO, TJVMV, TJVMVO, TJVMVR>(arg0, arg1, arg2));
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/KTable.html#leftJoin(org.apache.kafka.streams.kstream.KTable,org.apache.kafka.streams.kstream.ValueJoiner,org.apache.kafka.streams.kstream.Named,org.apache.kafka.streams.kstream.Materialized)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/KTable.html#leftJoin(org.apache.kafka.streams.kstream.KTable,org.apache.kafka.streams.kstream.ValueJoiner,org.apache.kafka.streams.kstream.Named,org.apache.kafka.streams.kstream.Materialized)"/>
         /// </summary>
         /// <param name="arg0"><see cref="KTable{K, V, TJVMK, TJVMV}"/></param>
         /// <param name="arg1"><see cref="ValueJoiner{V1, V2, VR, TJVMV1, TJVMV2, TJVMVR}"/></param>
@@ -280,7 +281,7 @@ namespace MASES.KNet.Streams.Kstream
             return new KTable<K, VR, TJVMK, TJVMVR>(_factory, _inner.LeftJoin<TJVMVR, TJVMVO, TJVMV, TJVMVO, TJVMVR>(arg0, arg1, arg2, arg3));
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/KTable.html#leftJoin(org.apache.kafka.streams.kstream.KTable,org.apache.kafka.streams.kstream.ValueJoiner,org.apache.kafka.streams.kstream.Named)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/KTable.html#leftJoin(org.apache.kafka.streams.kstream.KTable,org.apache.kafka.streams.kstream.ValueJoiner,org.apache.kafka.streams.kstream.Named)"/>
         /// </summary>
         /// <param name="arg0"><see cref="KTable{K, V, TJVMK, TJVMV}"/></param>
         /// <param name="arg1"><see cref="ValueJoiner{V1, V2, VR, TJVMV1, TJVMV2, TJVMVR}"/></param>
@@ -300,7 +301,7 @@ namespace MASES.KNet.Streams.Kstream
             return new KTable<K, VR, TJVMK, TJVMVR>(_factory, _inner.LeftJoin<TJVMVR, TJVMVO, TJVMV, TJVMVO, TJVMVR>(arg0, arg1, arg2));
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/KTable.html#leftJoin(org.apache.kafka.streams.kstream.KTable,org.apache.kafka.streams.kstream.ValueJoiner)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/KTable.html#leftJoin(org.apache.kafka.streams.kstream.KTable,org.apache.kafka.streams.kstream.ValueJoiner)"/>
         /// </summary>
         /// <param name="arg0"><see cref="KTable{K, V, TJVMK, TJVMV}"/></param>
         /// <param name="arg1"><see cref="ValueJoiner{V1, V2, VR, TJVMV1, TJVMV2, TJVMVR}"/></param>
@@ -319,7 +320,7 @@ namespace MASES.KNet.Streams.Kstream
             return new KTable<K, VR, TJVMK, TJVMVR>(_factory, _inner.LeftJoin<TJVMVR, TJVMVO, TJVMV, TJVMVO, TJVMVR>(arg0, arg1));
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/KTable.html#outerJoin(org.apache.kafka.streams.kstream.KTable,org.apache.kafka.streams.kstream.ValueJoiner,org.apache.kafka.streams.kstream.Materialized)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/KTable.html#outerJoin(org.apache.kafka.streams.kstream.KTable,org.apache.kafka.streams.kstream.ValueJoiner,org.apache.kafka.streams.kstream.Materialized)"/>
         /// </summary>
         /// <param name="arg0"><see cref="KTable{K, V, TJVMK, TJVMV}"/></param>
         /// <param name="arg1"><see cref="ValueJoiner{V1, V2, VR, TJVMV1, TJVMV2, TJVMVR}"/></param>
@@ -340,7 +341,7 @@ namespace MASES.KNet.Streams.Kstream
             return new KTable<K, VR, TJVMK, TJVMVR>(_factory, _inner.OuterJoin<TJVMVR, TJVMVO, TJVMV, TJVMVO, TJVMVR>(arg0, arg1, arg2));
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/KTable.html#outerJoin(org.apache.kafka.streams.kstream.KTable,org.apache.kafka.streams.kstream.ValueJoiner,org.apache.kafka.streams.kstream.Named,org.apache.kafka.streams.kstream.Materialized)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/KTable.html#outerJoin(org.apache.kafka.streams.kstream.KTable,org.apache.kafka.streams.kstream.ValueJoiner,org.apache.kafka.streams.kstream.Named,org.apache.kafka.streams.kstream.Materialized)"/>
         /// </summary>
         /// <param name="arg0"><see cref="KTable{K, V, TJVMK, TJVMV}"/></param>
         /// <param name="arg1"><see cref="ValueJoiner{V1, V2, VR, TJVMV1, TJVMV2, TJVMVR}"/></param>
@@ -362,7 +363,7 @@ namespace MASES.KNet.Streams.Kstream
             return new KTable<K, VR, TJVMK, TJVMVR>(_factory, _inner.OuterJoin<TJVMVR, TJVMVO, TJVMV, TJVMVO, TJVMVR>(arg0, arg1, arg2, arg3));
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/KTable.html#outerJoin(org.apache.kafka.streams.kstream.KTable,org.apache.kafka.streams.kstream.ValueJoiner,org.apache.kafka.streams.kstream.Named)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/KTable.html#outerJoin(org.apache.kafka.streams.kstream.KTable,org.apache.kafka.streams.kstream.ValueJoiner,org.apache.kafka.streams.kstream.Named)"/>
         /// </summary>
         /// <param name="arg0"><see cref="KTable{K, V, TJVMK, TJVMV}"/></param>
         /// <param name="arg1"><see cref="ValueJoiner{V1, V2, VR, TJVMV1, TJVMV2, TJVMVR}"/></param>
@@ -382,7 +383,7 @@ namespace MASES.KNet.Streams.Kstream
             return new KTable<K, VR, TJVMK, TJVMVR>(_factory, _inner.OuterJoin<TJVMVR, TJVMVO, TJVMV, TJVMVO, TJVMVR>(arg0, arg1, arg2));
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/KTable.html#outerJoin(org.apache.kafka.streams.kstream.KTable,org.apache.kafka.streams.kstream.ValueJoiner)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/KTable.html#outerJoin(org.apache.kafka.streams.kstream.KTable,org.apache.kafka.streams.kstream.ValueJoiner)"/>
         /// </summary>
         /// <param name="arg0"><see cref="KTable{K, V, TJVMK, TJVMV}"/></param>
         /// <param name="arg1"><see cref="ValueJoiner{V1, V2, VR, TJVMV1, TJVMV2, TJVMVR}"/></param>
@@ -401,7 +402,7 @@ namespace MASES.KNet.Streams.Kstream
             return new KTable<K, VR, TJVMK, TJVMVR>(_factory, _inner.OuterJoin<TJVMVR, TJVMVO, TJVMV, TJVMVO, TJVMVR>(arg0, arg1));
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/KTable.html#join(org.apache.kafka.streams.kstream.KTable,java.util.function.Function,org.apache.kafka.streams.kstream.ValueJoiner,org.apache.kafka.streams.kstream.Materialized)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/KTable.html#join(org.apache.kafka.streams.kstream.KTable,java.util.function.Function,org.apache.kafka.streams.kstream.ValueJoiner,org.apache.kafka.streams.kstream.Materialized)"/>
         /// </summary>
         /// <param name="arg0"><see cref="KTable{K, V, TJVMK, TJVMV}"/></param>
         /// <param name="arg1"><see cref="Java.Util.Function.Function"/></param>
@@ -423,7 +424,7 @@ namespace MASES.KNet.Streams.Kstream
             return new KTable<K, VR, TJVMK, TJVMVR>(_factory, _inner.Join<TJVMVR, TJVMKO, TJVMVO, TJVMK, TJVMV, TJVMKO, TJVMV, TJVMVO, TJVMVR>(arg0, arg1, arg2, arg3));
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/KTable.html#join(org.apache.kafka.streams.kstream.KTable,java.util.function.Function,org.apache.kafka.streams.kstream.ValueJoiner,org.apache.kafka.streams.kstream.TableJoined,org.apache.kafka.streams.kstream.Materialized)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/KTable.html#join(org.apache.kafka.streams.kstream.KTable,java.util.function.Function,org.apache.kafka.streams.kstream.ValueJoiner,org.apache.kafka.streams.kstream.TableJoined,org.apache.kafka.streams.kstream.Materialized)"/>
         /// </summary>
         /// <param name="arg0"><see cref="KTable{K, V, TJVMK, TJVMV}"/></param>
         /// <param name="arg1"><see cref="Java.Util.Function.Function"/></param>
@@ -447,7 +448,7 @@ namespace MASES.KNet.Streams.Kstream
             return new KTable<K, VR, TJVMK, TJVMVR>(_factory, _inner.Join<TJVMVR, TJVMKO, TJVMVO, TJVMK, TJVMV, TJVMKO, TJVMV, TJVMVO, TJVMVR>(arg0, arg1, arg2, arg3, arg4));
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/KTable.html#join(org.apache.kafka.streams.kstream.KTable,java.util.function.Function,org.apache.kafka.streams.kstream.ValueJoiner,org.apache.kafka.streams.kstream.TableJoined)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/KTable.html#join(org.apache.kafka.streams.kstream.KTable,java.util.function.Function,org.apache.kafka.streams.kstream.ValueJoiner,org.apache.kafka.streams.kstream.TableJoined)"/>
         /// </summary>
         /// <param name="arg0"><see cref="KTable{K, V, TJVMK, TJVMV}"/></param>
         /// <param name="arg1"><see cref="Java.Util.Function.Function"/></param>
@@ -469,7 +470,7 @@ namespace MASES.KNet.Streams.Kstream
             return new KTable<K, VR, TJVMK, TJVMVR>(_factory, _inner.Join<TJVMVR, TJVMKO, TJVMVO, TJVMK, TJVMV, TJVMKO, TJVMV, TJVMVO, TJVMVR>(arg0, arg1, arg2, arg3));
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/KTable.html#join(org.apache.kafka.streams.kstream.KTable,java.util.function.Function,org.apache.kafka.streams.kstream.ValueJoiner)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/KTable.html#join(org.apache.kafka.streams.kstream.KTable,java.util.function.Function,org.apache.kafka.streams.kstream.ValueJoiner)"/>
         /// </summary>
         /// <param name="arg0"><see cref="KTable{K, V, TJVMK, TJVMV}"/></param>
         /// <param name="arg1"><see cref="Java.Util.Function.Function"/></param>
@@ -489,7 +490,7 @@ namespace MASES.KNet.Streams.Kstream
             return new KTable<K, VR, TJVMK, TJVMVR>(_factory, _inner.Join<TJVMVR, TJVMKO, TJVMVO, TJVMK, TJVMV, TJVMKO, TJVMV, TJVMVO, TJVMVR>(arg0, arg1, arg2));
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/KTable.html#join(org.apache.kafka.streams.kstream.KTable,java.util.function.Function,org.apache.kafka.streams.kstream.ValueJoiner,org.apache.kafka.streams.kstream.Materialized)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/KTable.html#join(org.apache.kafka.streams.kstream.KTable,java.util.function.Function,org.apache.kafka.streams.kstream.ValueJoiner,org.apache.kafka.streams.kstream.Materialized)"/>
         /// </summary>
         /// <param name="arg0"><see cref="KTable{K, V, TJVMK, TJVMV}"/></param>
         /// <param name="arg1"><see cref="Java.Util.Function.Function"/></param>
@@ -511,7 +512,7 @@ namespace MASES.KNet.Streams.Kstream
             return new KTable<K, VR, TJVMK, TJVMVR>(_factory, _inner.Join<TJVMVR, TJVMKO, TJVMVO, TJVMV, TJVMKO, TJVMV, TJVMVO, TJVMVR>(arg0, arg1, arg2, arg3));
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/KTable.html#join(org.apache.kafka.streams.kstream.KTable,java.util.function.Function,org.apache.kafka.streams.kstream.ValueJoiner,org.apache.kafka.streams.kstream.TableJoined,org.apache.kafka.streams.kstream.Materialized)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/KTable.html#join(org.apache.kafka.streams.kstream.KTable,java.util.function.Function,org.apache.kafka.streams.kstream.ValueJoiner,org.apache.kafka.streams.kstream.TableJoined,org.apache.kafka.streams.kstream.Materialized)"/>
         /// </summary>
         /// <param name="arg0"><see cref="KTable{K, V, TJVMK, TJVMV}"/></param>
         /// <param name="arg1"><see cref="Java.Util.Function.Function"/></param>
@@ -535,7 +536,7 @@ namespace MASES.KNet.Streams.Kstream
             return new KTable<K, VR, TJVMK, TJVMVR>(_factory, _inner.Join<TJVMVR, TJVMKO, TJVMVO, TJVMV, TJVMKO, TJVMV, TJVMVO, TJVMVR>(arg0, arg1, arg2, arg3, arg4));
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/KTable.html#join(org.apache.kafka.streams.kstream.KTable,java.util.function.Function,org.apache.kafka.streams.kstream.ValueJoiner,org.apache.kafka.streams.kstream.TableJoined)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/KTable.html#join(org.apache.kafka.streams.kstream.KTable,java.util.function.Function,org.apache.kafka.streams.kstream.ValueJoiner,org.apache.kafka.streams.kstream.TableJoined)"/>
         /// </summary>
         /// <param name="arg0"><see cref="KTable{K, V, TJVMK, TJVMV}"/></param>
         /// <param name="arg1"><see cref="Java.Util.Function.Function"/></param>
@@ -557,7 +558,7 @@ namespace MASES.KNet.Streams.Kstream
             return new KTable<K, VR, TJVMK, TJVMVR>(_factory, _inner.Join<TJVMVR, TJVMKO, TJVMVO, TJVMV, TJVMKO, TJVMV, TJVMVO, TJVMVR>(arg0, arg1, arg2, arg3));
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/KTable.html#join(org.apache.kafka.streams.kstream.KTable,java.util.function.Function,org.apache.kafka.streams.kstream.ValueJoiner)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/KTable.html#join(org.apache.kafka.streams.kstream.KTable,java.util.function.Function,org.apache.kafka.streams.kstream.ValueJoiner)"/>
         /// </summary>
         /// <param name="arg0"><see cref="KTable{K, V, TJVMK, TJVMV}"/></param>
         /// <param name="arg1"><see cref="Java.Util.Function.Function"/></param>
@@ -577,7 +578,7 @@ namespace MASES.KNet.Streams.Kstream
             return new KTable<K, VR, TJVMK, TJVMVR>(_factory, _inner.Join<TJVMVR, TJVMKO, TJVMVO, TJVMV, TJVMKO, TJVMV, TJVMVO, TJVMVR>(arg0, arg1, arg2));
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/KTable.html#leftJoin(org.apache.kafka.streams.kstream.KTable,java.util.function.Function,org.apache.kafka.streams.kstream.ValueJoiner,org.apache.kafka.streams.kstream.Materialized)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/KTable.html#leftJoin(org.apache.kafka.streams.kstream.KTable,java.util.function.Function,org.apache.kafka.streams.kstream.ValueJoiner,org.apache.kafka.streams.kstream.Materialized)"/>
         /// </summary>
         /// <param name="arg0"><see cref="KTable{K, V, TJVMK, TJVMV}"/></param>
         /// <param name="arg1"><see cref="Java.Util.Function.Function"/></param>
@@ -599,7 +600,7 @@ namespace MASES.KNet.Streams.Kstream
             return new KTable<K, VR, TJVMK, TJVMVR>(_factory, _inner.LeftJoin<TJVMVR, TJVMKO, TJVMVO, TJVMK, TJVMV, TJVMKO, TJVMV, TJVMVO, TJVMVR>(arg0, arg1, arg2, arg3));
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/KTable.html#leftJoin(org.apache.kafka.streams.kstream.KTable,java.util.function.Function,org.apache.kafka.streams.kstream.ValueJoiner,org.apache.kafka.streams.kstream.TableJoined,org.apache.kafka.streams.kstream.Materialized)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/KTable.html#leftJoin(org.apache.kafka.streams.kstream.KTable,java.util.function.Function,org.apache.kafka.streams.kstream.ValueJoiner,org.apache.kafka.streams.kstream.TableJoined,org.apache.kafka.streams.kstream.Materialized)"/>
         /// </summary>
         /// <param name="arg0"><see cref="KTable{K, V, TJVMK, TJVMV}"/></param>
         /// <param name="arg1"><see cref="Java.Util.Function.Function"/></param>
@@ -623,7 +624,7 @@ namespace MASES.KNet.Streams.Kstream
             return new KTable<K, VR, TJVMK, TJVMVR>(_factory, _inner.LeftJoin<TJVMVR, TJVMKO, TJVMVO, TJVMK, TJVMV, TJVMKO, TJVMV, TJVMVO, TJVMVR>(arg0, arg1, arg2, arg3, arg4));
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/KTable.html#leftJoin(org.apache.kafka.streams.kstream.KTable,java.util.function.Function,org.apache.kafka.streams.kstream.ValueJoiner,org.apache.kafka.streams.kstream.TableJoined)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/KTable.html#leftJoin(org.apache.kafka.streams.kstream.KTable,java.util.function.Function,org.apache.kafka.streams.kstream.ValueJoiner,org.apache.kafka.streams.kstream.TableJoined)"/>
         /// </summary>
         /// <param name="arg0"><see cref="KTable{K, V, TJVMK, TJVMV}"/></param>
         /// <param name="arg1"><see cref="Java.Util.Function.Function"/></param>
@@ -645,7 +646,7 @@ namespace MASES.KNet.Streams.Kstream
             return new KTable<K, VR, TJVMK, TJVMVR>(_factory, _inner.LeftJoin<TJVMVR, TJVMKO, TJVMVO, TJVMK, TJVMV, TJVMKO, TJVMV, TJVMVO, TJVMVR>(arg0, arg1, arg2, arg3));
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/KTable.html#leftJoin(org.apache.kafka.streams.kstream.KTable,java.util.function.Function,org.apache.kafka.streams.kstream.ValueJoiner)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/KTable.html#leftJoin(org.apache.kafka.streams.kstream.KTable,java.util.function.Function,org.apache.kafka.streams.kstream.ValueJoiner)"/>
         /// </summary>
         /// <param name="arg0"><see cref="KTable{K, V, TJVMK, TJVMV}"/></param>
         /// <param name="arg1"><see cref="Java.Util.Function.Function"/></param>
@@ -665,7 +666,7 @@ namespace MASES.KNet.Streams.Kstream
             return new KTable<K, VR, TJVMK, TJVMVR>(_factory, _inner.LeftJoin<TJVMVR, TJVMKO, TJVMVO, TJVMK, TJVMV, TJVMKO, TJVMV, TJVMVO, TJVMVR>(arg0, arg1, arg2));
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/KTable.html#leftJoin(org.apache.kafka.streams.kstream.KTable,java.util.function.Function,org.apache.kafka.streams.kstream.ValueJoiner,org.apache.kafka.streams.kstream.Materialized)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/KTable.html#leftJoin(org.apache.kafka.streams.kstream.KTable,java.util.function.Function,org.apache.kafka.streams.kstream.ValueJoiner,org.apache.kafka.streams.kstream.Materialized)"/>
         /// </summary>
         /// <param name="arg0"><see cref="KTable{K, V, TJVMK, TJVMV}"/></param>
         /// <param name="arg1"><see cref="Java.Util.Function.Function"/></param>
@@ -687,7 +688,7 @@ namespace MASES.KNet.Streams.Kstream
             return new KTable<K, VR, TJVMK, TJVMVR>(_factory, _inner.LeftJoin<TJVMVR, TJVMKO, TJVMVO, TJVMV, TJVMKO, TJVMV, TJVMVO, TJVMVR>(arg0, arg1, arg2, arg3));
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/KTable.html#leftJoin(org.apache.kafka.streams.kstream.KTable,java.util.function.Function,org.apache.kafka.streams.kstream.ValueJoiner,org.apache.kafka.streams.kstream.TableJoined,org.apache.kafka.streams.kstream.Materialized)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/KTable.html#leftJoin(org.apache.kafka.streams.kstream.KTable,java.util.function.Function,org.apache.kafka.streams.kstream.ValueJoiner,org.apache.kafka.streams.kstream.TableJoined,org.apache.kafka.streams.kstream.Materialized)"/>
         /// </summary>
         /// <param name="arg0"><see cref="KTable{K, V, TJVMK, TJVMV}"/></param>
         /// <param name="arg1"><see cref="Java.Util.Function.Function"/></param>
@@ -711,7 +712,7 @@ namespace MASES.KNet.Streams.Kstream
             return new KTable<K, VR, TJVMK, TJVMVR>(_factory, _inner.LeftJoin<TJVMVR, TJVMKO, TJVMVO, TJVMV, TJVMKO, TJVMV, TJVMVO, TJVMVR>(arg0, arg1, arg2, arg3, arg4));
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/KTable.html#leftJoin(org.apache.kafka.streams.kstream.KTable,java.util.function.Function,org.apache.kafka.streams.kstream.ValueJoiner,org.apache.kafka.streams.kstream.TableJoined)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/KTable.html#leftJoin(org.apache.kafka.streams.kstream.KTable,java.util.function.Function,org.apache.kafka.streams.kstream.ValueJoiner,org.apache.kafka.streams.kstream.TableJoined)"/>
         /// </summary>
         /// <param name="arg0"><see cref="KTable{K, V, TJVMK, TJVMV}"/></param>
         /// <param name="arg1"><see cref="Java.Util.Function.Function"/></param>
@@ -733,7 +734,7 @@ namespace MASES.KNet.Streams.Kstream
             return new KTable<K, VR, TJVMK, TJVMVR>(_factory, _inner.LeftJoin<TJVMVR, TJVMKO, TJVMVO, TJVMV, TJVMKO, TJVMV, TJVMVO, TJVMVR>(arg0, arg1, arg2, arg3));
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/KTable.html#leftJoin(org.apache.kafka.streams.kstream.KTable,java.util.function.Function,org.apache.kafka.streams.kstream.ValueJoiner)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/KTable.html#leftJoin(org.apache.kafka.streams.kstream.KTable,java.util.function.Function,org.apache.kafka.streams.kstream.ValueJoiner)"/>
         /// </summary>
         /// <param name="arg0"><see cref="KTable{K, V, TJVMK, TJVMV}"/></param>
         /// <param name="arg1"><see cref="Java.Util.Function.Function"/></param>
@@ -753,7 +754,7 @@ namespace MASES.KNet.Streams.Kstream
             return new KTable<K, VR, TJVMK, TJVMVR>(_factory, _inner.LeftJoin<TJVMVR, TJVMKO, TJVMVO, TJVMV, TJVMKO, TJVMV, TJVMVO, TJVMVR>(arg0, arg1, arg2));
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/KTable.html#mapValues(org.apache.kafka.streams.kstream.ValueMapper,org.apache.kafka.streams.kstream.Materialized)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/KTable.html#mapValues(org.apache.kafka.streams.kstream.ValueMapper,org.apache.kafka.streams.kstream.Materialized)"/>
         /// </summary>
         /// <param name="arg0"><see cref="ValueMapper{V, VR, TJVMV, TJVMVR}"/></param>
         /// <param name="arg1"><see cref="Materialized{K, V, TJVMK, TJVMV}"/></param>
@@ -770,7 +771,7 @@ namespace MASES.KNet.Streams.Kstream
             return new KTable<K, VR, TJVMK, TJVMVR>(_factory, _inner.MapValues<TJVMVR, TJVMV, TJVMVR>(arg0, arg1));
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/KTable.html#mapValues(org.apache.kafka.streams.kstream.ValueMapper,org.apache.kafka.streams.kstream.Named,org.apache.kafka.streams.kstream.Materialized)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/KTable.html#mapValues(org.apache.kafka.streams.kstream.ValueMapper,org.apache.kafka.streams.kstream.Named,org.apache.kafka.streams.kstream.Materialized)"/>
         /// </summary>
         /// <param name="arg0"><see cref="ValueMapper{V, VR, TJVMV, TJVMVR}"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Kstream.Named"/></param>
@@ -788,7 +789,7 @@ namespace MASES.KNet.Streams.Kstream
             return new KTable<K, VR, TJVMK, TJVMVR>(_factory, _inner.MapValues<TJVMVR, TJVMV, TJVMVR>(arg0, arg1, arg2));
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/KTable.html#mapValues(org.apache.kafka.streams.kstream.ValueMapper,org.apache.kafka.streams.kstream.Named)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/KTable.html#mapValues(org.apache.kafka.streams.kstream.ValueMapper,org.apache.kafka.streams.kstream.Named)"/>
         /// </summary>
         /// <param name="arg0"><see cref="ValueMapper{V, VR, TJVMV, TJVMVR}"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Kstream.Named"/></param>
@@ -804,7 +805,7 @@ namespace MASES.KNet.Streams.Kstream
             return new KTable<K, VR, TJVMK, TJVMVR>(_factory, _inner.MapValues<TJVMVR, TJVMV, TJVMVR>(arg0, arg1));
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/KTable.html#mapValues(org.apache.kafka.streams.kstream.ValueMapper)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/KTable.html#mapValues(org.apache.kafka.streams.kstream.ValueMapper)"/>
         /// </summary>
         /// <param name="arg0"><see cref="ValueMapper{V, VR, TJVMV, TJVMVR}"/></param>
         /// <typeparam name="VR"></typeparam>
@@ -819,7 +820,7 @@ namespace MASES.KNet.Streams.Kstream
             return new KTable<K, VR, TJVMK, TJVMVR>(_factory, _inner.MapValues<TJVMVR, TJVMV, TJVMVR>(arg0));
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/KTable.html#mapValues(org.apache.kafka.streams.kstream.ValueMapperWithKey,org.apache.kafka.streams.kstream.Materialized)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/KTable.html#mapValues(org.apache.kafka.streams.kstream.ValueMapperWithKey,org.apache.kafka.streams.kstream.Materialized)"/>
         /// </summary>
         /// <param name="arg0"><see cref="ValueMapperWithKey{K, V, VR, TJVMK, TJVMV, TJVMVR}"/></param>
         /// <param name="arg1"><see cref="Materialized{K, V, TJVMK, TJVMV}"/></param>
@@ -837,7 +838,7 @@ namespace MASES.KNet.Streams.Kstream
             return new KTable<K, VR, TJVMK, TJVMVR>(_factory, _inner.MapValues<TJVMVR, TJVMK, TJVMV, TJVMVR>(arg0, arg1));
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/KTable.html#mapValues(org.apache.kafka.streams.kstream.ValueMapperWithKey,org.apache.kafka.streams.kstream.Named,org.apache.kafka.streams.kstream.Materialized)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/KTable.html#mapValues(org.apache.kafka.streams.kstream.ValueMapperWithKey,org.apache.kafka.streams.kstream.Named,org.apache.kafka.streams.kstream.Materialized)"/>
         /// </summary>
         /// <param name="arg0"><see cref="ValueMapperWithKey{K, V, VR, TJVMK, TJVMV, TJVMVR}"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Kstream.Named"/></param>
@@ -856,7 +857,7 @@ namespace MASES.KNet.Streams.Kstream
             return new KTable<K, VR, TJVMK, TJVMVR>(_factory, _inner.MapValues<TJVMVR, TJVMK, TJVMV, TJVMVR>(arg0, arg1, arg2));
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/KTable.html#mapValues(org.apache.kafka.streams.kstream.ValueMapperWithKey,org.apache.kafka.streams.kstream.Named)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/KTable.html#mapValues(org.apache.kafka.streams.kstream.ValueMapperWithKey,org.apache.kafka.streams.kstream.Named)"/>
         /// </summary>
         /// <param name="arg0"><see cref="ValueMapperWithKey{K, V, VR, TJVMK, TJVMV, TJVMVR}"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Kstream.Named"/></param>
@@ -873,7 +874,7 @@ namespace MASES.KNet.Streams.Kstream
             return new KTable<K, VR, TJVMK, TJVMVR>(_factory, _inner.MapValues<TJVMVR, TJVMK, TJVMV, TJVMVR>(arg0, arg1));
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/KTable.html#mapValues(org.apache.kafka.streams.kstream.ValueMapperWithKey)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/KTable.html#mapValues(org.apache.kafka.streams.kstream.ValueMapperWithKey)"/>
         /// </summary>
         /// <param name="arg0"><see cref="ValueMapperWithKey{K, V, VR, TJVMK, TJVMV, TJVMVR}"/></param>
         /// <typeparam name="VR"></typeparam>
@@ -889,7 +890,7 @@ namespace MASES.KNet.Streams.Kstream
             return new KTable<K, VR, TJVMK, TJVMVR>(_factory, _inner.MapValues<TJVMVR, TJVMK, TJVMV, TJVMVR>(arg0));
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/KTable.html#queryableStoreName()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/KTable.html#queryableStoreName()"/>
         /// </summary>
         /// <returns><see cref="string"/></returns>
         public string QueryableStoreName
@@ -901,7 +902,7 @@ namespace MASES.KNet.Streams.Kstream
             }
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/KTable.html#toStream()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/KTable.html#toStream()"/>
         /// </summary>
         /// <returns><see cref="KStream{K, V, TJVMK, TJVMV}"/></returns>
         public KStream<K, V, TJVMK, TJVMV> ToStream()
@@ -910,7 +911,7 @@ namespace MASES.KNet.Streams.Kstream
             return new KStream<K, V, TJVMK, TJVMV>(_factory, _inner.ToStream());
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/KTable.html#toStream(org.apache.kafka.streams.kstream.Named)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/KTable.html#toStream(org.apache.kafka.streams.kstream.Named)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.Named"/></param>
         /// <returns><see cref="KStream{K, V, TJVMK, TJVMV}"/></returns>
@@ -920,7 +921,7 @@ namespace MASES.KNet.Streams.Kstream
             return new KStream<K, V, TJVMK, TJVMV>(_factory, _inner.ToStream(arg0));
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/KTable.html#filter(org.apache.kafka.streams.kstream.Predicate,org.apache.kafka.streams.kstream.Materialized)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/KTable.html#filter(org.apache.kafka.streams.kstream.Predicate,org.apache.kafka.streams.kstream.Materialized)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Predicate{K, V, TJVMK, TJVMV}"/></param>
         /// <param name="arg1"><see cref="Materialized{K, V, TJVMK, TJVMV}"/></param>
@@ -935,7 +936,7 @@ namespace MASES.KNet.Streams.Kstream
             return new KTable<K, V, TJVMK, TJVMV>(_factory, _inner.Filter<TJVMK, TJVMV>(arg0, arg1));
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/KTable.html#filter(org.apache.kafka.streams.kstream.Predicate,org.apache.kafka.streams.kstream.Named,org.apache.kafka.streams.kstream.Materialized)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/KTable.html#filter(org.apache.kafka.streams.kstream.Predicate,org.apache.kafka.streams.kstream.Named,org.apache.kafka.streams.kstream.Materialized)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Predicate{K, V, TJVMK, TJVMV}"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Kstream.Named"/></param>
@@ -951,7 +952,7 @@ namespace MASES.KNet.Streams.Kstream
             return new KTable<K, V, TJVMK, TJVMV>(_factory, _inner.Filter<TJVMK, TJVMV>(arg0, arg1, arg2));
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/KTable.html#filter(org.apache.kafka.streams.kstream.Predicate,org.apache.kafka.streams.kstream.Named)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/KTable.html#filter(org.apache.kafka.streams.kstream.Predicate,org.apache.kafka.streams.kstream.Named)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Predicate{K, V, TJVMK, TJVMV}"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Kstream.Named"/></param>
@@ -965,7 +966,7 @@ namespace MASES.KNet.Streams.Kstream
             return new KTable<K, V, TJVMK, TJVMV>(_factory, _inner.Filter<TJVMK, TJVMV>(arg0, arg1));
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/KTable.html#filter(org.apache.kafka.streams.kstream.Predicate)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/KTable.html#filter(org.apache.kafka.streams.kstream.Predicate)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Predicate{K, V, TJVMK, TJVMV}"/></param>
         /// <typeparam name="Arg0objectSuperK"><typeparamref name="K"/></typeparam>
@@ -978,7 +979,7 @@ namespace MASES.KNet.Streams.Kstream
             return new KTable<K, V, TJVMK, TJVMV>(_factory, _inner.Filter<TJVMK, TJVMV>(arg0));
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/KTable.html#filterNot(org.apache.kafka.streams.kstream.Predicate,org.apache.kafka.streams.kstream.Materialized)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/KTable.html#filterNot(org.apache.kafka.streams.kstream.Predicate,org.apache.kafka.streams.kstream.Materialized)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Predicate{K, V, TJVMK, TJVMV}"/></param>
         /// <param name="arg1"><see cref="Materialized{K, V, TJVMK, TJVMV}"/></param>
@@ -993,7 +994,7 @@ namespace MASES.KNet.Streams.Kstream
             return new KTable<K, V, TJVMK, TJVMV>(_factory, _inner.FilterNot<TJVMK, TJVMV>(arg0, arg1));
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/KTable.html#filterNot(org.apache.kafka.streams.kstream.Predicate,org.apache.kafka.streams.kstream.Named,org.apache.kafka.streams.kstream.Materialized)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/KTable.html#filterNot(org.apache.kafka.streams.kstream.Predicate,org.apache.kafka.streams.kstream.Named,org.apache.kafka.streams.kstream.Materialized)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Predicate{K, V, TJVMK, TJVMV}"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Kstream.Named"/></param>
@@ -1009,7 +1010,7 @@ namespace MASES.KNet.Streams.Kstream
             return new KTable<K, V, TJVMK, TJVMV>(_factory, _inner.FilterNot<TJVMK, TJVMV>(arg0, arg1, arg2));
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/KTable.html#filterNot(org.apache.kafka.streams.kstream.Predicate,org.apache.kafka.streams.kstream.Named)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/KTable.html#filterNot(org.apache.kafka.streams.kstream.Predicate,org.apache.kafka.streams.kstream.Named)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Predicate{K, V, TJVMK, TJVMV}"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Kstream.Named"/></param>
@@ -1023,7 +1024,7 @@ namespace MASES.KNet.Streams.Kstream
             return new KTable<K, V, TJVMK, TJVMV>(_factory, _inner.FilterNot<TJVMK, TJVMV>(arg0, arg1));
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/KTable.html#filterNot(org.apache.kafka.streams.kstream.Predicate)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/KTable.html#filterNot(org.apache.kafka.streams.kstream.Predicate)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Predicate{K, V, TJVMK, TJVMV}"/></param>
         /// <typeparam name="Arg0objectSuperK"><typeparamref name="K"/></typeparam>
@@ -1036,7 +1037,7 @@ namespace MASES.KNet.Streams.Kstream
             return new KTable<K, V, TJVMK, TJVMV>(_factory, _inner.FilterNot<TJVMK, TJVMV>(arg0));
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/KTable.html#suppress(org.apache.kafka.streams.kstream.Suppressed)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/KTable.html#suppress(org.apache.kafka.streams.kstream.Suppressed)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Suppressed{K, TJVMK}"/></param>
         /// <typeparam name="Arg0objectSuperK"><typeparamref name="K"/></typeparam>

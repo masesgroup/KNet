@@ -18,12 +18,13 @@
 
 using Java.Time;
 using Java.Util;
+using MASES.JCOBridge.C2JBridge;
+using MASES.JNet.Specific.Extensions;
+using MASES.KNet.Serialization;
+using Org.Apache.Kafka.Streams.Processor;
 using System;
 using System.Collections.Concurrent;
-using MASES.KNet.Serialization;
 using System.Threading;
-using MASES.JCOBridge.C2JBridge;
-using Org.Apache.Kafka.Streams.Processor;
 
 namespace MASES.KNet.Consumer
 {
@@ -177,13 +178,13 @@ namespace MASES.KNet.Consumer
         {
             if (!props.ContainsKey(Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG))
             {
-                props.Put(Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, keyDeserializer.JVMDeserializerClassName);
+                props.Put(Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, keyDeserializer.JVMDeserializerClassName).DisposeIfDisposable();
             }
             else throw new InvalidOperationException($"KNetConsumer auto manages configuration property {Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG}, remove from configuration.");
 
             if (!props.ContainsKey(Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG))
             {
-                props.Put(Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, valueDeserializer.JVMDeserializerClassName);
+                props.Put(Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, valueDeserializer.JVMDeserializerClassName).DisposeIfDisposable();
             }
             else throw new InvalidOperationException($"KNetConsumer auto manages configuration property {Org.Apache.Kafka.Clients.Consumer.ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG}, remove from configuration.");
 

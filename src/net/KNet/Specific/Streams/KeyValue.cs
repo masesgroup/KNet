@@ -29,9 +29,9 @@ namespace MASES.KNet.Streams
     /// <typeparam name="V">The value type</typeparam>
     /// <typeparam name="TJVMK">The JVM type of <typeparamref name="K"/></typeparam>
     /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
-    public sealed class KeyValue<K, V, TJVMK, TJVMV> : IKNetInnerReference<KeyValueSupport<TJVMK, TJVMV>>, IGenericSerDesFactoryApplier, IDisposable
+    public sealed class KeyValue<K, V, TJVMK, TJVMV> : IKNetInnerReference<Org.Apache.Kafka.Streams.KeyValue<TJVMK, TJVMV>>, IGenericSerDesFactoryApplier, IDisposable
     {
-        readonly KeyValueSupport<TJVMK, TJVMV> _inner = null;
+        Org.Apache.Kafka.Streams.KeyValue<TJVMK, TJVMV> _inner = null;
         K _key;
         bool _keyStored;
         V _value;
@@ -42,7 +42,7 @@ namespace MASES.KNet.Streams
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set => _factory = value; }
 
         internal KeyValue(IGenericSerDesFactory factory,
-                          KeyValueSupport<TJVMK, TJVMV> value,
+                          Org.Apache.Kafka.Streams.KeyValue<TJVMK, TJVMV> value,
                           ISerDes<K, TJVMK> keySerDes,
                           ISerDes<V, TJVMV> valueSerDes,
                           bool fromPrefetched)
@@ -55,21 +55,21 @@ namespace MASES.KNet.Streams
             {
                 _keySerDes ??= _factory?.BuildKeySerDes<K, TJVMK>();
                 if (_keySerDes == null) throw new InvalidOperationException("Unable to resolve key serializer/deserializer for prefetched KeyValue.");
-                var jKey = _inner.Key;
+                var jKey = _inner.key;
                 using var disposable = jKey as IDisposable;
-                _key = _keySerDes.Deserialize(null, jKey);
+                _key = _keySerDes.Deserialize((Java.Lang.String)null, jKey);
                 _keyStored = true;
                 _valueSerDes ??= _factory?.BuildValueSerDes<V, TJVMV>();
                 if (_valueSerDes == null) throw new InvalidOperationException("Unable to resolve value serializer/deserializer for prefetched KeyValue.");
-                var jValue = _inner.Value;
+                var jValue = _inner.value;
                 using var disposable2 = jValue as IDisposable;
-                _value = _valueSerDes.Deserialize(null, jValue);
+                _value = _valueSerDes.Deserialize((Java.Lang.String)null, jValue);
                 _valueStored = true;
             }
         }
 
         /// <inheritdoc/>
-        public KeyValueSupport<TJVMK, TJVMV> InnerReference => _inner;
+        public Org.Apache.Kafka.Streams.KeyValue<TJVMK, TJVMV> InnerReference => _inner;
 
         volatile int _disposed; // 0 = live, 1 = disposed
         /// <summary>
@@ -98,11 +98,16 @@ namespace MASES.KNet.Streams
             if (disposing)
             {
                 _inner?.Dispose();
+                _inner = null;
+                _key = default;
+                _keyStored = false;
+                _value = default;
+                _valueStored = true;
             }
         }
 
         /// <summary>
-        /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/KeyValue.html#key"/>
+        /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/KeyValue.html#key"/>
         /// </summary>
         public K Key
         {
@@ -112,16 +117,16 @@ namespace MASES.KNet.Streams
                 if (!_keyStored)
                 {
                     _keySerDes ??= _factory?.BuildKeySerDes<K, TJVMK>() ?? throw new InvalidOperationException("Key serializer/deserializer is not available.");
-                    var key = _inner.Key;
+                    var key = _inner.key;
                     using var disposable = key as IDisposable;
-                    _key = _keySerDes.Deserialize(null, key);
+                    _key = _keySerDes.Deserialize((Java.Lang.String)null, key);
                     _keyStored = true;
                 }
                 return _key;
             }
         }
         /// <summary>
-        /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/KeyValue.html#value"/>
+        /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/KeyValue.html#value"/>
         /// </summary>
         public V Value
         {
@@ -131,9 +136,9 @@ namespace MASES.KNet.Streams
                 if (!_valueStored)
                 {
                     _valueSerDes ??= _factory?.BuildValueSerDes<V, TJVMV>() ?? throw new InvalidOperationException("Value serializer/deserializer is not available.");
-                    var value = _inner.Value;
+                    var value = _inner.value;
                     using var disposable = value as IDisposable;
-                    _value = _valueSerDes.Deserialize(null, value);
+                    _value = _valueSerDes.Deserialize((Java.Lang.String)null, value);
                     _valueStored = true;
                 }
                 return _value;

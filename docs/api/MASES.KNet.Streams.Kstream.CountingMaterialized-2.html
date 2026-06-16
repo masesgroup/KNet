@@ -89,7 +89,7 @@
 
 
   <h1 id="MASES_KNet_Streams_Kstream_CountingMaterialized_2" data-uid="MASES.KNet.Streams.Kstream.CountingMaterialized`2" class="text-break">
-Class CountingMaterialized&lt;K, TJVMK&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Materialized.cs/#L30"><i class="bi bi-code-slash"></i></a>
+Class CountingMaterialized&lt;K, TJVMK&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Materialized.cs/#L32"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -102,7 +102,7 @@ Class CountingMaterialized&lt;K, TJVMK&gt;  <a class="header-action link-seconda
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class CountingMaterialized&lt;K, TJVMK&gt; : Materialized&lt;K, long, TJVMK, Long, CountingMaterialized&lt;K, TJVMK&gt;&gt;, IGenericSerDesFactoryApplier, IKNetMaterialized&lt;TJVMK, Long&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class CountingMaterialized&lt;K, TJVMK&gt; : Materialized&lt;K, long, TJVMK, Long, CountingMaterialized&lt;K, TJVMK&gt;&gt;, IGenericSerDesFactoryApplier, IKNetMaterialized&lt;TJVMK, Long&gt;, IDisposable</code></pre>
   </div>
 
 
@@ -130,6 +130,7 @@ Class CountingMaterialized&lt;K, TJVMK&gt;  <a class="header-action link-seconda
     <dd>
       <div><a class="xref" href="MASES.KNet.Serialization.IGenericSerDesFactoryApplier.html">IGenericSerDesFactoryApplier</a></div>
       <div><a class="xref" href="MASES.KNet.Streams.Kstream.IKNetMaterialized-2.html">IKNetMaterialized</a>&lt;TJVMK, <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Long.html">Long</a>&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
     </dd>
   </dl>
 
@@ -137,6 +138,9 @@ Class CountingMaterialized&lt;K, TJVMK&gt;  <a class="header-action link-seconda
   <dl class="typelist inheritedMembers">
     <dt>Inherited Members</dt>
     <dd>
+    <div>
+      <a class="xref" href="MASES.KNet.Streams.Kstream.Materialized-5.html#MASES_KNet_Streams_Kstream_Materialized_5_Dispose">Materialized&lt;K, long, TJVMK, Long, CountingMaterialized&lt;K, TJVMK&gt;&gt;.Dispose()</a>
+    </div>
     <div>
       <a class="xref" href="MASES.KNet.Streams.Kstream.Materialized-5.html#MASES_KNet_Streams_Kstream_Materialized_5_As_System_String_">Materialized&lt;K, long, TJVMK, Long, CountingMaterialized&lt;K, TJVMK&gt;&gt;.As(string)</a>
     </div>
@@ -173,24 +177,6 @@ Class CountingMaterialized&lt;K, TJVMK&gt;  <a class="header-action link-seconda
     <div>
       <a class="xref" href="MASES.KNet.Streams.Kstream.Materialized-5.html#MASES_KNet_Streams_Kstream_Materialized_5_WithStoreType_Org_Apache_Kafka_Streams_Kstream_Materialized_StoreType_">Materialized&lt;K, long, TJVMK, Long, CountingMaterialized&lt;K, TJVMK&gt;&gt;.WithStoreType(Materialized.StoreType)</a>
     </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
-    </div>
   </dd></dl>
 
 
@@ -206,10 +192,10 @@ Class CountingMaterialized&lt;K, TJVMK&gt;  <a class="header-action link-seconda
 
   <h3 id="MASES_KNet_Streams_Kstream_CountingMaterialized_2_With_MASES_KNet_Serialization_ISerDes__0__1__" data-uid="MASES.KNet.Streams.Kstream.CountingMaterialized`2.With(MASES.KNet.Serialization.ISerDes{`0,`1})">
   With(ISerDes&lt;K, TJVMK&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Materialized.cs/#L37"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Materialized.cs/#L39"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/Materialized.html#with(org.apache.kafka.common.serialization.Serde,org.apache.kafka.common.serialization.Serde)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/Materialized.html#with(org.apache.kafka.common.serialization.Serde,org.apache.kafka.common.serialization.Serde)</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/Materialized.html#with(org.apache.kafka.common.serialization.Serde,org.apache.kafka.common.serialization.Serde)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/Materialized.html#with(org.apache.kafka.common.serialization.Serde,org.apache.kafka.common.serialization.Serde)</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -245,10 +231,10 @@ Class CountingMaterialized&lt;K, TJVMK&gt;  <a class="header-action link-seconda
 
   <h3 id="MASES_KNet_Streams_Kstream_CountingMaterialized_2_WithValueSerde_MASES_KNet_Serialization_ISerDes_System_Int64_Java_Lang_Long__" data-uid="MASES.KNet.Streams.Kstream.CountingMaterialized`2.WithValueSerde(MASES.KNet.Serialization.ISerDes{System.Int64,Java.Lang.Long})">
   WithValueSerde(ISerDes&lt;long, Long&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Materialized.cs/#L53"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Materialized.cs/#L55"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/Materialized.html#withValueSerde(org.apache.kafka.common.serialization.Serde)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/Materialized.html#withValueSerde(org.apache.kafka.common.serialization.Serde)</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/Materialized.html#withValueSerde(org.apache.kafka.common.serialization.Serde)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/Materialized.html#withValueSerde(org.apache.kafka.common.serialization.Serde)</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -284,7 +270,7 @@ Class CountingMaterialized&lt;K, TJVMK&gt;  <a class="header-action link-seconda
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Materialized.cs/#L30" class="edit-link">Edit this page</a>
+          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Materialized.cs/#L32" class="edit-link">Edit this page</a>
         </div>
 
 

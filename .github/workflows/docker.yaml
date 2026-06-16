@@ -34,7 +34,7 @@ jobs:
             10.x
 
       - name: Pre compile
-        run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" /p:NoWarn="0108%3B1030%3B0618" src/net/KNet/KNet.csproj
+        run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" /p:NoWarn="0108%3B1030%3B0618%3B0612" src/net/KNet/KNet.csproj
         env:
           GITHUB_SIMPLIFIED_GENERATION: true
           

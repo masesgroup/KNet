@@ -258,27 +258,6 @@ Class KNetSourceConnector&lt;TSourceConnector, TTask&gt;  <a class="header-actio
     <div>
       <a class="xref" href="MASES.KNet.Connect.KNetCommon.html#MASES_KNet_Connect_KNetCommon_LogError_System_String_System_Object___">KNetCommon.LogError(string, params object[])</a>
     </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
-    </div>
   </dd></dl>
 
 
@@ -458,7 +437,7 @@ Class KNetSourceConnector&lt;TSourceConnector, TTask&gt;  <a class="header-actio
 
   <h3 id="MASES_KNet_Connect_KNetSourceConnector_2_AlterOffsets_Java_Util_Map_Java_Lang_String_Java_Lang_String__Java_Util_Map_Java_Util_Map_Java_Lang_String_System_Object__Java_Util_Map_Java_Lang_String_System_Object___" data-uid="MASES.KNet.Connect.KNetSourceConnector`2.AlterOffsets(Java.Util.Map{Java.Lang.String,Java.Lang.String},Java.Util.Map{Java.Util.Map{Java.Lang.String,System.Object},Java.Util.Map{Java.Lang.String,System.Object}})">
   AlterOffsets(Map&lt;String, String&gt;, Map&lt;Map&lt;String, object&gt;, Map&lt;String, object&gt;&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetSourceConnector.cs/#L122"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Connect/KNetSourceConnector.cs/#L129"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Invoked when users request to manually alter/reset the offsets for this connector via the Connect worker's REST API. Connectors that manage offsets externally can propagate offset changes to their external system in this method.
@@ -500,7 +479,8 @@ An empty offsets <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util
   <h4 class="section" id="MASES_KNet_Connect_KNetSourceConnector_2_AlterOffsets_Java_Util_Map_Java_Lang_String_Java_Lang_String__Java_Util_Map_Java_Util_Map_Java_Lang_String_System_Object__Java_Util_Map_Java_Lang_String_System_Object____remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>User requests to alter/reset offsets will be handled by the Connect runtime and will be reflected in the offsets returned by any OffsetStorageReader instances provided to this connector and its tasks.
 Note that altering/resetting offsets is expected to be an idempotent operation and this method should be able to handle being called more than once with the same arguments (which could occur if a user retries the request due to a failure in writing the new offsets to the offsets store, for example).
-Similar to validate, this method may be called by the runtime before the <a class="xref" href="MASES.KNet.Connect.KNetConnector.html#MASES_KNet_Connect_KNetConnector_Start_MASES_KNet_IKNetConfigurationFromMap_">Start(IKNetConfigurationFromMap)</a>&gt; method is invoked.</p>
+Similar to validate, this method may be called by the runtime before the <a class="xref" href="MASES.KNet.Connect.KNetConnector.html#MASES_KNet_Connect_KNetConnector_Start_MASES_KNet_IKNetConfigurationFromMap_">Start(IKNetConfigurationFromMap)</a>&gt; method is invoked.
+Do not store neither <code class="paramref">connectorConfig</code> nor <code class="paramref">offsets</code> for further reuse since their will be disposed when <a class="xref" href="MASES.KNet.Connect.KNetSourceConnector-2.html#MASES_KNet_Connect_KNetSourceConnector_2_AlterOffsets_Java_Util_Map_Java_Lang_String_Java_Lang_String__Java_Util_Map_Java_Util_Map_Java_Lang_String_System_Object__Java_Util_Map_Java_Lang_String_System_Object___">AlterOffsets(Map&lt;String, String&gt;, Map&lt;Map&lt;String, object&gt;, Map&lt;String, object&gt;&gt;)</a> returns.</p>
 </div>
 
 

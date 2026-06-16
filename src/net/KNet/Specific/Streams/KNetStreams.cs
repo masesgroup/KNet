@@ -17,6 +17,8 @@
 */
 
 using Java.Time;
+using Java.Util;
+using MASES.JCOBridge.C2JBridge;
 using MASES.KNet.Serialization;
 using MASES.KNet.Streams.Processor;
 using MASES.KNet.Streams.State;
@@ -30,9 +32,9 @@ namespace MASES.KNet.Streams
     /// </summary>
     public class KNetStreams : IKNetInnerReference<Org.Apache.Kafka.Streams.KafkaStreams>, IGenericSerDesFactoryApplier, IDisposable
     {
-        readonly Java.Util.Properties _properties;
-        readonly Org.Apache.Kafka.Streams.KafkaStreams _inner;
-        readonly KNetClientSupplier _supplier = null; // used to avoid GC recall
+        Java.Util.Properties _properties;
+        Org.Apache.Kafka.Streams.KafkaStreams _inner;
+        KNetClientSupplier _supplier = null; // used to avoid GC recall
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set => _factory = value; }
 
@@ -51,7 +53,7 @@ namespace MASES.KNet.Streams
         public KNetStreams(Topology arg0, StreamsConfigBuilder arg1, Org.Apache.Kafka.Common.Utils.Time arg2)
         {
             _properties = PrepareProperties(arg1);
-            _inner = new Org.Apache.Kafka.Streams.KafkaStreams(arg0, _properties, arg2);
+            _inner = Org.Apache.Kafka.Streams.KafkaStreams.CreatePoolableInstance(arg0, _properties, arg2);
             _factory = arg1;
         }
         /// <summary>
@@ -64,7 +66,7 @@ namespace MASES.KNet.Streams
         public KNetStreams(Topology arg0, StreamsConfigBuilder arg1, KNetClientSupplier arg2, Org.Apache.Kafka.Common.Utils.Time arg3)
         {
             _properties = PrepareProperties(arg1);
-            _inner = new Org.Apache.Kafka.Streams.KafkaStreams(arg0, _properties, arg2, arg3);
+            _inner = Org.Apache.Kafka.Streams.KafkaStreams.CreatePoolableInstance(arg0, _properties, arg2, arg3);
             _factory = arg1;
             _supplier = arg2;
         }
@@ -77,7 +79,7 @@ namespace MASES.KNet.Streams
         public KNetStreams(Topology arg0, StreamsConfigBuilder arg1, KNetClientSupplier arg2)
         {
             _properties = PrepareProperties(arg1);
-            _inner = new Org.Apache.Kafka.Streams.KafkaStreams(arg0, _properties, arg2);
+            _inner = Org.Apache.Kafka.Streams.KafkaStreams.CreatePoolableInstance(arg0, _properties, arg2);
             _factory = arg1;
             _supplier = arg2;
         }
@@ -89,7 +91,7 @@ namespace MASES.KNet.Streams
         public KNetStreams(Topology arg0, StreamsConfigBuilder arg1)
         {
             _properties = PrepareProperties(arg1);
-            _inner = new Org.Apache.Kafka.Streams.KafkaStreams(arg0, _properties);
+            _inner = Org.Apache.Kafka.Streams.KafkaStreams.CreatePoolableInstance(arg0, _properties);
             _factory = arg1;
         }
         #endregion
@@ -126,7 +128,10 @@ namespace MASES.KNet.Streams
             if (disposing)
             {
                 _properties?.Dispose();
+                _properties = null;
                 _inner?.Dispose();
+                _inner = null;
+                _supplier = null;
             }
         }
 
@@ -155,7 +160,7 @@ namespace MASES.KNet.Streams
         public Org.Apache.Kafka.Streams.KeyQueryMetadata QueryMetadataForKey<K, TJVMK>(string arg0, K arg1, ISerializer<K, TJVMK> arg2)
         {
             using Java.Lang.String jArg0 = arg0;
-            var tJVMK = arg2.Serialize(null, arg1);
+            var tJVMK = arg2.Serialize((Java.Lang.String)null, arg1);
             using var disposable = tJVMK as IDisposable;
             return _inner.QueryMetadataForKey<TJVMK>(jArg0, tJVMK, arg2.KafkaSerializer);
         }
@@ -171,7 +176,7 @@ namespace MASES.KNet.Streams
             if (arg2 is IGenericSerDesFactoryApplier applier) applier.Factory = _factory;
             var keySerDes = _factory?.BuildKeySerDes<K, TJVMK>();
             using Java.Lang.String jArg0 = arg0;
-            var tJVMK = keySerDes.Serialize(null, arg1);
+            var tJVMK = keySerDes.Serialize((Java.Lang.String)null, arg1);
             using var disposable = tJVMK as IDisposable;
             return _inner.IExecute<Org.Apache.Kafka.Streams.KeyQueryMetadata>("queryMetadataForKey", jArg0, tJVMK, arg2);
         }
@@ -191,9 +196,9 @@ namespace MASES.KNet.Streams
             where TKNetManagedStore : ManagedStore<TStore>, IGenericSerDesFactoryApplier, new()
         {
             TKNetManagedStore store = new();
-            var substore = _inner.Store<TStore>(arg0);
             if (store is IManagedStore<TStore> knetManagedStore)
             {
+                var substore = _inner.Store<TStore>(arg0);
                 knetManagedStore.SetData(_factory, substore);
             }
             return store;
@@ -204,11 +209,11 @@ namespace MASES.KNet.Streams
             where TKNetManagedStore : ManagedStore<TStore>, IGenericSerDesFactoryApplier, new()
         {
             using Java.Lang.String jStorageId = storageId;
-            var sqp = Org.Apache.Kafka.Streams.StoreQueryParameters<TStore>.FromNameAndType(jStorageId, storeType.Store);
+            using var sqp = Org.Apache.Kafka.Streams.StoreQueryParameters<TStore>.FromNameAndType(jStorageId, storeType.Store);
             TKNetManagedStore store = new();
-            var substore = _inner.Store<TStore>(sqp);
             if (store is IManagedStore<TStore> knetManagedStore)
             {
+                var substore = _inner.Store<TStore>(sqp);
                 knetManagedStore.SetData(_factory, substore);
             }
             return store;

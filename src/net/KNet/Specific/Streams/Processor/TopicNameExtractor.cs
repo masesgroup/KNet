@@ -58,18 +58,18 @@ namespace MASES.KNet.Streams.Processor
             }
         }
         /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/processor/TopicNameExtractor.html#extract(java.lang.Object,java.lang.Object,org.apache.kafka.streams.processor.RecordContext)"/>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/TopicNameExtractor.html#extract(java.lang.Object,java.lang.Object,org.apache.kafka.streams.processor.RecordContext)"/>
         /// </summary>
         /// <remarks>If <see cref="OnExtract"/> has a value it takes precedence over corresponding <see cref="Extract()"/> class method</remarks>
         public new System.Func<TopicNameExtractor<K, V, TJVMK, TJVMV>, string> OnExtract { get; set; } = null;
         /// <summary>
         /// The <typeparamref name="K"/> content
         /// </summary>
-        public virtual K Key { get { if (!_keySet) { _kSerializer ??= Factory?.BuildKeySerDes<K, TJVMK>(); _key = _kSerializer.Deserialize(null, _arg0); _keySet = true; } return _key; } }
+        public virtual K Key { get { if (!_keySet) { _kSerializer ??= Factory?.BuildKeySerDes<K, TJVMK>(); _key = _kSerializer.Deserialize((Java.Lang.String)null, _arg0); _keySet = true; } return _key; } }
         /// <summary>
         /// The <typeparamref name="V"/> content
         /// </summary>
-        public virtual V Value { get { if (!_valueSet) { _vSerializer ??= Factory?.BuildValueSerDes<V, TJVMV>(); _value = _vSerializer.Deserialize(null, _arg1); _valueSet = true; } return _value; } }
+        public virtual V Value { get { if (!_valueSet) { _vSerializer ??= Factory?.BuildValueSerDes<V, TJVMV>(); _value = _vSerializer.Deserialize((Java.Lang.String)null, _arg1); _valueSet = true; } return _value; } }
         /// <summary>
         /// Current <see cref="Org.Apache.Kafka.Streams.Processor.RecordContext"/> metadata of the record
         /// </summary>
@@ -89,7 +89,7 @@ namespace MASES.KNet.Streams.Processor
             return (OnExtract != null) ? OnExtract(this) : Extract();
         }
         /// <summary>
-        /// KNet override of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/processor/TopicNameExtractor.html#extract(java.lang.Object,java.lang.Object,org.apache.kafka.streams.processor.RecordContext)"/>
+        /// KNet override of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/TopicNameExtractor.html#extract(java.lang.Object,java.lang.Object,org.apache.kafka.streams.processor.RecordContext)"/>
         /// </summary>
         /// <returns><see cref="string"/></returns>
         public virtual string Extract()

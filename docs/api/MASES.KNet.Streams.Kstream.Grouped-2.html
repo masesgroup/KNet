@@ -89,7 +89,7 @@
 
 
   <h1 id="MASES_KNet_Streams_Kstream_Grouped_2" data-uid="MASES.KNet.Streams.Kstream.Grouped`2" class="text-break">
-Class Grouped&lt;K, V&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Grouped.cs/#L134"><i class="bi bi-code-slash"></i></a>
+Class Grouped&lt;K, V&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Grouped.cs/#L178"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -102,7 +102,7 @@ Class Grouped&lt;K, V&gt;  <a class="header-action link-secondary" title="View s
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class Grouped&lt;K, V&gt; : Grouped&lt;K, V, byte[], byte[]&gt;, IGenericSerDesFactoryApplier</code></pre>
+    <pre><code class="lang-csharp hljs">public class Grouped&lt;K, V&gt; : Grouped&lt;K, V, byte[], byte[]&gt;, IKNetInnerReference&lt;Grouped&lt;byte[], byte[]&gt;&gt;, IGenericSerDesFactoryApplier, IDisposable</code></pre>
   </div>
 
 
@@ -129,7 +129,9 @@ Class Grouped&lt;K, V&gt;  <a class="header-action link-secondary" title="View s
   <dl class="typelist implements">
     <dt>Implements</dt>
     <dd>
+      <div><a class="xref" href="MASES.KNet.IKNetInnerReference-1.html">IKNetInnerReference</a>&lt;<a class="xref" href="Org.Apache.Kafka.Streams.Kstream.Grouped-2.html">Grouped</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[], <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;&gt;</div>
       <div><a class="xref" href="MASES.KNet.Serialization.IGenericSerDesFactoryApplier.html">IGenericSerDesFactoryApplier</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
     </dd>
   </dl>
 
@@ -137,6 +139,18 @@ Class Grouped&lt;K, V&gt;  <a class="header-action link-secondary" title="View s
   <dl class="typelist inheritedMembers">
     <dt>Inherited Members</dt>
     <dd>
+    <div>
+      <a class="xref" href="MASES.KNet.Streams.Kstream.Grouped-4.html#MASES_KNet_Streams_Kstream_Grouped_4_InnerReference">Grouped&lt;K, V, byte[], byte[]&gt;.InnerReference</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Streams.Kstream.Grouped-4.html#MASES_KNet_Streams_Kstream_Grouped_4_CheckDisposed">Grouped&lt;K, V, byte[], byte[]&gt;.CheckDisposed()</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Streams.Kstream.Grouped-4.html#MASES_KNet_Streams_Kstream_Grouped_4_Dispose">Grouped&lt;K, V, byte[], byte[]&gt;.Dispose()</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Streams.Kstream.Grouped-4.html#MASES_KNet_Streams_Kstream_Grouped_4_Dispose_System_Boolean_">Grouped&lt;K, V, byte[], byte[]&gt;.Dispose(bool)</a>
+    </div>
     <div>
       <a class="xref" href="MASES.KNet.Streams.Kstream.Grouped-4.html#MASES_KNet_Streams_Kstream_Grouped_4_As_System_String_">Grouped&lt;K, V, byte[], byte[]&gt;.As(string)</a>
     </div>
@@ -158,27 +172,6 @@ Class Grouped&lt;K, V&gt;  <a class="header-action link-secondary" title="View s
     <div>
       <a class="xref" href="MASES.KNet.Streams.Kstream.Grouped-4.html#MASES_KNet_Streams_Kstream_Grouped_4_WithValueSerde_MASES_KNet_Serialization_ISerDes__1__3__">Grouped&lt;K, V, byte[], byte[]&gt;.WithValueSerde(ISerDes&lt;V, byte[]&gt;)</a>
     </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
-    </div>
   </dd></dl>
 
 
@@ -190,7 +183,7 @@ Class Grouped&lt;K, V&gt;  <a class="header-action link-secondary" title="View s
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Grouped.cs/#L134" class="edit-link">Edit this page</a>
+          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Kstream/Grouped.cs/#L178" class="edit-link">Edit this page</a>
         </div>
 
 

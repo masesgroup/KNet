@@ -33,7 +33,7 @@ namespace MASES.KNet.Consumer
     {
         IDeserializer<K, TJVMK> _keyDeserializer;
         IDeserializer<V, TJVMV> _valueDeserializer;
-        readonly Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<TJVMK, TJVMV> _record;
+        Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<TJVMK, TJVMV> _record;
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set => _factory = value; }
         /// <summary>
@@ -95,6 +95,19 @@ namespace MASES.KNet.Consumer
             if (disposing)
             {
                 _record?.Dispose();
+                _record = null;
+                _headers = null;
+                _topic = null;
+                _partition = null;
+                _offset = null;
+                _timestamp = null;
+                _timestampType = null;
+                _serializedKeySize = null;
+                _serializedValueSize = null;
+                _localKeyDes = false;
+                _localKey = default;
+                _localValueDes = false;
+                _localValue = default;
             }
         }
 
@@ -211,11 +224,12 @@ namespace MASES.KNet.Consumer
                 if (!_localKeyDes)
                 {
                     _keyDeserializer ??= _factory?.BuildKeySerDes<K, TJVMK>();
+                    using var topic = _record.Topic();
                     using var headers = _record.Headers();
                     var key = _record.Key();
                     using var disposable = key as IDisposable;
-                    _localKey = _keyDeserializer.UseHeaders ? _keyDeserializer.DeserializeWithHeaders(Topic, headers, key)
-                                                            : _keyDeserializer.Deserialize(Topic, key);
+                    _localKey = _keyDeserializer.UseHeaders ? _keyDeserializer.DeserializeWithHeaders(topic, headers, key)
+                                                            : _keyDeserializer.Deserialize(topic, key);
                     _localKeyDes = true;
                 }
                 return _localKey;
@@ -233,11 +247,12 @@ namespace MASES.KNet.Consumer
                 if (!_localValueDes)
                 {
                     _valueDeserializer ??= _factory?.BuildValueSerDes<V, TJVMV>();
+                    using var topic = _record.Topic();
                     using var headers = _record.Headers();
                     var value = _record.Value();
                     using var disposable = value as IDisposable;
-                    _localValue = _valueDeserializer.UseHeaders ? _valueDeserializer.DeserializeWithHeaders(Topic, headers, value)
-                                                                : _valueDeserializer.Deserialize(Topic, value);
+                    _localValue = _valueDeserializer.UseHeaders ? _valueDeserializer.DeserializeWithHeaders(topic, headers, value)
+                                                                : _valueDeserializer.Deserialize(topic, value);
                     _localValueDes = true;
                 }
                 return _localValue;

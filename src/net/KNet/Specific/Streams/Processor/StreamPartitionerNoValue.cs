@@ -39,7 +39,7 @@ namespace MASES.KNet.Streams.Processor
         ISerDes<K, TJVMK> _kSerializer = null;
 
         /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/processor/StreamPartitioner.html#partitions(java.lang.String,java.lang.Object,java.lang.Object,int)"/>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/StreamPartitioner.html#partitions(java.lang.String,java.lang.Object,java.lang.Object,int)"/>
         /// </summary>
         /// <remarks>If <see cref="StreamPartitionerNoValue{K, TJVMK}.OnPartitions"/> has a value it takes precedence over corresponding class method</remarks>
         public new System.Func<string, K, int, System.Collections.Generic.ICollection<int?>> OnPartitions { get; set; } = null;
@@ -47,7 +47,7 @@ namespace MASES.KNet.Streams.Processor
         /// <inheritdoc/>
         public override string Topic => _arg0;
         /// <inheritdoc/>
-        public override K Key { get { if (!_keySet) { _kSerializer ??= Factory?.BuildKeySerDes<K, TJVMK>(); _key = _kSerializer.Deserialize(null, _arg1); _keySet = true; } return _key; } }
+        public override K Key { get { if (!_keySet) { _kSerializer ??= Factory?.BuildKeySerDes<K, TJVMK>(); _key = _kSerializer.Deserialize((Java.Lang.String)null, _arg1); _keySet = true; } return _key; } }
         /// <inheritdoc/>
         public override string Value { get { throw new InvalidOperationException("Value type is Java.Lang.Void"); } }
         /// <inheritdoc/>
@@ -69,7 +69,7 @@ namespace MASES.KNet.Streams.Processor
             var res = methodToExecute(arg0, _kSerializer.Deserialize(arg0, arg1), arg3);
             if (res == null || res.Count == 0) return Optional<Set<Integer>>.Empty();
             using var scope = new JCOBridgeDisposeFastScope();
-            using HashSet<Integer> result = new HashSet<Integer>();
+            using HashSet<Integer> result = HashSet<Integer>.CreatePoolableInstance();
             foreach (var item in res)
             {
                 if (item.HasValue)
@@ -87,7 +87,7 @@ namespace MASES.KNet.Streams.Processor
             return Optional<Set<Integer>>.Of(result);
         }
         /// <summary>
-        /// KNet override of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/processor/StreamPartitioner.html#partitions(java.lang.String,java.lang.Object,java.lang.Object,int)"/>
+        /// KNet override of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/StreamPartitioner.html#partitions(java.lang.String,java.lang.Object,java.lang.Object,int)"/>
         /// </summary>
         /// <param name="arg0">The topic name this record is sent to</param>
         /// <param name="arg1">The key of the record</param>

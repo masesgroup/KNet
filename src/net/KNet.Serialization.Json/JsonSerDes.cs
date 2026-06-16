@@ -119,11 +119,16 @@ namespace MASES.KNet.Serialization.Json
                 {
                     return SerializeWithHeaders(topic, null, data);
                 }
+                /// <inheritdoc cref="SerDes{TData, TJVMT}.Serialize(Java.Lang.String, TData)"/>
+                public override byte[] Serialize(Java.Lang.String topic, TData data)
+                {
+                    return SerializeWithHeaders(topic, null, data);
+                }
                 /// <inheritdoc cref="SerDes{TData, TJVMT}.SerializeWithHeaders(string, Headers, TData)"/>
                 public override byte[] SerializeWithHeaders(string topic, Headers headers, TData data)
                 {
-                    headers?.Add(KNetSerialization.KeyTypeIdentifierJVM, keyTypeName);
-                    headers?.Add(KNetSerialization.KeySerializerIdentifierJVM, keySerDesName);
+                    headers?.AddVoid(KNetSerialization.KeyTypeIdentifierJVM, keyTypeName);
+                    headers?.AddVoid(KNetSerialization.KeySerializerIdentifierJVM, keySerDesName);
 
                     if (_defaultSerDes != null) return _defaultSerDes.SerializeWithHeaders(topic, headers, data);
                     if (data == null) return null;
@@ -135,13 +140,47 @@ namespace MASES.KNet.Serialization.Json
                     return Encoding.UTF8.GetBytes(jsonStr);
 #endif
                 }
+                /// <inheritdoc cref="SerDes{TData, TJVMT}.SerializeWithHeaders(Java.Lang.String, Headers, TData)"/>
+                public override byte[] SerializeWithHeaders(Java.Lang.String topic, Headers headers, TData data)
+                {
+                    headers?.AddVoid(KNetSerialization.KeyTypeIdentifierJVM, keyTypeName);
+                    headers?.AddVoid(KNetSerialization.KeySerializerIdentifierJVM, keySerDesName);
+
+                    if (_defaultSerDes != null) return _defaultSerDes.SerializeWithHeaders(topic, headers, data);
+                    if (data == null) return null;
+#if NET462_OR_GREATER
+                    var jsonStr = Newtonsoft.Json.JsonConvert.SerializeObject(data, Options);
+                    return Encoding.UTF8.GetBytes(jsonStr);
+#else
+                    var jsonStr = System.Text.Json.JsonSerializer.Serialize<TData>(data, Options);
+                    return Encoding.UTF8.GetBytes(jsonStr);
+#endif
+                }
+
                 /// <inheritdoc cref="SerDes{TData, TJVMT}.Deserialize(string, TJVMT)"/>
                 public override TData Deserialize(string topic, byte[] data)
                 {
                     return DeserializeWithHeaders(topic, null, data);
                 }
+                /// <inheritdoc cref="SerDes{TData, TJVMT}.Deserialize(Java.Lang.String, TJVMT)"/>
+                public override TData Deserialize(Java.Lang.String topic, byte[] data)
+                {
+                    return DeserializeWithHeaders(topic, null, data);
+                }
                 /// <inheritdoc cref="SerDes{TData, TJVMT}.DeserializeWithHeaders(string, Headers, TJVMT)"/>
                 public override TData DeserializeWithHeaders(string topic, Headers headers, byte[] data)
+                {
+                    if (_defaultSerDes != null) return _defaultSerDes.DeserializeWithHeaders(topic, headers, data);
+                    if (data == null || data.Length == 0) return default;
+#if NET462_OR_GREATER
+                    var jsonStr = Encoding.UTF8.GetString(data);
+                    return Newtonsoft.Json.JsonConvert.DeserializeObject<TData>(jsonStr, Options);
+#else
+                    return System.Text.Json.JsonSerializer.Deserialize<TData>(data, Options)!;
+#endif
+                }
+                /// <inheritdoc cref="SerDes{TData, TJVMT}.DeserializeWithHeaders(Java.Lang.String, Headers, TJVMT)"/>
+                public override TData DeserializeWithHeaders(Java.Lang.String topic, Headers headers, byte[] data)
                 {
                     if (_defaultSerDes != null) return _defaultSerDes.DeserializeWithHeaders(topic, headers, data);
                     if (data == null || data.Length == 0) return default;
@@ -209,11 +248,46 @@ namespace MASES.KNet.Serialization.Json
                 {
                     return SerializeWithHeaders(topic, null, data);
                 }
+                /// <inheritdoc cref="SerDes{TData, TJVMT}.Serialize(Java.Lang.String, TData)"/>
+                public override Java.Nio.ByteBuffer Serialize(Java.Lang.String topic, TData data)
+                {
+                    return SerializeWithHeaders(topic, null, data);
+                }
                 /// <inheritdoc cref="SerDes{TData, TJVMT}.SerializeWithHeaders(string, Headers, TData)"/>
                 public override Java.Nio.ByteBuffer SerializeWithHeaders(string topic, Headers headers, TData data)
                 {
-                    headers?.Add(KNetSerialization.KeyTypeIdentifierJVM, keyTypeName);
-                    headers?.Add(KNetSerialization.KeySerializerIdentifierJVM, keySerDesName);
+                    headers?.AddVoid(KNetSerialization.KeyTypeIdentifierJVM, keyTypeName);
+                    headers?.AddVoid(KNetSerialization.KeySerializerIdentifierJVM, keySerDesName);
+
+                    if (_defaultSerDes != null) return _defaultSerDes.SerializeWithHeaders(topic, headers, data);
+                    if (data == null) return null;
+#if NET462_OR_GREATER
+                    if (UseStreamWithByteBuffer)
+                    {
+                        var ms = ByteBuffer.Rent();
+                        using (StreamWriter sw = new StreamWriter(ms, new UTF8Encoding(false), 128, true))
+                        using (Newtonsoft.Json.JsonWriter writer = new Newtonsoft.Json.JsonTextWriter(sw))
+                        {
+                            _serializer.Serialize(writer, data);
+                        }
+                        return ByteBuffer.From(ms);
+                    }
+                    else
+                    {
+                        var jsonStr = Newtonsoft.Json.JsonConvert.SerializeObject(data, Options);
+                        return ByteBuffer.From(Encoding.UTF8.GetBytes(jsonStr));
+                    }
+#else
+                    var ms = ByteBuffer.Rent();
+                    System.Text.Json.JsonSerializer.Serialize<TData>(ms, data, Options);
+                    return ByteBuffer.From(ms);
+#endif
+                }
+                /// <inheritdoc cref="SerDes{TData, TJVMT}.SerializeWithHeaders(Java.Lang.String, Headers, TData)"/>
+                public override Java.Nio.ByteBuffer SerializeWithHeaders(Java.Lang.String topic, Headers headers, TData data)
+                {
+                    headers?.AddVoid(KNetSerialization.KeyTypeIdentifierJVM, keyTypeName);
+                    headers?.AddVoid(KNetSerialization.KeySerializerIdentifierJVM, keySerDesName);
 
                     if (_defaultSerDes != null) return _defaultSerDes.SerializeWithHeaders(topic, headers, data);
                     if (data == null) return null;
@@ -244,8 +318,40 @@ namespace MASES.KNet.Serialization.Json
                 {
                     return DeserializeWithHeaders(topic, null, data);
                 }
+                /// <inheritdoc cref="SerDes{TData, TJVMT}.Deserialize(Java.Lang.String, TJVMT)"/>
+                public override TData Deserialize(Java.Lang.String topic, Java.Nio.ByteBuffer data)
+                {
+                    return DeserializeWithHeaders(topic, null, data);
+                }
                 /// <inheritdoc cref="SerDes{TData, TJVMT}.DeserializeWithHeaders(string, Headers, TJVMT)"/>
                 public override TData DeserializeWithHeaders(string topic, Headers headers, Java.Nio.ByteBuffer data)
+                {
+                    if (_defaultSerDes != null) return _defaultSerDes.DeserializeWithHeaders(topic, headers, data);
+                    if (data == null) return default;
+                    using (data)
+                    {
+#if NET462_OR_GREATER
+                        if (UseStreamWithByteBuffer)
+                        {
+                            using var stream = data.ToStream();
+                            using (StreamReader sw = new StreamReader(stream))
+                            using (Newtonsoft.Json.JsonReader reader = new Newtonsoft.Json.JsonTextReader(sw))
+                            {
+                                return _serializer.Deserialize<TData>(reader);
+                            }
+                        }
+                        else
+                        {
+                            var jsonStr = Encoding.UTF8.GetString((byte[])data);
+                            return Newtonsoft.Json.JsonConvert.DeserializeObject<TData>(jsonStr, Options);
+                        }
+#else
+                        return System.Text.Json.JsonSerializer.Deserialize<TData>(data.AsSpan(), Options)!;
+#endif
+                    }
+                }
+                /// <inheritdoc cref="SerDes{TData, TJVMT}.DeserializeWithHeaders(Java.Lang.String, Headers, TJVMT)"/>
+                public override TData DeserializeWithHeaders(Java.Lang.String topic, Headers headers, Java.Nio.ByteBuffer data)
                 {
                     if (_defaultSerDes != null) return _defaultSerDes.DeserializeWithHeaders(topic, headers, data);
                     if (data == null) return default;
@@ -358,11 +464,32 @@ namespace MASES.KNet.Serialization.Json
                 {
                     return SerializeWithHeaders(topic, null, data);
                 }
+                /// <inheritdoc cref="SerDes{TData, TJVMT}.Serialize(Java.Lang.String, TData)"/>
+                public override byte[] Serialize(Java.Lang.String topic, TData data)
+                {
+                    return SerializeWithHeaders(topic, null, data);
+                }
                 /// <inheritdoc cref="SerDes{TData, TJVMT}.SerializeWithHeaders(string, Headers, TData)"/>
                 public override byte[] SerializeWithHeaders(string topic, Headers headers, TData data)
                 {
-                    headers?.Add(KNetSerialization.ValueSerializerIdentifierJVM, valueSerDesName);
-                    headers?.Add(KNetSerialization.ValueTypeIdentifierJVM, valueTypeName);
+                    headers?.AddVoid(KNetSerialization.ValueSerializerIdentifierJVM, valueSerDesName);
+                    headers?.AddVoid(KNetSerialization.ValueTypeIdentifierJVM, valueTypeName);
+
+                    if (_defaultSerDes != null) return _defaultSerDes.SerializeWithHeaders(topic, headers, data);
+                    if (data == null) return null;
+#if NET462_OR_GREATER
+                    var jsonStr = Newtonsoft.Json.JsonConvert.SerializeObject(data, Options);
+                    return Encoding.UTF8.GetBytes(jsonStr);
+#else
+                    var jsonStr = System.Text.Json.JsonSerializer.Serialize<TData>(data, Options);
+                    return Encoding.UTF8.GetBytes(jsonStr);
+#endif
+                }
+                /// <inheritdoc cref="SerDes{TData, TJVMT}.SerializeWithHeaders(Java.Lang.String, Headers, TData)"/>
+                public override byte[] SerializeWithHeaders(Java.Lang.String topic, Headers headers, TData data)
+                {
+                    headers?.AddVoid(KNetSerialization.ValueSerializerIdentifierJVM, valueSerDesName);
+                    headers?.AddVoid(KNetSerialization.ValueTypeIdentifierJVM, valueTypeName);
 
                     if (_defaultSerDes != null) return _defaultSerDes.SerializeWithHeaders(topic, headers, data);
                     if (data == null) return null;
@@ -379,8 +506,26 @@ namespace MASES.KNet.Serialization.Json
                 {
                     return DeserializeWithHeaders(topic, null, data);
                 }
+                /// <inheritdoc cref="SerDes{TData, TJVMT}.Deserialize(Java.Lang.String, TJVMT)"/>
+                public override TData Deserialize(Java.Lang.String topic, byte[] data)
+                {
+                    return DeserializeWithHeaders(topic, null, data);
+                }
                 /// <inheritdoc cref="SerDes{TData, TJVMT}.DeserializeWithHeaders(string, Headers, TJVMT)"/>
                 public override TData DeserializeWithHeaders(string topic, Headers headers, byte[] data)
+                {
+                    if (_defaultSerDes != null) return _defaultSerDes.DeserializeWithHeaders(topic, headers, data);
+
+                    if (data == null || data.Length == 0) return default;
+#if NET462_OR_GREATER
+                    var jsonStr = Encoding.UTF8.GetString(data);
+                    return Newtonsoft.Json.JsonConvert.DeserializeObject<TData>(jsonStr, Options);
+#else
+                    return System.Text.Json.JsonSerializer.Deserialize<TData>(data, Options)!;
+#endif
+                }
+                /// <inheritdoc cref="SerDes{TData, TJVMT}.DeserializeWithHeaders(Java.Lang.String, Headers, TJVMT)"/>
+                public override TData DeserializeWithHeaders(Java.Lang.String topic, Headers headers, byte[] data)
                 {
                     if (_defaultSerDes != null) return _defaultSerDes.DeserializeWithHeaders(topic, headers, data);
 
@@ -449,11 +594,46 @@ namespace MASES.KNet.Serialization.Json
                 {
                     return SerializeWithHeaders(topic, null, data);
                 }
+                /// <inheritdoc cref="SerDes{TData, TJVMT}.Serialize(Java.Lang.String, TData)"/>
+                public override Java.Nio.ByteBuffer Serialize(Java.Lang.String topic, TData data)
+                {
+                    return SerializeWithHeaders(topic, null, data);
+                }
                 /// <inheritdoc cref="SerDes{TData, TJVMT}.SerializeWithHeaders(string, Headers, TData)"/>
                 public override Java.Nio.ByteBuffer SerializeWithHeaders(string topic, Headers headers, TData data)
                 {
-                    headers?.Add(KNetSerialization.ValueSerializerIdentifierJVM, valueSerDesName);
-                    headers?.Add(KNetSerialization.ValueTypeIdentifierJVM, valueTypeName);
+                    headers?.AddVoid(KNetSerialization.ValueSerializerIdentifierJVM, valueSerDesName);
+                    headers?.AddVoid(KNetSerialization.ValueTypeIdentifierJVM, valueTypeName);
+
+                    if (_defaultSerDes != null) return _defaultSerDes.SerializeWithHeaders(topic, headers, data);
+                    if (data == null) return null;
+#if NET462_OR_GREATER
+                    if (UseByteBufferWithStream)
+                    {
+                        var ms = ByteBuffer.Rent();
+                        using (StreamWriter sw = new StreamWriter(ms, new UTF8Encoding(false), 128, true))
+                        using (Newtonsoft.Json.JsonWriter writer = new Newtonsoft.Json.JsonTextWriter(sw))
+                        {
+                            _serializer.Serialize(writer, data);
+                        }
+                        return ByteBuffer.From(ms);
+                    }
+                    else
+                    {
+                        var jsonStr = Newtonsoft.Json.JsonConvert.SerializeObject(data, Options);
+                        return ByteBuffer.From(Encoding.UTF8.GetBytes(jsonStr));
+                    }
+#else
+                    var ms = ByteBuffer.Rent();
+                    System.Text.Json.JsonSerializer.Serialize<TData>(ms, data, Options);
+                    return ByteBuffer.From(ms);
+#endif
+                }
+                /// <inheritdoc cref="SerDes{TData, TJVMT}.SerializeWithHeaders(Java.Lang.String, Headers, TData)"/>
+                public override Java.Nio.ByteBuffer SerializeWithHeaders(Java.Lang.String topic, Headers headers, TData data)
+                {
+                    headers?.AddVoid(KNetSerialization.ValueSerializerIdentifierJVM, valueSerDesName);
+                    headers?.AddVoid(KNetSerialization.ValueTypeIdentifierJVM, valueTypeName);
 
                     if (_defaultSerDes != null) return _defaultSerDes.SerializeWithHeaders(topic, headers, data);
                     if (data == null) return null;
@@ -484,8 +664,41 @@ namespace MASES.KNet.Serialization.Json
                 {
                     return DeserializeWithHeaders(topic, null, data);
                 }
+                /// <inheritdoc cref="SerDes{TData, TJVMT}.Deserialize(Java.Lang.String, TJVMT)"/>
+                public override TData Deserialize(Java.Lang.String topic, Java.Nio.ByteBuffer data)
+                {
+                    return DeserializeWithHeaders(topic, null, data);
+                }
                 /// <inheritdoc cref="SerDes{TData, TJVMT}.DeserializeWithHeaders(string, Headers, TJVMT)"/>
                 public override TData DeserializeWithHeaders(string topic, Headers headers, Java.Nio.ByteBuffer data)
+                {
+                    if (_defaultSerDes != null) return _defaultSerDes.DeserializeWithHeaders(topic, headers, data);
+
+                    if (data == null) return default;
+                    using (data)
+                    {
+#if NET462_OR_GREATER
+                        if (UseByteBufferWithStream)
+                        {
+                            using var stream = data.ToStream();
+                            using (StreamReader sw = new StreamReader(stream))
+                            using (Newtonsoft.Json.JsonReader reader = new Newtonsoft.Json.JsonTextReader(sw))
+                            {
+                                return _serializer.Deserialize<TData>(reader);
+                            }
+                        }
+                        else
+                        {
+                            var jsonStr = Encoding.UTF8.GetString((byte[])data);
+                            return Newtonsoft.Json.JsonConvert.DeserializeObject<TData>(jsonStr, Options);
+                        }
+#else
+                        return System.Text.Json.JsonSerializer.Deserialize<TData>(data.AsSpan(), Options)!;
+#endif
+                    }
+                }
+                /// <inheritdoc cref="SerDes{TData, TJVMT}.DeserializeWithHeaders(Java.Lang.String, Headers, TJVMT)"/>
+                public override TData DeserializeWithHeaders(Java.Lang.String topic, Headers headers, Java.Nio.ByteBuffer data)
                 {
                     if (_defaultSerDes != null) return _defaultSerDes.DeserializeWithHeaders(topic, headers, data);
 

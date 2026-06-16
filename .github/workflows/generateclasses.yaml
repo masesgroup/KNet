@@ -41,7 +41,7 @@ jobs:
       DOTNET_CreateDumpVerboseDiagnostics: 1
       DOTNET_EnableCrashReport: 1
       JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_6_9 }}
-      JNet_Version: 2.6.9-rc99
+      JNet_Version: 2.6.9
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -89,7 +89,7 @@ jobs:
         run: dotnet build --no-incremental --configuration Release JNet\src\net\JNetReflector\JNetReflector.csproj
 
       - name: Pre compile
-        run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" /p:NoWarn="0108%3B1030%3B0618" src\net\KNet\KNet.csproj
+        run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" /p:NoWarn="0108%3B1030%3B0618%3B0612" src\net\KNet\KNet.csproj
         env:
           GITHUB_SIMPLIFIED_GENERATION: true
           
@@ -169,7 +169,7 @@ jobs:
 
       - name: Try compilation of C#
         continue-on-error: ${{ inputs.ContinueOnLatestJNetReflectorError == true }}
-        run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" /p:NoWarn="0108%3B1030%3B0618" src\net\KNet\KNet.csproj
+        run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" /p:NoWarn="0108%3B1030%3B0618%3B0612" src\net\KNet\KNet.csproj
 
       - name: Extract commit SHA
         if: ${{ inputs.GeneratePR == true }}

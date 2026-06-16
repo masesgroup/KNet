@@ -19,7 +19,6 @@
 using MASES.KNet.Serialization;
 using MASES.KNet.Streams.Kstream;
 using MASES.KNet.Streams.Processor.Api;
-using Org.Apache.Kafka.Streams;
 using System;
 using System.Threading;
 
@@ -32,9 +31,9 @@ namespace MASES.KNet.Streams
     /// <typeparam name="V">The value type</typeparam>
     /// <typeparam name="TJVMK">The JVM type of <typeparamref name="K"/></typeparam>
     /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
-    public sealed class WindowedKeyValue<K, V, TJVMK, TJVMV> : IKNetInnerReference<KeyValueSupport<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, TJVMV>>, IGenericSerDesFactoryApplier, IDisposable
+    public sealed class WindowedKeyValue<K, V, TJVMK, TJVMV> : IKNetInnerReference<Org.Apache.Kafka.Streams.KeyValue<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, TJVMV>>, IGenericSerDesFactoryApplier, IDisposable
     {
-        readonly KeyValueSupport<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, TJVMV> _valueInner;
+        Org.Apache.Kafka.Streams.KeyValue<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, TJVMV> _valueInner;
         Windowed<K, TJVMK> _key = null;
         V _value;
         bool _valueStored;
@@ -43,7 +42,7 @@ namespace MASES.KNet.Streams
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set => _factory = value; }
 
         internal WindowedKeyValue(IGenericSerDesFactory factory,
-                                  KeyValueSupport<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, TJVMV> value,
+                                  Org.Apache.Kafka.Streams.KeyValue<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, TJVMV> value,
                                   ISerDes<V, TJVMV> valueSerDes,
                                   bool fromPrefetched)
         {
@@ -53,13 +52,13 @@ namespace MASES.KNet.Streams
             if (fromPrefetched)
             {
                 _valueSerDes ??= _factory?.BuildValueSerDes<V, TJVMV>();
-                _value = _valueSerDes.Deserialize(null, _valueInner.Value);
+                _value = _valueSerDes.Deserialize((Java.Lang.String)null, _valueInner.value);
                 _valueStored = true;
             }
         }
 
         /// <inheritdoc/>
-        public KeyValueSupport<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, TJVMV> InnerReference => _valueInner;
+        public Org.Apache.Kafka.Streams.KeyValue<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, TJVMV> InnerReference => _valueInner;
 
         volatile int _disposed; // 0 = live, 1 = disposed
         /// <summary>
@@ -88,23 +87,28 @@ namespace MASES.KNet.Streams
             if (disposing)
             {
                 _valueInner?.Dispose();
+                _valueInner = null;
+                _key = null;
+                _value = default;
+                _valueStored = false;
+                _valueSerDes = null;
             }
         }
 
         /// <summary>
-        /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/KeyValue.html#key"/>
+        /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/KeyValue.html#key"/>
         /// </summary>
         public Windowed<K, TJVMK> Key
         {
             get
             {
                 CheckDisposed();
-                _key ??= new Windowed<K, TJVMK>(_factory, _valueInner.Key);
+                _key ??= new Windowed<K, TJVMK>(_factory, _valueInner.key);
                 return _key;
             }
         }
         /// <summary>
-        /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/KeyValue.html#value"/>
+        /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/KeyValue.html#value"/>
         /// </summary>
         public V Value
         {
@@ -114,9 +118,9 @@ namespace MASES.KNet.Streams
                 if (!_valueStored)
                 {
                     _valueSerDes ??= _factory?.BuildValueSerDes<V, TJVMV>();
-                    var kk = _valueInner.Value;
+                    var kk = _valueInner.value;
                     using var disposable = kk as IDisposable;
-                    _value = _valueSerDes.Deserialize(null, kk);
+                    _value = _valueSerDes.Deserialize((Java.Lang.String)null, kk);
                     _valueStored = true;
                 }
                 return _value;

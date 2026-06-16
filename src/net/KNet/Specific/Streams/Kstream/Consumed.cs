@@ -37,7 +37,7 @@ namespace MASES.KNet.Streams.Kstream
         ISerDes<V, TJVMV> _valueSerdes;
 
         TimestampExtractor<K, V, TJVMK, TJVMV> _timestampExtractor = null;
-        readonly Org.Apache.Kafka.Streams.Kstream.Consumed<TJVMK, TJVMV> _inner;
+        Org.Apache.Kafka.Streams.Kstream.Consumed<TJVMK, TJVMV> _inner;
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory
         {
@@ -86,6 +86,7 @@ namespace MASES.KNet.Streams.Kstream
             if (disposing)
             {
                 _inner?.Dispose();
+                _inner = null;
             }
         }
 
@@ -98,7 +99,7 @@ namespace MASES.KNet.Streams.Kstream
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/Consumed.html#as(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/Consumed.html#as(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <returns><see cref="Consumed{K, V, TJVMK, TJVMV}"/></returns>
@@ -109,7 +110,7 @@ namespace MASES.KNet.Streams.Kstream
             return new Consumed<K, V, TJVMK, TJVMV>(cons);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/Consumed.html#with(org.apache.kafka.common.serialization.Serde,org.apache.kafka.common.serialization.Serde,org.apache.kafka.streams.processor.TimestampExtractor,Org.Apache.Kafka.Streams.AutoOffsetReset)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/Consumed.html#with(org.apache.kafka.common.serialization.Serde,org.apache.kafka.common.serialization.Serde,org.apache.kafka.streams.processor.TimestampExtractor,Org.Apache.Kafka.Streams.AutoOffsetReset)"/>
         /// </summary>
         /// <param name="arg0"><see cref="ISerDes{K, TJVMK}"/></param>
         /// <param name="arg1"><see cref="ISerDes{V, TJVMV}"/></param>
@@ -126,7 +127,7 @@ namespace MASES.KNet.Streams.Kstream
             return instance;
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/Consumed.html#with(org.apache.kafka.common.serialization.Serde,org.apache.kafka.common.serialization.Serde)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/Consumed.html#with(org.apache.kafka.common.serialization.Serde,org.apache.kafka.common.serialization.Serde)"/>
         /// </summary>
         /// <param name="arg0"><see cref="ISerDes{K, TJVMK}"/></param>
         /// <param name="arg1"><see cref="ISerDes{V, TJVMV}"/></param>
@@ -140,7 +141,7 @@ namespace MASES.KNet.Streams.Kstream
             return instance;
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/Consumed.html#with(org.apache.kafka.streams.processor.TimestampExtractor)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/Consumed.html#with(org.apache.kafka.streams.processor.TimestampExtractor)"/>
         /// </summary>
         /// <param name="arg0"><see cref="TimestampExtractor{K, V, TJVMK, TJVMV}"/></param>
         /// <returns><see cref="Consumed{K, V, TJVMK, TJVMV}"/></returns>
@@ -152,7 +153,7 @@ namespace MASES.KNet.Streams.Kstream
             return instance;
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/Consumed.html#with(Org.Apache.Kafka.Streams.AutoOffsetReset)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/Consumed.html#with(Org.Apache.Kafka.Streams.AutoOffsetReset)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.AutoOffsetReset"/></param>
         /// <returns><see cref="Consumed{K, V, TJVMK, TJVMV}"/></returns>
@@ -166,7 +167,7 @@ namespace MASES.KNet.Streams.Kstream
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/Consumed.html#withKeySerde(org.apache.kafka.common.serialization.Serde)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/Consumed.html#withKeySerde(org.apache.kafka.common.serialization.Serde)"/>
         /// </summary>
         /// <param name="arg0"><see cref="ISerDes{K, TJVMK}"/></param>
         /// <returns><see cref="Consumed{K, V, TJVMK, TJVMV}"/></returns>
@@ -178,7 +179,7 @@ namespace MASES.KNet.Streams.Kstream
             return this;
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/Consumed.html#withOffsetResetPolicy(Org.Apache.Kafka.Streams.AutoOffsetReset)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/Consumed.html#withOffsetResetPolicy(Org.Apache.Kafka.Streams.AutoOffsetReset)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.AutoOffsetReset"/></param>
         /// <returns><see cref="Consumed{K, V, TJVMK, TJVMV}"/></returns>
@@ -189,7 +190,7 @@ namespace MASES.KNet.Streams.Kstream
             return this;
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/Consumed.html#withTimestampExtractor(org.apache.kafka.streams.processor.TimestampExtractor)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/Consumed.html#withTimestampExtractor(org.apache.kafka.streams.processor.TimestampExtractor)"/>
         /// </summary>
         /// <param name="arg0"><see cref="TimestampExtractor{K, V, TJVMK, TJVMV}"/></param>
         /// <returns><see cref="Consumed{K, V, TJVMK, TJVMV}"/></returns>
@@ -202,7 +203,7 @@ namespace MASES.KNet.Streams.Kstream
             return this;
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/Consumed.html#withValueSerde(org.apache.kafka.common.serialization.Serde)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/Consumed.html#withValueSerde(org.apache.kafka.common.serialization.Serde)"/>
         /// </summary>
         /// <param name="arg0"><see cref="ISerDes{V, TJVMV}"/></param>
         /// <returns><see cref="Consumed{K, V, TJVMK, TJVMV}"/></returns>

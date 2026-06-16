@@ -17,6 +17,7 @@
 */
 
 using Java.Util;
+using MASES.JCOBridge.C2JBridge;
 using MASES.KNet.Serialization;
 using System;
 using System.Collections.Generic;
@@ -67,7 +68,7 @@ namespace MASES.KNet.Streams.Kstream
             }
         }
         /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/ValueMapperWithKey.html#apply(java.lang.Object,java.lang.Object)"/>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/ValueMapperWithKey.html#apply(java.lang.Object,java.lang.Object)"/>
         /// </summary>
         /// <remarks>If <see cref="OnApply"/> has a value it takes precedence over corresponding class method</remarks>
         public new System.Func<V, VR> OnApply { get; set; } = null;
@@ -81,8 +82,8 @@ namespace MASES.KNet.Streams.Kstream
             _vrSerializer ??= Factory?.BuildValueSerDes<VR, TJVMVR>();
 
             var methodToExecute = (OnApply != null) ? OnApply : Apply;
-            var res = methodToExecute(_vSerializer.Deserialize(null, arg0));
-            return _vrSerializer.Serialize(null, res);
+            var res = methodToExecute(_vSerializer.Deserialize((Java.Lang.String)null, arg0));
+            return _vrSerializer.Serialize((Java.Lang.String)null, res);
         }
         /// <inheritdoc cref="Org.Apache.Kafka.Streams.Kstream.ValueMapper{V, VR}.Apply(V)"/>
         public virtual VR Apply(V arg0)
@@ -114,7 +115,7 @@ namespace MASES.KNet.Streams.Kstream
         ISerDes<VR, TJVMVR> _vrSerializer = null;
 
         /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/kstream/ValueMapperWithKey.html#apply(java.lang.Object,java.lang.Object)"/>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/ValueMapperWithKey.html#apply(java.lang.Object,java.lang.Object)"/>
         /// </summary>
         /// <remarks>If <see cref="OnApply"/> has a value it takes precedence over corresponding class method</remarks>
         public new System.Func<V, IEnumerable<VR>> OnApply { get; set; } = null;
@@ -125,11 +126,11 @@ namespace MASES.KNet.Streams.Kstream
             _vrSerializer ??= Factory?.BuildValueSerDes<VR, TJVMVR>();
 
             var methodToExecute = (OnApply != null) ? OnApply : Apply;
-            var res = methodToExecute(_vSerializer.Deserialize(null, arg0));
-            var result = new ArrayList<TJVMVR>();
+            var res = methodToExecute(_vSerializer.Deserialize((Java.Lang.String)null, arg0));
+            var result = ArrayList<TJVMVR>.CreatePoolableInstance();
             foreach (var item in res)
             {
-                var localValue = _vrSerializer.Serialize(null, item);
+                var localValue = _vrSerializer.Serialize((Java.Lang.String)null, item);
                 using var localDisposable = localValue as IDisposable;
                 result.Add(localValue);
             }

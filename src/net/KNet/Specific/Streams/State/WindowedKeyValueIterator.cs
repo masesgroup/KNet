@@ -53,7 +53,7 @@ namespace MASES.KNet.Streams.State
                 if (input is IJavaObject obj)
                 {
                     return new WindowedKeyValue<K, V, TJVMK, TJVMV>(_factory,
-                                                                    new KeyValueSupport<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, TJVMV>(obj),
+                                                                    JVMBridgeBase.WrapsDirect<Org.Apache.Kafka.Streams.KeyValue<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, TJVMV>>(obj),
                                                                     valueSerDes, true);
                 }
                 throw new InvalidCastException($"input is not a valid IJavaObject");
@@ -98,7 +98,7 @@ namespace MASES.KNet.Streams.State
                 if (input is IJavaObject obj)
                 {
                     return new WindowedKeyValue<K, V, TJVMK, TJVMV>(_factory,
-                                                                    new KeyValueSupport<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, TJVMV>(obj),
+                                                                    JVMBridgeBase.WrapsDirect<Org.Apache.Kafka.Streams.KeyValue<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, TJVMV>>(obj),
                                                                     _valueSerDes, false);
                 }
                 throw new InvalidCastException($"input is not a valid IJavaObject");
@@ -118,7 +118,7 @@ namespace MASES.KNet.Streams.State
             }
         }
 
-        readonly Org.Apache.Kafka.Streams.State.KeyValueIterator<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, TJVMV> _iterator;
+        Org.Apache.Kafka.Streams.State.KeyValueIterator<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, TJVMV> _iterator;
         ISerDes<V, TJVMV> _valueSerDes = null;
 
         internal WindowedKeyValueIterator(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.State.KeyValueIterator<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, TJVMV> iterator)
@@ -134,6 +134,7 @@ namespace MASES.KNet.Streams.State
         protected override void Dispose(bool disposing)
         {
             _iterator?.Dispose();
+            _iterator = null;
             base.Dispose(disposing);
         }
 
@@ -162,7 +163,8 @@ namespace MASES.KNet.Streams.State
             IGenericSerDesFactory factory = Factory;
             _valueSerDes ??= factory?.BuildValueSerDes<V, TJVMV>();
             var kv = _iterator.Next();
-            return new WindowedKeyValue<K, V, TJVMK, TJVMV>(factory, new KeyValueSupport<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, TJVMV>(kv), _valueSerDes, false);
+            if (kv == null) return null;
+            return new WindowedKeyValue<K, V, TJVMK, TJVMV>(factory, kv, _valueSerDes, false);
         }
         /// <summary>
         /// <see href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Iterator.html#remove()"/>
@@ -172,7 +174,7 @@ namespace MASES.KNet.Streams.State
             _iterator.Remove();
         }
         /// <summary>
-        /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/state/KeyValueIterator.html#peekNextKey()"/>
+        /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/state/KeyValueIterator.html#peekNextKey()"/>
         /// </summary>
         /// <returns><typeparamref name="K"/></returns>
         public Windowed<K, TJVMK> PeekNextKey()
@@ -183,7 +185,7 @@ namespace MASES.KNet.Streams.State
             return new Windowed<K, TJVMK>(Factory, kk);
         }
         /// <summary>
-        /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/state/KeyValueIterator.html#close()"/>
+        /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/state/KeyValueIterator.html#close()"/>
         /// </summary>
         public void Close()
         {

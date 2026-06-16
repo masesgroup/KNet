@@ -78,5 +78,23 @@ namespace MASES.KNet.Connect
         {
             return source.Select((o) => o.CastTo<SinkRecord<TKey, TValue>>());
         }
+        /// <summary>
+        /// Converts an <see cref="IEnumerable{SinkRecord}"/> in <see cref="IEnumerable{T}"/> of <see cref="SinkRecord{Object, TValue}"/>
+        /// </summary>
+        /// <param name="source">The <see cref="IEnumerable{SinkRecord}"/> to convert</param>
+        /// <remarks><paramref name="source"/> cannot be used after <see cref="CastDirectAndDispose{TValue}(IEnumerable{SinkRecord})"/> is invoked</remarks>
+        public static IEnumerable<SinkRecord<object, TValue>> CastDirectAndDispose<TValue>(this IEnumerable<SinkRecord> source)
+        {
+            return source.Select((o) => o.CastDirectAndDispose<SinkRecord<object, TValue>>());
+        }
+        /// <summary>
+        /// Converts an <see cref="IEnumerable{SinkRecord}"/> in <see cref="IEnumerable{T}"/> of <see cref="SinkRecord{TKey, TValue}"/>
+        /// </summary>
+        /// <param name="source">The <see cref="IEnumerable{SinkRecord}"/> to convert</param>
+        /// <remarks><paramref name="source"/> cannot be used after <see cref="CastDirectAndDispose{TKey, TValue}(IEnumerable{SinkRecord})"/> is invoked</remarks>
+        public static IEnumerable<SinkRecord<TKey, TValue>> CastDirectAndDispose<TKey, TValue>(this IEnumerable<SinkRecord> source)
+        {
+            return source.Select((o) => o.CastDirectAndDispose<SinkRecord<TKey, TValue>>());
+        }
     }
 }

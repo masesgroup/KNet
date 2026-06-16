@@ -206,7 +206,7 @@ namespace MASES.KNet.Serialization
 
             if (IsDirectBuffered)
             {
-                kSerde = new Serdes.ByteBufferSerde().CastTo<SerdeDirect<TJVMT>>();
+                kSerde = new Serdes.ByteBufferSerde().CastDirectAndDetach<SerdeDirect<TJVMT>>();
                 JVMSerDesClassName = Class.ClassNameOf<MASES.KNet.Serialization.Serdes.ByteBufferSerde>();
                 JVMSerializerClassName = Class.ClassNameOf<MASES.KNet.Serialization.ByteBufferSerializer>();
                 JVMDeserializerClassName = Class.ClassNameOf<MASES.KNet.Serialization.ByteBufferDeserializer>();
@@ -216,73 +216,73 @@ namespace MASES.KNet.Serialization
                 switch (_JVMSerializationType)
                 {
                     case KNetSerialization.SerializationType.Boolean:
-                        kSerde = new Org.Apache.Kafka.Common.Serialization.Serdes.BooleanSerde().CastTo<SerdeDirect<TJVMT>>();
+                        kSerde = new Org.Apache.Kafka.Common.Serialization.Serdes.BooleanSerde().CastDirectAndDetach<SerdeDirect<TJVMT>>();
                         JVMSerDesClassName = Class.ClassNameOf<Org.Apache.Kafka.Common.Serialization.Serdes.BooleanSerde>();
                         JVMSerializerClassName = Class.ClassNameOf<Org.Apache.Kafka.Common.Serialization.BooleanSerializer>();
                         JVMDeserializerClassName = Class.ClassNameOf<Org.Apache.Kafka.Common.Serialization.BooleanDeserializer>();
                         break;
                     case KNetSerialization.SerializationType.ByteArray:
-                        kSerde = new Org.Apache.Kafka.Common.Serialization.Serdes.ByteArraySerde().CastTo<SerdeDirect<TJVMT>>();
+                        kSerde = new Org.Apache.Kafka.Common.Serialization.Serdes.ByteArraySerde().CastDirectAndDetach<SerdeDirect<TJVMT>>();
                         JVMSerDesClassName = Class.ClassNameOf<Org.Apache.Kafka.Common.Serialization.Serdes.ByteArraySerde>();
                         JVMSerializerClassName = Class.ClassNameOf<Org.Apache.Kafka.Common.Serialization.ByteArraySerializer>();
                         JVMDeserializerClassName = Class.ClassNameOf<Org.Apache.Kafka.Common.Serialization.ByteArrayDeserializer>();
                         break;
                     case KNetSerialization.SerializationType.ByteBuffer:
-                        kSerde = new Org.Apache.Kafka.Common.Serialization.Serdes.ByteBufferSerde().CastTo<SerdeDirect<TJVMT>>();
+                        kSerde = new Org.Apache.Kafka.Common.Serialization.Serdes.ByteBufferSerde().CastDirectAndDetach<SerdeDirect<TJVMT>>();
                         JVMSerDesClassName = Class.ClassNameOf<Org.Apache.Kafka.Common.Serialization.Serdes.ByteBufferSerde>();
                         JVMSerializerClassName = Class.ClassNameOf<Org.Apache.Kafka.Common.Serialization.ByteBufferSerializer>();
                         JVMDeserializerClassName = Class.ClassNameOf<Org.Apache.Kafka.Common.Serialization.ByteBufferDeserializer>();
                         break;
                     case KNetSerialization.SerializationType.Bytes:
-                        kSerde = new Org.Apache.Kafka.Common.Serialization.Serdes.BytesSerde().CastTo<SerdeDirect<TJVMT>>();
+                        kSerde = new Org.Apache.Kafka.Common.Serialization.Serdes.BytesSerde().CastDirectAndDetach<SerdeDirect<TJVMT>>();
                         JVMSerDesClassName = Class.ClassNameOf<Org.Apache.Kafka.Common.Serialization.Serdes.BytesSerde>();
                         JVMSerializerClassName = Class.ClassNameOf<Org.Apache.Kafka.Common.Serialization.BytesSerializer>();
                         JVMDeserializerClassName = Class.ClassNameOf<Org.Apache.Kafka.Common.Serialization.BytesDeserializer>();
                         break;
                     case KNetSerialization.SerializationType.Double:
-                        kSerde = new Org.Apache.Kafka.Common.Serialization.Serdes.DoubleSerde().CastTo<SerdeDirect<TJVMT>>();
+                        kSerde = new Org.Apache.Kafka.Common.Serialization.Serdes.DoubleSerde().CastDirectAndDetach<SerdeDirect<TJVMT>>();
                         JVMSerDesClassName = Class.ClassNameOf<Org.Apache.Kafka.Common.Serialization.Serdes.DoubleSerde>();
                         JVMSerializerClassName = Class.ClassNameOf<Org.Apache.Kafka.Common.Serialization.DoubleSerializer>();
                         JVMDeserializerClassName = Class.ClassNameOf<Org.Apache.Kafka.Common.Serialization.DoubleDeserializer>();
                         break;
                     case KNetSerialization.SerializationType.Float:
-                        kSerde = new Org.Apache.Kafka.Common.Serialization.Serdes.FloatSerde().CastTo<SerdeDirect<TJVMT>>();
+                        kSerde = new Org.Apache.Kafka.Common.Serialization.Serdes.FloatSerde().CastDirectAndDetach<SerdeDirect<TJVMT>>();
                         JVMSerDesClassName = Class.ClassNameOf<Org.Apache.Kafka.Common.Serialization.Serdes.FloatSerde>();
                         JVMSerializerClassName = Class.ClassNameOf<Org.Apache.Kafka.Common.Serialization.FloatSerializer>();
                         JVMDeserializerClassName = Class.ClassNameOf<Org.Apache.Kafka.Common.Serialization.FloatDeserializer>();
                         break;
                     case KNetSerialization.SerializationType.Integer:
-                        kSerde = new Org.Apache.Kafka.Common.Serialization.Serdes.IntegerSerde().CastTo<SerdeDirect<TJVMT>>();
+                        kSerde = new Org.Apache.Kafka.Common.Serialization.Serdes.IntegerSerde().CastDirectAndDetach<SerdeDirect<TJVMT>>();
                         JVMSerDesClassName = Class.ClassNameOf<Org.Apache.Kafka.Common.Serialization.Serdes.IntegerSerde>();
                         JVMSerializerClassName = Class.ClassNameOf<Org.Apache.Kafka.Common.Serialization.IntegerSerializer>();
                         JVMDeserializerClassName = Class.ClassNameOf<Org.Apache.Kafka.Common.Serialization.IntegerDeserializer>();
                         break;
                     case KNetSerialization.SerializationType.Long:
-                        kSerde = new Org.Apache.Kafka.Common.Serialization.Serdes.LongSerde().CastTo<SerdeDirect<TJVMT>>();
+                        kSerde = new Org.Apache.Kafka.Common.Serialization.Serdes.LongSerde().CastDirectAndDetach<SerdeDirect<TJVMT>>();
                         JVMSerDesClassName = Class.ClassNameOf<Org.Apache.Kafka.Common.Serialization.Serdes.LongSerde>();
                         JVMSerializerClassName = Class.ClassNameOf<Org.Apache.Kafka.Common.Serialization.LongSerializer>();
                         JVMDeserializerClassName = Class.ClassNameOf<Org.Apache.Kafka.Common.Serialization.LongDeserializer>();
                         break;
                     case KNetSerialization.SerializationType.Short:
-                        kSerde = new Org.Apache.Kafka.Common.Serialization.Serdes.ShortSerde().CastTo<SerdeDirect<TJVMT>>();
+                        kSerde = new Org.Apache.Kafka.Common.Serialization.Serdes.ShortSerde().CastDirectAndDetach<SerdeDirect<TJVMT>>();
                         JVMSerDesClassName = Class.ClassNameOf<Org.Apache.Kafka.Common.Serialization.Serdes.ShortSerde>();
                         JVMSerializerClassName = Class.ClassNameOf<Org.Apache.Kafka.Common.Serialization.ShortSerializer>();
                         JVMDeserializerClassName = Class.ClassNameOf<Org.Apache.Kafka.Common.Serialization.ShortDeserializer>();
                         break;
                     case KNetSerialization.SerializationType.String:
-                        kSerde = new Org.Apache.Kafka.Common.Serialization.Serdes.StringSerde().CastTo<SerdeDirect<TJVMT>>();
+                        kSerde = new Org.Apache.Kafka.Common.Serialization.Serdes.StringSerde().CastDirectAndDetach<SerdeDirect<TJVMT>>();
                         JVMSerDesClassName = Class.ClassNameOf<Org.Apache.Kafka.Common.Serialization.Serdes.StringSerde>();
                         JVMSerializerClassName = Class.ClassNameOf<Org.Apache.Kafka.Common.Serialization.StringSerializer>();
                         JVMDeserializerClassName = Class.ClassNameOf<Org.Apache.Kafka.Common.Serialization.StringDeserializer>();
                         break;
                     case KNetSerialization.SerializationType.Guid:
-                        kSerde = new Org.Apache.Kafka.Common.Serialization.Serdes.UUIDSerde().CastTo<SerdeDirect<TJVMT>>();
+                        kSerde = new Org.Apache.Kafka.Common.Serialization.Serdes.UUIDSerde().CastDirectAndDetach<SerdeDirect<TJVMT>>();
                         JVMSerDesClassName = Class.ClassNameOf<Org.Apache.Kafka.Common.Serialization.Serdes.UUIDSerde>();
                         JVMSerializerClassName = Class.ClassNameOf<Org.Apache.Kafka.Common.Serialization.UUIDSerializer>();
                         JVMDeserializerClassName = Class.ClassNameOf<Org.Apache.Kafka.Common.Serialization.UUIDDeserializer>();
                         break;
                     case KNetSerialization.SerializationType.Void:
-                        kSerde = new Org.Apache.Kafka.Common.Serialization.Serdes.VoidSerde().CastTo<SerdeDirect<TJVMT>>();
+                        kSerde = new Org.Apache.Kafka.Common.Serialization.Serdes.VoidSerde().CastDirectAndDetach<SerdeDirect<TJVMT>>();
                         JVMSerDesClassName = Class.ClassNameOf<Org.Apache.Kafka.Common.Serialization.Serdes.VoidSerde>();
                         JVMSerializerClassName = Class.ClassNameOf<Org.Apache.Kafka.Common.Serialization.VoidSerializer>();
                         JVMDeserializerClassName = Class.ClassNameOf<Org.Apache.Kafka.Common.Serialization.VoidDeserializer>();
@@ -349,17 +349,33 @@ namespace MASES.KNet.Serialization
         /// </summary>
         public Func<string, T, TJVMT> OnSerialize { get; set; }
         /// <summary>
+        /// External serialization function
+        /// </summary>
+        public Func<Java.Lang.String, T, TJVMT> OnSerialize2 { get; set; }
+        /// <summary>
         /// External serialization function using <see cref="Headers"/>
         /// </summary>
         public Func<string, Headers, T, TJVMT> OnSerializeWithHeaders { get; set; }
+        /// <summary>
+        /// External serialization function using <see cref="Headers"/>
+        /// </summary>
+        public Func<Java.Lang.String, Headers, T, TJVMT> OnSerializeWithHeaders2 { get; set; }
         /// <summary>
         /// External deserialization function
         /// </summary>
         public Func<string, TJVMT, T> OnDeserialize { get; set; }
         /// <summary>
+        /// External deserialization function
+        /// </summary>
+        public Func<Java.Lang.String, TJVMT, T> OnDeserialize2 { get; set; }
+        /// <summary>
         /// External deserialization function using <see cref="Headers"/>
         /// </summary>
         public Func<string, Headers, TJVMT, T> OnDeserializeWithHeaders { get; set; }
+        /// <summary>
+        /// External deserialization function using <see cref="Headers"/>
+        /// </summary>
+        public Func<Java.Lang.String, Headers, TJVMT, T> OnDeserializeWithHeaders2 { get; set; }
         /// <inheritdoc cref="ISerDes{T, TJVMT}.KafkaSerde"/>
         public Serde<TJVMT> KafkaSerde => _KafkaSerde;
         /// <inheritdoc cref="ISerializer{T, TJVMT}.KafkaSerializer"/>
@@ -372,6 +388,17 @@ namespace MASES.KNet.Serialization
             if (OnSerialize != null)
             {
                 return OnSerialize.Invoke(topic, data);
+            }
+            using Java.Lang.String jTopic = topic;
+            return Serialize(jTopic, data);
+        }
+
+        /// <inheritdoc cref="ISerializer{T, TJVMT}.Serialize(Java.Lang.String, T)"/>
+        public virtual TJVMT Serialize(Java.Lang.String topic, T data)
+        {
+            if (OnSerialize2 != null)
+            {
+                return OnSerialize2.Invoke(topic, data);
             }
             var newData = _SerializationType switch
             {
@@ -400,6 +427,7 @@ namespace MASES.KNet.Serialization
             return (IsDirectBuffered && _JVMSerializationType == KNetSerialization.SerializationType.ByteBuffer) ? (TJVMT)(object)(newData == null ? null : Java.Nio.ByteBuffer.From(newData))
                                                                                                                  : (TJVMT)(object)newData;
         }
+
         /// <inheritdoc cref="ISerializer{T, TJVMT}.SerializeWithHeaders(string, Headers, T)"/>
         public virtual TJVMT SerializeWithHeaders(string topic, Headers headers, T data)
         {
@@ -410,12 +438,33 @@ namespace MASES.KNet.Serialization
             return Serialize(topic, data);
         }
 
+        /// <inheritdoc cref="ISerializer{T, TJVMT}.SerializeWithHeaders(Java.Lang.String, Headers, T)"/>
+        public virtual TJVMT SerializeWithHeaders(Java.Lang.String topic, Headers headers, T data)
+        {
+            if (OnSerializeWithHeaders2 != null)
+            {
+                return OnSerializeWithHeaders2.Invoke(topic, headers, data);
+            }
+            return Serialize(topic, data);
+        }
+
         /// <inheritdoc cref="IDeserializer{T, TJVMT}.Deserialize(string, TJVMT)"/>
         public virtual T Deserialize(string topic, TJVMT data)
         {
             if (OnDeserialize != null)
             {
                 return OnDeserialize.Invoke(topic, data);
+            }
+            using Java.Lang.String jTopic = topic;
+            return Deserialize(jTopic, data);
+        }
+
+        /// <inheritdoc cref="IDeserializer{T, TJVMT}.Deserialize(Java.Lang.String, TJVMT)"/>
+        public virtual T Deserialize(Java.Lang.String topic, TJVMT data)
+        {
+            if (OnDeserialize2 != null)
+            {
+                return OnDeserialize2.Invoke(topic, data);
             }
             byte[] newData = data as byte[];
             if (IsDirectBuffered && _JVMSerializationType == KNetSerialization.SerializationType.ByteBuffer && data is Java.Nio.ByteBuffer nioBuffer)
@@ -445,12 +494,24 @@ namespace MASES.KNet.Serialization
                 _ => default,
             };
         }
+
         /// <inheritdoc cref="IDeserializer{T, TJVMT}.DeserializeWithHeaders(string, Headers, TJVMT)"/>
         public virtual T DeserializeWithHeaders(string topic, Headers headers, TJVMT data)
         {
             if (OnDeserializeWithHeaders != null)
             {
                 return OnDeserializeWithHeaders.Invoke(topic, headers, data);
+            }
+
+            return Deserialize(topic, data);
+        }
+
+        /// <inheritdoc cref="IDeserializer{T, TJVMT}.DeserializeWithHeaders(Java.Lang.String, Headers, TJVMT)"/>
+        public virtual T DeserializeWithHeaders(Java.Lang.String topic, Headers headers, TJVMT data)
+        {
+            if (OnDeserializeWithHeaders2 != null)
+            {
+                return OnDeserializeWithHeaders2.Invoke(topic, headers, data);
             }
 
             return Deserialize(topic, data);
