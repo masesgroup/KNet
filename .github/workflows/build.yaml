@@ -228,35 +228,35 @@ jobs:
           Copy-Item .github\workflows\support\* -Destination bin\net10.0\ -Force
 
       - name: Save KNet net462 bin in cache
-        uses: actions/cache/save@v5
+        uses: actions/cache/save@v6
         with:
           enableCrossOsArchive: true
           path: ./bin/net462/
           key: KNet_${{ github.run_number }}_${{ github.run_attempt }}_net462_bin_${{ github.sha }}
           
       - name: Save KNet net8.0 bin in cache
-        uses: actions/cache/save@v5
+        uses: actions/cache/save@v6
         with:
           enableCrossOsArchive: true
           path: ./bin/net8.0/
           key: KNet_${{ github.run_number }}_${{ github.run_attempt }}_net8.0_bin_${{ github.sha }}
           
       - name: Save KNet net9.0 bin in cache
-        uses: actions/cache/save@v5
+        uses: actions/cache/save@v6
         with:
           enableCrossOsArchive: true
           path: ./bin/net9.0/
           key: KNet_${{ github.run_number }}_${{ github.run_attempt }}_net9.0_bin_${{ github.sha }}
 
       - name: Save KNet net10.0 bin in cache
-        uses: actions/cache/save@v5
+        uses: actions/cache/save@v6
         with:
           enableCrossOsArchive: true
           path: ./bin/net10.0/
           key: KNet_${{ github.run_number }}_${{ github.run_attempt }}_net10.0_bin_${{ github.sha }}
 
       - name: Save KNet NuGet in cache
-        uses: actions/cache/save@v5
+        uses: actions/cache/save@v6
         with:
           enableCrossOsArchive: true
           path: ./bin/MASES.KNetCLI.*.nupkg
@@ -409,7 +409,7 @@ jobs:
       
     steps:
       - name: Restore KNet ${{ matrix.framework }} bin from cache
-        uses: actions/cache/restore@v5
+        uses: actions/cache/restore@v6
         with:
           fail-on-cache-miss: true
           enableCrossOsArchive: true
@@ -504,7 +504,7 @@ jobs:
       
     steps:
       - name: Restore KNet ${{ matrix.framework }} bin from cache
-        uses: actions/cache/restore@v5
+        uses: actions/cache/restore@v6
         with:
           fail-on-cache-miss: true
           enableCrossOsArchive: true
@@ -512,7 +512,7 @@ jobs:
           key: KNet_${{ github.run_number }}_${{ github.run_attempt }}_${{ matrix.framework }}_bin_${{ github.sha }}
 
       - name: Restore Nuget from cache
-        uses: actions/cache/restore@v5
+        uses: actions/cache/restore@v6
         with:
           fail-on-cache-miss: true
           enableCrossOsArchive: true
@@ -619,7 +619,7 @@ jobs:
       
     steps:
       - name: Restore KNet ${{ matrix.framework }} bin from cache
-        uses: actions/cache/restore@v5
+        uses: actions/cache/restore@v6
         with:
           fail-on-cache-miss: true
           enableCrossOsArchive: true
@@ -627,7 +627,7 @@ jobs:
           key: KNet_${{ github.run_number }}_${{ github.run_attempt }}_${{ matrix.framework }}_bin_${{ github.sha }}
 
       - name: Restore Nuget from cache
-        uses: actions/cache/restore@v5
+        uses: actions/cache/restore@v6
         with:
           fail-on-cache-miss: true
           enableCrossOsArchive: true
