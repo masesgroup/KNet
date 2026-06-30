@@ -125,7 +125,7 @@ namespace Org.Apache.Kafka.Common
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/Endpoint.html#listenerName()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Optional"/></returns>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public Java.Util.Optional<Java.Lang.String> ListenerName()
         {
             return IExecuteWithSignature<Java.Util.Optional<Java.Lang.String>>("listenerName", "()Ljava/util/Optional;");

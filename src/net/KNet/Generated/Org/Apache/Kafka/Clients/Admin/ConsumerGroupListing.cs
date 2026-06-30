@@ -29,7 +29,7 @@ namespace Org.Apache.Kafka.Clients.Admin
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/admin/ConsumerGroupListing.html"/>
     /// </summary>
-    [global::System.Obsolete()]
+    [global::System.Obsolete("Deprecated in JVM")]
     public partial class ConsumerGroupListing : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ConsumerGroupListing>
     {
         const string _bridgeClassName = "org.apache.kafka.clients.admin.ConsumerGroupListing";
@@ -71,7 +71,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <param name="arg1"><see cref="bool"/></param>
         /// <param name="arg2"><see cref="Java.Util.Optional"/></param>
         /// <param name="arg3"><see cref="Java.Util.Optional"/></param>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public ConsumerGroupListing(Java.Lang.String arg0, bool arg1, Java.Util.Optional<Org.Apache.Kafka.Common.ConsumerGroupState> arg2, Java.Util.Optional<Org.Apache.Kafka.Common.GroupType> arg3) : base(JVMBridgeBase.InitializerInstance)
         {
             InvokeInitializer(arg0, arg1, arg2, arg3);
@@ -89,7 +89,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="bool"/></param>
         /// <param name="arg2"><see cref="Java.Util.Optional"/></param>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public ConsumerGroupListing(Java.Lang.String arg0, bool arg1, Java.Util.Optional<Org.Apache.Kafka.Common.ConsumerGroupState> arg2) : base(JVMBridgeBase.InitializerInstance)
         {
             InvokeInitializer(arg0, arg1, arg2);
@@ -188,7 +188,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/admin/ConsumerGroupListing.html#state()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Optional"/></returns>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public Java.Util.Optional<Org.Apache.Kafka.Common.ConsumerGroupState> State()
         {
             return IExecuteWithSignature<Java.Util.Optional<Org.Apache.Kafka.Common.ConsumerGroupState>>("state", "()Ljava/util/Optional;");

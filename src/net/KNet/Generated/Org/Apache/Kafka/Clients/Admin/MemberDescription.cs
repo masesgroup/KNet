@@ -70,7 +70,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <param name="arg1"><see cref="Java.Lang.String"/></param>
         /// <param name="arg2"><see cref="Java.Lang.String"/></param>
         /// <param name="arg3"><see cref="Org.Apache.Kafka.Clients.Admin.MemberAssignment"/></param>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public MemberDescription(Java.Lang.String arg0, Java.Lang.String arg1, Java.Lang.String arg2, Org.Apache.Kafka.Clients.Admin.MemberAssignment arg3) : base(JVMBridgeBase.InitializerInstance)
         {
             InvokeInitializer(arg0, arg1, arg2, arg3);
@@ -93,7 +93,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <param name="arg5"><see cref="Java.Util.Optional"/></param>
         /// <param name="arg6"><see cref="Java.Util.Optional"/></param>
         /// <param name="arg7"><see cref="Java.Util.Optional"/></param>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public MemberDescription(Java.Lang.String arg0, Java.Util.Optional<Java.Lang.String> arg1, Java.Lang.String arg2, Java.Lang.String arg3, Org.Apache.Kafka.Clients.Admin.MemberAssignment arg4, Java.Util.Optional<Org.Apache.Kafka.Clients.Admin.MemberAssignment> arg5, Java.Util.Optional<Java.Lang.Integer> arg6, Java.Util.Optional<Java.Lang.Boolean> arg7) : base(JVMBridgeBase.InitializerInstance)
         {
             InvokeInitializer(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
@@ -114,7 +114,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <param name="arg3"><see cref="Java.Lang.String"/></param>
         /// <param name="arg4"><see cref="Org.Apache.Kafka.Clients.Admin.MemberAssignment"/></param>
         /// <param name="arg5"><see cref="Java.Util.Optional"/></param>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public MemberDescription(Java.Lang.String arg0, Java.Util.Optional<Java.Lang.String> arg1, Java.Lang.String arg2, Java.Lang.String arg3, Org.Apache.Kafka.Clients.Admin.MemberAssignment arg4, Java.Util.Optional<Org.Apache.Kafka.Clients.Admin.MemberAssignment> arg5) : base(JVMBridgeBase.InitializerInstance)
         {
             InvokeInitializer(arg0, arg1, arg2, arg3, arg4, arg5);
@@ -134,7 +134,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <param name="arg2"><see cref="Java.Lang.String"/></param>
         /// <param name="arg3"><see cref="Java.Lang.String"/></param>
         /// <param name="arg4"><see cref="Org.Apache.Kafka.Clients.Admin.MemberAssignment"/></param>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public MemberDescription(Java.Lang.String arg0, Java.Util.Optional<Java.Lang.String> arg1, Java.Lang.String arg2, Java.Lang.String arg3, Org.Apache.Kafka.Clients.Admin.MemberAssignment arg4) : base(JVMBridgeBase.InitializerInstance)
         {
             InvokeInitializer(arg0, arg1, arg2, arg3, arg4);

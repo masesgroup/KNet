@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+      <title>Class ForeachProcessor&lt;K, V&gt; | MASES Group - KNet </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class ForeachProcessor&lt;K, V&gt; | MASES Group - KNet ">
+      <meta name="description" content="This is a descriptive page of KNet, the .NET suite for Apache Kafka">
+      <meta name="description" content="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/ForeachProcessor.html">
+      <link rel="icon" href="../images/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Streams_Kstream_ForeachProcessor_2.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Streams.Kstream.ForeachProcessor%602%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Org.Apache.Kafka.Streams.Kstream.ForeachProcessor`2">
+
+
+
+  <h1 id="Org_Apache_Kafka_Streams_Kstream_ForeachProcessor_2" data-uid="Org.Apache.Kafka.Streams.Kstream.ForeachProcessor`2" class="text-break">
+Class ForeachProcessor&lt;K, V&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/ForeachProcessor.cs/#L159"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Org.html">Org</a>.<a class="xref" href="Org.Apache.html">Apache</a>.<a class="xref" href="Org.Apache.Kafka.html">Kafka</a>.<a class="xref" href="Org.Apache.Kafka.Streams.html">Streams</a>.<a class="xref" href="Org.Apache.Kafka.Streams.Kstream.html">Kstream</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>MASES.KNet.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/ForeachProcessor.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/ForeachProcessor.html</a></p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Deprecated in JVM&quot;)]
+public class ForeachProcessor&lt;K, V&gt; : JVMBridgeBase&lt;ForeachProcessor&lt;K, V&gt;&gt;, IDynamicMetaObjectProvider, IJVMBridgeCore, IEquatable&lt;IJVMBridgeBaseInstance&gt;, IDisposable, IJVMBridgeBaseStatic, IJVMBridgeBase, IJVMBridgeBaseInstance, IJVMBridgeDefinition</code></pre>
+  </div>
+
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>K</code></dt>
+    <dd></dd>
+    <dt><code>V</code></dt>
+    <dd></dd>
+  </dl>
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject">DynamicObject</a></div>
+      <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html">JVMBridgeBase</a></div>
+      <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html">JVMBridgeBase</a>&lt;<a class="xref" href="Org.Apache.Kafka.Streams.Kstream.ForeachProcessor-2.html">ForeachProcessor</a>&lt;K, V&gt;&gt;</div>
+      <div><span class="xref">ForeachProcessor&lt;K, V&gt;</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.idynamicmetaobjectprovider">IDynamicMetaObjectProvider</a></div>
+      <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeCore.html">IJVMBridgeCore</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBaseInstance.html">IJVMBridgeBaseInstance</a>&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+      <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic.html">IJVMBridgeBaseStatic</a></div>
+      <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBase.html">IJVMBridgeBase</a></div>
+      <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBaseInstance.html">IJVMBridgeBaseInstance</a></div>
+      <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html">IJVMBridgeDefinition</a></div>
+    </dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Org_Apache_Kafka_Streams_Kstream_ForeachProcessor_2__ctor_" data-uid="Org.Apache.Kafka.Streams.Kstream.ForeachProcessor`2.#ctor*"></a>
+
+  <h3 id="Org_Apache_Kafka_Streams_Kstream_ForeachProcessor_2__ctor_MASES_JCOBridge_C2JBridge_IJVMBridgeBaseInitializer_" data-uid="Org.Apache.Kafka.Streams.Kstream.ForeachProcessor`2.#ctor(MASES.JCOBridge.C2JBridge.IJVMBridgeBaseInitializer)">
+  ForeachProcessor(IJVMBridgeBaseInitializer)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/ForeachProcessor.cs/#L77"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializer used internally by JCOBridge. Do not use directly.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.&quot;)]
+public ForeachProcessor(IJVMBridgeBaseInitializer initializer)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>initializer</code> <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBaseInitializer.html">IJVMBridgeBaseInitializer</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Streams_Kstream_ForeachProcessor_2__ctor_" data-uid="Org.Apache.Kafka.Streams.Kstream.ForeachProcessor`2.#ctor*"></a>
+
+  <h3 id="Org_Apache_Kafka_Streams_Kstream_ForeachProcessor_2__ctor_Org_Apache_Kafka_Streams_Kstream_ForeachAction__0__1__" data-uid="Org.Apache.Kafka.Streams.Kstream.ForeachProcessor`2.#ctor(Org.Apache.Kafka.Streams.Kstream.ForeachAction{`0,`1})">
+  ForeachProcessor(ForeachAction&lt;K, V&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/ForeachProcessor.cs/#L166"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/ForeachProcessor.html#%3Cinit%3E(org.apache.kafka.streams.kstream.ForeachAction)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/ForeachProcessor.html#%3Cinit%3E(org.apache.kafka.streams.kstream.ForeachAction)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ForeachProcessor(ForeachAction&lt;K, V&gt; arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.ForeachAction-2.html">ForeachAction</a>&lt;K, V&gt;</dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.ForeachAction.html">ForeachAction</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Org_Apache_Kafka_Streams_Kstream_ForeachProcessor_2_BridgeClassName_" data-uid="Org.Apache.Kafka.Streams.Kstream.ForeachProcessor`2.BridgeClassName*"></a>
+
+  <h3 id="Org_Apache_Kafka_Streams_Kstream_ForeachProcessor_2_BridgeClassName" data-uid="Org.Apache.Kafka.Streams.Kstream.ForeachProcessor`2.BridgeClassName">
+  BridgeClassName
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/ForeachProcessor.cs/#L85"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Java class name to be instantiated</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string BridgeClassName { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Streams_Kstream_ForeachProcessor_2_IsBridgeAbstract_" data-uid="Org.Apache.Kafka.Streams.Kstream.ForeachProcessor`2.IsBridgeAbstract*"></a>
+
+  <h3 id="Org_Apache_Kafka_Streams_Kstream_ForeachProcessor_2_IsBridgeAbstract" data-uid="Org.Apache.Kafka.Streams.Kstream.ForeachProcessor`2.IsBridgeAbstract">
+  IsBridgeAbstract
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/ForeachProcessor.cs/#L87"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> is an abstract class, i.e. cannot be created an instance</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool IsBridgeAbstract { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Streams_Kstream_ForeachProcessor_2_IsBridgeCloseable_" data-uid="Org.Apache.Kafka.Streams.Kstream.ForeachProcessor`2.IsBridgeCloseable*"></a>
+
+  <h3 id="Org_Apache_Kafka_Streams_Kstream_ForeachProcessor_2_IsBridgeCloseable" data-uid="Org.Apache.Kafka.Streams.Kstream.ForeachProcessor`2.IsBridgeCloseable">
+  IsBridgeCloseable
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/ForeachProcessor.cs/#L89"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> implements java.lang.AutoCloseable</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool IsBridgeCloseable { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Streams_Kstream_ForeachProcessor_2_IsBridgeInterface_" data-uid="Org.Apache.Kafka.Streams.Kstream.ForeachProcessor`2.IsBridgeInterface*"></a>
+
+  <h3 id="Org_Apache_Kafka_Streams_Kstream_ForeachProcessor_2_IsBridgeInterface" data-uid="Org.Apache.Kafka.Streams.Kstream.ForeachProcessor`2.IsBridgeInterface">
+  IsBridgeInterface
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/ForeachProcessor.cs/#L91"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> is an interface, i.e. does not have any public constructor</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool IsBridgeInterface { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Streams_Kstream_ForeachProcessor_2_IsBridgeStatic_" data-uid="Org.Apache.Kafka.Streams.Kstream.ForeachProcessor`2.IsBridgeStatic*"></a>
+
+  <h3 id="Org_Apache_Kafka_Streams_Kstream_ForeachProcessor_2_IsBridgeStatic" data-uid="Org.Apache.Kafka.Streams.Kstream.ForeachProcessor`2.IsBridgeStatic">
+  IsBridgeStatic
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/ForeachProcessor.cs/#L93"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> is a static class, i.e. does not have any public constructor</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool IsBridgeStatic { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Org_Apache_Kafka_Streams_Kstream_ForeachProcessor_2_CreatePoolableInstance_" data-uid="Org.Apache.Kafka.Streams.Kstream.ForeachProcessor`2.CreatePoolableInstance*"></a>
+
+  <h3 id="Org_Apache_Kafka_Streams_Kstream_ForeachProcessor_2_CreatePoolableInstance_Org_Apache_Kafka_Streams_Kstream_ForeachAction__0__1__" data-uid="Org.Apache.Kafka.Streams.Kstream.ForeachProcessor`2.CreatePoolableInstance(Org.Apache.Kafka.Streams.Kstream.ForeachAction{`0,`1})">
+  CreatePoolableInstance(ForeachAction&lt;K, V&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/ForeachProcessor.cs/#L173"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>HPA initializer for ForeachProcessor(Org.Apache.Kafka.Streams.Kstream.ForeachAction%3CK, V%3E arg0)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ForeachProcessor&lt;K, V&gt; CreatePoolableInstance(ForeachAction&lt;K, V&gt; arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.ForeachAction-2.html">ForeachAction</a>&lt;K, V&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.ForeachProcessor-2.html">ForeachProcessor</a>&lt;K, V&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Streams_Kstream_ForeachProcessor_2_Process_" data-uid="Org.Apache.Kafka.Streams.Kstream.ForeachProcessor`2.Process*"></a>
+
+  <h3 id="Org_Apache_Kafka_Streams_Kstream_ForeachProcessor_2_Process_Org_Apache_Kafka_Streams_Processor_Api_Record__0__1__" data-uid="Org.Apache.Kafka.Streams.Kstream.ForeachProcessor`2.Process(Org.Apache.Kafka.Streams.Processor.Api.Record{`0,`1})">
+  Process(Record&lt;K, V&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/ForeachProcessor.cs/#L205"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/ForeachProcessor.html#process(org.apache.kafka.streams.processor.api.Record)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/ForeachProcessor.html#process(org.apache.kafka.streams.processor.api.Record)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Process(Record&lt;K, V&gt; arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="Org.Apache.Kafka.Streams.Processor.Api.Record-2.html">Record</a>&lt;K, V&gt;</dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Streams.Processor.Api.Record.html">Record</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="operators">Operators
+</h2>
+
+
+  <a id="Org_Apache_Kafka_Streams_Kstream_ForeachProcessor_2_op_Implicit_" data-uid="Org.Apache.Kafka.Streams.Kstream.ForeachProcessor`2.op_Implicit*"></a>
+
+  <h3 id="Org_Apache_Kafka_Streams_Kstream_ForeachProcessor_2_op_Implicit_Org_Apache_Kafka_Streams_Kstream_ForeachProcessor__0__1___Org_Apache_Kafka_Streams_Kstream_ForeachProcessor" data-uid="Org.Apache.Kafka.Streams.Kstream.ForeachProcessor`2.op_Implicit(Org.Apache.Kafka.Streams.Kstream.ForeachProcessor{`0,`1})~Org.Apache.Kafka.Streams.Kstream.ForeachProcessor">
+  implicit operator ForeachProcessor(ForeachProcessor&lt;K, V&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/ForeachProcessor.cs/#L188"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converter from <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.ForeachProcessor-2.html">ForeachProcessor&lt;K, V&gt;</a> to <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.ForeachProcessor.html">ForeachProcessor</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator ForeachProcessor(ForeachProcessor&lt;K, V&gt; t)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>t</code> <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.ForeachProcessor-2.html">ForeachProcessor</a>&lt;K, V&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Streams.Kstream.ForeachProcessor.html">ForeachProcessor</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Streams_Kstream_ForeachProcessor_2_op_Implicit_" data-uid="Org.Apache.Kafka.Streams.Kstream.ForeachProcessor`2.op_Implicit*"></a>
+
+  <h3 id="Org_Apache_Kafka_Streams_Kstream_ForeachProcessor_2_op_Implicit_Org_Apache_Kafka_Streams_Kstream_ForeachProcessor__0__1___Org_Apache_Kafka_Streams_Processor_Api_Processor" data-uid="Org.Apache.Kafka.Streams.Kstream.ForeachProcessor`2.op_Implicit(Org.Apache.Kafka.Streams.Kstream.ForeachProcessor{`0,`1})~Org.Apache.Kafka.Streams.Processor.Api.Processor">
+  implicit operator Processor(ForeachProcessor&lt;K, V&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/ForeachProcessor.cs/#L184"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converter from <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.ForeachProcessor-2.html">ForeachProcessor&lt;K, V&gt;</a> to <a class="xref" href="Org.Apache.Kafka.Streams.Processor.Api.Processor.html">Processor</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static implicit operator Processor(ForeachProcessor&lt;K, V&gt; t)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>t</code> <a class="xref" href="Org.Apache.Kafka.Streams.Kstream.ForeachProcessor-2.html">ForeachProcessor</a>&lt;K, V&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Streams.Processor.Api.Processor.html">Processor</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Kstream/ForeachProcessor.cs/#L159" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <script type="text/javascript">document.write('<div style="text-align: center;">Copyright © 2021 - ' + new Date().getFullYear() + ' MASES s.r.l. | Via San Cesidio 16 - San Valentino in A.C. - PE | P.I. 01932310681</div>');</script>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

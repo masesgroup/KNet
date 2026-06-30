@@ -89,7 +89,7 @@
 
 
   <h1 id="MASES_KNet_Streams_State_ReadOnlySessionStore_2" data-uid="MASES.KNet.Streams.State.ReadOnlySessionStore`2" class="text-break">
-Class ReadOnlySessionStore&lt;K, AGG&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/State/ReadOnlySessionStore.cs/#L257"><i class="bi bi-code-slash"></i></a>
+Class ReadOnlySessionStore&lt;K, AGG&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/State/ReadOnlySessionStore.cs/#L294"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -102,7 +102,7 @@ Class ReadOnlySessionStore&lt;K, AGG&gt;  <a class="header-action link-secondary
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ReadOnlySessionStore&lt;K, AGG&gt; : ReadOnlySessionStore&lt;K, AGG, byte[], byte[]&gt;, IManagedStore&lt;ReadOnlySessionStore&lt;byte[], byte[]&gt;&gt;, IGenericSerDesFactoryApplier</code></pre>
+    <pre><code class="lang-csharp hljs">public class ReadOnlySessionStore&lt;K, AGG&gt; : ReadOnlySessionStore&lt;K, AGG, byte[], byte[]&gt;, IManagedStore&lt;ReadOnlySessionStore&lt;byte[], byte[]&gt;&gt;, IDisposable, IGenericSerDesFactoryApplier</code></pre>
   </div>
 
 
@@ -131,6 +131,7 @@ Class ReadOnlySessionStore&lt;K, AGG&gt;  <a class="header-action link-secondary
     <dt>Implements</dt>
     <dd>
       <div><a class="xref" href="MASES.KNet.Streams.State.IManagedStore-1.html">IManagedStore</a>&lt;<a class="xref" href="Org.Apache.Kafka.Streams.State.ReadOnlySessionStore-2.html">ReadOnlySessionStore</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[], <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]&gt;&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
       <div><a class="xref" href="MASES.KNet.Serialization.IGenericSerDesFactoryApplier.html">IGenericSerDesFactoryApplier</a></div>
     </dd>
   </dl>
@@ -188,25 +189,7 @@ Class ReadOnlySessionStore&lt;K, AGG&gt;  <a class="header-action link-secondary
       <a class="xref" href="MASES.KNet.Streams.State.ManagedStore-1.html#MASES_KNet_Streams_State_ManagedStore_1_Factory">ManagedStore&lt;ReadOnlySessionStore&lt;byte[], byte[]&gt;&gt;.Factory</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+      <a class="xref" href="MASES.KNet.Streams.State.ManagedStore-1.html#MASES_KNet_Streams_State_ManagedStore_1_Dispose">ManagedStore&lt;ReadOnlySessionStore&lt;byte[], byte[]&gt;&gt;.Dispose()</a>
     </div>
   </dd></dl>
 
@@ -219,7 +202,7 @@ Class ReadOnlySessionStore&lt;K, AGG&gt;  <a class="header-action link-secondary
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/State/ReadOnlySessionStore.cs/#L257" class="edit-link">Edit this page</a>
+          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/State/ReadOnlySessionStore.cs/#L294" class="edit-link">Edit this page</a>
         </div>
 
 

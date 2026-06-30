@@ -29,7 +29,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/ForeachProcessor.html"/>
     /// </summary>
-    [global::System.Obsolete()]
+    [global::System.Obsolete("Deprecated in JVM")]
     public partial class ForeachProcessor : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ForeachProcessor>
     {
         const string _bridgeClassName = "org.apache.kafka.streams.kstream.ForeachProcessor";
@@ -66,7 +66,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
-    [global::System.Obsolete()]
+    [global::System.Obsolete("Deprecated in JVM")]
     public partial class ForeachProcessor<K, V> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ForeachProcessor<K, V>>
     {
         const string _bridgeClassName = "org.apache.kafka.streams.kstream.ForeachProcessor";

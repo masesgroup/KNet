@@ -59,7 +59,7 @@ namespace Org.Apache.Kafka.Streams
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/KafkaStreams.CloseOptions.html"/>
         /// </summary>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public partial class CloseOptions : MASES.JCOBridge.C2JBridge.JVMBridgeBase<CloseOptions>
         {
             const string _bridgeClassName = "org.apache.kafka.streams.KafkaStreams$CloseOptions";
@@ -147,7 +147,7 @@ namespace Org.Apache.Kafka.Streams
             }
 
             /// <summary>
-            /// <see langword="true"/> if the user has overridden <see cref="ListenerShallManageEvent(int, object)"/> in a subclass.
+            /// <see langword="true"/> if the user has overridden <see cref="MASES.JCOBridge.C2JBridge.JVMBridgeListener.ListenerShallManageEvent(int, object)"/> in a subclass.
             /// Cached at construction to avoid per-event reflection cost. When <see langword="true"/>, the first gate always
             /// returns <see langword="true"/> so that the second gate is reached regardless of whether individual event handlers are registered.
             /// </summary>
@@ -157,12 +157,11 @@ namespace Org.Apache.Kafka.Streams
             /// <remarks>
             /// Evaluated in order:
             /// <list type="number">
-            /// <item><see cref="ListenerShallManageEventIndex"/> delegate — index-based, no string conversion, lowest overhead.</item>
-            /// <item><see cref="ListenerShallManageEventName"/> delegate — name-based, resolves via <see cref="ConvertListenerEventIndexToEventName"/>.</item>
-            /// <item><see cref="ListenerShallManageEventHandlers"/> — returns <see langword="true"/> if the specific event has a registered delegate or a virtual method override.</item>
+            /// <item><see cref="MASES.JCOBridge.C2JBridge.JVMBridgeListener.ListenerShallManageEventIndex"/> delegate — index-based, no string conversion, lowest overhead.</item>
+            /// <item><see cref="MASES.JCOBridge.C2JBridge.JVMBridgeListener.ListenerShallManageEventName"/> delegate — name-based, resolves via <see cref="MASES.JCOBridge.C2JBridge.JVMBridgeListener.ConvertListenerEventIndexToEventName"/>.</item>
             /// <item><see cref="_hasStateListenerSecondGate"/> — returns <see langword="true"/> if the second gate is overridden, ensuring all events reach it.</item>
-            /// <item><see cref="ListenerShallManageEventIndexWithData"/> delegate with data — index-based, no string conversion, lowest overhead.</item>
-            /// <item><see cref="ListenerShallManageEventNameWithData"/> delegate with data — name-based, resolves via <see cref="ConvertListenerEventIndexToEventName"/>.</item>
+            /// <item><see cref="MASES.JCOBridge.C2JBridge.JVMBridgeListener.ListenerShallManageEventIndexWithData"/> delegate with data — index-based, no string conversion, lowest overhead.</item>
+            /// <item><see cref="MASES.JCOBridge.C2JBridge.JVMBridgeListener.ListenerShallManageEventNameWithData"/> delegate with data — name-based, resolves via <see cref="MASES.JCOBridge.C2JBridge.JVMBridgeListener.ConvertListenerEventIndexToEventName"/>.</item>
             /// </list>
             /// </remarks>
             protected override bool ListenerShallManageEvent(int eventIndex)
@@ -195,8 +194,8 @@ namespace Org.Apache.Kafka.Streams
         /// When the JVM returns an instance of this listener type, JCOBridge needs a concrete CLR class to wrap it.
         /// A full listener implementation cannot be used in this scenario because it would require user-provided handler code
         /// that is not available at the point of construction. This class provides a minimal, handler-free wrapper:
-        /// <see cref="InitializeHandlers"/> is a no-op, <see cref="ListenerShallManageEvent(int)"/> unconditionally
-        /// returns <see langword="false"/> discarding all events immediately, and <see cref="AutoInit"/> is <see langword="false"/>
+        /// <see cref="InitializeHandlers"/> is a no-op, <see cref="MASES.JCOBridge.C2JBridge.JVMBridgeListener.ListenerShallManageEvent(int)"/> unconditionally
+        /// returns <see langword="false"/> discarding all events immediately, and <see cref="MASES.JCOBridge.C2JBridge.JVMBridgeListener.AutoInit"/> is <see langword="false"/>
         /// to prevent automatic JVM-side registration.
         /// <para>Do not use this class directly to register event handlers — use <see cref="StateListener"/> instead.</para>
         /// </remarks>
@@ -242,6 +241,7 @@ namespace Org.Apache.Kafka.Streams
         }
         #endregion
 
+    
     
     }
     #endregion
@@ -538,7 +538,7 @@ namespace Org.Apache.Kafka.Streams
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.KafkaStreams.CloseOptions"/></param>
         /// <returns><see cref="bool"/></returns>
         /// <exception cref="Java.Lang.IllegalArgumentException"/>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public bool Close(Org.Apache.Kafka.Streams.KafkaStreams.CloseOptions arg0)
         {
             return IExecuteWithSignature<bool>("close", "(Lorg/apache/kafka/streams/KafkaStreams$CloseOptions;)Z", arg0);
@@ -664,7 +664,7 @@ namespace Org.Apache.Kafka.Streams
             /// </summary>
             /// <param name="arg0"><see cref="bool"/></param>
             /// <returns><see cref="Org.Apache.Kafka.Streams.KafkaStreams.CloseOptions"/></returns>
-            [global::System.Obsolete()]
+            [global::System.Obsolete("Deprecated in JVM")]
             public Org.Apache.Kafka.Streams.KafkaStreams.CloseOptions LeaveGroup(bool arg0)
             {
                 return IExecuteWithSignature<Org.Apache.Kafka.Streams.KafkaStreams.CloseOptions>("leaveGroup", "(Z)Lorg/apache/kafka/streams/KafkaStreams$CloseOptions;", arg0);
@@ -674,7 +674,7 @@ namespace Org.Apache.Kafka.Streams
             /// </summary>
             /// <param name="arg0"><see cref="Java.Time.Duration"/></param>
             /// <returns><see cref="Org.Apache.Kafka.Streams.KafkaStreams.CloseOptions"/></returns>
-            [global::System.Obsolete()]
+            [global::System.Obsolete("Deprecated in JVM")]
             public Org.Apache.Kafka.Streams.KafkaStreams.CloseOptions Timeout(Java.Time.Duration arg0)
             {
                 return IExecuteWithSignature<Org.Apache.Kafka.Streams.KafkaStreams.CloseOptions>("timeout", "(Ljava/time/Duration;)Lorg/apache/kafka/streams/KafkaStreams$CloseOptions;", arg0);

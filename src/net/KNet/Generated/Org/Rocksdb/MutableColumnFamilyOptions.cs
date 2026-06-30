@@ -509,7 +509,7 @@ namespace Org.Rocksdb
             /// <summary>
             /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/MutableColumnFamilyOptions.MemtableOption.html#filter_deletes"/>
             /// </summary>
-            [global::System.Obsolete()]
+            [global::System.Obsolete("Deprecated in JVM")]
             public static Org.Rocksdb.MutableColumnFamilyOptions.MemtableOption filter_deletes { get { return SGetField<Org.Rocksdb.MutableColumnFamilyOptions.MemtableOption>(LocalBridgeClazz, "filter_deletes"); } set { SSetField(LocalBridgeClazz, "filter_deletes", value); } }
             /// <summary>
             /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/MutableColumnFamilyOptions.MemtableOption.html#inplace_update_num_locks"/>
@@ -530,12 +530,12 @@ namespace Org.Rocksdb
             /// <summary>
             /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/MutableColumnFamilyOptions.MemtableOption.html#memtable_prefix_bloom_bits"/>
             /// </summary>
-            [global::System.Obsolete()]
+            [global::System.Obsolete("Deprecated in JVM")]
             public static Org.Rocksdb.MutableColumnFamilyOptions.MemtableOption memtable_prefix_bloom_bits { get { return SGetField<Org.Rocksdb.MutableColumnFamilyOptions.MemtableOption>(LocalBridgeClazz, "memtable_prefix_bloom_bits"); } set { SSetField(LocalBridgeClazz, "memtable_prefix_bloom_bits", value); } }
             /// <summary>
             /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/MutableColumnFamilyOptions.MemtableOption.html#memtable_prefix_bloom_probes"/>
             /// </summary>
-            [global::System.Obsolete()]
+            [global::System.Obsolete("Deprecated in JVM")]
             public static Org.Rocksdb.MutableColumnFamilyOptions.MemtableOption memtable_prefix_bloom_probes { get { return SGetField<Org.Rocksdb.MutableColumnFamilyOptions.MemtableOption>(LocalBridgeClazz, "memtable_prefix_bloom_probes"); } set { SSetField(LocalBridgeClazz, "memtable_prefix_bloom_probes", value); } }
             /// <summary>
             /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/MutableColumnFamilyOptions.MemtableOption.html#memtable_prefix_bloom_size_ratio"/>

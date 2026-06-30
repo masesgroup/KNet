@@ -94,7 +94,7 @@ namespace Org.Rocksdb
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/PerfLevel.html#OUT_OF_BOUNDS"/>
         /// </summary>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public static Org.Rocksdb.PerfLevel OUT_OF_BOUNDS { get { return SGetField<Org.Rocksdb.PerfLevel>(LocalBridgeClazz, "OUT_OF_BOUNDS"); } set { SSetField(LocalBridgeClazz, "OUT_OF_BOUNDS", value); } }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.rocksdb/rocksdbjni/10.1.3/org/rocksdb/PerfLevel.html#UNINITIALIZED"/>

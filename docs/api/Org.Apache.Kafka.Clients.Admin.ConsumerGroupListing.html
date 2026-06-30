@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+      <title>Class ConsumerGroupListing | MASES Group - KNet </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class ConsumerGroupListing | MASES Group - KNet ">
+      <meta name="description" content="This is a descriptive page of KNet, the .NET suite for Apache Kafka">
+      <meta name="description" content="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/admin/ConsumerGroupListing.html">
+      <link rel="icon" href="../images/favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/masesgroup/KNet/new/master/apiSpec/new?filename=Org_Apache_Kafka_Clients_Admin_ConsumerGroupListing.md&amp;value=---%0Auid%3A%20Org.Apache.Kafka.Clients.Admin.ConsumerGroupListing%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Org.Apache.Kafka.Clients.Admin.ConsumerGroupListing">
+
+
+
+  <h1 id="Org_Apache_Kafka_Clients_Admin_ConsumerGroupListing" data-uid="Org.Apache.Kafka.Clients.Admin.ConsumerGroupListing" class="text-break">
+Class ConsumerGroupListing  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ConsumerGroupListing.cs/#L64"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Org.html">Org</a>.<a class="xref" href="Org.Apache.html">Apache</a>.<a class="xref" href="Org.Apache.Kafka.html">Kafka</a>.<a class="xref" href="Org.Apache.Kafka.Clients.html">Clients</a>.<a class="xref" href="Org.Apache.Kafka.Clients.Admin.html">Admin</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>MASES.KNet.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/admin/ConsumerGroupListing.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/admin/ConsumerGroupListing.html</a></p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Deprecated in JVM&quot;)]
+public class ConsumerGroupListing : JVMBridgeBase&lt;ConsumerGroupListing&gt;, IDynamicMetaObjectProvider, IJVMBridgeCore, IEquatable&lt;IJVMBridgeBaseInstance&gt;, IDisposable, IJVMBridgeBaseStatic, IJVMBridgeBase, IJVMBridgeBaseInstance, IJVMBridgeDefinition</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject">DynamicObject</a></div>
+      <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html">JVMBridgeBase</a></div>
+      <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html">JVMBridgeBase</a>&lt;<a class="xref" href="Org.Apache.Kafka.Clients.Admin.ConsumerGroupListing.html">ConsumerGroupListing</a>&gt;</div>
+      <div><span class="xref">ConsumerGroupListing</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.idynamicmetaobjectprovider">IDynamicMetaObjectProvider</a></div>
+      <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeCore.html">IJVMBridgeCore</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBaseInstance.html">IJVMBridgeBaseInstance</a>&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+      <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBaseStatic.html">IJVMBridgeBaseStatic</a></div>
+      <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBase.html">IJVMBridgeBase</a></div>
+      <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBaseInstance.html">IJVMBridgeBaseInstance</a></div>
+      <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html">IJVMBridgeDefinition</a></div>
+    </dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Org_Apache_Kafka_Clients_Admin_ConsumerGroupListing__ctor_" data-uid="Org.Apache.Kafka.Clients.Admin.ConsumerGroupListing.#ctor*"></a>
+
+  <h3 id="Org_Apache_Kafka_Clients_Admin_ConsumerGroupListing__ctor_Java_Lang_String_Java_Util_Optional_Org_Apache_Kafka_Common_GroupState__Java_Util_Optional_Org_Apache_Kafka_Common_GroupType__System_Boolean_" data-uid="Org.Apache.Kafka.Clients.Admin.ConsumerGroupListing.#ctor(Java.Lang.String,Java.Util.Optional{Org.Apache.Kafka.Common.GroupState},Java.Util.Optional{Org.Apache.Kafka.Common.GroupType},System.Boolean)">
+  ConsumerGroupListing(String, Optional&lt;GroupState&gt;, Optional&lt;GroupType&gt;, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ConsumerGroupListing.cs/#L144"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/admin/ConsumerGroupListing.html#%3Cinit%3E(java.lang.String,java.util.Optional,java.util.Optional,boolean)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/admin/ConsumerGroupListing.html#%3Cinit%3E(java.lang.String,java.util.Optional,java.util.Optional,boolean)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ConsumerGroupListing(String arg0, Optional&lt;GroupState&gt; arg1, Optional&lt;GroupType&gt; arg2, bool arg3)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
+</dd>
+    <dt><code>arg1</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Optional-1.html">Optional</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.GroupState.html">GroupState</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Optional.html">Optional</a></p>
+</dd>
+    <dt><code>arg2</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Optional-1.html">Optional</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.GroupType.html">GroupType</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Optional.html">Optional</a></p>
+</dd>
+    <dt><code>arg3</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Clients_Admin_ConsumerGroupListing__ctor_" data-uid="Org.Apache.Kafka.Clients.Admin.ConsumerGroupListing.#ctor*"></a>
+
+  <h3 id="Org_Apache_Kafka_Clients_Admin_ConsumerGroupListing__ctor_Java_Lang_String_Java_Util_Optional_Org_Apache_Kafka_Common_GroupState__System_Boolean_" data-uid="Org.Apache.Kafka.Clients.Admin.ConsumerGroupListing.#ctor(Java.Lang.String,Java.Util.Optional{Org.Apache.Kafka.Common.GroupState},System.Boolean)">
+  ConsumerGroupListing(String, Optional&lt;GroupState&gt;, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ConsumerGroupListing.cs/#L126"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/admin/ConsumerGroupListing.html#%3Cinit%3E(java.lang.String,java.util.Optional,boolean)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/admin/ConsumerGroupListing.html#%3Cinit%3E(java.lang.String,java.util.Optional,boolean)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ConsumerGroupListing(String arg0, Optional&lt;GroupState&gt; arg1, bool arg2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
+</dd>
+    <dt><code>arg1</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Optional-1.html">Optional</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.GroupState.html">GroupState</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Optional.html">Optional</a></p>
+</dd>
+    <dt><code>arg2</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Clients_Admin_ConsumerGroupListing__ctor_" data-uid="Org.Apache.Kafka.Clients.Admin.ConsumerGroupListing.#ctor*"></a>
+
+  <h3 id="Org_Apache_Kafka_Clients_Admin_ConsumerGroupListing__ctor_Java_Lang_String_System_Boolean_" data-uid="Org.Apache.Kafka.Clients.Admin.ConsumerGroupListing.#ctor(Java.Lang.String,System.Boolean)">
+  ConsumerGroupListing(String, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ConsumerGroupListing.cs/#L109"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/admin/ConsumerGroupListing.html#%3Cinit%3E(java.lang.String,boolean)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/admin/ConsumerGroupListing.html#%3Cinit%3E(java.lang.String,boolean)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ConsumerGroupListing(String arg0, bool arg1)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
+</dd>
+    <dt><code>arg1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Clients_Admin_ConsumerGroupListing__ctor_" data-uid="Org.Apache.Kafka.Clients.Admin.ConsumerGroupListing.#ctor*"></a>
+
+  <h3 id="Org_Apache_Kafka_Clients_Admin_ConsumerGroupListing__ctor_Java_Lang_String_System_Boolean_Java_Util_Optional_Org_Apache_Kafka_Common_ConsumerGroupState__" data-uid="Org.Apache.Kafka.Clients.Admin.ConsumerGroupListing.#ctor(Java.Lang.String,System.Boolean,Java.Util.Optional{Org.Apache.Kafka.Common.ConsumerGroupState})">
+  ConsumerGroupListing(String, bool, Optional&lt;ConsumerGroupState&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ConsumerGroupListing.cs/#L92"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/admin/ConsumerGroupListing.html#%3Cinit%3E(java.lang.String,boolean,java.util.Optional)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/admin/ConsumerGroupListing.html#%3Cinit%3E(java.lang.String,boolean,java.util.Optional)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Deprecated in JVM&quot;)]
+public ConsumerGroupListing(String arg0, bool arg1, Optional&lt;ConsumerGroupState&gt; arg2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
+</dd>
+    <dt><code>arg1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></p>
+</dd>
+    <dt><code>arg2</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Optional-1.html">Optional</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.ConsumerGroupState.html">ConsumerGroupState</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Optional.html">Optional</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Clients_Admin_ConsumerGroupListing__ctor_" data-uid="Org.Apache.Kafka.Clients.Admin.ConsumerGroupListing.#ctor*"></a>
+
+  <h3 id="Org_Apache_Kafka_Clients_Admin_ConsumerGroupListing__ctor_Java_Lang_String_System_Boolean_Java_Util_Optional_Org_Apache_Kafka_Common_ConsumerGroupState__Java_Util_Optional_Org_Apache_Kafka_Common_GroupType__" data-uid="Org.Apache.Kafka.Clients.Admin.ConsumerGroupListing.#ctor(Java.Lang.String,System.Boolean,Java.Util.Optional{Org.Apache.Kafka.Common.ConsumerGroupState},Java.Util.Optional{Org.Apache.Kafka.Common.GroupType})">
+  ConsumerGroupListing(String, bool, Optional&lt;ConsumerGroupState&gt;, Optional&lt;GroupType&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ConsumerGroupListing.cs/#L74"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/admin/ConsumerGroupListing.html#%3Cinit%3E(java.lang.String,boolean,java.util.Optional,java.util.Optional)">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/admin/ConsumerGroupListing.html#%3Cinit%3E(java.lang.String,boolean,java.util.Optional,java.util.Optional)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Deprecated in JVM&quot;)]
+public ConsumerGroupListing(String arg0, bool arg1, Optional&lt;ConsumerGroupState&gt; arg2, Optional&lt;GroupType&gt; arg3)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
+</dd>
+    <dt><code>arg1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></p>
+</dd>
+    <dt><code>arg2</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Optional-1.html">Optional</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.ConsumerGroupState.html">ConsumerGroupState</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Optional.html">Optional</a></p>
+</dd>
+    <dt><code>arg3</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Optional-1.html">Optional</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.GroupType.html">GroupType</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Optional.html">Optional</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Clients_Admin_ConsumerGroupListing__ctor_" data-uid="Org.Apache.Kafka.Clients.Admin.ConsumerGroupListing.#ctor*"></a>
+
+  <h3 id="Org_Apache_Kafka_Clients_Admin_ConsumerGroupListing__ctor_MASES_JCOBridge_C2JBridge_IJVMBridgeBaseInitializer_" data-uid="Org.Apache.Kafka.Clients.Admin.ConsumerGroupListing.#ctor(MASES.JCOBridge.C2JBridge.IJVMBridgeBaseInitializer)">
+  ConsumerGroupListing(IJVMBridgeBaseInitializer)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ConsumerGroupListing.cs/#L40"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializer used internally by JCOBridge. Do not use directly.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;This public initializer is needed for JCOBridge internal use, other uses can produce unidentible behaviors.&quot;)]
+public ConsumerGroupListing(IJVMBridgeBaseInitializer initializer)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>initializer</code> <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBaseInitializer.html">IJVMBridgeBaseInitializer</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Org_Apache_Kafka_Clients_Admin_ConsumerGroupListing_BridgeClassName_" data-uid="Org.Apache.Kafka.Clients.Admin.ConsumerGroupListing.BridgeClassName*"></a>
+
+  <h3 id="Org_Apache_Kafka_Clients_Admin_ConsumerGroupListing_BridgeClassName" data-uid="Org.Apache.Kafka.Clients.Admin.ConsumerGroupListing.BridgeClassName">
+  BridgeClassName
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ConsumerGroupListing.cs/#L48"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Java class name to be instantiated</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string BridgeClassName { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Clients_Admin_ConsumerGroupListing_IsBridgeAbstract_" data-uid="Org.Apache.Kafka.Clients.Admin.ConsumerGroupListing.IsBridgeAbstract*"></a>
+
+  <h3 id="Org_Apache_Kafka_Clients_Admin_ConsumerGroupListing_IsBridgeAbstract" data-uid="Org.Apache.Kafka.Clients.Admin.ConsumerGroupListing.IsBridgeAbstract">
+  IsBridgeAbstract
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ConsumerGroupListing.cs/#L50"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> is an abstract class, i.e. cannot be created an instance</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool IsBridgeAbstract { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Clients_Admin_ConsumerGroupListing_IsBridgeCloseable_" data-uid="Org.Apache.Kafka.Clients.Admin.ConsumerGroupListing.IsBridgeCloseable*"></a>
+
+  <h3 id="Org_Apache_Kafka_Clients_Admin_ConsumerGroupListing_IsBridgeCloseable" data-uid="Org.Apache.Kafka.Clients.Admin.ConsumerGroupListing.IsBridgeCloseable">
+  IsBridgeCloseable
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ConsumerGroupListing.cs/#L52"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> implements java.lang.AutoCloseable</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool IsBridgeCloseable { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Clients_Admin_ConsumerGroupListing_IsBridgeInterface_" data-uid="Org.Apache.Kafka.Clients.Admin.ConsumerGroupListing.IsBridgeInterface*"></a>
+
+  <h3 id="Org_Apache_Kafka_Clients_Admin_ConsumerGroupListing_IsBridgeInterface" data-uid="Org.Apache.Kafka.Clients.Admin.ConsumerGroupListing.IsBridgeInterface">
+  IsBridgeInterface
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ConsumerGroupListing.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> is an interface, i.e. does not have any public constructor</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool IsBridgeInterface { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Clients_Admin_ConsumerGroupListing_IsBridgeStatic_" data-uid="Org.Apache.Kafka.Clients.Admin.ConsumerGroupListing.IsBridgeStatic*"></a>
+
+  <h3 id="Org_Apache_Kafka_Clients_Admin_ConsumerGroupListing_IsBridgeStatic" data-uid="Org.Apache.Kafka.Clients.Admin.ConsumerGroupListing.IsBridgeStatic">
+  IsBridgeStatic
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ConsumerGroupListing.cs/#L56"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the <a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html#MASES_JCOBridge_C2JBridge_IJVMBridgeDefinition_BridgeClassName">BridgeClassName</a> is a static class, i.e. does not have any public constructor</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool IsBridgeStatic { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Org_Apache_Kafka_Clients_Admin_ConsumerGroupListing_CreatePoolableInstance_" data-uid="Org.Apache.Kafka.Clients.Admin.ConsumerGroupListing.CreatePoolableInstance*"></a>
+
+  <h3 id="Org_Apache_Kafka_Clients_Admin_ConsumerGroupListing_CreatePoolableInstance_Java_Lang_String_Java_Util_Optional_Org_Apache_Kafka_Common_GroupState__Java_Util_Optional_Org_Apache_Kafka_Common_GroupType__System_Boolean_" data-uid="Org.Apache.Kafka.Clients.Admin.ConsumerGroupListing.CreatePoolableInstance(Java.Lang.String,Java.Util.Optional{Org.Apache.Kafka.Common.GroupState},Java.Util.Optional{Org.Apache.Kafka.Common.GroupType},System.Boolean)">
+  CreatePoolableInstance(String, Optional&lt;GroupState&gt;, Optional&lt;GroupType&gt;, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ConsumerGroupListing.cs/#L151"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>HPA initializer for ConsumerGroupListing(Java.Lang.String arg0, Java.Util.Optional%3COrg.Apache.Kafka.Common.GroupState%3E arg1, Java.Util.Optional%3COrg.Apache.Kafka.Common.GroupType%3E arg2, bool arg3)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ConsumerGroupListing CreatePoolableInstance(String arg0, Optional&lt;GroupState&gt; arg1, Optional&lt;GroupType&gt; arg2, bool arg3)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd></dd>
+    <dt><code>arg1</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Optional-1.html">Optional</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.GroupState.html">GroupState</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>arg2</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Optional-1.html">Optional</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.GroupType.html">GroupType</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>arg3</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.ConsumerGroupListing.html">ConsumerGroupListing</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Clients_Admin_ConsumerGroupListing_CreatePoolableInstance_" data-uid="Org.Apache.Kafka.Clients.Admin.ConsumerGroupListing.CreatePoolableInstance*"></a>
+
+  <h3 id="Org_Apache_Kafka_Clients_Admin_ConsumerGroupListing_CreatePoolableInstance_Java_Lang_String_Java_Util_Optional_Org_Apache_Kafka_Common_GroupState__System_Boolean_" data-uid="Org.Apache.Kafka.Clients.Admin.ConsumerGroupListing.CreatePoolableInstance(Java.Lang.String,Java.Util.Optional{Org.Apache.Kafka.Common.GroupState},System.Boolean)">
+  CreatePoolableInstance(String, Optional&lt;GroupState&gt;, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ConsumerGroupListing.cs/#L133"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>HPA initializer for ConsumerGroupListing(Java.Lang.String arg0, Java.Util.Optional%3COrg.Apache.Kafka.Common.GroupState%3E arg1, bool arg2)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ConsumerGroupListing CreatePoolableInstance(String arg0, Optional&lt;GroupState&gt; arg1, bool arg2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd></dd>
+    <dt><code>arg1</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Optional-1.html">Optional</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.GroupState.html">GroupState</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>arg2</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.ConsumerGroupListing.html">ConsumerGroupListing</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Clients_Admin_ConsumerGroupListing_CreatePoolableInstance_" data-uid="Org.Apache.Kafka.Clients.Admin.ConsumerGroupListing.CreatePoolableInstance*"></a>
+
+  <h3 id="Org_Apache_Kafka_Clients_Admin_ConsumerGroupListing_CreatePoolableInstance_Java_Lang_String_System_Boolean_" data-uid="Org.Apache.Kafka.Clients.Admin.ConsumerGroupListing.CreatePoolableInstance(Java.Lang.String,System.Boolean)">
+  CreatePoolableInstance(String, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ConsumerGroupListing.cs/#L116"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>HPA initializer for ConsumerGroupListing(Java.Lang.String arg0, bool arg1)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ConsumerGroupListing CreatePoolableInstance(String arg0, bool arg1)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd></dd>
+    <dt><code>arg1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.ConsumerGroupListing.html">ConsumerGroupListing</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Clients_Admin_ConsumerGroupListing_CreatePoolableInstance_" data-uid="Org.Apache.Kafka.Clients.Admin.ConsumerGroupListing.CreatePoolableInstance*"></a>
+
+  <h3 id="Org_Apache_Kafka_Clients_Admin_ConsumerGroupListing_CreatePoolableInstance_Java_Lang_String_System_Boolean_Java_Util_Optional_Org_Apache_Kafka_Common_ConsumerGroupState__" data-uid="Org.Apache.Kafka.Clients.Admin.ConsumerGroupListing.CreatePoolableInstance(Java.Lang.String,System.Boolean,Java.Util.Optional{Org.Apache.Kafka.Common.ConsumerGroupState})">
+  CreatePoolableInstance(String, bool, Optional&lt;ConsumerGroupState&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ConsumerGroupListing.cs/#L100"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>HPA initializer for ConsumerGroupListing(Java.Lang.String arg0, bool arg1, Java.Util.Optional%3COrg.Apache.Kafka.Common.ConsumerGroupState%3E arg2)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ConsumerGroupListing CreatePoolableInstance(String arg0, bool arg1, Optional&lt;ConsumerGroupState&gt; arg2)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd></dd>
+    <dt><code>arg1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+    <dt><code>arg2</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Optional-1.html">Optional</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.ConsumerGroupState.html">ConsumerGroupState</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.ConsumerGroupListing.html">ConsumerGroupListing</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Clients_Admin_ConsumerGroupListing_CreatePoolableInstance_" data-uid="Org.Apache.Kafka.Clients.Admin.ConsumerGroupListing.CreatePoolableInstance*"></a>
+
+  <h3 id="Org_Apache_Kafka_Clients_Admin_ConsumerGroupListing_CreatePoolableInstance_Java_Lang_String_System_Boolean_Java_Util_Optional_Org_Apache_Kafka_Common_ConsumerGroupState__Java_Util_Optional_Org_Apache_Kafka_Common_GroupType__" data-uid="Org.Apache.Kafka.Clients.Admin.ConsumerGroupListing.CreatePoolableInstance(Java.Lang.String,System.Boolean,Java.Util.Optional{Org.Apache.Kafka.Common.ConsumerGroupState},Java.Util.Optional{Org.Apache.Kafka.Common.GroupType})">
+  CreatePoolableInstance(String, bool, Optional&lt;ConsumerGroupState&gt;, Optional&lt;GroupType&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ConsumerGroupListing.cs/#L82"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>HPA initializer for ConsumerGroupListing(Java.Lang.String arg0, bool arg1, Java.Util.Optional%3COrg.Apache.Kafka.Common.ConsumerGroupState%3E arg2, Java.Util.Optional%3COrg.Apache.Kafka.Common.GroupType%3E arg3)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ConsumerGroupListing CreatePoolableInstance(String arg0, bool arg1, Optional&lt;ConsumerGroupState&gt; arg2, Optional&lt;GroupType&gt; arg3)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd></dd>
+    <dt><code>arg1</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+    <dt><code>arg2</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Optional-1.html">Optional</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.ConsumerGroupState.html">ConsumerGroupState</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>arg3</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Optional-1.html">Optional</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.GroupType.html">GroupType</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.ConsumerGroupListing.html">ConsumerGroupListing</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Clients_Admin_ConsumerGroupListing_GroupId_" data-uid="Org.Apache.Kafka.Clients.Admin.ConsumerGroupListing.GroupId*"></a>
+
+  <h3 id="Org_Apache_Kafka_Clients_Admin_ConsumerGroupListing_GroupId" data-uid="Org.Apache.Kafka.Clients.Admin.ConsumerGroupListing.GroupId">
+  GroupId()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ConsumerGroupListing.cs/#L183"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/admin/ConsumerGroupListing.html#groupId()">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/admin/ConsumerGroupListing.html#groupId()</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public String GroupId()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Clients_Admin_ConsumerGroupListing_GroupState_" data-uid="Org.Apache.Kafka.Clients.Admin.ConsumerGroupListing.GroupState*"></a>
+
+  <h3 id="Org_Apache_Kafka_Clients_Admin_ConsumerGroupListing_GroupState" data-uid="Org.Apache.Kafka.Clients.Admin.ConsumerGroupListing.GroupState">
+  GroupState()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ConsumerGroupListing.cs/#L200"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/admin/ConsumerGroupListing.html#groupState()">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/admin/ConsumerGroupListing.html#groupState()</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Optional&lt;GroupState&gt; GroupState()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Optional-1.html">Optional</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.GroupState.html">GroupState</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Optional.html">Optional</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Clients_Admin_ConsumerGroupListing_IsSimpleConsumerGroup_" data-uid="Org.Apache.Kafka.Clients.Admin.ConsumerGroupListing.IsSimpleConsumerGroup*"></a>
+
+  <h3 id="Org_Apache_Kafka_Clients_Admin_ConsumerGroupListing_IsSimpleConsumerGroup" data-uid="Org.Apache.Kafka.Clients.Admin.ConsumerGroupListing.IsSimpleConsumerGroup">
+  IsSimpleConsumerGroup()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ConsumerGroupListing.cs/#L175"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/admin/ConsumerGroupListing.html#isSimpleConsumerGroup()">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/admin/ConsumerGroupListing.html#isSimpleConsumerGroup()</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsSimpleConsumerGroup()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Clients_Admin_ConsumerGroupListing_State_" data-uid="Org.Apache.Kafka.Clients.Admin.ConsumerGroupListing.State*"></a>
+
+  <h3 id="Org_Apache_Kafka_Clients_Admin_ConsumerGroupListing_State" data-uid="Org.Apache.Kafka.Clients.Admin.ConsumerGroupListing.State">
+  State()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ConsumerGroupListing.cs/#L191"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/admin/ConsumerGroupListing.html#state()">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/admin/ConsumerGroupListing.html#state()</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Deprecated in JVM&quot;)]
+public Optional&lt;ConsumerGroupState&gt; State()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Optional-1.html">Optional</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.ConsumerGroupState.html">ConsumerGroupState</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Optional.html">Optional</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Clients_Admin_ConsumerGroupListing_Type_" data-uid="Org.Apache.Kafka.Clients.Admin.ConsumerGroupListing.Type*"></a>
+
+  <h3 id="Org_Apache_Kafka_Clients_Admin_ConsumerGroupListing_Type" data-uid="Org.Apache.Kafka.Clients.Admin.ConsumerGroupListing.Type">
+  Type()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ConsumerGroupListing.cs/#L208"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/admin/ConsumerGroupListing.html#type()">https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/admin/ConsumerGroupListing.html#type()</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Optional&lt;GroupType&gt; Type()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Optional-1.html">Optional</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.GroupType.html">GroupType</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Optional.html">Optional</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Clients/Admin/ConsumerGroupListing.cs/#L64" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <script type="text/javascript">document.write('<div style="text-align: center;">Copyright © 2021 - ' + new Date().getFullYear() + ' MASES s.r.l. | Via San Cesidio 16 - San Valentino in A.C. - PE | P.I. 01932310681</div>');</script>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

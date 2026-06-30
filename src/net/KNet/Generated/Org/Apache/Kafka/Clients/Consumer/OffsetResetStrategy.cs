@@ -29,7 +29,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
     /// <summary>
     /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/consumer/OffsetResetStrategy.html"/>
     /// </summary>
-    [global::System.Obsolete()]
+    [global::System.Obsolete("Deprecated in JVM")]
     public partial class OffsetResetStrategy : Java.Lang.Enum<Org.Apache.Kafka.Clients.Consumer.OffsetResetStrategy>
     {
         const string _bridgeClassName = "org.apache.kafka.clients.consumer.OffsetResetStrategy";

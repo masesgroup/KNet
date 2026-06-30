@@ -228,7 +228,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/producer/ProducerConfig.html#PARTITIONER_ADPATIVE_PARTITIONING_ENABLE_CONFIG"/>
         /// </summary>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public static Java.Lang.String PARTITIONER_ADPATIVE_PARTITIONING_ENABLE_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "PARTITIONER_ADPATIVE_PARTITIONING_ENABLE_CONFIG"); } set { SSetField(LocalBridgeClazz, "PARTITIONER_ADPATIVE_PARTITIONING_ENABLE_CONFIG", value); } }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/producer/ProducerConfig.html#PARTITIONER_AVAILABILITY_TIMEOUT_MS_CONFIG"/>

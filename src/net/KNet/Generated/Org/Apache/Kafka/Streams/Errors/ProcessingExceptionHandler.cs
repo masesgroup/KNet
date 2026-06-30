@@ -59,7 +59,7 @@ namespace Org.Apache.Kafka.Streams.Errors
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/errors/ProcessingExceptionHandler.ProcessingHandlerResponse.html"/>
         /// </summary>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public partial class ProcessingHandlerResponse : Java.Lang.Enum<Org.Apache.Kafka.Streams.Errors.ProcessingExceptionHandler.ProcessingHandlerResponse>
         {
             const string _bridgeClassName = "org.apache.kafka.streams.errors.ProcessingExceptionHandler$ProcessingHandlerResponse";
@@ -207,7 +207,7 @@ namespace Org.Apache.Kafka.Streams.Errors
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Processor.Api.Record"/></param>
         /// <param name="arg2"><see cref="Java.Lang.Exception"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Errors.ProcessingExceptionHandler.ProcessingHandlerResponse"/></returns>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public Org.Apache.Kafka.Streams.Errors.ProcessingExceptionHandler.ProcessingHandlerResponse Handle(Org.Apache.Kafka.Streams.Errors.ErrorHandlerContext arg0, Org.Apache.Kafka.Streams.Processor.Api.Record<object, object> arg1, MASES.JCOBridge.C2JBridge.JVMBridgeException arg2)
         {
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Errors.ProcessingExceptionHandler.ProcessingHandlerResponse>("handle", "(Lorg/apache/kafka/streams/errors/ErrorHandlerContext;Lorg/apache/kafka/streams/processor/api/Record;Ljava/lang/Exception;)Lorg/apache/kafka/streams/errors/ProcessingExceptionHandler$ProcessingHandlerResponse;", arg0, arg1, arg2);

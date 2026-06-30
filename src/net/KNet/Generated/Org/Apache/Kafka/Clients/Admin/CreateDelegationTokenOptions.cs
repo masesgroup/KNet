@@ -113,7 +113,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/admin/CreateDelegationTokenOptions.html#maxlifeTimeMs()"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public long MaxlifeTimeMs()
         {
             return IExecuteWithSignature<long>("maxlifeTimeMs", "()J");
@@ -131,7 +131,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.CreateDelegationTokenOptions"/></returns>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public Org.Apache.Kafka.Clients.Admin.CreateDelegationTokenOptions MaxlifeTimeMs(long arg0)
         {
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.CreateDelegationTokenOptions>("maxlifeTimeMs", "(J)Lorg/apache/kafka/clients/admin/CreateDelegationTokenOptions;", arg0);

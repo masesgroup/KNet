@@ -89,7 +89,7 @@
 
 
   <h1 id="MASES_KNet_Streams_Processor_Api_ProcessorContext_4" data-uid="MASES.KNet.Streams.Processor.Api.ProcessorContext`4" class="text-break">
-Class ProcessorContext&lt;KForward, VForward, TJVMKForward, TJVMVForward&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/Api/ProcessorContext.cs/#L30"><i class="bi bi-code-slash"></i></a>
+Class ProcessorContext&lt;KForward, VForward, TJVMKForward, TJVMVForward&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/Api/ProcessorContext.cs/#L32"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -102,7 +102,7 @@ Class ProcessorContext&lt;KForward, VForward, TJVMKForward, TJVMVForward&gt;  <a
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ProcessorContext&lt;KForward, VForward, TJVMKForward, TJVMVForward&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class ProcessorContext&lt;KForward, VForward, TJVMKForward, TJVMVForward&gt; : IKNetInnerReference&lt;ProcessorContext&lt;TJVMKForward, TJVMVForward&gt;&gt;, IDisposable</code></pre>
   </div>
 
 
@@ -129,33 +129,15 @@ Class ProcessorContext&lt;KForward, VForward, TJVMKForward, TJVMVForward&gt;  <a
     </dd>
   </dl>
 
-
-
-  <dl class="typelist inheritedMembers">
-    <dt>Inherited Members</dt>
+  <dl class="typelist implements">
+    <dt>Implements</dt>
     <dd>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
-    </div>
-  </dd></dl>
+      <div><a class="xref" href="MASES.KNet.IKNetInnerReference-1.html">IKNetInnerReference</a>&lt;<a class="xref" href="Org.Apache.Kafka.Streams.Processor.Api.ProcessorContext-2.html">ProcessorContext</a>&lt;TJVMKForward, TJVMVForward&gt;&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+    </dd>
+  </dl>
+
+
 
 
 
@@ -170,10 +152,10 @@ Class ProcessorContext&lt;KForward, VForward, TJVMKForward, TJVMVForward&gt;  <a
 
   <h3 id="MASES_KNet_Streams_Processor_Api_ProcessorContext_4_AppConfigs" data-uid="MASES.KNet.Streams.Processor.Api.ProcessorContext`4.AppConfigs">
   AppConfigs
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/Api/ProcessorContext.cs/#L101"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/Api/ProcessorContext.cs/#L146"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/processor/api/ProcessingContext.html#appConfigs()">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/processor/api/ProcessingContext.html#appConfigs()</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/api/ProcessingContext.html#appConfigs()">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/api/ProcessingContext.html#appConfigs()</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -203,10 +185,10 @@ Class ProcessorContext&lt;KForward, VForward, TJVMKForward, TJVMVForward&gt;  <a
 
   <h3 id="MASES_KNet_Streams_Processor_Api_ProcessorContext_4_ApplicationId" data-uid="MASES.KNet.Streams.Processor.Api.ProcessorContext`4.ApplicationId">
   ApplicationId
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/Api/ProcessorContext.cs/#L96"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/Api/ProcessorContext.cs/#L141"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/processor/api/ProcessingContext.html#applicationId()">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/processor/api/ProcessingContext.html#applicationId()</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/api/ProcessingContext.html#applicationId()">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/api/ProcessingContext.html#applicationId()</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -236,10 +218,10 @@ Class ProcessorContext&lt;KForward, VForward, TJVMKForward, TJVMVForward&gt;  <a
 
   <h3 id="MASES_KNet_Streams_Processor_Api_ProcessorContext_4_CurrentStreamDateTime" data-uid="MASES.KNet.Streams.Processor.Api.ProcessorContext`4.CurrentStreamDateTime">
   CurrentStreamDateTime
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/Api/ProcessorContext.cs/#L132"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/Api/ProcessorContext.cs/#L180"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/processor/api/ProcessingContext.html#currentStreamTimeMs()">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/processor/api/ProcessingContext.html#currentStreamTimeMs()</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/api/ProcessingContext.html#currentStreamTimeMs()">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/api/ProcessingContext.html#currentStreamTimeMs()</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -269,10 +251,10 @@ Class ProcessorContext&lt;KForward, VForward, TJVMKForward, TJVMVForward&gt;  <a
 
   <h3 id="MASES_KNet_Streams_Processor_Api_ProcessorContext_4_CurrentStreamTimeMs" data-uid="MASES.KNet.Streams.Processor.Api.ProcessorContext`4.CurrentStreamTimeMs">
   CurrentStreamTimeMs
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/Api/ProcessorContext.cs/#L127"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/Api/ProcessorContext.cs/#L175"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/processor/api/ProcessingContext.html#currentStreamTimeMs()">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/processor/api/ProcessingContext.html#currentStreamTimeMs()</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/api/ProcessingContext.html#currentStreamTimeMs()">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/api/ProcessingContext.html#currentStreamTimeMs()</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -302,10 +284,10 @@ Class ProcessorContext&lt;KForward, VForward, TJVMKForward, TJVMVForward&gt;  <a
 
   <h3 id="MASES_KNet_Streams_Processor_Api_ProcessorContext_4_CurrentSystemDateTime" data-uid="MASES.KNet.Streams.Processor.Api.ProcessorContext`4.CurrentSystemDateTime">
   CurrentSystemDateTime
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/Api/ProcessorContext.cs/#L142"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/Api/ProcessorContext.cs/#L190"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/processor/api/ProcessingContext.html#currentSystemTimeMs()">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/processor/api/ProcessingContext.html#currentSystemTimeMs()</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/api/ProcessingContext.html#currentSystemTimeMs()">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/api/ProcessingContext.html#currentSystemTimeMs()</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -335,10 +317,10 @@ Class ProcessorContext&lt;KForward, VForward, TJVMKForward, TJVMVForward&gt;  <a
 
   <h3 id="MASES_KNet_Streams_Processor_Api_ProcessorContext_4_CurrentSystemTimeMs" data-uid="MASES.KNet.Streams.Processor.Api.ProcessorContext`4.CurrentSystemTimeMs">
   CurrentSystemTimeMs
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/Api/ProcessorContext.cs/#L137"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/Api/ProcessorContext.cs/#L185"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/processor/api/ProcessingContext.html#currentSystemTimeMs()">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/processor/api/ProcessingContext.html#currentSystemTimeMs()</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/api/ProcessingContext.html#currentSystemTimeMs()">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/api/ProcessingContext.html#currentSystemTimeMs()</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -364,14 +346,46 @@ Class ProcessorContext&lt;KForward, VForward, TJVMKForward, TJVMVForward&gt;  <a
 
 
 
+  <a id="MASES_KNet_Streams_Processor_Api_ProcessorContext_4_InnerReference_" data-uid="MASES.KNet.Streams.Processor.Api.ProcessorContext`4.InnerReference*"></a>
+
+  <h3 id="MASES_KNet_Streams_Processor_Api_ProcessorContext_4_InnerReference" data-uid="MASES.KNet.Streams.Processor.Api.ProcessorContext`4.InnerReference">
+  InnerReference
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/Api/ProcessorContext.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The underlying inner reference used from KNet object instance</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ProcessorContext&lt;TJVMKForward, TJVMVForward&gt; InnerReference { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Org.Apache.Kafka.Streams.Processor.Api.ProcessorContext-2.html">ProcessorContext</a>&lt;TJVMKForward, TJVMVForward&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="MASES_KNet_Streams_Processor_Api_ProcessorContext_4_KeySerde_" data-uid="MASES.KNet.Streams.Processor.Api.ProcessorContext`4.KeySerde*"></a>
 
   <h3 id="MASES_KNet_Streams_Processor_Api_ProcessorContext_4_KeySerde" data-uid="MASES.KNet.Streams.Processor.Api.ProcessorContext`4.KeySerde">
   KeySerde
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/Api/ProcessorContext.cs/#L147"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/Api/ProcessorContext.cs/#L195"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/processor/api/ProcessingContext.html#keySerde()">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/processor/api/ProcessingContext.html#keySerde()</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/api/ProcessingContext.html#keySerde()">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/api/ProcessingContext.html#keySerde()</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -401,10 +415,10 @@ Class ProcessorContext&lt;KForward, VForward, TJVMKForward, TJVMVForward&gt;  <a
 
   <h3 id="MASES_KNet_Streams_Processor_Api_ProcessorContext_4_Metrics" data-uid="MASES.KNet.Streams.Processor.Api.ProcessorContext`4.Metrics">
   Metrics
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/Api/ProcessorContext.cs/#L173"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/Api/ProcessorContext.cs/#L222"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/processor/api/ProcessingContext.html#metrics()">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/processor/api/ProcessingContext.html#metrics()</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/api/ProcessingContext.html#metrics()">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/api/ProcessingContext.html#metrics()</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -434,10 +448,10 @@ Class ProcessorContext&lt;KForward, VForward, TJVMKForward, TJVMVForward&gt;  <a
 
   <h3 id="MASES_KNet_Streams_Processor_Api_ProcessorContext_4_RecordMetadata" data-uid="MASES.KNet.Streams.Processor.Api.ProcessorContext`4.RecordMetadata">
   RecordMetadata
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/Api/ProcessorContext.cs/#L115"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/Api/ProcessorContext.cs/#L162"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/processor/api/ProcessingContext.html#recordMetadata()">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/processor/api/ProcessingContext.html#recordMetadata()</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/api/ProcessingContext.html#recordMetadata()">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/api/ProcessingContext.html#recordMetadata()</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -467,10 +481,10 @@ Class ProcessorContext&lt;KForward, VForward, TJVMKForward, TJVMVForward&gt;  <a
 
   <h3 id="MASES_KNet_Streams_Processor_Api_ProcessorContext_4_StateDir" data-uid="MASES.KNet.Streams.Processor.Api.ProcessorContext`4.StateDir">
   StateDir
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/Api/ProcessorContext.cs/#L90"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/Api/ProcessorContext.cs/#L135"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/processor/api/ProcessingContext.html#stateDir()">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/processor/api/ProcessingContext.html#stateDir()</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/api/ProcessingContext.html#stateDir()">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/api/ProcessingContext.html#stateDir()</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -500,10 +514,10 @@ Class ProcessorContext&lt;KForward, VForward, TJVMKForward, TJVMVForward&gt;  <a
 
   <h3 id="MASES_KNet_Streams_Processor_Api_ProcessorContext_4_TaskId" data-uid="MASES.KNet.Streams.Processor.Api.ProcessorContext`4.TaskId">
   TaskId
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/Api/ProcessorContext.cs/#L168"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/Api/ProcessorContext.cs/#L217"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/processor/api/ProcessingContext.html#taskId()">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/processor/api/ProcessingContext.html#taskId()</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/api/ProcessingContext.html#taskId()">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/api/ProcessingContext.html#taskId()</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -533,10 +547,10 @@ Class ProcessorContext&lt;KForward, VForward, TJVMKForward, TJVMVForward&gt;  <a
 
   <h3 id="MASES_KNet_Streams_Processor_Api_ProcessorContext_4_ValueSerde" data-uid="MASES.KNet.Streams.Processor.Api.ProcessorContext`4.ValueSerde">
   ValueSerde
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/Api/ProcessorContext.cs/#L152"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/Api/ProcessorContext.cs/#L200"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/processor/api/ProcessingContext.html#valueSerde()">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/processor/api/ProcessingContext.html#valueSerde()</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/api/ProcessingContext.html#valueSerde()">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/api/ProcessingContext.html#valueSerde()</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -570,10 +584,10 @@ Class ProcessorContext&lt;KForward, VForward, TJVMKForward, TJVMVForward&gt;  <a
 
   <h3 id="MASES_KNet_Streams_Processor_Api_ProcessorContext_4_AppConfigsWithPrefix_System_String_" data-uid="MASES.KNet.Streams.Processor.Api.ProcessorContext`4.AppConfigsWithPrefix(System.String)">
   AppConfigsWithPrefix(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/Api/ProcessorContext.cs/#L107"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/Api/ProcessorContext.cs/#L152"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/processor/api/ProcessingContext.html#appConfigsWithPrefix(java.lang.String)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/processor/api/ProcessingContext.html#appConfigsWithPrefix(java.lang.String)</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/api/ProcessingContext.html#appConfigsWithPrefix(java.lang.String)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/api/ProcessingContext.html#appConfigsWithPrefix(java.lang.String)</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -605,14 +619,47 @@ Class ProcessorContext&lt;KForward, VForward, TJVMKForward, TJVMVForward&gt;  <a
 
 
 
+  <a id="MASES_KNet_Streams_Processor_Api_ProcessorContext_4_CheckDisposed_" data-uid="MASES.KNet.Streams.Processor.Api.ProcessorContext`4.CheckDisposed*"></a>
+
+  <h3 id="MASES_KNet_Streams_Processor_Api_ProcessorContext_4_CheckDisposed" data-uid="MASES.KNet.Streams.Processor.Api.ProcessorContext`4.CheckDisposed">
+  CheckDisposed()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/Api/ProcessorContext.cs/#L51"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Test if this instance was disposed</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void CheckDisposed()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.objectdisposedexception">ObjectDisposedException</a></dt>
+    <dd><p>When this instance was disposed</p>
+</dd>
+  </dl>
+
+
+
   <a id="MASES_KNet_Streams_Processor_Api_ProcessorContext_4_Commit_" data-uid="MASES.KNet.Streams.Processor.Api.ProcessorContext`4.Commit*"></a>
 
   <h3 id="MASES_KNet_Streams_Processor_Api_ProcessorContext_4_Commit" data-uid="MASES.KNet.Streams.Processor.Api.ProcessorContext`4.Commit">
   Commit()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/Api/ProcessorContext.cs/#L177"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/Api/ProcessorContext.cs/#L226"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/processor/api/ProcessingContext.html#commit()">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/processor/api/ProcessingContext.html#commit()</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/api/ProcessingContext.html#commit()">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/api/ProcessingContext.html#commit()</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -632,14 +679,74 @@ Class ProcessorContext&lt;KForward, VForward, TJVMKForward, TJVMVForward&gt;  <a
 
 
 
+  <a id="MASES_KNet_Streams_Processor_Api_ProcessorContext_4_Dispose_" data-uid="MASES.KNet.Streams.Processor.Api.ProcessorContext`4.Dispose*"></a>
+
+  <h3 id="MASES_KNet_Streams_Processor_Api_ProcessorContext_4_Dispose" data-uid="MASES.KNet.Streams.Processor.Api.ProcessorContext`4.Dispose">
+  Dispose()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/Api/ProcessorContext.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Streams_Processor_Api_ProcessorContext_4_Dispose_" data-uid="MASES.KNet.Streams.Processor.Api.ProcessorContext`4.Dispose*"></a>
+
+  <h3 id="MASES_KNet_Streams_Processor_Api_ProcessorContext_4_Dispose_System_Boolean_" data-uid="MASES.KNet.Streams.Processor.Api.ProcessorContext`4.Dispose(System.Boolean)">
+  Dispose(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/Api/ProcessorContext.cs/#L65"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Implements the pattern described in <a href="https://learn.microsoft.com/en-en/dotnet/standard/garbage-collection/implementing-dispose">https://learn.microsoft.com/en-en/dotnet/standard/garbage-collection/implementing-dispose</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void Dispose(bool disposing)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>disposing</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>The disposing parameter is a <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">bool</a> that indicates whether the method call comes from a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable.dispose">Dispose()</a> method (its value is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a>) or from a finalizer (its value is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>)</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="MASES_KNet_Streams_Processor_Api_ProcessorContext_4_Forward_" data-uid="MASES.KNet.Streams.Processor.Api.ProcessorContext`4.Forward*"></a>
 
   <h3 id="MASES_KNet_Streams_Processor_Api_ProcessorContext_4_Forward__4_MASES_KNet_Streams_Processor_Api_Record___0___1___2___3__" data-uid="MASES.KNet.Streams.Processor.Api.ProcessorContext`4.Forward``4(MASES.KNet.Streams.Processor.Api.Record{``0,``1,``2,``3})">
   Forward&lt;K, V, TJVMK, TJVMV&gt;(Record&lt;K, V, TJVMK, TJVMV&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/Api/ProcessorContext.cs/#L67"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/Api/ProcessorContext.cs/#L109"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/processor/api/ProcessorContext.html#forward(org.apache.kafka.streams.processor.api.Record)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/processor/api/ProcessorContext.html#forward(org.apache.kafka.streams.processor.api.Record)</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/api/ProcessorContext.html#forward(org.apache.kafka.streams.processor.api.Record)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/api/ProcessorContext.html#forward(org.apache.kafka.streams.processor.api.Record)</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -684,10 +791,10 @@ Class ProcessorContext&lt;KForward, VForward, TJVMKForward, TJVMVForward&gt;  <a
 
   <h3 id="MASES_KNet_Streams_Processor_Api_ProcessorContext_4_Forward__4_MASES_KNet_Streams_Processor_Api_Record___0___1___2___3__System_String_" data-uid="MASES.KNet.Streams.Processor.Api.ProcessorContext`4.Forward``4(MASES.KNet.Streams.Processor.Api.Record{``0,``1,``2,``3},System.String)">
   Forward&lt;K, V, TJVMK, TJVMV&gt;(Record&lt;K, V, TJVMK, TJVMV&gt;, string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/Api/ProcessorContext.cs/#L55"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/Api/ProcessorContext.cs/#L95"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/processor/api/ProcessorContext.html#forward(org.apache.kafka.streams.processor.api.Record,java.lang.String)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/processor/api/ProcessorContext.html#forward(org.apache.kafka.streams.processor.api.Record,java.lang.String)</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/api/ProcessorContext.html#forward(org.apache.kafka.streams.processor.api.Record,java.lang.String)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/api/ProcessorContext.html#forward(org.apache.kafka.streams.processor.api.Record,java.lang.String)</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -735,10 +842,10 @@ Class ProcessorContext&lt;KForward, VForward, TJVMKForward, TJVMVForward&gt;  <a
 
   <h3 id="MASES_KNet_Streams_Processor_Api_ProcessorContext_4_GetStateStore__1_System_String_" data-uid="MASES.KNet.Streams.Processor.Api.ProcessorContext`4.GetStateStore``1(System.String)">
   GetStateStore&lt;S&gt;(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/Api/ProcessorContext.cs/#L82"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/Api/ProcessorContext.cs/#L125"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/processor/api/ProcessingContext.html#getStateStore(java.lang.String)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/processor/api/ProcessingContext.html#getStateStore(java.lang.String)</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/api/ProcessingContext.html#getStateStore(java.lang.String)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/api/ProcessingContext.html#getStateStore(java.lang.String)</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -780,10 +887,10 @@ Class ProcessorContext&lt;KForward, VForward, TJVMKForward, TJVMVForward&gt;  <a
 
   <h3 id="MASES_KNet_Streams_Processor_Api_ProcessorContext_4_Schedule_Java_Time_Duration_Org_Apache_Kafka_Streams_Processor_PunctuationType_Org_Apache_Kafka_Streams_Processor_Punctuator_" data-uid="MASES.KNet.Streams.Processor.Api.ProcessorContext`4.Schedule(Java.Time.Duration,Org.Apache.Kafka.Streams.Processor.PunctuationType,Org.Apache.Kafka.Streams.Processor.Punctuator)">
   Schedule(Duration, PunctuationType, Punctuator)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/Api/ProcessorContext.cs/#L160"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/Api/ProcessorContext.cs/#L208"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/processor/api/ProcessingContext.html#schedule(java.time.Duration,org.apache.kafka.streams.processor.PunctuationType,org.apache.kafka.streams.processor.Punctuator)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.0/org/apache/kafka/streams/processor/api/ProcessingContext.html#schedule(java.time.Duration,org.apache.kafka.streams.processor.PunctuationType,org.apache.kafka.streams.processor.Punctuator)</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/api/ProcessingContext.html#schedule(java.time.Duration,org.apache.kafka.streams.processor.PunctuationType,org.apache.kafka.streams.processor.Punctuator)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/api/ProcessingContext.html#schedule(java.time.Duration,org.apache.kafka.streams.processor.PunctuationType,org.apache.kafka.streams.processor.Punctuator)</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -829,7 +936,7 @@ Class ProcessorContext&lt;KForward, VForward, TJVMKForward, TJVMVForward&gt;  <a
 
   <h3 id="MASES_KNet_Streams_Processor_Api_ProcessorContext_4_op_Implicit_MASES_KNet_Streams_Processor_Api_ProcessorContext__0__1__2__3___Org_Apache_Kafka_Streams_Processor_Api_ProcessorContext__2__3_" data-uid="MASES.KNet.Streams.Processor.Api.ProcessorContext`4.op_Implicit(MASES.KNet.Streams.Processor.Api.ProcessorContext{`0,`1,`2,`3})~Org.Apache.Kafka.Streams.Processor.Api.ProcessorContext{`2,`3}">
   implicit operator ProcessorContext&lt;TJVMKForward, TJVMVForward&gt;(ProcessorContext&lt;KForward, VForward, TJVMKForward, TJVMVForward&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/Api/ProcessorContext.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/Api/ProcessorContext.cs/#L82"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Converter from <a class="xref" href="MASES.KNet.Streams.Processor.Api.ProcessorContext-4.html">ProcessorContext&lt;KForward, VForward, TJVMKForward, TJVMVForward&gt;</a> to <a class="xref" href="Org.Apache.Kafka.Streams.Processor.Api.ProcessorContext-2.html">ProcessorContext&lt;KForward, VForward&gt;</a></p>
@@ -866,7 +973,7 @@ Class ProcessorContext&lt;KForward, VForward, TJVMKForward, TJVMVForward&gt;  <a
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/Api/ProcessorContext.cs/#L30" class="edit-link">Edit this page</a>
+          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/Processor/Api/ProcessorContext.cs/#L32" class="edit-link">Edit this page</a>
         </div>
 
 

@@ -208,6 +208,48 @@ Interface ISerializer&lt;T, TJVMT&gt;  <a class="header-action link-secondary" t
 
   <a id="MASES_KNet_Serialization_ISerializer_2_Serialize_" data-uid="MASES.KNet.Serialization.ISerializer`2.Serialize*"></a>
 
+  <h3 id="MASES_KNet_Serialization_ISerializer_2_Serialize_Java_Lang_String__0_" data-uid="MASES.KNet.Serialization.ISerializer`2.Serialize(Java.Lang.String,`0)">
+  Serialize(String, T)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/ISerializer.cs/#L39"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Executes the Serializer action in the CLR</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">TJVMT Serialize(String topic, T data)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>topic</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd><p>topic associated with the data</p>
+</dd>
+    <dt><code>data</code> <span class="xref">T</span></dt>
+    <dd><p><code class="typeparamref">T</code> data</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">TJVMT</span></dt>
+    <dd><p>serialized bytes</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Serialization_ISerializer_2_Serialize_" data-uid="MASES.KNet.Serialization.ISerializer`2.Serialize*"></a>
+
   <h3 id="MASES_KNet_Serialization_ISerializer_2_Serialize_System_String__0_" data-uid="MASES.KNet.Serialization.ISerializer`2.Serialize(System.String,`0)">
   Serialize(string, T)
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/ISerializer.cs/#L37"><i class="bi bi-code-slash"></i></a>
@@ -250,9 +292,54 @@ Interface ISerializer&lt;T, TJVMT&gt;  <a class="header-action link-secondary" t
 
   <a id="MASES_KNet_Serialization_ISerializer_2_SerializeWithHeaders_" data-uid="MASES.KNet.Serialization.ISerializer`2.SerializeWithHeaders*"></a>
 
+  <h3 id="MASES_KNet_Serialization_ISerializer_2_SerializeWithHeaders_Java_Lang_String_Org_Apache_Kafka_Common_Header_Headers__0_" data-uid="MASES.KNet.Serialization.ISerializer`2.SerializeWithHeaders(Java.Lang.String,Org.Apache.Kafka.Common.Header.Headers,`0)">
+  SerializeWithHeaders(String, Headers, T)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/ISerializer.cs/#L43"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Executes the Serializer action in the CLR</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">TJVMT SerializeWithHeaders(String topic, Headers headers, T data)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>topic</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.String.html">String</a></dt>
+    <dd><p>topic associated with the data</p>
+</dd>
+    <dt><code>headers</code> <a class="xref" href="Org.Apache.Kafka.Common.Header.Headers.html">Headers</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Common.Header.Headers.html">Headers</a> associated with the record; may be empty.</p>
+</dd>
+    <dt><code>data</code> <span class="xref">T</span></dt>
+    <dd><p><code class="typeparamref">T</code> data</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">TJVMT</span></dt>
+    <dd><p>serialized bytes</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_KNet_Serialization_ISerializer_2_SerializeWithHeaders_" data-uid="MASES.KNet.Serialization.ISerializer`2.SerializeWithHeaders*"></a>
+
   <h3 id="MASES_KNet_Serialization_ISerializer_2_SerializeWithHeaders_System_String_Org_Apache_Kafka_Common_Header_Headers__0_" data-uid="MASES.KNet.Serialization.ISerializer`2.SerializeWithHeaders(System.String,Org.Apache.Kafka.Common.Header.Headers,`0)">
   SerializeWithHeaders(string, Headers, T)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/ISerializer.cs/#L39"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Serialization/ISerializer.cs/#L41"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Executes the Serializer action in the CLR</p>

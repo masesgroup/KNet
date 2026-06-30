@@ -140,7 +140,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <param name="arg2"><see cref="Org.Apache.Kafka.Streams.Processor.TimestampExtractor"/></param>
         /// <param name="arg3"><see cref="Org.Apache.Kafka.Streams.Topology.AutoOffsetReset"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Consumed"/></returns>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public static Org.Apache.Kafka.Streams.Kstream.Consumed With(Org.Apache.Kafka.Common.Serialization.Serde arg0, Org.Apache.Kafka.Common.Serialization.Serde arg1, Org.Apache.Kafka.Streams.Processor.TimestampExtractor arg2, Org.Apache.Kafka.Streams.Topology.AutoOffsetReset arg3)
         {
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.Consumed>(LocalBridgeClazz, "with", "(Lorg/apache/kafka/common/serialization/Serde;Lorg/apache/kafka/common/serialization/Serde;Lorg/apache/kafka/streams/processor/TimestampExtractor;Lorg/apache/kafka/streams/Topology$AutoOffsetReset;)Lorg/apache/kafka/streams/kstream/Consumed;", arg0, arg1, arg2, arg3);
@@ -178,7 +178,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Topology.AutoOffsetReset"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Consumed"/></returns>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public static Org.Apache.Kafka.Streams.Kstream.Consumed With(Org.Apache.Kafka.Streams.Topology.AutoOffsetReset arg0)
         {
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.Consumed>(LocalBridgeClazz, "with", "(Lorg/apache/kafka/streams/Topology$AutoOffsetReset;)Lorg/apache/kafka/streams/kstream/Consumed;", arg0);
@@ -210,7 +210,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Topology.AutoOffsetReset"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Consumed"/></returns>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public Org.Apache.Kafka.Streams.Kstream.Consumed WithOffsetResetPolicy(Org.Apache.Kafka.Streams.Topology.AutoOffsetReset arg0)
         {
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.Consumed>("withOffsetResetPolicy", "(Lorg/apache/kafka/streams/Topology$AutoOffsetReset;)Lorg/apache/kafka/streams/kstream/Consumed;", arg0);
@@ -293,7 +293,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// <param name="arg2"><see cref="Org.Apache.Kafka.Streams.Processor.TimestampExtractor"/></param>
         /// <param name="arg3"><see cref="Org.Apache.Kafka.Streams.Topology.AutoOffsetReset"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Consumed"/></returns>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public static Org.Apache.Kafka.Streams.Kstream.Consumed<K, V> With(Org.Apache.Kafka.Common.Serialization.Serde<K> arg0, Org.Apache.Kafka.Common.Serialization.Serde<V> arg1, Org.Apache.Kafka.Streams.Processor.TimestampExtractor arg2, Org.Apache.Kafka.Streams.Topology.AutoOffsetReset arg3)
         {
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.Consumed<K, V>>(LocalBridgeClazz, "with", "(Lorg/apache/kafka/common/serialization/Serde;Lorg/apache/kafka/common/serialization/Serde;Lorg/apache/kafka/streams/processor/TimestampExtractor;Lorg/apache/kafka/streams/Topology$AutoOffsetReset;)Lorg/apache/kafka/streams/kstream/Consumed;", arg0, arg1, arg2, arg3);
@@ -331,7 +331,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Topology.AutoOffsetReset"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Consumed"/></returns>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public static Org.Apache.Kafka.Streams.Kstream.Consumed<K, V> With(Org.Apache.Kafka.Streams.Topology.AutoOffsetReset arg0)
         {
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.Consumed<K, V>>(LocalBridgeClazz, "with", "(Lorg/apache/kafka/streams/Topology$AutoOffsetReset;)Lorg/apache/kafka/streams/kstream/Consumed;", arg0);
@@ -363,7 +363,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Topology.AutoOffsetReset"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Consumed"/></returns>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public Org.Apache.Kafka.Streams.Kstream.Consumed<K, V> WithOffsetResetPolicy(Org.Apache.Kafka.Streams.Topology.AutoOffsetReset arg0)
         {
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.Consumed<K, V>>("withOffsetResetPolicy", "(Lorg/apache/kafka/streams/Topology$AutoOffsetReset;)Lorg/apache/kafka/streams/kstream/Consumed;", arg0);

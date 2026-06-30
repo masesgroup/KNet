@@ -208,12 +208,12 @@ namespace Org.Apache.Kafka.Common.Config
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/config/TopicConfig.html#MESSAGE_DOWNCONVERSION_ENABLE_CONFIG"/>
         /// </summary>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public static Java.Lang.String MESSAGE_DOWNCONVERSION_ENABLE_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "MESSAGE_DOWNCONVERSION_ENABLE_CONFIG"); } set { SSetField(LocalBridgeClazz, "MESSAGE_DOWNCONVERSION_ENABLE_CONFIG", value); } }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/config/TopicConfig.html#MESSAGE_DOWNCONVERSION_ENABLE_DOC"/>
         /// </summary>
-        [global::System.Obsolete()]
+        [global::System.Obsolete("Deprecated in JVM")]
         public static Java.Lang.String MESSAGE_DOWNCONVERSION_ENABLE_DOC { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "MESSAGE_DOWNCONVERSION_ENABLE_DOC"); } set { SSetField(LocalBridgeClazz, "MESSAGE_DOWNCONVERSION_ENABLE_DOC", value); } }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/config/TopicConfig.html#MESSAGE_TIMESTAMP_AFTER_MAX_MS_CONFIG"/>
