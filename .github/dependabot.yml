@@ -16,6 +16,17 @@ updates:
       interval: "weekly"
     target-branch: "release/2.9.X"
 
+  - package-ecosystem: "nuget" # See documentation for possible values
+    directory: "/tests/net" # Location of package manifests
+    schedule:
+      interval: "weekly"
+
+  - package-ecosystem: "nuget" # See documentation for possible values
+    directory: "/tests/net" # Location of package manifests
+    schedule:
+      interval: "weekly"
+    target-branch: "release/2.9.X"
+
   - package-ecosystem: maven
     directory: "/src/jvm/knet"
     schedule:
@@ -23,6 +34,17 @@ updates:
 
   - package-ecosystem: maven
     directory: "/src/jvm/knet"
+    schedule:
+      interval: "weekly"
+    target-branch: "release/2.9.X"
+
+  - package-ecosystem: maven
+    directory: "/tests/jvm/testclass"
+    schedule:
+      interval: "weekly"
+
+  - package-ecosystem: maven
+    directory: "/tests/jvm/testclass"
     schedule:
       interval: "weekly"
     target-branch: "release/2.9.X"
