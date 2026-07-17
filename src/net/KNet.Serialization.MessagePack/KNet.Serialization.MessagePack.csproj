@@ -22,7 +22,7 @@
 	</ItemGroup>
 	<ItemGroup>
 	  <PackageReference Include="MessagePack" Version="3.1.7" />
-	  <PackageReference Include="Microsoft.SourceLink.GitHub" Version="10.0.300">
+	  <PackageReference Include="Microsoft.SourceLink.GitHub" Version="10.0.301">
 	    <PrivateAssets>all</PrivateAssets>
 	    <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 	  </PackageReference>
