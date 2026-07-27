@@ -64,7 +64,7 @@ jobs:
           fetch-depth: '1'
           submodules: 'true'
 
-      - uses: actions/setup-dotnet@v5
+      - uses: actions/setup-dotnet@v6
         with:
           dotnet-version: |
             8.x
@@ -137,7 +137,7 @@ jobs:
           fetch-depth: '1'
           submodules: 'true'
 
-      - uses: actions/setup-dotnet@v5
+      - uses: actions/setup-dotnet@v6
         with:
           dotnet-version: |
             9.x
@@ -237,17 +237,17 @@ jobs:
 
     steps:
       # ── .NET SDK for this matrix leg ────────────────────────────────────────
-      - uses: actions/setup-dotnet@v5
+      - uses: actions/setup-dotnet@v6
         if: matrix.framework == 'net8.0'
         with:
           dotnet-version: 8.x
 
-      - uses: actions/setup-dotnet@v5
+      - uses: actions/setup-dotnet@v6
         if: matrix.framework == 'net9.0'
         with:
           dotnet-version: 9.x
 
-      - uses: actions/setup-dotnet@v5
+      - uses: actions/setup-dotnet@v6
         if: matrix.framework == 'net10.0'
         with:
           dotnet-version: 10.x
