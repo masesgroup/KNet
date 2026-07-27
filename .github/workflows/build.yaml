@@ -132,7 +132,7 @@ jobs:
           fetch-depth: '1'
           submodules: 'true'
 
-      - uses: actions/setup-dotnet@v5
+      - uses: actions/setup-dotnet@v6
         with:
           dotnet-version: |
             9.x
@@ -301,7 +301,7 @@ jobs:
         if: ${{ success() && inputs.UseLastRepositoryBuild == true }}
         run: dotnet nuget add source --name local "${{ github.workspace }}/JNetNuGet/"
 
-      - uses: actions/setup-dotnet@v5
+      - uses: actions/setup-dotnet@v6
         with:
           dotnet-version: |
             9.x
@@ -431,13 +431,13 @@ jobs:
           distribution: 'graalvm' # See 'Supported distributions' for available options
           github-token: ${{ secrets.GITHUB_TOKEN }}
 
-      - uses: actions/setup-dotnet@v5
+      - uses: actions/setup-dotnet@v6
         if: ${{ matrix.framework == 'net9.0' }}
         with:
           dotnet-version: |
             9.x
 
-      - uses: actions/setup-dotnet@v5
+      - uses: actions/setup-dotnet@v6
         if: ${{ matrix.framework == 'net10.0' }}
         with:
           dotnet-version: |
@@ -534,7 +534,7 @@ jobs:
           distribution: 'graalvm' # See 'Supported distributions' for available options
           github-token: ${{ secrets.GITHUB_TOKEN }}
 
-      - uses: actions/setup-dotnet@v5
+      - uses: actions/setup-dotnet@v6
         if: ${{ matrix.framework == 'net10.0' }}
         with:
           dotnet-version: |
@@ -649,19 +649,19 @@ jobs:
           distribution: 'graalvm' # See 'Supported distributions' for available options
           github-token: ${{ secrets.GITHUB_TOKEN }}
 
-      - uses: actions/setup-dotnet@v5
+      - uses: actions/setup-dotnet@v6
         if: ${{ matrix.framework == 'net8.0' }}
         with:
           dotnet-version: |
             8.x
 
-      - uses: actions/setup-dotnet@v5
+      - uses: actions/setup-dotnet@v6
         if: ${{ matrix.framework == 'net9.0' }}
         with:
           dotnet-version: |
             9.x
 
-      - uses: actions/setup-dotnet@v5
+      - uses: actions/setup-dotnet@v6
         if: ${{ matrix.framework == 'net10.0' }}
         with:
           dotnet-version: |
