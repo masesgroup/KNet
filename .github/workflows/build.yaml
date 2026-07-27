@@ -155,6 +155,7 @@ jobs:
       packages: write
       id-token: write
       artifact-metadata: write
+      actions: write # required by final_cleanup's `gh actions-cache delete` (and any gh run download/artifact calls) - without it, cache/artifact API calls fail with "Resource not accessible by integration"
     uses: ./.github/workflows/build_common.yaml
     with:
       ExecuteOnMoreOSes: ${{ inputs.ExecuteOnMoreOSes || github.event_name == 'schedule' }}
