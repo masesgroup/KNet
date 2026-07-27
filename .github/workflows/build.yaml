@@ -155,6 +155,7 @@ jobs:
       packages: write
       id-token: write
       artifact-metadata: write
+      actions: write
     uses: ./.github/workflows/build_common.yaml
     with:
       ExecuteOnMoreOSes: ${{ inputs.ExecuteOnMoreOSes || github.event_name == 'schedule' }}
