@@ -269,13 +269,6 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <returns>A <see cref="System.Collections.Generic.IDictionary{TKey, TValue}"/> containing the EarliestLocal offset for each partition</returns>
         System.Collections.Generic.IDictionary<int, long> EarliestLocalPartitionOffsetForTopic(string topicName, long delta = 0);
         /// <summary>
-        /// Returns a <see cref="System.Collections.Generic.IDictionary{TKey, TValue}"/> containing the EarliestPendingUpload offset for each partition of the <paramref name="topicName"/>
-        /// </summary>
-        /// <param name="topicName">The topic to be queried</param>
-        /// <param name="delta">A value to be added to each offset retrieved</param>
-        /// <returns>A <see cref="System.Collections.Generic.IDictionary{TKey, TValue}"/> containing the EarliestPendingUpload offset for each partition</returns>
-        System.Collections.Generic.IDictionary<int, long> EarliestPendingUploadPartitionOffsetForTopic(string topicName, long delta = 0);
-        /// <summary>
         /// Returns a <see cref="System.Collections.Generic.IDictionary{TKey, TValue}"/> containing the Latest offset for each partition of the <paramref name="topicName"/>
         /// </summary>
         /// <param name="topicName">The topic to be queried</param>
@@ -349,13 +342,6 @@ namespace Org.Apache.Kafka.Clients.Admin
         public System.Collections.Generic.IDictionary<int, long> EarliestLocalPartitionOffsetForTopic(string topicName, long delta = 0)
         {
             using var offsetSpec = OffsetSpec.EarliestLocal();
-            return PartitionOffsetForTopic(topicName, offsetSpec, delta);
-        }
-
-        /// <inheritdoc/>
-        public System.Collections.Generic.IDictionary<int, long> EarliestPendingUploadPartitionOffsetForTopic(string topicName, long delta = 0)
-        {
-            using var offsetSpec = OffsetSpec.EarliestPendingUpload();
             return PartitionOffsetForTopic(topicName, offsetSpec, delta);
         }
 
