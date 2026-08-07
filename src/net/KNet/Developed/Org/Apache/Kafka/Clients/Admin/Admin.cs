@@ -289,6 +289,14 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// <param name="delta">A value to be added to each offset retrieved</param>
         /// <returns>A <see cref="System.Collections.Generic.IDictionary{TKey, TValue}"/> containing the LatestTiered offset for each partition</returns>
         System.Collections.Generic.IDictionary<int, long> LatestTieredPartitionOffsetForTopic(string topicName, long delta = -1);
+        /// <summary>
+        /// Returns a <see cref="System.Collections.Generic.IDictionary{TKey, TValue}"/> containing the Latest offset for each partition of the <paramref name="topicName"/>
+        /// </summary>
+        /// <param name="topicName">The topic to be queried</param>
+        /// <param name="delta">A value to be added to each offset retrieved</param>
+        /// <returns>A <see cref="System.Collections.Generic.IDictionary{TKey, TValue}"/> containing the Latest offset for each partition</returns>
+        [Obsolete("Use LatestTieredPartitionOffsetForTopic", true)]
+        System.Collections.Generic.IDictionary<int, long> LastPartitionOffsetForTopic(string topicName);
     }
 
     public partial class Admin
@@ -363,6 +371,14 @@ namespace Org.Apache.Kafka.Clients.Admin
         {
             using var offsetSpec = OffsetSpec.LatestTiered();
             return PartitionOffsetForTopic(topicName, offsetSpec, delta);
+        }
+
+        /// <inheritdoc/>
+        [Obsolete("Use LatestTieredPartitionOffsetForTopic", true)]
+        System.Collections.Generic.IDictionary<int, long> LastPartitionOffsetForTopic(string topicName)
+        {
+            using var offsetSpec = OffsetSpec.Latest();
+            return PartitionOffsetForTopic(topicName, offsetSpec, -1);
         }
 
         System.Collections.Generic.IDictionary<int, long> PartitionOffsetForTopic(string topicName, OffsetSpec offsetSpec, long delta)
