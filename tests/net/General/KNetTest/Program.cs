@@ -313,7 +313,7 @@ namespace MASES.KNetTest
                 Console.WriteLine($"LastOffsetOfTopic for {topicName} using an AdminClient based on {props}");
 
                 using IAdmin admin = KafkaAdminClient.Create(props);
-                return admin.LastPartitionOffsetForTopic(topicName);
+                return admin.LatestPartitionOffsetForTopic(topicName);
             }
             catch (Java.Util.Concurrent.ExecutionException ex)
             {
