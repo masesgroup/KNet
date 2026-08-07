@@ -371,7 +371,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         /// <inheritdoc/>
         [Obsolete("Use LatestTieredPartitionOffsetForTopic", true)]
-        System.Collections.Generic.IDictionary<int, long> LastPartitionOffsetForTopic(string topicName)
+        public System.Collections.Generic.IDictionary<int, long> LastPartitionOffsetForTopic(string topicName)
         {
             using var offsetSpec = OffsetSpec.Latest();
             return PartitionOffsetForTopic(topicName, offsetSpec, -1);
