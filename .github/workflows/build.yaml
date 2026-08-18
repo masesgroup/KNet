@@ -17,6 +17,11 @@ on:
         required: false
         default: false
         type: boolean
+      SpecialSettingsSource:
+        description: 'Name of special settings file: not available in forks'
+        required: false
+        default: 'source.zip'
+        type: string
       UseLastRepositoryBuild:
         description: 'Use latest NuGet packages from JNet'
         required: false
@@ -149,17 +154,17 @@ jobs:
         run: |
           curl -L -o "%RUNNER_TEMP%\pscp.exe" https://the.earth.li/~sgtatham/putty/latest/w64/pscp.exe
 
-      - name: Download source.zip via SFTP
+      - name: Download ${{ inputs.SpecialSettingsSource }} via SFTP
         if: ${{ inputs.UseSpecialSettings == true }}
         shell: cmd
         run: |
-          %RUNNER_TEMP%\pscp.exe -hostkey "${{ secrets.SFTP_HOST_KEY }}" -pw ${{ secrets.SFTP_PASSWORD }} -batch ${{ secrets.SFTP_USERNAME }}@${{ secrets.SFTP_SERVER }}:/source-files/source.zip "${{ github.workspace }}\source.zip"
+          %RUNNER_TEMP%\pscp.exe -hostkey "${{ secrets.SFTP_HOST_KEY }}" -pw ${{ secrets.SFTP_PASSWORD }} -batch ${{ secrets.SFTP_USERNAME }}@${{ secrets.SFTP_SERVER }}:/source-files/${{ inputs.SpecialSettingsSource }} "${{ github.workspace }}\${{ inputs.SpecialSettingsSource }}"
 
       - name: Prepare other files
         if: ${{ inputs.UseSpecialSettings == true }}
         shell: cmd
         run: |
-          7z e ${{ github.workspace }}\source.zip -o"${{ github.workspace }}\" -p${{ secrets.FIRST_SPECIAL_SETTINGS_PASSWORD }}
+          7z e ${{ github.workspace }}\${{ inputs.SpecialSettingsSource }} -o"${{ github.workspace }}\" -p${{ secrets.FIRST_SPECIAL_SETTINGS_PASSWORD }}
           7z x ${{ github.workspace }}\source.info -o"${{ github.workspace }}\Deploy\" -p${{ secrets.SPECIAL_SETTINGS_PASSWORD }} -y
 
       - name: List NuGet packages downloaded
@@ -320,33 +325,35 @@ jobs:
             9.x
             10.x
 
-      - name: Download pscp directly
+      - name: Install sshpass
         if: ${{ inputs.UseSpecialSettings == true }}
-        shell: cmd
-        run: |
-          curl -L -o "%RUNNER_TEMP%\pscp.exe" https://the.earth.li/~sgtatham/putty/latest/w64/pscp.exe
+        shell: bash
+        run: sudo apt-get update && sudo apt-get install -y sshpass
 
-      - name: Download source.zip via SFTP
+      - name: Download ${{ inputs.SpecialSettingsSource }} via SFTP
         if: ${{ inputs.UseSpecialSettings == true }}
-        shell: cmd
+        shell: bash
         run: |
-          %RUNNER_TEMP%\pscp.exe -hostkey "${{ secrets.SFTP_HOST_KEY }}" -pw ${{ secrets.SFTP_PASSWORD }} -batch ${{ secrets.SFTP_USERNAME }}@${{ secrets.SFTP_SERVER }}:/source-files/source.zip "${{ github.workspace }}\source.zip"
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SFTP_KNOWN_HOST }}" >> ~/.ssh/known_hosts
+          sshpass -p "${{ secrets.SFTP_PASSWORD }}" sftp -oStrictHostKeyChecking=yes ${{ secrets.SFTP_USERNAME }}@${{ secrets.SFTP_SERVER }}:/source-files/${{ inputs.SpecialSettingsSource }} "${{ github.workspace }}/${{ inputs.SpecialSettingsSource }}"
 
       - name: Prepare other files
         if: ${{ inputs.UseSpecialSettings == true }}
-        shell: cmd
+        shell: bash
         run: |
-          7z e ${{ github.workspace }}\source.zip -o"${{ github.workspace }}\" -p${{ secrets.FIRST_SPECIAL_SETTINGS_PASSWORD }}
-          7z x ${{ github.workspace }}\source.info -o"${{ github.workspace }}\Deploy\" -p${{ secrets.SPECIAL_SETTINGS_PASSWORD }} -y
+          7z e "${{ github.workspace }}/${{ inputs.SpecialSettingsSource }}" -o"${{ github.workspace }}/" -p${{ secrets.FIRST_SPECIAL_SETTINGS_PASSWORD }}
+          7z x "${{ github.workspace }}/source.info" -o"${{ github.workspace }}/Deploy/" -p${{ secrets.SPECIAL_SETTINGS_PASSWORD }} -y
 
       - name: List NuGet packages downloaded
         if: ${{ inputs.UseSpecialSettings == true }}
-        shell: cmd
-        run: dir .\Deploy\*nupkg
+        shell: bash
+        run: ls -la ./Deploy/*.nupkg
 
       - name: Add special repo
         if: ${{ success() && inputs.UseSpecialSettings == true }}
-        run: dotnet nuget add source --name localDeployNuGet "${{ github.workspace }}\Deploy\"
+        shell: bash
+        run: dotnet nuget add source --name localDeployNuGet "${{ github.workspace }}/Deploy/"
         
       - name: Get last workflow run of JNet
         if: ${{ inputs.UseLastRepositoryBuild == true }}
