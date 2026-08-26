@@ -3,6 +3,16 @@ name: KNet Performance Benchmark
 on:
   workflow_dispatch:
     inputs:
+      UseSpecialSettings:
+        description: 'Use special settings: not available in forks'
+        required: false
+        default: false
+        type: boolean
+      SpecialSettingsSource:
+        description: 'Name of special settings file: not available in forks'
+        required: false
+        default: 'source.zip'
+        type: string
       Repeat:
         description: 'Number of test repetitions per combination (schedule uses 20)'
         required: false
@@ -70,6 +80,34 @@ jobs:
             8.x
             9.x
             10.x
+
+      - name: Download pscp directly
+        if: ${{ inputs.UseSpecialSettings == true }}
+        shell: cmd
+        run: |
+          curl -L -o "%RUNNER_TEMP%\pscp.exe" https://the.earth.li/~sgtatham/putty/latest/w64/pscp.exe
+
+      - name: Download ${{ inputs.SpecialSettingsSource }} via SFTP
+        if: ${{ inputs.UseSpecialSettings == true }}
+        shell: cmd
+        run: |
+          %RUNNER_TEMP%\pscp.exe -hostkey "${{ secrets.SFTP_HOST_KEY }}" -pw ${{ secrets.SFTP_PASSWORD }} -batch ${{ secrets.SFTP_USERNAME }}@${{ secrets.SFTP_SERVER }}:/source-files/${{ inputs.SpecialSettingsSource }} "${{ github.workspace }}\${{ inputs.SpecialSettingsSource }}"
+
+      - name: Prepare other files
+        if: ${{ inputs.UseSpecialSettings == true }}
+        shell: cmd
+        run: |
+          7z e ${{ github.workspace }}\${{ inputs.SpecialSettingsSource }} -o"${{ github.workspace }}\" -p${{ secrets.FIRST_SPECIAL_SETTINGS_PASSWORD }}
+          7z x ${{ github.workspace }}\source.info -o"${{ github.workspace }}\Deploy\" -p${{ secrets.SPECIAL_SETTINGS_PASSWORD }} -y
+
+      - name: List NuGet packages downloaded
+        if: ${{ inputs.UseSpecialSettings == true }}
+        shell: cmd
+        run: dir .\Deploy\*nupkg
+
+      - name: Add special repo
+        if: ${{ success() && inputs.UseSpecialSettings == true }}
+        run: dotnet nuget add source --name localDeployNuGet "${{ github.workspace }}\Deploy\"
 
       - name: Pre compile
         run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" /p:NoWarn="0108%3B1030%3B0618%3B0612" src\net\KNet\KNet.csproj
@@ -142,6 +180,36 @@ jobs:
           dotnet-version: |
             9.x
             10.x
+
+      - name: Install sshpass
+        if: ${{ inputs.UseSpecialSettings == true }}
+        shell: bash
+        run: sudo apt-get update && sudo apt-get install -y sshpass
+
+      - name: Download ${{ inputs.SpecialSettingsSource }} via SFTP
+        if: ${{ inputs.UseSpecialSettings == true }}
+        shell: bash
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SFTP_KNOWN_HOST }}" >> ~/.ssh/known_hosts
+          sshpass -p "${{ secrets.SFTP_PASSWORD }}" sftp -oStrictHostKeyChecking=yes ${{ secrets.SFTP_USERNAME }}@${{ secrets.SFTP_SERVER }}:/source-files/${{ inputs.SpecialSettingsSource }} "${{ github.workspace }}/${{ inputs.SpecialSettingsSource }}"
+
+      - name: Prepare other files
+        if: ${{ inputs.UseSpecialSettings == true }}
+        shell: bash
+        run: |
+          7z e "${{ github.workspace }}/${{ inputs.SpecialSettingsSource }}" -o"${{ github.workspace }}/" -p${{ secrets.FIRST_SPECIAL_SETTINGS_PASSWORD }}
+          7z x "${{ github.workspace }}/source.info" -o"${{ github.workspace }}/Deploy/" -p${{ secrets.SPECIAL_SETTINGS_PASSWORD }} -y
+
+      - name: List NuGet packages downloaded
+        if: ${{ inputs.UseSpecialSettings == true }}
+        shell: bash
+        run: ls -la ./Deploy/*.nupkg
+
+      - name: Add special repo
+        if: ${{ success() && inputs.UseSpecialSettings == true }}
+        shell: bash
+        run: dotnet nuget add source --name localDeployNuGet "${{ github.workspace }}/Deploy/"
 
       - name: Pre compile
         run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" /p:NoWarn="0108%3B1030%3B0618%3B0612" src/net/KNet/KNet.csproj
