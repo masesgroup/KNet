@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Tools.Api
 {
     #region DefaultDecoder declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools-api/4.2.1/org/apache/kafka/tools/api/DefaultDecoder.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools-api/4.3.1/org/apache/kafka/tools/api/DefaultDecoder.html"/>
     /// </summary>
     public partial class DefaultDecoder : Org.Apache.Kafka.Tools.Api.Decoder<byte[]>
     {
@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Tools.Api
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools-api/4.2.1/org/apache/kafka/tools/api/DefaultDecoder.html#%3Cinit%3E()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools-api/4.3.1/org/apache/kafka/tools/api/DefaultDecoder.html#%3Cinit%3E()"/>
         /// </summary>
         public DefaultDecoder() : base(JVMBridgeBase.InitializerInstance)
         {
@@ -94,7 +94,7 @@ namespace Org.Apache.Kafka.Tools.Api
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools-api/4.2.1/org/apache/kafka/tools/api/DefaultDecoder.html#fromBytes(byte[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools-api/4.3.1/org/apache/kafka/tools/api/DefaultDecoder.html#fromBytes(byte[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="byte"/></param>
         /// <returns><see cref="object"/></returns>

@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Security.Authenticator
 {
     #region DefaultLogin declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/security/authenticator/DefaultLogin.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/security/authenticator/DefaultLogin.html"/>
     /// </summary>
     public partial class DefaultLogin : Org.Apache.Kafka.Common.Security.Authenticator.AbstractLogin
     {
@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Common.Security.Authenticator
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/security/authenticator/DefaultLogin.html#%3Cinit%3E()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/security/authenticator/DefaultLogin.html#%3Cinit%3E()"/>
         /// </summary>
         public DefaultLogin() : base(JVMBridgeBase.InitializerInstance)
         {

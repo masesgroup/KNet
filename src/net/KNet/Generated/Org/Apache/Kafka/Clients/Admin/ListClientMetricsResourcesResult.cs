@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 {
     #region ListClientMetricsResourcesResult declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/admin/ListClientMetricsResourcesResult.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/admin/ListClientMetricsResourcesResult.html"/>
     /// </summary>
     [global::System.Obsolete("Deprecated in JVM")]
     public partial class ListClientMetricsResourcesResult : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ListClientMetricsResourcesResult>
@@ -81,7 +81,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/admin/ListClientMetricsResourcesResult.html#all()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/admin/ListClientMetricsResourcesResult.html#all()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.KafkaFuture"/></returns>
         public Org.Apache.Kafka.Common.KafkaFuture<Java.Util.Collection<Org.Apache.Kafka.Clients.Admin.ClientMetricsResourceListing>> All()

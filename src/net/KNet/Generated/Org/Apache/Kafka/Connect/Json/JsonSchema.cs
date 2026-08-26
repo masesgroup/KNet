@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Connect.Json
 {
     #region JsonSchema declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-json/4.2.1/org/apache/kafka/connect/json/JsonSchema.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-json/4.3.1/org/apache/kafka/connect/json/JsonSchema.html"/>
     /// </summary>
     public partial class JsonSchema : MASES.JCOBridge.C2JBridge.JVMBridgeBase<JsonSchema>
     {
@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Connect.Json
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-json/4.2.1/org/apache/kafka/connect/json/JsonSchema.html#%3Cinit%3E()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-json/4.3.1/org/apache/kafka/connect/json/JsonSchema.html#%3Cinit%3E()"/>
         /// </summary>
         public JsonSchema() : base(JVMBridgeBase.InitializerInstance)
         {

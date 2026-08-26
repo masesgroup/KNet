@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Connect.Converters
 {
     #region FloatConverter declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.2.1/org/apache/kafka/connect/converters/FloatConverter.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.3.1/org/apache/kafka/connect/converters/FloatConverter.html"/>
     /// </summary>
     public partial class FloatConverter : MASES.JCOBridge.C2JBridge.JVMBridgeBase<FloatConverter>
     {
@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Connect.Converters
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.2.1/org/apache/kafka/connect/converters/FloatConverter.html#%3Cinit%3E()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.3.1/org/apache/kafka/connect/converters/FloatConverter.html#%3Cinit%3E()"/>
         /// </summary>
         public FloatConverter() : base(JVMBridgeBase.InitializerInstance)
         {

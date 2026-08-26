@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Connect.Components
 {
     #region ConnectPlugin declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.2.1/org/apache/kafka/connect/components/ConnectPlugin.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.3.1/org/apache/kafka/connect/components/ConnectPlugin.html"/>
     /// </summary>
     public partial class ConnectPlugin : Org.Apache.Kafka.Connect.Components.Versioned
     {
@@ -61,7 +61,7 @@ namespace Org.Apache.Kafka.Connect.Components
 
     #region IConnectPlugin
     /// <summary>
-    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.2.1/org/apache/kafka/connect/components/ConnectPlugin.html"/>
+    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.3.1/org/apache/kafka/connect/components/ConnectPlugin.html"/>
     /// </summary>
     public partial interface IConnectPlugin : Org.Apache.Kafka.Connect.Components.IVersioned
     {
@@ -98,7 +98,7 @@ namespace Org.Apache.Kafka.Connect.Components
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.2.1/org/apache/kafka/connect/components/ConnectPlugin.html#config()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.3.1/org/apache/kafka/connect/components/ConnectPlugin.html#config()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Config.ConfigDef"/></returns>
         public Org.Apache.Kafka.Common.Config.ConfigDef Config()

@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 {
     #region SessionWindowedDeserializer declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/SessionWindowedDeserializer.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/kstream/SessionWindowedDeserializer.html"/>
     /// </summary>
     public partial class SessionWindowedDeserializer : MASES.JCOBridge.C2JBridge.JVMBridgeBase<SessionWindowedDeserializer>
     {
@@ -61,7 +61,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region SessionWindowedDeserializer<T> declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/SessionWindowedDeserializer.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/kstream/SessionWindowedDeserializer.html"/>
     /// </summary>
     /// <typeparam name="T"></typeparam>
     public partial class SessionWindowedDeserializer<T> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<SessionWindowedDeserializer<T>>
@@ -99,7 +99,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/SessionWindowedDeserializer.html#%3Cinit%3E()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/kstream/SessionWindowedDeserializer.html#%3Cinit%3E()"/>
         /// </summary>
         public SessionWindowedDeserializer() : base(JVMBridgeBase.InitializerInstance)
         {
@@ -113,7 +113,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return JVMBridgeBase.New<SessionWindowedDeserializer>();
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/SessionWindowedDeserializer.html#%3Cinit%3E(org.apache.kafka.common.serialization.Deserializer)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/kstream/SessionWindowedDeserializer.html#%3Cinit%3E(org.apache.kafka.common.serialization.Deserializer)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Serialization.Deserializer"/></param>
         public SessionWindowedDeserializer(Org.Apache.Kafka.Common.Serialization.Deserializer arg0) : base(JVMBridgeBase.InitializerInstance)
@@ -140,7 +140,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/SessionWindowedDeserializer.html#WINDOWED_INNER_DESERIALIZER_CLASS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/kstream/SessionWindowedDeserializer.html#WINDOWED_INNER_DESERIALIZER_CLASS"/>
         /// </summary>
         public static Java.Lang.String WINDOWED_INNER_DESERIALIZER_CLASS { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "WINDOWED_INNER_DESERIALIZER_CLASS"); } set { SSetField(LocalBridgeClazz, "WINDOWED_INNER_DESERIALIZER_CLASS", value); } }
 
@@ -152,7 +152,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/SessionWindowedDeserializer.html#deserialize(java.lang.String,byte[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/kstream/SessionWindowedDeserializer.html#deserialize(java.lang.String,byte[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="byte"/></param>
@@ -162,7 +162,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return IExecuteWithSignature("deserialize", "(Ljava/lang/String;[B)Ljava/lang/Object;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/SessionWindowedDeserializer.html#deserialize(java.lang.String,org.apache.kafka.common.header.Headers,byte[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/kstream/SessionWindowedDeserializer.html#deserialize(java.lang.String,org.apache.kafka.common.header.Headers,byte[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Header.Headers"/></param>
@@ -173,14 +173,14 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return IExecuteWithSignature("deserialize", "(Ljava/lang/String;Lorg/apache/kafka/common/header/Headers;[B)Ljava/lang/Object;", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/SessionWindowedDeserializer.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/kstream/SessionWindowedDeserializer.html#close()"/>
         /// </summary>
         public void Close()
         {
             IExecuteWithSignature("close", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/SessionWindowedDeserializer.html#configure(java.util.Map,boolean)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/kstream/SessionWindowedDeserializer.html#configure(java.util.Map,boolean)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="bool"/></param>
@@ -204,7 +204,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/SessionWindowedDeserializer.html#%3Cinit%3E()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/kstream/SessionWindowedDeserializer.html#%3Cinit%3E()"/>
         /// </summary>
         public SessionWindowedDeserializer() : base(JVMBridgeBase.InitializerInstance)
         {
@@ -218,7 +218,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return JVMBridgeBase.New<SessionWindowedDeserializer<T>>();
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/SessionWindowedDeserializer.html#%3Cinit%3E(org.apache.kafka.common.serialization.Deserializer)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/kstream/SessionWindowedDeserializer.html#%3Cinit%3E(org.apache.kafka.common.serialization.Deserializer)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Serialization.Deserializer"/></param>
         public SessionWindowedDeserializer(Org.Apache.Kafka.Common.Serialization.Deserializer<T> arg0) : base(JVMBridgeBase.InitializerInstance)
@@ -249,7 +249,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/SessionWindowedDeserializer.html#WINDOWED_INNER_DESERIALIZER_CLASS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/kstream/SessionWindowedDeserializer.html#WINDOWED_INNER_DESERIALIZER_CLASS"/>
         /// </summary>
         public static Java.Lang.String WINDOWED_INNER_DESERIALIZER_CLASS { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "WINDOWED_INNER_DESERIALIZER_CLASS"); } set { SSetField(LocalBridgeClazz, "WINDOWED_INNER_DESERIALIZER_CLASS", value); } }
 
@@ -261,7 +261,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/SessionWindowedDeserializer.html#deserialize(java.lang.String,byte[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/kstream/SessionWindowedDeserializer.html#deserialize(java.lang.String,byte[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="byte"/></param>
@@ -271,7 +271,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return IExecuteWithSignature("deserialize", "(Ljava/lang/String;[B)Ljava/lang/Object;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/SessionWindowedDeserializer.html#deserialize(java.lang.String,org.apache.kafka.common.header.Headers,byte[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/kstream/SessionWindowedDeserializer.html#deserialize(java.lang.String,org.apache.kafka.common.header.Headers,byte[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Header.Headers"/></param>
@@ -282,14 +282,14 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return IExecuteWithSignature("deserialize", "(Ljava/lang/String;Lorg/apache/kafka/common/header/Headers;[B)Ljava/lang/Object;", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/SessionWindowedDeserializer.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/kstream/SessionWindowedDeserializer.html#close()"/>
         /// </summary>
         public void Close()
         {
             IExecuteWithSignature("close", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/SessionWindowedDeserializer.html#configure(java.util.Map,boolean)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/kstream/SessionWindowedDeserializer.html#configure(java.util.Map,boolean)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="bool"/></param>

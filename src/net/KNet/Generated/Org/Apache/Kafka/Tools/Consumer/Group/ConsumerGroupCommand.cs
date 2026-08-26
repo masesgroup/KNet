@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Tools.Consumer.Group
 {
     #region ConsumerGroupCommand declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.2.1/org/apache/kafka/tools/consumer/group/ConsumerGroupCommand.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.3.1/org/apache/kafka/tools/consumer/group/ConsumerGroupCommand.html"/>
     /// </summary>
     public partial class ConsumerGroupCommand : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ConsumerGroupCommand>, MASES.JCOBridge.C2JBridge.IJVMBridgeMain
     {
@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Tools.Consumer.Group
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.2.1/org/apache/kafka/tools/consumer/group/ConsumerGroupCommand.html#%3Cinit%3E()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.3.1/org/apache/kafka/tools/consumer/group/ConsumerGroupCommand.html#%3Cinit%3E()"/>
         /// </summary>
         public ConsumerGroupCommand() : base(JVMBridgeBase.InitializerInstance)
         {
@@ -90,7 +90,7 @@ namespace Org.Apache.Kafka.Tools.Consumer.Group
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.2.1/org/apache/kafka/tools/consumer/group/ConsumerGroupCommand.html#main(java.lang.String[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.3.1/org/apache/kafka/tools/consumer/group/ConsumerGroupCommand.html#main(java.lang.String[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         public static void Main(Java.Lang.String[] arg0)

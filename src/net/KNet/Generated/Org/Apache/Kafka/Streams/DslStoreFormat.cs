@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams
 {
     #region DslStoreFormat declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/DslStoreFormat.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/DslStoreFormat.html"/>
     /// </summary>
     public partial class DslStoreFormat : Java.Lang.Enum<Org.Apache.Kafka.Streams.DslStoreFormat>
     {
@@ -72,19 +72,19 @@ namespace Org.Apache.Kafka.Streams
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/DslStoreFormat.html#name"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/DslStoreFormat.html#name"/>
         /// </summary>
         public Java.Lang.String name { get { return IGetField<Java.Lang.String>("name"); } set { ISetField("name", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/DslStoreFormat.html#HEADERS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/DslStoreFormat.html#HEADERS"/>
         /// </summary>
         public static Org.Apache.Kafka.Streams.DslStoreFormat HEADERS { get { return SGetField<Org.Apache.Kafka.Streams.DslStoreFormat>(LocalBridgeClazz, "HEADERS"); } set { SSetField(LocalBridgeClazz, "HEADERS", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/DslStoreFormat.html#PLAIN"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/DslStoreFormat.html#PLAIN"/>
         /// </summary>
         public static Org.Apache.Kafka.Streams.DslStoreFormat PLAIN { get { return SGetField<Org.Apache.Kafka.Streams.DslStoreFormat>(LocalBridgeClazz, "PLAIN"); } set { SSetField(LocalBridgeClazz, "PLAIN", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/DslStoreFormat.html#TIMESTAMPED"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/DslStoreFormat.html#TIMESTAMPED"/>
         /// </summary>
         public static Org.Apache.Kafka.Streams.DslStoreFormat TIMESTAMPED { get { return SGetField<Org.Apache.Kafka.Streams.DslStoreFormat>(LocalBridgeClazz, "TIMESTAMPED"); } set { SSetField(LocalBridgeClazz, "TIMESTAMPED", value); } }
 
@@ -92,7 +92,7 @@ namespace Org.Apache.Kafka.Streams
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/DslStoreFormat.html#of(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/DslStoreFormat.html#of(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.DslStoreFormat"/></returns>
@@ -101,7 +101,7 @@ namespace Org.Apache.Kafka.Streams
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.DslStoreFormat>(LocalBridgeClazz, "of", "(Ljava/lang/String;)Lorg/apache/kafka/streams/DslStoreFormat;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/DslStoreFormat.html#valueOf(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/DslStoreFormat.html#valueOf(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.DslStoreFormat"/></returns>
@@ -110,7 +110,7 @@ namespace Org.Apache.Kafka.Streams
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.DslStoreFormat>(LocalBridgeClazz, "valueOf", "(Ljava/lang/String;)Lorg/apache/kafka/streams/DslStoreFormat;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/DslStoreFormat.html#values()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/DslStoreFormat.html#values()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Streams.DslStoreFormat"/></returns>
         public static Org.Apache.Kafka.Streams.DslStoreFormat[] Values()

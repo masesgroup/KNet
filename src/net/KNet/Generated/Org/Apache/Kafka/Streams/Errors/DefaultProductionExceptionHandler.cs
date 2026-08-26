@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.Errors
 {
     #region DefaultProductionExceptionHandler declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/errors/DefaultProductionExceptionHandler.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/errors/DefaultProductionExceptionHandler.html"/>
     /// </summary>
     public partial class DefaultProductionExceptionHandler : Org.Apache.Kafka.Streams.Errors.ProductionExceptionHandler
     {
@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Streams.Errors
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/errors/DefaultProductionExceptionHandler.html#%3Cinit%3E()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/errors/DefaultProductionExceptionHandler.html#%3Cinit%3E()"/>
         /// </summary>
         public DefaultProductionExceptionHandler() : base(JVMBridgeBase.InitializerInstance)
         {
@@ -94,7 +94,7 @@ namespace Org.Apache.Kafka.Streams.Errors
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/errors/DefaultProductionExceptionHandler.html#handleError(org.apache.kafka.streams.errors.ErrorHandlerContext,org.apache.kafka.clients.producer.ProducerRecord,java.lang.Exception)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/errors/DefaultProductionExceptionHandler.html#handleError(org.apache.kafka.streams.errors.ErrorHandlerContext,org.apache.kafka.clients.producer.ProducerRecord,java.lang.Exception)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Errors.ErrorHandlerContext"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Producer.ProducerRecord"/></param>
@@ -105,7 +105,7 @@ namespace Org.Apache.Kafka.Streams.Errors
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Errors.ProductionExceptionHandler.Response>("handleError", "(Lorg/apache/kafka/streams/errors/ErrorHandlerContext;Lorg/apache/kafka/clients/producer/ProducerRecord;Ljava/lang/Exception;)Lorg/apache/kafka/streams/errors/ProductionExceptionHandler$Response;", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/errors/DefaultProductionExceptionHandler.html#handleSerializationError(org.apache.kafka.streams.errors.ErrorHandlerContext,org.apache.kafka.clients.producer.ProducerRecord,java.lang.Exception,org.apache.kafka.streams.errors.ProductionExceptionHandler.SerializationExceptionOrigin)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/errors/DefaultProductionExceptionHandler.html#handleSerializationError(org.apache.kafka.streams.errors.ErrorHandlerContext,org.apache.kafka.clients.producer.ProducerRecord,java.lang.Exception,org.apache.kafka.streams.errors.ProductionExceptionHandler.SerializationExceptionOrigin)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Errors.ErrorHandlerContext"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Producer.ProducerRecord"/></param>
@@ -117,7 +117,7 @@ namespace Org.Apache.Kafka.Streams.Errors
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Errors.ProductionExceptionHandler.Response>("handleSerializationError", "(Lorg/apache/kafka/streams/errors/ErrorHandlerContext;Lorg/apache/kafka/clients/producer/ProducerRecord;Ljava/lang/Exception;Lorg/apache/kafka/streams/errors/ProductionExceptionHandler$SerializationExceptionOrigin;)Lorg/apache/kafka/streams/errors/ProductionExceptionHandler$Response;", arg0, arg1, arg2, arg3);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/errors/DefaultProductionExceptionHandler.html#configure(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/errors/DefaultProductionExceptionHandler.html#configure(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         public void Configure(Java.Util.Map<Java.Lang.String, object> arg0)

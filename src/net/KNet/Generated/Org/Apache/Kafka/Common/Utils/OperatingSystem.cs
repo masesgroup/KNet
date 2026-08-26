@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Utils
 {
     #region OperatingSystem declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/utils/OperatingSystem.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/utils/OperatingSystem.html"/>
     /// </summary>
     public partial class OperatingSystem : MASES.JCOBridge.C2JBridge.JVMBridgeBase<OperatingSystem>
     {
@@ -72,15 +72,15 @@ namespace Org.Apache.Kafka.Common.Utils
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/utils/OperatingSystem.html#IS_WINDOWS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/utils/OperatingSystem.html#IS_WINDOWS"/>
         /// </summary>
         public static bool IS_WINDOWS { get { return SGetField<bool>(LocalBridgeClazz, "IS_WINDOWS"); } set { SSetField(LocalBridgeClazz, "IS_WINDOWS", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/utils/OperatingSystem.html#IS_ZOS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/utils/OperatingSystem.html#IS_ZOS"/>
         /// </summary>
         public static bool IS_ZOS { get { return SGetField<bool>(LocalBridgeClazz, "IS_ZOS"); } set { SSetField(LocalBridgeClazz, "IS_ZOS", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/utils/OperatingSystem.html#NAME"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/utils/OperatingSystem.html#NAME"/>
         /// </summary>
         public static Java.Lang.String NAME { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "NAME"); } set { SSetField(LocalBridgeClazz, "NAME", value); } }
 

@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Security.Oauthbearer
 {
     #region DefaultJwtRetriever declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/security/oauthbearer/DefaultJwtRetriever.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/security/oauthbearer/DefaultJwtRetriever.html"/>
     /// </summary>
     public partial class DefaultJwtRetriever : Org.Apache.Kafka.Common.Security.Oauthbearer.JwtRetriever
     {
@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Common.Security.Oauthbearer
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/security/oauthbearer/DefaultJwtRetriever.html#%3Cinit%3E()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/security/oauthbearer/DefaultJwtRetriever.html#%3Cinit%3E()"/>
         /// </summary>
         public DefaultJwtRetriever() : base(JVMBridgeBase.InitializerInstance)
         {
@@ -94,7 +94,7 @@ namespace Org.Apache.Kafka.Common.Security.Oauthbearer
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/security/oauthbearer/DefaultJwtRetriever.html#retrieve()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/security/oauthbearer/DefaultJwtRetriever.html#retrieve()"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         /// <exception cref="Org.Apache.Kafka.Common.Security.Oauthbearer.JwtRetrieverException"/>
@@ -103,7 +103,7 @@ namespace Org.Apache.Kafka.Common.Security.Oauthbearer
             return IExecuteWithSignature<Java.Lang.String>("retrieve", "()Ljava/lang/String;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/security/oauthbearer/DefaultJwtRetriever.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/security/oauthbearer/DefaultJwtRetriever.html#close()"/>
         /// </summary>
         /// <exception cref="Java.Io.IOException"/>
         public void Close()
@@ -111,7 +111,7 @@ namespace Org.Apache.Kafka.Common.Security.Oauthbearer
             IExecuteWithSignature("close", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/security/oauthbearer/DefaultJwtRetriever.html#configure(java.util.Map,java.lang.String,java.util.List)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/security/oauthbearer/DefaultJwtRetriever.html#configure(java.util.Map,java.lang.String,java.util.List)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="Java.Lang.String"/></param>

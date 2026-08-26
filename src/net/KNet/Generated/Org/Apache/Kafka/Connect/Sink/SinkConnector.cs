@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Connect.Sink
 {
     #region SinkConnector declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.2.1/org/apache/kafka/connect/sink/SinkConnector.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.3.1/org/apache/kafka/connect/sink/SinkConnector.html"/>
     /// </summary>
     public partial class SinkConnector : Org.Apache.Kafka.Connect.Connector.Connector
     {
@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Connect.Sink
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.2.1/org/apache/kafka/connect/sink/SinkConnector.html#%3Cinit%3E()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.3.1/org/apache/kafka/connect/sink/SinkConnector.html#%3Cinit%3E()"/>
         /// </summary>
         public SinkConnector() : base(JVMBridgeBase.InitializerInstance)
         {
@@ -86,7 +86,7 @@ namespace Org.Apache.Kafka.Connect.Sink
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.2.1/org/apache/kafka/connect/sink/SinkConnector.html#TOPICS_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.3.1/org/apache/kafka/connect/sink/SinkConnector.html#TOPICS_CONFIG"/>
         /// </summary>
         public static Java.Lang.String TOPICS_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "TOPICS_CONFIG"); } set { SSetField(LocalBridgeClazz, "TOPICS_CONFIG", value); } }
 
@@ -98,7 +98,7 @@ namespace Org.Apache.Kafka.Connect.Sink
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.2.1/org/apache/kafka/connect/sink/SinkConnector.html#alterOffsets(java.util.Map,java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.3.1/org/apache/kafka/connect/sink/SinkConnector.html#alterOffsets(java.util.Map,java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="Java.Util.Map"/></param>

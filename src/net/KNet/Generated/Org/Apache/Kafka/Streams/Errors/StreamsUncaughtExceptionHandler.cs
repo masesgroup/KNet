@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.Errors
 {
     #region StreamsUncaughtExceptionHandler declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/errors/StreamsUncaughtExceptionHandler.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/errors/StreamsUncaughtExceptionHandler.html"/>
     /// </summary>
     public partial class StreamsUncaughtExceptionHandler : MASES.JCOBridge.C2JBridge.JVMBridgeListener
     {
@@ -85,7 +85,7 @@ namespace Org.Apache.Kafka.Streams.Errors
         // TODO: complete the class
         #region StreamThreadExceptionResponse declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/errors/StreamsUncaughtExceptionHandler.StreamThreadExceptionResponse.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/errors/StreamsUncaughtExceptionHandler.StreamThreadExceptionResponse.html"/>
         /// </summary>
         public partial class StreamThreadExceptionResponse : Java.Lang.Enum<Org.Apache.Kafka.Streams.Errors.StreamsUncaughtExceptionHandler.StreamThreadExceptionResponse>
         {
@@ -179,7 +179,7 @@ namespace Org.Apache.Kafka.Streams.Errors
 
     #region IStreamsUncaughtExceptionHandler
     /// <summary>
-    /// .NET interface for org.mases.knet.generated.org.apache.kafka.streams.errors.StreamsUncaughtExceptionHandler implementing <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/errors/StreamsUncaughtExceptionHandler.html"/>
+    /// .NET interface for org.mases.knet.generated.org.apache.kafka.streams.errors.StreamsUncaughtExceptionHandler implementing <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/errors/StreamsUncaughtExceptionHandler.html"/>
     /// </summary>
     public partial interface IStreamsUncaughtExceptionHandler
     {
@@ -233,7 +233,7 @@ namespace Org.Apache.Kafka.Streams.Errors
         }
 
         /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/errors/StreamsUncaughtExceptionHandler.html#handle(java.lang.Throwable)"/>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/errors/StreamsUncaughtExceptionHandler.html#handle(java.lang.Throwable)"/>
         /// </summary>
         /// <remarks>
         /// Assign a delegate to handle the event without subclassing. If both this handler and a virtual method override are present,
@@ -277,7 +277,7 @@ namespace Org.Apache.Kafka.Streams.Errors
         }
 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/errors/StreamsUncaughtExceptionHandler.html#handle(java.lang.Throwable)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/errors/StreamsUncaughtExceptionHandler.html#handle(java.lang.Throwable)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.Throwable"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Errors.StreamsUncaughtExceptionHandler.StreamThreadExceptionResponse"/></returns>
@@ -302,23 +302,23 @@ namespace Org.Apache.Kafka.Streams.Errors
 
             #region Fields
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/errors/StreamsUncaughtExceptionHandler.StreamThreadExceptionResponse.html#id"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/errors/StreamsUncaughtExceptionHandler.StreamThreadExceptionResponse.html#id"/>
             /// </summary>
             public int id { get { return IGetField<int>("id"); } set { ISetField("id", value); } }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/errors/StreamsUncaughtExceptionHandler.StreamThreadExceptionResponse.html#name"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/errors/StreamsUncaughtExceptionHandler.StreamThreadExceptionResponse.html#name"/>
             /// </summary>
             public Java.Lang.String name { get { return IGetField<Java.Lang.String>("name"); } set { ISetField("name", value); } }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/errors/StreamsUncaughtExceptionHandler.StreamThreadExceptionResponse.html#REPLACE_THREAD"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/errors/StreamsUncaughtExceptionHandler.StreamThreadExceptionResponse.html#REPLACE_THREAD"/>
             /// </summary>
             public static Org.Apache.Kafka.Streams.Errors.StreamsUncaughtExceptionHandler.StreamThreadExceptionResponse REPLACE_THREAD { get { return SGetField<Org.Apache.Kafka.Streams.Errors.StreamsUncaughtExceptionHandler.StreamThreadExceptionResponse>(LocalBridgeClazz, "REPLACE_THREAD"); } set { SSetField(LocalBridgeClazz, "REPLACE_THREAD", value); } }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/errors/StreamsUncaughtExceptionHandler.StreamThreadExceptionResponse.html#SHUTDOWN_APPLICATION"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/errors/StreamsUncaughtExceptionHandler.StreamThreadExceptionResponse.html#SHUTDOWN_APPLICATION"/>
             /// </summary>
             public static Org.Apache.Kafka.Streams.Errors.StreamsUncaughtExceptionHandler.StreamThreadExceptionResponse SHUTDOWN_APPLICATION { get { return SGetField<Org.Apache.Kafka.Streams.Errors.StreamsUncaughtExceptionHandler.StreamThreadExceptionResponse>(LocalBridgeClazz, "SHUTDOWN_APPLICATION"); } set { SSetField(LocalBridgeClazz, "SHUTDOWN_APPLICATION", value); } }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/errors/StreamsUncaughtExceptionHandler.StreamThreadExceptionResponse.html#SHUTDOWN_CLIENT"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/errors/StreamsUncaughtExceptionHandler.StreamThreadExceptionResponse.html#SHUTDOWN_CLIENT"/>
             /// </summary>
             public static Org.Apache.Kafka.Streams.Errors.StreamsUncaughtExceptionHandler.StreamThreadExceptionResponse SHUTDOWN_CLIENT { get { return SGetField<Org.Apache.Kafka.Streams.Errors.StreamsUncaughtExceptionHandler.StreamThreadExceptionResponse>(LocalBridgeClazz, "SHUTDOWN_CLIENT"); } set { SSetField(LocalBridgeClazz, "SHUTDOWN_CLIENT", value); } }
 
@@ -326,7 +326,7 @@ namespace Org.Apache.Kafka.Streams.Errors
 
             #region Static methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/errors/StreamsUncaughtExceptionHandler.StreamThreadExceptionResponse.html#valueOf(java.lang.String)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/errors/StreamsUncaughtExceptionHandler.StreamThreadExceptionResponse.html#valueOf(java.lang.String)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Lang.String"/></param>
             /// <returns><see cref="Org.Apache.Kafka.Streams.Errors.StreamsUncaughtExceptionHandler.StreamThreadExceptionResponse"/></returns>
@@ -335,7 +335,7 @@ namespace Org.Apache.Kafka.Streams.Errors
                 return SExecuteWithSignature<Org.Apache.Kafka.Streams.Errors.StreamsUncaughtExceptionHandler.StreamThreadExceptionResponse>(LocalBridgeClazz, "valueOf", "(Ljava/lang/String;)Lorg/apache/kafka/streams/errors/StreamsUncaughtExceptionHandler$StreamThreadExceptionResponse;", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/errors/StreamsUncaughtExceptionHandler.StreamThreadExceptionResponse.html#values()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/errors/StreamsUncaughtExceptionHandler.StreamThreadExceptionResponse.html#values()"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Streams.Errors.StreamsUncaughtExceptionHandler.StreamThreadExceptionResponse"/></returns>
             public static Org.Apache.Kafka.Streams.Errors.StreamsUncaughtExceptionHandler.StreamThreadExceptionResponse[] Values()
@@ -385,7 +385,7 @@ namespace Org.Apache.Kafka.Streams.Errors
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/errors/StreamsUncaughtExceptionHandler.html#handle(java.lang.Throwable)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/errors/StreamsUncaughtExceptionHandler.html#handle(java.lang.Throwable)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.Throwable"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Errors.StreamsUncaughtExceptionHandler.StreamThreadExceptionResponse"/></returns>

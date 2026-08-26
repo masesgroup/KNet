@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Clients
 {
     #region MetadataRecoveryStrategy declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/MetadataRecoveryStrategy.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/MetadataRecoveryStrategy.html"/>
     /// </summary>
     public partial class MetadataRecoveryStrategy : Java.Lang.Enum<Org.Apache.Kafka.Clients.MetadataRecoveryStrategy>
     {
@@ -72,15 +72,15 @@ namespace Org.Apache.Kafka.Clients
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/MetadataRecoveryStrategy.html#name"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/MetadataRecoveryStrategy.html#name"/>
         /// </summary>
         public Java.Lang.String name { get { return IGetField<Java.Lang.String>("name"); } set { ISetField("name", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/MetadataRecoveryStrategy.html#NONE"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/MetadataRecoveryStrategy.html#NONE"/>
         /// </summary>
         public static Org.Apache.Kafka.Clients.MetadataRecoveryStrategy NONE { get { return SGetField<Org.Apache.Kafka.Clients.MetadataRecoveryStrategy>(LocalBridgeClazz, "NONE"); } set { SSetField(LocalBridgeClazz, "NONE", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/MetadataRecoveryStrategy.html#REBOOTSTRAP"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/MetadataRecoveryStrategy.html#REBOOTSTRAP"/>
         /// </summary>
         public static Org.Apache.Kafka.Clients.MetadataRecoveryStrategy REBOOTSTRAP { get { return SGetField<Org.Apache.Kafka.Clients.MetadataRecoveryStrategy>(LocalBridgeClazz, "REBOOTSTRAP"); } set { SSetField(LocalBridgeClazz, "REBOOTSTRAP", value); } }
 
@@ -88,7 +88,7 @@ namespace Org.Apache.Kafka.Clients
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/MetadataRecoveryStrategy.html#forName(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/MetadataRecoveryStrategy.html#forName(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.MetadataRecoveryStrategy"/></returns>
@@ -97,7 +97,7 @@ namespace Org.Apache.Kafka.Clients
             return SExecuteWithSignature<Org.Apache.Kafka.Clients.MetadataRecoveryStrategy>(LocalBridgeClazz, "forName", "(Ljava/lang/String;)Lorg/apache/kafka/clients/MetadataRecoveryStrategy;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/MetadataRecoveryStrategy.html#valueOf(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/MetadataRecoveryStrategy.html#valueOf(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.MetadataRecoveryStrategy"/></returns>
@@ -106,7 +106,7 @@ namespace Org.Apache.Kafka.Clients
             return SExecuteWithSignature<Org.Apache.Kafka.Clients.MetadataRecoveryStrategy>(LocalBridgeClazz, "valueOf", "(Ljava/lang/String;)Lorg/apache/kafka/clients/MetadataRecoveryStrategy;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/MetadataRecoveryStrategy.html#values()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/MetadataRecoveryStrategy.html#values()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Clients.MetadataRecoveryStrategy"/></returns>
         public static Org.Apache.Kafka.Clients.MetadataRecoveryStrategy[] Values()

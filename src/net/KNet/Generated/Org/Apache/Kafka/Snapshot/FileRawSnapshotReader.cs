@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Snapshot
 {
     #region FileRawSnapshotReader declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/snapshot/FileRawSnapshotReader.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/snapshot/FileRawSnapshotReader.html"/>
     /// </summary>
     public partial class FileRawSnapshotReader : MASES.JCOBridge.C2JBridge.JVMBridgeBase<FileRawSnapshotReader>
     {
@@ -88,7 +88,7 @@ namespace Org.Apache.Kafka.Snapshot
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/snapshot/FileRawSnapshotReader.html#sizeInBytes()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/snapshot/FileRawSnapshotReader.html#sizeInBytes()"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long SizeInBytes()
@@ -96,7 +96,7 @@ namespace Org.Apache.Kafka.Snapshot
             return IExecuteWithSignature<long>("sizeInBytes", "()J");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/snapshot/FileRawSnapshotReader.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/snapshot/FileRawSnapshotReader.html#close()"/>
         /// </summary>
         public void Close()
         {

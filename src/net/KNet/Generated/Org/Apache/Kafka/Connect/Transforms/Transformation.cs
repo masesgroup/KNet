@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
 {
     #region Transformation declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.2.1/org/apache/kafka/connect/transforms/Transformation.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.3.1/org/apache/kafka/connect/transforms/Transformation.html"/>
     /// </summary>
     public partial class Transformation : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Transformation>
     {
@@ -61,7 +61,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
 
     #region Transformation<R> declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.2.1/org/apache/kafka/connect/transforms/Transformation.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.3.1/org/apache/kafka/connect/transforms/Transformation.html"/>
     /// </summary>
     /// <typeparam name="R"><see cref="Org.Apache.Kafka.Connect.Connector.ConnectRecord{R}"/></typeparam>
     public partial class Transformation<R> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Transformation<R>> where R : Org.Apache.Kafka.Connect.Connector.ConnectRecord<R>
@@ -127,7 +127,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.2.1/org/apache/kafka/connect/transforms/Transformation.html#apply(org.apache.kafka.connect.connector.ConnectRecord)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.3.1/org/apache/kafka/connect/transforms/Transformation.html#apply(org.apache.kafka.connect.connector.ConnectRecord)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Connector.ConnectRecord"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Connector.ConnectRecord"/></returns>
@@ -136,14 +136,14 @@ namespace Org.Apache.Kafka.Connect.Transforms
             return IExecuteWithSignature<Org.Apache.Kafka.Connect.Connector.ConnectRecord>("apply", "(Lorg/apache/kafka/connect/connector/ConnectRecord;)Lorg/apache/kafka/connect/connector/ConnectRecord;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.2.1/org/apache/kafka/connect/transforms/Transformation.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.3.1/org/apache/kafka/connect/transforms/Transformation.html#close()"/>
         /// </summary>
         public void Close()
         {
             IExecuteWithSignature("close", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.2.1/org/apache/kafka/connect/transforms/Transformation.html#version()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.3.1/org/apache/kafka/connect/transforms/Transformation.html#version()"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String Version()
@@ -163,7 +163,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
 
     #region ITransformation<R>
     /// <summary>
-    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.2.1/org/apache/kafka/connect/transforms/Transformation.html"/>
+    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.3.1/org/apache/kafka/connect/transforms/Transformation.html"/>
     /// </summary>
     public partial interface ITransformation<R>
     {
@@ -216,7 +216,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.2.1/org/apache/kafka/connect/transforms/Transformation.html#apply(org.apache.kafka.connect.connector.ConnectRecord)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.3.1/org/apache/kafka/connect/transforms/Transformation.html#apply(org.apache.kafka.connect.connector.ConnectRecord)"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="R"/></param>
         /// <returns><typeparamref name="R"/></returns>
@@ -225,14 +225,14 @@ namespace Org.Apache.Kafka.Connect.Transforms
             return IExecuteWithSignature<R>("apply", "(Lorg/apache/kafka/connect/connector/ConnectRecord;)Lorg/apache/kafka/connect/connector/ConnectRecord;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.2.1/org/apache/kafka/connect/transforms/Transformation.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.3.1/org/apache/kafka/connect/transforms/Transformation.html#close()"/>
         /// </summary>
         public void Close()
         {
             IExecuteWithSignature("close", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.2.1/org/apache/kafka/connect/transforms/Transformation.html#version()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.3.1/org/apache/kafka/connect/transforms/Transformation.html#version()"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String Version()

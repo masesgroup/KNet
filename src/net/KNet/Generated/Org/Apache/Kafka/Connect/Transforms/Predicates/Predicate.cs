@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Connect.Transforms.Predicates
 {
     #region Predicate declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.2.1/org/apache/kafka/connect/transforms/predicates/Predicate.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.3.1/org/apache/kafka/connect/transforms/predicates/Predicate.html"/>
     /// </summary>
     public partial class Predicate : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Predicate>
     {
@@ -61,7 +61,7 @@ namespace Org.Apache.Kafka.Connect.Transforms.Predicates
 
     #region Predicate<R> declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.2.1/org/apache/kafka/connect/transforms/predicates/Predicate.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.3.1/org/apache/kafka/connect/transforms/predicates/Predicate.html"/>
     /// </summary>
     /// <typeparam name="R"><see cref="Org.Apache.Kafka.Connect.Connector.ConnectRecord{R}"/></typeparam>
     public partial class Predicate<R> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Predicate<R>> where R : Org.Apache.Kafka.Connect.Connector.ConnectRecord<R>
@@ -127,7 +127,7 @@ namespace Org.Apache.Kafka.Connect.Transforms.Predicates
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.2.1/org/apache/kafka/connect/transforms/predicates/Predicate.html#test(org.apache.kafka.connect.connector.ConnectRecord)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.3.1/org/apache/kafka/connect/transforms/predicates/Predicate.html#test(org.apache.kafka.connect.connector.ConnectRecord)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Connector.ConnectRecord"/></param>
         /// <returns><see cref="bool"/></returns>
@@ -136,14 +136,14 @@ namespace Org.Apache.Kafka.Connect.Transforms.Predicates
             return IExecuteWithSignature<bool>("test", "(Lorg/apache/kafka/connect/connector/ConnectRecord;)Z", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.2.1/org/apache/kafka/connect/transforms/predicates/Predicate.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.3.1/org/apache/kafka/connect/transforms/predicates/Predicate.html#close()"/>
         /// </summary>
         public void Close()
         {
             IExecuteWithSignature("close", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.2.1/org/apache/kafka/connect/transforms/predicates/Predicate.html#version()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.3.1/org/apache/kafka/connect/transforms/predicates/Predicate.html#version()"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String Version()
@@ -163,7 +163,7 @@ namespace Org.Apache.Kafka.Connect.Transforms.Predicates
 
     #region IPredicate<R>
     /// <summary>
-    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.2.1/org/apache/kafka/connect/transforms/predicates/Predicate.html"/>
+    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.3.1/org/apache/kafka/connect/transforms/predicates/Predicate.html"/>
     /// </summary>
     public partial interface IPredicate<R>
     {
@@ -216,7 +216,7 @@ namespace Org.Apache.Kafka.Connect.Transforms.Predicates
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.2.1/org/apache/kafka/connect/transforms/predicates/Predicate.html#test(org.apache.kafka.connect.connector.ConnectRecord)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.3.1/org/apache/kafka/connect/transforms/predicates/Predicate.html#test(org.apache.kafka.connect.connector.ConnectRecord)"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="R"/></param>
         /// <returns><see cref="bool"/></returns>
@@ -225,14 +225,14 @@ namespace Org.Apache.Kafka.Connect.Transforms.Predicates
             return IExecuteWithSignature<bool>("test", "(Lorg/apache/kafka/connect/connector/ConnectRecord;)Z", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.2.1/org/apache/kafka/connect/transforms/predicates/Predicate.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.3.1/org/apache/kafka/connect/transforms/predicates/Predicate.html#close()"/>
         /// </summary>
         public void Close()
         {
             IExecuteWithSignature("close", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.2.1/org/apache/kafka/connect/transforms/predicates/Predicate.html#version()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.3.1/org/apache/kafka/connect/transforms/predicates/Predicate.html#version()"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String Version()

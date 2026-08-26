@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Serialization
 {
     #region BytesDeserializer declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/serialization/BytesDeserializer.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/serialization/BytesDeserializer.html"/>
     /// </summary>
     public partial class BytesDeserializer : MASES.JCOBridge.C2JBridge.JVMBridgeBase<BytesDeserializer>
     {
@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Common.Serialization
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/serialization/BytesDeserializer.html#%3Cinit%3E()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/serialization/BytesDeserializer.html#%3Cinit%3E()"/>
         /// </summary>
         public BytesDeserializer() : base(JVMBridgeBase.InitializerInstance)
         {
@@ -98,7 +98,7 @@ namespace Org.Apache.Kafka.Common.Serialization
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/serialization/BytesDeserializer.html#deserialize(java.lang.String,byte[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/serialization/BytesDeserializer.html#deserialize(java.lang.String,byte[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="byte"/></param>

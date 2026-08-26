@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
 {
     #region IdentityReplicationPolicy declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/4.2.1/org/apache/kafka/connect/mirror/IdentityReplicationPolicy.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/4.3.1/org/apache/kafka/connect/mirror/IdentityReplicationPolicy.html"/>
     /// </summary>
     public partial class IdentityReplicationPolicy : Org.Apache.Kafka.Connect.Mirror.DefaultReplicationPolicy
     {
@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/4.2.1/org/apache/kafka/connect/mirror/IdentityReplicationPolicy.html#%3Cinit%3E()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/4.3.1/org/apache/kafka/connect/mirror/IdentityReplicationPolicy.html#%3Cinit%3E()"/>
         /// </summary>
         public IdentityReplicationPolicy() : base(JVMBridgeBase.InitializerInstance)
         {
@@ -86,7 +86,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/4.2.1/org/apache/kafka/connect/mirror/IdentityReplicationPolicy.html#SOURCE_CLUSTER_ALIAS_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror-client/4.3.1/org/apache/kafka/connect/mirror/IdentityReplicationPolicy.html#SOURCE_CLUSTER_ALIAS_CONFIG"/>
         /// </summary>
         public static Java.Lang.String SOURCE_CLUSTER_ALIAS_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "SOURCE_CLUSTER_ALIAS_CONFIG"); } set { SSetField(LocalBridgeClazz, "SOURCE_CLUSTER_ALIAS_CONFIG", value); } }
 

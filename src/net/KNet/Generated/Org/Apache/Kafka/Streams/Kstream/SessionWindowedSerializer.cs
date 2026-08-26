@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 {
     #region SessionWindowedSerializer declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/SessionWindowedSerializer.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/kstream/SessionWindowedSerializer.html"/>
     /// </summary>
     public partial class SessionWindowedSerializer : MASES.JCOBridge.C2JBridge.JVMBridgeBase<SessionWindowedSerializer>
     {
@@ -61,7 +61,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region SessionWindowedSerializer<T> declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/SessionWindowedSerializer.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/kstream/SessionWindowedSerializer.html"/>
     /// </summary>
     /// <typeparam name="T"></typeparam>
     public partial class SessionWindowedSerializer<T> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<SessionWindowedSerializer<T>>
@@ -99,7 +99,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/SessionWindowedSerializer.html#%3Cinit%3E()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/kstream/SessionWindowedSerializer.html#%3Cinit%3E()"/>
         /// </summary>
         public SessionWindowedSerializer() : base(JVMBridgeBase.InitializerInstance)
         {
@@ -113,7 +113,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return JVMBridgeBase.New<SessionWindowedSerializer>();
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/SessionWindowedSerializer.html#%3Cinit%3E(org.apache.kafka.common.serialization.Serializer)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/kstream/SessionWindowedSerializer.html#%3Cinit%3E(org.apache.kafka.common.serialization.Serializer)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Serialization.Serializer"/></param>
         public SessionWindowedSerializer(Org.Apache.Kafka.Common.Serialization.Serializer arg0) : base(JVMBridgeBase.InitializerInstance)
@@ -136,7 +136,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/SessionWindowedSerializer.html#WINDOWED_INNER_SERIALIZER_CLASS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/kstream/SessionWindowedSerializer.html#WINDOWED_INNER_SERIALIZER_CLASS"/>
         /// </summary>
         public static Java.Lang.String WINDOWED_INNER_SERIALIZER_CLASS { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "WINDOWED_INNER_SERIALIZER_CLASS"); } set { SSetField(LocalBridgeClazz, "WINDOWED_INNER_SERIALIZER_CLASS", value); } }
 
@@ -148,7 +148,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/SessionWindowedSerializer.html#serialize(java.lang.String,java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/kstream/SessionWindowedSerializer.html#serialize(java.lang.String,java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="object"/></param>
@@ -158,7 +158,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return IExecuteWithSignatureArray<byte>("serialize", "(Ljava/lang/String;Ljava/lang/Object;)[B", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/SessionWindowedSerializer.html#serialize(java.lang.String,org.apache.kafka.common.header.Headers,java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/kstream/SessionWindowedSerializer.html#serialize(java.lang.String,org.apache.kafka.common.header.Headers,java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Header.Headers"/></param>
@@ -169,7 +169,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return IExecuteWithSignatureArray<byte>("serialize", "(Ljava/lang/String;Lorg/apache/kafka/common/header/Headers;Ljava/lang/Object;)[B", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/SessionWindowedSerializer.html#serialize(java.lang.String,org.apache.kafka.common.header.Headers,org.apache.kafka.streams.kstream.Windowed)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/kstream/SessionWindowedSerializer.html#serialize(java.lang.String,org.apache.kafka.common.header.Headers,org.apache.kafka.streams.kstream.Windowed)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Header.Headers"/></param>
@@ -180,7 +180,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return IExecuteWithSignatureArray<byte>("serialize", "(Ljava/lang/String;Lorg/apache/kafka/common/header/Headers;Lorg/apache/kafka/streams/kstream/Windowed;)[B", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/SessionWindowedSerializer.html#serialize(java.lang.String,org.apache.kafka.streams.kstream.Windowed)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/kstream/SessionWindowedSerializer.html#serialize(java.lang.String,org.apache.kafka.streams.kstream.Windowed)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Kstream.Windowed"/></param>
@@ -190,7 +190,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return IExecuteWithSignatureArray<byte>("serialize", "(Ljava/lang/String;Lorg/apache/kafka/streams/kstream/Windowed;)[B", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/SessionWindowedSerializer.html#serializeBaseKey(java.lang.String,org.apache.kafka.common.header.Headers,org.apache.kafka.streams.kstream.Windowed)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/kstream/SessionWindowedSerializer.html#serializeBaseKey(java.lang.String,org.apache.kafka.common.header.Headers,org.apache.kafka.streams.kstream.Windowed)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Header.Headers"/></param>
@@ -201,7 +201,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return IExecuteWithSignatureArray<byte>("serializeBaseKey", "(Ljava/lang/String;Lorg/apache/kafka/common/header/Headers;Lorg/apache/kafka/streams/kstream/Windowed;)[B", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/SessionWindowedSerializer.html#serializeBaseKey(java.lang.String,org.apache.kafka.streams.kstream.Windowed)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/kstream/SessionWindowedSerializer.html#serializeBaseKey(java.lang.String,org.apache.kafka.streams.kstream.Windowed)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Kstream.Windowed"/></param>
@@ -211,14 +211,14 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return IExecuteWithSignatureArray<byte>("serializeBaseKey", "(Ljava/lang/String;Lorg/apache/kafka/streams/kstream/Windowed;)[B", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/SessionWindowedSerializer.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/kstream/SessionWindowedSerializer.html#close()"/>
         /// </summary>
         public void Close()
         {
             IExecuteWithSignature("close", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/SessionWindowedSerializer.html#configure(java.util.Map,boolean)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/kstream/SessionWindowedSerializer.html#configure(java.util.Map,boolean)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="bool"/></param>
@@ -242,7 +242,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/SessionWindowedSerializer.html#%3Cinit%3E()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/kstream/SessionWindowedSerializer.html#%3Cinit%3E()"/>
         /// </summary>
         public SessionWindowedSerializer() : base(JVMBridgeBase.InitializerInstance)
         {
@@ -256,7 +256,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return JVMBridgeBase.New<SessionWindowedSerializer<T>>();
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/SessionWindowedSerializer.html#%3Cinit%3E(org.apache.kafka.common.serialization.Serializer)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/kstream/SessionWindowedSerializer.html#%3Cinit%3E(org.apache.kafka.common.serialization.Serializer)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Serialization.Serializer"/></param>
         public SessionWindowedSerializer(Org.Apache.Kafka.Common.Serialization.Serializer<T> arg0) : base(JVMBridgeBase.InitializerInstance)
@@ -283,7 +283,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/SessionWindowedSerializer.html#WINDOWED_INNER_SERIALIZER_CLASS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/kstream/SessionWindowedSerializer.html#WINDOWED_INNER_SERIALIZER_CLASS"/>
         /// </summary>
         public static Java.Lang.String WINDOWED_INNER_SERIALIZER_CLASS { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "WINDOWED_INNER_SERIALIZER_CLASS"); } set { SSetField(LocalBridgeClazz, "WINDOWED_INNER_SERIALIZER_CLASS", value); } }
 
@@ -295,7 +295,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/SessionWindowedSerializer.html#serialize(java.lang.String,java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/kstream/SessionWindowedSerializer.html#serialize(java.lang.String,java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="object"/></param>
@@ -305,7 +305,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return IExecuteWithSignatureArray<byte>("serialize", "(Ljava/lang/String;Ljava/lang/Object;)[B", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/SessionWindowedSerializer.html#serialize(java.lang.String,org.apache.kafka.common.header.Headers,java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/kstream/SessionWindowedSerializer.html#serialize(java.lang.String,org.apache.kafka.common.header.Headers,java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Header.Headers"/></param>
@@ -316,7 +316,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return IExecuteWithSignatureArray<byte>("serialize", "(Ljava/lang/String;Lorg/apache/kafka/common/header/Headers;Ljava/lang/Object;)[B", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/SessionWindowedSerializer.html#serialize(java.lang.String,org.apache.kafka.common.header.Headers,org.apache.kafka.streams.kstream.Windowed)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/kstream/SessionWindowedSerializer.html#serialize(java.lang.String,org.apache.kafka.common.header.Headers,org.apache.kafka.streams.kstream.Windowed)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Header.Headers"/></param>
@@ -327,7 +327,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return IExecuteWithSignatureArray<byte>("serialize", "(Ljava/lang/String;Lorg/apache/kafka/common/header/Headers;Lorg/apache/kafka/streams/kstream/Windowed;)[B", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/SessionWindowedSerializer.html#serialize(java.lang.String,org.apache.kafka.streams.kstream.Windowed)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/kstream/SessionWindowedSerializer.html#serialize(java.lang.String,org.apache.kafka.streams.kstream.Windowed)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Kstream.Windowed"/></param>
@@ -337,7 +337,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return IExecuteWithSignatureArray<byte>("serialize", "(Ljava/lang/String;Lorg/apache/kafka/streams/kstream/Windowed;)[B", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/SessionWindowedSerializer.html#serializeBaseKey(java.lang.String,org.apache.kafka.common.header.Headers,org.apache.kafka.streams.kstream.Windowed)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/kstream/SessionWindowedSerializer.html#serializeBaseKey(java.lang.String,org.apache.kafka.common.header.Headers,org.apache.kafka.streams.kstream.Windowed)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Header.Headers"/></param>
@@ -348,7 +348,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return IExecuteWithSignatureArray<byte>("serializeBaseKey", "(Ljava/lang/String;Lorg/apache/kafka/common/header/Headers;Lorg/apache/kafka/streams/kstream/Windowed;)[B", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/SessionWindowedSerializer.html#serializeBaseKey(java.lang.String,org.apache.kafka.streams.kstream.Windowed)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/kstream/SessionWindowedSerializer.html#serializeBaseKey(java.lang.String,org.apache.kafka.streams.kstream.Windowed)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.Kstream.Windowed"/></param>
@@ -358,14 +358,14 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return IExecuteWithSignatureArray<byte>("serializeBaseKey", "(Ljava/lang/String;Lorg/apache/kafka/streams/kstream/Windowed;)[B", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/SessionWindowedSerializer.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/kstream/SessionWindowedSerializer.html#close()"/>
         /// </summary>
         public void Close()
         {
             IExecuteWithSignature("close", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/SessionWindowedSerializer.html#configure(java.util.Map,boolean)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/kstream/SessionWindowedSerializer.html#configure(java.util.Map,boolean)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="bool"/></param>

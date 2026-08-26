@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Assignment
 {
     #region KafkaStreamsAssignment declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/assignment/KafkaStreamsAssignment.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/processor/assignment/KafkaStreamsAssignment.html"/>
     /// </summary>
     public partial class KafkaStreamsAssignment : MASES.JCOBridge.C2JBridge.JVMBridgeBase<KafkaStreamsAssignment>
     {
@@ -80,7 +80,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Assignment
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/assignment/KafkaStreamsAssignment.html#followupRebalanceDeadline()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/processor/assignment/KafkaStreamsAssignment.html#followupRebalanceDeadline()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Optional"/></returns>
         public Java.Util.Optional<Java.Time.Instant> FollowupRebalanceDeadline()
@@ -88,7 +88,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Assignment
             return IExecuteWithSignature<Java.Util.Optional<Java.Time.Instant>>("followupRebalanceDeadline", "()Ljava/util/Optional;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/assignment/KafkaStreamsAssignment.html#withFollowupRebalance(java.time.Instant)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/processor/assignment/KafkaStreamsAssignment.html#withFollowupRebalance(java.time.Instant)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Time.Instant"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Processor.Assignment.KafkaStreamsAssignment"/></returns>
@@ -97,7 +97,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Assignment
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Processor.Assignment.KafkaStreamsAssignment>("withFollowupRebalance", "(Ljava/time/Instant;)Lorg/apache/kafka/streams/processor/assignment/KafkaStreamsAssignment;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/assignment/KafkaStreamsAssignment.html#processId()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/processor/assignment/KafkaStreamsAssignment.html#processId()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Processor.Assignment.ProcessId"/></returns>
         public Org.Apache.Kafka.Streams.Processor.Assignment.ProcessId ProcessId()

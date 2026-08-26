@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
 {
     #region MirrorSourceConfig declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.2.1/org/apache/kafka/connect/mirror/MirrorSourceConfig.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.3.1/org/apache/kafka/connect/mirror/MirrorSourceConfig.html"/>
     /// </summary>
     public partial class MirrorSourceConfig : Org.Apache.Kafka.Connect.Mirror.MirrorConnectorConfig, MASES.JCOBridge.C2JBridge.IJVMBridgeMain
     {
@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.2.1/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#%3Cinit%3E(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.3.1/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#%3Cinit%3E(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         public MirrorSourceConfig(Java.Util.Map<Java.Lang.String, Java.Lang.String> arg0) : base(JVMBridgeBase.InitializerInstance)
@@ -79,7 +79,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
             return JVMBridgeBase.New<MirrorSourceConfig>(arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.2.1/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#%3Cinit%3E(org.apache.kafka.common.config.ConfigDef,java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.3.1/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#%3Cinit%3E(org.apache.kafka.common.config.ConfigDef,java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Config.ConfigDef"/></param>
         /// <param name="arg1"><see cref="Java.Util.Map"/></param>
@@ -103,155 +103,155 @@ namespace Org.Apache.Kafka.Connect.Mirror
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.2.1/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#HEARTBEATS_REPLICATION_ENABLED_DEFAULT"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.3.1/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#HEARTBEATS_REPLICATION_ENABLED_DEFAULT"/>
         /// </summary>
         public static bool HEARTBEATS_REPLICATION_ENABLED_DEFAULT { get { return SGetField<bool>(LocalBridgeClazz, "HEARTBEATS_REPLICATION_ENABLED_DEFAULT"); } set { SSetField(LocalBridgeClazz, "HEARTBEATS_REPLICATION_ENABLED_DEFAULT", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.2.1/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#REFRESH_TOPICS_ENABLED_DEFAULT"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.3.1/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#REFRESH_TOPICS_ENABLED_DEFAULT"/>
         /// </summary>
         public static bool REFRESH_TOPICS_ENABLED_DEFAULT { get { return SGetField<bool>(LocalBridgeClazz, "REFRESH_TOPICS_ENABLED_DEFAULT"); } set { SSetField(LocalBridgeClazz, "REFRESH_TOPICS_ENABLED_DEFAULT", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.2.1/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#SYNC_TOPIC_ACLS_ENABLED_DEFAULT"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.3.1/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#SYNC_TOPIC_ACLS_ENABLED_DEFAULT"/>
         /// </summary>
         public static bool SYNC_TOPIC_ACLS_ENABLED_DEFAULT { get { return SGetField<bool>(LocalBridgeClazz, "SYNC_TOPIC_ACLS_ENABLED_DEFAULT"); } set { SSetField(LocalBridgeClazz, "SYNC_TOPIC_ACLS_ENABLED_DEFAULT", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.2.1/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#SYNC_TOPIC_CONFIGS_ENABLED_DEFAULT"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.3.1/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#SYNC_TOPIC_CONFIGS_ENABLED_DEFAULT"/>
         /// </summary>
         public static bool SYNC_TOPIC_CONFIGS_ENABLED_DEFAULT { get { return SGetField<bool>(LocalBridgeClazz, "SYNC_TOPIC_CONFIGS_ENABLED_DEFAULT"); } set { SSetField(LocalBridgeClazz, "SYNC_TOPIC_CONFIGS_ENABLED_DEFAULT", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.2.1/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#REPLICATION_FACTOR_DEFAULT"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.3.1/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#REPLICATION_FACTOR_DEFAULT"/>
         /// </summary>
         public static int REPLICATION_FACTOR_DEFAULT { get { return SGetField<int>(LocalBridgeClazz, "REPLICATION_FACTOR_DEFAULT"); } set { SSetField(LocalBridgeClazz, "REPLICATION_FACTOR_DEFAULT", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.2.1/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#CONFIG_PROPERTY_FILTER_CLASS_DEFAULT"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.3.1/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#CONFIG_PROPERTY_FILTER_CLASS_DEFAULT"/>
         /// </summary>
         public static Java.Lang.Class CONFIG_PROPERTY_FILTER_CLASS_DEFAULT { get { return SGetField<Java.Lang.Class>(LocalBridgeClazz, "CONFIG_PROPERTY_FILTER_CLASS_DEFAULT"); } set { SSetField(LocalBridgeClazz, "CONFIG_PROPERTY_FILTER_CLASS_DEFAULT", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.2.1/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#CONFIG_PROPERTIES_EXCLUDE"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.3.1/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#CONFIG_PROPERTIES_EXCLUDE"/>
         /// </summary>
         public static Java.Lang.String CONFIG_PROPERTIES_EXCLUDE { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "CONFIG_PROPERTIES_EXCLUDE"); } set { SSetField(LocalBridgeClazz, "CONFIG_PROPERTIES_EXCLUDE", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.2.1/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#CONFIG_PROPERTIES_EXCLUDE_DEFAULT"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.3.1/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#CONFIG_PROPERTIES_EXCLUDE_DEFAULT"/>
         /// </summary>
         public static Java.Lang.String CONFIG_PROPERTIES_EXCLUDE_DEFAULT { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "CONFIG_PROPERTIES_EXCLUDE_DEFAULT"); } set { SSetField(LocalBridgeClazz, "CONFIG_PROPERTIES_EXCLUDE_DEFAULT", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.2.1/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#CONFIG_PROPERTY_FILTER_CLASS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.3.1/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#CONFIG_PROPERTY_FILTER_CLASS"/>
         /// </summary>
         public static Java.Lang.String CONFIG_PROPERTY_FILTER_CLASS { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "CONFIG_PROPERTY_FILTER_CLASS"); } set { SSetField(LocalBridgeClazz, "CONFIG_PROPERTY_FILTER_CLASS", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.2.1/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#CONSUMER_POLL_TIMEOUT_MILLIS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.3.1/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#CONSUMER_POLL_TIMEOUT_MILLIS"/>
         /// </summary>
         public static Java.Lang.String CONSUMER_POLL_TIMEOUT_MILLIS { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "CONSUMER_POLL_TIMEOUT_MILLIS"); } set { SSetField(LocalBridgeClazz, "CONSUMER_POLL_TIMEOUT_MILLIS", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.2.1/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#HEARTBEATS_REPLICATION_ENABLED"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.3.1/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#HEARTBEATS_REPLICATION_ENABLED"/>
         /// </summary>
         public static Java.Lang.String HEARTBEATS_REPLICATION_ENABLED { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "HEARTBEATS_REPLICATION_ENABLED"); } set { SSetField(LocalBridgeClazz, "HEARTBEATS_REPLICATION_ENABLED", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.2.1/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#METRIC_NAMES_FORMAT"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.3.1/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#METRIC_NAMES_FORMAT"/>
         /// </summary>
         public static Java.Lang.String METRIC_NAMES_FORMAT { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "METRIC_NAMES_FORMAT"); } set { SSetField(LocalBridgeClazz, "METRIC_NAMES_FORMAT", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.2.1/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#METRIC_NAMES_FORMAT_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.3.1/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#METRIC_NAMES_FORMAT_DOC"/>
         /// </summary>
         public static Java.Lang.String METRIC_NAMES_FORMAT_DOC { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "METRIC_NAMES_FORMAT_DOC"); } set { SSetField(LocalBridgeClazz, "METRIC_NAMES_FORMAT_DOC", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.2.1/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#OFFSET_LAG_MAX"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.3.1/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#OFFSET_LAG_MAX"/>
         /// </summary>
         public static Java.Lang.String OFFSET_LAG_MAX { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "OFFSET_LAG_MAX"); } set { SSetField(LocalBridgeClazz, "OFFSET_LAG_MAX", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.2.1/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#OFFSET_SYNCS_SOURCE_ADMIN_ROLE"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.3.1/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#OFFSET_SYNCS_SOURCE_ADMIN_ROLE"/>
         /// </summary>
         public static Java.Lang.String OFFSET_SYNCS_SOURCE_ADMIN_ROLE { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "OFFSET_SYNCS_SOURCE_ADMIN_ROLE"); } set { SSetField(LocalBridgeClazz, "OFFSET_SYNCS_SOURCE_ADMIN_ROLE", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.2.1/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#OFFSET_SYNCS_SOURCE_PRODUCER_ROLE"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.3.1/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#OFFSET_SYNCS_SOURCE_PRODUCER_ROLE"/>
         /// </summary>
         public static Java.Lang.String OFFSET_SYNCS_SOURCE_PRODUCER_ROLE { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "OFFSET_SYNCS_SOURCE_PRODUCER_ROLE"); } set { SSetField(LocalBridgeClazz, "OFFSET_SYNCS_SOURCE_PRODUCER_ROLE", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.2.1/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#OFFSET_SYNCS_TARGET_ADMIN_ROLE"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.3.1/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#OFFSET_SYNCS_TARGET_ADMIN_ROLE"/>
         /// </summary>
         public static Java.Lang.String OFFSET_SYNCS_TARGET_ADMIN_ROLE { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "OFFSET_SYNCS_TARGET_ADMIN_ROLE"); } set { SSetField(LocalBridgeClazz, "OFFSET_SYNCS_TARGET_ADMIN_ROLE", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.2.1/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#OFFSET_SYNCS_TARGET_PRODUCER_ROLE"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.3.1/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#OFFSET_SYNCS_TARGET_PRODUCER_ROLE"/>
         /// </summary>
         public static Java.Lang.String OFFSET_SYNCS_TARGET_PRODUCER_ROLE { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "OFFSET_SYNCS_TARGET_PRODUCER_ROLE"); } set { SSetField(LocalBridgeClazz, "OFFSET_SYNCS_TARGET_PRODUCER_ROLE", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.2.1/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#OFFSET_SYNCS_TOPIC_REPLICATION_FACTOR"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.3.1/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#OFFSET_SYNCS_TOPIC_REPLICATION_FACTOR"/>
         /// </summary>
         public static Java.Lang.String OFFSET_SYNCS_TOPIC_REPLICATION_FACTOR { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "OFFSET_SYNCS_TOPIC_REPLICATION_FACTOR"); } set { SSetField(LocalBridgeClazz, "OFFSET_SYNCS_TOPIC_REPLICATION_FACTOR", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.2.1/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#OFFSET_SYNCS_TOPIC_REPLICATION_FACTOR_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.3.1/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#OFFSET_SYNCS_TOPIC_REPLICATION_FACTOR_DOC"/>
         /// </summary>
         public static Java.Lang.String OFFSET_SYNCS_TOPIC_REPLICATION_FACTOR_DOC { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "OFFSET_SYNCS_TOPIC_REPLICATION_FACTOR_DOC"); } set { SSetField(LocalBridgeClazz, "OFFSET_SYNCS_TOPIC_REPLICATION_FACTOR_DOC", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.2.1/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#REFRESH_TOPICS_ENABLED"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.3.1/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#REFRESH_TOPICS_ENABLED"/>
         /// </summary>
         public static Java.Lang.String REFRESH_TOPICS_ENABLED { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "REFRESH_TOPICS_ENABLED"); } set { SSetField(LocalBridgeClazz, "REFRESH_TOPICS_ENABLED", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.2.1/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#REFRESH_TOPICS_INTERVAL_SECONDS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.3.1/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#REFRESH_TOPICS_INTERVAL_SECONDS"/>
         /// </summary>
         public static Java.Lang.String REFRESH_TOPICS_INTERVAL_SECONDS { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "REFRESH_TOPICS_INTERVAL_SECONDS"); } set { SSetField(LocalBridgeClazz, "REFRESH_TOPICS_INTERVAL_SECONDS", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.2.1/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#REPLICATION_FACTOR"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.3.1/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#REPLICATION_FACTOR"/>
         /// </summary>
         public static Java.Lang.String REPLICATION_FACTOR { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "REPLICATION_FACTOR"); } set { SSetField(LocalBridgeClazz, "REPLICATION_FACTOR", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.2.1/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#SYNC_TOPIC_ACLS_ENABLED"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.3.1/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#SYNC_TOPIC_ACLS_ENABLED"/>
         /// </summary>
         public static Java.Lang.String SYNC_TOPIC_ACLS_ENABLED { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "SYNC_TOPIC_ACLS_ENABLED"); } set { SSetField(LocalBridgeClazz, "SYNC_TOPIC_ACLS_ENABLED", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.2.1/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#SYNC_TOPIC_ACLS_INTERVAL_SECONDS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.3.1/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#SYNC_TOPIC_ACLS_INTERVAL_SECONDS"/>
         /// </summary>
         public static Java.Lang.String SYNC_TOPIC_ACLS_INTERVAL_SECONDS { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "SYNC_TOPIC_ACLS_INTERVAL_SECONDS"); } set { SSetField(LocalBridgeClazz, "SYNC_TOPIC_ACLS_INTERVAL_SECONDS", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.2.1/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#SYNC_TOPIC_CONFIGS_ENABLED"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.3.1/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#SYNC_TOPIC_CONFIGS_ENABLED"/>
         /// </summary>
         public static Java.Lang.String SYNC_TOPIC_CONFIGS_ENABLED { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "SYNC_TOPIC_CONFIGS_ENABLED"); } set { SSetField(LocalBridgeClazz, "SYNC_TOPIC_CONFIGS_ENABLED", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.2.1/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#SYNC_TOPIC_CONFIGS_INTERVAL_SECONDS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.3.1/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#SYNC_TOPIC_CONFIGS_INTERVAL_SECONDS"/>
         /// </summary>
         public static Java.Lang.String SYNC_TOPIC_CONFIGS_INTERVAL_SECONDS { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "SYNC_TOPIC_CONFIGS_INTERVAL_SECONDS"); } set { SSetField(LocalBridgeClazz, "SYNC_TOPIC_CONFIGS_INTERVAL_SECONDS", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.2.1/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#TOPICS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.3.1/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#TOPICS"/>
         /// </summary>
         public static Java.Lang.String TOPICS { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "TOPICS"); } set { SSetField(LocalBridgeClazz, "TOPICS", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.2.1/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#TOPICS_DEFAULT"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.3.1/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#TOPICS_DEFAULT"/>
         /// </summary>
         public static Java.Lang.String TOPICS_DEFAULT { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "TOPICS_DEFAULT"); } set { SSetField(LocalBridgeClazz, "TOPICS_DEFAULT", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.2.1/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#TOPICS_EXCLUDE"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.3.1/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#TOPICS_EXCLUDE"/>
         /// </summary>
         public static Java.Lang.String TOPICS_EXCLUDE { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "TOPICS_EXCLUDE"); } set { SSetField(LocalBridgeClazz, "TOPICS_EXCLUDE", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.2.1/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#TOPICS_EXCLUDE_DEFAULT"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.3.1/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#TOPICS_EXCLUDE_DEFAULT"/>
         /// </summary>
         public static Java.Lang.String TOPICS_EXCLUDE_DEFAULT { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "TOPICS_EXCLUDE_DEFAULT"); } set { SSetField(LocalBridgeClazz, "TOPICS_EXCLUDE_DEFAULT", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.2.1/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#METRIC_NAMES_FORMAT_DEFAULT"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.3.1/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#METRIC_NAMES_FORMAT_DEFAULT"/>
         /// </summary>
         public static Java.Util.List METRIC_NAMES_FORMAT_DEFAULT { get { return SGetField<Java.Util.List>(LocalBridgeClazz, "METRIC_NAMES_FORMAT_DEFAULT"); } set { SSetField(LocalBridgeClazz, "METRIC_NAMES_FORMAT_DEFAULT", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.2.1/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#CONSUMER_POLL_TIMEOUT_MILLIS_DEFAULT"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.3.1/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#CONSUMER_POLL_TIMEOUT_MILLIS_DEFAULT"/>
         /// </summary>
         public static long CONSUMER_POLL_TIMEOUT_MILLIS_DEFAULT { get { return SGetField<long>(LocalBridgeClazz, "CONSUMER_POLL_TIMEOUT_MILLIS_DEFAULT"); } set { SSetField(LocalBridgeClazz, "CONSUMER_POLL_TIMEOUT_MILLIS_DEFAULT", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.2.1/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#OFFSET_LAG_MAX_DEFAULT"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.3.1/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#OFFSET_LAG_MAX_DEFAULT"/>
         /// </summary>
         public static long OFFSET_LAG_MAX_DEFAULT { get { return SGetField<long>(LocalBridgeClazz, "OFFSET_LAG_MAX_DEFAULT"); } set { SSetField(LocalBridgeClazz, "OFFSET_LAG_MAX_DEFAULT", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.2.1/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#REFRESH_TOPICS_INTERVAL_SECONDS_DEFAULT"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.3.1/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#REFRESH_TOPICS_INTERVAL_SECONDS_DEFAULT"/>
         /// </summary>
         public static long REFRESH_TOPICS_INTERVAL_SECONDS_DEFAULT { get { return SGetField<long>(LocalBridgeClazz, "REFRESH_TOPICS_INTERVAL_SECONDS_DEFAULT"); } set { SSetField(LocalBridgeClazz, "REFRESH_TOPICS_INTERVAL_SECONDS_DEFAULT", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.2.1/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#SYNC_TOPIC_ACLS_INTERVAL_SECONDS_DEFAULT"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.3.1/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#SYNC_TOPIC_ACLS_INTERVAL_SECONDS_DEFAULT"/>
         /// </summary>
         public static long SYNC_TOPIC_ACLS_INTERVAL_SECONDS_DEFAULT { get { return SGetField<long>(LocalBridgeClazz, "SYNC_TOPIC_ACLS_INTERVAL_SECONDS_DEFAULT"); } set { SSetField(LocalBridgeClazz, "SYNC_TOPIC_ACLS_INTERVAL_SECONDS_DEFAULT", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.2.1/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#SYNC_TOPIC_CONFIGS_INTERVAL_SECONDS_DEFAULT"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.3.1/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#SYNC_TOPIC_CONFIGS_INTERVAL_SECONDS_DEFAULT"/>
         /// </summary>
         public static long SYNC_TOPIC_CONFIGS_INTERVAL_SECONDS_DEFAULT { get { return SGetField<long>(LocalBridgeClazz, "SYNC_TOPIC_CONFIGS_INTERVAL_SECONDS_DEFAULT"); } set { SSetField(LocalBridgeClazz, "SYNC_TOPIC_CONFIGS_INTERVAL_SECONDS_DEFAULT", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.2.1/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#OFFSET_SYNCS_TOPIC_REPLICATION_FACTOR_DEFAULT"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.3.1/org/apache/kafka/connect/mirror/MirrorSourceConfig.html#OFFSET_SYNCS_TOPIC_REPLICATION_FACTOR_DEFAULT"/>
         /// </summary>
         public static short OFFSET_SYNCS_TOPIC_REPLICATION_FACTOR_DEFAULT { get { return SGetField<short>(LocalBridgeClazz, "OFFSET_SYNCS_TOPIC_REPLICATION_FACTOR_DEFAULT"); } set { SSetField(LocalBridgeClazz, "OFFSET_SYNCS_TOPIC_REPLICATION_FACTOR_DEFAULT", value); } }
 

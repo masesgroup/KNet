@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 {
     #region DeleteShareGroupOffsetsOptions declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/admin/DeleteShareGroupOffsetsOptions.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/admin/DeleteShareGroupOffsetsOptions.html"/>
     /// </summary>
     public partial class DeleteShareGroupOffsetsOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions<Org.Apache.Kafka.Clients.Admin.DeleteShareGroupOffsetsOptions>
     {
@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Clients.Admin
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/admin/DeleteShareGroupOffsetsOptions.html#%3Cinit%3E()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/admin/DeleteShareGroupOffsetsOptions.html#%3Cinit%3E()"/>
         /// </summary>
         public DeleteShareGroupOffsetsOptions() : base(JVMBridgeBase.InitializerInstance)
         {

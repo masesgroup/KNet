@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 {
     #region Materialized declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/Materialized.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/kstream/Materialized.html"/>
     /// </summary>
     public partial class Materialized : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Materialized>
     {
@@ -57,7 +57,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
         // TODO: complete the class
         #region StoreType declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/Materialized.StoreType.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/kstream/Materialized.StoreType.html"/>
         /// </summary>
         public partial class StoreType : Java.Lang.Enum<Org.Apache.Kafka.Streams.Kstream.Materialized.StoreType>
         {
@@ -95,7 +95,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region Materialized<K, V, S> declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/Materialized.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/kstream/Materialized.html"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
@@ -147,7 +147,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/Materialized.html#as(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/kstream/Materialized.html#as(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Materialized"/></returns>
@@ -156,7 +156,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.Materialized>(LocalBridgeClazz, "as", "(Ljava/lang/String;)Lorg/apache/kafka/streams/kstream/Materialized;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/Materialized.html#as(org.apache.kafka.streams.state.DslStoreSuppliers)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/kstream/Materialized.html#as(org.apache.kafka.streams.state.DslStoreSuppliers)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.State.DslStoreSuppliers"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Materialized"/></returns>
@@ -165,7 +165,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.Materialized>(LocalBridgeClazz, "as", "(Lorg/apache/kafka/streams/state/DslStoreSuppliers;)Lorg/apache/kafka/streams/kstream/Materialized;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/Materialized.html#with(org.apache.kafka.common.serialization.Serde,org.apache.kafka.common.serialization.Serde)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/kstream/Materialized.html#with(org.apache.kafka.common.serialization.Serde,org.apache.kafka.common.serialization.Serde)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></param>
@@ -175,7 +175,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.Materialized>(LocalBridgeClazz, "with", "(Lorg/apache/kafka/common/serialization/Serde;Lorg/apache/kafka/common/serialization/Serde;)Lorg/apache/kafka/streams/kstream/Materialized;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/Materialized.html#as(org.apache.kafka.streams.state.KeyValueBytesStoreSupplier)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/kstream/Materialized.html#as(org.apache.kafka.streams.state.KeyValueBytesStoreSupplier)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.State.KeyValueBytesStoreSupplier"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Materialized"/></returns>
@@ -184,7 +184,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.Materialized>(LocalBridgeClazz, "as", "(Lorg/apache/kafka/streams/state/KeyValueBytesStoreSupplier;)Lorg/apache/kafka/streams/kstream/Materialized;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/Materialized.html#as(org.apache.kafka.streams.state.SessionBytesStoreSupplier)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/kstream/Materialized.html#as(org.apache.kafka.streams.state.SessionBytesStoreSupplier)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.State.SessionBytesStoreSupplier"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Materialized"/></returns>
@@ -193,7 +193,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.Materialized>(LocalBridgeClazz, "as", "(Lorg/apache/kafka/streams/state/SessionBytesStoreSupplier;)Lorg/apache/kafka/streams/kstream/Materialized;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/Materialized.html#as(org.apache.kafka.streams.state.WindowBytesStoreSupplier)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/kstream/Materialized.html#as(org.apache.kafka.streams.state.WindowBytesStoreSupplier)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.State.WindowBytesStoreSupplier"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Materialized"/></returns>
@@ -206,7 +206,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/Materialized.html#withCachingDisabled()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/kstream/Materialized.html#withCachingDisabled()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Materialized"/></returns>
         public Org.Apache.Kafka.Streams.Kstream.Materialized WithCachingDisabled()
@@ -214,7 +214,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.Materialized>("withCachingDisabled", "()Lorg/apache/kafka/streams/kstream/Materialized;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/Materialized.html#withCachingEnabled()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/kstream/Materialized.html#withCachingEnabled()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Materialized"/></returns>
         public Org.Apache.Kafka.Streams.Kstream.Materialized WithCachingEnabled()
@@ -222,7 +222,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.Materialized>("withCachingEnabled", "()Lorg/apache/kafka/streams/kstream/Materialized;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/Materialized.html#withKeySerde(org.apache.kafka.common.serialization.Serde)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/kstream/Materialized.html#withKeySerde(org.apache.kafka.common.serialization.Serde)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Materialized"/></returns>
@@ -231,7 +231,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.Materialized>("withKeySerde", "(Lorg/apache/kafka/common/serialization/Serde;)Lorg/apache/kafka/streams/kstream/Materialized;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/Materialized.html#withLoggingDisabled()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/kstream/Materialized.html#withLoggingDisabled()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Materialized"/></returns>
         public Org.Apache.Kafka.Streams.Kstream.Materialized WithLoggingDisabled()
@@ -239,7 +239,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.Materialized>("withLoggingDisabled", "()Lorg/apache/kafka/streams/kstream/Materialized;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/Materialized.html#withLoggingEnabled(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/kstream/Materialized.html#withLoggingEnabled(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Materialized"/></returns>
@@ -248,7 +248,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.Materialized>("withLoggingEnabled", "(Ljava/util/Map;)Lorg/apache/kafka/streams/kstream/Materialized;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/Materialized.html#withRetention(java.time.Duration)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/kstream/Materialized.html#withRetention(java.time.Duration)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Time.Duration"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Materialized"/></returns>
@@ -258,7 +258,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.Materialized>("withRetention", "(Ljava/time/Duration;)Lorg/apache/kafka/streams/kstream/Materialized;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/Materialized.html#withStoreType(org.apache.kafka.streams.state.DslStoreSuppliers)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/kstream/Materialized.html#withStoreType(org.apache.kafka.streams.state.DslStoreSuppliers)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.State.DslStoreSuppliers"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Materialized"/></returns>
@@ -268,7 +268,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.Materialized>("withStoreType", "(Lorg/apache/kafka/streams/state/DslStoreSuppliers;)Lorg/apache/kafka/streams/kstream/Materialized;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/Materialized.html#withValueSerde(org.apache.kafka.common.serialization.Serde)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/kstream/Materialized.html#withValueSerde(org.apache.kafka.common.serialization.Serde)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Materialized"/></returns>
@@ -297,11 +297,11 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
             #region Fields
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/Materialized.StoreType.html#IN_MEMORY"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/kstream/Materialized.StoreType.html#IN_MEMORY"/>
             /// </summary>
             public static Org.Apache.Kafka.Streams.Kstream.Materialized.StoreType IN_MEMORY { get { return SGetField<Org.Apache.Kafka.Streams.Kstream.Materialized.StoreType>(LocalBridgeClazz, "IN_MEMORY"); } set { SSetField(LocalBridgeClazz, "IN_MEMORY", value); } }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/Materialized.StoreType.html#ROCKS_DB"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/kstream/Materialized.StoreType.html#ROCKS_DB"/>
             /// </summary>
             public static Org.Apache.Kafka.Streams.Kstream.Materialized.StoreType ROCKS_DB { get { return SGetField<Org.Apache.Kafka.Streams.Kstream.Materialized.StoreType>(LocalBridgeClazz, "ROCKS_DB"); } set { SSetField(LocalBridgeClazz, "ROCKS_DB", value); } }
 
@@ -309,7 +309,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
             #region Static methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/Materialized.StoreType.html#valueOf(java.lang.String)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/kstream/Materialized.StoreType.html#valueOf(java.lang.String)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Lang.String"/></param>
             /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Materialized.StoreType"/></returns>
@@ -318,7 +318,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
                 return SExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.Materialized.StoreType>(LocalBridgeClazz, "valueOf", "(Ljava/lang/String;)Lorg/apache/kafka/streams/kstream/Materialized$StoreType;", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/Materialized.StoreType.html#values()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/kstream/Materialized.StoreType.html#values()"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Materialized.StoreType"/></returns>
             public static Org.Apache.Kafka.Streams.Kstream.Materialized.StoreType[] Values()
@@ -330,7 +330,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/Materialized.StoreType.html#keyValueStore(org.apache.kafka.streams.state.DslKeyValueParams)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/kstream/Materialized.StoreType.html#keyValueStore(org.apache.kafka.streams.state.DslKeyValueParams)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.State.DslKeyValueParams"/></param>
             /// <returns><see cref="Org.Apache.Kafka.Streams.State.KeyValueBytesStoreSupplier"/></returns>
@@ -339,7 +339,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
                 return IExecuteWithSignature<Org.Apache.Kafka.Streams.State.KeyValueBytesStoreSupplier>("keyValueStore", "(Lorg/apache/kafka/streams/state/DslKeyValueParams;)Lorg/apache/kafka/streams/state/KeyValueBytesStoreSupplier;", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/Materialized.StoreType.html#sessionStore(org.apache.kafka.streams.state.DslSessionParams)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/kstream/Materialized.StoreType.html#sessionStore(org.apache.kafka.streams.state.DslSessionParams)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.State.DslSessionParams"/></param>
             /// <returns><see cref="Org.Apache.Kafka.Streams.State.SessionBytesStoreSupplier"/></returns>
@@ -348,7 +348,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
                 return IExecuteWithSignature<Org.Apache.Kafka.Streams.State.SessionBytesStoreSupplier>("sessionStore", "(Lorg/apache/kafka/streams/state/DslSessionParams;)Lorg/apache/kafka/streams/state/SessionBytesStoreSupplier;", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/Materialized.StoreType.html#windowStore(org.apache.kafka.streams.state.DslWindowParams)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/kstream/Materialized.StoreType.html#windowStore(org.apache.kafka.streams.state.DslWindowParams)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.State.DslWindowParams"/></param>
             /// <returns><see cref="Org.Apache.Kafka.Streams.State.WindowBytesStoreSupplier"/></returns>
@@ -357,7 +357,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
                 return IExecuteWithSignature<Org.Apache.Kafka.Streams.State.WindowBytesStoreSupplier>("windowStore", "(Lorg/apache/kafka/streams/state/DslWindowParams;)Lorg/apache/kafka/streams/state/WindowBytesStoreSupplier;", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/Materialized.StoreType.html#configure(java.util.Map)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/kstream/Materialized.StoreType.html#configure(java.util.Map)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Util.Map"/></param>
             public void Configure(Java.Util.Map<Java.Lang.String, object> arg0)
@@ -403,7 +403,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/Materialized.html#as(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/kstream/Materialized.html#as(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Materialized"/></returns>
@@ -412,7 +412,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.Materialized>(LocalBridgeClazz, "as", "(Ljava/lang/String;)Lorg/apache/kafka/streams/kstream/Materialized;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/Materialized.html#as(org.apache.kafka.streams.state.DslStoreSuppliers)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/kstream/Materialized.html#as(org.apache.kafka.streams.state.DslStoreSuppliers)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.State.DslStoreSuppliers"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Materialized"/></returns>
@@ -421,7 +421,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.Materialized>(LocalBridgeClazz, "as", "(Lorg/apache/kafka/streams/state/DslStoreSuppliers;)Lorg/apache/kafka/streams/kstream/Materialized;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/Materialized.html#with(org.apache.kafka.common.serialization.Serde,org.apache.kafka.common.serialization.Serde)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/kstream/Materialized.html#with(org.apache.kafka.common.serialization.Serde,org.apache.kafka.common.serialization.Serde)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></param>
@@ -431,7 +431,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.Materialized>(LocalBridgeClazz, "with", "(Lorg/apache/kafka/common/serialization/Serde;Lorg/apache/kafka/common/serialization/Serde;)Lorg/apache/kafka/streams/kstream/Materialized;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/Materialized.html#as(org.apache.kafka.streams.state.KeyValueBytesStoreSupplier)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/kstream/Materialized.html#as(org.apache.kafka.streams.state.KeyValueBytesStoreSupplier)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.State.KeyValueBytesStoreSupplier"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Materialized"/></returns>
@@ -440,7 +440,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.Materialized<K, V, Org.Apache.Kafka.Streams.State.KeyValueStore<Org.Apache.Kafka.Common.Utils.Bytes, byte[]>>>(LocalBridgeClazz, "as", "(Lorg/apache/kafka/streams/state/KeyValueBytesStoreSupplier;)Lorg/apache/kafka/streams/kstream/Materialized;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/Materialized.html#as(org.apache.kafka.streams.state.SessionBytesStoreSupplier)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/kstream/Materialized.html#as(org.apache.kafka.streams.state.SessionBytesStoreSupplier)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.State.SessionBytesStoreSupplier"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Materialized"/></returns>
@@ -449,7 +449,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.Materialized<K, V, Org.Apache.Kafka.Streams.State.SessionStore<Org.Apache.Kafka.Common.Utils.Bytes, byte[]>>>(LocalBridgeClazz, "as", "(Lorg/apache/kafka/streams/state/SessionBytesStoreSupplier;)Lorg/apache/kafka/streams/kstream/Materialized;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/Materialized.html#as(org.apache.kafka.streams.state.WindowBytesStoreSupplier)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/kstream/Materialized.html#as(org.apache.kafka.streams.state.WindowBytesStoreSupplier)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.State.WindowBytesStoreSupplier"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Materialized"/></returns>
@@ -462,7 +462,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/Materialized.html#withCachingDisabled()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/kstream/Materialized.html#withCachingDisabled()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Materialized"/></returns>
         public Org.Apache.Kafka.Streams.Kstream.Materialized WithCachingDisabled()
@@ -470,7 +470,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.Materialized>("withCachingDisabled", "()Lorg/apache/kafka/streams/kstream/Materialized;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/Materialized.html#withCachingEnabled()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/kstream/Materialized.html#withCachingEnabled()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Materialized"/></returns>
         public Org.Apache.Kafka.Streams.Kstream.Materialized WithCachingEnabled()
@@ -478,7 +478,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.Materialized>("withCachingEnabled", "()Lorg/apache/kafka/streams/kstream/Materialized;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/Materialized.html#withKeySerde(org.apache.kafka.common.serialization.Serde)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/kstream/Materialized.html#withKeySerde(org.apache.kafka.common.serialization.Serde)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Materialized"/></returns>
@@ -487,7 +487,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.Materialized>("withKeySerde", "(Lorg/apache/kafka/common/serialization/Serde;)Lorg/apache/kafka/streams/kstream/Materialized;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/Materialized.html#withLoggingDisabled()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/kstream/Materialized.html#withLoggingDisabled()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Materialized"/></returns>
         public Org.Apache.Kafka.Streams.Kstream.Materialized WithLoggingDisabled()
@@ -495,7 +495,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.Materialized>("withLoggingDisabled", "()Lorg/apache/kafka/streams/kstream/Materialized;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/Materialized.html#withLoggingEnabled(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/kstream/Materialized.html#withLoggingEnabled(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Materialized"/></returns>
@@ -504,7 +504,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.Materialized>("withLoggingEnabled", "(Ljava/util/Map;)Lorg/apache/kafka/streams/kstream/Materialized;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/Materialized.html#withRetention(java.time.Duration)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/kstream/Materialized.html#withRetention(java.time.Duration)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Time.Duration"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Materialized"/></returns>
@@ -514,7 +514,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.Materialized>("withRetention", "(Ljava/time/Duration;)Lorg/apache/kafka/streams/kstream/Materialized;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/Materialized.html#withStoreType(org.apache.kafka.streams.state.DslStoreSuppliers)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/kstream/Materialized.html#withStoreType(org.apache.kafka.streams.state.DslStoreSuppliers)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.State.DslStoreSuppliers"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Materialized"/></returns>
@@ -524,7 +524,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Kstream.Materialized>("withStoreType", "(Lorg/apache/kafka/streams/state/DslStoreSuppliers;)Lorg/apache/kafka/streams/kstream/Materialized;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/Materialized.html#withValueSerde(org.apache.kafka.common.serialization.Serde)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/kstream/Materialized.html#withValueSerde(org.apache.kafka.common.serialization.Serde)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Serialization.Serde"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Materialized"/></returns>

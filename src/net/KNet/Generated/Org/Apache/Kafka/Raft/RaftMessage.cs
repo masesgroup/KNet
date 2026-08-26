@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Raft
 {
     #region RaftMessage declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/RaftMessage.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/RaftMessage.html"/>
     /// </summary>
     public partial class RaftMessage : MASES.JCOBridge.C2JBridge.JVMBridgeBase<RaftMessage>
     {
@@ -61,7 +61,7 @@ namespace Org.Apache.Kafka.Raft
 
     #region IRaftMessage
     /// <summary>
-    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/RaftMessage.html"/>
+    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/RaftMessage.html"/>
     /// </summary>
     public partial interface IRaftMessage
     {
@@ -98,7 +98,7 @@ namespace Org.Apache.Kafka.Raft
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/RaftMessage.html#correlationId()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/RaftMessage.html#correlationId()"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int CorrelationId()

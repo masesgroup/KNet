@@ -74,7 +74,7 @@ namespace MASES.KNet.Streams.Kstream
         }
 
         /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/KeyValueMapper.html#apply(java.lang.Object,java.lang.Object)"/>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/kstream/KeyValueMapper.html#apply(java.lang.Object,java.lang.Object)"/>
         /// </summary>
         /// <remarks>If <see cref="OnApply"/> has a value it takes precedence over corresponding class method</remarks>
         public new System.Func<K, V, VR> OnApply { get; set; } = null;
@@ -157,7 +157,7 @@ namespace MASES.KNet.Streams.Kstream
         ISerDes<KR, TJVMKR> _krSerializer = null;
         ISerDes<VR, TJVMVR> _vrSerializer = null;
         /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/KeyValueMapper.html#apply(java.lang.Object,java.lang.Object)"/>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/kstream/KeyValueMapper.html#apply(java.lang.Object,java.lang.Object)"/>
         /// </summary>
         /// <remarks>If <see cref="OnApply"/> has a value it takes precedence over corresponding class method</remarks>
         public new System.Func<K, V, (KR, VR)> OnApply { get; set; } = null;
@@ -215,7 +215,7 @@ namespace MASES.KNet.Streams.Kstream
         ISerDes<KR, TJVMKR> _krSerializer = null;
         ISerDes<VR, TJVMVR> _vrSerializer = null;
         /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/KeyValueMapper.html#apply(java.lang.Object,java.lang.Object)"/>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/kstream/KeyValueMapper.html#apply(java.lang.Object,java.lang.Object)"/>
         /// </summary>
         /// <remarks>If <see cref="OnApply"/> has a value it takes precedence over corresponding class method</remarks>
         public new System.Func<K, V, IEnumerable<(KR, VR)>> OnApply { get; set; } = null;

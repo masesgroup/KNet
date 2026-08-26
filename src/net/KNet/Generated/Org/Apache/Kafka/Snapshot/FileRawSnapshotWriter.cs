@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Snapshot
 {
     #region FileRawSnapshotWriter declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/snapshot/FileRawSnapshotWriter.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/snapshot/FileRawSnapshotWriter.html"/>
     /// </summary>
     public partial class FileRawSnapshotWriter : Org.Apache.Kafka.Snapshot.RawSnapshotWriter
     {
@@ -80,7 +80,7 @@ namespace Org.Apache.Kafka.Snapshot
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/snapshot/FileRawSnapshotWriter.html#isFrozen()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/snapshot/FileRawSnapshotWriter.html#isFrozen()"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool IsFrozen()
@@ -88,7 +88,7 @@ namespace Org.Apache.Kafka.Snapshot
             return IExecuteWithSignature<bool>("isFrozen", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/snapshot/FileRawSnapshotWriter.html#sizeInBytes()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/snapshot/FileRawSnapshotWriter.html#sizeInBytes()"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long SizeInBytes()
@@ -96,14 +96,14 @@ namespace Org.Apache.Kafka.Snapshot
             return IExecuteWithSignature<long>("sizeInBytes", "()J");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/snapshot/FileRawSnapshotWriter.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/snapshot/FileRawSnapshotWriter.html#close()"/>
         /// </summary>
         public void Close()
         {
             IExecuteWithSignature("close", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/snapshot/FileRawSnapshotWriter.html#freeze()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/snapshot/FileRawSnapshotWriter.html#freeze()"/>
         /// </summary>
         public void Freeze()
         {

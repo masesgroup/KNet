@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Raft.Generated
 {
     #region QuorumStateData declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/generated/QuorumStateData.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/generated/QuorumStateData.html"/>
     /// </summary>
     public partial class QuorumStateData : MASES.JCOBridge.C2JBridge.JVMBridgeBase<QuorumStateData>
     {
@@ -57,7 +57,7 @@ namespace Org.Apache.Kafka.Raft.Generated
         // TODO: complete the class
         #region Voter declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/generated/QuorumStateData.Voter.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/generated/QuorumStateData.Voter.html"/>
         /// </summary>
         public partial class Voter : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Voter>
         {
@@ -98,7 +98,7 @@ namespace Org.Apache.Kafka.Raft.Generated
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/generated/QuorumStateData.html#%3Cinit%3E()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/generated/QuorumStateData.html#%3Cinit%3E()"/>
         /// </summary>
         public QuorumStateData() : base(JVMBridgeBase.InitializerInstance)
         {
@@ -120,11 +120,11 @@ namespace Org.Apache.Kafka.Raft.Generated
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/generated/QuorumStateData.html#HIGHEST_SUPPORTED_VERSION"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/generated/QuorumStateData.html#HIGHEST_SUPPORTED_VERSION"/>
         /// </summary>
         public static short HIGHEST_SUPPORTED_VERSION { get { return SGetField<short>(LocalBridgeClazz, "HIGHEST_SUPPORTED_VERSION"); } set { SSetField(LocalBridgeClazz, "HIGHEST_SUPPORTED_VERSION", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/generated/QuorumStateData.html#LOWEST_SUPPORTED_VERSION"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/generated/QuorumStateData.html#LOWEST_SUPPORTED_VERSION"/>
         /// </summary>
         public static short LOWEST_SUPPORTED_VERSION { get { return SGetField<short>(LocalBridgeClazz, "LOWEST_SUPPORTED_VERSION"); } set { SSetField(LocalBridgeClazz, "LOWEST_SUPPORTED_VERSION", value); } }
 
@@ -136,7 +136,7 @@ namespace Org.Apache.Kafka.Raft.Generated
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/generated/QuorumStateData.html#leaderEpoch()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/generated/QuorumStateData.html#leaderEpoch()"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int LeaderEpoch()
@@ -144,7 +144,7 @@ namespace Org.Apache.Kafka.Raft.Generated
             return IExecuteWithSignature<int>("leaderEpoch", "()I");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/generated/QuorumStateData.html#leaderId()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/generated/QuorumStateData.html#leaderId()"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int LeaderId()
@@ -152,7 +152,7 @@ namespace Org.Apache.Kafka.Raft.Generated
             return IExecuteWithSignature<int>("leaderId", "()I");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/generated/QuorumStateData.html#votedId()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/generated/QuorumStateData.html#votedId()"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int VotedId()
@@ -160,7 +160,7 @@ namespace Org.Apache.Kafka.Raft.Generated
             return IExecuteWithSignature<int>("votedId", "()I");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/generated/QuorumStateData.html#clusterId()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/generated/QuorumStateData.html#clusterId()"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String ClusterId()
@@ -168,7 +168,7 @@ namespace Org.Apache.Kafka.Raft.Generated
             return IExecuteWithSignature<Java.Lang.String>("clusterId", "()Ljava/lang/String;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/generated/QuorumStateData.html#currentVoters()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/generated/QuorumStateData.html#currentVoters()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.List"/></returns>
         public Java.Util.List<Org.Apache.Kafka.Raft.Generated.QuorumStateData.Voter> CurrentVoters()
@@ -176,7 +176,7 @@ namespace Org.Apache.Kafka.Raft.Generated
             return IExecuteWithSignature<Java.Util.List<Org.Apache.Kafka.Raft.Generated.QuorumStateData.Voter>>("currentVoters", "()Ljava/util/List;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/generated/QuorumStateData.html#appliedOffset()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/generated/QuorumStateData.html#appliedOffset()"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long AppliedOffset()
@@ -184,7 +184,7 @@ namespace Org.Apache.Kafka.Raft.Generated
             return IExecuteWithSignature<long>("appliedOffset", "()J");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/generated/QuorumStateData.html#votedDirectoryId()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/generated/QuorumStateData.html#votedDirectoryId()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Uuid"/></returns>
         public Org.Apache.Kafka.Common.Uuid VotedDirectoryId()
@@ -192,7 +192,7 @@ namespace Org.Apache.Kafka.Raft.Generated
             return IExecuteWithSignature<Org.Apache.Kafka.Common.Uuid>("votedDirectoryId", "()Lorg/apache/kafka/common/Uuid;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/generated/QuorumStateData.html#setAppliedOffset(long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/generated/QuorumStateData.html#setAppliedOffset(long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Raft.Generated.QuorumStateData"/></returns>
@@ -201,7 +201,7 @@ namespace Org.Apache.Kafka.Raft.Generated
             return IExecuteWithSignature<Org.Apache.Kafka.Raft.Generated.QuorumStateData>("setAppliedOffset", "(J)Lorg/apache/kafka/raft/generated/QuorumStateData;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/generated/QuorumStateData.html#setClusterId(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/generated/QuorumStateData.html#setClusterId(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Raft.Generated.QuorumStateData"/></returns>
@@ -210,7 +210,7 @@ namespace Org.Apache.Kafka.Raft.Generated
             return IExecuteWithSignature<Org.Apache.Kafka.Raft.Generated.QuorumStateData>("setClusterId", "(Ljava/lang/String;)Lorg/apache/kafka/raft/generated/QuorumStateData;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/generated/QuorumStateData.html#setCurrentVoters(java.util.List)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/generated/QuorumStateData.html#setCurrentVoters(java.util.List)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.List"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Raft.Generated.QuorumStateData"/></returns>
@@ -219,7 +219,7 @@ namespace Org.Apache.Kafka.Raft.Generated
             return IExecuteWithSignature<Org.Apache.Kafka.Raft.Generated.QuorumStateData>("setCurrentVoters", "(Ljava/util/List;)Lorg/apache/kafka/raft/generated/QuorumStateData;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/generated/QuorumStateData.html#setLeaderEpoch(int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/generated/QuorumStateData.html#setLeaderEpoch(int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Raft.Generated.QuorumStateData"/></returns>
@@ -228,7 +228,7 @@ namespace Org.Apache.Kafka.Raft.Generated
             return IExecuteWithSignature<Org.Apache.Kafka.Raft.Generated.QuorumStateData>("setLeaderEpoch", "(I)Lorg/apache/kafka/raft/generated/QuorumStateData;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/generated/QuorumStateData.html#setLeaderId(int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/generated/QuorumStateData.html#setLeaderId(int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Raft.Generated.QuorumStateData"/></returns>
@@ -237,7 +237,7 @@ namespace Org.Apache.Kafka.Raft.Generated
             return IExecuteWithSignature<Org.Apache.Kafka.Raft.Generated.QuorumStateData>("setLeaderId", "(I)Lorg/apache/kafka/raft/generated/QuorumStateData;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/generated/QuorumStateData.html#setVotedDirectoryId(org.apache.kafka.common.Uuid)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/generated/QuorumStateData.html#setVotedDirectoryId(org.apache.kafka.common.Uuid)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Uuid"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Raft.Generated.QuorumStateData"/></returns>
@@ -246,7 +246,7 @@ namespace Org.Apache.Kafka.Raft.Generated
             return IExecuteWithSignature<Org.Apache.Kafka.Raft.Generated.QuorumStateData>("setVotedDirectoryId", "(Lorg/apache/kafka/common/Uuid;)Lorg/apache/kafka/raft/generated/QuorumStateData;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/generated/QuorumStateData.html#setVotedId(int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/generated/QuorumStateData.html#setVotedId(int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Raft.Generated.QuorumStateData"/></returns>
@@ -255,7 +255,7 @@ namespace Org.Apache.Kafka.Raft.Generated
             return IExecuteWithSignature<Org.Apache.Kafka.Raft.Generated.QuorumStateData>("setVotedId", "(I)Lorg/apache/kafka/raft/generated/QuorumStateData;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/generated/QuorumStateData.html#apiKey()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/generated/QuorumStateData.html#apiKey()"/>
         /// </summary>
         /// <returns><see cref="short"/></returns>
         public short ApiKey()
@@ -263,7 +263,7 @@ namespace Org.Apache.Kafka.Raft.Generated
             return IExecuteWithSignature<short>("apiKey", "()S");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/generated/QuorumStateData.html#highestSupportedVersion()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/generated/QuorumStateData.html#highestSupportedVersion()"/>
         /// </summary>
         /// <returns><see cref="short"/></returns>
         public short HighestSupportedVersion()
@@ -271,7 +271,7 @@ namespace Org.Apache.Kafka.Raft.Generated
             return IExecuteWithSignature<short>("highestSupportedVersion", "()S");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/generated/QuorumStateData.html#lowestSupportedVersion()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/generated/QuorumStateData.html#lowestSupportedVersion()"/>
         /// </summary>
         /// <returns><see cref="short"/></returns>
         public short LowestSupportedVersion()
@@ -287,7 +287,7 @@ namespace Org.Apache.Kafka.Raft.Generated
         {
             #region Constructors
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/generated/QuorumStateData.Voter.html#%3Cinit%3E()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/generated/QuorumStateData.Voter.html#%3Cinit%3E()"/>
             /// </summary>
             public Voter() : base(JVMBridgeBase.InitializerInstance)
             {
@@ -309,11 +309,11 @@ namespace Org.Apache.Kafka.Raft.Generated
 
             #region Fields
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/generated/QuorumStateData.Voter.html#HIGHEST_SUPPORTED_VERSION"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/generated/QuorumStateData.Voter.html#HIGHEST_SUPPORTED_VERSION"/>
             /// </summary>
             public static short HIGHEST_SUPPORTED_VERSION { get { return SGetField<short>(LocalBridgeClazz, "HIGHEST_SUPPORTED_VERSION"); } set { SSetField(LocalBridgeClazz, "HIGHEST_SUPPORTED_VERSION", value); } }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/generated/QuorumStateData.Voter.html#LOWEST_SUPPORTED_VERSION"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/generated/QuorumStateData.Voter.html#LOWEST_SUPPORTED_VERSION"/>
             /// </summary>
             public static short LOWEST_SUPPORTED_VERSION { get { return SGetField<short>(LocalBridgeClazz, "LOWEST_SUPPORTED_VERSION"); } set { SSetField(LocalBridgeClazz, "LOWEST_SUPPORTED_VERSION", value); } }
 
@@ -325,7 +325,7 @@ namespace Org.Apache.Kafka.Raft.Generated
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/generated/QuorumStateData.Voter.html#voterId()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/generated/QuorumStateData.Voter.html#voterId()"/>
             /// </summary>
             /// <returns><see cref="int"/></returns>
             public int VoterId()
@@ -333,7 +333,7 @@ namespace Org.Apache.Kafka.Raft.Generated
                 return IExecuteWithSignature<int>("voterId", "()I");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/generated/QuorumStateData.Voter.html#setVoterId(int)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/generated/QuorumStateData.Voter.html#setVoterId(int)"/>
             /// </summary>
             /// <param name="arg0"><see cref="int"/></param>
             /// <returns><see cref="Org.Apache.Kafka.Raft.Generated.QuorumStateData.Voter"/></returns>
@@ -342,7 +342,7 @@ namespace Org.Apache.Kafka.Raft.Generated
                 return IExecuteWithSignature<Org.Apache.Kafka.Raft.Generated.QuorumStateData.Voter>("setVoterId", "(I)Lorg/apache/kafka/raft/generated/QuorumStateData$Voter;", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/generated/QuorumStateData.Voter.html#highestSupportedVersion()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/generated/QuorumStateData.Voter.html#highestSupportedVersion()"/>
             /// </summary>
             /// <returns><see cref="short"/></returns>
             public short HighestSupportedVersion()
@@ -350,7 +350,7 @@ namespace Org.Apache.Kafka.Raft.Generated
                 return IExecuteWithSignature<short>("highestSupportedVersion", "()S");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/generated/QuorumStateData.Voter.html#lowestSupportedVersion()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/generated/QuorumStateData.Voter.html#lowestSupportedVersion()"/>
             /// </summary>
             /// <returns><see cref="short"/></returns>
             public short LowestSupportedVersion()

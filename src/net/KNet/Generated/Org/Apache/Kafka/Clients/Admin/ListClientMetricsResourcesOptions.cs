@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 {
     #region ListClientMetricsResourcesOptions declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/admin/ListClientMetricsResourcesOptions.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/admin/ListClientMetricsResourcesOptions.html"/>
     /// </summary>
     [global::System.Obsolete("Deprecated in JVM")]
     public partial class ListClientMetricsResourcesOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions<Org.Apache.Kafka.Clients.Admin.ListClientMetricsResourcesOptions>
@@ -65,7 +65,7 @@ namespace Org.Apache.Kafka.Clients.Admin
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/admin/ListClientMetricsResourcesOptions.html#%3Cinit%3E()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/admin/ListClientMetricsResourcesOptions.html#%3Cinit%3E()"/>
         /// </summary>
         public ListClientMetricsResourcesOptions() : base(JVMBridgeBase.InitializerInstance)
         {

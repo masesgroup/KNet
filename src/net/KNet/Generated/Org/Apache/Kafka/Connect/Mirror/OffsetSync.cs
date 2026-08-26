@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
 {
     #region OffsetSync declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.2.1/org/apache/kafka/connect/mirror/OffsetSync.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.3.1/org/apache/kafka/connect/mirror/OffsetSync.html"/>
     /// </summary>
     public partial class OffsetSync : Java.Lang.Record
     {
@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.2.1/org/apache/kafka/connect/mirror/OffsetSync.html#%3Cinit%3E(org.apache.kafka.common.TopicPartition,long,long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.3.1/org/apache/kafka/connect/mirror/OffsetSync.html#%3Cinit%3E(org.apache.kafka.common.TopicPartition,long,long)"/>
         /// </summary>
         /// <param name="topicPartition"><see cref="Org.Apache.Kafka.Common.TopicPartition"/></param>
         /// <param name="upstreamOffset"><see cref="long"/></param>
@@ -89,19 +89,19 @@ namespace Org.Apache.Kafka.Connect.Mirror
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.2.1/org/apache/kafka/connect/mirror/OffsetSync.html#DOWNSTREAM_OFFSET_KEY"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.3.1/org/apache/kafka/connect/mirror/OffsetSync.html#DOWNSTREAM_OFFSET_KEY"/>
         /// </summary>
         public static Java.Lang.String DOWNSTREAM_OFFSET_KEY { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "DOWNSTREAM_OFFSET_KEY"); } set { SSetField(LocalBridgeClazz, "DOWNSTREAM_OFFSET_KEY", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.2.1/org/apache/kafka/connect/mirror/OffsetSync.html#PARTITION_KEY"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.3.1/org/apache/kafka/connect/mirror/OffsetSync.html#PARTITION_KEY"/>
         /// </summary>
         public static Java.Lang.String PARTITION_KEY { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "PARTITION_KEY"); } set { SSetField(LocalBridgeClazz, "PARTITION_KEY", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.2.1/org/apache/kafka/connect/mirror/OffsetSync.html#TOPIC_KEY"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.3.1/org/apache/kafka/connect/mirror/OffsetSync.html#TOPIC_KEY"/>
         /// </summary>
         public static Java.Lang.String TOPIC_KEY { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "TOPIC_KEY"); } set { SSetField(LocalBridgeClazz, "TOPIC_KEY", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.2.1/org/apache/kafka/connect/mirror/OffsetSync.html#UPSTREAM_OFFSET_KEY"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.3.1/org/apache/kafka/connect/mirror/OffsetSync.html#UPSTREAM_OFFSET_KEY"/>
         /// </summary>
         public static Java.Lang.String UPSTREAM_OFFSET_KEY { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "UPSTREAM_OFFSET_KEY"); } set { SSetField(LocalBridgeClazz, "UPSTREAM_OFFSET_KEY", value); } }
 
@@ -109,7 +109,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.2.1/org/apache/kafka/connect/mirror/OffsetSync.html#deserializeRecord(org.apache.kafka.clients.consumer.ConsumerRecord)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.3.1/org/apache/kafka/connect/mirror/OffsetSync.html#deserializeRecord(org.apache.kafka.clients.consumer.ConsumerRecord)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRecord"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Mirror.OffsetSync"/></returns>
@@ -122,7 +122,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.2.1/org/apache/kafka/connect/mirror/OffsetSync.html#downstreamOffset()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.3.1/org/apache/kafka/connect/mirror/OffsetSync.html#downstreamOffset()"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long DownstreamOffset()
@@ -130,7 +130,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
             return IExecuteWithSignature<long>("downstreamOffset", "()J");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.2.1/org/apache/kafka/connect/mirror/OffsetSync.html#upstreamOffset()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.3.1/org/apache/kafka/connect/mirror/OffsetSync.html#upstreamOffset()"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long UpstreamOffset()
@@ -138,7 +138,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
             return IExecuteWithSignature<long>("upstreamOffset", "()J");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.2.1/org/apache/kafka/connect/mirror/OffsetSync.html#topicPartition()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.3.1/org/apache/kafka/connect/mirror/OffsetSync.html#topicPartition()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.TopicPartition"/></returns>
         public Org.Apache.Kafka.Common.TopicPartition TopicPartition()

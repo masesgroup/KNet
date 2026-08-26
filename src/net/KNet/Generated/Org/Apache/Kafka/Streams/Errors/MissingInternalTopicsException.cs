@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.Errors
 {
     #region MissingInternalTopicsException declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/errors/MissingInternalTopicsException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/errors/MissingInternalTopicsException.html"/>
     /// </summary>
     public partial class MissingInternalTopicsException : Org.Apache.Kafka.Streams.Errors.StreamsException
     {

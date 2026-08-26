@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 {
     #region AlterUserScramCredentialsOptions declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/admin/AlterUserScramCredentialsOptions.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/admin/AlterUserScramCredentialsOptions.html"/>
     /// </summary>
     public partial class AlterUserScramCredentialsOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions<Org.Apache.Kafka.Clients.Admin.AlterUserScramCredentialsOptions>
     {
@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Clients.Admin
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/admin/AlterUserScramCredentialsOptions.html#%3Cinit%3E()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/admin/AlterUserScramCredentialsOptions.html#%3Cinit%3E()"/>
         /// </summary>
         public AlterUserScramCredentialsOptions() : base(JVMBridgeBase.InitializerInstance)
         {

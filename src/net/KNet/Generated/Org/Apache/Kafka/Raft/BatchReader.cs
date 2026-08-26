@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Raft
 {
     #region BatchReader declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/BatchReader.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/BatchReader.html"/>
     /// </summary>
     public partial class BatchReader : Java.Util.Iterator
     {
@@ -61,7 +61,7 @@ namespace Org.Apache.Kafka.Raft
 
     #region BatchReader<T> declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/BatchReader.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/BatchReader.html"/>
     /// </summary>
     /// <typeparam name="T"></typeparam>
     public partial class BatchReader<T> : Java.Util.Iterator<Org.Apache.Kafka.Raft.Batch<T>>
@@ -119,7 +119,7 @@ namespace Org.Apache.Kafka.Raft
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/BatchReader.html#lastOffset()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/BatchReader.html#lastOffset()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.OptionalLong"/></returns>
         public Java.Util.OptionalLong LastOffset()
@@ -127,7 +127,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<Java.Util.OptionalLong>("lastOffset", "()Ljava/util/OptionalLong;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/BatchReader.html#baseOffset()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/BatchReader.html#baseOffset()"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long BaseOffset()
@@ -135,7 +135,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<long>("baseOffset", "()J");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/BatchReader.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/BatchReader.html#close()"/>
         /// </summary>
         public void Close()
         {
@@ -154,7 +154,7 @@ namespace Org.Apache.Kafka.Raft
 
     #region IBatchReader<T>
     /// <summary>
-    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/BatchReader.html"/>
+    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/BatchReader.html"/>
     /// </summary>
     public partial interface IBatchReader<T>
     {
@@ -199,7 +199,7 @@ namespace Org.Apache.Kafka.Raft
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/BatchReader.html#lastOffset()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/BatchReader.html#lastOffset()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.OptionalLong"/></returns>
         public Java.Util.OptionalLong LastOffset()
@@ -207,7 +207,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<Java.Util.OptionalLong>("lastOffset", "()Ljava/util/OptionalLong;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/BatchReader.html#baseOffset()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/BatchReader.html#baseOffset()"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long BaseOffset()
@@ -215,7 +215,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<long>("baseOffset", "()J");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/BatchReader.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/BatchReader.html#close()"/>
         /// </summary>
         public void Close()
         {

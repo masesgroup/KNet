@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Security
 {
     #region JaasContext declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/security/JaasContext.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/security/JaasContext.html"/>
     /// </summary>
     public partial class JaasContext : MASES.JCOBridge.C2JBridge.JVMBridgeBase<JaasContext>
     {
@@ -57,7 +57,7 @@ namespace Org.Apache.Kafka.Common.Security
         // TODO: complete the class
         #region Type declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/security/JaasContext.Type.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/security/JaasContext.Type.html"/>
         /// </summary>
         public partial class Type : Java.Lang.Enum<Org.Apache.Kafka.Common.Security.JaasContext.Type>
         {
@@ -98,7 +98,7 @@ namespace Org.Apache.Kafka.Common.Security
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/security/JaasContext.html#%3Cinit%3E(java.lang.String,org.apache.kafka.common.security.JaasContext.Type,javax.security.auth.login.Configuration,org.apache.kafka.common.config.types.Password)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/security/JaasContext.html#%3Cinit%3E(java.lang.String,org.apache.kafka.common.security.JaasContext.Type,javax.security.auth.login.Configuration,org.apache.kafka.common.config.types.Password)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Security.JaasContext.Type"/></param>
@@ -128,7 +128,7 @@ namespace Org.Apache.Kafka.Common.Security
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/security/JaasContext.html#configEntryOption(java.util.List,java.lang.String,java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/security/JaasContext.html#configEntryOption(java.util.List,java.lang.String,java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.List"/></param>
         /// <param name="arg1"><see cref="Java.Lang.String"/></param>
@@ -139,7 +139,7 @@ namespace Org.Apache.Kafka.Common.Security
             return SExecuteWithSignature<Java.Lang.String>(LocalBridgeClazz, "configEntryOption", "(Ljava/util/List;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/security/JaasContext.html#loadClientContext(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/security/JaasContext.html#loadClientContext(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Security.JaasContext"/></returns>
@@ -152,7 +152,7 @@ namespace Org.Apache.Kafka.Common.Security
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/security/JaasContext.html#name()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/security/JaasContext.html#name()"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String Name()
@@ -160,7 +160,7 @@ namespace Org.Apache.Kafka.Common.Security
             return IExecuteWithSignature<Java.Lang.String>("name", "()Ljava/lang/String;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/security/JaasContext.html#configurationEntries()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/security/JaasContext.html#configurationEntries()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.List"/></returns>
         public Java.Util.List<Javax.Security.Auth.Login.AppConfigurationEntry> ConfigurationEntries()
@@ -168,7 +168,7 @@ namespace Org.Apache.Kafka.Common.Security
             return IExecuteWithSignature<Java.Util.List<Javax.Security.Auth.Login.AppConfigurationEntry>>("configurationEntries", "()Ljava/util/List;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/security/JaasContext.html#configuration()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/security/JaasContext.html#configuration()"/>
         /// </summary>
         /// <returns><see cref="Javax.Security.Auth.Login.Configuration"/></returns>
         public Javax.Security.Auth.Login.Configuration Configuration()
@@ -176,7 +176,7 @@ namespace Org.Apache.Kafka.Common.Security
             return IExecuteWithSignature<Javax.Security.Auth.Login.Configuration>("configuration", "()Ljavax/security/auth/login/Configuration;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/security/JaasContext.html#dynamicJaasConfig()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/security/JaasContext.html#dynamicJaasConfig()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Config.Types.Password"/></returns>
         public Org.Apache.Kafka.Common.Config.Types.Password DynamicJaasConfig()
@@ -184,7 +184,7 @@ namespace Org.Apache.Kafka.Common.Security
             return IExecuteWithSignature<Org.Apache.Kafka.Common.Config.Types.Password>("dynamicJaasConfig", "()Lorg/apache/kafka/common/config/types/Password;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/security/JaasContext.html#type()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/security/JaasContext.html#type()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Security.JaasContext.Type"/></returns>
         public Org.Apache.Kafka.Common.Security.JaasContext.Type TypeMethod()
@@ -208,11 +208,11 @@ namespace Org.Apache.Kafka.Common.Security
 
             #region Fields
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/security/JaasContext.Type.html#CLIENT"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/security/JaasContext.Type.html#CLIENT"/>
             /// </summary>
             public static Org.Apache.Kafka.Common.Security.JaasContext.Type CLIENT { get { return SGetField<Org.Apache.Kafka.Common.Security.JaasContext.Type>(LocalBridgeClazz, "CLIENT"); } set { SSetField(LocalBridgeClazz, "CLIENT", value); } }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/security/JaasContext.Type.html#SERVER"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/security/JaasContext.Type.html#SERVER"/>
             /// </summary>
             public static Org.Apache.Kafka.Common.Security.JaasContext.Type SERVER { get { return SGetField<Org.Apache.Kafka.Common.Security.JaasContext.Type>(LocalBridgeClazz, "SERVER"); } set { SSetField(LocalBridgeClazz, "SERVER", value); } }
 
@@ -220,7 +220,7 @@ namespace Org.Apache.Kafka.Common.Security
 
             #region Static methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/security/JaasContext.Type.html#valueOf(java.lang.String)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/security/JaasContext.Type.html#valueOf(java.lang.String)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Lang.String"/></param>
             /// <returns><see cref="Org.Apache.Kafka.Common.Security.JaasContext.Type"/></returns>
@@ -229,7 +229,7 @@ namespace Org.Apache.Kafka.Common.Security
                 return SExecuteWithSignature<Org.Apache.Kafka.Common.Security.JaasContext.Type>(LocalBridgeClazz, "valueOf", "(Ljava/lang/String;)Lorg/apache/kafka/common/security/JaasContext$Type;", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/security/JaasContext.Type.html#values()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/security/JaasContext.Type.html#values()"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Common.Security.JaasContext.Type"/></returns>
             public static Org.Apache.Kafka.Common.Security.JaasContext.Type[] Values()

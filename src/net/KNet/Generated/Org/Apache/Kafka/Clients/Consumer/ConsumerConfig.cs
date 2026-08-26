@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
 {
     #region ConsumerConfig declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/consumer/ConsumerConfig.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/consumer/ConsumerConfig.html"/>
     /// </summary>
     public partial class ConsumerConfig : Org.Apache.Kafka.Common.Config.AbstractConfig, MASES.JCOBridge.C2JBridge.IJVMBridgeMain
     {
@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#%3Cinit%3E(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#%3Cinit%3E(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         public ConsumerConfig(Java.Util.Map<Java.Lang.String, object> arg0) : base(JVMBridgeBase.InitializerInstance)
@@ -79,7 +79,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return JVMBridgeBase.New<ConsumerConfig>(arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#%3Cinit%3E(java.util.Properties)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#%3Cinit%3E(java.util.Properties)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Properties"/></param>
         public ConsumerConfig(Java.Util.Properties arg0) : base(JVMBridgeBase.InitializerInstance)
@@ -102,275 +102,275 @@ namespace Org.Apache.Kafka.Clients.Consumer
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#DEFAULT_ALLOW_AUTO_CREATE_TOPICS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#DEFAULT_ALLOW_AUTO_CREATE_TOPICS"/>
         /// </summary>
         public static bool DEFAULT_ALLOW_AUTO_CREATE_TOPICS { get { return SGetField<bool>(LocalBridgeClazz, "DEFAULT_ALLOW_AUTO_CREATE_TOPICS"); } set { SSetField(LocalBridgeClazz, "DEFAULT_ALLOW_AUTO_CREATE_TOPICS", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#DEFAULT_EXCLUDE_INTERNAL_TOPICS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#DEFAULT_EXCLUDE_INTERNAL_TOPICS"/>
         /// </summary>
         public static bool DEFAULT_EXCLUDE_INTERNAL_TOPICS { get { return SGetField<bool>(LocalBridgeClazz, "DEFAULT_EXCLUDE_INTERNAL_TOPICS"); } set { SSetField(LocalBridgeClazz, "DEFAULT_EXCLUDE_INTERNAL_TOPICS", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#DEFAULT_FETCH_MAX_BYTES"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#DEFAULT_FETCH_MAX_BYTES"/>
         /// </summary>
         public static int DEFAULT_FETCH_MAX_BYTES { get { return SGetField<int>(LocalBridgeClazz, "DEFAULT_FETCH_MAX_BYTES"); } set { SSetField(LocalBridgeClazz, "DEFAULT_FETCH_MAX_BYTES", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#DEFAULT_FETCH_MAX_WAIT_MS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#DEFAULT_FETCH_MAX_WAIT_MS"/>
         /// </summary>
         public static int DEFAULT_FETCH_MAX_WAIT_MS { get { return SGetField<int>(LocalBridgeClazz, "DEFAULT_FETCH_MAX_WAIT_MS"); } set { SSetField(LocalBridgeClazz, "DEFAULT_FETCH_MAX_WAIT_MS", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#DEFAULT_FETCH_MIN_BYTES"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#DEFAULT_FETCH_MIN_BYTES"/>
         /// </summary>
         public static int DEFAULT_FETCH_MIN_BYTES { get { return SGetField<int>(LocalBridgeClazz, "DEFAULT_FETCH_MIN_BYTES"); } set { SSetField(LocalBridgeClazz, "DEFAULT_FETCH_MIN_BYTES", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#DEFAULT_MAX_PARTITION_FETCH_BYTES"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#DEFAULT_MAX_PARTITION_FETCH_BYTES"/>
         /// </summary>
         public static int DEFAULT_MAX_PARTITION_FETCH_BYTES { get { return SGetField<int>(LocalBridgeClazz, "DEFAULT_MAX_PARTITION_FETCH_BYTES"); } set { SSetField(LocalBridgeClazz, "DEFAULT_MAX_PARTITION_FETCH_BYTES", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#DEFAULT_MAX_POLL_RECORDS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#DEFAULT_MAX_POLL_RECORDS"/>
         /// </summary>
         public static int DEFAULT_MAX_POLL_RECORDS { get { return SGetField<int>(LocalBridgeClazz, "DEFAULT_MAX_POLL_RECORDS"); } set { SSetField(LocalBridgeClazz, "DEFAULT_MAX_POLL_RECORDS", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#ALLOW_AUTO_CREATE_TOPICS_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#ALLOW_AUTO_CREATE_TOPICS_CONFIG"/>
         /// </summary>
         public static Java.Lang.String ALLOW_AUTO_CREATE_TOPICS_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "ALLOW_AUTO_CREATE_TOPICS_CONFIG"); } set { SSetField(LocalBridgeClazz, "ALLOW_AUTO_CREATE_TOPICS_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#AUTO_COMMIT_INTERVAL_MS_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#AUTO_COMMIT_INTERVAL_MS_CONFIG"/>
         /// </summary>
         public static Java.Lang.String AUTO_COMMIT_INTERVAL_MS_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "AUTO_COMMIT_INTERVAL_MS_CONFIG"); } set { SSetField(LocalBridgeClazz, "AUTO_COMMIT_INTERVAL_MS_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#AUTO_OFFSET_RESET_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#AUTO_OFFSET_RESET_CONFIG"/>
         /// </summary>
         public static Java.Lang.String AUTO_OFFSET_RESET_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "AUTO_OFFSET_RESET_CONFIG"); } set { SSetField(LocalBridgeClazz, "AUTO_OFFSET_RESET_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#AUTO_OFFSET_RESET_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#AUTO_OFFSET_RESET_DOC"/>
         /// </summary>
         public static Java.Lang.String AUTO_OFFSET_RESET_DOC { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "AUTO_OFFSET_RESET_DOC"); } set { SSetField(LocalBridgeClazz, "AUTO_OFFSET_RESET_DOC", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#BOOTSTRAP_SERVERS_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#BOOTSTRAP_SERVERS_CONFIG"/>
         /// </summary>
         public static Java.Lang.String BOOTSTRAP_SERVERS_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "BOOTSTRAP_SERVERS_CONFIG"); } set { SSetField(LocalBridgeClazz, "BOOTSTRAP_SERVERS_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#CHECK_CRCS_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#CHECK_CRCS_CONFIG"/>
         /// </summary>
         public static Java.Lang.String CHECK_CRCS_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "CHECK_CRCS_CONFIG"); } set { SSetField(LocalBridgeClazz, "CHECK_CRCS_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#CLIENT_DNS_LOOKUP_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#CLIENT_DNS_LOOKUP_CONFIG"/>
         /// </summary>
         public static Java.Lang.String CLIENT_DNS_LOOKUP_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "CLIENT_DNS_LOOKUP_CONFIG"); } set { SSetField(LocalBridgeClazz, "CLIENT_DNS_LOOKUP_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#CLIENT_ID_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#CLIENT_ID_CONFIG"/>
         /// </summary>
         public static Java.Lang.String CLIENT_ID_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "CLIENT_ID_CONFIG"); } set { SSetField(LocalBridgeClazz, "CLIENT_ID_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#CLIENT_RACK_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#CLIENT_RACK_CONFIG"/>
         /// </summary>
         public static Java.Lang.String CLIENT_RACK_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "CLIENT_RACK_CONFIG"); } set { SSetField(LocalBridgeClazz, "CLIENT_RACK_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#CONNECTIONS_MAX_IDLE_MS_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#CONNECTIONS_MAX_IDLE_MS_CONFIG"/>
         /// </summary>
         public static Java.Lang.String CONNECTIONS_MAX_IDLE_MS_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "CONNECTIONS_MAX_IDLE_MS_CONFIG"); } set { SSetField(LocalBridgeClazz, "CONNECTIONS_MAX_IDLE_MS_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#DEFAULT_API_TIMEOUT_MS_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#DEFAULT_API_TIMEOUT_MS_CONFIG"/>
         /// </summary>
         public static Java.Lang.String DEFAULT_API_TIMEOUT_MS_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "DEFAULT_API_TIMEOUT_MS_CONFIG"); } set { SSetField(LocalBridgeClazz, "DEFAULT_API_TIMEOUT_MS_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#DEFAULT_CLIENT_RACK"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#DEFAULT_CLIENT_RACK"/>
         /// </summary>
         public static Java.Lang.String DEFAULT_CLIENT_RACK { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "DEFAULT_CLIENT_RACK"); } set { SSetField(LocalBridgeClazz, "DEFAULT_CLIENT_RACK", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#DEFAULT_GROUP_PROTOCOL"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#DEFAULT_GROUP_PROTOCOL"/>
         /// </summary>
         public static Java.Lang.String DEFAULT_GROUP_PROTOCOL { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "DEFAULT_GROUP_PROTOCOL"); } set { SSetField(LocalBridgeClazz, "DEFAULT_GROUP_PROTOCOL", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#DEFAULT_GROUP_REMOTE_ASSIGNOR"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#DEFAULT_GROUP_REMOTE_ASSIGNOR"/>
         /// </summary>
         public static Java.Lang.String DEFAULT_GROUP_REMOTE_ASSIGNOR { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "DEFAULT_GROUP_REMOTE_ASSIGNOR"); } set { SSetField(LocalBridgeClazz, "DEFAULT_GROUP_REMOTE_ASSIGNOR", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#DEFAULT_ISOLATION_LEVEL"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#DEFAULT_ISOLATION_LEVEL"/>
         /// </summary>
         public static Java.Lang.String DEFAULT_ISOLATION_LEVEL { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "DEFAULT_ISOLATION_LEVEL"); } set { SSetField(LocalBridgeClazz, "DEFAULT_ISOLATION_LEVEL", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#DEFAULT_SHARE_ACQUIRE_MODE"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#DEFAULT_SHARE_ACQUIRE_MODE"/>
         /// </summary>
         public static Java.Lang.String DEFAULT_SHARE_ACQUIRE_MODE { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "DEFAULT_SHARE_ACQUIRE_MODE"); } set { SSetField(LocalBridgeClazz, "DEFAULT_SHARE_ACQUIRE_MODE", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#ENABLE_AUTO_COMMIT_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#ENABLE_AUTO_COMMIT_CONFIG"/>
         /// </summary>
         public static Java.Lang.String ENABLE_AUTO_COMMIT_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "ENABLE_AUTO_COMMIT_CONFIG"); } set { SSetField(LocalBridgeClazz, "ENABLE_AUTO_COMMIT_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#ENABLE_METRICS_PUSH_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#ENABLE_METRICS_PUSH_CONFIG"/>
         /// </summary>
         public static Java.Lang.String ENABLE_METRICS_PUSH_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "ENABLE_METRICS_PUSH_CONFIG"); } set { SSetField(LocalBridgeClazz, "ENABLE_METRICS_PUSH_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#ENABLE_METRICS_PUSH_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#ENABLE_METRICS_PUSH_DOC"/>
         /// </summary>
         public static Java.Lang.String ENABLE_METRICS_PUSH_DOC { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "ENABLE_METRICS_PUSH_DOC"); } set { SSetField(LocalBridgeClazz, "ENABLE_METRICS_PUSH_DOC", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#EXCLUDE_INTERNAL_TOPICS_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#EXCLUDE_INTERNAL_TOPICS_CONFIG"/>
         /// </summary>
         public static Java.Lang.String EXCLUDE_INTERNAL_TOPICS_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "EXCLUDE_INTERNAL_TOPICS_CONFIG"); } set { SSetField(LocalBridgeClazz, "EXCLUDE_INTERNAL_TOPICS_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#FETCH_MAX_BYTES_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#FETCH_MAX_BYTES_CONFIG"/>
         /// </summary>
         public static Java.Lang.String FETCH_MAX_BYTES_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "FETCH_MAX_BYTES_CONFIG"); } set { SSetField(LocalBridgeClazz, "FETCH_MAX_BYTES_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#FETCH_MAX_WAIT_MS_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#FETCH_MAX_WAIT_MS_CONFIG"/>
         /// </summary>
         public static Java.Lang.String FETCH_MAX_WAIT_MS_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "FETCH_MAX_WAIT_MS_CONFIG"); } set { SSetField(LocalBridgeClazz, "FETCH_MAX_WAIT_MS_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#FETCH_MIN_BYTES_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#FETCH_MIN_BYTES_CONFIG"/>
         /// </summary>
         public static Java.Lang.String FETCH_MIN_BYTES_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "FETCH_MIN_BYTES_CONFIG"); } set { SSetField(LocalBridgeClazz, "FETCH_MIN_BYTES_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#GROUP_ID_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#GROUP_ID_CONFIG"/>
         /// </summary>
         public static Java.Lang.String GROUP_ID_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "GROUP_ID_CONFIG"); } set { SSetField(LocalBridgeClazz, "GROUP_ID_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#GROUP_INSTANCE_ID_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#GROUP_INSTANCE_ID_CONFIG"/>
         /// </summary>
         public static Java.Lang.String GROUP_INSTANCE_ID_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "GROUP_INSTANCE_ID_CONFIG"); } set { SSetField(LocalBridgeClazz, "GROUP_INSTANCE_ID_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#GROUP_PROTOCOL_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#GROUP_PROTOCOL_CONFIG"/>
         /// </summary>
         public static Java.Lang.String GROUP_PROTOCOL_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "GROUP_PROTOCOL_CONFIG"); } set { SSetField(LocalBridgeClazz, "GROUP_PROTOCOL_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#GROUP_PROTOCOL_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#GROUP_PROTOCOL_DOC"/>
         /// </summary>
         public static Java.Lang.String GROUP_PROTOCOL_DOC { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "GROUP_PROTOCOL_DOC"); } set { SSetField(LocalBridgeClazz, "GROUP_PROTOCOL_DOC", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#GROUP_REMOTE_ASSIGNOR_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#GROUP_REMOTE_ASSIGNOR_CONFIG"/>
         /// </summary>
         public static Java.Lang.String GROUP_REMOTE_ASSIGNOR_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "GROUP_REMOTE_ASSIGNOR_CONFIG"); } set { SSetField(LocalBridgeClazz, "GROUP_REMOTE_ASSIGNOR_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#GROUP_REMOTE_ASSIGNOR_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#GROUP_REMOTE_ASSIGNOR_DOC"/>
         /// </summary>
         public static Java.Lang.String GROUP_REMOTE_ASSIGNOR_DOC { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "GROUP_REMOTE_ASSIGNOR_DOC"); } set { SSetField(LocalBridgeClazz, "GROUP_REMOTE_ASSIGNOR_DOC", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#HEARTBEAT_INTERVAL_MS_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#HEARTBEAT_INTERVAL_MS_CONFIG"/>
         /// </summary>
         public static Java.Lang.String HEARTBEAT_INTERVAL_MS_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "HEARTBEAT_INTERVAL_MS_CONFIG"); } set { SSetField(LocalBridgeClazz, "HEARTBEAT_INTERVAL_MS_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#INTERCEPTOR_CLASSES_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#INTERCEPTOR_CLASSES_CONFIG"/>
         /// </summary>
         public static Java.Lang.String INTERCEPTOR_CLASSES_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "INTERCEPTOR_CLASSES_CONFIG"); } set { SSetField(LocalBridgeClazz, "INTERCEPTOR_CLASSES_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#INTERCEPTOR_CLASSES_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#INTERCEPTOR_CLASSES_DOC"/>
         /// </summary>
         public static Java.Lang.String INTERCEPTOR_CLASSES_DOC { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "INTERCEPTOR_CLASSES_DOC"); } set { SSetField(LocalBridgeClazz, "INTERCEPTOR_CLASSES_DOC", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#ISOLATION_LEVEL_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#ISOLATION_LEVEL_CONFIG"/>
         /// </summary>
         public static Java.Lang.String ISOLATION_LEVEL_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "ISOLATION_LEVEL_CONFIG"); } set { SSetField(LocalBridgeClazz, "ISOLATION_LEVEL_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#ISOLATION_LEVEL_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#ISOLATION_LEVEL_DOC"/>
         /// </summary>
         public static Java.Lang.String ISOLATION_LEVEL_DOC { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "ISOLATION_LEVEL_DOC"); } set { SSetField(LocalBridgeClazz, "ISOLATION_LEVEL_DOC", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#KEY_DESERIALIZER_CLASS_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#KEY_DESERIALIZER_CLASS_CONFIG"/>
         /// </summary>
         public static Java.Lang.String KEY_DESERIALIZER_CLASS_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "KEY_DESERIALIZER_CLASS_CONFIG"); } set { SSetField(LocalBridgeClazz, "KEY_DESERIALIZER_CLASS_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#KEY_DESERIALIZER_CLASS_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#KEY_DESERIALIZER_CLASS_DOC"/>
         /// </summary>
         public static Java.Lang.String KEY_DESERIALIZER_CLASS_DOC { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "KEY_DESERIALIZER_CLASS_DOC"); } set { SSetField(LocalBridgeClazz, "KEY_DESERIALIZER_CLASS_DOC", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#MAX_PARTITION_FETCH_BYTES_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#MAX_PARTITION_FETCH_BYTES_CONFIG"/>
         /// </summary>
         public static Java.Lang.String MAX_PARTITION_FETCH_BYTES_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "MAX_PARTITION_FETCH_BYTES_CONFIG"); } set { SSetField(LocalBridgeClazz, "MAX_PARTITION_FETCH_BYTES_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#MAX_POLL_INTERVAL_MS_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#MAX_POLL_INTERVAL_MS_CONFIG"/>
         /// </summary>
         public static Java.Lang.String MAX_POLL_INTERVAL_MS_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "MAX_POLL_INTERVAL_MS_CONFIG"); } set { SSetField(LocalBridgeClazz, "MAX_POLL_INTERVAL_MS_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#MAX_POLL_RECORDS_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#MAX_POLL_RECORDS_CONFIG"/>
         /// </summary>
         public static Java.Lang.String MAX_POLL_RECORDS_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "MAX_POLL_RECORDS_CONFIG"); } set { SSetField(LocalBridgeClazz, "MAX_POLL_RECORDS_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#METADATA_MAX_AGE_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#METADATA_MAX_AGE_CONFIG"/>
         /// </summary>
         public static Java.Lang.String METADATA_MAX_AGE_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "METADATA_MAX_AGE_CONFIG"); } set { SSetField(LocalBridgeClazz, "METADATA_MAX_AGE_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#METRIC_REPORTER_CLASSES_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#METRIC_REPORTER_CLASSES_CONFIG"/>
         /// </summary>
         public static Java.Lang.String METRIC_REPORTER_CLASSES_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "METRIC_REPORTER_CLASSES_CONFIG"); } set { SSetField(LocalBridgeClazz, "METRIC_REPORTER_CLASSES_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#METRICS_NUM_SAMPLES_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#METRICS_NUM_SAMPLES_CONFIG"/>
         /// </summary>
         public static Java.Lang.String METRICS_NUM_SAMPLES_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "METRICS_NUM_SAMPLES_CONFIG"); } set { SSetField(LocalBridgeClazz, "METRICS_NUM_SAMPLES_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#METRICS_RECORDING_LEVEL_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#METRICS_RECORDING_LEVEL_CONFIG"/>
         /// </summary>
         public static Java.Lang.String METRICS_RECORDING_LEVEL_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "METRICS_RECORDING_LEVEL_CONFIG"); } set { SSetField(LocalBridgeClazz, "METRICS_RECORDING_LEVEL_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#METRICS_SAMPLE_WINDOW_MS_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#METRICS_SAMPLE_WINDOW_MS_CONFIG"/>
         /// </summary>
         public static Java.Lang.String METRICS_SAMPLE_WINDOW_MS_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "METRICS_SAMPLE_WINDOW_MS_CONFIG"); } set { SSetField(LocalBridgeClazz, "METRICS_SAMPLE_WINDOW_MS_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#PARTITION_ASSIGNMENT_STRATEGY_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#PARTITION_ASSIGNMENT_STRATEGY_CONFIG"/>
         /// </summary>
         public static Java.Lang.String PARTITION_ASSIGNMENT_STRATEGY_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "PARTITION_ASSIGNMENT_STRATEGY_CONFIG"); } set { SSetField(LocalBridgeClazz, "PARTITION_ASSIGNMENT_STRATEGY_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#RECEIVE_BUFFER_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#RECEIVE_BUFFER_CONFIG"/>
         /// </summary>
         public static Java.Lang.String RECEIVE_BUFFER_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "RECEIVE_BUFFER_CONFIG"); } set { SSetField(LocalBridgeClazz, "RECEIVE_BUFFER_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#RECONNECT_BACKOFF_MAX_MS_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#RECONNECT_BACKOFF_MAX_MS_CONFIG"/>
         /// </summary>
         public static Java.Lang.String RECONNECT_BACKOFF_MAX_MS_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "RECONNECT_BACKOFF_MAX_MS_CONFIG"); } set { SSetField(LocalBridgeClazz, "RECONNECT_BACKOFF_MAX_MS_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#RECONNECT_BACKOFF_MS_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#RECONNECT_BACKOFF_MS_CONFIG"/>
         /// </summary>
         public static Java.Lang.String RECONNECT_BACKOFF_MS_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "RECONNECT_BACKOFF_MS_CONFIG"); } set { SSetField(LocalBridgeClazz, "RECONNECT_BACKOFF_MS_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#REQUEST_TIMEOUT_MS_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#REQUEST_TIMEOUT_MS_CONFIG"/>
         /// </summary>
         public static Java.Lang.String REQUEST_TIMEOUT_MS_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "REQUEST_TIMEOUT_MS_CONFIG"); } set { SSetField(LocalBridgeClazz, "REQUEST_TIMEOUT_MS_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#RETRY_BACKOFF_MAX_MS_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#RETRY_BACKOFF_MAX_MS_CONFIG"/>
         /// </summary>
         public static Java.Lang.String RETRY_BACKOFF_MAX_MS_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "RETRY_BACKOFF_MAX_MS_CONFIG"); } set { SSetField(LocalBridgeClazz, "RETRY_BACKOFF_MAX_MS_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#RETRY_BACKOFF_MS_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#RETRY_BACKOFF_MS_CONFIG"/>
         /// </summary>
         public static Java.Lang.String RETRY_BACKOFF_MS_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "RETRY_BACKOFF_MS_CONFIG"); } set { SSetField(LocalBridgeClazz, "RETRY_BACKOFF_MS_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#SECURITY_PROVIDERS_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#SECURITY_PROVIDERS_CONFIG"/>
         /// </summary>
         public static Java.Lang.String SECURITY_PROVIDERS_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "SECURITY_PROVIDERS_CONFIG"); } set { SSetField(LocalBridgeClazz, "SECURITY_PROVIDERS_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#SEND_BUFFER_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#SEND_BUFFER_CONFIG"/>
         /// </summary>
         public static Java.Lang.String SEND_BUFFER_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "SEND_BUFFER_CONFIG"); } set { SSetField(LocalBridgeClazz, "SEND_BUFFER_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#SESSION_TIMEOUT_MS_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#SESSION_TIMEOUT_MS_CONFIG"/>
         /// </summary>
         public static Java.Lang.String SESSION_TIMEOUT_MS_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "SESSION_TIMEOUT_MS_CONFIG"); } set { SSetField(LocalBridgeClazz, "SESSION_TIMEOUT_MS_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#SHARE_ACKNOWLEDGEMENT_MODE_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#SHARE_ACKNOWLEDGEMENT_MODE_CONFIG"/>
         /// </summary>
         public static Java.Lang.String SHARE_ACKNOWLEDGEMENT_MODE_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "SHARE_ACKNOWLEDGEMENT_MODE_CONFIG"); } set { SSetField(LocalBridgeClazz, "SHARE_ACKNOWLEDGEMENT_MODE_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#SHARE_ACQUIRE_MODE_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#SHARE_ACQUIRE_MODE_CONFIG"/>
         /// </summary>
         public static Java.Lang.String SHARE_ACQUIRE_MODE_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "SHARE_ACQUIRE_MODE_CONFIG"); } set { SSetField(LocalBridgeClazz, "SHARE_ACQUIRE_MODE_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#SOCKET_CONNECTION_SETUP_TIMEOUT_MAX_MS_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#SOCKET_CONNECTION_SETUP_TIMEOUT_MAX_MS_CONFIG"/>
         /// </summary>
         public static Java.Lang.String SOCKET_CONNECTION_SETUP_TIMEOUT_MAX_MS_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "SOCKET_CONNECTION_SETUP_TIMEOUT_MAX_MS_CONFIG"); } set { SSetField(LocalBridgeClazz, "SOCKET_CONNECTION_SETUP_TIMEOUT_MAX_MS_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#SOCKET_CONNECTION_SETUP_TIMEOUT_MS_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#SOCKET_CONNECTION_SETUP_TIMEOUT_MS_CONFIG"/>
         /// </summary>
         public static Java.Lang.String SOCKET_CONNECTION_SETUP_TIMEOUT_MS_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "SOCKET_CONNECTION_SETUP_TIMEOUT_MS_CONFIG"); } set { SSetField(LocalBridgeClazz, "SOCKET_CONNECTION_SETUP_TIMEOUT_MS_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#VALUE_DESERIALIZER_CLASS_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#VALUE_DESERIALIZER_CLASS_CONFIG"/>
         /// </summary>
         public static Java.Lang.String VALUE_DESERIALIZER_CLASS_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "VALUE_DESERIALIZER_CLASS_CONFIG"); } set { SSetField(LocalBridgeClazz, "VALUE_DESERIALIZER_CLASS_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#VALUE_DESERIALIZER_CLASS_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#VALUE_DESERIALIZER_CLASS_DOC"/>
         /// </summary>
         public static Java.Lang.String VALUE_DESERIALIZER_CLASS_DOC { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "VALUE_DESERIALIZER_CLASS_DOC"); } set { SSetField(LocalBridgeClazz, "VALUE_DESERIALIZER_CLASS_DOC", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#ASSIGN_FROM_SUBSCRIBED_ASSIGNORS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#ASSIGN_FROM_SUBSCRIBED_ASSIGNORS"/>
         /// </summary>
         public static Java.Util.List ASSIGN_FROM_SUBSCRIBED_ASSIGNORS { get { return SGetField<Java.Util.List>(LocalBridgeClazz, "ASSIGN_FROM_SUBSCRIBED_ASSIGNORS"); } set { SSetField(LocalBridgeClazz, "ASSIGN_FROM_SUBSCRIBED_ASSIGNORS", value); } }
 
@@ -378,7 +378,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#appendDeserializerToConfig(java.util.Map,org.apache.kafka.common.serialization.Deserializer,org.apache.kafka.common.serialization.Deserializer)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#appendDeserializerToConfig(java.util.Map,org.apache.kafka.common.serialization.Deserializer,org.apache.kafka.common.serialization.Deserializer)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Serialization.Deserializer"/></param>
@@ -389,7 +389,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return SExecuteWithSignature<Java.Util.Map<Java.Lang.String, object>>(LocalBridgeClazz, "appendDeserializerToConfig", "(Ljava/util/Map;Lorg/apache/kafka/common/serialization/Deserializer;Lorg/apache/kafka/common/serialization/Deserializer;)Ljava/util/Map;", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#configNames()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#configNames()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Set"/></returns>
         public static Java.Util.Set<Java.Lang.String> ConfigNames()
@@ -397,7 +397,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return SExecuteWithSignature<Java.Util.Set<Java.Lang.String>>(LocalBridgeClazz, "configNames", "()Ljava/util/Set;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#configDef()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#configDef()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Config.ConfigDef"/></returns>
         public static Org.Apache.Kafka.Common.Config.ConfigDef ConfigDef()
@@ -405,7 +405,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             return SExecuteWithSignature<Org.Apache.Kafka.Common.Config.ConfigDef>(LocalBridgeClazz, "configDef", "()Lorg/apache/kafka/common/config/ConfigDef;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#main(java.lang.String[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/consumer/ConsumerConfig.html#main(java.lang.String[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         public static void Main(Java.Lang.String[] arg0)

@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
 {
     #region StickyAssignor declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/consumer/StickyAssignor.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/consumer/StickyAssignor.html"/>
     /// </summary>
     public partial class StickyAssignor : MASES.JCOBridge.C2JBridge.JVMBridgeBase<StickyAssignor>
     {
@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/consumer/StickyAssignor.html#%3Cinit%3E()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/consumer/StickyAssignor.html#%3Cinit%3E()"/>
         /// </summary>
         public StickyAssignor() : base(JVMBridgeBase.InitializerInstance)
         {
@@ -86,7 +86,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/consumer/StickyAssignor.html#STICKY_ASSIGNOR_NAME"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/consumer/StickyAssignor.html#STICKY_ASSIGNOR_NAME"/>
         /// </summary>
         public static Java.Lang.String STICKY_ASSIGNOR_NAME { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "STICKY_ASSIGNOR_NAME"); } set { SSetField(LocalBridgeClazz, "STICKY_ASSIGNOR_NAME", value); } }
 

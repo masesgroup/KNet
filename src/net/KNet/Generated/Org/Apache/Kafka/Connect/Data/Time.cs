@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Connect.Data
 {
     #region Time declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.2.1/org/apache/kafka/connect/data/Time.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.3.1/org/apache/kafka/connect/data/Time.html"/>
     /// </summary>
     public partial class Time : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Time>
     {
@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Connect.Data
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.2.1/org/apache/kafka/connect/data/Time.html#%3Cinit%3E()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.3.1/org/apache/kafka/connect/data/Time.html#%3Cinit%3E()"/>
         /// </summary>
         public Time() : base(JVMBridgeBase.InitializerInstance)
         {
@@ -86,11 +86,11 @@ namespace Org.Apache.Kafka.Connect.Data
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.2.1/org/apache/kafka/connect/data/Time.html#LOGICAL_NAME"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.3.1/org/apache/kafka/connect/data/Time.html#LOGICAL_NAME"/>
         /// </summary>
         public static Java.Lang.String LOGICAL_NAME { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "LOGICAL_NAME"); } set { SSetField(LocalBridgeClazz, "LOGICAL_NAME", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.2.1/org/apache/kafka/connect/data/Time.html#SCHEMA"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.3.1/org/apache/kafka/connect/data/Time.html#SCHEMA"/>
         /// </summary>
         public static Org.Apache.Kafka.Connect.Data.Schema SCHEMA { get { return SGetField<Org.Apache.Kafka.Connect.Data.Schema>(LocalBridgeClazz, "SCHEMA"); } set { SSetField(LocalBridgeClazz, "SCHEMA", value); } }
 
@@ -98,7 +98,7 @@ namespace Org.Apache.Kafka.Connect.Data
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.2.1/org/apache/kafka/connect/data/Time.html#fromLogical(org.apache.kafka.connect.data.Schema,java.util.Date)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.3.1/org/apache/kafka/connect/data/Time.html#fromLogical(org.apache.kafka.connect.data.Schema,java.util.Date)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></param>
         /// <param name="arg1"><see cref="Java.Util.Date"/></param>
@@ -108,7 +108,7 @@ namespace Org.Apache.Kafka.Connect.Data
             return SExecuteWithSignature<int>(LocalBridgeClazz, "fromLogical", "(Lorg/apache/kafka/connect/data/Schema;Ljava/util/Date;)I", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.2.1/org/apache/kafka/connect/data/Time.html#toLogical(org.apache.kafka.connect.data.Schema,int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.3.1/org/apache/kafka/connect/data/Time.html#toLogical(org.apache.kafka.connect.data.Schema,int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></param>
         /// <param name="arg1"><see cref="int"/></param>
@@ -118,7 +118,7 @@ namespace Org.Apache.Kafka.Connect.Data
             return SExecuteWithSignature<Java.Util.Date>(LocalBridgeClazz, "toLogical", "(Lorg/apache/kafka/connect/data/Schema;I)Ljava/util/Date;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.2.1/org/apache/kafka/connect/data/Time.html#builder()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.3.1/org/apache/kafka/connect/data/Time.html#builder()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Data.SchemaBuilder"/></returns>
         public static Org.Apache.Kafka.Connect.Data.SchemaBuilder Builder()

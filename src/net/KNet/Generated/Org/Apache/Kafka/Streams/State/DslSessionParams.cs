@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.State
 {
     #region DslSessionParams declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/state/DslSessionParams.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/state/DslSessionParams.html"/>
     /// </summary>
     public partial class DslSessionParams : MASES.JCOBridge.C2JBridge.JVMBridgeBase<DslSessionParams>
     {
@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Streams.State
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/state/DslSessionParams.html#%3Cinit%3E(java.lang.String,java.time.Duration,org.apache.kafka.streams.kstream.EmitStrategy,org.apache.kafka.streams.DslStoreFormat)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/state/DslSessionParams.html#%3Cinit%3E(java.lang.String,java.time.Duration,org.apache.kafka.streams.kstream.EmitStrategy,org.apache.kafka.streams.DslStoreFormat)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Time.Duration"/></param>
@@ -82,7 +82,7 @@ namespace Org.Apache.Kafka.Streams.State
             return JVMBridgeBase.New<DslSessionParams>(arg0, arg1, arg2, arg3);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/state/DslSessionParams.html#%3Cinit%3E(java.lang.String,java.time.Duration,org.apache.kafka.streams.kstream.EmitStrategy)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/state/DslSessionParams.html#%3Cinit%3E(java.lang.String,java.time.Duration,org.apache.kafka.streams.kstream.EmitStrategy)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Time.Duration"/></param>
@@ -116,7 +116,7 @@ namespace Org.Apache.Kafka.Streams.State
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/state/DslSessionParams.html#name()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/state/DslSessionParams.html#name()"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String Name()
@@ -124,7 +124,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecuteWithSignature<Java.Lang.String>("name", "()Ljava/lang/String;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/state/DslSessionParams.html#retentionPeriod()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/state/DslSessionParams.html#retentionPeriod()"/>
         /// </summary>
         /// <returns><see cref="Java.Time.Duration"/></returns>
         public Java.Time.Duration RetentionPeriod()
@@ -132,7 +132,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecuteWithSignature<Java.Time.Duration>("retentionPeriod", "()Ljava/time/Duration;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/state/DslSessionParams.html#storeFormat()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/state/DslSessionParams.html#storeFormat()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Streams.DslStoreFormat"/></returns>
         public Org.Apache.Kafka.Streams.DslStoreFormat StoreFormat()
@@ -140,7 +140,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.DslStoreFormat>("storeFormat", "()Lorg/apache/kafka/streams/DslStoreFormat;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/state/DslSessionParams.html#emitStrategy()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/state/DslSessionParams.html#emitStrategy()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.EmitStrategy"/></returns>
         public Org.Apache.Kafka.Streams.Kstream.EmitStrategy EmitStrategy()

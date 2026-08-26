@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.State
 {
     #region HeadersBytesStoreSupplier declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/state/HeadersBytesStoreSupplier.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/state/HeadersBytesStoreSupplier.html"/>
     /// </summary>
     public partial class HeadersBytesStoreSupplier : MASES.JCOBridge.C2JBridge.JVMBridgeBase<HeadersBytesStoreSupplier>
     {
@@ -61,7 +61,7 @@ namespace Org.Apache.Kafka.Streams.State
 
     #region IHeadersBytesStoreSupplier
     /// <summary>
-    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/state/HeadersBytesStoreSupplier.html"/>
+    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/state/HeadersBytesStoreSupplier.html"/>
     /// </summary>
     public partial interface IHeadersBytesStoreSupplier
     {

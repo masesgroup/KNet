@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Metrics
 {
     #region MetricsReporter declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/metrics/MetricsReporter.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/metrics/MetricsReporter.html"/>
     /// </summary>
     public partial class MetricsReporter : MASES.JCOBridge.C2JBridge.JVMBridgeListener
     {
@@ -145,7 +145,7 @@ namespace Org.Apache.Kafka.Common.Metrics
 
     #region IMetricsReporter
     /// <summary>
-    /// .NET interface for org.mases.knet.generated.org.apache.kafka.common.metrics.MetricsReporter implementing <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/metrics/MetricsReporter.html"/>
+    /// .NET interface for org.mases.knet.generated.org.apache.kafka.common.metrics.MetricsReporter implementing <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/metrics/MetricsReporter.html"/>
     /// </summary>
     public partial interface IMetricsReporter
     {
@@ -223,7 +223,7 @@ namespace Org.Apache.Kafka.Common.Metrics
         }
 
         /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/Configurable.html#configure(java.util.Map)"/>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/Configurable.html#configure(java.util.Map)"/>
         /// </summary>
         /// <remarks>
         /// Assign a delegate to handle the event without subclassing. If both this handler and a virtual method override are present,
@@ -256,7 +256,7 @@ namespace Org.Apache.Kafka.Common.Metrics
         }
 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/Configurable.html#configure(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/Configurable.html#configure(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         public virtual void Configure(Java.Util.Map<Java.Lang.String, object> arg0)
@@ -265,7 +265,7 @@ namespace Org.Apache.Kafka.Common.Metrics
         }
 
         /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/metrics/MetricsReporter.html#close()"/>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/metrics/MetricsReporter.html#close()"/>
         /// </summary>
         /// <remarks>
         /// Assign a delegate to handle the event without subclassing. If both this handler and a virtual method override are present,
@@ -298,7 +298,7 @@ namespace Org.Apache.Kafka.Common.Metrics
         }
 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/metrics/MetricsReporter.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/metrics/MetricsReporter.html#close()"/>
         /// </summary>
         public virtual void Close()
         {
@@ -306,7 +306,7 @@ namespace Org.Apache.Kafka.Common.Metrics
         }
 
         /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/metrics/MetricsReporter.html#init(java.util.List)"/>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/metrics/MetricsReporter.html#init(java.util.List)"/>
         /// </summary>
         /// <remarks>
         /// Assign a delegate to handle the event without subclassing. If both this handler and a virtual method override are present,
@@ -339,7 +339,7 @@ namespace Org.Apache.Kafka.Common.Metrics
         }
 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/metrics/MetricsReporter.html#init(java.util.List)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/metrics/MetricsReporter.html#init(java.util.List)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.List"/></param>
         public virtual void Init(Java.Util.List<Org.Apache.Kafka.Common.Metrics.KafkaMetric> arg0)
@@ -348,7 +348,7 @@ namespace Org.Apache.Kafka.Common.Metrics
         }
 
         /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/metrics/MetricsReporter.html#metricChange(org.apache.kafka.common.metrics.KafkaMetric)"/>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/metrics/MetricsReporter.html#metricChange(org.apache.kafka.common.metrics.KafkaMetric)"/>
         /// </summary>
         /// <remarks>
         /// Assign a delegate to handle the event without subclassing. If both this handler and a virtual method override are present,
@@ -381,7 +381,7 @@ namespace Org.Apache.Kafka.Common.Metrics
         }
 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/metrics/MetricsReporter.html#metricChange(org.apache.kafka.common.metrics.KafkaMetric)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/metrics/MetricsReporter.html#metricChange(org.apache.kafka.common.metrics.KafkaMetric)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Metrics.KafkaMetric"/></param>
         public virtual void MetricChange(Org.Apache.Kafka.Common.Metrics.KafkaMetric arg0)
@@ -390,7 +390,7 @@ namespace Org.Apache.Kafka.Common.Metrics
         }
 
         /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/metrics/MetricsReporter.html#metricRemoval(org.apache.kafka.common.metrics.KafkaMetric)"/>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/metrics/MetricsReporter.html#metricRemoval(org.apache.kafka.common.metrics.KafkaMetric)"/>
         /// </summary>
         /// <remarks>
         /// Assign a delegate to handle the event without subclassing. If both this handler and a virtual method override are present,
@@ -423,7 +423,7 @@ namespace Org.Apache.Kafka.Common.Metrics
         }
 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/metrics/MetricsReporter.html#metricRemoval(org.apache.kafka.common.metrics.KafkaMetric)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/metrics/MetricsReporter.html#metricRemoval(org.apache.kafka.common.metrics.KafkaMetric)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Metrics.KafkaMetric"/></param>
         public virtual void MetricRemoval(Org.Apache.Kafka.Common.Metrics.KafkaMetric arg0)
@@ -431,7 +431,7 @@ namespace Org.Apache.Kafka.Common.Metrics
             
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/metrics/MetricsReporter.html#reconfigurableConfigs()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/metrics/MetricsReporter.html#reconfigurableConfigs()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Set"/></returns>
         /// <remarks>The method invokes the default implementation in the JVM interface</remarks>
@@ -441,7 +441,7 @@ namespace Org.Apache.Kafka.Common.Metrics
         }
 
         /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/metrics/MetricsReporter.html#reconfigurableConfigs()"/>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/metrics/MetricsReporter.html#reconfigurableConfigs()"/>
         /// </summary>
         /// <remarks>
         /// Assign a delegate to handle the event without subclassing. If both this handler and a virtual method override are present,
@@ -485,7 +485,7 @@ namespace Org.Apache.Kafka.Common.Metrics
         }
 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/metrics/MetricsReporter.html#reconfigurableConfigs()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/metrics/MetricsReporter.html#reconfigurableConfigs()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Set"/></returns>
         /// <remarks>The method invokes the default implementation in the JVM interface using <see cref="ReconfigurableConfigsDefault"/>; override the method to implement a different behavior</remarks>
@@ -494,7 +494,7 @@ namespace Org.Apache.Kafka.Common.Metrics
             return default;
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/metrics/MetricsReporter.html#contextChange(org.apache.kafka.common.metrics.MetricsContext)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/metrics/MetricsReporter.html#contextChange(org.apache.kafka.common.metrics.MetricsContext)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Metrics.MetricsContext"/></param>
         /// <remarks>The method invokes the default implementation in the JVM interface</remarks>
@@ -504,7 +504,7 @@ namespace Org.Apache.Kafka.Common.Metrics
         }
 
         /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/metrics/MetricsReporter.html#contextChange(org.apache.kafka.common.metrics.MetricsContext)"/>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/metrics/MetricsReporter.html#contextChange(org.apache.kafka.common.metrics.MetricsContext)"/>
         /// </summary>
         /// <remarks>
         /// Assign a delegate to handle the event without subclassing. If both this handler and a virtual method override are present,
@@ -537,7 +537,7 @@ namespace Org.Apache.Kafka.Common.Metrics
         }
 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/metrics/MetricsReporter.html#contextChange(org.apache.kafka.common.metrics.MetricsContext)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/metrics/MetricsReporter.html#contextChange(org.apache.kafka.common.metrics.MetricsContext)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Metrics.MetricsContext"/></param>
         /// <remarks>The method invokes the default implementation in the JVM interface using <see cref="ContextChangeDefault"/>; override the method to implement a different behavior</remarks>
@@ -546,7 +546,7 @@ namespace Org.Apache.Kafka.Common.Metrics
             
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/metrics/MetricsReporter.html#reconfigure(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/metrics/MetricsReporter.html#reconfigure(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <remarks>The method invokes the default implementation in the JVM interface</remarks>
@@ -556,7 +556,7 @@ namespace Org.Apache.Kafka.Common.Metrics
         }
 
         /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/metrics/MetricsReporter.html#reconfigure(java.util.Map)"/>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/metrics/MetricsReporter.html#reconfigure(java.util.Map)"/>
         /// </summary>
         /// <remarks>
         /// Assign a delegate to handle the event without subclassing. If both this handler and a virtual method override are present,
@@ -589,7 +589,7 @@ namespace Org.Apache.Kafka.Common.Metrics
         }
 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/metrics/MetricsReporter.html#reconfigure(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/metrics/MetricsReporter.html#reconfigure(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <remarks>The method invokes the default implementation in the JVM interface using <see cref="ReconfigureDefault"/>; override the method to implement a different behavior</remarks>
@@ -598,7 +598,7 @@ namespace Org.Apache.Kafka.Common.Metrics
             
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/metrics/MetricsReporter.html#validateReconfiguration(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/metrics/MetricsReporter.html#validateReconfiguration(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <exception cref="Org.Apache.Kafka.Common.Config.ConfigException"/>
@@ -609,7 +609,7 @@ namespace Org.Apache.Kafka.Common.Metrics
         }
 
         /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/metrics/MetricsReporter.html#validateReconfiguration(java.util.Map)"/>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/metrics/MetricsReporter.html#validateReconfiguration(java.util.Map)"/>
         /// </summary>
         /// <remarks>
         /// Assign a delegate to handle the event without subclassing. If both this handler and a virtual method override are present,
@@ -642,7 +642,7 @@ namespace Org.Apache.Kafka.Common.Metrics
         }
 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/metrics/MetricsReporter.html#validateReconfiguration(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/metrics/MetricsReporter.html#validateReconfiguration(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <exception cref="Org.Apache.Kafka.Common.Config.ConfigException"/>
@@ -683,7 +683,7 @@ namespace Org.Apache.Kafka.Common.Metrics
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/Configurable.html#configure(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/Configurable.html#configure(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         public override void Configure(Java.Util.Map<Java.Lang.String, object> arg0)
@@ -691,14 +691,14 @@ namespace Org.Apache.Kafka.Common.Metrics
             IExecuteWithSignature("configure", "(Ljava/util/Map;)V", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/metrics/MetricsReporter.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/metrics/MetricsReporter.html#close()"/>
         /// </summary>
         public override void Close()
         {
             IExecuteWithSignature("close", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/metrics/MetricsReporter.html#init(java.util.List)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/metrics/MetricsReporter.html#init(java.util.List)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.List"/></param>
         public override void Init(Java.Util.List<Org.Apache.Kafka.Common.Metrics.KafkaMetric> arg0)
@@ -706,7 +706,7 @@ namespace Org.Apache.Kafka.Common.Metrics
             IExecuteWithSignature("init", "(Ljava/util/List;)V", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/metrics/MetricsReporter.html#metricChange(org.apache.kafka.common.metrics.KafkaMetric)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/metrics/MetricsReporter.html#metricChange(org.apache.kafka.common.metrics.KafkaMetric)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Metrics.KafkaMetric"/></param>
         public override void MetricChange(Org.Apache.Kafka.Common.Metrics.KafkaMetric arg0)
@@ -714,7 +714,7 @@ namespace Org.Apache.Kafka.Common.Metrics
             IExecuteWithSignature("metricChange", "(Lorg/apache/kafka/common/metrics/KafkaMetric;)V", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/metrics/MetricsReporter.html#metricRemoval(org.apache.kafka.common.metrics.KafkaMetric)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/metrics/MetricsReporter.html#metricRemoval(org.apache.kafka.common.metrics.KafkaMetric)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Metrics.KafkaMetric"/></param>
         public override void MetricRemoval(Org.Apache.Kafka.Common.Metrics.KafkaMetric arg0)
@@ -722,7 +722,7 @@ namespace Org.Apache.Kafka.Common.Metrics
             IExecuteWithSignature("metricRemoval", "(Lorg/apache/kafka/common/metrics/KafkaMetric;)V", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/metrics/MetricsReporter.html#reconfigurableConfigs()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/metrics/MetricsReporter.html#reconfigurableConfigs()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Set"/></returns>
         public override Java.Util.Set<Java.Lang.String> ReconfigurableConfigs()
@@ -730,7 +730,7 @@ namespace Org.Apache.Kafka.Common.Metrics
             return IExecuteWithSignature<Java.Util.Set<Java.Lang.String>>("reconfigurableConfigs", "()Ljava/util/Set;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/metrics/MetricsReporter.html#contextChange(org.apache.kafka.common.metrics.MetricsContext)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/metrics/MetricsReporter.html#contextChange(org.apache.kafka.common.metrics.MetricsContext)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Metrics.MetricsContext"/></param>
         public override void ContextChange(Org.Apache.Kafka.Common.Metrics.MetricsContext arg0)
@@ -738,7 +738,7 @@ namespace Org.Apache.Kafka.Common.Metrics
             IExecuteWithSignature("contextChange", "(Lorg/apache/kafka/common/metrics/MetricsContext;)V", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/metrics/MetricsReporter.html#reconfigure(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/metrics/MetricsReporter.html#reconfigure(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         public override void Reconfigure(Java.Util.Map<Java.Lang.String, object> arg0)
@@ -746,7 +746,7 @@ namespace Org.Apache.Kafka.Common.Metrics
             IExecuteWithSignature("reconfigure", "(Ljava/util/Map;)V", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/metrics/MetricsReporter.html#validateReconfiguration(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/metrics/MetricsReporter.html#validateReconfiguration(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <exception cref="Org.Apache.Kafka.Common.Config.ConfigException"/>

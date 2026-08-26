@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.State
 {
     #region AggregationWithHeaders declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/state/AggregationWithHeaders.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/state/AggregationWithHeaders.html"/>
     /// </summary>
     public partial class AggregationWithHeaders : MASES.JCOBridge.C2JBridge.JVMBridgeBase<AggregationWithHeaders>
     {
@@ -61,7 +61,7 @@ namespace Org.Apache.Kafka.Streams.State
 
     #region AggregationWithHeaders<AGG> declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/state/AggregationWithHeaders.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/state/AggregationWithHeaders.html"/>
     /// </summary>
     /// <typeparam name="AGG"></typeparam>
     public partial class AggregationWithHeaders<AGG> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<AggregationWithHeaders<AGG>>
@@ -111,7 +111,7 @@ namespace Org.Apache.Kafka.Streams.State
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/state/AggregationWithHeaders.html#getAggregationOrNull(org.apache.kafka.streams.state.AggregationWithHeaders)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/state/AggregationWithHeaders.html#getAggregationOrNull(org.apache.kafka.streams.state.AggregationWithHeaders)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.State.AggregationWithHeaders"/></param>
         /// <returns><see cref="object"/></returns>
@@ -120,7 +120,7 @@ namespace Org.Apache.Kafka.Streams.State
             return SExecuteWithSignature(LocalBridgeClazz, "getAggregationOrNull", "(Lorg/apache/kafka/streams/state/AggregationWithHeaders;)Ljava/lang/Object;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/state/AggregationWithHeaders.html#make(java.lang.Object,org.apache.kafka.common.header.Headers)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/state/AggregationWithHeaders.html#make(java.lang.Object,org.apache.kafka.common.header.Headers)"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Header.Headers"/></param>
@@ -130,7 +130,7 @@ namespace Org.Apache.Kafka.Streams.State
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.State.AggregationWithHeaders>(LocalBridgeClazz, "make", "(Ljava/lang/Object;Lorg/apache/kafka/common/header/Headers;)Lorg/apache/kafka/streams/state/AggregationWithHeaders;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/state/AggregationWithHeaders.html#makeAllowNullable(java.lang.Object,org.apache.kafka.common.header.Headers)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/state/AggregationWithHeaders.html#makeAllowNullable(java.lang.Object,org.apache.kafka.common.header.Headers)"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Header.Headers"/></param>
@@ -144,7 +144,7 @@ namespace Org.Apache.Kafka.Streams.State
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/state/AggregationWithHeaders.html#aggregation()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/state/AggregationWithHeaders.html#aggregation()"/>
         /// </summary>
         /// <returns><see cref="object"/></returns>
         public object Aggregation()
@@ -152,7 +152,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecuteWithSignature("aggregation", "()Ljava/lang/Object;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/state/AggregationWithHeaders.html#headers()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/state/AggregationWithHeaders.html#headers()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Header.Headers"/></returns>
         public Org.Apache.Kafka.Common.Header.Headers Headers()
@@ -191,7 +191,7 @@ namespace Org.Apache.Kafka.Streams.State
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/state/AggregationWithHeaders.html#getAggregationOrNull(org.apache.kafka.streams.state.AggregationWithHeaders)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/state/AggregationWithHeaders.html#getAggregationOrNull(org.apache.kafka.streams.state.AggregationWithHeaders)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.State.AggregationWithHeaders"/></param>
         /// <returns><typeparamref name="AGG"/></returns>
@@ -200,7 +200,7 @@ namespace Org.Apache.Kafka.Streams.State
             return SExecuteWithSignature<AGG>(LocalBridgeClazz, "getAggregationOrNull", "(Lorg/apache/kafka/streams/state/AggregationWithHeaders;)Ljava/lang/Object;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/state/AggregationWithHeaders.html#make(java.lang.Object,org.apache.kafka.common.header.Headers)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/state/AggregationWithHeaders.html#make(java.lang.Object,org.apache.kafka.common.header.Headers)"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="AGG"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Header.Headers"/></param>
@@ -210,7 +210,7 @@ namespace Org.Apache.Kafka.Streams.State
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.State.AggregationWithHeaders<AGG>>(LocalBridgeClazz, "make", "(Ljava/lang/Object;Lorg/apache/kafka/common/header/Headers;)Lorg/apache/kafka/streams/state/AggregationWithHeaders;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/state/AggregationWithHeaders.html#makeAllowNullable(java.lang.Object,org.apache.kafka.common.header.Headers)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/state/AggregationWithHeaders.html#makeAllowNullable(java.lang.Object,org.apache.kafka.common.header.Headers)"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="AGG"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Header.Headers"/></param>
@@ -224,7 +224,7 @@ namespace Org.Apache.Kafka.Streams.State
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/state/AggregationWithHeaders.html#aggregation()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/state/AggregationWithHeaders.html#aggregation()"/>
         /// </summary>
         /// <returns><typeparamref name="AGG"/></returns>
         public AGG Aggregation()
@@ -232,7 +232,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecuteWithSignature<AGG>("aggregation", "()Ljava/lang/Object;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/state/AggregationWithHeaders.html#headers()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/state/AggregationWithHeaders.html#headers()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Header.Headers"/></returns>
         public Org.Apache.Kafka.Common.Header.Headers Headers()

@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 {
     #region LogDirDescription declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/admin/LogDirDescription.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/admin/LogDirDescription.html"/>
     /// </summary>
     public partial class LogDirDescription : MASES.JCOBridge.C2JBridge.JVMBridgeBase<LogDirDescription>
     {
@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Clients.Admin
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/admin/LogDirDescription.html#%3Cinit%3E(org.apache.kafka.common.errors.ApiException,java.util.Map,long,long,boolean)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/admin/LogDirDescription.html#%3Cinit%3E(org.apache.kafka.common.errors.ApiException,java.util.Map,long,long,boolean)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Errors.ApiException"/></param>
         /// <param name="arg1"><see cref="Java.Util.Map"/></param>
@@ -83,7 +83,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return JVMBridgeBase.New<LogDirDescription>(arg0, arg1, arg2, arg3, arg4);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/admin/LogDirDescription.html#%3Cinit%3E(org.apache.kafka.common.errors.ApiException,java.util.Map,long,long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/admin/LogDirDescription.html#%3Cinit%3E(org.apache.kafka.common.errors.ApiException,java.util.Map,long,long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Errors.ApiException"/></param>
         /// <param name="arg1"><see cref="Java.Util.Map"/></param>
@@ -101,7 +101,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return JVMBridgeBase.New<LogDirDescription>(arg0, arg1, arg2, arg3);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/admin/LogDirDescription.html#%3Cinit%3E(org.apache.kafka.common.errors.ApiException,java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/admin/LogDirDescription.html#%3Cinit%3E(org.apache.kafka.common.errors.ApiException,java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Errors.ApiException"/></param>
         /// <param name="arg1"><see cref="Java.Util.Map"/></param>
@@ -133,7 +133,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/admin/LogDirDescription.html#isCordoned()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/admin/LogDirDescription.html#isCordoned()"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool IsCordoned()
@@ -141,7 +141,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<bool>("isCordoned", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/admin/LogDirDescription.html#replicaInfos()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/admin/LogDirDescription.html#replicaInfos()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Map"/></returns>
         public Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Clients.Admin.ReplicaInfo> ReplicaInfos()
@@ -149,7 +149,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Org.Apache.Kafka.Clients.Admin.ReplicaInfo>>("replicaInfos", "()Ljava/util/Map;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/admin/LogDirDescription.html#totalBytes()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/admin/LogDirDescription.html#totalBytes()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.OptionalLong"/></returns>
         public Java.Util.OptionalLong TotalBytes()
@@ -157,7 +157,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Java.Util.OptionalLong>("totalBytes", "()Ljava/util/OptionalLong;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/admin/LogDirDescription.html#usableBytes()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/admin/LogDirDescription.html#usableBytes()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.OptionalLong"/></returns>
         public Java.Util.OptionalLong UsableBytes()
@@ -165,7 +165,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Java.Util.OptionalLong>("usableBytes", "()Ljava/util/OptionalLong;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/admin/LogDirDescription.html#error()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/admin/LogDirDescription.html#error()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Errors.ApiException"/></returns>
         public Org.Apache.Kafka.Common.Errors.ApiException Error()

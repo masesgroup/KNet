@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.Query
 {
     #region ResultOrder declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/query/ResultOrder.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/query/ResultOrder.html"/>
     /// </summary>
     public partial class ResultOrder : Java.Lang.Enum<Org.Apache.Kafka.Streams.Query.ResultOrder>
     {
@@ -72,15 +72,15 @@ namespace Org.Apache.Kafka.Streams.Query
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/query/ResultOrder.html#ANY"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/query/ResultOrder.html#ANY"/>
         /// </summary>
         public static Org.Apache.Kafka.Streams.Query.ResultOrder ANY { get { return SGetField<Org.Apache.Kafka.Streams.Query.ResultOrder>(LocalBridgeClazz, "ANY"); } set { SSetField(LocalBridgeClazz, "ANY", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/query/ResultOrder.html#ASCENDING"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/query/ResultOrder.html#ASCENDING"/>
         /// </summary>
         public static Org.Apache.Kafka.Streams.Query.ResultOrder ASCENDING { get { return SGetField<Org.Apache.Kafka.Streams.Query.ResultOrder>(LocalBridgeClazz, "ASCENDING"); } set { SSetField(LocalBridgeClazz, "ASCENDING", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/query/ResultOrder.html#DESCENDING"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/query/ResultOrder.html#DESCENDING"/>
         /// </summary>
         public static Org.Apache.Kafka.Streams.Query.ResultOrder DESCENDING { get { return SGetField<Org.Apache.Kafka.Streams.Query.ResultOrder>(LocalBridgeClazz, "DESCENDING"); } set { SSetField(LocalBridgeClazz, "DESCENDING", value); } }
 
@@ -88,7 +88,7 @@ namespace Org.Apache.Kafka.Streams.Query
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/query/ResultOrder.html#valueOf(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/query/ResultOrder.html#valueOf(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Query.ResultOrder"/></returns>
@@ -97,7 +97,7 @@ namespace Org.Apache.Kafka.Streams.Query
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.Query.ResultOrder>(LocalBridgeClazz, "valueOf", "(Ljava/lang/String;)Lorg/apache/kafka/streams/query/ResultOrder;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/query/ResultOrder.html#values()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/query/ResultOrder.html#values()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Query.ResultOrder"/></returns>
         public static Org.Apache.Kafka.Streams.Query.ResultOrder[] Values()

@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Kstream
 {
     #region SessionWindowedCogroupedKStream declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.2.1/org/apache/kafka/streams/scala/kstream/SessionWindowedCogroupedKStream.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.3.1/org/apache/kafka/streams/scala/kstream/SessionWindowedCogroupedKStream.html"/>
     /// </summary>
     public partial class SessionWindowedCogroupedKStream : MASES.JCOBridge.C2JBridge.JVMBridgeBase<SessionWindowedCogroupedKStream>
     {
@@ -61,7 +61,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Kstream
 
     #region SessionWindowedCogroupedKStream<K, V> declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.2.1/org/apache/kafka/streams/scala/kstream/SessionWindowedCogroupedKStream.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.3.1/org/apache/kafka/streams/scala/kstream/SessionWindowedCogroupedKStream.html"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
@@ -100,7 +100,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Kstream
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.2.1/org/apache/kafka/streams/scala/kstream/SessionWindowedCogroupedKStream.html#%3Cinit%3E(org.apache.kafka.streams.kstream.SessionWindowedCogroupedKStream)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.3.1/org/apache/kafka/streams/scala/kstream/SessionWindowedCogroupedKStream.html#%3Cinit%3E(org.apache.kafka.streams.kstream.SessionWindowedCogroupedKStream)"/>
         /// </summary>
         /// <param name="inner"><see cref="Org.Apache.Kafka.Streams.Kstream.SessionWindowedCogroupedKStream"/></param>
         public SessionWindowedCogroupedKStream(Org.Apache.Kafka.Streams.Kstream.SessionWindowedCogroupedKStream inner) : base(JVMBridgeBase.InitializerInstance)
@@ -131,7 +131,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Kstream
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.2.1/org/apache/kafka/streams/scala/kstream/SessionWindowedCogroupedKStream.html#inner()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.3.1/org/apache/kafka/streams/scala/kstream/SessionWindowedCogroupedKStream.html#inner()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.SessionWindowedCogroupedKStream"/></returns>
         public Org.Apache.Kafka.Streams.Kstream.SessionWindowedCogroupedKStream Inner()
@@ -154,7 +154,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Kstream
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.2.1/org/apache/kafka/streams/scala/kstream/SessionWindowedCogroupedKStream.html#%3Cinit%3E(org.apache.kafka.streams.kstream.SessionWindowedCogroupedKStream)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.3.1/org/apache/kafka/streams/scala/kstream/SessionWindowedCogroupedKStream.html#%3Cinit%3E(org.apache.kafka.streams.kstream.SessionWindowedCogroupedKStream)"/>
         /// </summary>
         /// <param name="inner"><see cref="Org.Apache.Kafka.Streams.Kstream.SessionWindowedCogroupedKStream"/></param>
         public SessionWindowedCogroupedKStream(Org.Apache.Kafka.Streams.Kstream.SessionWindowedCogroupedKStream<K, V> inner) : base(JVMBridgeBase.InitializerInstance)
@@ -189,7 +189,7 @@ namespace Org.Apache.Kafka.Streams.Scala.Kstream
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.2.1/org/apache/kafka/streams/scala/kstream/SessionWindowedCogroupedKStream.html#inner()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams-scala_2.13/4.3.1/org/apache/kafka/streams/scala/kstream/SessionWindowedCogroupedKStream.html#inner()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.SessionWindowedCogroupedKStream"/></returns>
         public Org.Apache.Kafka.Streams.Kstream.SessionWindowedCogroupedKStream<K, V> Inner()

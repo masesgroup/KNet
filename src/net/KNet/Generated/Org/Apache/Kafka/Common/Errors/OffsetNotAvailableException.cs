@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Errors
 {
     #region OffsetNotAvailableException declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/errors/OffsetNotAvailableException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/errors/OffsetNotAvailableException.html"/>
     /// </summary>
     public partial class OffsetNotAvailableException : Org.Apache.Kafka.Common.Errors.RetriableException
     {

@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 {
     #region AlterPartitionReassignmentsOptions declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/admin/AlterPartitionReassignmentsOptions.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/admin/AlterPartitionReassignmentsOptions.html"/>
     /// </summary>
     public partial class AlterPartitionReassignmentsOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions<Org.Apache.Kafka.Clients.Admin.AlterPartitionReassignmentsOptions>
     {
@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Clients.Admin
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/admin/AlterPartitionReassignmentsOptions.html#%3Cinit%3E()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/admin/AlterPartitionReassignmentsOptions.html#%3Cinit%3E()"/>
         /// </summary>
         public AlterPartitionReassignmentsOptions() : base(JVMBridgeBase.InitializerInstance)
         {
@@ -94,7 +94,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/admin/AlterPartitionReassignmentsOptions.html#allowReplicationFactorChange()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/admin/AlterPartitionReassignmentsOptions.html#allowReplicationFactorChange()"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool AllowReplicationFactorChange()
@@ -102,7 +102,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<bool>("allowReplicationFactorChange", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/admin/AlterPartitionReassignmentsOptions.html#allowReplicationFactorChange(boolean)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/admin/AlterPartitionReassignmentsOptions.html#allowReplicationFactorChange(boolean)"/>
         /// </summary>
         /// <param name="arg0"><see cref="bool"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.AlterPartitionReassignmentsOptions"/></returns>

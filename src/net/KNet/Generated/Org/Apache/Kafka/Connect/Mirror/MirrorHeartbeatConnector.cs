@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
 {
     #region MirrorHeartbeatConnector declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.2.1/org/apache/kafka/connect/mirror/MirrorHeartbeatConnector.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.3.1/org/apache/kafka/connect/mirror/MirrorHeartbeatConnector.html"/>
     /// </summary>
     public partial class MirrorHeartbeatConnector : Org.Apache.Kafka.Connect.Source.SourceConnector
     {
@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.2.1/org/apache/kafka/connect/mirror/MirrorHeartbeatConnector.html#%3Cinit%3E()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.3.1/org/apache/kafka/connect/mirror/MirrorHeartbeatConnector.html#%3Cinit%3E()"/>
         /// </summary>
         public MirrorHeartbeatConnector() : base(JVMBridgeBase.InitializerInstance)
         {

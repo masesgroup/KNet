@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Errors
 {
     #region UnknownControllerIdException declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/errors/UnknownControllerIdException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/errors/UnknownControllerIdException.html"/>
     /// </summary>
     public partial class UnknownControllerIdException : Org.Apache.Kafka.Common.Errors.ApiException
     {

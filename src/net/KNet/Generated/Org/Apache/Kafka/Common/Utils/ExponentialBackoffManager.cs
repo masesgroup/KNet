@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Utils
 {
     #region ExponentialBackoffManager declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/utils/ExponentialBackoffManager.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/utils/ExponentialBackoffManager.html"/>
     /// </summary>
     public partial class ExponentialBackoffManager : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ExponentialBackoffManager>
     {
@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Common.Utils
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/utils/ExponentialBackoffManager.html#%3Cinit%3E(int,long,int,long,double)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/utils/ExponentialBackoffManager.html#%3Cinit%3E(int,long,int,long,double)"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <param name="arg1"><see cref="long"/></param>
@@ -99,7 +99,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/utils/ExponentialBackoffManager.html#canAttempt()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/utils/ExponentialBackoffManager.html#canAttempt()"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool CanAttempt()
@@ -107,7 +107,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return IExecuteWithSignature<bool>("canAttempt", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/utils/ExponentialBackoffManager.html#attempts()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/utils/ExponentialBackoffManager.html#attempts()"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int Attempts()
@@ -115,7 +115,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return IExecuteWithSignature<int>("attempts", "()I");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/utils/ExponentialBackoffManager.html#backOff()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/utils/ExponentialBackoffManager.html#backOff()"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long BackOff()
@@ -123,14 +123,14 @@ namespace Org.Apache.Kafka.Common.Utils
             return IExecuteWithSignature<long>("backOff", "()J");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/utils/ExponentialBackoffManager.html#incrementAttempt()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/utils/ExponentialBackoffManager.html#incrementAttempt()"/>
         /// </summary>
         public void IncrementAttempt()
         {
             IExecuteWithSignature("incrementAttempt", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/utils/ExponentialBackoffManager.html#resetAttempts()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/utils/ExponentialBackoffManager.html#resetAttempts()"/>
         /// </summary>
         public void ResetAttempts()
         {

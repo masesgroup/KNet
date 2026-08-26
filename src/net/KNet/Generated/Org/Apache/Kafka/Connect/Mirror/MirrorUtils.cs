@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
 {
     #region MirrorUtils declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.2.1/org/apache/kafka/connect/mirror/MirrorUtils.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.3.1/org/apache/kafka/connect/mirror/MirrorUtils.html"/>
     /// </summary>
     public partial class MirrorUtils : MASES.JCOBridge.C2JBridge.JVMBridgeBase<MirrorUtils>
     {
@@ -72,19 +72,19 @@ namespace Org.Apache.Kafka.Connect.Mirror
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.2.1/org/apache/kafka/connect/mirror/MirrorUtils.html#OFFSET_KEY"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.3.1/org/apache/kafka/connect/mirror/MirrorUtils.html#OFFSET_KEY"/>
         /// </summary>
         public static Java.Lang.String OFFSET_KEY { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "OFFSET_KEY"); } set { SSetField(LocalBridgeClazz, "OFFSET_KEY", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.2.1/org/apache/kafka/connect/mirror/MirrorUtils.html#PARTITION_KEY"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.3.1/org/apache/kafka/connect/mirror/MirrorUtils.html#PARTITION_KEY"/>
         /// </summary>
         public static Java.Lang.String PARTITION_KEY { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "PARTITION_KEY"); } set { SSetField(LocalBridgeClazz, "PARTITION_KEY", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.2.1/org/apache/kafka/connect/mirror/MirrorUtils.html#SOURCE_CLUSTER_KEY"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.3.1/org/apache/kafka/connect/mirror/MirrorUtils.html#SOURCE_CLUSTER_KEY"/>
         /// </summary>
         public static Java.Lang.String SOURCE_CLUSTER_KEY { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "SOURCE_CLUSTER_KEY"); } set { SSetField(LocalBridgeClazz, "SOURCE_CLUSTER_KEY", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.2.1/org/apache/kafka/connect/mirror/MirrorUtils.html#TOPIC_KEY"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.3.1/org/apache/kafka/connect/mirror/MirrorUtils.html#TOPIC_KEY"/>
         /// </summary>
         public static Java.Lang.String TOPIC_KEY { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "TOPIC_KEY"); } set { SSetField(LocalBridgeClazz, "TOPIC_KEY", value); } }
 
@@ -92,7 +92,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.2.1/org/apache/kafka/connect/mirror/MirrorUtils.html#wrapOffset(long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.3.1/org/apache/kafka/connect/mirror/MirrorUtils.html#wrapOffset(long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <returns><see cref="Java.Util.Map"/></returns>
@@ -101,7 +101,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
             return SExecuteWithSignature<Java.Util.Map<Java.Lang.String, object>>(LocalBridgeClazz, "wrapOffset", "(J)Ljava/util/Map;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.2.1/org/apache/kafka/connect/mirror/MirrorUtils.html#unwrapPartition(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.3.1/org/apache/kafka/connect/mirror/MirrorUtils.html#unwrapPartition(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.TopicPartition"/></returns>

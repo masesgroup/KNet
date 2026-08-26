@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
 {
     #region MirrorMaker declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.2.1/org/apache/kafka/connect/mirror/MirrorMaker.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.3.1/org/apache/kafka/connect/mirror/MirrorMaker.html"/>
     /// </summary>
     public partial class MirrorMaker : MASES.JCOBridge.C2JBridge.JVMBridgeBase<MirrorMaker>, MASES.JCOBridge.C2JBridge.IJVMBridgeMain
     {
@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.2.1/org/apache/kafka/connect/mirror/MirrorMaker.html#%3Cinit%3E(java.util.Map,java.util.List,org.apache.kafka.common.utils.Time)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.3.1/org/apache/kafka/connect/mirror/MirrorMaker.html#%3Cinit%3E(java.util.Map,java.util.List,org.apache.kafka.common.utils.Time)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="Java.Util.List"/></param>
@@ -81,7 +81,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
             return JVMBridgeBase.New<MirrorMaker>(arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.2.1/org/apache/kafka/connect/mirror/MirrorMaker.html#%3Cinit%3E(java.util.Map,java.util.List)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.3.1/org/apache/kafka/connect/mirror/MirrorMaker.html#%3Cinit%3E(java.util.Map,java.util.List)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="Java.Util.List"/></param>
@@ -97,7 +97,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
             return JVMBridgeBase.New<MirrorMaker>(arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.2.1/org/apache/kafka/connect/mirror/MirrorMaker.html#%3Cinit%3E(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.3.1/org/apache/kafka/connect/mirror/MirrorMaker.html#%3Cinit%3E(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         public MirrorMaker(Java.Util.Map<Java.Lang.String, Java.Lang.String> arg0) : base(JVMBridgeBase.InitializerInstance)
@@ -112,7 +112,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
             return JVMBridgeBase.New<MirrorMaker>(arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.2.1/org/apache/kafka/connect/mirror/MirrorMaker.html#%3Cinit%3E(org.apache.kafka.connect.mirror.MirrorMakerConfig,java.util.List,org.apache.kafka.common.utils.Time)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.3.1/org/apache/kafka/connect/mirror/MirrorMaker.html#%3Cinit%3E(org.apache.kafka.connect.mirror.MirrorMakerConfig,java.util.List,org.apache.kafka.common.utils.Time)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Mirror.MirrorMakerConfig"/></param>
         /// <param name="arg1"><see cref="Java.Util.List"/></param>
@@ -137,7 +137,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.2.1/org/apache/kafka/connect/mirror/MirrorMaker.html#CONNECTOR_CLASSES"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.3.1/org/apache/kafka/connect/mirror/MirrorMaker.html#CONNECTOR_CLASSES"/>
         /// </summary>
         public static Java.Util.List CONNECTOR_CLASSES { get { return SGetField<Java.Util.List>(LocalBridgeClazz, "CONNECTOR_CLASSES"); } set { SSetField(LocalBridgeClazz, "CONNECTOR_CLASSES", value); } }
 
@@ -145,7 +145,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.2.1/org/apache/kafka/connect/mirror/MirrorMaker.html#main(java.lang.String[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.3.1/org/apache/kafka/connect/mirror/MirrorMaker.html#main(java.lang.String[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         public static void Main(Java.Lang.String[] arg0)
@@ -157,21 +157,21 @@ namespace Org.Apache.Kafka.Connect.Mirror
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.2.1/org/apache/kafka/connect/mirror/MirrorMaker.html#awaitStop()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.3.1/org/apache/kafka/connect/mirror/MirrorMaker.html#awaitStop()"/>
         /// </summary>
         public void AwaitStop()
         {
             IExecuteWithSignature("awaitStop", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.2.1/org/apache/kafka/connect/mirror/MirrorMaker.html#start()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.3.1/org/apache/kafka/connect/mirror/MirrorMaker.html#start()"/>
         /// </summary>
         public void Start()
         {
             IExecuteWithSignature("start", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.2.1/org/apache/kafka/connect/mirror/MirrorMaker.html#stop()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.3.1/org/apache/kafka/connect/mirror/MirrorMaker.html#stop()"/>
         /// </summary>
         public void Stop()
         {

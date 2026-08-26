@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common
 {
     #region DirectoryId declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.2.1/org/apache/kafka/common/DirectoryId.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/common/DirectoryId.html"/>
     /// </summary>
     public partial class DirectoryId : MASES.JCOBridge.C2JBridge.JVMBridgeBase<DirectoryId>
     {
@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Common
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.2.1/org/apache/kafka/common/DirectoryId.html#%3Cinit%3E()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/common/DirectoryId.html#%3Cinit%3E()"/>
         /// </summary>
         public DirectoryId() : base(JVMBridgeBase.InitializerInstance)
         {
@@ -86,15 +86,15 @@ namespace Org.Apache.Kafka.Common
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.2.1/org/apache/kafka/common/DirectoryId.html#LOST"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/common/DirectoryId.html#LOST"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Uuid LOST { get { return SGetField<Org.Apache.Kafka.Common.Uuid>(LocalBridgeClazz, "LOST"); } set { SSetField(LocalBridgeClazz, "LOST", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.2.1/org/apache/kafka/common/DirectoryId.html#MIGRATING"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/common/DirectoryId.html#MIGRATING"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Uuid MIGRATING { get { return SGetField<Org.Apache.Kafka.Common.Uuid>(LocalBridgeClazz, "MIGRATING"); } set { SSetField(LocalBridgeClazz, "MIGRATING", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.2.1/org/apache/kafka/common/DirectoryId.html#UNASSIGNED"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/common/DirectoryId.html#UNASSIGNED"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Uuid UNASSIGNED { get { return SGetField<Org.Apache.Kafka.Common.Uuid>(LocalBridgeClazz, "UNASSIGNED"); } set { SSetField(LocalBridgeClazz, "UNASSIGNED", value); } }
 
@@ -102,7 +102,7 @@ namespace Org.Apache.Kafka.Common
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.2.1/org/apache/kafka/common/DirectoryId.html#isOnline(org.apache.kafka.common.Uuid,java.util.List)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/common/DirectoryId.html#isOnline(org.apache.kafka.common.Uuid,java.util.List)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Uuid"/></param>
         /// <param name="arg1"><see cref="Java.Util.List"/></param>
@@ -112,7 +112,7 @@ namespace Org.Apache.Kafka.Common
             return SExecuteWithSignature<bool>(LocalBridgeClazz, "isOnline", "(Lorg/apache/kafka/common/Uuid;Ljava/util/List;)Z", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.2.1/org/apache/kafka/common/DirectoryId.html#reserved(org.apache.kafka.common.Uuid)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/common/DirectoryId.html#reserved(org.apache.kafka.common.Uuid)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Uuid"/></param>
         /// <returns><see cref="bool"/></returns>
@@ -121,7 +121,7 @@ namespace Org.Apache.Kafka.Common
             return SExecuteWithSignature<bool>(LocalBridgeClazz, "reserved", "(Lorg/apache/kafka/common/Uuid;)Z", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.2.1/org/apache/kafka/common/DirectoryId.html#createAssignmentMap(int[],org.apache.kafka.common.Uuid[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/common/DirectoryId.html#createAssignmentMap(int[],org.apache.kafka.common.Uuid[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Uuid"/></param>
@@ -131,7 +131,7 @@ namespace Org.Apache.Kafka.Common
             return SExecuteWithSignature<Java.Util.Map<Java.Lang.Integer, Org.Apache.Kafka.Common.Uuid>>(LocalBridgeClazz, "createAssignmentMap", "([I[Lorg/apache/kafka/common/Uuid;)Ljava/util/Map;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.2.1/org/apache/kafka/common/DirectoryId.html#random()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/common/DirectoryId.html#random()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Uuid"/></returns>
         public static Org.Apache.Kafka.Common.Uuid Random()
@@ -139,7 +139,7 @@ namespace Org.Apache.Kafka.Common
             return SExecuteWithSignature<Org.Apache.Kafka.Common.Uuid>(LocalBridgeClazz, "random", "()Lorg/apache/kafka/common/Uuid;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.2.1/org/apache/kafka/common/DirectoryId.html#migratingArray(int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/common/DirectoryId.html#migratingArray(int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Uuid"/></returns>
@@ -148,7 +148,7 @@ namespace Org.Apache.Kafka.Common
             return SExecuteWithSignatureArray<Org.Apache.Kafka.Common.Uuid>(LocalBridgeClazz, "migratingArray", "(I)[Lorg/apache/kafka/common/Uuid;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.2.1/org/apache/kafka/common/DirectoryId.html#unassignedArray(int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/common/DirectoryId.html#unassignedArray(int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Uuid"/></returns>

@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Tools
 {
     #region ConnectPluginPath declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.2.1/org/apache/kafka/tools/ConnectPluginPath.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.3.1/org/apache/kafka/tools/ConnectPluginPath.html"/>
     /// </summary>
     public partial class ConnectPluginPath : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ConnectPluginPath>, MASES.JCOBridge.C2JBridge.IJVMBridgeMain
     {
@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Tools
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.2.1/org/apache/kafka/tools/ConnectPluginPath.html#%3Cinit%3E()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.3.1/org/apache/kafka/tools/ConnectPluginPath.html#%3Cinit%3E()"/>
         /// </summary>
         public ConnectPluginPath() : base(JVMBridgeBase.InitializerInstance)
         {
@@ -86,11 +86,11 @@ namespace Org.Apache.Kafka.Tools
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.2.1/org/apache/kafka/tools/ConnectPluginPath.html#LIST_TABLE_COLUMNS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.3.1/org/apache/kafka/tools/ConnectPluginPath.html#LIST_TABLE_COLUMNS"/>
         /// </summary>
         public static object[] LIST_TABLE_COLUMNS { get { return SGetFieldArray<object>(LocalBridgeClazz, "LIST_TABLE_COLUMNS"); } set { SSetField(LocalBridgeClazz, "LIST_TABLE_COLUMNS", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.2.1/org/apache/kafka/tools/ConnectPluginPath.html#NO_ALIAS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.3.1/org/apache/kafka/tools/ConnectPluginPath.html#NO_ALIAS"/>
         /// </summary>
         public static Java.Lang.String NO_ALIAS { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "NO_ALIAS"); } set { SSetField(LocalBridgeClazz, "NO_ALIAS", value); } }
 
@@ -98,7 +98,7 @@ namespace Org.Apache.Kafka.Tools
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.2.1/org/apache/kafka/tools/ConnectPluginPath.html#mainNoExit(java.lang.String[],java.io.PrintStream,java.io.PrintStream)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.3.1/org/apache/kafka/tools/ConnectPluginPath.html#mainNoExit(java.lang.String[],java.io.PrintStream,java.io.PrintStream)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Io.PrintStream"/></param>
@@ -109,7 +109,7 @@ namespace Org.Apache.Kafka.Tools
             return SExecuteWithSignature<int>(LocalBridgeClazz, "mainNoExit", "([Ljava/lang/String;Ljava/io/PrintStream;Ljava/io/PrintStream;)I", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.2.1/org/apache/kafka/tools/ConnectPluginPath.html#main(java.lang.String[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.3.1/org/apache/kafka/tools/ConnectPluginPath.html#main(java.lang.String[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         public static void Main(Java.Lang.String[] arg0)

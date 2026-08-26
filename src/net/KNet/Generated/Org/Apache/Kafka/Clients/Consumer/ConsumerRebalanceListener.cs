@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
 {
     #region ConsumerRebalanceListener declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/consumer/ConsumerRebalanceListener.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/consumer/ConsumerRebalanceListener.html"/>
     /// </summary>
     public partial class ConsumerRebalanceListener : MASES.JCOBridge.C2JBridge.JVMBridgeListener
     {
@@ -145,7 +145,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
 
     #region IConsumerRebalanceListener
     /// <summary>
-    /// .NET interface for org.mases.knet.generated.org.apache.kafka.clients.consumer.ConsumerRebalanceListener implementing <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/consumer/ConsumerRebalanceListener.html"/>
+    /// .NET interface for org.mases.knet.generated.org.apache.kafka.clients.consumer.ConsumerRebalanceListener implementing <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/consumer/ConsumerRebalanceListener.html"/>
     /// </summary>
     public partial interface IConsumerRebalanceListener
     {
@@ -205,7 +205,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         }
 
         /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/consumer/ConsumerRebalanceListener.html#onPartitionsAssigned(java.util.Collection)"/>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/consumer/ConsumerRebalanceListener.html#onPartitionsAssigned(java.util.Collection)"/>
         /// </summary>
         /// <remarks>
         /// Assign a delegate to handle the event without subclassing. If both this handler and a virtual method override are present,
@@ -238,7 +238,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         }
 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/consumer/ConsumerRebalanceListener.html#onPartitionsAssigned(java.util.Collection)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/consumer/ConsumerRebalanceListener.html#onPartitionsAssigned(java.util.Collection)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         public virtual void OnPartitionsAssigned(Java.Util.Collection<Org.Apache.Kafka.Common.TopicPartition> arg0)
@@ -247,7 +247,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         }
 
         /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/consumer/ConsumerRebalanceListener.html#onPartitionsRevoked(java.util.Collection)"/>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/consumer/ConsumerRebalanceListener.html#onPartitionsRevoked(java.util.Collection)"/>
         /// </summary>
         /// <remarks>
         /// Assign a delegate to handle the event without subclassing. If both this handler and a virtual method override are present,
@@ -280,7 +280,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         }
 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/consumer/ConsumerRebalanceListener.html#onPartitionsRevoked(java.util.Collection)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/consumer/ConsumerRebalanceListener.html#onPartitionsRevoked(java.util.Collection)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         public virtual void OnPartitionsRevoked(Java.Util.Collection<Org.Apache.Kafka.Common.TopicPartition> arg0)
@@ -288,7 +288,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/consumer/ConsumerRebalanceListener.html#onPartitionsLost(java.util.Collection)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/consumer/ConsumerRebalanceListener.html#onPartitionsLost(java.util.Collection)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         /// <remarks>The method invokes the default implementation in the JVM interface</remarks>
@@ -298,7 +298,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         }
 
         /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/consumer/ConsumerRebalanceListener.html#onPartitionsLost(java.util.Collection)"/>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/consumer/ConsumerRebalanceListener.html#onPartitionsLost(java.util.Collection)"/>
         /// </summary>
         /// <remarks>
         /// Assign a delegate to handle the event without subclassing. If both this handler and a virtual method override are present,
@@ -331,7 +331,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
         }
 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/consumer/ConsumerRebalanceListener.html#onPartitionsLost(java.util.Collection)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/consumer/ConsumerRebalanceListener.html#onPartitionsLost(java.util.Collection)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         /// <remarks>The method invokes the default implementation in the JVM interface using <see cref="OnPartitionsLostDefault"/>; override the method to implement a different behavior</remarks>
@@ -371,7 +371,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/consumer/ConsumerRebalanceListener.html#onPartitionsAssigned(java.util.Collection)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/consumer/ConsumerRebalanceListener.html#onPartitionsAssigned(java.util.Collection)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         public override void OnPartitionsAssigned(Java.Util.Collection<Org.Apache.Kafka.Common.TopicPartition> arg0)
@@ -379,7 +379,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             IExecuteWithSignature("onPartitionsAssigned", "(Ljava/util/Collection;)V", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/consumer/ConsumerRebalanceListener.html#onPartitionsRevoked(java.util.Collection)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/consumer/ConsumerRebalanceListener.html#onPartitionsRevoked(java.util.Collection)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         public override void OnPartitionsRevoked(Java.Util.Collection<Org.Apache.Kafka.Common.TopicPartition> arg0)
@@ -387,7 +387,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
             IExecuteWithSignature("onPartitionsRevoked", "(Ljava/util/Collection;)V", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/consumer/ConsumerRebalanceListener.html#onPartitionsLost(java.util.Collection)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/consumer/ConsumerRebalanceListener.html#onPartitionsLost(java.util.Collection)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
         public override void OnPartitionsLost(Java.Util.Collection<Org.Apache.Kafka.Common.TopicPartition> arg0)

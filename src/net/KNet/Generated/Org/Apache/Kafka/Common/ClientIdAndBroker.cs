@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common
 {
     #region ClientIdAndBroker declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.2.1/org/apache/kafka/common/ClientIdAndBroker.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/common/ClientIdAndBroker.html"/>
     /// </summary>
     public partial class ClientIdAndBroker : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ClientIdAndBroker>
     {
@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Common
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.2.1/org/apache/kafka/common/ClientIdAndBroker.html#%3Cinit%3E(java.lang.String,java.lang.String,int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/common/ClientIdAndBroker.html#%3Cinit%3E(java.lang.String,java.lang.String,int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Lang.String"/></param>
@@ -89,15 +89,15 @@ namespace Org.Apache.Kafka.Common
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.2.1/org/apache/kafka/common/ClientIdAndBroker.html#brokerPort"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/common/ClientIdAndBroker.html#brokerPort"/>
         /// </summary>
         public int brokerPort { get { return IGetField<int>("brokerPort"); } set { ISetField("brokerPort", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.2.1/org/apache/kafka/common/ClientIdAndBroker.html#brokerHost"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/common/ClientIdAndBroker.html#brokerHost"/>
         /// </summary>
         public Java.Lang.String brokerHost { get { return IGetField<Java.Lang.String>("brokerHost"); } set { ISetField("brokerHost", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.2.1/org/apache/kafka/common/ClientIdAndBroker.html#clientId"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/common/ClientIdAndBroker.html#clientId"/>
         /// </summary>
         public Java.Lang.String clientId { get { return IGetField<Java.Lang.String>("clientId"); } set { ISetField("clientId", value); } }
 

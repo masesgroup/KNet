@@ -81,7 +81,7 @@ namespace MASES.KNet.Streams.State
         #endregion
 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/state/AggregationWithHeaders.html#aggregation()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/state/AggregationWithHeaders.html#aggregation()"/>
         /// </summary>
         /// <returns><typeparamref name="AGG"/></returns>
         public AGG Aggregation
@@ -97,7 +97,7 @@ namespace MASES.KNet.Streams.State
             }
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/state/ValueTimestampHeaders.html#headers()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/state/ValueTimestampHeaders.html#headers()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Header.Headers"/></returns>
         public Org.Apache.Kafka.Common.Header.Headers Headers

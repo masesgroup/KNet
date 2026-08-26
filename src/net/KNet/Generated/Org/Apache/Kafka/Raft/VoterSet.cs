@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Raft
 {
     #region VoterSet declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/VoterSet.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/VoterSet.html"/>
     /// </summary>
     public partial class VoterSet : MASES.JCOBridge.C2JBridge.JVMBridgeBase<VoterSet>
     {
@@ -57,7 +57,7 @@ namespace Org.Apache.Kafka.Raft
         // TODO: complete the class
         #region VoterNode declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/VoterSet.VoterNode.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/VoterSet.VoterNode.html"/>
         /// </summary>
         public partial class VoterNode : MASES.JCOBridge.C2JBridge.JVMBridgeBase<VoterNode>
         {
@@ -110,7 +110,7 @@ namespace Org.Apache.Kafka.Raft
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/VoterSet.html#empty()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/VoterSet.html#empty()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Raft.VoterSet"/></returns>
         public static Org.Apache.Kafka.Raft.VoterSet Empty()
@@ -118,7 +118,7 @@ namespace Org.Apache.Kafka.Raft
             return SExecuteWithSignature<Org.Apache.Kafka.Raft.VoterSet>(LocalBridgeClazz, "empty", "()Lorg/apache/kafka/raft/VoterSet;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/VoterSet.html#fromMap(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/VoterSet.html#fromMap(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Raft.VoterSet"/></returns>
@@ -131,7 +131,7 @@ namespace Org.Apache.Kafka.Raft
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/VoterSet.html#hasOverlappingMajority(org.apache.kafka.raft.VoterSet)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/VoterSet.html#hasOverlappingMajority(org.apache.kafka.raft.VoterSet)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Raft.VoterSet"/></param>
         /// <returns><see cref="bool"/></returns>
@@ -140,7 +140,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<bool>("hasOverlappingMajority", "(Lorg/apache/kafka/raft/VoterSet;)Z", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/VoterSet.html#isEmpty()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/VoterSet.html#isEmpty()"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool IsEmpty()
@@ -148,7 +148,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<bool>("isEmpty", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/VoterSet.html#isOnlyVoter(org.apache.kafka.raft.ReplicaKey)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/VoterSet.html#isOnlyVoter(org.apache.kafka.raft.ReplicaKey)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Raft.ReplicaKey"/></param>
         /// <returns><see cref="bool"/></returns>
@@ -157,7 +157,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<bool>("isOnlyVoter", "(Lorg/apache/kafka/raft/ReplicaKey;)Z", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/VoterSet.html#isVoter(org.apache.kafka.raft.ReplicaKey)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/VoterSet.html#isVoter(org.apache.kafka.raft.ReplicaKey)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Raft.ReplicaKey"/></param>
         /// <returns><see cref="bool"/></returns>
@@ -166,7 +166,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<bool>("isVoter", "(Lorg/apache/kafka/raft/ReplicaKey;)Z", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/VoterSet.html#voterNodeNeedsUpdate(org.apache.kafka.raft.VoterSet.VoterNode)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/VoterSet.html#voterNodeNeedsUpdate(org.apache.kafka.raft.VoterSet.VoterNode)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Raft.VoterSet.VoterNode"/></param>
         /// <returns><see cref="bool"/></returns>
@@ -175,7 +175,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<bool>("voterNodeNeedsUpdate", "(Lorg/apache/kafka/raft/VoterSet$VoterNode;)Z", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/VoterSet.html#size()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/VoterSet.html#size()"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int Size()
@@ -183,7 +183,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<int>("size", "()I");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/VoterSet.html#addVoter(org.apache.kafka.raft.VoterSet.VoterNode)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/VoterSet.html#addVoter(org.apache.kafka.raft.VoterSet.VoterNode)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Raft.VoterSet.VoterNode"/></param>
         /// <returns><see cref="Java.Util.Optional"/></returns>
@@ -192,7 +192,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<Java.Util.Optional<Org.Apache.Kafka.Raft.VoterSet>>("addVoter", "(Lorg/apache/kafka/raft/VoterSet$VoterNode;)Ljava/util/Optional;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/VoterSet.html#removeVoter(org.apache.kafka.raft.ReplicaKey)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/VoterSet.html#removeVoter(org.apache.kafka.raft.ReplicaKey)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Raft.ReplicaKey"/></param>
         /// <returns><see cref="Java.Util.Optional"/></returns>
@@ -201,7 +201,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<Java.Util.Optional<Org.Apache.Kafka.Raft.VoterSet>>("removeVoter", "(Lorg/apache/kafka/raft/ReplicaKey;)Ljava/util/Optional;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/VoterSet.html#updateVoter(org.apache.kafka.raft.VoterSet.VoterNode)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/VoterSet.html#updateVoter(org.apache.kafka.raft.VoterSet.VoterNode)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Raft.VoterSet.VoterNode"/></param>
         /// <returns><see cref="Java.Util.Optional"/></returns>
@@ -210,7 +210,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<Java.Util.Optional<Org.Apache.Kafka.Raft.VoterSet>>("updateVoter", "(Lorg/apache/kafka/raft/VoterSet$VoterNode;)Ljava/util/Optional;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/VoterSet.html#updateVoterIgnoringDirectoryId(org.apache.kafka.raft.VoterSet.VoterNode)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/VoterSet.html#updateVoterIgnoringDirectoryId(org.apache.kafka.raft.VoterSet.VoterNode)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Raft.VoterSet.VoterNode"/></param>
         /// <returns><see cref="Java.Util.Optional"/></returns>
@@ -219,7 +219,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<Java.Util.Optional<Org.Apache.Kafka.Raft.VoterSet>>("updateVoterIgnoringDirectoryId", "(Lorg/apache/kafka/raft/VoterSet$VoterNode;)Ljava/util/Optional;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/VoterSet.html#voterIds()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/VoterSet.html#voterIds()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Set"/></returns>
         public Java.Util.Set<Java.Lang.Integer> VoterIds()
@@ -227,7 +227,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<Java.Util.Set<Java.Lang.Integer>>("voterIds", "()Ljava/util/Set;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/VoterSet.html#voterKeys()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/VoterSet.html#voterKeys()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Set"/></returns>
         public Java.Util.Set<Org.Apache.Kafka.Raft.ReplicaKey> VoterKeys()
@@ -235,7 +235,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<Java.Util.Set<Org.Apache.Kafka.Raft.ReplicaKey>>("voterKeys", "()Ljava/util/Set;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/VoterSet.html#voterNodes()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/VoterSet.html#voterNodes()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Set"/></returns>
         public Java.Util.Set<Org.Apache.Kafka.Raft.VoterSet.VoterNode> VoterNodes()
@@ -243,7 +243,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<Java.Util.Set<Org.Apache.Kafka.Raft.VoterSet.VoterNode>>("voterNodes", "()Ljava/util/Set;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/VoterSet.html#listeners(int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/VoterSet.html#listeners(int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Raft.Endpoints"/></returns>
@@ -276,7 +276,7 @@ namespace Org.Apache.Kafka.Raft
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/VoterSet.VoterNode.html#isVoter(org.apache.kafka.raft.ReplicaKey)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/VoterSet.VoterNode.html#isVoter(org.apache.kafka.raft.ReplicaKey)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Org.Apache.Kafka.Raft.ReplicaKey"/></param>
             /// <returns><see cref="bool"/></returns>
@@ -285,7 +285,7 @@ namespace Org.Apache.Kafka.Raft
                 return IExecuteWithSignature<bool>("isVoter", "(Lorg/apache/kafka/raft/ReplicaKey;)Z", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/VoterSet.VoterNode.html#listeners()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/VoterSet.VoterNode.html#listeners()"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Raft.Endpoints"/></returns>
             public Org.Apache.Kafka.Raft.Endpoints Listeners()
@@ -293,7 +293,7 @@ namespace Org.Apache.Kafka.Raft
                 return IExecuteWithSignature<Org.Apache.Kafka.Raft.Endpoints>("listeners", "()Lorg/apache/kafka/raft/Endpoints;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/VoterSet.VoterNode.html#voterKey()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/VoterSet.VoterNode.html#voterKey()"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Raft.ReplicaKey"/></returns>
             public Org.Apache.Kafka.Raft.ReplicaKey VoterKey()

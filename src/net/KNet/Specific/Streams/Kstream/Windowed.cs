@@ -84,12 +84,12 @@ namespace MASES.KNet.Streams.Kstream
         public static implicit operator Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>(Windowed<K, TJVMK> t) => t._inner;
 
         /// <summary>
-        /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/Windowed.html#key()"/>
+        /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/kstream/Windowed.html#key()"/>
         /// </summary>
         /// <returns><typeparamref name="K"/></returns>
         public K Key { get { CheckDisposed(); _keySerDes ??= _factory?.BuildKeySerDes<K, TJVMK>(); return _keySerDes.Deserialize((Java.Lang.String)null, _inner.Key()); } }
         /// <summary>
-        /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/Windowed.html#window()"/>
+        /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/kstream/Windowed.html#window()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Kstream.Window"/></returns>
         public Org.Apache.Kafka.Streams.Kstream.Window Window
