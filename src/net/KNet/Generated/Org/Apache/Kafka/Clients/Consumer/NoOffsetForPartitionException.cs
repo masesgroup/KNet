@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
 {
     #region NoOffsetForPartitionException declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/consumer/NoOffsetForPartitionException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/consumer/NoOffsetForPartitionException.html"/>
     /// </summary>
     public partial class NoOffsetForPartitionException : Org.Apache.Kafka.Clients.Consumer.InvalidOffsetException
     {

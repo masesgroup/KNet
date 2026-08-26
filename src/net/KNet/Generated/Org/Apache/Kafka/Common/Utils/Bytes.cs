@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Utils
 {
     #region Bytes declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/utils/Bytes.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/utils/Bytes.html"/>
     /// </summary>
     public partial class Bytes : Java.Lang.Comparable<Org.Apache.Kafka.Common.Utils.Bytes>
     {
@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Common.Utils
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/utils/Bytes.html#%3Cinit%3E(byte[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/utils/Bytes.html#%3Cinit%3E(byte[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="byte"/></param>
         public Bytes(byte[] arg0) : base(JVMBridgeBase.InitializerInstance)
@@ -87,7 +87,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/utils/Bytes.html#EMPTY"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/utils/Bytes.html#EMPTY"/>
         /// </summary>
         public static byte[] EMPTY { get { return SGetFieldArray<byte>(LocalBridgeClazz, "EMPTY"); } set { SSetField(LocalBridgeClazz, "EMPTY", value); } }
 
@@ -95,7 +95,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/utils/Bytes.html#increment(org.apache.kafka.common.utils.Bytes)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/utils/Bytes.html#increment(org.apache.kafka.common.utils.Bytes)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Utils.Bytes"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Utils.Bytes"/></returns>
@@ -106,7 +106,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return SExecuteWithSignature<Org.Apache.Kafka.Common.Utils.Bytes>(LocalBridgeClazz, "increment", "(Lorg/apache/kafka/common/utils/Bytes;)Lorg/apache/kafka/common/utils/Bytes;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/utils/Bytes.html#wrap(byte[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/utils/Bytes.html#wrap(byte[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="byte"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Utils.Bytes"/></returns>
@@ -119,7 +119,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/utils/Bytes.html#get()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/utils/Bytes.html#get()"/>
         /// </summary>
         /// <returns><see cref="byte"/></returns>
         public byte[] Get()
@@ -127,7 +127,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return IExecuteWithSignatureArray<byte>("get", "()[B");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/utils/Bytes.html#compareTo(java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/utils/Bytes.html#compareTo(java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
         /// <returns><see cref="int"/></returns>
@@ -136,7 +136,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return IExecuteWithSignature<int>("compareTo", "(Ljava/lang/Object;)I", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/utils/Bytes.html#compareTo(org.apache.kafka.common.utils.Bytes)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/utils/Bytes.html#compareTo(org.apache.kafka.common.utils.Bytes)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Utils.Bytes"/></param>
         /// <returns><see cref="int"/></returns>

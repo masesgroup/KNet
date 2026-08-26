@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Security.Plain
 {
     #region PlainLoginModule declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/security/plain/PlainLoginModule.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/security/plain/PlainLoginModule.html"/>
     /// </summary>
     public partial class PlainLoginModule : Javax.Security.Auth.Spi.LoginModule
     {
@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Common.Security.Plain
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/security/plain/PlainLoginModule.html#%3Cinit%3E()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/security/plain/PlainLoginModule.html#%3Cinit%3E()"/>
         /// </summary>
         public PlainLoginModule() : base(JVMBridgeBase.InitializerInstance)
         {
@@ -94,7 +94,7 @@ namespace Org.Apache.Kafka.Common.Security.Plain
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/security/plain/PlainLoginModule.html#abort()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/security/plain/PlainLoginModule.html#abort()"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool Abort()
@@ -102,7 +102,7 @@ namespace Org.Apache.Kafka.Common.Security.Plain
             return IExecuteWithSignature<bool>("abort", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/security/plain/PlainLoginModule.html#commit()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/security/plain/PlainLoginModule.html#commit()"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool Commit()
@@ -110,7 +110,7 @@ namespace Org.Apache.Kafka.Common.Security.Plain
             return IExecuteWithSignature<bool>("commit", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/security/plain/PlainLoginModule.html#login()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/security/plain/PlainLoginModule.html#login()"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool Login()
@@ -118,7 +118,7 @@ namespace Org.Apache.Kafka.Common.Security.Plain
             return IExecuteWithSignature<bool>("login", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/security/plain/PlainLoginModule.html#logout()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/security/plain/PlainLoginModule.html#logout()"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool Logout()
@@ -126,7 +126,7 @@ namespace Org.Apache.Kafka.Common.Security.Plain
             return IExecuteWithSignature<bool>("logout", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/security/plain/PlainLoginModule.html#initialize(javax.security.auth.Subject,javax.security.auth.callback.CallbackHandler,java.util.Map,java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/security/plain/PlainLoginModule.html#initialize(javax.security.auth.Subject,javax.security.auth.callback.CallbackHandler,java.util.Map,java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Javax.Security.Auth.Subject"/></param>
         /// <param name="arg1"><see cref="Javax.Security.Auth.Callback.CallbackHandler"/></param>

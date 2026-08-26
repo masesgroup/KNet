@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
 {
     #region CumulativeCount declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/metrics/stats/CumulativeCount.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/metrics/stats/CumulativeCount.html"/>
     /// </summary>
     public partial class CumulativeCount : Org.Apache.Kafka.Common.Metrics.Stats.CumulativeSum
     {
@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/metrics/stats/CumulativeCount.html#%3Cinit%3E()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/metrics/stats/CumulativeCount.html#%3Cinit%3E()"/>
         /// </summary>
         public CumulativeCount() : base(JVMBridgeBase.InitializerInstance)
         {

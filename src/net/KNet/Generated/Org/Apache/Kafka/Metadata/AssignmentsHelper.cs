@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Metadata
 {
     #region AssignmentsHelper declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.2.1/org/apache/kafka/metadata/AssignmentsHelper.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/metadata/AssignmentsHelper.html"/>
     /// </summary>
     public partial class AssignmentsHelper : MASES.JCOBridge.C2JBridge.JVMBridgeBase<AssignmentsHelper>
     {
@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Metadata
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.2.1/org/apache/kafka/metadata/AssignmentsHelper.html#%3Cinit%3E()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/metadata/AssignmentsHelper.html#%3Cinit%3E()"/>
         /// </summary>
         public AssignmentsHelper() : base(JVMBridgeBase.InitializerInstance)
         {

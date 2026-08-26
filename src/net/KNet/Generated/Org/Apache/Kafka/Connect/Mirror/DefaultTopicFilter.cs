@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
 {
     #region DefaultTopicFilter declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.2.1/org/apache/kafka/connect/mirror/DefaultTopicFilter.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.3.1/org/apache/kafka/connect/mirror/DefaultTopicFilter.html"/>
     /// </summary>
     public partial class DefaultTopicFilter : Org.Apache.Kafka.Connect.Mirror.TopicFilter
     {
@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.2.1/org/apache/kafka/connect/mirror/DefaultTopicFilter.html#%3Cinit%3E()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.3.1/org/apache/kafka/connect/mirror/DefaultTopicFilter.html#%3Cinit%3E()"/>
         /// </summary>
         public DefaultTopicFilter() : base(JVMBridgeBase.InitializerInstance)
         {
@@ -86,19 +86,19 @@ namespace Org.Apache.Kafka.Connect.Mirror
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.2.1/org/apache/kafka/connect/mirror/DefaultTopicFilter.html#TOPICS_EXCLUDE_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.3.1/org/apache/kafka/connect/mirror/DefaultTopicFilter.html#TOPICS_EXCLUDE_CONFIG"/>
         /// </summary>
         public static Java.Lang.String TOPICS_EXCLUDE_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "TOPICS_EXCLUDE_CONFIG"); } set { SSetField(LocalBridgeClazz, "TOPICS_EXCLUDE_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.2.1/org/apache/kafka/connect/mirror/DefaultTopicFilter.html#TOPICS_EXCLUDE_DEFAULT"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.3.1/org/apache/kafka/connect/mirror/DefaultTopicFilter.html#TOPICS_EXCLUDE_DEFAULT"/>
         /// </summary>
         public static Java.Lang.String TOPICS_EXCLUDE_DEFAULT { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "TOPICS_EXCLUDE_DEFAULT"); } set { SSetField(LocalBridgeClazz, "TOPICS_EXCLUDE_DEFAULT", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.2.1/org/apache/kafka/connect/mirror/DefaultTopicFilter.html#TOPICS_INCLUDE_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.3.1/org/apache/kafka/connect/mirror/DefaultTopicFilter.html#TOPICS_INCLUDE_CONFIG"/>
         /// </summary>
         public static Java.Lang.String TOPICS_INCLUDE_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "TOPICS_INCLUDE_CONFIG"); } set { SSetField(LocalBridgeClazz, "TOPICS_INCLUDE_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.2.1/org/apache/kafka/connect/mirror/DefaultTopicFilter.html#TOPICS_INCLUDE_DEFAULT"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.3.1/org/apache/kafka/connect/mirror/DefaultTopicFilter.html#TOPICS_INCLUDE_DEFAULT"/>
         /// </summary>
         public static Java.Lang.String TOPICS_INCLUDE_DEFAULT { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "TOPICS_INCLUDE_DEFAULT"); } set { SSetField(LocalBridgeClazz, "TOPICS_INCLUDE_DEFAULT", value); } }
 
@@ -110,7 +110,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.2.1/org/apache/kafka/connect/mirror/DefaultTopicFilter.html#shouldReplicateTopic(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.3.1/org/apache/kafka/connect/mirror/DefaultTopicFilter.html#shouldReplicateTopic(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="bool"/></returns>
@@ -119,7 +119,7 @@ namespace Org.Apache.Kafka.Connect.Mirror
             return IExecuteWithSignature<bool>("shouldReplicateTopic", "(Ljava/lang/String;)Z", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.2.1/org/apache/kafka/connect/mirror/DefaultTopicFilter.html#configure(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-mirror/4.3.1/org/apache/kafka/connect/mirror/DefaultTopicFilter.html#configure(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         public void Configure(Java.Util.Map<Java.Lang.String, object> arg0)

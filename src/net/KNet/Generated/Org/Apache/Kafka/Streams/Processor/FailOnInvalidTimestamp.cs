@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.Processor
 {
     #region FailOnInvalidTimestamp declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/FailOnInvalidTimestamp.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/processor/FailOnInvalidTimestamp.html"/>
     /// </summary>
     public partial class FailOnInvalidTimestamp : MASES.JCOBridge.C2JBridge.JVMBridgeBase<FailOnInvalidTimestamp>
     {
@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Streams.Processor
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/FailOnInvalidTimestamp.html#%3Cinit%3E()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/processor/FailOnInvalidTimestamp.html#%3Cinit%3E()"/>
         /// </summary>
         public FailOnInvalidTimestamp() : base(JVMBridgeBase.InitializerInstance)
         {

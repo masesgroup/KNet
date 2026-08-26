@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Security.Scram
 {
     #region ScramCredentialCallback declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/security/scram/ScramCredentialCallback.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/security/scram/ScramCredentialCallback.html"/>
     /// </summary>
     public partial class ScramCredentialCallback : Javax.Security.Auth.Callback.Callback
     {
@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Common.Security.Scram
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/security/scram/ScramCredentialCallback.html#%3Cinit%3E()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/security/scram/ScramCredentialCallback.html#%3Cinit%3E()"/>
         /// </summary>
         public ScramCredentialCallback() : base(JVMBridgeBase.InitializerInstance)
         {
@@ -94,7 +94,7 @@ namespace Org.Apache.Kafka.Common.Security.Scram
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/security/scram/ScramCredentialCallback.html#scramCredential()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/security/scram/ScramCredentialCallback.html#scramCredential()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Security.Scram.ScramCredential"/></returns>
         public Org.Apache.Kafka.Common.Security.Scram.ScramCredential ScramCredential()
@@ -102,7 +102,7 @@ namespace Org.Apache.Kafka.Common.Security.Scram
             return IExecuteWithSignature<Org.Apache.Kafka.Common.Security.Scram.ScramCredential>("scramCredential", "()Lorg/apache/kafka/common/security/scram/ScramCredential;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/security/scram/ScramCredentialCallback.html#scramCredential(org.apache.kafka.common.security.scram.ScramCredential)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/security/scram/ScramCredentialCallback.html#scramCredential(org.apache.kafka.common.security.scram.ScramCredential)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Security.Scram.ScramCredential"/></param>
         public void ScramCredential(Org.Apache.Kafka.Common.Security.Scram.ScramCredential arg0)

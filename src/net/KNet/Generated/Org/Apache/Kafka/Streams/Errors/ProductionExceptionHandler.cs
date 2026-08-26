@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.Errors
 {
     #region ProductionExceptionHandler declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/errors/ProductionExceptionHandler.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/errors/ProductionExceptionHandler.html"/>
     /// </summary>
     public partial class ProductionExceptionHandler : Org.Apache.Kafka.Common.Configurable
     {
@@ -57,7 +57,7 @@ namespace Org.Apache.Kafka.Streams.Errors
         // TODO: complete the class
         #region ProductionExceptionHandlerResponse declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/errors/ProductionExceptionHandler.ProductionExceptionHandlerResponse.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/errors/ProductionExceptionHandler.ProductionExceptionHandlerResponse.html"/>
         /// </summary>
         [global::System.Obsolete("Deprecated in JVM")]
         public partial class ProductionExceptionHandlerResponse : Java.Lang.Enum<Org.Apache.Kafka.Streams.Errors.ProductionExceptionHandler.ProductionExceptionHandlerResponse>
@@ -92,7 +92,7 @@ namespace Org.Apache.Kafka.Streams.Errors
 
         #region Response declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/errors/ProductionExceptionHandler.Response.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/errors/ProductionExceptionHandler.Response.html"/>
         /// </summary>
         public partial class Response : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Response>
         {
@@ -126,7 +126,7 @@ namespace Org.Apache.Kafka.Streams.Errors
 
         #region Result declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/errors/ProductionExceptionHandler.Result.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/errors/ProductionExceptionHandler.Result.html"/>
         /// </summary>
         public partial class Result : Java.Lang.Enum<Org.Apache.Kafka.Streams.Errors.ProductionExceptionHandler.Result>
         {
@@ -160,7 +160,7 @@ namespace Org.Apache.Kafka.Streams.Errors
 
         #region SerializationExceptionOrigin declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/errors/ProductionExceptionHandler.SerializationExceptionOrigin.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/errors/ProductionExceptionHandler.SerializationExceptionOrigin.html"/>
         /// </summary>
         public partial class SerializationExceptionOrigin : Java.Lang.Enum<Org.Apache.Kafka.Streams.Errors.ProductionExceptionHandler.SerializationExceptionOrigin>
         {
@@ -198,7 +198,7 @@ namespace Org.Apache.Kafka.Streams.Errors
 
     #region IProductionExceptionHandler
     /// <summary>
-    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/errors/ProductionExceptionHandler.html"/>
+    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/errors/ProductionExceptionHandler.html"/>
     /// </summary>
     public partial interface IProductionExceptionHandler : Org.Apache.Kafka.Common.IConfigurable
     {
@@ -235,7 +235,7 @@ namespace Org.Apache.Kafka.Streams.Errors
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/errors/ProductionExceptionHandler.html#handle(org.apache.kafka.clients.producer.ProducerRecord,java.lang.Exception)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/errors/ProductionExceptionHandler.html#handle(org.apache.kafka.clients.producer.ProducerRecord,java.lang.Exception)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Producer.ProducerRecord"/></param>
         /// <param name="arg1"><see cref="Java.Lang.Exception"/></param>
@@ -246,7 +246,7 @@ namespace Org.Apache.Kafka.Streams.Errors
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Errors.ProductionExceptionHandler.ProductionExceptionHandlerResponse>("handle", "(Lorg/apache/kafka/clients/producer/ProducerRecord;Ljava/lang/Exception;)Lorg/apache/kafka/streams/errors/ProductionExceptionHandler$ProductionExceptionHandlerResponse;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/errors/ProductionExceptionHandler.html#handle(org.apache.kafka.streams.errors.ErrorHandlerContext,org.apache.kafka.clients.producer.ProducerRecord,java.lang.Exception)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/errors/ProductionExceptionHandler.html#handle(org.apache.kafka.streams.errors.ErrorHandlerContext,org.apache.kafka.clients.producer.ProducerRecord,java.lang.Exception)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Errors.ErrorHandlerContext"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Producer.ProducerRecord"/></param>
@@ -258,7 +258,7 @@ namespace Org.Apache.Kafka.Streams.Errors
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Errors.ProductionExceptionHandler.ProductionExceptionHandlerResponse>("handle", "(Lorg/apache/kafka/streams/errors/ErrorHandlerContext;Lorg/apache/kafka/clients/producer/ProducerRecord;Ljava/lang/Exception;)Lorg/apache/kafka/streams/errors/ProductionExceptionHandler$ProductionExceptionHandlerResponse;", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/errors/ProductionExceptionHandler.html#handleSerializationException(org.apache.kafka.clients.producer.ProducerRecord,java.lang.Exception)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/errors/ProductionExceptionHandler.html#handleSerializationException(org.apache.kafka.clients.producer.ProducerRecord,java.lang.Exception)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Producer.ProducerRecord"/></param>
         /// <param name="arg1"><see cref="Java.Lang.Exception"/></param>
@@ -269,7 +269,7 @@ namespace Org.Apache.Kafka.Streams.Errors
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Errors.ProductionExceptionHandler.ProductionExceptionHandlerResponse>("handleSerializationException", "(Lorg/apache/kafka/clients/producer/ProducerRecord;Ljava/lang/Exception;)Lorg/apache/kafka/streams/errors/ProductionExceptionHandler$ProductionExceptionHandlerResponse;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/errors/ProductionExceptionHandler.html#handleSerializationException(org.apache.kafka.streams.errors.ErrorHandlerContext,org.apache.kafka.clients.producer.ProducerRecord,java.lang.Exception,org.apache.kafka.streams.errors.ProductionExceptionHandler.SerializationExceptionOrigin)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/errors/ProductionExceptionHandler.html#handleSerializationException(org.apache.kafka.streams.errors.ErrorHandlerContext,org.apache.kafka.clients.producer.ProducerRecord,java.lang.Exception,org.apache.kafka.streams.errors.ProductionExceptionHandler.SerializationExceptionOrigin)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Errors.ErrorHandlerContext"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Producer.ProducerRecord"/></param>
@@ -282,7 +282,7 @@ namespace Org.Apache.Kafka.Streams.Errors
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Errors.ProductionExceptionHandler.ProductionExceptionHandlerResponse>("handleSerializationException", "(Lorg/apache/kafka/streams/errors/ErrorHandlerContext;Lorg/apache/kafka/clients/producer/ProducerRecord;Ljava/lang/Exception;Lorg/apache/kafka/streams/errors/ProductionExceptionHandler$SerializationExceptionOrigin;)Lorg/apache/kafka/streams/errors/ProductionExceptionHandler$ProductionExceptionHandlerResponse;", arg0, arg1, arg2, arg3);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/errors/ProductionExceptionHandler.html#handleError(org.apache.kafka.streams.errors.ErrorHandlerContext,org.apache.kafka.clients.producer.ProducerRecord,java.lang.Exception)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/errors/ProductionExceptionHandler.html#handleError(org.apache.kafka.streams.errors.ErrorHandlerContext,org.apache.kafka.clients.producer.ProducerRecord,java.lang.Exception)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Errors.ErrorHandlerContext"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Producer.ProducerRecord"/></param>
@@ -293,7 +293,7 @@ namespace Org.Apache.Kafka.Streams.Errors
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Errors.ProductionExceptionHandler.Response>("handleError", "(Lorg/apache/kafka/streams/errors/ErrorHandlerContext;Lorg/apache/kafka/clients/producer/ProducerRecord;Ljava/lang/Exception;)Lorg/apache/kafka/streams/errors/ProductionExceptionHandler$Response;", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/errors/ProductionExceptionHandler.html#handleSerializationError(org.apache.kafka.streams.errors.ErrorHandlerContext,org.apache.kafka.clients.producer.ProducerRecord,java.lang.Exception,org.apache.kafka.streams.errors.ProductionExceptionHandler.SerializationExceptionOrigin)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/errors/ProductionExceptionHandler.html#handleSerializationError(org.apache.kafka.streams.errors.ErrorHandlerContext,org.apache.kafka.clients.producer.ProducerRecord,java.lang.Exception,org.apache.kafka.streams.errors.ProductionExceptionHandler.SerializationExceptionOrigin)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Errors.ErrorHandlerContext"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Producer.ProducerRecord"/></param>
@@ -321,23 +321,23 @@ namespace Org.Apache.Kafka.Streams.Errors
 
             #region Fields
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/errors/ProductionExceptionHandler.ProductionExceptionHandlerResponse.html#id"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/errors/ProductionExceptionHandler.ProductionExceptionHandlerResponse.html#id"/>
             /// </summary>
             public int id { get { return IGetField<int>("id"); } set { ISetField("id", value); } }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/errors/ProductionExceptionHandler.ProductionExceptionHandlerResponse.html#name"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/errors/ProductionExceptionHandler.ProductionExceptionHandlerResponse.html#name"/>
             /// </summary>
             public Java.Lang.String name { get { return IGetField<Java.Lang.String>("name"); } set { ISetField("name", value); } }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/errors/ProductionExceptionHandler.ProductionExceptionHandlerResponse.html#CONTINUE"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/errors/ProductionExceptionHandler.ProductionExceptionHandlerResponse.html#CONTINUE"/>
             /// </summary>
             public static Org.Apache.Kafka.Streams.Errors.ProductionExceptionHandler.ProductionExceptionHandlerResponse CONTINUE { get { return SGetField<Org.Apache.Kafka.Streams.Errors.ProductionExceptionHandler.ProductionExceptionHandlerResponse>(LocalBridgeClazz, "CONTINUE"); } set { SSetField(LocalBridgeClazz, "CONTINUE", value); } }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/errors/ProductionExceptionHandler.ProductionExceptionHandlerResponse.html#FAIL"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/errors/ProductionExceptionHandler.ProductionExceptionHandlerResponse.html#FAIL"/>
             /// </summary>
             public static Org.Apache.Kafka.Streams.Errors.ProductionExceptionHandler.ProductionExceptionHandlerResponse FAIL { get { return SGetField<Org.Apache.Kafka.Streams.Errors.ProductionExceptionHandler.ProductionExceptionHandlerResponse>(LocalBridgeClazz, "FAIL"); } set { SSetField(LocalBridgeClazz, "FAIL", value); } }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/errors/ProductionExceptionHandler.ProductionExceptionHandlerResponse.html#RETRY"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/errors/ProductionExceptionHandler.ProductionExceptionHandlerResponse.html#RETRY"/>
             /// </summary>
             public static Org.Apache.Kafka.Streams.Errors.ProductionExceptionHandler.ProductionExceptionHandlerResponse RETRY { get { return SGetField<Org.Apache.Kafka.Streams.Errors.ProductionExceptionHandler.ProductionExceptionHandlerResponse>(LocalBridgeClazz, "RETRY"); } set { SSetField(LocalBridgeClazz, "RETRY", value); } }
 
@@ -345,7 +345,7 @@ namespace Org.Apache.Kafka.Streams.Errors
 
             #region Static methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/errors/ProductionExceptionHandler.ProductionExceptionHandlerResponse.html#valueOf(java.lang.String)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/errors/ProductionExceptionHandler.ProductionExceptionHandlerResponse.html#valueOf(java.lang.String)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Lang.String"/></param>
             /// <returns><see cref="Org.Apache.Kafka.Streams.Errors.ProductionExceptionHandler.ProductionExceptionHandlerResponse"/></returns>
@@ -354,7 +354,7 @@ namespace Org.Apache.Kafka.Streams.Errors
                 return SExecuteWithSignature<Org.Apache.Kafka.Streams.Errors.ProductionExceptionHandler.ProductionExceptionHandlerResponse>(LocalBridgeClazz, "valueOf", "(Ljava/lang/String;)Lorg/apache/kafka/streams/errors/ProductionExceptionHandler$ProductionExceptionHandlerResponse;", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/errors/ProductionExceptionHandler.ProductionExceptionHandlerResponse.html#values()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/errors/ProductionExceptionHandler.ProductionExceptionHandlerResponse.html#values()"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Streams.Errors.ProductionExceptionHandler.ProductionExceptionHandlerResponse"/></returns>
             public static Org.Apache.Kafka.Streams.Errors.ProductionExceptionHandler.ProductionExceptionHandlerResponse[] Values()
@@ -393,7 +393,7 @@ namespace Org.Apache.Kafka.Streams.Errors
 
             #region Static methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/errors/ProductionExceptionHandler.Response.html#fail()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/errors/ProductionExceptionHandler.Response.html#fail()"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Streams.Errors.ProductionExceptionHandler.Response"/></returns>
             public static Org.Apache.Kafka.Streams.Errors.ProductionExceptionHandler.Response Fail()
@@ -401,7 +401,7 @@ namespace Org.Apache.Kafka.Streams.Errors
                 return SExecuteWithSignature<Org.Apache.Kafka.Streams.Errors.ProductionExceptionHandler.Response>(LocalBridgeClazz, "fail", "()Lorg/apache/kafka/streams/errors/ProductionExceptionHandler$Response;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/errors/ProductionExceptionHandler.Response.html#fail(java.util.List)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/errors/ProductionExceptionHandler.Response.html#fail(java.util.List)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Util.List"/></param>
             /// <returns><see cref="Org.Apache.Kafka.Streams.Errors.ProductionExceptionHandler.Response"/></returns>
@@ -410,7 +410,7 @@ namespace Org.Apache.Kafka.Streams.Errors
                 return SExecuteWithSignature<Org.Apache.Kafka.Streams.Errors.ProductionExceptionHandler.Response>(LocalBridgeClazz, "fail", "(Ljava/util/List;)Lorg/apache/kafka/streams/errors/ProductionExceptionHandler$Response;", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/errors/ProductionExceptionHandler.Response.html#resume()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/errors/ProductionExceptionHandler.Response.html#resume()"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Streams.Errors.ProductionExceptionHandler.Response"/></returns>
             public static Org.Apache.Kafka.Streams.Errors.ProductionExceptionHandler.Response Resume()
@@ -418,7 +418,7 @@ namespace Org.Apache.Kafka.Streams.Errors
                 return SExecuteWithSignature<Org.Apache.Kafka.Streams.Errors.ProductionExceptionHandler.Response>(LocalBridgeClazz, "resume", "()Lorg/apache/kafka/streams/errors/ProductionExceptionHandler$Response;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/errors/ProductionExceptionHandler.Response.html#resume(java.util.List)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/errors/ProductionExceptionHandler.Response.html#resume(java.util.List)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Util.List"/></param>
             /// <returns><see cref="Org.Apache.Kafka.Streams.Errors.ProductionExceptionHandler.Response"/></returns>
@@ -427,7 +427,7 @@ namespace Org.Apache.Kafka.Streams.Errors
                 return SExecuteWithSignature<Org.Apache.Kafka.Streams.Errors.ProductionExceptionHandler.Response>(LocalBridgeClazz, "resume", "(Ljava/util/List;)Lorg/apache/kafka/streams/errors/ProductionExceptionHandler$Response;", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/errors/ProductionExceptionHandler.Response.html#retry()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/errors/ProductionExceptionHandler.Response.html#retry()"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Streams.Errors.ProductionExceptionHandler.Response"/></returns>
             public static Org.Apache.Kafka.Streams.Errors.ProductionExceptionHandler.Response Retry()
@@ -439,7 +439,7 @@ namespace Org.Apache.Kafka.Streams.Errors
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/errors/ProductionExceptionHandler.Response.html#deadLetterQueueRecords()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/errors/ProductionExceptionHandler.Response.html#deadLetterQueueRecords()"/>
             /// </summary>
             /// <returns><see cref="Java.Util.List"/></returns>
             public Java.Util.List<Org.Apache.Kafka.Clients.Producer.ProducerRecord<byte[], byte[]>> DeadLetterQueueRecords()
@@ -447,7 +447,7 @@ namespace Org.Apache.Kafka.Streams.Errors
                 return IExecuteWithSignature<Java.Util.List<Org.Apache.Kafka.Clients.Producer.ProducerRecord<byte[], byte[]>>>("deadLetterQueueRecords", "()Ljava/util/List;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/errors/ProductionExceptionHandler.Response.html#result()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/errors/ProductionExceptionHandler.Response.html#result()"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Streams.Errors.ProductionExceptionHandler.Result"/></returns>
             public Org.Apache.Kafka.Streams.Errors.ProductionExceptionHandler.Result ResultMethod()
@@ -478,23 +478,23 @@ namespace Org.Apache.Kafka.Streams.Errors
 
             #region Fields
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/errors/ProductionExceptionHandler.Result.html#id"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/errors/ProductionExceptionHandler.Result.html#id"/>
             /// </summary>
             public int id { get { return IGetField<int>("id"); } set { ISetField("id", value); } }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/errors/ProductionExceptionHandler.Result.html#name"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/errors/ProductionExceptionHandler.Result.html#name"/>
             /// </summary>
             public Java.Lang.String name { get { return IGetField<Java.Lang.String>("name"); } set { ISetField("name", value); } }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/errors/ProductionExceptionHandler.Result.html#FAIL"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/errors/ProductionExceptionHandler.Result.html#FAIL"/>
             /// </summary>
             public static Org.Apache.Kafka.Streams.Errors.ProductionExceptionHandler.Result FAIL { get { return SGetField<Org.Apache.Kafka.Streams.Errors.ProductionExceptionHandler.Result>(LocalBridgeClazz, "FAIL"); } set { SSetField(LocalBridgeClazz, "FAIL", value); } }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/errors/ProductionExceptionHandler.Result.html#RESUME"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/errors/ProductionExceptionHandler.Result.html#RESUME"/>
             /// </summary>
             public static Org.Apache.Kafka.Streams.Errors.ProductionExceptionHandler.Result RESUME { get { return SGetField<Org.Apache.Kafka.Streams.Errors.ProductionExceptionHandler.Result>(LocalBridgeClazz, "RESUME"); } set { SSetField(LocalBridgeClazz, "RESUME", value); } }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/errors/ProductionExceptionHandler.Result.html#RETRY"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/errors/ProductionExceptionHandler.Result.html#RETRY"/>
             /// </summary>
             public static Org.Apache.Kafka.Streams.Errors.ProductionExceptionHandler.Result RETRY { get { return SGetField<Org.Apache.Kafka.Streams.Errors.ProductionExceptionHandler.Result>(LocalBridgeClazz, "RETRY"); } set { SSetField(LocalBridgeClazz, "RETRY", value); } }
 
@@ -502,7 +502,7 @@ namespace Org.Apache.Kafka.Streams.Errors
 
             #region Static methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/errors/ProductionExceptionHandler.Result.html#valueOf(java.lang.String)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/errors/ProductionExceptionHandler.Result.html#valueOf(java.lang.String)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Lang.String"/></param>
             /// <returns><see cref="Org.Apache.Kafka.Streams.Errors.ProductionExceptionHandler.Result"/></returns>
@@ -511,7 +511,7 @@ namespace Org.Apache.Kafka.Streams.Errors
                 return SExecuteWithSignature<Org.Apache.Kafka.Streams.Errors.ProductionExceptionHandler.Result>(LocalBridgeClazz, "valueOf", "(Ljava/lang/String;)Lorg/apache/kafka/streams/errors/ProductionExceptionHandler$Result;", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/errors/ProductionExceptionHandler.Result.html#values()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/errors/ProductionExceptionHandler.Result.html#values()"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Streams.Errors.ProductionExceptionHandler.Result"/></returns>
             public static Org.Apache.Kafka.Streams.Errors.ProductionExceptionHandler.Result[] Values()
@@ -546,11 +546,11 @@ namespace Org.Apache.Kafka.Streams.Errors
 
             #region Fields
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/errors/ProductionExceptionHandler.SerializationExceptionOrigin.html#KEY"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/errors/ProductionExceptionHandler.SerializationExceptionOrigin.html#KEY"/>
             /// </summary>
             public static Org.Apache.Kafka.Streams.Errors.ProductionExceptionHandler.SerializationExceptionOrigin KEY { get { return SGetField<Org.Apache.Kafka.Streams.Errors.ProductionExceptionHandler.SerializationExceptionOrigin>(LocalBridgeClazz, "KEY"); } set { SSetField(LocalBridgeClazz, "KEY", value); } }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/errors/ProductionExceptionHandler.SerializationExceptionOrigin.html#VALUE"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/errors/ProductionExceptionHandler.SerializationExceptionOrigin.html#VALUE"/>
             /// </summary>
             public static Org.Apache.Kafka.Streams.Errors.ProductionExceptionHandler.SerializationExceptionOrigin VALUE { get { return SGetField<Org.Apache.Kafka.Streams.Errors.ProductionExceptionHandler.SerializationExceptionOrigin>(LocalBridgeClazz, "VALUE"); } set { SSetField(LocalBridgeClazz, "VALUE", value); } }
 
@@ -558,7 +558,7 @@ namespace Org.Apache.Kafka.Streams.Errors
 
             #region Static methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/errors/ProductionExceptionHandler.SerializationExceptionOrigin.html#valueOf(java.lang.String)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/errors/ProductionExceptionHandler.SerializationExceptionOrigin.html#valueOf(java.lang.String)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Lang.String"/></param>
             /// <returns><see cref="Org.Apache.Kafka.Streams.Errors.ProductionExceptionHandler.SerializationExceptionOrigin"/></returns>
@@ -567,7 +567,7 @@ namespace Org.Apache.Kafka.Streams.Errors
                 return SExecuteWithSignature<Org.Apache.Kafka.Streams.Errors.ProductionExceptionHandler.SerializationExceptionOrigin>(LocalBridgeClazz, "valueOf", "(Ljava/lang/String;)Lorg/apache/kafka/streams/errors/ProductionExceptionHandler$SerializationExceptionOrigin;", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/errors/ProductionExceptionHandler.SerializationExceptionOrigin.html#values()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/errors/ProductionExceptionHandler.SerializationExceptionOrigin.html#values()"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Streams.Errors.ProductionExceptionHandler.SerializationExceptionOrigin"/></returns>
             public static Org.Apache.Kafka.Streams.Errors.ProductionExceptionHandler.SerializationExceptionOrigin[] Values()

@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Assignment.Assignors
 {
     #region StickyTaskAssignor declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/assignment/assignors/StickyTaskAssignor.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/processor/assignment/assignors/StickyTaskAssignor.html"/>
     /// </summary>
     public partial class StickyTaskAssignor : Org.Apache.Kafka.Streams.Processor.Assignment.TaskAssignor
     {
@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Assignment.Assignors
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/assignment/assignors/StickyTaskAssignor.html#%3Cinit%3E()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/processor/assignment/assignors/StickyTaskAssignor.html#%3Cinit%3E()"/>
         /// </summary>
         public StickyTaskAssignor() : base(JVMBridgeBase.InitializerInstance)
         {
@@ -78,7 +78,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Assignment.Assignors
             return JVMBridgeBase.New<StickyTaskAssignor>();
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/assignment/assignors/StickyTaskAssignor.html#%3Cinit%3E(boolean)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/processor/assignment/assignors/StickyTaskAssignor.html#%3Cinit%3E(boolean)"/>
         /// </summary>
         /// <param name="arg0"><see cref="bool"/></param>
         public StickyTaskAssignor(bool arg0) : base(JVMBridgeBase.InitializerInstance)
@@ -101,11 +101,11 @@ namespace Org.Apache.Kafka.Streams.Processor.Assignment.Assignors
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/assignment/assignors/StickyTaskAssignor.html#DEFAULT_STICKY_NON_OVERLAP_COST"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/processor/assignment/assignors/StickyTaskAssignor.html#DEFAULT_STICKY_NON_OVERLAP_COST"/>
         /// </summary>
         public static int DEFAULT_STICKY_NON_OVERLAP_COST { get { return SGetField<int>(LocalBridgeClazz, "DEFAULT_STICKY_NON_OVERLAP_COST"); } set { SSetField(LocalBridgeClazz, "DEFAULT_STICKY_NON_OVERLAP_COST", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/assignment/assignors/StickyTaskAssignor.html#DEFAULT_STICKY_TRAFFIC_COST"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/processor/assignment/assignors/StickyTaskAssignor.html#DEFAULT_STICKY_TRAFFIC_COST"/>
         /// </summary>
         public static int DEFAULT_STICKY_TRAFFIC_COST { get { return SGetField<int>(LocalBridgeClazz, "DEFAULT_STICKY_TRAFFIC_COST"); } set { SSetField(LocalBridgeClazz, "DEFAULT_STICKY_TRAFFIC_COST", value); } }
 
@@ -117,7 +117,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Assignment.Assignors
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/assignment/assignors/StickyTaskAssignor.html#assign(org.apache.kafka.streams.processor.assignment.ApplicationState)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/processor/assignment/assignors/StickyTaskAssignor.html#assign(org.apache.kafka.streams.processor.assignment.ApplicationState)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Processor.Assignment.ApplicationState"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Processor.Assignment.TaskAssignor.TaskAssignment"/></returns>

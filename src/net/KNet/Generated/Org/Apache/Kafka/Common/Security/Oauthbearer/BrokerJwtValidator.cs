@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Security.Oauthbearer
 {
     #region BrokerJwtValidator declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/security/oauthbearer/BrokerJwtValidator.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/security/oauthbearer/BrokerJwtValidator.html"/>
     /// </summary>
     public partial class BrokerJwtValidator : Org.Apache.Kafka.Common.Security.Oauthbearer.JwtValidator
     {
@@ -57,7 +57,7 @@ namespace Org.Apache.Kafka.Common.Security.Oauthbearer
         // TODO: complete the class
         #region ClaimSupplier declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/security/oauthbearer/BrokerJwtValidator.ClaimSupplier.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/security/oauthbearer/BrokerJwtValidator.ClaimSupplier.html"/>
         /// </summary>
         public partial class ClaimSupplier : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ClaimSupplier>
         {
@@ -91,7 +91,7 @@ namespace Org.Apache.Kafka.Common.Security.Oauthbearer
 
         #region ClaimSupplier<T> declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/security/oauthbearer/BrokerJwtValidator.ClaimSupplier.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/security/oauthbearer/BrokerJwtValidator.ClaimSupplier.html"/>
         /// </summary>
         /// <typeparam name="T"></typeparam>
         public partial class ClaimSupplier<T> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ClaimSupplier<T>>
@@ -133,7 +133,7 @@ namespace Org.Apache.Kafka.Common.Security.Oauthbearer
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/security/oauthbearer/BrokerJwtValidator.html#%3Cinit%3E()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/security/oauthbearer/BrokerJwtValidator.html#%3Cinit%3E()"/>
         /// </summary>
         public BrokerJwtValidator() : base(JVMBridgeBase.InitializerInstance)
         {
@@ -163,7 +163,7 @@ namespace Org.Apache.Kafka.Common.Security.Oauthbearer
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/security/oauthbearer/BrokerJwtValidator.html#validate(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/security/oauthbearer/BrokerJwtValidator.html#validate(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Security.Oauthbearer.OAuthBearerToken"/></returns>
@@ -173,7 +173,7 @@ namespace Org.Apache.Kafka.Common.Security.Oauthbearer
             return IExecuteWithSignature<Org.Apache.Kafka.Common.Security.Oauthbearer.OAuthBearerToken>("validate", "(Ljava/lang/String;)Lorg/apache/kafka/common/security/oauthbearer/OAuthBearerToken;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/security/oauthbearer/BrokerJwtValidator.html#configure(java.util.Map,java.lang.String,java.util.List)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/security/oauthbearer/BrokerJwtValidator.html#configure(java.util.Map,java.lang.String,java.util.List)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="Java.Lang.String"/></param>
@@ -207,7 +207,7 @@ namespace Org.Apache.Kafka.Common.Security.Oauthbearer
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/security/oauthbearer/BrokerJwtValidator.ClaimSupplier.html#get()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/security/oauthbearer/BrokerJwtValidator.ClaimSupplier.html#get()"/>
             /// </summary>
             /// <returns><see cref="object"/></returns>
             /// <exception cref="Org.Jose4j.Jwt.MalformedClaimException"/>
@@ -251,7 +251,7 @@ namespace Org.Apache.Kafka.Common.Security.Oauthbearer
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/security/oauthbearer/BrokerJwtValidator.ClaimSupplier.html#get()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/security/oauthbearer/BrokerJwtValidator.ClaimSupplier.html#get()"/>
             /// </summary>
             /// <returns><typeparamref name="T"/></returns>
             /// <exception cref="Org.Jose4j.Jwt.MalformedClaimException"/>

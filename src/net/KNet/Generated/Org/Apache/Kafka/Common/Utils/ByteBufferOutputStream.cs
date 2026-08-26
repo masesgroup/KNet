@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Utils
 {
     #region ByteBufferOutputStream declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/utils/ByteBufferOutputStream.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/utils/ByteBufferOutputStream.html"/>
     /// </summary>
     public partial class ByteBufferOutputStream : Java.Io.OutputStream
     {
@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Common.Utils
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/utils/ByteBufferOutputStream.html#%3Cinit%3E(int,boolean)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/utils/ByteBufferOutputStream.html#%3Cinit%3E(int,boolean)"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <param name="arg1"><see cref="bool"/></param>
@@ -80,7 +80,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return JVMBridgeBase.New<ByteBufferOutputStream>(arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/utils/ByteBufferOutputStream.html#%3Cinit%3E(int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/utils/ByteBufferOutputStream.html#%3Cinit%3E(int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         public ByteBufferOutputStream(int arg0) : base(JVMBridgeBase.InitializerInstance)
@@ -95,7 +95,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return JVMBridgeBase.New<ByteBufferOutputStream>(arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/utils/ByteBufferOutputStream.html#%3Cinit%3E(java.nio.ByteBuffer)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/utils/ByteBufferOutputStream.html#%3Cinit%3E(java.nio.ByteBuffer)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Nio.ByteBuffer"/></param>
         public ByteBufferOutputStream(Java.Nio.ByteBuffer arg0) : base(JVMBridgeBase.InitializerInstance)
@@ -126,7 +126,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/utils/ByteBufferOutputStream.html#initialCapacity()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/utils/ByteBufferOutputStream.html#initialCapacity()"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int InitialCapacity()
@@ -134,7 +134,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return IExecuteWithSignature<int>("initialCapacity", "()I");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/utils/ByteBufferOutputStream.html#limit()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/utils/ByteBufferOutputStream.html#limit()"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int Limit()
@@ -142,7 +142,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return IExecuteWithSignature<int>("limit", "()I");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/utils/ByteBufferOutputStream.html#position()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/utils/ByteBufferOutputStream.html#position()"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int Position()
@@ -150,7 +150,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return IExecuteWithSignature<int>("position", "()I");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/utils/ByteBufferOutputStream.html#remaining()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/utils/ByteBufferOutputStream.html#remaining()"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int Remaining()
@@ -158,7 +158,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return IExecuteWithSignature<int>("remaining", "()I");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/utils/ByteBufferOutputStream.html#buffer()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/utils/ByteBufferOutputStream.html#buffer()"/>
         /// </summary>
         /// <returns><see cref="Java.Nio.ByteBuffer"/></returns>
         public Java.Nio.ByteBuffer Buffer()
@@ -166,7 +166,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return IExecuteWithSignature<Java.Nio.ByteBuffer>("buffer", "()Ljava/nio/ByteBuffer;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/utils/ByteBufferOutputStream.html#ensureRemaining(int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/utils/ByteBufferOutputStream.html#ensureRemaining(int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         public void EnsureRemaining(int arg0)
@@ -174,7 +174,7 @@ namespace Org.Apache.Kafka.Common.Utils
             IExecuteWithSignature("ensureRemaining", "(I)V", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/utils/ByteBufferOutputStream.html#position(int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/utils/ByteBufferOutputStream.html#position(int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         public void Position(int arg0)
@@ -182,7 +182,7 @@ namespace Org.Apache.Kafka.Common.Utils
             IExecuteWithSignature("position", "(I)V", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/utils/ByteBufferOutputStream.html#write(java.nio.ByteBuffer)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/utils/ByteBufferOutputStream.html#write(java.nio.ByteBuffer)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Nio.ByteBuffer"/></param>
         public void Write(Java.Nio.ByteBuffer arg0)

@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common
 {
     #region IsolationLevel declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/IsolationLevel.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/IsolationLevel.html"/>
     /// </summary>
     public partial class IsolationLevel : Java.Lang.Enum<Org.Apache.Kafka.Common.IsolationLevel>
     {
@@ -72,11 +72,11 @@ namespace Org.Apache.Kafka.Common
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/IsolationLevel.html#READ_COMMITTED"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/IsolationLevel.html#READ_COMMITTED"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.IsolationLevel READ_COMMITTED { get { return SGetField<Org.Apache.Kafka.Common.IsolationLevel>(LocalBridgeClazz, "READ_COMMITTED"); } set { SSetField(LocalBridgeClazz, "READ_COMMITTED", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/IsolationLevel.html#READ_UNCOMMITTED"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/IsolationLevel.html#READ_UNCOMMITTED"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.IsolationLevel READ_UNCOMMITTED { get { return SGetField<Org.Apache.Kafka.Common.IsolationLevel>(LocalBridgeClazz, "READ_UNCOMMITTED"); } set { SSetField(LocalBridgeClazz, "READ_UNCOMMITTED", value); } }
 
@@ -84,7 +84,7 @@ namespace Org.Apache.Kafka.Common
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/IsolationLevel.html#forId(byte)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/IsolationLevel.html#forId(byte)"/>
         /// </summary>
         /// <param name="arg0"><see cref="byte"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.IsolationLevel"/></returns>
@@ -93,7 +93,7 @@ namespace Org.Apache.Kafka.Common
             return SExecuteWithSignature<Org.Apache.Kafka.Common.IsolationLevel>(LocalBridgeClazz, "forId", "(B)Lorg/apache/kafka/common/IsolationLevel;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/IsolationLevel.html#valueOf(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/IsolationLevel.html#valueOf(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.IsolationLevel"/></returns>
@@ -102,7 +102,7 @@ namespace Org.Apache.Kafka.Common
             return SExecuteWithSignature<Org.Apache.Kafka.Common.IsolationLevel>(LocalBridgeClazz, "valueOf", "(Ljava/lang/String;)Lorg/apache/kafka/common/IsolationLevel;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/IsolationLevel.html#values()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/IsolationLevel.html#values()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.IsolationLevel"/></returns>
         public static Org.Apache.Kafka.Common.IsolationLevel[] Values()
@@ -114,7 +114,7 @@ namespace Org.Apache.Kafka.Common
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/IsolationLevel.html#id()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/IsolationLevel.html#id()"/>
         /// </summary>
         /// <returns><see cref="byte"/></returns>
         public byte Id()

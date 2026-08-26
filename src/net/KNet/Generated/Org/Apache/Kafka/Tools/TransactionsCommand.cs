@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Tools
 {
     #region TransactionsCommand declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.2.1/org/apache/kafka/tools/TransactionsCommand.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.3.1/org/apache/kafka/tools/TransactionsCommand.html"/>
     /// </summary>
     public partial class TransactionsCommand : MASES.JCOBridge.C2JBridge.JVMBridgeBase<TransactionsCommand>, MASES.JCOBridge.C2JBridge.IJVMBridgeMain
     {
@@ -76,7 +76,7 @@ namespace Org.Apache.Kafka.Tools
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.2.1/org/apache/kafka/tools/TransactionsCommand.html#main(java.lang.String[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.3.1/org/apache/kafka/tools/TransactionsCommand.html#main(java.lang.String[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <exception cref="Java.Lang.Exception"/>

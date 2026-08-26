@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Utils
 {
     #region BufferSupplier declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/utils/BufferSupplier.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/utils/BufferSupplier.html"/>
     /// </summary>
     public partial class BufferSupplier : Java.Lang.AutoCloseable
     {
@@ -57,7 +57,7 @@ namespace Org.Apache.Kafka.Common.Utils
         // TODO: complete the class
         #region GrowableBufferSupplier declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/utils/BufferSupplier.GrowableBufferSupplier.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/utils/BufferSupplier.GrowableBufferSupplier.html"/>
         /// </summary>
         public partial class GrowableBufferSupplier : Org.Apache.Kafka.Common.Utils.BufferSupplier
         {
@@ -98,7 +98,7 @@ namespace Org.Apache.Kafka.Common.Utils
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/utils/BufferSupplier.html#%3Cinit%3E()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/utils/BufferSupplier.html#%3Cinit%3E()"/>
         /// </summary>
         public BufferSupplier() : base(JVMBridgeBase.InitializerInstance)
         {
@@ -120,7 +120,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/utils/BufferSupplier.html#NO_CACHING"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/utils/BufferSupplier.html#NO_CACHING"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Utils.BufferSupplier NO_CACHING { get { return SGetField<Org.Apache.Kafka.Common.Utils.BufferSupplier>(LocalBridgeClazz, "NO_CACHING"); } set { SSetField(LocalBridgeClazz, "NO_CACHING", value); } }
 
@@ -128,7 +128,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/utils/BufferSupplier.html#create()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/utils/BufferSupplier.html#create()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Utils.BufferSupplier"/></returns>
         public static Org.Apache.Kafka.Common.Utils.BufferSupplier Create()
@@ -140,7 +140,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/utils/BufferSupplier.html#get(int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/utils/BufferSupplier.html#get(int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <returns><see cref="Java.Nio.ByteBuffer"/></returns>
@@ -149,14 +149,14 @@ namespace Org.Apache.Kafka.Common.Utils
             return IExecuteWithSignature<Java.Nio.ByteBuffer>("get", "(I)Ljava/nio/ByteBuffer;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/utils/BufferSupplier.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/utils/BufferSupplier.html#close()"/>
         /// </summary>
         public void Close()
         {
             IExecuteWithSignature("close", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/utils/BufferSupplier.html#release(java.nio.ByteBuffer)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/utils/BufferSupplier.html#release(java.nio.ByteBuffer)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Nio.ByteBuffer"/></param>
         public void Release(Java.Nio.ByteBuffer arg0)
@@ -172,7 +172,7 @@ namespace Org.Apache.Kafka.Common.Utils
         {
             #region Constructors
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/utils/BufferSupplier.GrowableBufferSupplier.html#%3Cinit%3E()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/utils/BufferSupplier.GrowableBufferSupplier.html#%3Cinit%3E()"/>
             /// </summary>
             public GrowableBufferSupplier() : base(JVMBridgeBase.InitializerInstance)
             {

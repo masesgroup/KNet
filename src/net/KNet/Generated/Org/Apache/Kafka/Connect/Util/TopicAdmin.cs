@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Connect.Util
 {
     #region TopicAdmin declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.2.1/org/apache/kafka/connect/util/TopicAdmin.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.3.1/org/apache/kafka/connect/util/TopicAdmin.html"/>
     /// </summary>
     public partial class TopicAdmin : Java.Lang.AutoCloseable
     {
@@ -57,7 +57,7 @@ namespace Org.Apache.Kafka.Connect.Util
         // TODO: complete the class
         #region NewTopicBuilder declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.2.1/org/apache/kafka/connect/util/TopicAdmin.NewTopicBuilder.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.3.1/org/apache/kafka/connect/util/TopicAdmin.NewTopicBuilder.html"/>
         /// </summary>
         public partial class NewTopicBuilder : MASES.JCOBridge.C2JBridge.JVMBridgeBase<NewTopicBuilder>
         {
@@ -91,7 +91,7 @@ namespace Org.Apache.Kafka.Connect.Util
 
         #region TopicCreationResponse declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.2.1/org/apache/kafka/connect/util/TopicAdmin.TopicCreationResponse.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.3.1/org/apache/kafka/connect/util/TopicAdmin.TopicCreationResponse.html"/>
         /// </summary>
         public partial class TopicCreationResponse : MASES.JCOBridge.C2JBridge.JVMBridgeBase<TopicCreationResponse>
         {
@@ -132,7 +132,7 @@ namespace Org.Apache.Kafka.Connect.Util
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.2.1/org/apache/kafka/connect/util/TopicAdmin.html#%3Cinit%3E(java.util.Map,org.apache.kafka.clients.admin.Admin)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.3.1/org/apache/kafka/connect/util/TopicAdmin.html#%3Cinit%3E(java.util.Map,org.apache.kafka.clients.admin.Admin)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Admin.Admin"/></param>
@@ -148,7 +148,7 @@ namespace Org.Apache.Kafka.Connect.Util
             return JVMBridgeBase.New<TopicAdmin>(arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.2.1/org/apache/kafka/connect/util/TopicAdmin.html#%3Cinit%3E(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.3.1/org/apache/kafka/connect/util/TopicAdmin.html#%3Cinit%3E(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         public TopicAdmin(Java.Util.Map<Java.Lang.String, object> arg0) : base(JVMBridgeBase.InitializerInstance)
@@ -171,15 +171,15 @@ namespace Org.Apache.Kafka.Connect.Util
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.2.1/org/apache/kafka/connect/util/TopicAdmin.html#NO_PARTITIONS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.3.1/org/apache/kafka/connect/util/TopicAdmin.html#NO_PARTITIONS"/>
         /// </summary>
         public static int NO_PARTITIONS { get { return SGetField<int>(LocalBridgeClazz, "NO_PARTITIONS"); } set { SSetField(LocalBridgeClazz, "NO_PARTITIONS", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.2.1/org/apache/kafka/connect/util/TopicAdmin.html#EMPTY_CREATION"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.3.1/org/apache/kafka/connect/util/TopicAdmin.html#EMPTY_CREATION"/>
         /// </summary>
         public static Org.Apache.Kafka.Connect.Util.TopicAdmin.TopicCreationResponse EMPTY_CREATION { get { return SGetField<Org.Apache.Kafka.Connect.Util.TopicAdmin.TopicCreationResponse>(LocalBridgeClazz, "EMPTY_CREATION"); } set { SSetField(LocalBridgeClazz, "EMPTY_CREATION", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.2.1/org/apache/kafka/connect/util/TopicAdmin.html#NO_REPLICATION_FACTOR"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.3.1/org/apache/kafka/connect/util/TopicAdmin.html#NO_REPLICATION_FACTOR"/>
         /// </summary>
         public static short NO_REPLICATION_FACTOR { get { return SGetField<short>(LocalBridgeClazz, "NO_REPLICATION_FACTOR"); } set { SSetField(LocalBridgeClazz, "NO_REPLICATION_FACTOR", value); } }
 
@@ -187,7 +187,7 @@ namespace Org.Apache.Kafka.Connect.Util
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.2.1/org/apache/kafka/connect/util/TopicAdmin.html#defineTopic(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.3.1/org/apache/kafka/connect/util/TopicAdmin.html#defineTopic(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Util.TopicAdmin.NewTopicBuilder"/></returns>
@@ -200,7 +200,7 @@ namespace Org.Apache.Kafka.Connect.Util
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.2.1/org/apache/kafka/connect/util/TopicAdmin.html#createOrFindTopic(org.apache.kafka.clients.admin.NewTopic)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.3.1/org/apache/kafka/connect/util/TopicAdmin.html#createOrFindTopic(org.apache.kafka.clients.admin.NewTopic)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Admin.NewTopic"/></param>
         /// <returns><see cref="bool"/></returns>
@@ -209,7 +209,7 @@ namespace Org.Apache.Kafka.Connect.Util
             return IExecuteWithSignature<bool>("createOrFindTopic", "(Lorg/apache/kafka/clients/admin/NewTopic;)Z", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.2.1/org/apache/kafka/connect/util/TopicAdmin.html#createTopic(org.apache.kafka.clients.admin.NewTopic)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.3.1/org/apache/kafka/connect/util/TopicAdmin.html#createTopic(org.apache.kafka.clients.admin.NewTopic)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Admin.NewTopic"/></param>
         /// <returns><see cref="bool"/></returns>
@@ -218,7 +218,7 @@ namespace Org.Apache.Kafka.Connect.Util
             return IExecuteWithSignature<bool>("createTopic", "(Lorg/apache/kafka/clients/admin/NewTopic;)Z", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.2.1/org/apache/kafka/connect/util/TopicAdmin.html#verifyTopicCleanupPolicyOnlyCompact(java.lang.String,java.lang.String,java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.3.1/org/apache/kafka/connect/util/TopicAdmin.html#verifyTopicCleanupPolicyOnlyCompact(java.lang.String,java.lang.String,java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Lang.String"/></param>
@@ -229,7 +229,7 @@ namespace Org.Apache.Kafka.Connect.Util
             return IExecuteWithSignature<bool>("verifyTopicCleanupPolicyOnlyCompact", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.2.1/org/apache/kafka/connect/util/TopicAdmin.html#describeTopicConfigs(java.lang.String...)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.3.1/org/apache/kafka/connect/util/TopicAdmin.html#describeTopicConfigs(java.lang.String...)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Java.Util.Map"/></returns>
@@ -238,7 +238,7 @@ namespace Org.Apache.Kafka.Connect.Util
             return IExecuteWithSignature<Java.Util.Map<Java.Lang.String, Org.Apache.Kafka.Clients.Admin.Config>>("describeTopicConfigs", "([Ljava/lang/String;)Ljava/util/Map;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.2.1/org/apache/kafka/connect/util/TopicAdmin.html#describeTopics(java.lang.String...)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.3.1/org/apache/kafka/connect/util/TopicAdmin.html#describeTopics(java.lang.String...)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Java.Util.Map"/></returns>
@@ -247,7 +247,7 @@ namespace Org.Apache.Kafka.Connect.Util
             return IExecuteWithSignature<Java.Util.Map<Java.Lang.String, Org.Apache.Kafka.Clients.Admin.TopicDescription>>("describeTopics", "([Ljava/lang/String;)Ljava/util/Map;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.2.1/org/apache/kafka/connect/util/TopicAdmin.html#endOffsets(java.util.Set)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.3.1/org/apache/kafka/connect/util/TopicAdmin.html#endOffsets(java.util.Set)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Set"/></param>
         /// <returns><see cref="Java.Util.Map"/></returns>
@@ -256,7 +256,7 @@ namespace Org.Apache.Kafka.Connect.Util
             return IExecuteWithSignature<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Java.Lang.Long>>("endOffsets", "(Ljava/util/Set;)Ljava/util/Map;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.2.1/org/apache/kafka/connect/util/TopicAdmin.html#retryEndOffsets(java.util.Set,java.time.Duration,long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.3.1/org/apache/kafka/connect/util/TopicAdmin.html#retryEndOffsets(java.util.Set,java.time.Duration,long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Set"/></param>
         /// <param name="arg1"><see cref="Java.Time.Duration"/></param>
@@ -267,7 +267,7 @@ namespace Org.Apache.Kafka.Connect.Util
             return IExecuteWithSignature<Java.Util.Map<Org.Apache.Kafka.Common.TopicPartition, Java.Lang.Long>>("retryEndOffsets", "(Ljava/util/Set;Ljava/time/Duration;J)Ljava/util/Map;", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.2.1/org/apache/kafka/connect/util/TopicAdmin.html#createTopics(org.apache.kafka.clients.admin.NewTopic...)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.3.1/org/apache/kafka/connect/util/TopicAdmin.html#createTopics(org.apache.kafka.clients.admin.NewTopic...)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Admin.NewTopic"/></param>
         /// <returns><see cref="Java.Util.Set"/></returns>
@@ -276,7 +276,7 @@ namespace Org.Apache.Kafka.Connect.Util
             return IExecuteWithSignature<Java.Util.Set<Java.Lang.String>>("createTopics", "([Lorg/apache/kafka/clients/admin/NewTopic;)Ljava/util/Set;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.2.1/org/apache/kafka/connect/util/TopicAdmin.html#createTopicsWithRetry(org.apache.kafka.clients.admin.NewTopic,long,long,org.apache.kafka.common.utils.Time)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.3.1/org/apache/kafka/connect/util/TopicAdmin.html#createTopicsWithRetry(org.apache.kafka.clients.admin.NewTopic,long,long,org.apache.kafka.common.utils.Time)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Admin.NewTopic"/></param>
         /// <param name="arg1"><see cref="long"/></param>
@@ -288,7 +288,7 @@ namespace Org.Apache.Kafka.Connect.Util
             return IExecuteWithSignature<Java.Util.Set<Java.Lang.String>>("createTopicsWithRetry", "(Lorg/apache/kafka/clients/admin/NewTopic;JJLorg/apache/kafka/common/utils/Time;)Ljava/util/Set;", arg0, arg1, arg2, arg3);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.2.1/org/apache/kafka/connect/util/TopicAdmin.html#topicCleanupPolicy(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.3.1/org/apache/kafka/connect/util/TopicAdmin.html#topicCleanupPolicy(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Java.Util.Set"/></returns>
@@ -297,7 +297,7 @@ namespace Org.Apache.Kafka.Connect.Util
             return IExecuteWithSignature<Java.Util.Set<Java.Lang.String>>("topicCleanupPolicy", "(Ljava/lang/String;)Ljava/util/Set;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.2.1/org/apache/kafka/connect/util/TopicAdmin.html#describeTopicConfig(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.3.1/org/apache/kafka/connect/util/TopicAdmin.html#describeTopicConfig(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.Config"/></returns>
@@ -306,7 +306,7 @@ namespace Org.Apache.Kafka.Connect.Util
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.Config>("describeTopicConfig", "(Ljava/lang/String;)Lorg/apache/kafka/clients/admin/Config;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.2.1/org/apache/kafka/connect/util/TopicAdmin.html#createOrFindTopics(org.apache.kafka.clients.admin.NewTopic...)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.3.1/org/apache/kafka/connect/util/TopicAdmin.html#createOrFindTopics(org.apache.kafka.clients.admin.NewTopic...)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Admin.NewTopic"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Util.TopicAdmin.TopicCreationResponse"/></returns>
@@ -315,14 +315,14 @@ namespace Org.Apache.Kafka.Connect.Util
             return IExecuteWithSignature<Org.Apache.Kafka.Connect.Util.TopicAdmin.TopicCreationResponse>("createOrFindTopics", "([Lorg/apache/kafka/clients/admin/NewTopic;)Lorg/apache/kafka/connect/util/TopicAdmin$TopicCreationResponse;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.2.1/org/apache/kafka/connect/util/TopicAdmin.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.3.1/org/apache/kafka/connect/util/TopicAdmin.html#close()"/>
         /// </summary>
         public void Close()
         {
             IExecuteWithSignature("close", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.2.1/org/apache/kafka/connect/util/TopicAdmin.html#close(java.time.Duration)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.3.1/org/apache/kafka/connect/util/TopicAdmin.html#close(java.time.Duration)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Time.Duration"/></param>
         public void Close(Java.Time.Duration arg0)
@@ -354,7 +354,7 @@ namespace Org.Apache.Kafka.Connect.Util
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.2.1/org/apache/kafka/connect/util/TopicAdmin.NewTopicBuilder.html#build()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.3.1/org/apache/kafka/connect/util/TopicAdmin.NewTopicBuilder.html#build()"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.NewTopic"/></returns>
             public Org.Apache.Kafka.Clients.Admin.NewTopic Build()
@@ -362,7 +362,7 @@ namespace Org.Apache.Kafka.Connect.Util
                 return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.NewTopic>("build", "()Lorg/apache/kafka/clients/admin/NewTopic;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.2.1/org/apache/kafka/connect/util/TopicAdmin.NewTopicBuilder.html#compacted()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.3.1/org/apache/kafka/connect/util/TopicAdmin.NewTopicBuilder.html#compacted()"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Connect.Util.TopicAdmin.NewTopicBuilder"/></returns>
             public Org.Apache.Kafka.Connect.Util.TopicAdmin.NewTopicBuilder Compacted()
@@ -370,7 +370,7 @@ namespace Org.Apache.Kafka.Connect.Util
                 return IExecuteWithSignature<Org.Apache.Kafka.Connect.Util.TopicAdmin.NewTopicBuilder>("compacted", "()Lorg/apache/kafka/connect/util/TopicAdmin$NewTopicBuilder;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.2.1/org/apache/kafka/connect/util/TopicAdmin.NewTopicBuilder.html#config(java.util.Map)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.3.1/org/apache/kafka/connect/util/TopicAdmin.NewTopicBuilder.html#config(java.util.Map)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Util.Map"/></param>
             /// <returns><see cref="Org.Apache.Kafka.Connect.Util.TopicAdmin.NewTopicBuilder"/></returns>
@@ -379,7 +379,7 @@ namespace Org.Apache.Kafka.Connect.Util
                 return IExecuteWithSignature<Org.Apache.Kafka.Connect.Util.TopicAdmin.NewTopicBuilder>("config", "(Ljava/util/Map;)Lorg/apache/kafka/connect/util/TopicAdmin$NewTopicBuilder;", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.2.1/org/apache/kafka/connect/util/TopicAdmin.NewTopicBuilder.html#defaultPartitions()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.3.1/org/apache/kafka/connect/util/TopicAdmin.NewTopicBuilder.html#defaultPartitions()"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Connect.Util.TopicAdmin.NewTopicBuilder"/></returns>
             public Org.Apache.Kafka.Connect.Util.TopicAdmin.NewTopicBuilder DefaultPartitions()
@@ -387,7 +387,7 @@ namespace Org.Apache.Kafka.Connect.Util
                 return IExecuteWithSignature<Org.Apache.Kafka.Connect.Util.TopicAdmin.NewTopicBuilder>("defaultPartitions", "()Lorg/apache/kafka/connect/util/TopicAdmin$NewTopicBuilder;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.2.1/org/apache/kafka/connect/util/TopicAdmin.NewTopicBuilder.html#defaultReplicationFactor()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.3.1/org/apache/kafka/connect/util/TopicAdmin.NewTopicBuilder.html#defaultReplicationFactor()"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Connect.Util.TopicAdmin.NewTopicBuilder"/></returns>
             public Org.Apache.Kafka.Connect.Util.TopicAdmin.NewTopicBuilder DefaultReplicationFactor()
@@ -395,7 +395,7 @@ namespace Org.Apache.Kafka.Connect.Util
                 return IExecuteWithSignature<Org.Apache.Kafka.Connect.Util.TopicAdmin.NewTopicBuilder>("defaultReplicationFactor", "()Lorg/apache/kafka/connect/util/TopicAdmin$NewTopicBuilder;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.2.1/org/apache/kafka/connect/util/TopicAdmin.NewTopicBuilder.html#partitions(int)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.3.1/org/apache/kafka/connect/util/TopicAdmin.NewTopicBuilder.html#partitions(int)"/>
             /// </summary>
             /// <param name="arg0"><see cref="int"/></param>
             /// <returns><see cref="Org.Apache.Kafka.Connect.Util.TopicAdmin.NewTopicBuilder"/></returns>
@@ -404,7 +404,7 @@ namespace Org.Apache.Kafka.Connect.Util
                 return IExecuteWithSignature<Org.Apache.Kafka.Connect.Util.TopicAdmin.NewTopicBuilder>("partitions", "(I)Lorg/apache/kafka/connect/util/TopicAdmin$NewTopicBuilder;", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.2.1/org/apache/kafka/connect/util/TopicAdmin.NewTopicBuilder.html#replicationFactor(short)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.3.1/org/apache/kafka/connect/util/TopicAdmin.NewTopicBuilder.html#replicationFactor(short)"/>
             /// </summary>
             /// <param name="arg0"><see cref="short"/></param>
             /// <returns><see cref="Org.Apache.Kafka.Connect.Util.TopicAdmin.NewTopicBuilder"/></returns>
@@ -428,7 +428,7 @@ namespace Org.Apache.Kafka.Connect.Util
         {
             #region Constructors
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.2.1/org/apache/kafka/connect/util/TopicAdmin.TopicCreationResponse.html#%3Cinit%3E(java.util.Set,java.util.Set)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.3.1/org/apache/kafka/connect/util/TopicAdmin.TopicCreationResponse.html#%3Cinit%3E(java.util.Set,java.util.Set)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Util.Set"/></param>
             /// <param name="arg1"><see cref="Java.Util.Set"/></param>
@@ -460,7 +460,7 @@ namespace Org.Apache.Kafka.Connect.Util
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.2.1/org/apache/kafka/connect/util/TopicAdmin.TopicCreationResponse.html#isCreated(java.lang.String)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.3.1/org/apache/kafka/connect/util/TopicAdmin.TopicCreationResponse.html#isCreated(java.lang.String)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Lang.String"/></param>
             /// <returns><see cref="bool"/></returns>
@@ -469,7 +469,7 @@ namespace Org.Apache.Kafka.Connect.Util
                 return IExecuteWithSignature<bool>("isCreated", "(Ljava/lang/String;)Z", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.2.1/org/apache/kafka/connect/util/TopicAdmin.TopicCreationResponse.html#isCreatedOrExisting(java.lang.String)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.3.1/org/apache/kafka/connect/util/TopicAdmin.TopicCreationResponse.html#isCreatedOrExisting(java.lang.String)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Lang.String"/></param>
             /// <returns><see cref="bool"/></returns>
@@ -478,7 +478,7 @@ namespace Org.Apache.Kafka.Connect.Util
                 return IExecuteWithSignature<bool>("isCreatedOrExisting", "(Ljava/lang/String;)Z", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.2.1/org/apache/kafka/connect/util/TopicAdmin.TopicCreationResponse.html#isEmpty()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.3.1/org/apache/kafka/connect/util/TopicAdmin.TopicCreationResponse.html#isEmpty()"/>
             /// </summary>
             /// <returns><see cref="bool"/></returns>
             public bool IsEmpty()
@@ -486,7 +486,7 @@ namespace Org.Apache.Kafka.Connect.Util
                 return IExecuteWithSignature<bool>("isEmpty", "()Z");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.2.1/org/apache/kafka/connect/util/TopicAdmin.TopicCreationResponse.html#isExisting(java.lang.String)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.3.1/org/apache/kafka/connect/util/TopicAdmin.TopicCreationResponse.html#isExisting(java.lang.String)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Lang.String"/></param>
             /// <returns><see cref="bool"/></returns>
@@ -495,7 +495,7 @@ namespace Org.Apache.Kafka.Connect.Util
                 return IExecuteWithSignature<bool>("isExisting", "(Ljava/lang/String;)Z", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.2.1/org/apache/kafka/connect/util/TopicAdmin.TopicCreationResponse.html#createdOrExistingTopicsCount()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.3.1/org/apache/kafka/connect/util/TopicAdmin.TopicCreationResponse.html#createdOrExistingTopicsCount()"/>
             /// </summary>
             /// <returns><see cref="int"/></returns>
             public int CreatedOrExistingTopicsCount()
@@ -503,7 +503,7 @@ namespace Org.Apache.Kafka.Connect.Util
                 return IExecuteWithSignature<int>("createdOrExistingTopicsCount", "()I");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.2.1/org/apache/kafka/connect/util/TopicAdmin.TopicCreationResponse.html#createdTopicsCount()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.3.1/org/apache/kafka/connect/util/TopicAdmin.TopicCreationResponse.html#createdTopicsCount()"/>
             /// </summary>
             /// <returns><see cref="int"/></returns>
             public int CreatedTopicsCount()
@@ -511,7 +511,7 @@ namespace Org.Apache.Kafka.Connect.Util
                 return IExecuteWithSignature<int>("createdTopicsCount", "()I");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.2.1/org/apache/kafka/connect/util/TopicAdmin.TopicCreationResponse.html#existingTopicsCount()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.3.1/org/apache/kafka/connect/util/TopicAdmin.TopicCreationResponse.html#existingTopicsCount()"/>
             /// </summary>
             /// <returns><see cref="int"/></returns>
             public int ExistingTopicsCount()
@@ -519,7 +519,7 @@ namespace Org.Apache.Kafka.Connect.Util
                 return IExecuteWithSignature<int>("existingTopicsCount", "()I");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.2.1/org/apache/kafka/connect/util/TopicAdmin.TopicCreationResponse.html#createdTopics()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.3.1/org/apache/kafka/connect/util/TopicAdmin.TopicCreationResponse.html#createdTopics()"/>
             /// </summary>
             /// <returns><see cref="Java.Util.Set"/></returns>
             public Java.Util.Set<Java.Lang.String> CreatedTopics()

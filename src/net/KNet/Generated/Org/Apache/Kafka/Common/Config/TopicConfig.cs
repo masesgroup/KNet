@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Config
 {
     #region TopicConfig declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/config/TopicConfig.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/config/TopicConfig.html"/>
     /// </summary>
     public partial class TopicConfig : MASES.JCOBridge.C2JBridge.JVMBridgeBase<TopicConfig>
     {
@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Common.Config
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/config/TopicConfig.html#%3Cinit%3E()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/config/TopicConfig.html#%3Cinit%3E()"/>
         /// </summary>
         public TopicConfig() : base(JVMBridgeBase.InitializerInstance)
         {
@@ -86,269 +86,269 @@ namespace Org.Apache.Kafka.Common.Config
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/config/TopicConfig.html#CLEANUP_POLICY_COMPACT"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/config/TopicConfig.html#CLEANUP_POLICY_COMPACT"/>
         /// </summary>
         public static Java.Lang.String CLEANUP_POLICY_COMPACT { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "CLEANUP_POLICY_COMPACT"); } set { SSetField(LocalBridgeClazz, "CLEANUP_POLICY_COMPACT", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/config/TopicConfig.html#CLEANUP_POLICY_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/config/TopicConfig.html#CLEANUP_POLICY_CONFIG"/>
         /// </summary>
         public static Java.Lang.String CLEANUP_POLICY_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "CLEANUP_POLICY_CONFIG"); } set { SSetField(LocalBridgeClazz, "CLEANUP_POLICY_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/config/TopicConfig.html#CLEANUP_POLICY_DELETE"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/config/TopicConfig.html#CLEANUP_POLICY_DELETE"/>
         /// </summary>
         public static Java.Lang.String CLEANUP_POLICY_DELETE { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "CLEANUP_POLICY_DELETE"); } set { SSetField(LocalBridgeClazz, "CLEANUP_POLICY_DELETE", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/config/TopicConfig.html#CLEANUP_POLICY_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/config/TopicConfig.html#CLEANUP_POLICY_DOC"/>
         /// </summary>
         public static Java.Lang.String CLEANUP_POLICY_DOC { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "CLEANUP_POLICY_DOC"); } set { SSetField(LocalBridgeClazz, "CLEANUP_POLICY_DOC", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/config/TopicConfig.html#COMPRESSION_GZIP_LEVEL_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/config/TopicConfig.html#COMPRESSION_GZIP_LEVEL_CONFIG"/>
         /// </summary>
         public static Java.Lang.String COMPRESSION_GZIP_LEVEL_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "COMPRESSION_GZIP_LEVEL_CONFIG"); } set { SSetField(LocalBridgeClazz, "COMPRESSION_GZIP_LEVEL_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/config/TopicConfig.html#COMPRESSION_GZIP_LEVEL_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/config/TopicConfig.html#COMPRESSION_GZIP_LEVEL_DOC"/>
         /// </summary>
         public static Java.Lang.String COMPRESSION_GZIP_LEVEL_DOC { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "COMPRESSION_GZIP_LEVEL_DOC"); } set { SSetField(LocalBridgeClazz, "COMPRESSION_GZIP_LEVEL_DOC", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/config/TopicConfig.html#COMPRESSION_LZ4_LEVEL_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/config/TopicConfig.html#COMPRESSION_LZ4_LEVEL_CONFIG"/>
         /// </summary>
         public static Java.Lang.String COMPRESSION_LZ4_LEVEL_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "COMPRESSION_LZ4_LEVEL_CONFIG"); } set { SSetField(LocalBridgeClazz, "COMPRESSION_LZ4_LEVEL_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/config/TopicConfig.html#COMPRESSION_LZ4_LEVEL_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/config/TopicConfig.html#COMPRESSION_LZ4_LEVEL_DOC"/>
         /// </summary>
         public static Java.Lang.String COMPRESSION_LZ4_LEVEL_DOC { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "COMPRESSION_LZ4_LEVEL_DOC"); } set { SSetField(LocalBridgeClazz, "COMPRESSION_LZ4_LEVEL_DOC", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/config/TopicConfig.html#COMPRESSION_TYPE_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/config/TopicConfig.html#COMPRESSION_TYPE_CONFIG"/>
         /// </summary>
         public static Java.Lang.String COMPRESSION_TYPE_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "COMPRESSION_TYPE_CONFIG"); } set { SSetField(LocalBridgeClazz, "COMPRESSION_TYPE_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/config/TopicConfig.html#COMPRESSION_TYPE_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/config/TopicConfig.html#COMPRESSION_TYPE_DOC"/>
         /// </summary>
         public static Java.Lang.String COMPRESSION_TYPE_DOC { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "COMPRESSION_TYPE_DOC"); } set { SSetField(LocalBridgeClazz, "COMPRESSION_TYPE_DOC", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/config/TopicConfig.html#COMPRESSION_ZSTD_LEVEL_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/config/TopicConfig.html#COMPRESSION_ZSTD_LEVEL_CONFIG"/>
         /// </summary>
         public static Java.Lang.String COMPRESSION_ZSTD_LEVEL_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "COMPRESSION_ZSTD_LEVEL_CONFIG"); } set { SSetField(LocalBridgeClazz, "COMPRESSION_ZSTD_LEVEL_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/config/TopicConfig.html#COMPRESSION_ZSTD_LEVEL_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/config/TopicConfig.html#COMPRESSION_ZSTD_LEVEL_DOC"/>
         /// </summary>
         public static Java.Lang.String COMPRESSION_ZSTD_LEVEL_DOC { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "COMPRESSION_ZSTD_LEVEL_DOC"); } set { SSetField(LocalBridgeClazz, "COMPRESSION_ZSTD_LEVEL_DOC", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/config/TopicConfig.html#DELETE_RETENTION_MS_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/config/TopicConfig.html#DELETE_RETENTION_MS_CONFIG"/>
         /// </summary>
         public static Java.Lang.String DELETE_RETENTION_MS_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "DELETE_RETENTION_MS_CONFIG"); } set { SSetField(LocalBridgeClazz, "DELETE_RETENTION_MS_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/config/TopicConfig.html#DELETE_RETENTION_MS_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/config/TopicConfig.html#DELETE_RETENTION_MS_DOC"/>
         /// </summary>
         public static Java.Lang.String DELETE_RETENTION_MS_DOC { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "DELETE_RETENTION_MS_DOC"); } set { SSetField(LocalBridgeClazz, "DELETE_RETENTION_MS_DOC", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/config/TopicConfig.html#FILE_DELETE_DELAY_MS_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/config/TopicConfig.html#FILE_DELETE_DELAY_MS_CONFIG"/>
         /// </summary>
         public static Java.Lang.String FILE_DELETE_DELAY_MS_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "FILE_DELETE_DELAY_MS_CONFIG"); } set { SSetField(LocalBridgeClazz, "FILE_DELETE_DELAY_MS_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/config/TopicConfig.html#FILE_DELETE_DELAY_MS_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/config/TopicConfig.html#FILE_DELETE_DELAY_MS_DOC"/>
         /// </summary>
         public static Java.Lang.String FILE_DELETE_DELAY_MS_DOC { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "FILE_DELETE_DELAY_MS_DOC"); } set { SSetField(LocalBridgeClazz, "FILE_DELETE_DELAY_MS_DOC", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/config/TopicConfig.html#FLUSH_MESSAGES_INTERVAL_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/config/TopicConfig.html#FLUSH_MESSAGES_INTERVAL_CONFIG"/>
         /// </summary>
         public static Java.Lang.String FLUSH_MESSAGES_INTERVAL_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "FLUSH_MESSAGES_INTERVAL_CONFIG"); } set { SSetField(LocalBridgeClazz, "FLUSH_MESSAGES_INTERVAL_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/config/TopicConfig.html#FLUSH_MESSAGES_INTERVAL_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/config/TopicConfig.html#FLUSH_MESSAGES_INTERVAL_DOC"/>
         /// </summary>
         public static Java.Lang.String FLUSH_MESSAGES_INTERVAL_DOC { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "FLUSH_MESSAGES_INTERVAL_DOC"); } set { SSetField(LocalBridgeClazz, "FLUSH_MESSAGES_INTERVAL_DOC", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/config/TopicConfig.html#FLUSH_MS_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/config/TopicConfig.html#FLUSH_MS_CONFIG"/>
         /// </summary>
         public static Java.Lang.String FLUSH_MS_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "FLUSH_MS_CONFIG"); } set { SSetField(LocalBridgeClazz, "FLUSH_MS_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/config/TopicConfig.html#FLUSH_MS_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/config/TopicConfig.html#FLUSH_MS_DOC"/>
         /// </summary>
         public static Java.Lang.String FLUSH_MS_DOC { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "FLUSH_MS_DOC"); } set { SSetField(LocalBridgeClazz, "FLUSH_MS_DOC", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/config/TopicConfig.html#INDEX_INTERVAL_BYTES_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/config/TopicConfig.html#INDEX_INTERVAL_BYTES_CONFIG"/>
         /// </summary>
         public static Java.Lang.String INDEX_INTERVAL_BYTES_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "INDEX_INTERVAL_BYTES_CONFIG"); } set { SSetField(LocalBridgeClazz, "INDEX_INTERVAL_BYTES_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/config/TopicConfig.html#INDEX_INTERVAL_BYTES_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/config/TopicConfig.html#INDEX_INTERVAL_BYTES_DOC"/>
         /// </summary>
         public static Java.Lang.String INDEX_INTERVAL_BYTES_DOC { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "INDEX_INTERVAL_BYTES_DOC"); } set { SSetField(LocalBridgeClazz, "INDEX_INTERVAL_BYTES_DOC", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/config/TopicConfig.html#LOCAL_LOG_RETENTION_BYTES_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/config/TopicConfig.html#LOCAL_LOG_RETENTION_BYTES_CONFIG"/>
         /// </summary>
         public static Java.Lang.String LOCAL_LOG_RETENTION_BYTES_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "LOCAL_LOG_RETENTION_BYTES_CONFIG"); } set { SSetField(LocalBridgeClazz, "LOCAL_LOG_RETENTION_BYTES_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/config/TopicConfig.html#LOCAL_LOG_RETENTION_BYTES_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/config/TopicConfig.html#LOCAL_LOG_RETENTION_BYTES_DOC"/>
         /// </summary>
         public static Java.Lang.String LOCAL_LOG_RETENTION_BYTES_DOC { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "LOCAL_LOG_RETENTION_BYTES_DOC"); } set { SSetField(LocalBridgeClazz, "LOCAL_LOG_RETENTION_BYTES_DOC", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/config/TopicConfig.html#LOCAL_LOG_RETENTION_MS_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/config/TopicConfig.html#LOCAL_LOG_RETENTION_MS_CONFIG"/>
         /// </summary>
         public static Java.Lang.String LOCAL_LOG_RETENTION_MS_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "LOCAL_LOG_RETENTION_MS_CONFIG"); } set { SSetField(LocalBridgeClazz, "LOCAL_LOG_RETENTION_MS_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/config/TopicConfig.html#LOCAL_LOG_RETENTION_MS_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/config/TopicConfig.html#LOCAL_LOG_RETENTION_MS_DOC"/>
         /// </summary>
         public static Java.Lang.String LOCAL_LOG_RETENTION_MS_DOC { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "LOCAL_LOG_RETENTION_MS_DOC"); } set { SSetField(LocalBridgeClazz, "LOCAL_LOG_RETENTION_MS_DOC", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/config/TopicConfig.html#MAX_COMPACTION_LAG_MS_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/config/TopicConfig.html#MAX_COMPACTION_LAG_MS_CONFIG"/>
         /// </summary>
         public static Java.Lang.String MAX_COMPACTION_LAG_MS_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "MAX_COMPACTION_LAG_MS_CONFIG"); } set { SSetField(LocalBridgeClazz, "MAX_COMPACTION_LAG_MS_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/config/TopicConfig.html#MAX_COMPACTION_LAG_MS_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/config/TopicConfig.html#MAX_COMPACTION_LAG_MS_DOC"/>
         /// </summary>
         public static Java.Lang.String MAX_COMPACTION_LAG_MS_DOC { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "MAX_COMPACTION_LAG_MS_DOC"); } set { SSetField(LocalBridgeClazz, "MAX_COMPACTION_LAG_MS_DOC", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/config/TopicConfig.html#MAX_MESSAGE_BYTES_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/config/TopicConfig.html#MAX_MESSAGE_BYTES_CONFIG"/>
         /// </summary>
         public static Java.Lang.String MAX_MESSAGE_BYTES_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "MAX_MESSAGE_BYTES_CONFIG"); } set { SSetField(LocalBridgeClazz, "MAX_MESSAGE_BYTES_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/config/TopicConfig.html#MAX_MESSAGE_BYTES_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/config/TopicConfig.html#MAX_MESSAGE_BYTES_DOC"/>
         /// </summary>
         public static Java.Lang.String MAX_MESSAGE_BYTES_DOC { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "MAX_MESSAGE_BYTES_DOC"); } set { SSetField(LocalBridgeClazz, "MAX_MESSAGE_BYTES_DOC", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/config/TopicConfig.html#MESSAGE_DOWNCONVERSION_ENABLE_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/config/TopicConfig.html#MESSAGE_DOWNCONVERSION_ENABLE_CONFIG"/>
         /// </summary>
         [global::System.Obsolete("Deprecated in JVM")]
         public static Java.Lang.String MESSAGE_DOWNCONVERSION_ENABLE_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "MESSAGE_DOWNCONVERSION_ENABLE_CONFIG"); } set { SSetField(LocalBridgeClazz, "MESSAGE_DOWNCONVERSION_ENABLE_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/config/TopicConfig.html#MESSAGE_DOWNCONVERSION_ENABLE_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/config/TopicConfig.html#MESSAGE_DOWNCONVERSION_ENABLE_DOC"/>
         /// </summary>
         [global::System.Obsolete("Deprecated in JVM")]
         public static Java.Lang.String MESSAGE_DOWNCONVERSION_ENABLE_DOC { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "MESSAGE_DOWNCONVERSION_ENABLE_DOC"); } set { SSetField(LocalBridgeClazz, "MESSAGE_DOWNCONVERSION_ENABLE_DOC", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/config/TopicConfig.html#MESSAGE_TIMESTAMP_AFTER_MAX_MS_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/config/TopicConfig.html#MESSAGE_TIMESTAMP_AFTER_MAX_MS_CONFIG"/>
         /// </summary>
         public static Java.Lang.String MESSAGE_TIMESTAMP_AFTER_MAX_MS_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "MESSAGE_TIMESTAMP_AFTER_MAX_MS_CONFIG"); } set { SSetField(LocalBridgeClazz, "MESSAGE_TIMESTAMP_AFTER_MAX_MS_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/config/TopicConfig.html#MESSAGE_TIMESTAMP_AFTER_MAX_MS_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/config/TopicConfig.html#MESSAGE_TIMESTAMP_AFTER_MAX_MS_DOC"/>
         /// </summary>
         public static Java.Lang.String MESSAGE_TIMESTAMP_AFTER_MAX_MS_DOC { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "MESSAGE_TIMESTAMP_AFTER_MAX_MS_DOC"); } set { SSetField(LocalBridgeClazz, "MESSAGE_TIMESTAMP_AFTER_MAX_MS_DOC", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/config/TopicConfig.html#MESSAGE_TIMESTAMP_BEFORE_MAX_MS_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/config/TopicConfig.html#MESSAGE_TIMESTAMP_BEFORE_MAX_MS_CONFIG"/>
         /// </summary>
         public static Java.Lang.String MESSAGE_TIMESTAMP_BEFORE_MAX_MS_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "MESSAGE_TIMESTAMP_BEFORE_MAX_MS_CONFIG"); } set { SSetField(LocalBridgeClazz, "MESSAGE_TIMESTAMP_BEFORE_MAX_MS_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/config/TopicConfig.html#MESSAGE_TIMESTAMP_BEFORE_MAX_MS_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/config/TopicConfig.html#MESSAGE_TIMESTAMP_BEFORE_MAX_MS_DOC"/>
         /// </summary>
         public static Java.Lang.String MESSAGE_TIMESTAMP_BEFORE_MAX_MS_DOC { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "MESSAGE_TIMESTAMP_BEFORE_MAX_MS_DOC"); } set { SSetField(LocalBridgeClazz, "MESSAGE_TIMESTAMP_BEFORE_MAX_MS_DOC", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/config/TopicConfig.html#MESSAGE_TIMESTAMP_TYPE_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/config/TopicConfig.html#MESSAGE_TIMESTAMP_TYPE_CONFIG"/>
         /// </summary>
         public static Java.Lang.String MESSAGE_TIMESTAMP_TYPE_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "MESSAGE_TIMESTAMP_TYPE_CONFIG"); } set { SSetField(LocalBridgeClazz, "MESSAGE_TIMESTAMP_TYPE_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/config/TopicConfig.html#MESSAGE_TIMESTAMP_TYPE_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/config/TopicConfig.html#MESSAGE_TIMESTAMP_TYPE_DOC"/>
         /// </summary>
         public static Java.Lang.String MESSAGE_TIMESTAMP_TYPE_DOC { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "MESSAGE_TIMESTAMP_TYPE_DOC"); } set { SSetField(LocalBridgeClazz, "MESSAGE_TIMESTAMP_TYPE_DOC", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/config/TopicConfig.html#MIN_CLEANABLE_DIRTY_RATIO_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/config/TopicConfig.html#MIN_CLEANABLE_DIRTY_RATIO_CONFIG"/>
         /// </summary>
         public static Java.Lang.String MIN_CLEANABLE_DIRTY_RATIO_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "MIN_CLEANABLE_DIRTY_RATIO_CONFIG"); } set { SSetField(LocalBridgeClazz, "MIN_CLEANABLE_DIRTY_RATIO_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/config/TopicConfig.html#MIN_CLEANABLE_DIRTY_RATIO_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/config/TopicConfig.html#MIN_CLEANABLE_DIRTY_RATIO_DOC"/>
         /// </summary>
         public static Java.Lang.String MIN_CLEANABLE_DIRTY_RATIO_DOC { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "MIN_CLEANABLE_DIRTY_RATIO_DOC"); } set { SSetField(LocalBridgeClazz, "MIN_CLEANABLE_DIRTY_RATIO_DOC", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/config/TopicConfig.html#MIN_COMPACTION_LAG_MS_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/config/TopicConfig.html#MIN_COMPACTION_LAG_MS_CONFIG"/>
         /// </summary>
         public static Java.Lang.String MIN_COMPACTION_LAG_MS_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "MIN_COMPACTION_LAG_MS_CONFIG"); } set { SSetField(LocalBridgeClazz, "MIN_COMPACTION_LAG_MS_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/config/TopicConfig.html#MIN_COMPACTION_LAG_MS_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/config/TopicConfig.html#MIN_COMPACTION_LAG_MS_DOC"/>
         /// </summary>
         public static Java.Lang.String MIN_COMPACTION_LAG_MS_DOC { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "MIN_COMPACTION_LAG_MS_DOC"); } set { SSetField(LocalBridgeClazz, "MIN_COMPACTION_LAG_MS_DOC", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/config/TopicConfig.html#MIN_IN_SYNC_REPLICAS_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/config/TopicConfig.html#MIN_IN_SYNC_REPLICAS_CONFIG"/>
         /// </summary>
         public static Java.Lang.String MIN_IN_SYNC_REPLICAS_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "MIN_IN_SYNC_REPLICAS_CONFIG"); } set { SSetField(LocalBridgeClazz, "MIN_IN_SYNC_REPLICAS_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/config/TopicConfig.html#MIN_IN_SYNC_REPLICAS_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/config/TopicConfig.html#MIN_IN_SYNC_REPLICAS_DOC"/>
         /// </summary>
         public static Java.Lang.String MIN_IN_SYNC_REPLICAS_DOC { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "MIN_IN_SYNC_REPLICAS_DOC"); } set { SSetField(LocalBridgeClazz, "MIN_IN_SYNC_REPLICAS_DOC", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/config/TopicConfig.html#PREALLOCATE_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/config/TopicConfig.html#PREALLOCATE_CONFIG"/>
         /// </summary>
         public static Java.Lang.String PREALLOCATE_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "PREALLOCATE_CONFIG"); } set { SSetField(LocalBridgeClazz, "PREALLOCATE_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/config/TopicConfig.html#PREALLOCATE_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/config/TopicConfig.html#PREALLOCATE_DOC"/>
         /// </summary>
         public static Java.Lang.String PREALLOCATE_DOC { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "PREALLOCATE_DOC"); } set { SSetField(LocalBridgeClazz, "PREALLOCATE_DOC", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/config/TopicConfig.html#REMOTE_LOG_COPY_DISABLE_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/config/TopicConfig.html#REMOTE_LOG_COPY_DISABLE_CONFIG"/>
         /// </summary>
         public static Java.Lang.String REMOTE_LOG_COPY_DISABLE_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "REMOTE_LOG_COPY_DISABLE_CONFIG"); } set { SSetField(LocalBridgeClazz, "REMOTE_LOG_COPY_DISABLE_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/config/TopicConfig.html#REMOTE_LOG_COPY_DISABLE_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/config/TopicConfig.html#REMOTE_LOG_COPY_DISABLE_DOC"/>
         /// </summary>
         public static Java.Lang.String REMOTE_LOG_COPY_DISABLE_DOC { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "REMOTE_LOG_COPY_DISABLE_DOC"); } set { SSetField(LocalBridgeClazz, "REMOTE_LOG_COPY_DISABLE_DOC", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/config/TopicConfig.html#REMOTE_LOG_DELETE_ON_DISABLE_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/config/TopicConfig.html#REMOTE_LOG_DELETE_ON_DISABLE_CONFIG"/>
         /// </summary>
         public static Java.Lang.String REMOTE_LOG_DELETE_ON_DISABLE_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "REMOTE_LOG_DELETE_ON_DISABLE_CONFIG"); } set { SSetField(LocalBridgeClazz, "REMOTE_LOG_DELETE_ON_DISABLE_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/config/TopicConfig.html#REMOTE_LOG_DELETE_ON_DISABLE_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/config/TopicConfig.html#REMOTE_LOG_DELETE_ON_DISABLE_DOC"/>
         /// </summary>
         public static Java.Lang.String REMOTE_LOG_DELETE_ON_DISABLE_DOC { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "REMOTE_LOG_DELETE_ON_DISABLE_DOC"); } set { SSetField(LocalBridgeClazz, "REMOTE_LOG_DELETE_ON_DISABLE_DOC", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/config/TopicConfig.html#REMOTE_LOG_STORAGE_ENABLE_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/config/TopicConfig.html#REMOTE_LOG_STORAGE_ENABLE_CONFIG"/>
         /// </summary>
         public static Java.Lang.String REMOTE_LOG_STORAGE_ENABLE_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "REMOTE_LOG_STORAGE_ENABLE_CONFIG"); } set { SSetField(LocalBridgeClazz, "REMOTE_LOG_STORAGE_ENABLE_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/config/TopicConfig.html#REMOTE_LOG_STORAGE_ENABLE_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/config/TopicConfig.html#REMOTE_LOG_STORAGE_ENABLE_DOC"/>
         /// </summary>
         public static Java.Lang.String REMOTE_LOG_STORAGE_ENABLE_DOC { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "REMOTE_LOG_STORAGE_ENABLE_DOC"); } set { SSetField(LocalBridgeClazz, "REMOTE_LOG_STORAGE_ENABLE_DOC", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/config/TopicConfig.html#RETENTION_BYTES_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/config/TopicConfig.html#RETENTION_BYTES_CONFIG"/>
         /// </summary>
         public static Java.Lang.String RETENTION_BYTES_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "RETENTION_BYTES_CONFIG"); } set { SSetField(LocalBridgeClazz, "RETENTION_BYTES_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/config/TopicConfig.html#RETENTION_BYTES_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/config/TopicConfig.html#RETENTION_BYTES_DOC"/>
         /// </summary>
         public static Java.Lang.String RETENTION_BYTES_DOC { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "RETENTION_BYTES_DOC"); } set { SSetField(LocalBridgeClazz, "RETENTION_BYTES_DOC", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/config/TopicConfig.html#RETENTION_MS_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/config/TopicConfig.html#RETENTION_MS_CONFIG"/>
         /// </summary>
         public static Java.Lang.String RETENTION_MS_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "RETENTION_MS_CONFIG"); } set { SSetField(LocalBridgeClazz, "RETENTION_MS_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/config/TopicConfig.html#RETENTION_MS_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/config/TopicConfig.html#RETENTION_MS_DOC"/>
         /// </summary>
         public static Java.Lang.String RETENTION_MS_DOC { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "RETENTION_MS_DOC"); } set { SSetField(LocalBridgeClazz, "RETENTION_MS_DOC", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/config/TopicConfig.html#SEGMENT_BYTES_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/config/TopicConfig.html#SEGMENT_BYTES_CONFIG"/>
         /// </summary>
         public static Java.Lang.String SEGMENT_BYTES_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "SEGMENT_BYTES_CONFIG"); } set { SSetField(LocalBridgeClazz, "SEGMENT_BYTES_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/config/TopicConfig.html#SEGMENT_BYTES_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/config/TopicConfig.html#SEGMENT_BYTES_DOC"/>
         /// </summary>
         public static Java.Lang.String SEGMENT_BYTES_DOC { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "SEGMENT_BYTES_DOC"); } set { SSetField(LocalBridgeClazz, "SEGMENT_BYTES_DOC", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/config/TopicConfig.html#SEGMENT_INDEX_BYTES_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/config/TopicConfig.html#SEGMENT_INDEX_BYTES_CONFIG"/>
         /// </summary>
         public static Java.Lang.String SEGMENT_INDEX_BYTES_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "SEGMENT_INDEX_BYTES_CONFIG"); } set { SSetField(LocalBridgeClazz, "SEGMENT_INDEX_BYTES_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/config/TopicConfig.html#SEGMENT_INDEX_BYTES_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/config/TopicConfig.html#SEGMENT_INDEX_BYTES_DOC"/>
         /// </summary>
         public static Java.Lang.String SEGMENT_INDEX_BYTES_DOC { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "SEGMENT_INDEX_BYTES_DOC"); } set { SSetField(LocalBridgeClazz, "SEGMENT_INDEX_BYTES_DOC", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/config/TopicConfig.html#SEGMENT_JITTER_MS_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/config/TopicConfig.html#SEGMENT_JITTER_MS_CONFIG"/>
         /// </summary>
         public static Java.Lang.String SEGMENT_JITTER_MS_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "SEGMENT_JITTER_MS_CONFIG"); } set { SSetField(LocalBridgeClazz, "SEGMENT_JITTER_MS_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/config/TopicConfig.html#SEGMENT_JITTER_MS_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/config/TopicConfig.html#SEGMENT_JITTER_MS_DOC"/>
         /// </summary>
         public static Java.Lang.String SEGMENT_JITTER_MS_DOC { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "SEGMENT_JITTER_MS_DOC"); } set { SSetField(LocalBridgeClazz, "SEGMENT_JITTER_MS_DOC", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/config/TopicConfig.html#SEGMENT_MS_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/config/TopicConfig.html#SEGMENT_MS_CONFIG"/>
         /// </summary>
         public static Java.Lang.String SEGMENT_MS_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "SEGMENT_MS_CONFIG"); } set { SSetField(LocalBridgeClazz, "SEGMENT_MS_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/config/TopicConfig.html#SEGMENT_MS_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/config/TopicConfig.html#SEGMENT_MS_DOC"/>
         /// </summary>
         public static Java.Lang.String SEGMENT_MS_DOC { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "SEGMENT_MS_DOC"); } set { SSetField(LocalBridgeClazz, "SEGMENT_MS_DOC", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/config/TopicConfig.html#UNCLEAN_LEADER_ELECTION_ENABLE_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/config/TopicConfig.html#UNCLEAN_LEADER_ELECTION_ENABLE_CONFIG"/>
         /// </summary>
         public static Java.Lang.String UNCLEAN_LEADER_ELECTION_ENABLE_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "UNCLEAN_LEADER_ELECTION_ENABLE_CONFIG"); } set { SSetField(LocalBridgeClazz, "UNCLEAN_LEADER_ELECTION_ENABLE_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/config/TopicConfig.html#UNCLEAN_LEADER_ELECTION_ENABLE_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/config/TopicConfig.html#UNCLEAN_LEADER_ELECTION_ENABLE_DOC"/>
         /// </summary>
         public static Java.Lang.String UNCLEAN_LEADER_ELECTION_ENABLE_DOC { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "UNCLEAN_LEADER_ELECTION_ENABLE_DOC"); } set { SSetField(LocalBridgeClazz, "UNCLEAN_LEADER_ELECTION_ENABLE_DOC", value); } }
 

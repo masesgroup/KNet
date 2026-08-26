@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.State
 {
     #region SessionStoreWithHeaders declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/state/SessionStoreWithHeaders.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/state/SessionStoreWithHeaders.html"/>
     /// </summary>
     public partial class SessionStoreWithHeaders : MASES.JCOBridge.C2JBridge.JVMBridgeBase<SessionStoreWithHeaders>
     {
@@ -61,7 +61,7 @@ namespace Org.Apache.Kafka.Streams.State
 
     #region SessionStoreWithHeaders<K, AGG> declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/state/SessionStoreWithHeaders.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/state/SessionStoreWithHeaders.html"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="AGG"></typeparam>
@@ -136,7 +136,7 @@ namespace Org.Apache.Kafka.Streams.State
 
     #region ISessionStoreWithHeaders<K, AGG>
     /// <summary>
-    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/state/SessionStoreWithHeaders.html"/>
+    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/state/SessionStoreWithHeaders.html"/>
     /// </summary>
     public partial interface ISessionStoreWithHeaders<K, AGG>
     {

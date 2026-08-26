@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Security.Ssl
 {
     #region CommonNameLoggingSslEngineFactory declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/security/ssl/CommonNameLoggingSslEngineFactory.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/security/ssl/CommonNameLoggingSslEngineFactory.html"/>
     /// </summary>
     public partial class CommonNameLoggingSslEngineFactory : Org.Apache.Kafka.Common.Security.Ssl.DefaultSslEngineFactory
     {
@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Common.Security.Ssl
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/security/ssl/CommonNameLoggingSslEngineFactory.html#%3Cinit%3E()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/security/ssl/CommonNameLoggingSslEngineFactory.html#%3Cinit%3E()"/>
         /// </summary>
         public CommonNameLoggingSslEngineFactory() : base(JVMBridgeBase.InitializerInstance)
         {

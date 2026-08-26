@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Record
 {
     #region TimestampType declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/record/TimestampType.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/record/TimestampType.html"/>
     /// </summary>
     public partial class TimestampType : Java.Lang.Enum<Org.Apache.Kafka.Common.Record.TimestampType>
     {
@@ -72,23 +72,23 @@ namespace Org.Apache.Kafka.Common.Record
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/record/TimestampType.html#id"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/record/TimestampType.html#id"/>
         /// </summary>
         public int id { get { return IGetField<int>("id"); } set { ISetField("id", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/record/TimestampType.html#name"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/record/TimestampType.html#name"/>
         /// </summary>
         public Java.Lang.String name { get { return IGetField<Java.Lang.String>("name"); } set { ISetField("name", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/record/TimestampType.html#CREATE_TIME"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/record/TimestampType.html#CREATE_TIME"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Record.TimestampType CREATE_TIME { get { return SGetField<Org.Apache.Kafka.Common.Record.TimestampType>(LocalBridgeClazz, "CREATE_TIME"); } set { SSetField(LocalBridgeClazz, "CREATE_TIME", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/record/TimestampType.html#LOG_APPEND_TIME"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/record/TimestampType.html#LOG_APPEND_TIME"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Record.TimestampType LOG_APPEND_TIME { get { return SGetField<Org.Apache.Kafka.Common.Record.TimestampType>(LocalBridgeClazz, "LOG_APPEND_TIME"); } set { SSetField(LocalBridgeClazz, "LOG_APPEND_TIME", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/record/TimestampType.html#NO_TIMESTAMP_TYPE"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/record/TimestampType.html#NO_TIMESTAMP_TYPE"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Record.TimestampType NO_TIMESTAMP_TYPE { get { return SGetField<Org.Apache.Kafka.Common.Record.TimestampType>(LocalBridgeClazz, "NO_TIMESTAMP_TYPE"); } set { SSetField(LocalBridgeClazz, "NO_TIMESTAMP_TYPE", value); } }
 
@@ -96,7 +96,7 @@ namespace Org.Apache.Kafka.Common.Record
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/record/TimestampType.html#forName(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/record/TimestampType.html#forName(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Record.TimestampType"/></returns>
@@ -105,7 +105,7 @@ namespace Org.Apache.Kafka.Common.Record
             return SExecuteWithSignature<Org.Apache.Kafka.Common.Record.TimestampType>(LocalBridgeClazz, "forName", "(Ljava/lang/String;)Lorg/apache/kafka/common/record/TimestampType;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/record/TimestampType.html#valueOf(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/record/TimestampType.html#valueOf(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Record.TimestampType"/></returns>
@@ -114,7 +114,7 @@ namespace Org.Apache.Kafka.Common.Record
             return SExecuteWithSignature<Org.Apache.Kafka.Common.Record.TimestampType>(LocalBridgeClazz, "valueOf", "(Ljava/lang/String;)Lorg/apache/kafka/common/record/TimestampType;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/record/TimestampType.html#values()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/record/TimestampType.html#values()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Record.TimestampType"/></returns>
         public static Org.Apache.Kafka.Common.Record.TimestampType[] Values()

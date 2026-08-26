@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Connect.Connector
 {
     #region ConnectRecord declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.2.1/org/apache/kafka/connect/connector/ConnectRecord.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.3.1/org/apache/kafka/connect/connector/ConnectRecord.html"/>
     /// </summary>
     public partial class ConnectRecord : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ConnectRecord>
     {
@@ -61,7 +61,7 @@ namespace Org.Apache.Kafka.Connect.Connector
 
     #region ConnectRecord<R> declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.2.1/org/apache/kafka/connect/connector/ConnectRecord.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.3.1/org/apache/kafka/connect/connector/ConnectRecord.html"/>
     /// </summary>
     /// <typeparam name="R"><see cref="Org.Apache.Kafka.Connect.Connector.ConnectRecord{R}"/></typeparam>
     public partial class ConnectRecord<R> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ConnectRecord<R>> where R : Org.Apache.Kafka.Connect.Connector.ConnectRecord<R>
@@ -99,7 +99,7 @@ namespace Org.Apache.Kafka.Connect.Connector
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.2.1/org/apache/kafka/connect/connector/ConnectRecord.html#%3Cinit%3E(java.lang.String,java.lang.Integer,org.apache.kafka.connect.data.Schema,java.lang.Object,org.apache.kafka.connect.data.Schema,java.lang.Object,java.lang.Long,java.lang.Iterable)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.3.1/org/apache/kafka/connect/connector/ConnectRecord.html#%3Cinit%3E(java.lang.String,java.lang.Integer,org.apache.kafka.connect.data.Schema,java.lang.Object,org.apache.kafka.connect.data.Schema,java.lang.Object,java.lang.Long,java.lang.Iterable)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Lang.Integer"/></param>
@@ -121,7 +121,7 @@ namespace Org.Apache.Kafka.Connect.Connector
             return JVMBridgeBase.New<ConnectRecord>(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.2.1/org/apache/kafka/connect/connector/ConnectRecord.html#%3Cinit%3E(java.lang.String,java.lang.Integer,org.apache.kafka.connect.data.Schema,java.lang.Object,org.apache.kafka.connect.data.Schema,java.lang.Object,java.lang.Long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.3.1/org/apache/kafka/connect/connector/ConnectRecord.html#%3Cinit%3E(java.lang.String,java.lang.Integer,org.apache.kafka.connect.data.Schema,java.lang.Object,org.apache.kafka.connect.data.Schema,java.lang.Object,java.lang.Long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Lang.Integer"/></param>
@@ -158,7 +158,7 @@ namespace Org.Apache.Kafka.Connect.Connector
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.2.1/org/apache/kafka/connect/connector/ConnectRecord.html#newRecord(java.lang.String,java.lang.Integer,org.apache.kafka.connect.data.Schema,java.lang.Object,org.apache.kafka.connect.data.Schema,java.lang.Object,java.lang.Long,java.lang.Iterable)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.3.1/org/apache/kafka/connect/connector/ConnectRecord.html#newRecord(java.lang.String,java.lang.Integer,org.apache.kafka.connect.data.Schema,java.lang.Object,org.apache.kafka.connect.data.Schema,java.lang.Object,java.lang.Long,java.lang.Iterable)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Lang.Integer"/></param>
@@ -174,7 +174,7 @@ namespace Org.Apache.Kafka.Connect.Connector
             return IExecuteWithSignature<Org.Apache.Kafka.Connect.Connector.ConnectRecord>("newRecord", "(Ljava/lang/String;Ljava/lang/Integer;Lorg/apache/kafka/connect/data/Schema;Ljava/lang/Object;Lorg/apache/kafka/connect/data/Schema;Ljava/lang/Object;Ljava/lang/Long;Ljava/lang/Iterable;)Lorg/apache/kafka/connect/connector/ConnectRecord;", arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.2.1/org/apache/kafka/connect/connector/ConnectRecord.html#newRecord(java.lang.String,java.lang.Integer,org.apache.kafka.connect.data.Schema,java.lang.Object,org.apache.kafka.connect.data.Schema,java.lang.Object,java.lang.Long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.3.1/org/apache/kafka/connect/connector/ConnectRecord.html#newRecord(java.lang.String,java.lang.Integer,org.apache.kafka.connect.data.Schema,java.lang.Object,org.apache.kafka.connect.data.Schema,java.lang.Object,java.lang.Long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Lang.Integer"/></param>
@@ -189,7 +189,7 @@ namespace Org.Apache.Kafka.Connect.Connector
             return IExecuteWithSignature<Org.Apache.Kafka.Connect.Connector.ConnectRecord>("newRecord", "(Ljava/lang/String;Ljava/lang/Integer;Lorg/apache/kafka/connect/data/Schema;Ljava/lang/Object;Lorg/apache/kafka/connect/data/Schema;Ljava/lang/Object;Ljava/lang/Long;)Lorg/apache/kafka/connect/connector/ConnectRecord;", arg0, arg1, arg2, arg3, arg4, arg5, arg6);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.2.1/org/apache/kafka/connect/connector/ConnectRecord.html#kafkaPartition()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.3.1/org/apache/kafka/connect/connector/ConnectRecord.html#kafkaPartition()"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.Integer"/></returns>
         public Java.Lang.Integer KafkaPartition()
@@ -197,7 +197,7 @@ namespace Org.Apache.Kafka.Connect.Connector
             return IExecuteWithSignature<Java.Lang.Integer>("kafkaPartition", "()Ljava/lang/Integer;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.2.1/org/apache/kafka/connect/connector/ConnectRecord.html#timestamp()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.3.1/org/apache/kafka/connect/connector/ConnectRecord.html#timestamp()"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.Long"/></returns>
         public Java.Lang.Long Timestamp()
@@ -205,7 +205,7 @@ namespace Org.Apache.Kafka.Connect.Connector
             return IExecuteWithSignature<Java.Lang.Long>("timestamp", "()Ljava/lang/Long;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.2.1/org/apache/kafka/connect/connector/ConnectRecord.html#key()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.3.1/org/apache/kafka/connect/connector/ConnectRecord.html#key()"/>
         /// </summary>
         /// <returns><see cref="object"/></returns>
         public object Key()
@@ -213,7 +213,7 @@ namespace Org.Apache.Kafka.Connect.Connector
             return IExecuteWithSignature("key", "()Ljava/lang/Object;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.2.1/org/apache/kafka/connect/connector/ConnectRecord.html#value()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.3.1/org/apache/kafka/connect/connector/ConnectRecord.html#value()"/>
         /// </summary>
         /// <returns><see cref="object"/></returns>
         public object Value()
@@ -221,7 +221,7 @@ namespace Org.Apache.Kafka.Connect.Connector
             return IExecuteWithSignature("value", "()Ljava/lang/Object;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.2.1/org/apache/kafka/connect/connector/ConnectRecord.html#topic()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.3.1/org/apache/kafka/connect/connector/ConnectRecord.html#topic()"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String Topic()
@@ -229,7 +229,7 @@ namespace Org.Apache.Kafka.Connect.Connector
             return IExecuteWithSignature<Java.Lang.String>("topic", "()Ljava/lang/String;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.2.1/org/apache/kafka/connect/connector/ConnectRecord.html#keySchema()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.3.1/org/apache/kafka/connect/connector/ConnectRecord.html#keySchema()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></returns>
         public Org.Apache.Kafka.Connect.Data.Schema KeySchema()
@@ -237,7 +237,7 @@ namespace Org.Apache.Kafka.Connect.Connector
             return IExecuteWithSignature<Org.Apache.Kafka.Connect.Data.Schema>("keySchema", "()Lorg/apache/kafka/connect/data/Schema;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.2.1/org/apache/kafka/connect/connector/ConnectRecord.html#valueSchema()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.3.1/org/apache/kafka/connect/connector/ConnectRecord.html#valueSchema()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></returns>
         public Org.Apache.Kafka.Connect.Data.Schema ValueSchema()
@@ -245,7 +245,7 @@ namespace Org.Apache.Kafka.Connect.Connector
             return IExecuteWithSignature<Org.Apache.Kafka.Connect.Data.Schema>("valueSchema", "()Lorg/apache/kafka/connect/data/Schema;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.2.1/org/apache/kafka/connect/connector/ConnectRecord.html#headers()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.3.1/org/apache/kafka/connect/connector/ConnectRecord.html#headers()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Header.Headers"/></returns>
         public Org.Apache.Kafka.Connect.Header.Headers Headers()
@@ -268,7 +268,7 @@ namespace Org.Apache.Kafka.Connect.Connector
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.2.1/org/apache/kafka/connect/connector/ConnectRecord.html#%3Cinit%3E(java.lang.String,java.lang.Integer,org.apache.kafka.connect.data.Schema,java.lang.Object,org.apache.kafka.connect.data.Schema,java.lang.Object,java.lang.Long,java.lang.Iterable)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.3.1/org/apache/kafka/connect/connector/ConnectRecord.html#%3Cinit%3E(java.lang.String,java.lang.Integer,org.apache.kafka.connect.data.Schema,java.lang.Object,org.apache.kafka.connect.data.Schema,java.lang.Object,java.lang.Long,java.lang.Iterable)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Lang.Integer"/></param>
@@ -290,7 +290,7 @@ namespace Org.Apache.Kafka.Connect.Connector
             return JVMBridgeBase.New<ConnectRecord<R>>(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.2.1/org/apache/kafka/connect/connector/ConnectRecord.html#%3Cinit%3E(java.lang.String,java.lang.Integer,org.apache.kafka.connect.data.Schema,java.lang.Object,org.apache.kafka.connect.data.Schema,java.lang.Object,java.lang.Long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.3.1/org/apache/kafka/connect/connector/ConnectRecord.html#%3Cinit%3E(java.lang.String,java.lang.Integer,org.apache.kafka.connect.data.Schema,java.lang.Object,org.apache.kafka.connect.data.Schema,java.lang.Object,java.lang.Long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Lang.Integer"/></param>
@@ -331,7 +331,7 @@ namespace Org.Apache.Kafka.Connect.Connector
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.2.1/org/apache/kafka/connect/connector/ConnectRecord.html#newRecord(java.lang.String,java.lang.Integer,org.apache.kafka.connect.data.Schema,java.lang.Object,org.apache.kafka.connect.data.Schema,java.lang.Object,java.lang.Long,java.lang.Iterable)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.3.1/org/apache/kafka/connect/connector/ConnectRecord.html#newRecord(java.lang.String,java.lang.Integer,org.apache.kafka.connect.data.Schema,java.lang.Object,org.apache.kafka.connect.data.Schema,java.lang.Object,java.lang.Long,java.lang.Iterable)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Lang.Integer"/></param>
@@ -347,7 +347,7 @@ namespace Org.Apache.Kafka.Connect.Connector
             return IExecuteWithSignature<R>("newRecord", "(Ljava/lang/String;Ljava/lang/Integer;Lorg/apache/kafka/connect/data/Schema;Ljava/lang/Object;Lorg/apache/kafka/connect/data/Schema;Ljava/lang/Object;Ljava/lang/Long;Ljava/lang/Iterable;)Lorg/apache/kafka/connect/connector/ConnectRecord;", arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.2.1/org/apache/kafka/connect/connector/ConnectRecord.html#newRecord(java.lang.String,java.lang.Integer,org.apache.kafka.connect.data.Schema,java.lang.Object,org.apache.kafka.connect.data.Schema,java.lang.Object,java.lang.Long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.3.1/org/apache/kafka/connect/connector/ConnectRecord.html#newRecord(java.lang.String,java.lang.Integer,org.apache.kafka.connect.data.Schema,java.lang.Object,org.apache.kafka.connect.data.Schema,java.lang.Object,java.lang.Long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Lang.Integer"/></param>
@@ -362,7 +362,7 @@ namespace Org.Apache.Kafka.Connect.Connector
             return IExecuteWithSignature<R>("newRecord", "(Ljava/lang/String;Ljava/lang/Integer;Lorg/apache/kafka/connect/data/Schema;Ljava/lang/Object;Lorg/apache/kafka/connect/data/Schema;Ljava/lang/Object;Ljava/lang/Long;)Lorg/apache/kafka/connect/connector/ConnectRecord;", arg0, arg1, arg2, arg3, arg4, arg5, arg6);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.2.1/org/apache/kafka/connect/connector/ConnectRecord.html#kafkaPartition()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.3.1/org/apache/kafka/connect/connector/ConnectRecord.html#kafkaPartition()"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.Integer"/></returns>
         public Java.Lang.Integer KafkaPartition()
@@ -370,7 +370,7 @@ namespace Org.Apache.Kafka.Connect.Connector
             return IExecuteWithSignature<Java.Lang.Integer>("kafkaPartition", "()Ljava/lang/Integer;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.2.1/org/apache/kafka/connect/connector/ConnectRecord.html#timestamp()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.3.1/org/apache/kafka/connect/connector/ConnectRecord.html#timestamp()"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.Long"/></returns>
         public Java.Lang.Long Timestamp()
@@ -378,7 +378,7 @@ namespace Org.Apache.Kafka.Connect.Connector
             return IExecuteWithSignature<Java.Lang.Long>("timestamp", "()Ljava/lang/Long;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.2.1/org/apache/kafka/connect/connector/ConnectRecord.html#key()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.3.1/org/apache/kafka/connect/connector/ConnectRecord.html#key()"/>
         /// </summary>
         /// <returns><see cref="object"/></returns>
         public object Key()
@@ -386,7 +386,7 @@ namespace Org.Apache.Kafka.Connect.Connector
             return IExecuteWithSignature("key", "()Ljava/lang/Object;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.2.1/org/apache/kafka/connect/connector/ConnectRecord.html#value()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.3.1/org/apache/kafka/connect/connector/ConnectRecord.html#value()"/>
         /// </summary>
         /// <returns><see cref="object"/></returns>
         public object Value()
@@ -394,7 +394,7 @@ namespace Org.Apache.Kafka.Connect.Connector
             return IExecuteWithSignature("value", "()Ljava/lang/Object;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.2.1/org/apache/kafka/connect/connector/ConnectRecord.html#topic()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.3.1/org/apache/kafka/connect/connector/ConnectRecord.html#topic()"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String Topic()
@@ -402,7 +402,7 @@ namespace Org.Apache.Kafka.Connect.Connector
             return IExecuteWithSignature<Java.Lang.String>("topic", "()Ljava/lang/String;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.2.1/org/apache/kafka/connect/connector/ConnectRecord.html#keySchema()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.3.1/org/apache/kafka/connect/connector/ConnectRecord.html#keySchema()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></returns>
         public Org.Apache.Kafka.Connect.Data.Schema KeySchema()
@@ -410,7 +410,7 @@ namespace Org.Apache.Kafka.Connect.Connector
             return IExecuteWithSignature<Org.Apache.Kafka.Connect.Data.Schema>("keySchema", "()Lorg/apache/kafka/connect/data/Schema;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.2.1/org/apache/kafka/connect/connector/ConnectRecord.html#valueSchema()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.3.1/org/apache/kafka/connect/connector/ConnectRecord.html#valueSchema()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Data.Schema"/></returns>
         public Org.Apache.Kafka.Connect.Data.Schema ValueSchema()
@@ -418,7 +418,7 @@ namespace Org.Apache.Kafka.Connect.Connector
             return IExecuteWithSignature<Org.Apache.Kafka.Connect.Data.Schema>("valueSchema", "()Lorg/apache/kafka/connect/data/Schema;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.2.1/org/apache/kafka/connect/connector/ConnectRecord.html#headers()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.3.1/org/apache/kafka/connect/connector/ConnectRecord.html#headers()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Header.Headers"/></returns>
         public Org.Apache.Kafka.Connect.Header.Headers Headers()

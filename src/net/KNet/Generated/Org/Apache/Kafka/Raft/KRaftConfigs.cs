@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Raft
 {
     #region KRaftConfigs declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/KRaftConfigs.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/KRaftConfigs.html"/>
     /// </summary>
     public partial class KRaftConfigs : MASES.JCOBridge.C2JBridge.JVMBridgeBase<KRaftConfigs>
     {
@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Raft
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/KRaftConfigs.html#%3Cinit%3E()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/KRaftConfigs.html#%3Cinit%3E()"/>
         /// </summary>
         public KRaftConfigs() : base(JVMBridgeBase.InitializerInstance)
         {
@@ -86,111 +86,111 @@ namespace Org.Apache.Kafka.Raft
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/KRaftConfigs.html#BROKER_HEARTBEAT_INTERVAL_MS_DEFAULT"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/KRaftConfigs.html#BROKER_HEARTBEAT_INTERVAL_MS_DEFAULT"/>
         /// </summary>
         public static int BROKER_HEARTBEAT_INTERVAL_MS_DEFAULT { get { return SGetField<int>(LocalBridgeClazz, "BROKER_HEARTBEAT_INTERVAL_MS_DEFAULT"); } set { SSetField(LocalBridgeClazz, "BROKER_HEARTBEAT_INTERVAL_MS_DEFAULT", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/KRaftConfigs.html#BROKER_SESSION_TIMEOUT_MS_DEFAULT"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/KRaftConfigs.html#BROKER_SESSION_TIMEOUT_MS_DEFAULT"/>
         /// </summary>
         public static int BROKER_SESSION_TIMEOUT_MS_DEFAULT { get { return SGetField<int>(LocalBridgeClazz, "BROKER_SESSION_TIMEOUT_MS_DEFAULT"); } set { SSetField(LocalBridgeClazz, "BROKER_SESSION_TIMEOUT_MS_DEFAULT", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/KRaftConfigs.html#INITIAL_BROKER_REGISTRATION_TIMEOUT_MS_DEFAULT"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/KRaftConfigs.html#INITIAL_BROKER_REGISTRATION_TIMEOUT_MS_DEFAULT"/>
         /// </summary>
         public static int INITIAL_BROKER_REGISTRATION_TIMEOUT_MS_DEFAULT { get { return SGetField<int>(LocalBridgeClazz, "INITIAL_BROKER_REGISTRATION_TIMEOUT_MS_DEFAULT"); } set { SSetField(LocalBridgeClazz, "INITIAL_BROKER_REGISTRATION_TIMEOUT_MS_DEFAULT", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/KRaftConfigs.html#BROKER_HEARTBEAT_INTERVAL_MS_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/KRaftConfigs.html#BROKER_HEARTBEAT_INTERVAL_MS_CONFIG"/>
         /// </summary>
         public static Java.Lang.String BROKER_HEARTBEAT_INTERVAL_MS_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "BROKER_HEARTBEAT_INTERVAL_MS_CONFIG"); } set { SSetField(LocalBridgeClazz, "BROKER_HEARTBEAT_INTERVAL_MS_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/KRaftConfigs.html#BROKER_HEARTBEAT_INTERVAL_MS_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/KRaftConfigs.html#BROKER_HEARTBEAT_INTERVAL_MS_DOC"/>
         /// </summary>
         public static Java.Lang.String BROKER_HEARTBEAT_INTERVAL_MS_DOC { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "BROKER_HEARTBEAT_INTERVAL_MS_DOC"); } set { SSetField(LocalBridgeClazz, "BROKER_HEARTBEAT_INTERVAL_MS_DOC", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/KRaftConfigs.html#BROKER_SESSION_TIMEOUT_MS_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/KRaftConfigs.html#BROKER_SESSION_TIMEOUT_MS_CONFIG"/>
         /// </summary>
         public static Java.Lang.String BROKER_SESSION_TIMEOUT_MS_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "BROKER_SESSION_TIMEOUT_MS_CONFIG"); } set { SSetField(LocalBridgeClazz, "BROKER_SESSION_TIMEOUT_MS_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/KRaftConfigs.html#BROKER_SESSION_TIMEOUT_MS_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/KRaftConfigs.html#BROKER_SESSION_TIMEOUT_MS_DOC"/>
         /// </summary>
         public static Java.Lang.String BROKER_SESSION_TIMEOUT_MS_DOC { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "BROKER_SESSION_TIMEOUT_MS_DOC"); } set { SSetField(LocalBridgeClazz, "BROKER_SESSION_TIMEOUT_MS_DOC", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/KRaftConfigs.html#CONTROLLER_LISTENER_NAMES_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/KRaftConfigs.html#CONTROLLER_LISTENER_NAMES_CONFIG"/>
         /// </summary>
         public static Java.Lang.String CONTROLLER_LISTENER_NAMES_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "CONTROLLER_LISTENER_NAMES_CONFIG"); } set { SSetField(LocalBridgeClazz, "CONTROLLER_LISTENER_NAMES_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/KRaftConfigs.html#CONTROLLER_LISTENER_NAMES_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/KRaftConfigs.html#CONTROLLER_LISTENER_NAMES_DOC"/>
         /// </summary>
         public static Java.Lang.String CONTROLLER_LISTENER_NAMES_DOC { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "CONTROLLER_LISTENER_NAMES_DOC"); } set { SSetField(LocalBridgeClazz, "CONTROLLER_LISTENER_NAMES_DOC", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/KRaftConfigs.html#CONTROLLER_PERFORMANCE_ALWAYS_LOG_THRESHOLD_MS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/KRaftConfigs.html#CONTROLLER_PERFORMANCE_ALWAYS_LOG_THRESHOLD_MS"/>
         /// </summary>
         public static Java.Lang.String CONTROLLER_PERFORMANCE_ALWAYS_LOG_THRESHOLD_MS { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "CONTROLLER_PERFORMANCE_ALWAYS_LOG_THRESHOLD_MS"); } set { SSetField(LocalBridgeClazz, "CONTROLLER_PERFORMANCE_ALWAYS_LOG_THRESHOLD_MS", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/KRaftConfigs.html#CONTROLLER_PERFORMANCE_ALWAYS_LOG_THRESHOLD_MS_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/KRaftConfigs.html#CONTROLLER_PERFORMANCE_ALWAYS_LOG_THRESHOLD_MS_DOC"/>
         /// </summary>
         public static Java.Lang.String CONTROLLER_PERFORMANCE_ALWAYS_LOG_THRESHOLD_MS_DOC { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "CONTROLLER_PERFORMANCE_ALWAYS_LOG_THRESHOLD_MS_DOC"); } set { SSetField(LocalBridgeClazz, "CONTROLLER_PERFORMANCE_ALWAYS_LOG_THRESHOLD_MS_DOC", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/KRaftConfigs.html#CONTROLLER_PERFORMANCE_SAMPLE_PERIOD_MS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/KRaftConfigs.html#CONTROLLER_PERFORMANCE_SAMPLE_PERIOD_MS"/>
         /// </summary>
         public static Java.Lang.String CONTROLLER_PERFORMANCE_SAMPLE_PERIOD_MS { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "CONTROLLER_PERFORMANCE_SAMPLE_PERIOD_MS"); } set { SSetField(LocalBridgeClazz, "CONTROLLER_PERFORMANCE_SAMPLE_PERIOD_MS", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/KRaftConfigs.html#CONTROLLER_PERFORMANCE_SAMPLE_PERIOD_MS_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/KRaftConfigs.html#CONTROLLER_PERFORMANCE_SAMPLE_PERIOD_MS_DOC"/>
         /// </summary>
         public static Java.Lang.String CONTROLLER_PERFORMANCE_SAMPLE_PERIOD_MS_DOC { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "CONTROLLER_PERFORMANCE_SAMPLE_PERIOD_MS_DOC"); } set { SSetField(LocalBridgeClazz, "CONTROLLER_PERFORMANCE_SAMPLE_PERIOD_MS_DOC", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/KRaftConfigs.html#INITIAL_BROKER_REGISTRATION_TIMEOUT_MS_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/KRaftConfigs.html#INITIAL_BROKER_REGISTRATION_TIMEOUT_MS_CONFIG"/>
         /// </summary>
         public static Java.Lang.String INITIAL_BROKER_REGISTRATION_TIMEOUT_MS_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "INITIAL_BROKER_REGISTRATION_TIMEOUT_MS_CONFIG"); } set { SSetField(LocalBridgeClazz, "INITIAL_BROKER_REGISTRATION_TIMEOUT_MS_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/KRaftConfigs.html#INITIAL_BROKER_REGISTRATION_TIMEOUT_MS_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/KRaftConfigs.html#INITIAL_BROKER_REGISTRATION_TIMEOUT_MS_DOC"/>
         /// </summary>
         public static Java.Lang.String INITIAL_BROKER_REGISTRATION_TIMEOUT_MS_DOC { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "INITIAL_BROKER_REGISTRATION_TIMEOUT_MS_DOC"); } set { SSetField(LocalBridgeClazz, "INITIAL_BROKER_REGISTRATION_TIMEOUT_MS_DOC", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/KRaftConfigs.html#NODE_ID_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/KRaftConfigs.html#NODE_ID_CONFIG"/>
         /// </summary>
         public static Java.Lang.String NODE_ID_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "NODE_ID_CONFIG"); } set { SSetField(LocalBridgeClazz, "NODE_ID_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/KRaftConfigs.html#NODE_ID_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/KRaftConfigs.html#NODE_ID_DOC"/>
         /// </summary>
         public static Java.Lang.String NODE_ID_DOC { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "NODE_ID_DOC"); } set { SSetField(LocalBridgeClazz, "NODE_ID_DOC", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/KRaftConfigs.html#PROCESS_ROLES_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/KRaftConfigs.html#PROCESS_ROLES_CONFIG"/>
         /// </summary>
         public static Java.Lang.String PROCESS_ROLES_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "PROCESS_ROLES_CONFIG"); } set { SSetField(LocalBridgeClazz, "PROCESS_ROLES_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/KRaftConfigs.html#PROCESS_ROLES_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/KRaftConfigs.html#PROCESS_ROLES_DOC"/>
         /// </summary>
         public static Java.Lang.String PROCESS_ROLES_DOC { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "PROCESS_ROLES_DOC"); } set { SSetField(LocalBridgeClazz, "PROCESS_ROLES_DOC", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/KRaftConfigs.html#SASL_MECHANISM_CONTROLLER_PROTOCOL_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/KRaftConfigs.html#SASL_MECHANISM_CONTROLLER_PROTOCOL_CONFIG"/>
         /// </summary>
         public static Java.Lang.String SASL_MECHANISM_CONTROLLER_PROTOCOL_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "SASL_MECHANISM_CONTROLLER_PROTOCOL_CONFIG"); } set { SSetField(LocalBridgeClazz, "SASL_MECHANISM_CONTROLLER_PROTOCOL_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/KRaftConfigs.html#SASL_MECHANISM_CONTROLLER_PROTOCOL_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/KRaftConfigs.html#SASL_MECHANISM_CONTROLLER_PROTOCOL_DOC"/>
         /// </summary>
         public static Java.Lang.String SASL_MECHANISM_CONTROLLER_PROTOCOL_DOC { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "SASL_MECHANISM_CONTROLLER_PROTOCOL_DOC"); } set { SSetField(LocalBridgeClazz, "SASL_MECHANISM_CONTROLLER_PROTOCOL_DOC", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/KRaftConfigs.html#SERVER_MAX_STARTUP_TIME_MS_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/KRaftConfigs.html#SERVER_MAX_STARTUP_TIME_MS_CONFIG"/>
         /// </summary>
         public static Java.Lang.String SERVER_MAX_STARTUP_TIME_MS_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "SERVER_MAX_STARTUP_TIME_MS_CONFIG"); } set { SSetField(LocalBridgeClazz, "SERVER_MAX_STARTUP_TIME_MS_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/KRaftConfigs.html#SERVER_MAX_STARTUP_TIME_MS_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/KRaftConfigs.html#SERVER_MAX_STARTUP_TIME_MS_DOC"/>
         /// </summary>
         public static Java.Lang.String SERVER_MAX_STARTUP_TIME_MS_DOC { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "SERVER_MAX_STARTUP_TIME_MS_DOC"); } set { SSetField(LocalBridgeClazz, "SERVER_MAX_STARTUP_TIME_MS_DOC", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/KRaftConfigs.html#CONTROLLER_PERFORMANCE_ALWAYS_LOG_THRESHOLD_MS_DEFAULT"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/KRaftConfigs.html#CONTROLLER_PERFORMANCE_ALWAYS_LOG_THRESHOLD_MS_DEFAULT"/>
         /// </summary>
         public static long CONTROLLER_PERFORMANCE_ALWAYS_LOG_THRESHOLD_MS_DEFAULT { get { return SGetField<long>(LocalBridgeClazz, "CONTROLLER_PERFORMANCE_ALWAYS_LOG_THRESHOLD_MS_DEFAULT"); } set { SSetField(LocalBridgeClazz, "CONTROLLER_PERFORMANCE_ALWAYS_LOG_THRESHOLD_MS_DEFAULT", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/KRaftConfigs.html#CONTROLLER_PERFORMANCE_SAMPLE_PERIOD_MS_DEFAULT"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/KRaftConfigs.html#CONTROLLER_PERFORMANCE_SAMPLE_PERIOD_MS_DEFAULT"/>
         /// </summary>
         public static long CONTROLLER_PERFORMANCE_SAMPLE_PERIOD_MS_DEFAULT { get { return SGetField<long>(LocalBridgeClazz, "CONTROLLER_PERFORMANCE_SAMPLE_PERIOD_MS_DEFAULT"); } set { SSetField(LocalBridgeClazz, "CONTROLLER_PERFORMANCE_SAMPLE_PERIOD_MS_DEFAULT", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/KRaftConfigs.html#SERVER_MAX_STARTUP_TIME_MS_DEFAULT"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/KRaftConfigs.html#SERVER_MAX_STARTUP_TIME_MS_DEFAULT"/>
         /// </summary>
         public static long SERVER_MAX_STARTUP_TIME_MS_DEFAULT { get { return SGetField<long>(LocalBridgeClazz, "SERVER_MAX_STARTUP_TIME_MS_DEFAULT"); } set { SSetField(LocalBridgeClazz, "SERVER_MAX_STARTUP_TIME_MS_DEFAULT", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/KRaftConfigs.html#CONFIG_DEF"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/KRaftConfigs.html#CONFIG_DEF"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Config.ConfigDef CONFIG_DEF { get { return SGetField<Org.Apache.Kafka.Common.Config.ConfigDef>(LocalBridgeClazz, "CONFIG_DEF"); } set { SSetField(LocalBridgeClazz, "CONFIG_DEF", value); } }
 

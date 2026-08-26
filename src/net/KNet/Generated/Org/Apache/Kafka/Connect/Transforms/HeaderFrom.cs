@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
 {
     #region HeaderFrom declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/HeaderFrom.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/HeaderFrom.html"/>
     /// </summary>
     public partial class HeaderFrom : Org.Apache.Kafka.Connect.Transforms.Transformation
     {
@@ -57,7 +57,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
         // TODO: complete the class
         #region Key declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/HeaderFrom.Key.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/HeaderFrom.Key.html"/>
         /// </summary>
         public partial class Key : Org.Apache.Kafka.Connect.Transforms.HeaderFrom
         {
@@ -91,7 +91,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
 
         #region Key<R> declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/HeaderFrom.Key.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/HeaderFrom.Key.html"/>
         /// </summary>
         /// <typeparam name="R"><see cref="Org.Apache.Kafka.Connect.Connector.ConnectRecord{R}"/></typeparam>
         public partial class Key<R> : Org.Apache.Kafka.Connect.Transforms.HeaderFrom<R> where R : Org.Apache.Kafka.Connect.Connector.ConnectRecord<R>
@@ -126,7 +126,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
 
         #region Value declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/HeaderFrom.Value.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/HeaderFrom.Value.html"/>
         /// </summary>
         public partial class Value : Org.Apache.Kafka.Connect.Transforms.HeaderFrom
         {
@@ -160,7 +160,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
 
         #region Value<R> declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/HeaderFrom.Value.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/HeaderFrom.Value.html"/>
         /// </summary>
         /// <typeparam name="R"><see cref="Org.Apache.Kafka.Connect.Connector.ConnectRecord{R}"/></typeparam>
         public partial class Value<R> : Org.Apache.Kafka.Connect.Transforms.HeaderFrom<R> where R : Org.Apache.Kafka.Connect.Connector.ConnectRecord<R>
@@ -199,7 +199,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
 
     #region HeaderFrom<R> declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/HeaderFrom.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/HeaderFrom.html"/>
     /// </summary>
     /// <typeparam name="R"><see cref="Org.Apache.Kafka.Connect.Connector.ConnectRecord{R}"/></typeparam>
     public partial class HeaderFrom<R> : Org.Apache.Kafka.Connect.Transforms.Transformation<R> where R : Org.Apache.Kafka.Connect.Connector.ConnectRecord<R>
@@ -237,7 +237,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/HeaderFrom.html#%3Cinit%3E()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/HeaderFrom.html#%3Cinit%3E()"/>
         /// </summary>
         public HeaderFrom() : base(JVMBridgeBase.InitializerInstance)
         {
@@ -259,27 +259,27 @@ namespace Org.Apache.Kafka.Connect.Transforms
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/HeaderFrom.html#FIELDS_FIELD"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/HeaderFrom.html#FIELDS_FIELD"/>
         /// </summary>
         public static Java.Lang.String FIELDS_FIELD { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "FIELDS_FIELD"); } set { SSetField(LocalBridgeClazz, "FIELDS_FIELD", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/HeaderFrom.html#HEADERS_FIELD"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/HeaderFrom.html#HEADERS_FIELD"/>
         /// </summary>
         public static Java.Lang.String HEADERS_FIELD { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "HEADERS_FIELD"); } set { SSetField(LocalBridgeClazz, "HEADERS_FIELD", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/HeaderFrom.html#OPERATION_FIELD"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/HeaderFrom.html#OPERATION_FIELD"/>
         /// </summary>
         public static Java.Lang.String OPERATION_FIELD { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "OPERATION_FIELD"); } set { SSetField(LocalBridgeClazz, "OPERATION_FIELD", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/HeaderFrom.html#OVERVIEW_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/HeaderFrom.html#OVERVIEW_DOC"/>
         /// </summary>
         public static Java.Lang.String OVERVIEW_DOC { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "OVERVIEW_DOC"); } set { SSetField(LocalBridgeClazz, "OVERVIEW_DOC", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/HeaderFrom.html#REPLACE_NULL_WITH_DEFAULT_FIELD"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/HeaderFrom.html#REPLACE_NULL_WITH_DEFAULT_FIELD"/>
         /// </summary>
         public static Java.Lang.String REPLACE_NULL_WITH_DEFAULT_FIELD { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "REPLACE_NULL_WITH_DEFAULT_FIELD"); } set { SSetField(LocalBridgeClazz, "REPLACE_NULL_WITH_DEFAULT_FIELD", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/HeaderFrom.html#CONFIG_DEF"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/HeaderFrom.html#CONFIG_DEF"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Config.ConfigDef CONFIG_DEF { get { return SGetField<Org.Apache.Kafka.Common.Config.ConfigDef>(LocalBridgeClazz, "CONFIG_DEF"); } set { SSetField(LocalBridgeClazz, "CONFIG_DEF", value); } }
 
@@ -291,7 +291,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/HeaderFrom.html#version()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/HeaderFrom.html#version()"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String Version()
@@ -299,7 +299,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
             return IExecuteWithSignature<Java.Lang.String>("version", "()Ljava/lang/String;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/HeaderFrom.html#config()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/HeaderFrom.html#config()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Config.ConfigDef"/></returns>
         public Org.Apache.Kafka.Common.Config.ConfigDef Config()
@@ -307,7 +307,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
             return IExecuteWithSignature<Org.Apache.Kafka.Common.Config.ConfigDef>("config", "()Lorg/apache/kafka/common/config/ConfigDef;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/HeaderFrom.html#apply(org.apache.kafka.connect.connector.ConnectRecord)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/HeaderFrom.html#apply(org.apache.kafka.connect.connector.ConnectRecord)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Connector.ConnectRecord"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Connector.ConnectRecord"/></returns>
@@ -316,14 +316,14 @@ namespace Org.Apache.Kafka.Connect.Transforms
             return IExecuteWithSignature<Org.Apache.Kafka.Connect.Connector.ConnectRecord>("apply", "(Lorg/apache/kafka/connect/connector/ConnectRecord;)Lorg/apache/kafka/connect/connector/ConnectRecord;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/HeaderFrom.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/HeaderFrom.html#close()"/>
         /// </summary>
         public void Close()
         {
             IExecuteWithSignature("close", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/HeaderFrom.html#configure(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/HeaderFrom.html#configure(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         public void Configure(Java.Util.Map arg0)
@@ -339,7 +339,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
         {
             #region Constructors
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/HeaderFrom.Key.html#%3Cinit%3E()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/HeaderFrom.Key.html#%3Cinit%3E()"/>
             /// </summary>
             public Key() : base(JVMBridgeBase.InitializerInstance)
             {
@@ -369,7 +369,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/HeaderFrom.Key.html#operatingValue(org.apache.kafka.connect.connector.ConnectRecord)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/HeaderFrom.Key.html#operatingValue(org.apache.kafka.connect.connector.ConnectRecord)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Connector.ConnectRecord"/></param>
             /// <returns><see cref="object"/></returns>
@@ -393,7 +393,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
         {
             #region Constructors
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/HeaderFrom.Key.html#%3Cinit%3E()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/HeaderFrom.Key.html#%3Cinit%3E()"/>
             /// </summary>
             public Key() : base(JVMBridgeBase.InitializerInstance)
             {
@@ -427,7 +427,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/HeaderFrom.Key.html#operatingValue(org.apache.kafka.connect.connector.ConnectRecord)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/HeaderFrom.Key.html#operatingValue(org.apache.kafka.connect.connector.ConnectRecord)"/>
             /// </summary>
             /// <param name="arg0"><typeparamref name="R"/></param>
             /// <returns><see cref="object"/></returns>
@@ -451,7 +451,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
         {
             #region Constructors
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/HeaderFrom.Value.html#%3Cinit%3E()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/HeaderFrom.Value.html#%3Cinit%3E()"/>
             /// </summary>
             public Value() : base(JVMBridgeBase.InitializerInstance)
             {
@@ -481,7 +481,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/HeaderFrom.Value.html#operatingValue(org.apache.kafka.connect.connector.ConnectRecord)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/HeaderFrom.Value.html#operatingValue(org.apache.kafka.connect.connector.ConnectRecord)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Connector.ConnectRecord"/></param>
             /// <returns><see cref="object"/></returns>
@@ -505,7 +505,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
         {
             #region Constructors
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/HeaderFrom.Value.html#%3Cinit%3E()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/HeaderFrom.Value.html#%3Cinit%3E()"/>
             /// </summary>
             public Value() : base(JVMBridgeBase.InitializerInstance)
             {
@@ -539,7 +539,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/HeaderFrom.Value.html#operatingValue(org.apache.kafka.connect.connector.ConnectRecord)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/HeaderFrom.Value.html#operatingValue(org.apache.kafka.connect.connector.ConnectRecord)"/>
             /// </summary>
             /// <param name="arg0"><typeparamref name="R"/></param>
             /// <returns><see cref="object"/></returns>
@@ -570,7 +570,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/HeaderFrom.html#%3Cinit%3E()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/HeaderFrom.html#%3Cinit%3E()"/>
         /// </summary>
         public HeaderFrom() : base(JVMBridgeBase.InitializerInstance)
         {
@@ -596,27 +596,27 @@ namespace Org.Apache.Kafka.Connect.Transforms
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/HeaderFrom.html#FIELDS_FIELD"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/HeaderFrom.html#FIELDS_FIELD"/>
         /// </summary>
         public static Java.Lang.String FIELDS_FIELD { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "FIELDS_FIELD"); } set { SSetField(LocalBridgeClazz, "FIELDS_FIELD", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/HeaderFrom.html#HEADERS_FIELD"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/HeaderFrom.html#HEADERS_FIELD"/>
         /// </summary>
         public static Java.Lang.String HEADERS_FIELD { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "HEADERS_FIELD"); } set { SSetField(LocalBridgeClazz, "HEADERS_FIELD", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/HeaderFrom.html#OPERATION_FIELD"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/HeaderFrom.html#OPERATION_FIELD"/>
         /// </summary>
         public static Java.Lang.String OPERATION_FIELD { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "OPERATION_FIELD"); } set { SSetField(LocalBridgeClazz, "OPERATION_FIELD", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/HeaderFrom.html#OVERVIEW_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/HeaderFrom.html#OVERVIEW_DOC"/>
         /// </summary>
         public static Java.Lang.String OVERVIEW_DOC { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "OVERVIEW_DOC"); } set { SSetField(LocalBridgeClazz, "OVERVIEW_DOC", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/HeaderFrom.html#REPLACE_NULL_WITH_DEFAULT_FIELD"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/HeaderFrom.html#REPLACE_NULL_WITH_DEFAULT_FIELD"/>
         /// </summary>
         public static Java.Lang.String REPLACE_NULL_WITH_DEFAULT_FIELD { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "REPLACE_NULL_WITH_DEFAULT_FIELD"); } set { SSetField(LocalBridgeClazz, "REPLACE_NULL_WITH_DEFAULT_FIELD", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/HeaderFrom.html#CONFIG_DEF"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/HeaderFrom.html#CONFIG_DEF"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Config.ConfigDef CONFIG_DEF { get { return SGetField<Org.Apache.Kafka.Common.Config.ConfigDef>(LocalBridgeClazz, "CONFIG_DEF"); } set { SSetField(LocalBridgeClazz, "CONFIG_DEF", value); } }
 
@@ -628,7 +628,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/HeaderFrom.html#version()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/HeaderFrom.html#version()"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String Version()
@@ -636,7 +636,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
             return IExecuteWithSignature<Java.Lang.String>("version", "()Ljava/lang/String;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/HeaderFrom.html#config()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/HeaderFrom.html#config()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Config.ConfigDef"/></returns>
         public Org.Apache.Kafka.Common.Config.ConfigDef Config()
@@ -644,7 +644,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
             return IExecuteWithSignature<Org.Apache.Kafka.Common.Config.ConfigDef>("config", "()Lorg/apache/kafka/common/config/ConfigDef;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/HeaderFrom.html#apply(org.apache.kafka.connect.connector.ConnectRecord)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/HeaderFrom.html#apply(org.apache.kafka.connect.connector.ConnectRecord)"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="R"/></param>
         /// <returns><typeparamref name="R"/></returns>
@@ -653,14 +653,14 @@ namespace Org.Apache.Kafka.Connect.Transforms
             return IExecuteWithSignature<R>("apply", "(Lorg/apache/kafka/connect/connector/ConnectRecord;)Lorg/apache/kafka/connect/connector/ConnectRecord;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/HeaderFrom.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/HeaderFrom.html#close()"/>
         /// </summary>
         public void Close()
         {
             IExecuteWithSignature("close", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/HeaderFrom.html#configure(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/HeaderFrom.html#configure(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         public void Configure(Java.Util.Map<Java.Lang.String, object> arg0)

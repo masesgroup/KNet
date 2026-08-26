@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Security.Auth
 {
     #region SaslAuthenticationContext declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/security/auth/SaslAuthenticationContext.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/security/auth/SaslAuthenticationContext.html"/>
     /// </summary>
     public partial class SaslAuthenticationContext : Org.Apache.Kafka.Common.Security.Auth.AuthenticationContext
     {
@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Common.Security.Auth
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/security/auth/SaslAuthenticationContext.html#%3Cinit%3E(javax.security.sasl.SaslServer,org.apache.kafka.common.security.auth.SecurityProtocol,java.net.InetAddress,java.lang.String,java.util.Optional)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/security/auth/SaslAuthenticationContext.html#%3Cinit%3E(javax.security.sasl.SaslServer,org.apache.kafka.common.security.auth.SecurityProtocol,java.net.InetAddress,java.lang.String,java.util.Optional)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Javax.Security.Sasl.SaslServer"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Security.Auth.SecurityProtocol"/></param>
@@ -83,7 +83,7 @@ namespace Org.Apache.Kafka.Common.Security.Auth
             return JVMBridgeBase.New<SaslAuthenticationContext>(arg0, arg1, arg2, arg3, arg4);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/security/auth/SaslAuthenticationContext.html#%3Cinit%3E(javax.security.sasl.SaslServer,org.apache.kafka.common.security.auth.SecurityProtocol,java.net.InetAddress,java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/security/auth/SaslAuthenticationContext.html#%3Cinit%3E(javax.security.sasl.SaslServer,org.apache.kafka.common.security.auth.SecurityProtocol,java.net.InetAddress,java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Javax.Security.Sasl.SaslServer"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.Security.Auth.SecurityProtocol"/></param>
@@ -117,7 +117,7 @@ namespace Org.Apache.Kafka.Common.Security.Auth
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/security/auth/SaslAuthenticationContext.html#listenerName()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/security/auth/SaslAuthenticationContext.html#listenerName()"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String ListenerName()
@@ -125,7 +125,7 @@ namespace Org.Apache.Kafka.Common.Security.Auth
             return IExecuteWithSignature<Java.Lang.String>("listenerName", "()Ljava/lang/String;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/security/auth/SaslAuthenticationContext.html#clientAddress()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/security/auth/SaslAuthenticationContext.html#clientAddress()"/>
         /// </summary>
         /// <returns><see cref="Java.Net.InetAddress"/></returns>
         public Java.Net.InetAddress ClientAddress()
@@ -133,7 +133,7 @@ namespace Org.Apache.Kafka.Common.Security.Auth
             return IExecuteWithSignature<Java.Net.InetAddress>("clientAddress", "()Ljava/net/InetAddress;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/security/auth/SaslAuthenticationContext.html#sslSession()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/security/auth/SaslAuthenticationContext.html#sslSession()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Optional"/></returns>
         public Java.Util.Optional<Javax.Net.Ssl.SSLSession> SslSession()
@@ -141,7 +141,7 @@ namespace Org.Apache.Kafka.Common.Security.Auth
             return IExecuteWithSignature<Java.Util.Optional<Javax.Net.Ssl.SSLSession>>("sslSession", "()Ljava/util/Optional;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/security/auth/SaslAuthenticationContext.html#server()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/security/auth/SaslAuthenticationContext.html#server()"/>
         /// </summary>
         /// <returns><see cref="Javax.Security.Sasl.SaslServer"/></returns>
         public Javax.Security.Sasl.SaslServer Server()
@@ -149,7 +149,7 @@ namespace Org.Apache.Kafka.Common.Security.Auth
             return IExecuteWithSignature<Javax.Security.Sasl.SaslServer>("server", "()Ljavax/security/sasl/SaslServer;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/security/auth/SaslAuthenticationContext.html#securityProtocol()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/security/auth/SaslAuthenticationContext.html#securityProtocol()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Security.Auth.SecurityProtocol"/></returns>
         public Org.Apache.Kafka.Common.Security.Auth.SecurityProtocol SecurityProtocol()

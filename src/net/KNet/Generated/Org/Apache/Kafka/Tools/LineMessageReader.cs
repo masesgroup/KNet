@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Tools
 {
     #region LineMessageReader declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.2.1/org/apache/kafka/tools/LineMessageReader.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.3.1/org/apache/kafka/tools/LineMessageReader.html"/>
     /// </summary>
     public partial class LineMessageReader : Org.Apache.Kafka.Tools.Api.RecordReader
     {
@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Tools
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.2.1/org/apache/kafka/tools/LineMessageReader.html#%3Cinit%3E()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.3.1/org/apache/kafka/tools/LineMessageReader.html#%3Cinit%3E()"/>
         /// </summary>
         public LineMessageReader() : base(JVMBridgeBase.InitializerInstance)
         {
@@ -94,7 +94,7 @@ namespace Org.Apache.Kafka.Tools
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.2.1/org/apache/kafka/tools/LineMessageReader.html#readRecords(java.io.InputStream)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.3.1/org/apache/kafka/tools/LineMessageReader.html#readRecords(java.io.InputStream)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Io.InputStream"/></param>
         /// <returns><see cref="Java.Util.Iterator"/></returns>
@@ -103,7 +103,7 @@ namespace Org.Apache.Kafka.Tools
             return IExecuteWithSignature<Java.Util.Iterator<Org.Apache.Kafka.Clients.Producer.ProducerRecord<byte[], byte[]>>>("readRecords", "(Ljava/io/InputStream;)Ljava/util/Iterator;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.2.1/org/apache/kafka/tools/LineMessageReader.html#configure(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.3.1/org/apache/kafka/tools/LineMessageReader.html#configure(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         public void Configure(Java.Util.Map<Java.Lang.String, object> arg0)

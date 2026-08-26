@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
 {
     #region TimestampConverter declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/TimestampConverter.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/TimestampConverter.html"/>
     /// </summary>
     public partial class TimestampConverter : Org.Apache.Kafka.Connect.Transforms.Transformation
     {
@@ -57,7 +57,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
         // TODO: complete the class
         #region Key declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/TimestampConverter.Key.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/TimestampConverter.Key.html"/>
         /// </summary>
         public partial class Key : Org.Apache.Kafka.Connect.Transforms.TimestampConverter
         {
@@ -91,7 +91,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
 
         #region Key<R> declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/TimestampConverter.Key.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/TimestampConverter.Key.html"/>
         /// </summary>
         /// <typeparam name="R"><see cref="Org.Apache.Kafka.Connect.Connector.ConnectRecord{R}"/></typeparam>
         public partial class Key<R> : Org.Apache.Kafka.Connect.Transforms.TimestampConverter<R> where R : Org.Apache.Kafka.Connect.Connector.ConnectRecord<R>
@@ -126,7 +126,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
 
         #region Value declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/TimestampConverter.Value.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/TimestampConverter.Value.html"/>
         /// </summary>
         public partial class Value : Org.Apache.Kafka.Connect.Transforms.TimestampConverter
         {
@@ -160,7 +160,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
 
         #region Value<R> declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/TimestampConverter.Value.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/TimestampConverter.Value.html"/>
         /// </summary>
         /// <typeparam name="R"><see cref="Org.Apache.Kafka.Connect.Connector.ConnectRecord{R}"/></typeparam>
         public partial class Value<R> : Org.Apache.Kafka.Connect.Transforms.TimestampConverter<R> where R : Org.Apache.Kafka.Connect.Connector.ConnectRecord<R>
@@ -199,7 +199,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
 
     #region TimestampConverter<R> declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/TimestampConverter.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/TimestampConverter.html"/>
     /// </summary>
     /// <typeparam name="R"><see cref="Org.Apache.Kafka.Connect.Connector.ConnectRecord{R}"/></typeparam>
     public partial class TimestampConverter<R> : Org.Apache.Kafka.Connect.Transforms.Transformation<R> where R : Org.Apache.Kafka.Connect.Connector.ConnectRecord<R>
@@ -237,7 +237,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/TimestampConverter.html#%3Cinit%3E()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/TimestampConverter.html#%3Cinit%3E()"/>
         /// </summary>
         public TimestampConverter() : base(JVMBridgeBase.InitializerInstance)
         {
@@ -259,43 +259,43 @@ namespace Org.Apache.Kafka.Connect.Transforms
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/TimestampConverter.html#FIELD_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/TimestampConverter.html#FIELD_CONFIG"/>
         /// </summary>
         public static Java.Lang.String FIELD_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "FIELD_CONFIG"); } set { SSetField(LocalBridgeClazz, "FIELD_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/TimestampConverter.html#FORMAT_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/TimestampConverter.html#FORMAT_CONFIG"/>
         /// </summary>
         public static Java.Lang.String FORMAT_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "FORMAT_CONFIG"); } set { SSetField(LocalBridgeClazz, "FORMAT_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/TimestampConverter.html#OVERVIEW_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/TimestampConverter.html#OVERVIEW_DOC"/>
         /// </summary>
         public static Java.Lang.String OVERVIEW_DOC { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "OVERVIEW_DOC"); } set { SSetField(LocalBridgeClazz, "OVERVIEW_DOC", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/TimestampConverter.html#REPLACE_NULL_WITH_DEFAULT_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/TimestampConverter.html#REPLACE_NULL_WITH_DEFAULT_CONFIG"/>
         /// </summary>
         public static Java.Lang.String REPLACE_NULL_WITH_DEFAULT_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "REPLACE_NULL_WITH_DEFAULT_CONFIG"); } set { SSetField(LocalBridgeClazz, "REPLACE_NULL_WITH_DEFAULT_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/TimestampConverter.html#TARGET_TYPE_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/TimestampConverter.html#TARGET_TYPE_CONFIG"/>
         /// </summary>
         public static Java.Lang.String TARGET_TYPE_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "TARGET_TYPE_CONFIG"); } set { SSetField(LocalBridgeClazz, "TARGET_TYPE_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/TimestampConverter.html#UNIX_PRECISION_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/TimestampConverter.html#UNIX_PRECISION_CONFIG"/>
         /// </summary>
         public static Java.Lang.String UNIX_PRECISION_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "UNIX_PRECISION_CONFIG"); } set { SSetField(LocalBridgeClazz, "UNIX_PRECISION_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/TimestampConverter.html#CONFIG_DEF"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/TimestampConverter.html#CONFIG_DEF"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Config.ConfigDef CONFIG_DEF { get { return SGetField<Org.Apache.Kafka.Common.Config.ConfigDef>(LocalBridgeClazz, "CONFIG_DEF"); } set { SSetField(LocalBridgeClazz, "CONFIG_DEF", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/TimestampConverter.html#OPTIONAL_DATE_SCHEMA"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/TimestampConverter.html#OPTIONAL_DATE_SCHEMA"/>
         /// </summary>
         public static Org.Apache.Kafka.Connect.Data.Schema OPTIONAL_DATE_SCHEMA { get { return SGetField<Org.Apache.Kafka.Connect.Data.Schema>(LocalBridgeClazz, "OPTIONAL_DATE_SCHEMA"); } set { SSetField(LocalBridgeClazz, "OPTIONAL_DATE_SCHEMA", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/TimestampConverter.html#OPTIONAL_TIME_SCHEMA"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/TimestampConverter.html#OPTIONAL_TIME_SCHEMA"/>
         /// </summary>
         public static Org.Apache.Kafka.Connect.Data.Schema OPTIONAL_TIME_SCHEMA { get { return SGetField<Org.Apache.Kafka.Connect.Data.Schema>(LocalBridgeClazz, "OPTIONAL_TIME_SCHEMA"); } set { SSetField(LocalBridgeClazz, "OPTIONAL_TIME_SCHEMA", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/TimestampConverter.html#OPTIONAL_TIMESTAMP_SCHEMA"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/TimestampConverter.html#OPTIONAL_TIMESTAMP_SCHEMA"/>
         /// </summary>
         public static Org.Apache.Kafka.Connect.Data.Schema OPTIONAL_TIMESTAMP_SCHEMA { get { return SGetField<Org.Apache.Kafka.Connect.Data.Schema>(LocalBridgeClazz, "OPTIONAL_TIMESTAMP_SCHEMA"); } set { SSetField(LocalBridgeClazz, "OPTIONAL_TIMESTAMP_SCHEMA", value); } }
 
@@ -307,7 +307,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/TimestampConverter.html#version()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/TimestampConverter.html#version()"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String Version()
@@ -315,7 +315,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
             return IExecuteWithSignature<Java.Lang.String>("version", "()Ljava/lang/String;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/TimestampConverter.html#config()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/TimestampConverter.html#config()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Config.ConfigDef"/></returns>
         public Org.Apache.Kafka.Common.Config.ConfigDef ConfigMethod()
@@ -323,7 +323,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
             return IExecuteWithSignature<Org.Apache.Kafka.Common.Config.ConfigDef>("config", "()Lorg/apache/kafka/common/config/ConfigDef;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/TimestampConverter.html#apply(org.apache.kafka.connect.connector.ConnectRecord)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/TimestampConverter.html#apply(org.apache.kafka.connect.connector.ConnectRecord)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Connector.ConnectRecord"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Connector.ConnectRecord"/></returns>
@@ -332,14 +332,14 @@ namespace Org.Apache.Kafka.Connect.Transforms
             return IExecuteWithSignature<Org.Apache.Kafka.Connect.Connector.ConnectRecord>("apply", "(Lorg/apache/kafka/connect/connector/ConnectRecord;)Lorg/apache/kafka/connect/connector/ConnectRecord;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/TimestampConverter.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/TimestampConverter.html#close()"/>
         /// </summary>
         public void Close()
         {
             IExecuteWithSignature("close", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/TimestampConverter.html#configure(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/TimestampConverter.html#configure(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         public void Configure(Java.Util.Map arg0)
@@ -355,7 +355,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
         {
             #region Constructors
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/TimestampConverter.Key.html#%3Cinit%3E()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/TimestampConverter.Key.html#%3Cinit%3E()"/>
             /// </summary>
             public Key() : base(JVMBridgeBase.InitializerInstance)
             {
@@ -400,7 +400,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
         {
             #region Constructors
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/TimestampConverter.Key.html#%3Cinit%3E()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/TimestampConverter.Key.html#%3Cinit%3E()"/>
             /// </summary>
             public Key() : base(JVMBridgeBase.InitializerInstance)
             {
@@ -449,7 +449,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
         {
             #region Constructors
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/TimestampConverter.Value.html#%3Cinit%3E()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/TimestampConverter.Value.html#%3Cinit%3E()"/>
             /// </summary>
             public Value() : base(JVMBridgeBase.InitializerInstance)
             {
@@ -494,7 +494,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
         {
             #region Constructors
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/TimestampConverter.Value.html#%3Cinit%3E()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/TimestampConverter.Value.html#%3Cinit%3E()"/>
             /// </summary>
             public Value() : base(JVMBridgeBase.InitializerInstance)
             {
@@ -550,7 +550,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/TimestampConverter.html#%3Cinit%3E()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/TimestampConverter.html#%3Cinit%3E()"/>
         /// </summary>
         public TimestampConverter() : base(JVMBridgeBase.InitializerInstance)
         {
@@ -576,43 +576,43 @@ namespace Org.Apache.Kafka.Connect.Transforms
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/TimestampConverter.html#FIELD_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/TimestampConverter.html#FIELD_CONFIG"/>
         /// </summary>
         public static Java.Lang.String FIELD_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "FIELD_CONFIG"); } set { SSetField(LocalBridgeClazz, "FIELD_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/TimestampConverter.html#FORMAT_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/TimestampConverter.html#FORMAT_CONFIG"/>
         /// </summary>
         public static Java.Lang.String FORMAT_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "FORMAT_CONFIG"); } set { SSetField(LocalBridgeClazz, "FORMAT_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/TimestampConverter.html#OVERVIEW_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/TimestampConverter.html#OVERVIEW_DOC"/>
         /// </summary>
         public static Java.Lang.String OVERVIEW_DOC { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "OVERVIEW_DOC"); } set { SSetField(LocalBridgeClazz, "OVERVIEW_DOC", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/TimestampConverter.html#REPLACE_NULL_WITH_DEFAULT_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/TimestampConverter.html#REPLACE_NULL_WITH_DEFAULT_CONFIG"/>
         /// </summary>
         public static Java.Lang.String REPLACE_NULL_WITH_DEFAULT_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "REPLACE_NULL_WITH_DEFAULT_CONFIG"); } set { SSetField(LocalBridgeClazz, "REPLACE_NULL_WITH_DEFAULT_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/TimestampConverter.html#TARGET_TYPE_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/TimestampConverter.html#TARGET_TYPE_CONFIG"/>
         /// </summary>
         public static Java.Lang.String TARGET_TYPE_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "TARGET_TYPE_CONFIG"); } set { SSetField(LocalBridgeClazz, "TARGET_TYPE_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/TimestampConverter.html#UNIX_PRECISION_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/TimestampConverter.html#UNIX_PRECISION_CONFIG"/>
         /// </summary>
         public static Java.Lang.String UNIX_PRECISION_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "UNIX_PRECISION_CONFIG"); } set { SSetField(LocalBridgeClazz, "UNIX_PRECISION_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/TimestampConverter.html#CONFIG_DEF"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/TimestampConverter.html#CONFIG_DEF"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Config.ConfigDef CONFIG_DEF { get { return SGetField<Org.Apache.Kafka.Common.Config.ConfigDef>(LocalBridgeClazz, "CONFIG_DEF"); } set { SSetField(LocalBridgeClazz, "CONFIG_DEF", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/TimestampConverter.html#OPTIONAL_DATE_SCHEMA"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/TimestampConverter.html#OPTIONAL_DATE_SCHEMA"/>
         /// </summary>
         public static Org.Apache.Kafka.Connect.Data.Schema OPTIONAL_DATE_SCHEMA { get { return SGetField<Org.Apache.Kafka.Connect.Data.Schema>(LocalBridgeClazz, "OPTIONAL_DATE_SCHEMA"); } set { SSetField(LocalBridgeClazz, "OPTIONAL_DATE_SCHEMA", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/TimestampConverter.html#OPTIONAL_TIME_SCHEMA"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/TimestampConverter.html#OPTIONAL_TIME_SCHEMA"/>
         /// </summary>
         public static Org.Apache.Kafka.Connect.Data.Schema OPTIONAL_TIME_SCHEMA { get { return SGetField<Org.Apache.Kafka.Connect.Data.Schema>(LocalBridgeClazz, "OPTIONAL_TIME_SCHEMA"); } set { SSetField(LocalBridgeClazz, "OPTIONAL_TIME_SCHEMA", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/TimestampConverter.html#OPTIONAL_TIMESTAMP_SCHEMA"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/TimestampConverter.html#OPTIONAL_TIMESTAMP_SCHEMA"/>
         /// </summary>
         public static Org.Apache.Kafka.Connect.Data.Schema OPTIONAL_TIMESTAMP_SCHEMA { get { return SGetField<Org.Apache.Kafka.Connect.Data.Schema>(LocalBridgeClazz, "OPTIONAL_TIMESTAMP_SCHEMA"); } set { SSetField(LocalBridgeClazz, "OPTIONAL_TIMESTAMP_SCHEMA", value); } }
 
@@ -624,7 +624,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/TimestampConverter.html#version()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/TimestampConverter.html#version()"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String Version()
@@ -632,7 +632,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
             return IExecuteWithSignature<Java.Lang.String>("version", "()Ljava/lang/String;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/TimestampConverter.html#config()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/TimestampConverter.html#config()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Config.ConfigDef"/></returns>
         public Org.Apache.Kafka.Common.Config.ConfigDef ConfigMethod()
@@ -640,7 +640,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
             return IExecuteWithSignature<Org.Apache.Kafka.Common.Config.ConfigDef>("config", "()Lorg/apache/kafka/common/config/ConfigDef;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/TimestampConverter.html#apply(org.apache.kafka.connect.connector.ConnectRecord)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/TimestampConverter.html#apply(org.apache.kafka.connect.connector.ConnectRecord)"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="R"/></param>
         /// <returns><typeparamref name="R"/></returns>
@@ -649,14 +649,14 @@ namespace Org.Apache.Kafka.Connect.Transforms
             return IExecuteWithSignature<R>("apply", "(Lorg/apache/kafka/connect/connector/ConnectRecord;)Lorg/apache/kafka/connect/connector/ConnectRecord;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/TimestampConverter.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/TimestampConverter.html#close()"/>
         /// </summary>
         public void Close()
         {
             IExecuteWithSignature("close", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/TimestampConverter.html#configure(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/TimestampConverter.html#configure(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         public void Configure(Java.Util.Map<Java.Lang.String, object> arg0)

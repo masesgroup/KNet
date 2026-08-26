@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.Errors
 {
     #region StreamsNotStartedException declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/errors/StreamsNotStartedException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/errors/StreamsNotStartedException.html"/>
     /// </summary>
     public partial class StreamsNotStartedException : Org.Apache.Kafka.Streams.Errors.InvalidStateStoreException
     {

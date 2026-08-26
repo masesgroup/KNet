@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Security
 {
     #region JaasUtils declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/security/JaasUtils.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/security/JaasUtils.html"/>
     /// </summary>
     public partial class JaasUtils : MASES.JCOBridge.C2JBridge.JVMBridgeBase<JaasUtils>
     {
@@ -72,25 +72,25 @@ namespace Org.Apache.Kafka.Common.Security
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/security/JaasUtils.html#ALLOWED_LOGIN_MODULES_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/security/JaasUtils.html#ALLOWED_LOGIN_MODULES_CONFIG"/>
         /// </summary>
         public static Java.Lang.String ALLOWED_LOGIN_MODULES_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "ALLOWED_LOGIN_MODULES_CONFIG"); } set { SSetField(LocalBridgeClazz, "ALLOWED_LOGIN_MODULES_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/security/JaasUtils.html#DISALLOWED_LOGIN_MODULES_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/security/JaasUtils.html#DISALLOWED_LOGIN_MODULES_CONFIG"/>
         /// </summary>
         [global::System.Obsolete("Deprecated in JVM")]
         public static Java.Lang.String DISALLOWED_LOGIN_MODULES_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "DISALLOWED_LOGIN_MODULES_CONFIG"); } set { SSetField(LocalBridgeClazz, "DISALLOWED_LOGIN_MODULES_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/security/JaasUtils.html#DISALLOWED_LOGIN_MODULES_DEFAULT"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/security/JaasUtils.html#DISALLOWED_LOGIN_MODULES_DEFAULT"/>
         /// </summary>
         [global::System.Obsolete("Deprecated in JVM")]
         public static Java.Lang.String DISALLOWED_LOGIN_MODULES_DEFAULT { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "DISALLOWED_LOGIN_MODULES_DEFAULT"); } set { SSetField(LocalBridgeClazz, "DISALLOWED_LOGIN_MODULES_DEFAULT", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/security/JaasUtils.html#JAVA_LOGIN_CONFIG_PARAM"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/security/JaasUtils.html#JAVA_LOGIN_CONFIG_PARAM"/>
         /// </summary>
         public static Java.Lang.String JAVA_LOGIN_CONFIG_PARAM { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "JAVA_LOGIN_CONFIG_PARAM"); } set { SSetField(LocalBridgeClazz, "JAVA_LOGIN_CONFIG_PARAM", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/security/JaasUtils.html#SERVICE_NAME"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/security/JaasUtils.html#SERVICE_NAME"/>
         /// </summary>
         public static Java.Lang.String SERVICE_NAME { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "SERVICE_NAME"); } set { SSetField(LocalBridgeClazz, "SERVICE_NAME", value); } }
 

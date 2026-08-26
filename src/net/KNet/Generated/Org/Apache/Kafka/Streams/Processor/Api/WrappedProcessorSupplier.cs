@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
 {
     #region WrappedProcessorSupplier declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/api/WrappedProcessorSupplier.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/processor/api/WrappedProcessorSupplier.html"/>
     /// </summary>
     public partial class WrappedProcessorSupplier : Org.Apache.Kafka.Streams.Processor.Api.ProcessorSupplier
     {
@@ -61,7 +61,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
 
     #region WrappedProcessorSupplier<KIn, VIn, KOut, VOut> declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/api/WrappedProcessorSupplier.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/processor/api/WrappedProcessorSupplier.html"/>
     /// </summary>
     /// <typeparam name="KIn"></typeparam>
     /// <typeparam name="VIn"></typeparam>
@@ -130,7 +130,7 @@ namespace Org.Apache.Kafka.Streams.Processor.Api
 
     #region IWrappedProcessorSupplier<KIn, VIn, KOut, VOut>
     /// <summary>
-    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/api/WrappedProcessorSupplier.html"/>
+    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/processor/api/WrappedProcessorSupplier.html"/>
     /// </summary>
     public partial interface IWrappedProcessorSupplier<KIn, VIn, KOut, VOut> : Org.Apache.Kafka.Streams.Processor.Api.IProcessorSupplier<KIn, VIn, KOut, VOut>
     {

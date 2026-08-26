@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
 {
     #region Filter declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/Filter.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/Filter.html"/>
     /// </summary>
     public partial class Filter : Org.Apache.Kafka.Connect.Transforms.Transformation
     {
@@ -61,7 +61,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
 
     #region Filter<R> declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/Filter.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/Filter.html"/>
     /// </summary>
     /// <typeparam name="R"><see cref="Org.Apache.Kafka.Connect.Connector.ConnectRecord{R}"/></typeparam>
     public partial class Filter<R> : Org.Apache.Kafka.Connect.Transforms.Transformation<R> where R : Org.Apache.Kafka.Connect.Connector.ConnectRecord<R>
@@ -99,7 +99,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/Filter.html#%3Cinit%3E()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/Filter.html#%3Cinit%3E()"/>
         /// </summary>
         public Filter() : base(JVMBridgeBase.InitializerInstance)
         {
@@ -121,11 +121,11 @@ namespace Org.Apache.Kafka.Connect.Transforms
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/Filter.html#OVERVIEW_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/Filter.html#OVERVIEW_DOC"/>
         /// </summary>
         public static Java.Lang.String OVERVIEW_DOC { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "OVERVIEW_DOC"); } set { SSetField(LocalBridgeClazz, "OVERVIEW_DOC", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/Filter.html#CONFIG_DEF"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/Filter.html#CONFIG_DEF"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Config.ConfigDef CONFIG_DEF { get { return SGetField<Org.Apache.Kafka.Common.Config.ConfigDef>(LocalBridgeClazz, "CONFIG_DEF"); } set { SSetField(LocalBridgeClazz, "CONFIG_DEF", value); } }
 
@@ -137,7 +137,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/Filter.html#version()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/Filter.html#version()"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String Version()
@@ -145,7 +145,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
             return IExecuteWithSignature<Java.Lang.String>("version", "()Ljava/lang/String;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/Filter.html#config()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/Filter.html#config()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Config.ConfigDef"/></returns>
         public Org.Apache.Kafka.Common.Config.ConfigDef Config()
@@ -153,7 +153,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
             return IExecuteWithSignature<Org.Apache.Kafka.Common.Config.ConfigDef>("config", "()Lorg/apache/kafka/common/config/ConfigDef;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/Filter.html#apply(org.apache.kafka.connect.connector.ConnectRecord)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/Filter.html#apply(org.apache.kafka.connect.connector.ConnectRecord)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Connector.ConnectRecord"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Connect.Connector.ConnectRecord"/></returns>
@@ -162,14 +162,14 @@ namespace Org.Apache.Kafka.Connect.Transforms
             return IExecuteWithSignature<Org.Apache.Kafka.Connect.Connector.ConnectRecord>("apply", "(Lorg/apache/kafka/connect/connector/ConnectRecord;)Lorg/apache/kafka/connect/connector/ConnectRecord;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/Filter.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/Filter.html#close()"/>
         /// </summary>
         public void Close()
         {
             IExecuteWithSignature("close", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/Filter.html#configure(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/Filter.html#configure(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         public void Configure(Java.Util.Map arg0)
@@ -192,7 +192,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/Filter.html#%3Cinit%3E()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/Filter.html#%3Cinit%3E()"/>
         /// </summary>
         public Filter() : base(JVMBridgeBase.InitializerInstance)
         {
@@ -218,11 +218,11 @@ namespace Org.Apache.Kafka.Connect.Transforms
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/Filter.html#OVERVIEW_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/Filter.html#OVERVIEW_DOC"/>
         /// </summary>
         public static Java.Lang.String OVERVIEW_DOC { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "OVERVIEW_DOC"); } set { SSetField(LocalBridgeClazz, "OVERVIEW_DOC", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/Filter.html#CONFIG_DEF"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/Filter.html#CONFIG_DEF"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Config.ConfigDef CONFIG_DEF { get { return SGetField<Org.Apache.Kafka.Common.Config.ConfigDef>(LocalBridgeClazz, "CONFIG_DEF"); } set { SSetField(LocalBridgeClazz, "CONFIG_DEF", value); } }
 
@@ -234,7 +234,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/Filter.html#version()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/Filter.html#version()"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String Version()
@@ -242,7 +242,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
             return IExecuteWithSignature<Java.Lang.String>("version", "()Ljava/lang/String;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/Filter.html#config()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/Filter.html#config()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Config.ConfigDef"/></returns>
         public Org.Apache.Kafka.Common.Config.ConfigDef Config()
@@ -250,7 +250,7 @@ namespace Org.Apache.Kafka.Connect.Transforms
             return IExecuteWithSignature<Org.Apache.Kafka.Common.Config.ConfigDef>("config", "()Lorg/apache/kafka/common/config/ConfigDef;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/Filter.html#apply(org.apache.kafka.connect.connector.ConnectRecord)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/Filter.html#apply(org.apache.kafka.connect.connector.ConnectRecord)"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="R"/></param>
         /// <returns><typeparamref name="R"/></returns>
@@ -259,14 +259,14 @@ namespace Org.Apache.Kafka.Connect.Transforms
             return IExecuteWithSignature<R>("apply", "(Lorg/apache/kafka/connect/connector/ConnectRecord;)Lorg/apache/kafka/connect/connector/ConnectRecord;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/Filter.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/Filter.html#close()"/>
         /// </summary>
         public void Close()
         {
             IExecuteWithSignature("close", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/Filter.html#configure(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/Filter.html#configure(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         public void Configure(Java.Util.Map<Java.Lang.String, object> arg0)

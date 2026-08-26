@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Raft
 {
     #region RaftUtil declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/RaftUtil.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/RaftUtil.html"/>
     /// </summary>
     public partial class RaftUtil : MASES.JCOBridge.C2JBridge.JVMBridgeBase<RaftUtil>
     {
@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Raft
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/RaftUtil.html#%3Cinit%3E()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/RaftUtil.html#%3Cinit%3E()"/>
         /// </summary>
         public RaftUtil() : base(JVMBridgeBase.InitializerInstance)
         {

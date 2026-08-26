@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Clients.Producer
 {
     #region Callback declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/producer/Callback.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/producer/Callback.html"/>
     /// </summary>
     public partial class Callback : MASES.JCOBridge.C2JBridge.JVMBridgeListener
     {
@@ -145,7 +145,7 @@ namespace Org.Apache.Kafka.Clients.Producer
 
     #region ICallback
     /// <summary>
-    /// .NET interface for org.mases.knet.generated.org.apache.kafka.clients.producer.Callback implementing <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/producer/Callback.html"/>
+    /// .NET interface for org.mases.knet.generated.org.apache.kafka.clients.producer.Callback implementing <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/producer/Callback.html"/>
     /// </summary>
     public partial interface ICallback
     {
@@ -199,7 +199,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         }
 
         /// <summary>
-        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/producer/Callback.html#onCompletion(org.apache.kafka.clients.producer.RecordMetadata,java.lang.Exception)"/>
+        /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/producer/Callback.html#onCompletion(org.apache.kafka.clients.producer.RecordMetadata,java.lang.Exception)"/>
         /// </summary>
         /// <remarks>
         /// Assign a delegate to handle the event without subclassing. If both this handler and a virtual method override are present,
@@ -232,7 +232,7 @@ namespace Org.Apache.Kafka.Clients.Producer
         }
 
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/producer/Callback.html#onCompletion(org.apache.kafka.clients.producer.RecordMetadata,java.lang.Exception)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/producer/Callback.html#onCompletion(org.apache.kafka.clients.producer.RecordMetadata,java.lang.Exception)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Producer.RecordMetadata"/></param>
         /// <param name="arg1"><see cref="Java.Lang.Exception"/></param>
@@ -272,7 +272,7 @@ namespace Org.Apache.Kafka.Clients.Producer
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/producer/Callback.html#onCompletion(org.apache.kafka.clients.producer.RecordMetadata,java.lang.Exception)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/producer/Callback.html#onCompletion(org.apache.kafka.clients.producer.RecordMetadata,java.lang.Exception)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Producer.RecordMetadata"/></param>
         /// <param name="arg1"><see cref="Java.Lang.Exception"/></param>

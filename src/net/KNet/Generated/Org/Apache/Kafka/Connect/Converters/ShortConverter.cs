@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Connect.Converters
 {
     #region ShortConverter declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.2.1/org/apache/kafka/connect/converters/ShortConverter.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.3.1/org/apache/kafka/connect/converters/ShortConverter.html"/>
     /// </summary>
     public partial class ShortConverter : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ShortConverter>
     {
@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Connect.Converters
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.2.1/org/apache/kafka/connect/converters/ShortConverter.html#%3Cinit%3E()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.3.1/org/apache/kafka/connect/converters/ShortConverter.html#%3Cinit%3E()"/>
         /// </summary>
         public ShortConverter() : base(JVMBridgeBase.InitializerInstance)
         {

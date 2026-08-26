@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Raft
 {
     #region QuorumConfig declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/QuorumConfig.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/QuorumConfig.html"/>
     /// </summary>
     public partial class QuorumConfig : MASES.JCOBridge.C2JBridge.JVMBridgeBase<QuorumConfig>
     {
@@ -57,7 +57,7 @@ namespace Org.Apache.Kafka.Raft
         // TODO: complete the class
         #region ControllerQuorumBootstrapServersValidator declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/QuorumConfig.ControllerQuorumBootstrapServersValidator.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/QuorumConfig.ControllerQuorumBootstrapServersValidator.html"/>
         /// </summary>
         public partial class ControllerQuorumBootstrapServersValidator : Org.Apache.Kafka.Common.Config.ConfigDef.Validator
         {
@@ -91,7 +91,7 @@ namespace Org.Apache.Kafka.Raft
 
         #region ControllerQuorumVotersValidator declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/QuorumConfig.ControllerQuorumVotersValidator.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/QuorumConfig.ControllerQuorumVotersValidator.html"/>
         /// </summary>
         public partial class ControllerQuorumVotersValidator : Org.Apache.Kafka.Common.Config.ConfigDef.Validator
         {
@@ -132,7 +132,7 @@ namespace Org.Apache.Kafka.Raft
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/QuorumConfig.html#%3Cinit%3E(org.apache.kafka.common.config.AbstractConfig)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/QuorumConfig.html#%3Cinit%3E(org.apache.kafka.common.config.AbstractConfig)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Config.AbstractConfig"/></param>
         public QuorumConfig(Org.Apache.Kafka.Common.Config.AbstractConfig arg0) : base(JVMBridgeBase.InitializerInstance)
@@ -155,143 +155,143 @@ namespace Org.Apache.Kafka.Raft
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/QuorumConfig.html#DEFAULT_QUORUM_AUTO_JOIN_ENABLE"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/QuorumConfig.html#DEFAULT_QUORUM_AUTO_JOIN_ENABLE"/>
         /// </summary>
         public static bool DEFAULT_QUORUM_AUTO_JOIN_ENABLE { get { return SGetField<bool>(LocalBridgeClazz, "DEFAULT_QUORUM_AUTO_JOIN_ENABLE"); } set { SSetField(LocalBridgeClazz, "DEFAULT_QUORUM_AUTO_JOIN_ENABLE", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/QuorumConfig.html#DEFAULT_QUORUM_ELECTION_BACKOFF_MAX_MS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/QuorumConfig.html#DEFAULT_QUORUM_ELECTION_BACKOFF_MAX_MS"/>
         /// </summary>
         public static int DEFAULT_QUORUM_ELECTION_BACKOFF_MAX_MS { get { return SGetField<int>(LocalBridgeClazz, "DEFAULT_QUORUM_ELECTION_BACKOFF_MAX_MS"); } set { SSetField(LocalBridgeClazz, "DEFAULT_QUORUM_ELECTION_BACKOFF_MAX_MS", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/QuorumConfig.html#DEFAULT_QUORUM_ELECTION_TIMEOUT_MS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/QuorumConfig.html#DEFAULT_QUORUM_ELECTION_TIMEOUT_MS"/>
         /// </summary>
         public static int DEFAULT_QUORUM_ELECTION_TIMEOUT_MS { get { return SGetField<int>(LocalBridgeClazz, "DEFAULT_QUORUM_ELECTION_TIMEOUT_MS"); } set { SSetField(LocalBridgeClazz, "DEFAULT_QUORUM_ELECTION_TIMEOUT_MS", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/QuorumConfig.html#DEFAULT_QUORUM_FETCH_MAX_BYTES"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/QuorumConfig.html#DEFAULT_QUORUM_FETCH_MAX_BYTES"/>
         /// </summary>
         public static int DEFAULT_QUORUM_FETCH_MAX_BYTES { get { return SGetField<int>(LocalBridgeClazz, "DEFAULT_QUORUM_FETCH_MAX_BYTES"); } set { SSetField(LocalBridgeClazz, "DEFAULT_QUORUM_FETCH_MAX_BYTES", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/QuorumConfig.html#DEFAULT_QUORUM_FETCH_SNAPSHOT_MAX_BYTES"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/QuorumConfig.html#DEFAULT_QUORUM_FETCH_SNAPSHOT_MAX_BYTES"/>
         /// </summary>
         public static int DEFAULT_QUORUM_FETCH_SNAPSHOT_MAX_BYTES { get { return SGetField<int>(LocalBridgeClazz, "DEFAULT_QUORUM_FETCH_SNAPSHOT_MAX_BYTES"); } set { SSetField(LocalBridgeClazz, "DEFAULT_QUORUM_FETCH_SNAPSHOT_MAX_BYTES", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/QuorumConfig.html#DEFAULT_QUORUM_FETCH_TIMEOUT_MS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/QuorumConfig.html#DEFAULT_QUORUM_FETCH_TIMEOUT_MS"/>
         /// </summary>
         public static int DEFAULT_QUORUM_FETCH_TIMEOUT_MS { get { return SGetField<int>(LocalBridgeClazz, "DEFAULT_QUORUM_FETCH_TIMEOUT_MS"); } set { SSetField(LocalBridgeClazz, "DEFAULT_QUORUM_FETCH_TIMEOUT_MS", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/QuorumConfig.html#DEFAULT_QUORUM_LINGER_MS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/QuorumConfig.html#DEFAULT_QUORUM_LINGER_MS"/>
         /// </summary>
         public static int DEFAULT_QUORUM_LINGER_MS { get { return SGetField<int>(LocalBridgeClazz, "DEFAULT_QUORUM_LINGER_MS"); } set { SSetField(LocalBridgeClazz, "DEFAULT_QUORUM_LINGER_MS", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/QuorumConfig.html#DEFAULT_QUORUM_REQUEST_TIMEOUT_MS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/QuorumConfig.html#DEFAULT_QUORUM_REQUEST_TIMEOUT_MS"/>
         /// </summary>
         public static int DEFAULT_QUORUM_REQUEST_TIMEOUT_MS { get { return SGetField<int>(LocalBridgeClazz, "DEFAULT_QUORUM_REQUEST_TIMEOUT_MS"); } set { SSetField(LocalBridgeClazz, "DEFAULT_QUORUM_REQUEST_TIMEOUT_MS", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/QuorumConfig.html#DEFAULT_QUORUM_RETRY_BACKOFF_MS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/QuorumConfig.html#DEFAULT_QUORUM_RETRY_BACKOFF_MS"/>
         /// </summary>
         public static int DEFAULT_QUORUM_RETRY_BACKOFF_MS { get { return SGetField<int>(LocalBridgeClazz, "DEFAULT_QUORUM_RETRY_BACKOFF_MS"); } set { SSetField(LocalBridgeClazz, "DEFAULT_QUORUM_RETRY_BACKOFF_MS", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/QuorumConfig.html#NON_ROUTABLE_HOST"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/QuorumConfig.html#NON_ROUTABLE_HOST"/>
         /// </summary>
         public static Java.Lang.String NON_ROUTABLE_HOST { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "NON_ROUTABLE_HOST"); } set { SSetField(LocalBridgeClazz, "NON_ROUTABLE_HOST", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/QuorumConfig.html#QUORUM_AUTO_JOIN_ENABLE_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/QuorumConfig.html#QUORUM_AUTO_JOIN_ENABLE_CONFIG"/>
         /// </summary>
         public static Java.Lang.String QUORUM_AUTO_JOIN_ENABLE_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "QUORUM_AUTO_JOIN_ENABLE_CONFIG"); } set { SSetField(LocalBridgeClazz, "QUORUM_AUTO_JOIN_ENABLE_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/QuorumConfig.html#QUORUM_AUTO_JOIN_ENABLE_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/QuorumConfig.html#QUORUM_AUTO_JOIN_ENABLE_DOC"/>
         /// </summary>
         public static Java.Lang.String QUORUM_AUTO_JOIN_ENABLE_DOC { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "QUORUM_AUTO_JOIN_ENABLE_DOC"); } set { SSetField(LocalBridgeClazz, "QUORUM_AUTO_JOIN_ENABLE_DOC", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/QuorumConfig.html#QUORUM_BOOTSTRAP_SERVERS_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/QuorumConfig.html#QUORUM_BOOTSTRAP_SERVERS_CONFIG"/>
         /// </summary>
         public static Java.Lang.String QUORUM_BOOTSTRAP_SERVERS_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "QUORUM_BOOTSTRAP_SERVERS_CONFIG"); } set { SSetField(LocalBridgeClazz, "QUORUM_BOOTSTRAP_SERVERS_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/QuorumConfig.html#QUORUM_BOOTSTRAP_SERVERS_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/QuorumConfig.html#QUORUM_BOOTSTRAP_SERVERS_DOC"/>
         /// </summary>
         public static Java.Lang.String QUORUM_BOOTSTRAP_SERVERS_DOC { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "QUORUM_BOOTSTRAP_SERVERS_DOC"); } set { SSetField(LocalBridgeClazz, "QUORUM_BOOTSTRAP_SERVERS_DOC", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/QuorumConfig.html#QUORUM_ELECTION_BACKOFF_MAX_MS_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/QuorumConfig.html#QUORUM_ELECTION_BACKOFF_MAX_MS_CONFIG"/>
         /// </summary>
         public static Java.Lang.String QUORUM_ELECTION_BACKOFF_MAX_MS_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "QUORUM_ELECTION_BACKOFF_MAX_MS_CONFIG"); } set { SSetField(LocalBridgeClazz, "QUORUM_ELECTION_BACKOFF_MAX_MS_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/QuorumConfig.html#QUORUM_ELECTION_BACKOFF_MAX_MS_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/QuorumConfig.html#QUORUM_ELECTION_BACKOFF_MAX_MS_DOC"/>
         /// </summary>
         public static Java.Lang.String QUORUM_ELECTION_BACKOFF_MAX_MS_DOC { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "QUORUM_ELECTION_BACKOFF_MAX_MS_DOC"); } set { SSetField(LocalBridgeClazz, "QUORUM_ELECTION_BACKOFF_MAX_MS_DOC", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/QuorumConfig.html#QUORUM_ELECTION_TIMEOUT_MS_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/QuorumConfig.html#QUORUM_ELECTION_TIMEOUT_MS_CONFIG"/>
         /// </summary>
         public static Java.Lang.String QUORUM_ELECTION_TIMEOUT_MS_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "QUORUM_ELECTION_TIMEOUT_MS_CONFIG"); } set { SSetField(LocalBridgeClazz, "QUORUM_ELECTION_TIMEOUT_MS_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/QuorumConfig.html#QUORUM_ELECTION_TIMEOUT_MS_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/QuorumConfig.html#QUORUM_ELECTION_TIMEOUT_MS_DOC"/>
         /// </summary>
         public static Java.Lang.String QUORUM_ELECTION_TIMEOUT_MS_DOC { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "QUORUM_ELECTION_TIMEOUT_MS_DOC"); } set { SSetField(LocalBridgeClazz, "QUORUM_ELECTION_TIMEOUT_MS_DOC", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/QuorumConfig.html#QUORUM_FETCH_MAX_BYTES_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/QuorumConfig.html#QUORUM_FETCH_MAX_BYTES_CONFIG"/>
         /// </summary>
         public static Java.Lang.String QUORUM_FETCH_MAX_BYTES_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "QUORUM_FETCH_MAX_BYTES_CONFIG"); } set { SSetField(LocalBridgeClazz, "QUORUM_FETCH_MAX_BYTES_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/QuorumConfig.html#QUORUM_FETCH_MAX_BYTES_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/QuorumConfig.html#QUORUM_FETCH_MAX_BYTES_DOC"/>
         /// </summary>
         public static Java.Lang.String QUORUM_FETCH_MAX_BYTES_DOC { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "QUORUM_FETCH_MAX_BYTES_DOC"); } set { SSetField(LocalBridgeClazz, "QUORUM_FETCH_MAX_BYTES_DOC", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/QuorumConfig.html#QUORUM_FETCH_SNAPSHOT_MAX_BYTES_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/QuorumConfig.html#QUORUM_FETCH_SNAPSHOT_MAX_BYTES_CONFIG"/>
         /// </summary>
         public static Java.Lang.String QUORUM_FETCH_SNAPSHOT_MAX_BYTES_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "QUORUM_FETCH_SNAPSHOT_MAX_BYTES_CONFIG"); } set { SSetField(LocalBridgeClazz, "QUORUM_FETCH_SNAPSHOT_MAX_BYTES_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/QuorumConfig.html#QUORUM_FETCH_SNAPSHOT_MAX_BYTES_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/QuorumConfig.html#QUORUM_FETCH_SNAPSHOT_MAX_BYTES_DOC"/>
         /// </summary>
         public static Java.Lang.String QUORUM_FETCH_SNAPSHOT_MAX_BYTES_DOC { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "QUORUM_FETCH_SNAPSHOT_MAX_BYTES_DOC"); } set { SSetField(LocalBridgeClazz, "QUORUM_FETCH_SNAPSHOT_MAX_BYTES_DOC", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/QuorumConfig.html#QUORUM_FETCH_TIMEOUT_MS_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/QuorumConfig.html#QUORUM_FETCH_TIMEOUT_MS_CONFIG"/>
         /// </summary>
         public static Java.Lang.String QUORUM_FETCH_TIMEOUT_MS_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "QUORUM_FETCH_TIMEOUT_MS_CONFIG"); } set { SSetField(LocalBridgeClazz, "QUORUM_FETCH_TIMEOUT_MS_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/QuorumConfig.html#QUORUM_FETCH_TIMEOUT_MS_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/QuorumConfig.html#QUORUM_FETCH_TIMEOUT_MS_DOC"/>
         /// </summary>
         public static Java.Lang.String QUORUM_FETCH_TIMEOUT_MS_DOC { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "QUORUM_FETCH_TIMEOUT_MS_DOC"); } set { SSetField(LocalBridgeClazz, "QUORUM_FETCH_TIMEOUT_MS_DOC", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/QuorumConfig.html#QUORUM_LINGER_MS_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/QuorumConfig.html#QUORUM_LINGER_MS_CONFIG"/>
         /// </summary>
         public static Java.Lang.String QUORUM_LINGER_MS_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "QUORUM_LINGER_MS_CONFIG"); } set { SSetField(LocalBridgeClazz, "QUORUM_LINGER_MS_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/QuorumConfig.html#QUORUM_LINGER_MS_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/QuorumConfig.html#QUORUM_LINGER_MS_DOC"/>
         /// </summary>
         public static Java.Lang.String QUORUM_LINGER_MS_DOC { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "QUORUM_LINGER_MS_DOC"); } set { SSetField(LocalBridgeClazz, "QUORUM_LINGER_MS_DOC", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/QuorumConfig.html#QUORUM_REQUEST_TIMEOUT_MS_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/QuorumConfig.html#QUORUM_REQUEST_TIMEOUT_MS_CONFIG"/>
         /// </summary>
         public static Java.Lang.String QUORUM_REQUEST_TIMEOUT_MS_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "QUORUM_REQUEST_TIMEOUT_MS_CONFIG"); } set { SSetField(LocalBridgeClazz, "QUORUM_REQUEST_TIMEOUT_MS_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/QuorumConfig.html#QUORUM_REQUEST_TIMEOUT_MS_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/QuorumConfig.html#QUORUM_REQUEST_TIMEOUT_MS_DOC"/>
         /// </summary>
         public static Java.Lang.String QUORUM_REQUEST_TIMEOUT_MS_DOC { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "QUORUM_REQUEST_TIMEOUT_MS_DOC"); } set { SSetField(LocalBridgeClazz, "QUORUM_REQUEST_TIMEOUT_MS_DOC", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/QuorumConfig.html#QUORUM_RETRY_BACKOFF_MS_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/QuorumConfig.html#QUORUM_RETRY_BACKOFF_MS_CONFIG"/>
         /// </summary>
         public static Java.Lang.String QUORUM_RETRY_BACKOFF_MS_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "QUORUM_RETRY_BACKOFF_MS_CONFIG"); } set { SSetField(LocalBridgeClazz, "QUORUM_RETRY_BACKOFF_MS_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/QuorumConfig.html#QUORUM_RETRY_BACKOFF_MS_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/QuorumConfig.html#QUORUM_RETRY_BACKOFF_MS_DOC"/>
         /// </summary>
         public static Java.Lang.String QUORUM_RETRY_BACKOFF_MS_DOC { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "QUORUM_RETRY_BACKOFF_MS_DOC"); } set { SSetField(LocalBridgeClazz, "QUORUM_RETRY_BACKOFF_MS_DOC", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/QuorumConfig.html#QUORUM_VOTERS_CONFIG"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/QuorumConfig.html#QUORUM_VOTERS_CONFIG"/>
         /// </summary>
         public static Java.Lang.String QUORUM_VOTERS_CONFIG { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "QUORUM_VOTERS_CONFIG"); } set { SSetField(LocalBridgeClazz, "QUORUM_VOTERS_CONFIG", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/QuorumConfig.html#QUORUM_VOTERS_DOC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/QuorumConfig.html#QUORUM_VOTERS_DOC"/>
         /// </summary>
         public static Java.Lang.String QUORUM_VOTERS_DOC { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "QUORUM_VOTERS_DOC"); } set { SSetField(LocalBridgeClazz, "QUORUM_VOTERS_DOC", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/QuorumConfig.html#DEFAULT_QUORUM_BOOTSTRAP_SERVERS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/QuorumConfig.html#DEFAULT_QUORUM_BOOTSTRAP_SERVERS"/>
         /// </summary>
         public static Java.Util.List DEFAULT_QUORUM_BOOTSTRAP_SERVERS { get { return SGetField<Java.Util.List>(LocalBridgeClazz, "DEFAULT_QUORUM_BOOTSTRAP_SERVERS"); } set { SSetField(LocalBridgeClazz, "DEFAULT_QUORUM_BOOTSTRAP_SERVERS", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/QuorumConfig.html#DEFAULT_QUORUM_VOTERS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/QuorumConfig.html#DEFAULT_QUORUM_VOTERS"/>
         /// </summary>
         public static Java.Util.List DEFAULT_QUORUM_VOTERS { get { return SGetField<Java.Util.List>(LocalBridgeClazz, "DEFAULT_QUORUM_VOTERS"); } set { SSetField(LocalBridgeClazz, "DEFAULT_QUORUM_VOTERS", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/QuorumConfig.html#CONFIG_DEF"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/QuorumConfig.html#CONFIG_DEF"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Config.ConfigDef CONFIG_DEF { get { return SGetField<Org.Apache.Kafka.Common.Config.ConfigDef>(LocalBridgeClazz, "CONFIG_DEF"); } set { SSetField(LocalBridgeClazz, "CONFIG_DEF", value); } }
 
@@ -299,7 +299,7 @@ namespace Org.Apache.Kafka.Raft
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/QuorumConfig.html#parseBootstrapServers(java.util.List)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/QuorumConfig.html#parseBootstrapServers(java.util.List)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.List"/></param>
         /// <returns><see cref="Java.Util.List"/></returns>
@@ -308,7 +308,7 @@ namespace Org.Apache.Kafka.Raft
             return SExecuteWithSignature<Java.Util.List<Java.Net.InetSocketAddress>>(LocalBridgeClazz, "parseBootstrapServers", "(Ljava/util/List;)Ljava/util/List;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/QuorumConfig.html#quorumVoterStringsToNodes(java.util.List)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/QuorumConfig.html#quorumVoterStringsToNodes(java.util.List)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.List"/></param>
         /// <returns><see cref="Java.Util.List"/></returns>
@@ -317,7 +317,7 @@ namespace Org.Apache.Kafka.Raft
             return SExecuteWithSignature<Java.Util.List<Org.Apache.Kafka.Common.Node>>(LocalBridgeClazz, "quorumVoterStringsToNodes", "(Ljava/util/List;)Ljava/util/List;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/QuorumConfig.html#voterConnectionsToNodes(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/QuorumConfig.html#voterConnectionsToNodes(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <returns><see cref="Java.Util.List"/></returns>
@@ -326,7 +326,7 @@ namespace Org.Apache.Kafka.Raft
             return SExecuteWithSignature<Java.Util.List<Org.Apache.Kafka.Common.Node>>(LocalBridgeClazz, "voterConnectionsToNodes", "(Ljava/util/Map;)Ljava/util/List;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/QuorumConfig.html#parseVoterConnections(java.util.List)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/QuorumConfig.html#parseVoterConnections(java.util.List)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.List"/></param>
         /// <returns><see cref="Java.Util.Map"/></returns>
@@ -335,7 +335,7 @@ namespace Org.Apache.Kafka.Raft
             return SExecuteWithSignature<Java.Util.Map<Java.Lang.Integer, Java.Net.InetSocketAddress>>(LocalBridgeClazz, "parseVoterConnections", "(Ljava/util/List;)Ljava/util/Map;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/QuorumConfig.html#parseVoterIds(java.util.List)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/QuorumConfig.html#parseVoterIds(java.util.List)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.List"/></param>
         /// <returns><see cref="Java.Util.Set"/></returns>
@@ -348,7 +348,7 @@ namespace Org.Apache.Kafka.Raft
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/QuorumConfig.html#autoJoin()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/QuorumConfig.html#autoJoin()"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool AutoJoin()
@@ -356,7 +356,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<bool>("autoJoin", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/QuorumConfig.html#appendLingerMs()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/QuorumConfig.html#appendLingerMs()"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int AppendLingerMs()
@@ -364,7 +364,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<int>("appendLingerMs", "()I");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/QuorumConfig.html#electionBackoffMaxMs()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/QuorumConfig.html#electionBackoffMaxMs()"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int ElectionBackoffMaxMs()
@@ -372,7 +372,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<int>("electionBackoffMaxMs", "()I");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/QuorumConfig.html#electionTimeoutMs()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/QuorumConfig.html#electionTimeoutMs()"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int ElectionTimeoutMs()
@@ -380,7 +380,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<int>("electionTimeoutMs", "()I");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/QuorumConfig.html#fetchMaxBytes()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/QuorumConfig.html#fetchMaxBytes()"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int FetchMaxBytes()
@@ -388,7 +388,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<int>("fetchMaxBytes", "()I");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/QuorumConfig.html#fetchSnapshotMaxBytes()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/QuorumConfig.html#fetchSnapshotMaxBytes()"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int FetchSnapshotMaxBytes()
@@ -396,7 +396,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<int>("fetchSnapshotMaxBytes", "()I");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/QuorumConfig.html#fetchTimeoutMs()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/QuorumConfig.html#fetchTimeoutMs()"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int FetchTimeoutMs()
@@ -404,7 +404,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<int>("fetchTimeoutMs", "()I");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/QuorumConfig.html#requestTimeoutMs()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/QuorumConfig.html#requestTimeoutMs()"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int RequestTimeoutMs()
@@ -412,7 +412,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<int>("requestTimeoutMs", "()I");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/QuorumConfig.html#retryBackoffMs()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/QuorumConfig.html#retryBackoffMs()"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int RetryBackoffMs()
@@ -420,7 +420,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<int>("retryBackoffMs", "()I");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/QuorumConfig.html#bootstrapServers()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/QuorumConfig.html#bootstrapServers()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.List"/></returns>
         public Java.Util.List<Java.Lang.String> BootstrapServers()
@@ -428,7 +428,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<Java.Util.List<Java.Lang.String>>("bootstrapServers", "()Ljava/util/List;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/QuorumConfig.html#voters()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/QuorumConfig.html#voters()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.List"/></returns>
         public Java.Util.List<Java.Lang.String> Voters()
@@ -444,7 +444,7 @@ namespace Org.Apache.Kafka.Raft
         {
             #region Constructors
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/QuorumConfig.ControllerQuorumBootstrapServersValidator.html#%3Cinit%3E()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/QuorumConfig.ControllerQuorumBootstrapServersValidator.html#%3Cinit%3E()"/>
             /// </summary>
             public ControllerQuorumBootstrapServersValidator() : base(JVMBridgeBase.InitializerInstance)
             {
@@ -474,7 +474,7 @@ namespace Org.Apache.Kafka.Raft
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/QuorumConfig.ControllerQuorumBootstrapServersValidator.html#ensureValid(java.lang.String,java.lang.Object)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/QuorumConfig.ControllerQuorumBootstrapServersValidator.html#ensureValid(java.lang.String,java.lang.Object)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Lang.String"/></param>
             /// <param name="arg1"><see cref="object"/></param>
@@ -498,7 +498,7 @@ namespace Org.Apache.Kafka.Raft
         {
             #region Constructors
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/QuorumConfig.ControllerQuorumVotersValidator.html#%3Cinit%3E()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/QuorumConfig.ControllerQuorumVotersValidator.html#%3Cinit%3E()"/>
             /// </summary>
             public ControllerQuorumVotersValidator() : base(JVMBridgeBase.InitializerInstance)
             {
@@ -528,7 +528,7 @@ namespace Org.Apache.Kafka.Raft
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/QuorumConfig.ControllerQuorumVotersValidator.html#ensureValid(java.lang.String,java.lang.Object)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/QuorumConfig.ControllerQuorumVotersValidator.html#ensureValid(java.lang.String,java.lang.Object)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Lang.String"/></param>
             /// <param name="arg1"><see cref="object"/></param>

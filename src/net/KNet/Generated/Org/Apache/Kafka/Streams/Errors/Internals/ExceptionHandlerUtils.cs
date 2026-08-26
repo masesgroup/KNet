@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.Errors.Internals
 {
     #region ExceptionHandlerUtils declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/errors/internals/ExceptionHandlerUtils.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/errors/internals/ExceptionHandlerUtils.html"/>
     /// </summary>
     public partial class ExceptionHandlerUtils : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ExceptionHandlerUtils>
     {
@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Streams.Errors.Internals
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/errors/internals/ExceptionHandlerUtils.html#%3Cinit%3E()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/errors/internals/ExceptionHandlerUtils.html#%3Cinit%3E()"/>
         /// </summary>
         public ExceptionHandlerUtils() : base(JVMBridgeBase.InitializerInstance)
         {
@@ -86,27 +86,27 @@ namespace Org.Apache.Kafka.Streams.Errors.Internals
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/errors/internals/ExceptionHandlerUtils.html#HEADER_ERRORS_EXCEPTION_MESSAGE_NAME"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/errors/internals/ExceptionHandlerUtils.html#HEADER_ERRORS_EXCEPTION_MESSAGE_NAME"/>
         /// </summary>
         public static Java.Lang.String HEADER_ERRORS_EXCEPTION_MESSAGE_NAME { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "HEADER_ERRORS_EXCEPTION_MESSAGE_NAME"); } set { SSetField(LocalBridgeClazz, "HEADER_ERRORS_EXCEPTION_MESSAGE_NAME", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/errors/internals/ExceptionHandlerUtils.html#HEADER_ERRORS_EXCEPTION_NAME"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/errors/internals/ExceptionHandlerUtils.html#HEADER_ERRORS_EXCEPTION_NAME"/>
         /// </summary>
         public static Java.Lang.String HEADER_ERRORS_EXCEPTION_NAME { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "HEADER_ERRORS_EXCEPTION_NAME"); } set { SSetField(LocalBridgeClazz, "HEADER_ERRORS_EXCEPTION_NAME", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/errors/internals/ExceptionHandlerUtils.html#HEADER_ERRORS_OFFSET_NAME"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/errors/internals/ExceptionHandlerUtils.html#HEADER_ERRORS_OFFSET_NAME"/>
         /// </summary>
         public static Java.Lang.String HEADER_ERRORS_OFFSET_NAME { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "HEADER_ERRORS_OFFSET_NAME"); } set { SSetField(LocalBridgeClazz, "HEADER_ERRORS_OFFSET_NAME", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/errors/internals/ExceptionHandlerUtils.html#HEADER_ERRORS_PARTITION_NAME"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/errors/internals/ExceptionHandlerUtils.html#HEADER_ERRORS_PARTITION_NAME"/>
         /// </summary>
         public static Java.Lang.String HEADER_ERRORS_PARTITION_NAME { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "HEADER_ERRORS_PARTITION_NAME"); } set { SSetField(LocalBridgeClazz, "HEADER_ERRORS_PARTITION_NAME", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/errors/internals/ExceptionHandlerUtils.html#HEADER_ERRORS_STACKTRACE_NAME"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/errors/internals/ExceptionHandlerUtils.html#HEADER_ERRORS_STACKTRACE_NAME"/>
         /// </summary>
         public static Java.Lang.String HEADER_ERRORS_STACKTRACE_NAME { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "HEADER_ERRORS_STACKTRACE_NAME"); } set { SSetField(LocalBridgeClazz, "HEADER_ERRORS_STACKTRACE_NAME", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/errors/internals/ExceptionHandlerUtils.html#HEADER_ERRORS_TOPIC_NAME"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/errors/internals/ExceptionHandlerUtils.html#HEADER_ERRORS_TOPIC_NAME"/>
         /// </summary>
         public static Java.Lang.String HEADER_ERRORS_TOPIC_NAME { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "HEADER_ERRORS_TOPIC_NAME"); } set { SSetField(LocalBridgeClazz, "HEADER_ERRORS_TOPIC_NAME", value); } }
 
@@ -114,7 +114,7 @@ namespace Org.Apache.Kafka.Streams.Errors.Internals
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/errors/internals/ExceptionHandlerUtils.html#shouldBuildDeadLetterQueueRecord(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/errors/internals/ExceptionHandlerUtils.html#shouldBuildDeadLetterQueueRecord(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="bool"/></returns>
@@ -123,7 +123,7 @@ namespace Org.Apache.Kafka.Streams.Errors.Internals
             return SExecuteWithSignature<bool>(LocalBridgeClazz, "shouldBuildDeadLetterQueueRecord", "(Ljava/lang/String;)Z", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/errors/internals/ExceptionHandlerUtils.html#maybeBuildDeadLetterQueueRecords(java.lang.String,byte[],byte[],org.apache.kafka.streams.errors.ErrorHandlerContext,java.lang.Exception)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/errors/internals/ExceptionHandlerUtils.html#maybeBuildDeadLetterQueueRecords(java.lang.String,byte[],byte[],org.apache.kafka.streams.errors.ErrorHandlerContext,java.lang.Exception)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="byte"/></param>
@@ -136,7 +136,7 @@ namespace Org.Apache.Kafka.Streams.Errors.Internals
             return SExecuteWithSignature<Java.Util.List<Org.Apache.Kafka.Clients.Producer.ProducerRecord<byte[], byte[]>>>(LocalBridgeClazz, "maybeBuildDeadLetterQueueRecords", "(Ljava/lang/String;[B[BLorg/apache/kafka/streams/errors/ErrorHandlerContext;Ljava/lang/Exception;)Ljava/util/List;", arg0, arg1, arg2, arg3, arg4);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/errors/internals/ExceptionHandlerUtils.html#buildDeadLetterQueueRecord(java.lang.String,byte[],byte[],org.apache.kafka.streams.errors.ErrorHandlerContext,java.lang.Exception)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/errors/internals/ExceptionHandlerUtils.html#buildDeadLetterQueueRecord(java.lang.String,byte[],byte[],org.apache.kafka.streams.errors.ErrorHandlerContext,java.lang.Exception)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="byte"/></param>
