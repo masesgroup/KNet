@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Queue
 {
     #region EventQueue declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.2.1/org/apache/kafka/queue/EventQueue.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/queue/EventQueue.html"/>
     /// </summary>
     public partial class EventQueue : Java.Lang.AutoCloseable
     {
@@ -57,7 +57,7 @@ namespace Org.Apache.Kafka.Queue
         // TODO: complete the class
         #region DeadlineFunction declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.2.1/org/apache/kafka/queue/EventQueue.DeadlineFunction.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/queue/EventQueue.DeadlineFunction.html"/>
         /// </summary>
         public partial class DeadlineFunction : MASES.JCOBridge.C2JBridge.JVMBridgeBase<DeadlineFunction>
         {
@@ -91,7 +91,7 @@ namespace Org.Apache.Kafka.Queue
 
         #region EarliestDeadlineFunction declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.2.1/org/apache/kafka/queue/EventQueue.EarliestDeadlineFunction.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/queue/EventQueue.EarliestDeadlineFunction.html"/>
         /// </summary>
         public partial class EarliestDeadlineFunction : MASES.JCOBridge.C2JBridge.JVMBridgeBase<EarliestDeadlineFunction>
         {
@@ -125,7 +125,7 @@ namespace Org.Apache.Kafka.Queue
 
         #region Event declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.2.1/org/apache/kafka/queue/EventQueue.Event.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/queue/EventQueue.Event.html"/>
         /// </summary>
         public partial class Event : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Event>
         {
@@ -159,7 +159,7 @@ namespace Org.Apache.Kafka.Queue
 
         #region EventInsertionType declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.2.1/org/apache/kafka/queue/EventQueue.EventInsertionType.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/queue/EventQueue.EventInsertionType.html"/>
         /// </summary>
         public partial class EventInsertionType : Java.Lang.Enum<Org.Apache.Kafka.Queue.EventQueue.EventInsertionType>
         {
@@ -193,7 +193,7 @@ namespace Org.Apache.Kafka.Queue
 
         #region NoDeadlineFunction declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.2.1/org/apache/kafka/queue/EventQueue.NoDeadlineFunction.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/queue/EventQueue.NoDeadlineFunction.html"/>
         /// </summary>
         public partial class NoDeadlineFunction : MASES.JCOBridge.C2JBridge.JVMBridgeBase<NoDeadlineFunction>
         {
@@ -227,7 +227,7 @@ namespace Org.Apache.Kafka.Queue
 
         #region VoidEvent declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.2.1/org/apache/kafka/queue/EventQueue.VoidEvent.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/queue/EventQueue.VoidEvent.html"/>
         /// </summary>
         public partial class VoidEvent : Org.Apache.Kafka.Queue.EventQueue.Event
         {
@@ -265,7 +265,7 @@ namespace Org.Apache.Kafka.Queue
 
     #region IEventQueue
     /// <summary>
-    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.2.1/org/apache/kafka/queue/EventQueue.html"/>
+    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/queue/EventQueue.html"/>
     /// </summary>
     public partial interface IEventQueue : Java.Lang.IAutoCloseable
     {
@@ -302,7 +302,7 @@ namespace Org.Apache.Kafka.Queue
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.2.1/org/apache/kafka/queue/EventQueue.html#size()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/queue/EventQueue.html#size()"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int Size()
@@ -310,7 +310,7 @@ namespace Org.Apache.Kafka.Queue
             return IExecuteWithSignature<int>("size", "()I");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.2.1/org/apache/kafka/queue/EventQueue.html#beginShutdown(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/queue/EventQueue.html#beginShutdown(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         public void BeginShutdown(Java.Lang.String arg0)
@@ -318,7 +318,7 @@ namespace Org.Apache.Kafka.Queue
             IExecuteWithSignature("beginShutdown", "(Ljava/lang/String;)V", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.2.1/org/apache/kafka/queue/EventQueue.html#cancelDeferred(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/queue/EventQueue.html#cancelDeferred(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         public void CancelDeferred(Java.Lang.String arg0)
@@ -326,7 +326,7 @@ namespace Org.Apache.Kafka.Queue
             IExecuteWithSignature("cancelDeferred", "(Ljava/lang/String;)V", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.2.1/org/apache/kafka/queue/EventQueue.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/queue/EventQueue.html#close()"/>
         /// </summary>
         /// <exception cref="Java.Lang.InterruptedException"/>
         public void Close()
@@ -334,7 +334,7 @@ namespace Org.Apache.Kafka.Queue
             IExecuteWithSignature("close", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.2.1/org/apache/kafka/queue/EventQueue.html#enqueue(org.apache.kafka.queue.EventQueue.EventInsertionType,java.lang.String,java.util.function.UnaryOperator,org.apache.kafka.queue.EventQueue.Event)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/queue/EventQueue.html#enqueue(org.apache.kafka.queue.EventQueue.EventInsertionType,java.lang.String,java.util.function.UnaryOperator,org.apache.kafka.queue.EventQueue.Event)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Queue.EventQueue.EventInsertionType"/></param>
         /// <param name="arg1"><see cref="Java.Lang.String"/></param>
@@ -345,7 +345,7 @@ namespace Org.Apache.Kafka.Queue
             IExecuteWithSignature("enqueue", "(Lorg/apache/kafka/queue/EventQueue$EventInsertionType;Ljava/lang/String;Ljava/util/function/UnaryOperator;Lorg/apache/kafka/queue/EventQueue$Event;)V", arg0, arg1, arg2, arg3);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.2.1/org/apache/kafka/queue/EventQueue.html#isEmpty()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/queue/EventQueue.html#isEmpty()"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool IsEmpty()
@@ -353,7 +353,7 @@ namespace Org.Apache.Kafka.Queue
             return IExecuteWithSignature<bool>("isEmpty", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.2.1/org/apache/kafka/queue/EventQueue.html#append(org.apache.kafka.queue.EventQueue.Event)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/queue/EventQueue.html#append(org.apache.kafka.queue.EventQueue.Event)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Queue.EventQueue.Event"/></param>
         public void Append(Org.Apache.Kafka.Queue.EventQueue.Event arg0)
@@ -361,7 +361,7 @@ namespace Org.Apache.Kafka.Queue
             IExecuteWithSignature("append", "(Lorg/apache/kafka/queue/EventQueue$Event;)V", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.2.1/org/apache/kafka/queue/EventQueue.html#appendWithDeadline(long,org.apache.kafka.queue.EventQueue.Event)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/queue/EventQueue.html#appendWithDeadline(long,org.apache.kafka.queue.EventQueue.Event)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Queue.EventQueue.Event"/></param>
@@ -370,7 +370,7 @@ namespace Org.Apache.Kafka.Queue
             IExecuteWithSignature("appendWithDeadline", "(JLorg/apache/kafka/queue/EventQueue$Event;)V", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.2.1/org/apache/kafka/queue/EventQueue.html#prepend(org.apache.kafka.queue.EventQueue.Event)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/queue/EventQueue.html#prepend(org.apache.kafka.queue.EventQueue.Event)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Queue.EventQueue.Event"/></param>
         public void Prepend(Org.Apache.Kafka.Queue.EventQueue.Event arg0)
@@ -378,7 +378,7 @@ namespace Org.Apache.Kafka.Queue
             IExecuteWithSignature("prepend", "(Lorg/apache/kafka/queue/EventQueue$Event;)V", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.2.1/org/apache/kafka/queue/EventQueue.html#scheduleDeferred(java.lang.String,java.util.function.UnaryOperator,org.apache.kafka.queue.EventQueue.Event)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/queue/EventQueue.html#scheduleDeferred(java.lang.String,java.util.function.UnaryOperator,org.apache.kafka.queue.EventQueue.Event)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Util.Function.UnaryOperator"/></param>
@@ -388,7 +388,7 @@ namespace Org.Apache.Kafka.Queue
             IExecuteWithSignature("scheduleDeferred", "(Ljava/lang/String;Ljava/util/function/UnaryOperator;Lorg/apache/kafka/queue/EventQueue$Event;)V", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.2.1/org/apache/kafka/queue/EventQueue.html#wakeup()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/queue/EventQueue.html#wakeup()"/>
         /// </summary>
         public void Wakeup()
         {
@@ -403,7 +403,7 @@ namespace Org.Apache.Kafka.Queue
         {
             #region Constructors
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.2.1/org/apache/kafka/queue/EventQueue.DeadlineFunction.html#%3Cinit%3E(long)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/queue/EventQueue.DeadlineFunction.html#%3Cinit%3E(long)"/>
             /// </summary>
             /// <param name="arg0"><see cref="long"/></param>
             public DeadlineFunction(long arg0) : base(JVMBridgeBase.InitializerInstance)
@@ -438,7 +438,7 @@ namespace Org.Apache.Kafka.Queue
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.2.1/org/apache/kafka/queue/EventQueue.DeadlineFunction.html#apply(java.lang.Object)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/queue/EventQueue.DeadlineFunction.html#apply(java.lang.Object)"/>
             /// </summary>
             /// <param name="arg0"><see cref="object"/></param>
             /// <returns><see cref="object"/></returns>
@@ -447,7 +447,7 @@ namespace Org.Apache.Kafka.Queue
                 return IExecuteWithSignature("apply", "(Ljava/lang/Object;)Ljava/lang/Object;", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.2.1/org/apache/kafka/queue/EventQueue.DeadlineFunction.html#apply(java.util.OptionalLong)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/queue/EventQueue.DeadlineFunction.html#apply(java.util.OptionalLong)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Util.OptionalLong"/></param>
             /// <returns><see cref="Java.Util.OptionalLong"/></returns>
@@ -471,7 +471,7 @@ namespace Org.Apache.Kafka.Queue
         {
             #region Constructors
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.2.1/org/apache/kafka/queue/EventQueue.EarliestDeadlineFunction.html#%3Cinit%3E(long)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/queue/EventQueue.EarliestDeadlineFunction.html#%3Cinit%3E(long)"/>
             /// </summary>
             /// <param name="arg0"><see cref="long"/></param>
             public EarliestDeadlineFunction(long arg0) : base(JVMBridgeBase.InitializerInstance)
@@ -506,7 +506,7 @@ namespace Org.Apache.Kafka.Queue
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.2.1/org/apache/kafka/queue/EventQueue.EarliestDeadlineFunction.html#apply(java.lang.Object)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/queue/EventQueue.EarliestDeadlineFunction.html#apply(java.lang.Object)"/>
             /// </summary>
             /// <param name="arg0"><see cref="object"/></param>
             /// <returns><see cref="object"/></returns>
@@ -515,7 +515,7 @@ namespace Org.Apache.Kafka.Queue
                 return IExecuteWithSignature("apply", "(Ljava/lang/Object;)Ljava/lang/Object;", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.2.1/org/apache/kafka/queue/EventQueue.EarliestDeadlineFunction.html#apply(java.util.OptionalLong)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/queue/EventQueue.EarliestDeadlineFunction.html#apply(java.util.OptionalLong)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Util.OptionalLong"/></param>
             /// <returns><see cref="Java.Util.OptionalLong"/></returns>
@@ -555,7 +555,7 @@ namespace Org.Apache.Kafka.Queue
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.2.1/org/apache/kafka/queue/EventQueue.Event.html#run()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/queue/EventQueue.Event.html#run()"/>
             /// </summary>
             /// <exception cref="Java.Lang.Exception"/>
             public void Run()
@@ -563,7 +563,7 @@ namespace Org.Apache.Kafka.Queue
                 IExecuteWithSignature("run", "()V");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.2.1/org/apache/kafka/queue/EventQueue.Event.html#handleException(java.lang.Throwable)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/queue/EventQueue.Event.html#handleException(java.lang.Throwable)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Lang.Throwable"/></param>
             public void HandleException(MASES.JCOBridge.C2JBridge.JVMBridgeException arg0)
@@ -594,15 +594,15 @@ namespace Org.Apache.Kafka.Queue
 
             #region Fields
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.2.1/org/apache/kafka/queue/EventQueue.EventInsertionType.html#APPEND"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/queue/EventQueue.EventInsertionType.html#APPEND"/>
             /// </summary>
             public static Org.Apache.Kafka.Queue.EventQueue.EventInsertionType APPEND { get { return SGetField<Org.Apache.Kafka.Queue.EventQueue.EventInsertionType>(LocalBridgeClazz, "APPEND"); } set { SSetField(LocalBridgeClazz, "APPEND", value); } }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.2.1/org/apache/kafka/queue/EventQueue.EventInsertionType.html#DEFERRED"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/queue/EventQueue.EventInsertionType.html#DEFERRED"/>
             /// </summary>
             public static Org.Apache.Kafka.Queue.EventQueue.EventInsertionType DEFERRED { get { return SGetField<Org.Apache.Kafka.Queue.EventQueue.EventInsertionType>(LocalBridgeClazz, "DEFERRED"); } set { SSetField(LocalBridgeClazz, "DEFERRED", value); } }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.2.1/org/apache/kafka/queue/EventQueue.EventInsertionType.html#PREPEND"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/queue/EventQueue.EventInsertionType.html#PREPEND"/>
             /// </summary>
             public static Org.Apache.Kafka.Queue.EventQueue.EventInsertionType PREPEND { get { return SGetField<Org.Apache.Kafka.Queue.EventQueue.EventInsertionType>(LocalBridgeClazz, "PREPEND"); } set { SSetField(LocalBridgeClazz, "PREPEND", value); } }
 
@@ -610,7 +610,7 @@ namespace Org.Apache.Kafka.Queue
 
             #region Static methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.2.1/org/apache/kafka/queue/EventQueue.EventInsertionType.html#valueOf(java.lang.String)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/queue/EventQueue.EventInsertionType.html#valueOf(java.lang.String)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Lang.String"/></param>
             /// <returns><see cref="Org.Apache.Kafka.Queue.EventQueue.EventInsertionType"/></returns>
@@ -619,7 +619,7 @@ namespace Org.Apache.Kafka.Queue
                 return SExecuteWithSignature<Org.Apache.Kafka.Queue.EventQueue.EventInsertionType>(LocalBridgeClazz, "valueOf", "(Ljava/lang/String;)Lorg/apache/kafka/queue/EventQueue$EventInsertionType;", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.2.1/org/apache/kafka/queue/EventQueue.EventInsertionType.html#values()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/queue/EventQueue.EventInsertionType.html#values()"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Queue.EventQueue.EventInsertionType"/></returns>
             public static Org.Apache.Kafka.Queue.EventQueue.EventInsertionType[] Values()
@@ -658,7 +658,7 @@ namespace Org.Apache.Kafka.Queue
 
             #region Fields
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.2.1/org/apache/kafka/queue/EventQueue.NoDeadlineFunction.html#INSTANCE"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/queue/EventQueue.NoDeadlineFunction.html#INSTANCE"/>
             /// </summary>
             public static Org.Apache.Kafka.Queue.EventQueue.NoDeadlineFunction INSTANCE { get { return SGetField<Org.Apache.Kafka.Queue.EventQueue.NoDeadlineFunction>(LocalBridgeClazz, "INSTANCE"); } set { SSetField(LocalBridgeClazz, "INSTANCE", value); } }
 
@@ -670,7 +670,7 @@ namespace Org.Apache.Kafka.Queue
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.2.1/org/apache/kafka/queue/EventQueue.NoDeadlineFunction.html#apply(java.lang.Object)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/queue/EventQueue.NoDeadlineFunction.html#apply(java.lang.Object)"/>
             /// </summary>
             /// <param name="arg0"><see cref="object"/></param>
             /// <returns><see cref="object"/></returns>
@@ -679,7 +679,7 @@ namespace Org.Apache.Kafka.Queue
                 return IExecuteWithSignature("apply", "(Ljava/lang/Object;)Ljava/lang/Object;", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.2.1/org/apache/kafka/queue/EventQueue.NoDeadlineFunction.html#apply(java.util.OptionalLong)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/queue/EventQueue.NoDeadlineFunction.html#apply(java.util.OptionalLong)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Util.OptionalLong"/></param>
             /// <returns><see cref="Java.Util.OptionalLong"/></returns>
@@ -711,7 +711,7 @@ namespace Org.Apache.Kafka.Queue
 
             #region Fields
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.2.1/org/apache/kafka/queue/EventQueue.VoidEvent.html#INSTANCE"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/queue/EventQueue.VoidEvent.html#INSTANCE"/>
             /// </summary>
             public static Org.Apache.Kafka.Queue.EventQueue.VoidEvent INSTANCE { get { return SGetField<Org.Apache.Kafka.Queue.EventQueue.VoidEvent>(LocalBridgeClazz, "INSTANCE"); } set { SSetField(LocalBridgeClazz, "INSTANCE", value); } }
 
@@ -723,7 +723,7 @@ namespace Org.Apache.Kafka.Queue
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.2.1/org/apache/kafka/queue/EventQueue.VoidEvent.html#run()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/queue/EventQueue.VoidEvent.html#run()"/>
             /// </summary>
             /// <exception cref="Java.Lang.Exception"/>
             public void Run()

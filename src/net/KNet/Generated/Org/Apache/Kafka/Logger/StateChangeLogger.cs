@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Logger
 {
     #region StateChangeLogger declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.2.1/org/apache/kafka/logger/StateChangeLogger.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/logger/StateChangeLogger.html"/>
     /// </summary>
     public partial class StateChangeLogger : MASES.JCOBridge.C2JBridge.JVMBridgeBase<StateChangeLogger>
     {
@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Logger
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.2.1/org/apache/kafka/logger/StateChangeLogger.html#%3Cinit%3E(int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/logger/StateChangeLogger.html#%3Cinit%3E(int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         public StateChangeLogger(int arg0) : base(JVMBridgeBase.InitializerInstance)
@@ -95,7 +95,7 @@ namespace Org.Apache.Kafka.Logger
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.2.1/org/apache/kafka/logger/StateChangeLogger.html#error(java.lang.String,java.lang.Throwable)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/logger/StateChangeLogger.html#error(java.lang.String,java.lang.Throwable)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Java.Lang.Throwable"/></param>
@@ -104,7 +104,7 @@ namespace Org.Apache.Kafka.Logger
             IExecuteWithSignature("error", "(Ljava/lang/String;Ljava/lang/Throwable;)V", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.2.1/org/apache/kafka/logger/StateChangeLogger.html#error(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/logger/StateChangeLogger.html#error(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         public void Error(Java.Lang.String arg0)
@@ -112,7 +112,7 @@ namespace Org.Apache.Kafka.Logger
             IExecuteWithSignature("error", "(Ljava/lang/String;)V", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.2.1/org/apache/kafka/logger/StateChangeLogger.html#info(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/logger/StateChangeLogger.html#info(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         public void Info(Java.Lang.String arg0)
@@ -120,7 +120,7 @@ namespace Org.Apache.Kafka.Logger
             IExecuteWithSignature("info", "(Ljava/lang/String;)V", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.2.1/org/apache/kafka/logger/StateChangeLogger.html#trace(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/logger/StateChangeLogger.html#trace(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         public void Trace(Java.Lang.String arg0)
@@ -128,7 +128,7 @@ namespace Org.Apache.Kafka.Logger
             IExecuteWithSignature("trace", "(Ljava/lang/String;)V", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.2.1/org/apache/kafka/logger/StateChangeLogger.html#warn(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/logger/StateChangeLogger.html#warn(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         public void Warn(Java.Lang.String arg0)

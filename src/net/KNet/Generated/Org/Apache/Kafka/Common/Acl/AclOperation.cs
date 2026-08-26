@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Acl
 {
     #region AclOperation declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/acl/AclOperation.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/acl/AclOperation.html"/>
     /// </summary>
     public partial class AclOperation : Java.Lang.Enum<Org.Apache.Kafka.Common.Acl.AclOperation>
     {
@@ -72,67 +72,67 @@ namespace Org.Apache.Kafka.Common.Acl
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/acl/AclOperation.html#ALL"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/acl/AclOperation.html#ALL"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Acl.AclOperation ALL { get { return SGetField<Org.Apache.Kafka.Common.Acl.AclOperation>(LocalBridgeClazz, "ALL"); } set { SSetField(LocalBridgeClazz, "ALL", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/acl/AclOperation.html#ALTER"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/acl/AclOperation.html#ALTER"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Acl.AclOperation ALTER { get { return SGetField<Org.Apache.Kafka.Common.Acl.AclOperation>(LocalBridgeClazz, "ALTER"); } set { SSetField(LocalBridgeClazz, "ALTER", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/acl/AclOperation.html#ALTER_CONFIGS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/acl/AclOperation.html#ALTER_CONFIGS"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Acl.AclOperation ALTER_CONFIGS { get { return SGetField<Org.Apache.Kafka.Common.Acl.AclOperation>(LocalBridgeClazz, "ALTER_CONFIGS"); } set { SSetField(LocalBridgeClazz, "ALTER_CONFIGS", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/acl/AclOperation.html#ANY"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/acl/AclOperation.html#ANY"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Acl.AclOperation ANY { get { return SGetField<Org.Apache.Kafka.Common.Acl.AclOperation>(LocalBridgeClazz, "ANY"); } set { SSetField(LocalBridgeClazz, "ANY", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/acl/AclOperation.html#CLUSTER_ACTION"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/acl/AclOperation.html#CLUSTER_ACTION"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Acl.AclOperation CLUSTER_ACTION { get { return SGetField<Org.Apache.Kafka.Common.Acl.AclOperation>(LocalBridgeClazz, "CLUSTER_ACTION"); } set { SSetField(LocalBridgeClazz, "CLUSTER_ACTION", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/acl/AclOperation.html#CREATE"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/acl/AclOperation.html#CREATE"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Acl.AclOperation CREATE { get { return SGetField<Org.Apache.Kafka.Common.Acl.AclOperation>(LocalBridgeClazz, "CREATE"); } set { SSetField(LocalBridgeClazz, "CREATE", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/acl/AclOperation.html#CREATE_TOKENS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/acl/AclOperation.html#CREATE_TOKENS"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Acl.AclOperation CREATE_TOKENS { get { return SGetField<Org.Apache.Kafka.Common.Acl.AclOperation>(LocalBridgeClazz, "CREATE_TOKENS"); } set { SSetField(LocalBridgeClazz, "CREATE_TOKENS", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/acl/AclOperation.html#DELETE"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/acl/AclOperation.html#DELETE"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Acl.AclOperation DELETE { get { return SGetField<Org.Apache.Kafka.Common.Acl.AclOperation>(LocalBridgeClazz, "DELETE"); } set { SSetField(LocalBridgeClazz, "DELETE", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/acl/AclOperation.html#DESCRIBE"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/acl/AclOperation.html#DESCRIBE"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Acl.AclOperation DESCRIBE { get { return SGetField<Org.Apache.Kafka.Common.Acl.AclOperation>(LocalBridgeClazz, "DESCRIBE"); } set { SSetField(LocalBridgeClazz, "DESCRIBE", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/acl/AclOperation.html#DESCRIBE_CONFIGS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/acl/AclOperation.html#DESCRIBE_CONFIGS"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Acl.AclOperation DESCRIBE_CONFIGS { get { return SGetField<Org.Apache.Kafka.Common.Acl.AclOperation>(LocalBridgeClazz, "DESCRIBE_CONFIGS"); } set { SSetField(LocalBridgeClazz, "DESCRIBE_CONFIGS", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/acl/AclOperation.html#DESCRIBE_TOKENS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/acl/AclOperation.html#DESCRIBE_TOKENS"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Acl.AclOperation DESCRIBE_TOKENS { get { return SGetField<Org.Apache.Kafka.Common.Acl.AclOperation>(LocalBridgeClazz, "DESCRIBE_TOKENS"); } set { SSetField(LocalBridgeClazz, "DESCRIBE_TOKENS", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/acl/AclOperation.html#IDEMPOTENT_WRITE"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/acl/AclOperation.html#IDEMPOTENT_WRITE"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Acl.AclOperation IDEMPOTENT_WRITE { get { return SGetField<Org.Apache.Kafka.Common.Acl.AclOperation>(LocalBridgeClazz, "IDEMPOTENT_WRITE"); } set { SSetField(LocalBridgeClazz, "IDEMPOTENT_WRITE", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/acl/AclOperation.html#READ"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/acl/AclOperation.html#READ"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Acl.AclOperation READ { get { return SGetField<Org.Apache.Kafka.Common.Acl.AclOperation>(LocalBridgeClazz, "READ"); } set { SSetField(LocalBridgeClazz, "READ", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/acl/AclOperation.html#TWO_PHASE_COMMIT"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/acl/AclOperation.html#TWO_PHASE_COMMIT"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Acl.AclOperation TWO_PHASE_COMMIT { get { return SGetField<Org.Apache.Kafka.Common.Acl.AclOperation>(LocalBridgeClazz, "TWO_PHASE_COMMIT"); } set { SSetField(LocalBridgeClazz, "TWO_PHASE_COMMIT", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/acl/AclOperation.html#UNKNOWN"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/acl/AclOperation.html#UNKNOWN"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Acl.AclOperation UNKNOWN { get { return SGetField<Org.Apache.Kafka.Common.Acl.AclOperation>(LocalBridgeClazz, "UNKNOWN"); } set { SSetField(LocalBridgeClazz, "UNKNOWN", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/acl/AclOperation.html#WRITE"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/acl/AclOperation.html#WRITE"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Acl.AclOperation WRITE { get { return SGetField<Org.Apache.Kafka.Common.Acl.AclOperation>(LocalBridgeClazz, "WRITE"); } set { SSetField(LocalBridgeClazz, "WRITE", value); } }
 
@@ -140,7 +140,7 @@ namespace Org.Apache.Kafka.Common.Acl
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/acl/AclOperation.html#fromCode(byte)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/acl/AclOperation.html#fromCode(byte)"/>
         /// </summary>
         /// <param name="arg0"><see cref="byte"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Acl.AclOperation"/></returns>
@@ -149,7 +149,7 @@ namespace Org.Apache.Kafka.Common.Acl
             return SExecuteWithSignature<Org.Apache.Kafka.Common.Acl.AclOperation>(LocalBridgeClazz, "fromCode", "(B)Lorg/apache/kafka/common/acl/AclOperation;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/acl/AclOperation.html#fromString(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/acl/AclOperation.html#fromString(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Acl.AclOperation"/></returns>
@@ -159,7 +159,7 @@ namespace Org.Apache.Kafka.Common.Acl
             return SExecuteWithSignature<Org.Apache.Kafka.Common.Acl.AclOperation>(LocalBridgeClazz, "fromString", "(Ljava/lang/String;)Lorg/apache/kafka/common/acl/AclOperation;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/acl/AclOperation.html#valueOf(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/acl/AclOperation.html#valueOf(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Acl.AclOperation"/></returns>
@@ -168,7 +168,7 @@ namespace Org.Apache.Kafka.Common.Acl
             return SExecuteWithSignature<Org.Apache.Kafka.Common.Acl.AclOperation>(LocalBridgeClazz, "valueOf", "(Ljava/lang/String;)Lorg/apache/kafka/common/acl/AclOperation;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/acl/AclOperation.html#values()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/acl/AclOperation.html#values()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Acl.AclOperation"/></returns>
         public static Org.Apache.Kafka.Common.Acl.AclOperation[] Values()
@@ -180,7 +180,7 @@ namespace Org.Apache.Kafka.Common.Acl
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/acl/AclOperation.html#isUnknown()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/acl/AclOperation.html#isUnknown()"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool IsUnknown()
@@ -188,7 +188,7 @@ namespace Org.Apache.Kafka.Common.Acl
             return IExecuteWithSignature<bool>("isUnknown", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/acl/AclOperation.html#code()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/acl/AclOperation.html#code()"/>
         /// </summary>
         /// <returns><see cref="byte"/></returns>
         public byte Code()

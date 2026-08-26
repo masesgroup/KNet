@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Tools.Reassign
 {
     #region VerifyAssignmentResult declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.2.1/org/apache/kafka/tools/reassign/VerifyAssignmentResult.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.3.1/org/apache/kafka/tools/reassign/VerifyAssignmentResult.html"/>
     /// </summary>
     public partial class VerifyAssignmentResult : Java.Lang.Record
     {
@@ -80,7 +80,7 @@ namespace Org.Apache.Kafka.Tools.Reassign
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.2.1/org/apache/kafka/tools/reassign/VerifyAssignmentResult.html#movesOngoing()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.3.1/org/apache/kafka/tools/reassign/VerifyAssignmentResult.html#movesOngoing()"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool MovesOngoing()
@@ -88,7 +88,7 @@ namespace Org.Apache.Kafka.Tools.Reassign
             return IExecuteWithSignature<bool>("movesOngoing", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.2.1/org/apache/kafka/tools/reassign/VerifyAssignmentResult.html#partsOngoing()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.3.1/org/apache/kafka/tools/reassign/VerifyAssignmentResult.html#partsOngoing()"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool PartsOngoing()

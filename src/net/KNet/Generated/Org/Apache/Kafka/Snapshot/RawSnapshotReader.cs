@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Snapshot
 {
     #region RawSnapshotReader declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/snapshot/RawSnapshotReader.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/snapshot/RawSnapshotReader.html"/>
     /// </summary>
     public partial class RawSnapshotReader : MASES.JCOBridge.C2JBridge.JVMBridgeBase<RawSnapshotReader>
     {
@@ -61,7 +61,7 @@ namespace Org.Apache.Kafka.Snapshot
 
     #region IRawSnapshotReader
     /// <summary>
-    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/snapshot/RawSnapshotReader.html"/>
+    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/snapshot/RawSnapshotReader.html"/>
     /// </summary>
     public partial interface IRawSnapshotReader
     {
@@ -98,7 +98,7 @@ namespace Org.Apache.Kafka.Snapshot
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/snapshot/RawSnapshotReader.html#sizeInBytes()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/snapshot/RawSnapshotReader.html#sizeInBytes()"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long SizeInBytes()

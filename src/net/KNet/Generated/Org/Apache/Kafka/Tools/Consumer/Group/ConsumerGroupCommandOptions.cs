@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Tools.Consumer.Group
 {
     #region ConsumerGroupCommandOptions declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.2.1/org/apache/kafka/tools/consumer/group/ConsumerGroupCommandOptions.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.3.1/org/apache/kafka/tools/consumer/group/ConsumerGroupCommandOptions.html"/>
     /// </summary>
     public partial class ConsumerGroupCommandOptions : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ConsumerGroupCommandOptions>
     {
@@ -76,7 +76,7 @@ namespace Org.Apache.Kafka.Tools.Consumer.Group
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.2.1/org/apache/kafka/tools/consumer/group/ConsumerGroupCommandOptions.html#fromArgs(java.lang.String[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.3.1/org/apache/kafka/tools/consumer/group/ConsumerGroupCommandOptions.html#fromArgs(java.lang.String[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Tools.Consumer.Group.ConsumerGroupCommandOptions"/></returns>

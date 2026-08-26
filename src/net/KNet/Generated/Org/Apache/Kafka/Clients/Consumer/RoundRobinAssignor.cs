@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
 {
     #region RoundRobinAssignor declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/consumer/RoundRobinAssignor.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/consumer/RoundRobinAssignor.html"/>
     /// </summary>
     public partial class RoundRobinAssignor : MASES.JCOBridge.C2JBridge.JVMBridgeBase<RoundRobinAssignor>
     {
@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/consumer/RoundRobinAssignor.html#%3Cinit%3E()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/consumer/RoundRobinAssignor.html#%3Cinit%3E()"/>
         /// </summary>
         public RoundRobinAssignor() : base(JVMBridgeBase.InitializerInstance)
         {
@@ -86,7 +86,7 @@ namespace Org.Apache.Kafka.Clients.Consumer
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/consumer/RoundRobinAssignor.html#ROUNDROBIN_ASSIGNOR_NAME"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/consumer/RoundRobinAssignor.html#ROUNDROBIN_ASSIGNOR_NAME"/>
         /// </summary>
         public static Java.Lang.String ROUNDROBIN_ASSIGNOR_NAME { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "ROUNDROBIN_ASSIGNOR_NAME"); } set { SSetField(LocalBridgeClazz, "ROUNDROBIN_ASSIGNOR_NAME", value); } }
 

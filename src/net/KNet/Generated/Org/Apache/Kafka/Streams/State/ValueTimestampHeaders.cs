@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.State
 {
     #region ValueTimestampHeaders declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/state/ValueTimestampHeaders.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/state/ValueTimestampHeaders.html"/>
     /// </summary>
     public partial class ValueTimestampHeaders : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ValueTimestampHeaders>
     {
@@ -61,7 +61,7 @@ namespace Org.Apache.Kafka.Streams.State
 
     #region ValueTimestampHeaders<V> declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/state/ValueTimestampHeaders.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/state/ValueTimestampHeaders.html"/>
     /// </summary>
     /// <typeparam name="V"></typeparam>
     public partial class ValueTimestampHeaders<V> : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ValueTimestampHeaders<V>>
@@ -111,7 +111,7 @@ namespace Org.Apache.Kafka.Streams.State
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/state/ValueTimestampHeaders.html#make(java.lang.Object,long,org.apache.kafka.common.header.Headers)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/state/ValueTimestampHeaders.html#make(java.lang.Object,long,org.apache.kafka.common.header.Headers)"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
         /// <param name="arg1"><see cref="long"/></param>
@@ -122,7 +122,7 @@ namespace Org.Apache.Kafka.Streams.State
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.State.ValueTimestampHeaders>(LocalBridgeClazz, "make", "(Ljava/lang/Object;JLorg/apache/kafka/common/header/Headers;)Lorg/apache/kafka/streams/state/ValueTimestampHeaders;", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/state/ValueTimestampHeaders.html#makeAllowNullable(java.lang.Object,long,org.apache.kafka.common.header.Headers)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/state/ValueTimestampHeaders.html#makeAllowNullable(java.lang.Object,long,org.apache.kafka.common.header.Headers)"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
         /// <param name="arg1"><see cref="long"/></param>
@@ -133,7 +133,7 @@ namespace Org.Apache.Kafka.Streams.State
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.State.ValueTimestampHeaders>(LocalBridgeClazz, "makeAllowNullable", "(Ljava/lang/Object;JLorg/apache/kafka/common/header/Headers;)Lorg/apache/kafka/streams/state/ValueTimestampHeaders;", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/state/ValueTimestampHeaders.html#getValueOrNull(org.apache.kafka.streams.state.ValueTimestampHeaders)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/state/ValueTimestampHeaders.html#getValueOrNull(org.apache.kafka.streams.state.ValueTimestampHeaders)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.State.ValueTimestampHeaders"/></param>
         /// <returns><see cref="object"/></returns>
@@ -146,7 +146,7 @@ namespace Org.Apache.Kafka.Streams.State
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/state/ValueTimestampHeaders.html#timestamp()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/state/ValueTimestampHeaders.html#timestamp()"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long Timestamp()
@@ -154,7 +154,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecuteWithSignature<long>("timestamp", "()J");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/state/ValueTimestampHeaders.html#headers()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/state/ValueTimestampHeaders.html#headers()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Header.Headers"/></returns>
         public Org.Apache.Kafka.Common.Header.Headers Headers()
@@ -162,7 +162,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecuteWithSignature<Org.Apache.Kafka.Common.Header.Headers>("headers", "()Lorg/apache/kafka/common/header/Headers;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/state/ValueTimestampHeaders.html#value()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/state/ValueTimestampHeaders.html#value()"/>
         /// </summary>
         /// <returns><see cref="object"/></returns>
         public object Value()
@@ -201,7 +201,7 @@ namespace Org.Apache.Kafka.Streams.State
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/state/ValueTimestampHeaders.html#make(java.lang.Object,long,org.apache.kafka.common.header.Headers)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/state/ValueTimestampHeaders.html#make(java.lang.Object,long,org.apache.kafka.common.header.Headers)"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="V"/></param>
         /// <param name="arg1"><see cref="long"/></param>
@@ -212,7 +212,7 @@ namespace Org.Apache.Kafka.Streams.State
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.State.ValueTimestampHeaders<V>>(LocalBridgeClazz, "make", "(Ljava/lang/Object;JLorg/apache/kafka/common/header/Headers;)Lorg/apache/kafka/streams/state/ValueTimestampHeaders;", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/state/ValueTimestampHeaders.html#makeAllowNullable(java.lang.Object,long,org.apache.kafka.common.header.Headers)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/state/ValueTimestampHeaders.html#makeAllowNullable(java.lang.Object,long,org.apache.kafka.common.header.Headers)"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="V"/></param>
         /// <param name="arg1"><see cref="long"/></param>
@@ -223,7 +223,7 @@ namespace Org.Apache.Kafka.Streams.State
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.State.ValueTimestampHeaders<V>>(LocalBridgeClazz, "makeAllowNullable", "(Ljava/lang/Object;JLorg/apache/kafka/common/header/Headers;)Lorg/apache/kafka/streams/state/ValueTimestampHeaders;", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/state/ValueTimestampHeaders.html#getValueOrNull(org.apache.kafka.streams.state.ValueTimestampHeaders)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/state/ValueTimestampHeaders.html#getValueOrNull(org.apache.kafka.streams.state.ValueTimestampHeaders)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.State.ValueTimestampHeaders"/></param>
         /// <returns><typeparamref name="V"/></returns>
@@ -236,7 +236,7 @@ namespace Org.Apache.Kafka.Streams.State
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/state/ValueTimestampHeaders.html#timestamp()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/state/ValueTimestampHeaders.html#timestamp()"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long Timestamp()
@@ -244,7 +244,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecuteWithSignature<long>("timestamp", "()J");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/state/ValueTimestampHeaders.html#headers()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/state/ValueTimestampHeaders.html#headers()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Header.Headers"/></returns>
         public Org.Apache.Kafka.Common.Header.Headers Headers()
@@ -252,7 +252,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecuteWithSignature<Org.Apache.Kafka.Common.Header.Headers>("headers", "()Lorg/apache/kafka/common/header/Headers;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/state/ValueTimestampHeaders.html#value()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/state/ValueTimestampHeaders.html#value()"/>
         /// </summary>
         /// <returns><typeparamref name="V"/></returns>
         public V Value()

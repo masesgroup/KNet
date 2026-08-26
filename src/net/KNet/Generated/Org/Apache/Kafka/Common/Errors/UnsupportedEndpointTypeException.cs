@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Errors
 {
     #region UnsupportedEndpointTypeException declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/errors/UnsupportedEndpointTypeException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/errors/UnsupportedEndpointTypeException.html"/>
     /// </summary>
     public partial class UnsupportedEndpointTypeException : Org.Apache.Kafka.Common.Errors.ApiException
     {

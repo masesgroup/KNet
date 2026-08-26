@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Tools
 {
     #region EndToEndLatency declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.2.1/org/apache/kafka/tools/EndToEndLatency.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.3.1/org/apache/kafka/tools/EndToEndLatency.html"/>
     /// </summary>
     public partial class EndToEndLatency : MASES.JCOBridge.C2JBridge.JVMBridgeBase<EndToEndLatency>, MASES.JCOBridge.C2JBridge.IJVMBridgeMain
     {
@@ -57,7 +57,7 @@ namespace Org.Apache.Kafka.Tools
         // TODO: complete the class
         #region EndToEndLatencyCommandOptions declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.2.1/org/apache/kafka/tools/EndToEndLatency.EndToEndLatencyCommandOptions.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.3.1/org/apache/kafka/tools/EndToEndLatency.EndToEndLatencyCommandOptions.html"/>
         /// </summary>
         public partial class EndToEndLatencyCommandOptions : MASES.JCOBridge.C2JBridge.JVMBridgeBase<EndToEndLatencyCommandOptions>
         {
@@ -98,7 +98,7 @@ namespace Org.Apache.Kafka.Tools
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.2.1/org/apache/kafka/tools/EndToEndLatency.html#%3Cinit%3E()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.3.1/org/apache/kafka/tools/EndToEndLatency.html#%3Cinit%3E()"/>
         /// </summary>
         public EndToEndLatency() : base(JVMBridgeBase.InitializerInstance)
         {
@@ -124,7 +124,7 @@ namespace Org.Apache.Kafka.Tools
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.2.1/org/apache/kafka/tools/EndToEndLatency.html#main(java.lang.String...)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.3.1/org/apache/kafka/tools/EndToEndLatency.html#main(java.lang.String...)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         public static void Main(Java.Lang.String[] arg0)
@@ -144,7 +144,7 @@ namespace Org.Apache.Kafka.Tools
         {
             #region Constructors
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.2.1/org/apache/kafka/tools/EndToEndLatency.EndToEndLatencyCommandOptions.html#%3Cinit%3E(java.lang.String[])"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.3.1/org/apache/kafka/tools/EndToEndLatency.EndToEndLatencyCommandOptions.html#%3Cinit%3E(java.lang.String[])"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Lang.String"/></param>
             public EndToEndLatencyCommandOptions(Java.Lang.String[] arg0) : base(JVMBridgeBase.InitializerInstance)

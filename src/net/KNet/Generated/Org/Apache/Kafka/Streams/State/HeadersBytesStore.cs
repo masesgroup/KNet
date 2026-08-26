@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.State
 {
     #region HeadersBytesStore declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/state/HeadersBytesStore.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/state/HeadersBytesStore.html"/>
     /// </summary>
     public partial class HeadersBytesStore : MASES.JCOBridge.C2JBridge.JVMBridgeBase<HeadersBytesStore>
     {
@@ -61,7 +61,7 @@ namespace Org.Apache.Kafka.Streams.State
 
     #region IHeadersBytesStore
     /// <summary>
-    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/state/HeadersBytesStore.html"/>
+    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/state/HeadersBytesStore.html"/>
     /// </summary>
     public partial interface IHeadersBytesStore
     {
@@ -94,7 +94,7 @@ namespace Org.Apache.Kafka.Streams.State
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/state/HeadersBytesStore.html#convertFromPlainToHeaderFormat(byte[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/state/HeadersBytesStore.html#convertFromPlainToHeaderFormat(byte[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="byte"/></param>
         /// <returns><see cref="byte"/></returns>
@@ -103,7 +103,7 @@ namespace Org.Apache.Kafka.Streams.State
             return SExecuteWithSignatureArray<byte>(LocalBridgeClazz, "convertFromPlainToHeaderFormat", "([B)[B", new object[] { arg0 });
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/state/HeadersBytesStore.html#convertToHeaderFormat(byte[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/state/HeadersBytesStore.html#convertToHeaderFormat(byte[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="byte"/></param>
         /// <returns><see cref="byte"/></returns>

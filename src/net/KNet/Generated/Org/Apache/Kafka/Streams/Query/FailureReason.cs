@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.Query
 {
     #region FailureReason declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/query/FailureReason.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/query/FailureReason.html"/>
     /// </summary>
     public partial class FailureReason : Java.Lang.Enum<Org.Apache.Kafka.Streams.Query.FailureReason>
     {
@@ -72,27 +72,27 @@ namespace Org.Apache.Kafka.Streams.Query
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/query/FailureReason.html#DOES_NOT_EXIST"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/query/FailureReason.html#DOES_NOT_EXIST"/>
         /// </summary>
         public static Org.Apache.Kafka.Streams.Query.FailureReason DOES_NOT_EXIST { get { return SGetField<Org.Apache.Kafka.Streams.Query.FailureReason>(LocalBridgeClazz, "DOES_NOT_EXIST"); } set { SSetField(LocalBridgeClazz, "DOES_NOT_EXIST", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/query/FailureReason.html#NOT_ACTIVE"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/query/FailureReason.html#NOT_ACTIVE"/>
         /// </summary>
         public static Org.Apache.Kafka.Streams.Query.FailureReason NOT_ACTIVE { get { return SGetField<Org.Apache.Kafka.Streams.Query.FailureReason>(LocalBridgeClazz, "NOT_ACTIVE"); } set { SSetField(LocalBridgeClazz, "NOT_ACTIVE", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/query/FailureReason.html#NOT_PRESENT"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/query/FailureReason.html#NOT_PRESENT"/>
         /// </summary>
         public static Org.Apache.Kafka.Streams.Query.FailureReason NOT_PRESENT { get { return SGetField<Org.Apache.Kafka.Streams.Query.FailureReason>(LocalBridgeClazz, "NOT_PRESENT"); } set { SSetField(LocalBridgeClazz, "NOT_PRESENT", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/query/FailureReason.html#NOT_UP_TO_BOUND"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/query/FailureReason.html#NOT_UP_TO_BOUND"/>
         /// </summary>
         public static Org.Apache.Kafka.Streams.Query.FailureReason NOT_UP_TO_BOUND { get { return SGetField<Org.Apache.Kafka.Streams.Query.FailureReason>(LocalBridgeClazz, "NOT_UP_TO_BOUND"); } set { SSetField(LocalBridgeClazz, "NOT_UP_TO_BOUND", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/query/FailureReason.html#STORE_EXCEPTION"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/query/FailureReason.html#STORE_EXCEPTION"/>
         /// </summary>
         public static Org.Apache.Kafka.Streams.Query.FailureReason STORE_EXCEPTION { get { return SGetField<Org.Apache.Kafka.Streams.Query.FailureReason>(LocalBridgeClazz, "STORE_EXCEPTION"); } set { SSetField(LocalBridgeClazz, "STORE_EXCEPTION", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/query/FailureReason.html#UNKNOWN_QUERY_TYPE"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/query/FailureReason.html#UNKNOWN_QUERY_TYPE"/>
         /// </summary>
         public static Org.Apache.Kafka.Streams.Query.FailureReason UNKNOWN_QUERY_TYPE { get { return SGetField<Org.Apache.Kafka.Streams.Query.FailureReason>(LocalBridgeClazz, "UNKNOWN_QUERY_TYPE"); } set { SSetField(LocalBridgeClazz, "UNKNOWN_QUERY_TYPE", value); } }
 
@@ -100,7 +100,7 @@ namespace Org.Apache.Kafka.Streams.Query
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/query/FailureReason.html#valueOf(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/query/FailureReason.html#valueOf(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Query.FailureReason"/></returns>
@@ -109,7 +109,7 @@ namespace Org.Apache.Kafka.Streams.Query
             return SExecuteWithSignature<Org.Apache.Kafka.Streams.Query.FailureReason>(LocalBridgeClazz, "valueOf", "(Ljava/lang/String;)Lorg/apache/kafka/streams/query/FailureReason;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/query/FailureReason.html#values()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/query/FailureReason.html#values()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Streams.Query.FailureReason"/></returns>
         public static Org.Apache.Kafka.Streams.Query.FailureReason[] Values()

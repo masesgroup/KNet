@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Raft
 {
     #region FollowerState declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/FollowerState.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/FollowerState.html"/>
     /// </summary>
     public partial class FollowerState : Org.Apache.Kafka.Raft.EpochState
     {
@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Raft
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/FollowerState.html#%3Cinit%3E(org.apache.kafka.common.utils.Time,int,int,org.apache.kafka.raft.Endpoints,java.util.Optional,java.util.Set,java.util.Optional,int,org.apache.kafka.common.utils.LogContext)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/FollowerState.html#%3Cinit%3E(org.apache.kafka.common.utils.Time,int,int,org.apache.kafka.raft.Endpoints,java.util.Optional,java.util.Set,java.util.Optional,int,org.apache.kafka.common.utils.LogContext)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Utils.Time"/></param>
         /// <param name="arg1"><see cref="int"/></param>
@@ -103,7 +103,7 @@ namespace Org.Apache.Kafka.Raft
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/FollowerState.html#canGrantVote(org.apache.kafka.raft.ReplicaKey,boolean,boolean)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/FollowerState.html#canGrantVote(org.apache.kafka.raft.ReplicaKey,boolean,boolean)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Raft.ReplicaKey"/></param>
         /// <param name="arg1"><see cref="bool"/></param>
@@ -114,7 +114,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<bool>("canGrantVote", "(Lorg/apache/kafka/raft/ReplicaKey;ZZ)Z", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/FollowerState.html#hasFetchTimeoutExpired(long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/FollowerState.html#hasFetchTimeoutExpired(long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <returns><see cref="bool"/></returns>
@@ -123,7 +123,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<bool>("hasFetchTimeoutExpired", "(J)Z", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/FollowerState.html#hasUpdatedLeader()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/FollowerState.html#hasUpdatedLeader()"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool HasUpdatedLeader()
@@ -131,7 +131,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<bool>("hasUpdatedLeader", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/FollowerState.html#hasUpdateVoterSetPeriodExpired(long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/FollowerState.html#hasUpdateVoterSetPeriodExpired(long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <returns><see cref="bool"/></returns>
@@ -140,7 +140,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<bool>("hasUpdateVoterSetPeriodExpired", "(J)Z", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/FollowerState.html#updateHighWatermark(java.util.OptionalLong)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/FollowerState.html#updateHighWatermark(java.util.OptionalLong)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.OptionalLong"/></param>
         /// <returns><see cref="bool"/></returns>
@@ -149,7 +149,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<bool>("updateHighWatermark", "(Ljava/util/OptionalLong;)Z", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/FollowerState.html#epoch()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/FollowerState.html#epoch()"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int Epoch()
@@ -157,7 +157,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<int>("epoch", "()I");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/FollowerState.html#leaderId()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/FollowerState.html#leaderId()"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int LeaderId()
@@ -165,7 +165,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<int>("leaderId", "()I");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/FollowerState.html#name()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/FollowerState.html#name()"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String Name()
@@ -173,7 +173,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<Java.Lang.String>("name", "()Ljava/lang/String;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/FollowerState.html#highWatermark()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/FollowerState.html#highWatermark()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Optional"/></returns>
         public Java.Util.Optional<Org.Apache.Kafka.Raft.LogOffsetMetadata> HighWatermark()
@@ -181,7 +181,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<Java.Util.Optional<Org.Apache.Kafka.Raft.LogOffsetMetadata>>("highWatermark", "()Ljava/util/Optional;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/FollowerState.html#fetchingSnapshot()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/FollowerState.html#fetchingSnapshot()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Optional"/></returns>
         public Java.Util.Optional<Org.Apache.Kafka.Snapshot.RawSnapshotWriter> FetchingSnapshot()
@@ -189,7 +189,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<Java.Util.Optional<Org.Apache.Kafka.Snapshot.RawSnapshotWriter>>("fetchingSnapshot", "()Ljava/util/Optional;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/FollowerState.html#remainingFetchTimeMs(long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/FollowerState.html#remainingFetchTimeMs(long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <returns><see cref="long"/></returns>
@@ -198,7 +198,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<long>("remainingFetchTimeMs", "(J)J", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/FollowerState.html#election()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/FollowerState.html#election()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Raft.ElectionState"/></returns>
         public Org.Apache.Kafka.Raft.ElectionState Election()
@@ -206,7 +206,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<Org.Apache.Kafka.Raft.ElectionState>("election", "()Lorg/apache/kafka/raft/ElectionState;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/FollowerState.html#leaderEndpoints()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/FollowerState.html#leaderEndpoints()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Raft.Endpoints"/></returns>
         public Org.Apache.Kafka.Raft.Endpoints LeaderEndpoints()
@@ -214,14 +214,14 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<Org.Apache.Kafka.Raft.Endpoints>("leaderEndpoints", "()Lorg/apache/kafka/raft/Endpoints;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/FollowerState.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/FollowerState.html#close()"/>
         /// </summary>
         public void Close()
         {
             IExecuteWithSignature("close", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/FollowerState.html#overrideFetchTimeout(long,long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/FollowerState.html#overrideFetchTimeout(long,long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <param name="arg1"><see cref="long"/></param>
@@ -230,7 +230,7 @@ namespace Org.Apache.Kafka.Raft
             IExecuteWithSignature("overrideFetchTimeout", "(JJ)V", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/FollowerState.html#resetFetchTimeoutForSuccessfulFetch(long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/FollowerState.html#resetFetchTimeoutForSuccessfulFetch(long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         public void ResetFetchTimeoutForSuccessfulFetch(long arg0)
@@ -238,7 +238,7 @@ namespace Org.Apache.Kafka.Raft
             IExecuteWithSignature("resetFetchTimeoutForSuccessfulFetch", "(J)V", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/FollowerState.html#resetUpdateVoterSetPeriod(long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/FollowerState.html#resetUpdateVoterSetPeriod(long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         public void ResetUpdateVoterSetPeriod(long arg0)
@@ -246,7 +246,7 @@ namespace Org.Apache.Kafka.Raft
             IExecuteWithSignature("resetUpdateVoterSetPeriod", "(J)V", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/FollowerState.html#setFetchingSnapshot(java.util.Optional)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/FollowerState.html#setFetchingSnapshot(java.util.Optional)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Optional"/></param>
         public void SetFetchingSnapshot(Java.Util.Optional<Org.Apache.Kafka.Snapshot.RawSnapshotWriter> arg0)
@@ -254,7 +254,7 @@ namespace Org.Apache.Kafka.Raft
             IExecuteWithSignature("setFetchingSnapshot", "(Ljava/util/Optional;)V", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/FollowerState.html#setHasUpdatedLeader()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/FollowerState.html#setHasUpdatedLeader()"/>
         /// </summary>
         public void SetHasUpdatedLeader()
         {

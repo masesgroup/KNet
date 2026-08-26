@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common
 {
     #region GroupType declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/GroupType.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/GroupType.html"/>
     /// </summary>
     public partial class GroupType : Java.Lang.Enum<Org.Apache.Kafka.Common.GroupType>
     {
@@ -72,23 +72,23 @@ namespace Org.Apache.Kafka.Common
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/GroupType.html#CLASSIC"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/GroupType.html#CLASSIC"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.GroupType CLASSIC { get { return SGetField<Org.Apache.Kafka.Common.GroupType>(LocalBridgeClazz, "CLASSIC"); } set { SSetField(LocalBridgeClazz, "CLASSIC", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/GroupType.html#CONSUMER"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/GroupType.html#CONSUMER"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.GroupType CONSUMER { get { return SGetField<Org.Apache.Kafka.Common.GroupType>(LocalBridgeClazz, "CONSUMER"); } set { SSetField(LocalBridgeClazz, "CONSUMER", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/GroupType.html#SHARE"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/GroupType.html#SHARE"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.GroupType SHARE { get { return SGetField<Org.Apache.Kafka.Common.GroupType>(LocalBridgeClazz, "SHARE"); } set { SSetField(LocalBridgeClazz, "SHARE", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/GroupType.html#STREAMS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/GroupType.html#STREAMS"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.GroupType STREAMS { get { return SGetField<Org.Apache.Kafka.Common.GroupType>(LocalBridgeClazz, "STREAMS"); } set { SSetField(LocalBridgeClazz, "STREAMS", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/GroupType.html#UNKNOWN"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/GroupType.html#UNKNOWN"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.GroupType UNKNOWN { get { return SGetField<Org.Apache.Kafka.Common.GroupType>(LocalBridgeClazz, "UNKNOWN"); } set { SSetField(LocalBridgeClazz, "UNKNOWN", value); } }
 
@@ -96,7 +96,7 @@ namespace Org.Apache.Kafka.Common
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/GroupType.html#parse(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/GroupType.html#parse(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.GroupType"/></returns>
@@ -105,7 +105,7 @@ namespace Org.Apache.Kafka.Common
             return SExecuteWithSignature<Org.Apache.Kafka.Common.GroupType>(LocalBridgeClazz, "parse", "(Ljava/lang/String;)Lorg/apache/kafka/common/GroupType;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/GroupType.html#valueOf(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/GroupType.html#valueOf(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.GroupType"/></returns>
@@ -114,7 +114,7 @@ namespace Org.Apache.Kafka.Common
             return SExecuteWithSignature<Org.Apache.Kafka.Common.GroupType>(LocalBridgeClazz, "valueOf", "(Ljava/lang/String;)Lorg/apache/kafka/common/GroupType;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/GroupType.html#values()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/GroupType.html#values()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.GroupType"/></returns>
         public static Org.Apache.Kafka.Common.GroupType[] Values()

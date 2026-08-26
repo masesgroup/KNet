@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 {
     #region ConsumerGroupDescription declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/admin/ConsumerGroupDescription.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/admin/ConsumerGroupDescription.html"/>
     /// </summary>
     public partial class ConsumerGroupDescription : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ConsumerGroupDescription>
     {
@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Clients.Admin
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/admin/ConsumerGroupDescription.html#%3Cinit%3E(java.lang.String,boolean,java.util.Collection,java.lang.String,org.apache.kafka.common.ConsumerGroupState,org.apache.kafka.common.Node,java.util.Set)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/admin/ConsumerGroupDescription.html#%3Cinit%3E(java.lang.String,boolean,java.util.Collection,java.lang.String,org.apache.kafka.common.ConsumerGroupState,org.apache.kafka.common.Node,java.util.Set)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="bool"/></param>
@@ -86,7 +86,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return JVMBridgeBase.New<ConsumerGroupDescription>(arg0, arg1, arg2, arg3, arg4, arg5, arg6);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/admin/ConsumerGroupDescription.html#%3Cinit%3E(java.lang.String,boolean,java.util.Collection,java.lang.String,org.apache.kafka.common.ConsumerGroupState,org.apache.kafka.common.Node)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/admin/ConsumerGroupDescription.html#%3Cinit%3E(java.lang.String,boolean,java.util.Collection,java.lang.String,org.apache.kafka.common.ConsumerGroupState,org.apache.kafka.common.Node)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="bool"/></param>
@@ -107,7 +107,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return JVMBridgeBase.New<ConsumerGroupDescription>(arg0, arg1, arg2, arg3, arg4, arg5);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/admin/ConsumerGroupDescription.html#%3Cinit%3E(java.lang.String,boolean,java.util.Collection,java.lang.String,org.apache.kafka.common.GroupType,org.apache.kafka.common.ConsumerGroupState,org.apache.kafka.common.Node,java.util.Set)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/admin/ConsumerGroupDescription.html#%3Cinit%3E(java.lang.String,boolean,java.util.Collection,java.lang.String,org.apache.kafka.common.GroupType,org.apache.kafka.common.ConsumerGroupState,org.apache.kafka.common.Node,java.util.Set)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="bool"/></param>
@@ -130,7 +130,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return JVMBridgeBase.New<ConsumerGroupDescription>(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/admin/ConsumerGroupDescription.html#%3Cinit%3E(java.lang.String,boolean,java.util.Collection,java.lang.String,org.apache.kafka.common.GroupType,org.apache.kafka.common.GroupState,org.apache.kafka.common.Node,java.util.Set,java.util.Optional,java.util.Optional)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/admin/ConsumerGroupDescription.html#%3Cinit%3E(java.lang.String,boolean,java.util.Collection,java.lang.String,org.apache.kafka.common.GroupType,org.apache.kafka.common.GroupState,org.apache.kafka.common.Node,java.util.Set,java.util.Optional,java.util.Optional)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="bool"/></param>
@@ -170,7 +170,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/admin/ConsumerGroupDescription.html#isSimpleConsumerGroup()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/admin/ConsumerGroupDescription.html#isSimpleConsumerGroup()"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool IsSimpleConsumerGroup()
@@ -178,7 +178,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<bool>("isSimpleConsumerGroup", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/admin/ConsumerGroupDescription.html#groupId()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/admin/ConsumerGroupDescription.html#groupId()"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String GroupId()
@@ -186,7 +186,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Java.Lang.String>("groupId", "()Ljava/lang/String;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/admin/ConsumerGroupDescription.html#partitionAssignor()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/admin/ConsumerGroupDescription.html#partitionAssignor()"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String PartitionAssignor()
@@ -194,7 +194,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Java.Lang.String>("partitionAssignor", "()Ljava/lang/String;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/admin/ConsumerGroupDescription.html#members()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/admin/ConsumerGroupDescription.html#members()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Collection"/></returns>
         public Java.Util.Collection<Org.Apache.Kafka.Clients.Admin.MemberDescription> Members()
@@ -202,7 +202,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Java.Util.Collection<Org.Apache.Kafka.Clients.Admin.MemberDescription>>("members", "()Ljava/util/Collection;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/admin/ConsumerGroupDescription.html#groupEpoch()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/admin/ConsumerGroupDescription.html#groupEpoch()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Optional"/></returns>
         public Java.Util.Optional<Java.Lang.Integer> GroupEpoch()
@@ -210,7 +210,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Java.Util.Optional<Java.Lang.Integer>>("groupEpoch", "()Ljava/util/Optional;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/admin/ConsumerGroupDescription.html#targetAssignmentEpoch()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/admin/ConsumerGroupDescription.html#targetAssignmentEpoch()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Optional"/></returns>
         public Java.Util.Optional<Java.Lang.Integer> TargetAssignmentEpoch()
@@ -218,7 +218,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Java.Util.Optional<Java.Lang.Integer>>("targetAssignmentEpoch", "()Ljava/util/Optional;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/admin/ConsumerGroupDescription.html#authorizedOperations()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/admin/ConsumerGroupDescription.html#authorizedOperations()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Set"/></returns>
         public Java.Util.Set<Org.Apache.Kafka.Common.Acl.AclOperation> AuthorizedOperations()
@@ -226,7 +226,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Java.Util.Set<Org.Apache.Kafka.Common.Acl.AclOperation>>("authorizedOperations", "()Ljava/util/Set;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/admin/ConsumerGroupDescription.html#state()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/admin/ConsumerGroupDescription.html#state()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.ConsumerGroupState"/></returns>
         [global::System.Obsolete("Deprecated in JVM")]
@@ -235,7 +235,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Common.ConsumerGroupState>("state", "()Lorg/apache/kafka/common/ConsumerGroupState;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/admin/ConsumerGroupDescription.html#groupState()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/admin/ConsumerGroupDescription.html#groupState()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.GroupState"/></returns>
         public Org.Apache.Kafka.Common.GroupState GroupState()
@@ -243,7 +243,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Common.GroupState>("groupState", "()Lorg/apache/kafka/common/GroupState;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/admin/ConsumerGroupDescription.html#type()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/admin/ConsumerGroupDescription.html#type()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.GroupType"/></returns>
         public Org.Apache.Kafka.Common.GroupType Type()
@@ -251,7 +251,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Common.GroupType>("type", "()Lorg/apache/kafka/common/GroupType;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/admin/ConsumerGroupDescription.html#coordinator()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/admin/ConsumerGroupDescription.html#coordinator()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Node"/></returns>
         public Org.Apache.Kafka.Common.Node Coordinator()

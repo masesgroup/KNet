@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Clients
 {
     #region ClientDnsLookup declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/ClientDnsLookup.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/ClientDnsLookup.html"/>
     /// </summary>
     public partial class ClientDnsLookup : Java.Lang.Enum<Org.Apache.Kafka.Clients.ClientDnsLookup>
     {
@@ -72,11 +72,11 @@ namespace Org.Apache.Kafka.Clients
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/ClientDnsLookup.html#RESOLVE_CANONICAL_BOOTSTRAP_SERVERS_ONLY"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/ClientDnsLookup.html#RESOLVE_CANONICAL_BOOTSTRAP_SERVERS_ONLY"/>
         /// </summary>
         public static Org.Apache.Kafka.Clients.ClientDnsLookup RESOLVE_CANONICAL_BOOTSTRAP_SERVERS_ONLY { get { return SGetField<Org.Apache.Kafka.Clients.ClientDnsLookup>(LocalBridgeClazz, "RESOLVE_CANONICAL_BOOTSTRAP_SERVERS_ONLY"); } set { SSetField(LocalBridgeClazz, "RESOLVE_CANONICAL_BOOTSTRAP_SERVERS_ONLY", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/ClientDnsLookup.html#USE_ALL_DNS_IPS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/ClientDnsLookup.html#USE_ALL_DNS_IPS"/>
         /// </summary>
         public static Org.Apache.Kafka.Clients.ClientDnsLookup USE_ALL_DNS_IPS { get { return SGetField<Org.Apache.Kafka.Clients.ClientDnsLookup>(LocalBridgeClazz, "USE_ALL_DNS_IPS"); } set { SSetField(LocalBridgeClazz, "USE_ALL_DNS_IPS", value); } }
 
@@ -84,7 +84,7 @@ namespace Org.Apache.Kafka.Clients
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/ClientDnsLookup.html#forConfig(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/ClientDnsLookup.html#forConfig(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.ClientDnsLookup"/></returns>
@@ -93,7 +93,7 @@ namespace Org.Apache.Kafka.Clients
             return SExecuteWithSignature<Org.Apache.Kafka.Clients.ClientDnsLookup>(LocalBridgeClazz, "forConfig", "(Ljava/lang/String;)Lorg/apache/kafka/clients/ClientDnsLookup;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/ClientDnsLookup.html#valueOf(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/ClientDnsLookup.html#valueOf(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.ClientDnsLookup"/></returns>
@@ -102,7 +102,7 @@ namespace Org.Apache.Kafka.Clients
             return SExecuteWithSignature<Org.Apache.Kafka.Clients.ClientDnsLookup>(LocalBridgeClazz, "valueOf", "(Ljava/lang/String;)Lorg/apache/kafka/clients/ClientDnsLookup;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/ClientDnsLookup.html#values()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/ClientDnsLookup.html#values()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Clients.ClientDnsLookup"/></returns>
         public static Org.Apache.Kafka.Clients.ClientDnsLookup[] Values()

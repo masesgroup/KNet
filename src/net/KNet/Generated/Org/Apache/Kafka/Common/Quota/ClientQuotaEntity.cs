@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Quota
 {
     #region ClientQuotaEntity declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/quota/ClientQuotaEntity.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/quota/ClientQuotaEntity.html"/>
     /// </summary>
     public partial class ClientQuotaEntity : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ClientQuotaEntity>
     {
@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Common.Quota
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/quota/ClientQuotaEntity.html#%3Cinit%3E(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/quota/ClientQuotaEntity.html#%3Cinit%3E(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         public ClientQuotaEntity(Java.Util.Map<Java.Lang.String, Java.Lang.String> arg0) : base(JVMBridgeBase.InitializerInstance)
@@ -87,15 +87,15 @@ namespace Org.Apache.Kafka.Common.Quota
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/quota/ClientQuotaEntity.html#CLIENT_ID"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/quota/ClientQuotaEntity.html#CLIENT_ID"/>
         /// </summary>
         public static Java.Lang.String CLIENT_ID { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "CLIENT_ID"); } set { SSetField(LocalBridgeClazz, "CLIENT_ID", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/quota/ClientQuotaEntity.html#IP"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/quota/ClientQuotaEntity.html#IP"/>
         /// </summary>
         public static Java.Lang.String IP { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "IP"); } set { SSetField(LocalBridgeClazz, "IP", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/quota/ClientQuotaEntity.html#USER"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/quota/ClientQuotaEntity.html#USER"/>
         /// </summary>
         public static Java.Lang.String USER { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "USER"); } set { SSetField(LocalBridgeClazz, "USER", value); } }
 
@@ -103,7 +103,7 @@ namespace Org.Apache.Kafka.Common.Quota
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/quota/ClientQuotaEntity.html#isValidEntityType(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/quota/ClientQuotaEntity.html#isValidEntityType(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="bool"/></returns>
@@ -116,7 +116,7 @@ namespace Org.Apache.Kafka.Common.Quota
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/quota/ClientQuotaEntity.html#entries()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/quota/ClientQuotaEntity.html#entries()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Map"/></returns>
         public Java.Util.Map<Java.Lang.String, Java.Lang.String> Entries()

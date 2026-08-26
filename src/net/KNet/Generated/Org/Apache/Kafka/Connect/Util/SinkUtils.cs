@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Connect.Util
 {
     #region SinkUtils declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.2.1/org/apache/kafka/connect/util/SinkUtils.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.3.1/org/apache/kafka/connect/util/SinkUtils.html"/>
     /// </summary>
     public partial class SinkUtils : MASES.JCOBridge.C2JBridge.JVMBridgeBase<SinkUtils>
     {
@@ -72,15 +72,15 @@ namespace Org.Apache.Kafka.Connect.Util
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.2.1/org/apache/kafka/connect/util/SinkUtils.html#KAFKA_OFFSET_KEY"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.3.1/org/apache/kafka/connect/util/SinkUtils.html#KAFKA_OFFSET_KEY"/>
         /// </summary>
         public static Java.Lang.String KAFKA_OFFSET_KEY { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "KAFKA_OFFSET_KEY"); } set { SSetField(LocalBridgeClazz, "KAFKA_OFFSET_KEY", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.2.1/org/apache/kafka/connect/util/SinkUtils.html#KAFKA_PARTITION_KEY"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.3.1/org/apache/kafka/connect/util/SinkUtils.html#KAFKA_PARTITION_KEY"/>
         /// </summary>
         public static Java.Lang.String KAFKA_PARTITION_KEY { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "KAFKA_PARTITION_KEY"); } set { SSetField(LocalBridgeClazz, "KAFKA_PARTITION_KEY", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.2.1/org/apache/kafka/connect/util/SinkUtils.html#KAFKA_TOPIC_KEY"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.3.1/org/apache/kafka/connect/util/SinkUtils.html#KAFKA_TOPIC_KEY"/>
         /// </summary>
         public static Java.Lang.String KAFKA_TOPIC_KEY { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "KAFKA_TOPIC_KEY"); } set { SSetField(LocalBridgeClazz, "KAFKA_TOPIC_KEY", value); } }
 
@@ -88,7 +88,7 @@ namespace Org.Apache.Kafka.Connect.Util
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.2.1/org/apache/kafka/connect/util/SinkUtils.html#consumerGroupId(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.3.1/org/apache/kafka/connect/util/SinkUtils.html#consumerGroupId(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Java.Lang.String"/></returns>
@@ -97,7 +97,7 @@ namespace Org.Apache.Kafka.Connect.Util
             return SExecuteWithSignature<Java.Lang.String>(LocalBridgeClazz, "consumerGroupId", "(Ljava/lang/String;)Ljava/lang/String;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.2.1/org/apache/kafka/connect/util/SinkUtils.html#parseSinkConnectorOffsets(java.util.Map)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.3.1/org/apache/kafka/connect/util/SinkUtils.html#parseSinkConnectorOffsets(java.util.Map)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <returns><see cref="Java.Util.Map"/></returns>

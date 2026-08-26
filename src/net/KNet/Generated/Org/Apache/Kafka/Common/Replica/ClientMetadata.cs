@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Replica
 {
     #region ClientMetadata declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/replica/ClientMetadata.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/replica/ClientMetadata.html"/>
     /// </summary>
     public partial class ClientMetadata : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ClientMetadata>
     {
@@ -57,7 +57,7 @@ namespace Org.Apache.Kafka.Common.Replica
         // TODO: complete the class
         #region DefaultClientMetadata declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/replica/ClientMetadata.DefaultClientMetadata.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/replica/ClientMetadata.DefaultClientMetadata.html"/>
         /// </summary>
         public partial class DefaultClientMetadata : Org.Apache.Kafka.Common.Replica.ClientMetadata
         {
@@ -95,7 +95,7 @@ namespace Org.Apache.Kafka.Common.Replica
 
     #region IClientMetadata
     /// <summary>
-    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/replica/ClientMetadata.html"/>
+    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/replica/ClientMetadata.html"/>
     /// </summary>
     public partial interface IClientMetadata
     {
@@ -132,7 +132,7 @@ namespace Org.Apache.Kafka.Common.Replica
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/replica/ClientMetadata.html#clientId()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/replica/ClientMetadata.html#clientId()"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String ClientId()
@@ -140,7 +140,7 @@ namespace Org.Apache.Kafka.Common.Replica
             return IExecuteWithSignature<Java.Lang.String>("clientId", "()Ljava/lang/String;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/replica/ClientMetadata.html#listenerName()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/replica/ClientMetadata.html#listenerName()"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String ListenerName()
@@ -148,7 +148,7 @@ namespace Org.Apache.Kafka.Common.Replica
             return IExecuteWithSignature<Java.Lang.String>("listenerName", "()Ljava/lang/String;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/replica/ClientMetadata.html#rackId()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/replica/ClientMetadata.html#rackId()"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String RackId()
@@ -156,7 +156,7 @@ namespace Org.Apache.Kafka.Common.Replica
             return IExecuteWithSignature<Java.Lang.String>("rackId", "()Ljava/lang/String;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/replica/ClientMetadata.html#clientAddress()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/replica/ClientMetadata.html#clientAddress()"/>
         /// </summary>
         /// <returns><see cref="Java.Net.InetAddress"/></returns>
         public Java.Net.InetAddress ClientAddress()
@@ -164,7 +164,7 @@ namespace Org.Apache.Kafka.Common.Replica
             return IExecuteWithSignature<Java.Net.InetAddress>("clientAddress", "()Ljava/net/InetAddress;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/replica/ClientMetadata.html#principal()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/replica/ClientMetadata.html#principal()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal"/></returns>
         public Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal Principal()
@@ -180,7 +180,7 @@ namespace Org.Apache.Kafka.Common.Replica
         {
             #region Constructors
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/replica/ClientMetadata.DefaultClientMetadata.html#%3Cinit%3E(java.lang.String,java.lang.String,java.net.InetAddress,org.apache.kafka.common.security.auth.KafkaPrincipal,java.lang.String)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/replica/ClientMetadata.DefaultClientMetadata.html#%3Cinit%3E(java.lang.String,java.lang.String,java.net.InetAddress,org.apache.kafka.common.security.auth.KafkaPrincipal,java.lang.String)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Lang.String"/></param>
             /// <param name="arg1"><see cref="Java.Lang.String"/></param>
@@ -215,7 +215,7 @@ namespace Org.Apache.Kafka.Common.Replica
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/replica/ClientMetadata.DefaultClientMetadata.html#clientId()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/replica/ClientMetadata.DefaultClientMetadata.html#clientId()"/>
             /// </summary>
             /// <returns><see cref="Java.Lang.String"/></returns>
             public Java.Lang.String ClientId()
@@ -223,7 +223,7 @@ namespace Org.Apache.Kafka.Common.Replica
                 return IExecuteWithSignature<Java.Lang.String>("clientId", "()Ljava/lang/String;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/replica/ClientMetadata.DefaultClientMetadata.html#listenerName()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/replica/ClientMetadata.DefaultClientMetadata.html#listenerName()"/>
             /// </summary>
             /// <returns><see cref="Java.Lang.String"/></returns>
             public Java.Lang.String ListenerName()
@@ -231,7 +231,7 @@ namespace Org.Apache.Kafka.Common.Replica
                 return IExecuteWithSignature<Java.Lang.String>("listenerName", "()Ljava/lang/String;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/replica/ClientMetadata.DefaultClientMetadata.html#rackId()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/replica/ClientMetadata.DefaultClientMetadata.html#rackId()"/>
             /// </summary>
             /// <returns><see cref="Java.Lang.String"/></returns>
             public Java.Lang.String RackId()
@@ -239,7 +239,7 @@ namespace Org.Apache.Kafka.Common.Replica
                 return IExecuteWithSignature<Java.Lang.String>("rackId", "()Ljava/lang/String;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/replica/ClientMetadata.DefaultClientMetadata.html#clientAddress()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/replica/ClientMetadata.DefaultClientMetadata.html#clientAddress()"/>
             /// </summary>
             /// <returns><see cref="Java.Net.InetAddress"/></returns>
             public Java.Net.InetAddress ClientAddress()
@@ -247,7 +247,7 @@ namespace Org.Apache.Kafka.Common.Replica
                 return IExecuteWithSignature<Java.Net.InetAddress>("clientAddress", "()Ljava/net/InetAddress;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/replica/ClientMetadata.DefaultClientMetadata.html#principal()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/replica/ClientMetadata.DefaultClientMetadata.html#principal()"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal"/></returns>
             public Org.Apache.Kafka.Common.Security.Auth.KafkaPrincipal Principal()

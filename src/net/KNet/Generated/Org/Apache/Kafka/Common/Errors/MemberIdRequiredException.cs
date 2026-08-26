@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Errors
 {
     #region MemberIdRequiredException declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/errors/MemberIdRequiredException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/errors/MemberIdRequiredException.html"/>
     /// </summary>
     public partial class MemberIdRequiredException : Org.Apache.Kafka.Common.Errors.ApiException
     {

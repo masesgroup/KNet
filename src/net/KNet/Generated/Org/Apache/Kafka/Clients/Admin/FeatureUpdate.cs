@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 {
     #region FeatureUpdate declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/admin/FeatureUpdate.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/admin/FeatureUpdate.html"/>
     /// </summary>
     public partial class FeatureUpdate : MASES.JCOBridge.C2JBridge.JVMBridgeBase<FeatureUpdate>
     {
@@ -57,7 +57,7 @@ namespace Org.Apache.Kafka.Clients.Admin
         // TODO: complete the class
         #region UpgradeType declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/admin/FeatureUpdate.UpgradeType.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/admin/FeatureUpdate.UpgradeType.html"/>
         /// </summary>
         public partial class UpgradeType : Java.Lang.Enum<Org.Apache.Kafka.Clients.Admin.FeatureUpdate.UpgradeType>
         {
@@ -98,7 +98,7 @@ namespace Org.Apache.Kafka.Clients.Admin
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/admin/FeatureUpdate.html#%3Cinit%3E(short,org.apache.kafka.clients.admin.FeatureUpdate.UpgradeType)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/admin/FeatureUpdate.html#%3Cinit%3E(short,org.apache.kafka.clients.admin.FeatureUpdate.UpgradeType)"/>
         /// </summary>
         /// <param name="arg0"><see cref="short"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.Admin.FeatureUpdate.UpgradeType"/></param>
@@ -130,7 +130,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/admin/FeatureUpdate.html#upgradeType()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/admin/FeatureUpdate.html#upgradeType()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.FeatureUpdate.UpgradeType"/></returns>
         public Org.Apache.Kafka.Clients.Admin.FeatureUpdate.UpgradeType UpgradeTypeMethod()
@@ -138,7 +138,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.FeatureUpdate.UpgradeType>("upgradeType", "()Lorg/apache/kafka/clients/admin/FeatureUpdate$UpgradeType;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/admin/FeatureUpdate.html#maxVersionLevel()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/admin/FeatureUpdate.html#maxVersionLevel()"/>
         /// </summary>
         /// <returns><see cref="short"/></returns>
         public short MaxVersionLevel()
@@ -162,19 +162,19 @@ namespace Org.Apache.Kafka.Clients.Admin
 
             #region Fields
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/admin/FeatureUpdate.UpgradeType.html#SAFE_DOWNGRADE"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/admin/FeatureUpdate.UpgradeType.html#SAFE_DOWNGRADE"/>
             /// </summary>
             public static Org.Apache.Kafka.Clients.Admin.FeatureUpdate.UpgradeType SAFE_DOWNGRADE { get { return SGetField<Org.Apache.Kafka.Clients.Admin.FeatureUpdate.UpgradeType>(LocalBridgeClazz, "SAFE_DOWNGRADE"); } set { SSetField(LocalBridgeClazz, "SAFE_DOWNGRADE", value); } }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/admin/FeatureUpdate.UpgradeType.html#UNKNOWN"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/admin/FeatureUpdate.UpgradeType.html#UNKNOWN"/>
             /// </summary>
             public static Org.Apache.Kafka.Clients.Admin.FeatureUpdate.UpgradeType UNKNOWN { get { return SGetField<Org.Apache.Kafka.Clients.Admin.FeatureUpdate.UpgradeType>(LocalBridgeClazz, "UNKNOWN"); } set { SSetField(LocalBridgeClazz, "UNKNOWN", value); } }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/admin/FeatureUpdate.UpgradeType.html#UNSAFE_DOWNGRADE"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/admin/FeatureUpdate.UpgradeType.html#UNSAFE_DOWNGRADE"/>
             /// </summary>
             public static Org.Apache.Kafka.Clients.Admin.FeatureUpdate.UpgradeType UNSAFE_DOWNGRADE { get { return SGetField<Org.Apache.Kafka.Clients.Admin.FeatureUpdate.UpgradeType>(LocalBridgeClazz, "UNSAFE_DOWNGRADE"); } set { SSetField(LocalBridgeClazz, "UNSAFE_DOWNGRADE", value); } }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/admin/FeatureUpdate.UpgradeType.html#UPGRADE"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/admin/FeatureUpdate.UpgradeType.html#UPGRADE"/>
             /// </summary>
             public static Org.Apache.Kafka.Clients.Admin.FeatureUpdate.UpgradeType UPGRADE { get { return SGetField<Org.Apache.Kafka.Clients.Admin.FeatureUpdate.UpgradeType>(LocalBridgeClazz, "UPGRADE"); } set { SSetField(LocalBridgeClazz, "UPGRADE", value); } }
 
@@ -182,7 +182,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
             #region Static methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/admin/FeatureUpdate.UpgradeType.html#fromCode(int)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/admin/FeatureUpdate.UpgradeType.html#fromCode(int)"/>
             /// </summary>
             /// <param name="arg0"><see cref="int"/></param>
             /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.FeatureUpdate.UpgradeType"/></returns>
@@ -191,7 +191,7 @@ namespace Org.Apache.Kafka.Clients.Admin
                 return SExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.FeatureUpdate.UpgradeType>(LocalBridgeClazz, "fromCode", "(I)Lorg/apache/kafka/clients/admin/FeatureUpdate$UpgradeType;", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/admin/FeatureUpdate.UpgradeType.html#valueOf(java.lang.String)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/admin/FeatureUpdate.UpgradeType.html#valueOf(java.lang.String)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Lang.String"/></param>
             /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.FeatureUpdate.UpgradeType"/></returns>
@@ -200,7 +200,7 @@ namespace Org.Apache.Kafka.Clients.Admin
                 return SExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.FeatureUpdate.UpgradeType>(LocalBridgeClazz, "valueOf", "(Ljava/lang/String;)Lorg/apache/kafka/clients/admin/FeatureUpdate$UpgradeType;", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/admin/FeatureUpdate.UpgradeType.html#values()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/admin/FeatureUpdate.UpgradeType.html#values()"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.FeatureUpdate.UpgradeType"/></returns>
             public static Org.Apache.Kafka.Clients.Admin.FeatureUpdate.UpgradeType[] Values()
@@ -212,7 +212,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/admin/FeatureUpdate.UpgradeType.html#code()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/admin/FeatureUpdate.UpgradeType.html#code()"/>
             /// </summary>
             /// <returns><see cref="byte"/></returns>
             public byte Code()

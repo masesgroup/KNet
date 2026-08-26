@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Replica
 {
     #region ReplicaView declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/replica/ReplicaView.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/replica/ReplicaView.html"/>
     /// </summary>
     public partial class ReplicaView : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ReplicaView>
     {
@@ -57,7 +57,7 @@ namespace Org.Apache.Kafka.Common.Replica
         // TODO: complete the class
         #region DefaultReplicaView declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/replica/ReplicaView.DefaultReplicaView.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/replica/ReplicaView.DefaultReplicaView.html"/>
         /// </summary>
         public partial class DefaultReplicaView : Org.Apache.Kafka.Common.Replica.ReplicaView
         {
@@ -95,7 +95,7 @@ namespace Org.Apache.Kafka.Common.Replica
 
     #region IReplicaView
     /// <summary>
-    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/replica/ReplicaView.html"/>
+    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/replica/ReplicaView.html"/>
     /// </summary>
     public partial interface IReplicaView
     {
@@ -128,7 +128,7 @@ namespace Org.Apache.Kafka.Common.Replica
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/replica/ReplicaView.html#comparator()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/replica/ReplicaView.html#comparator()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Comparator"/></returns>
         public static Java.Util.Comparator<Org.Apache.Kafka.Common.Replica.ReplicaView> Comparator()
@@ -140,7 +140,7 @@ namespace Org.Apache.Kafka.Common.Replica
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/replica/ReplicaView.html#logEndOffset()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/replica/ReplicaView.html#logEndOffset()"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long LogEndOffset()
@@ -148,7 +148,7 @@ namespace Org.Apache.Kafka.Common.Replica
             return IExecuteWithSignature<long>("logEndOffset", "()J");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/replica/ReplicaView.html#timeSinceLastCaughtUpMs()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/replica/ReplicaView.html#timeSinceLastCaughtUpMs()"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long TimeSinceLastCaughtUpMs()
@@ -156,7 +156,7 @@ namespace Org.Apache.Kafka.Common.Replica
             return IExecuteWithSignature<long>("timeSinceLastCaughtUpMs", "()J");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/replica/ReplicaView.html#endpoint()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/replica/ReplicaView.html#endpoint()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Node"/></returns>
         public Org.Apache.Kafka.Common.Node Endpoint()
@@ -172,7 +172,7 @@ namespace Org.Apache.Kafka.Common.Replica
         {
             #region Constructors
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/replica/ReplicaView.DefaultReplicaView.html#%3Cinit%3E(org.apache.kafka.common.Node,long,long)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/replica/ReplicaView.DefaultReplicaView.html#%3Cinit%3E(org.apache.kafka.common.Node,long,long)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Node"/></param>
             /// <param name="arg1"><see cref="long"/></param>
@@ -205,7 +205,7 @@ namespace Org.Apache.Kafka.Common.Replica
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/replica/ReplicaView.DefaultReplicaView.html#logEndOffset()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/replica/ReplicaView.DefaultReplicaView.html#logEndOffset()"/>
             /// </summary>
             /// <returns><see cref="long"/></returns>
             public long LogEndOffset()
@@ -213,7 +213,7 @@ namespace Org.Apache.Kafka.Common.Replica
                 return IExecuteWithSignature<long>("logEndOffset", "()J");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/replica/ReplicaView.DefaultReplicaView.html#timeSinceLastCaughtUpMs()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/replica/ReplicaView.DefaultReplicaView.html#timeSinceLastCaughtUpMs()"/>
             /// </summary>
             /// <returns><see cref="long"/></returns>
             public long TimeSinceLastCaughtUpMs()
@@ -221,7 +221,7 @@ namespace Org.Apache.Kafka.Common.Replica
                 return IExecuteWithSignature<long>("timeSinceLastCaughtUpMs", "()J");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/replica/ReplicaView.DefaultReplicaView.html#endpoint()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/replica/ReplicaView.DefaultReplicaView.html#endpoint()"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Common.Node"/></returns>
             public Org.Apache.Kafka.Common.Node Endpoint()

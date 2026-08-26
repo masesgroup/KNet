@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Raft.Generated
 {
     #region QuorumStateDataJsonConverter declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/generated/QuorumStateDataJsonConverter.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/generated/QuorumStateDataJsonConverter.html"/>
     /// </summary>
     public partial class QuorumStateDataJsonConverter : MASES.JCOBridge.C2JBridge.JVMBridgeBase<QuorumStateDataJsonConverter>
     {
@@ -57,7 +57,7 @@ namespace Org.Apache.Kafka.Raft.Generated
         // TODO: complete the class
         #region VoterJsonConverter declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/generated/QuorumStateDataJsonConverter.VoterJsonConverter.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/generated/QuorumStateDataJsonConverter.VoterJsonConverter.html"/>
         /// </summary>
         public partial class VoterJsonConverter : MASES.JCOBridge.C2JBridge.JVMBridgeBase<VoterJsonConverter>
         {
@@ -98,7 +98,7 @@ namespace Org.Apache.Kafka.Raft.Generated
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/generated/QuorumStateDataJsonConverter.html#%3Cinit%3E()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/generated/QuorumStateDataJsonConverter.html#%3Cinit%3E()"/>
         /// </summary>
         public QuorumStateDataJsonConverter() : base(JVMBridgeBase.InitializerInstance)
         {
@@ -136,7 +136,7 @@ namespace Org.Apache.Kafka.Raft.Generated
         {
             #region Constructors
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/generated/QuorumStateDataJsonConverter.VoterJsonConverter.html#%3Cinit%3E()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/generated/QuorumStateDataJsonConverter.VoterJsonConverter.html#%3Cinit%3E()"/>
             /// </summary>
             public VoterJsonConverter() : base(JVMBridgeBase.InitializerInstance)
             {

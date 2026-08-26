@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 {
     #region ForeachProcessor declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/ForeachProcessor.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/kstream/ForeachProcessor.html"/>
     /// </summary>
     [global::System.Obsolete("Deprecated in JVM")]
     public partial class ForeachProcessor : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ForeachProcessor>
@@ -62,7 +62,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region ForeachProcessor<K, V> declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/ForeachProcessor.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/kstream/ForeachProcessor.html"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
@@ -102,7 +102,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/ForeachProcessor.html#%3Cinit%3E(org.apache.kafka.streams.kstream.ForeachAction)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/kstream/ForeachProcessor.html#%3Cinit%3E(org.apache.kafka.streams.kstream.ForeachAction)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.ForeachAction"/></param>
         public ForeachProcessor(Org.Apache.Kafka.Streams.Kstream.ForeachAction arg0) : base(JVMBridgeBase.InitializerInstance)
@@ -137,7 +137,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/ForeachProcessor.html#process(org.apache.kafka.streams.processor.api.Record)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/kstream/ForeachProcessor.html#process(org.apache.kafka.streams.processor.api.Record)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Processor.Api.Record"/></param>
         public void Process(Org.Apache.Kafka.Streams.Processor.Api.Record arg0)
@@ -160,7 +160,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/ForeachProcessor.html#%3Cinit%3E(org.apache.kafka.streams.kstream.ForeachAction)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/kstream/ForeachProcessor.html#%3Cinit%3E(org.apache.kafka.streams.kstream.ForeachAction)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Kstream.ForeachAction"/></param>
         public ForeachProcessor(Org.Apache.Kafka.Streams.Kstream.ForeachAction<K, V> arg0) : base(JVMBridgeBase.InitializerInstance)
@@ -199,7 +199,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/kstream/ForeachProcessor.html#process(org.apache.kafka.streams.processor.api.Record)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/kstream/ForeachProcessor.html#process(org.apache.kafka.streams.processor.api.Record)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Processor.Api.Record"/></param>
         public void Process(Org.Apache.Kafka.Streams.Processor.Api.Record<K, V> arg0)

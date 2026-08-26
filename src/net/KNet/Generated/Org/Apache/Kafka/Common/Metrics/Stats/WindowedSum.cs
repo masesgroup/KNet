@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
 {
     #region WindowedSum declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/metrics/stats/WindowedSum.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/metrics/stats/WindowedSum.html"/>
     /// </summary>
     public partial class WindowedSum : Org.Apache.Kafka.Common.Metrics.Stats.SampledStat
     {
@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Common.Metrics.Stats
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/metrics/stats/WindowedSum.html#%3Cinit%3E()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/metrics/stats/WindowedSum.html#%3Cinit%3E()"/>
         /// </summary>
         public WindowedSum() : base(JVMBridgeBase.InitializerInstance)
         {

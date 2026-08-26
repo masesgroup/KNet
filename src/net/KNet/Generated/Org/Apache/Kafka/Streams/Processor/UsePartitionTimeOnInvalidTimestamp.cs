@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.Processor
 {
     #region UsePartitionTimeOnInvalidTimestamp declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/UsePartitionTimeOnInvalidTimestamp.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/processor/UsePartitionTimeOnInvalidTimestamp.html"/>
     /// </summary>
     public partial class UsePartitionTimeOnInvalidTimestamp : MASES.JCOBridge.C2JBridge.JVMBridgeBase<UsePartitionTimeOnInvalidTimestamp>
     {
@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Streams.Processor
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/UsePartitionTimeOnInvalidTimestamp.html#%3Cinit%3E()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/processor/UsePartitionTimeOnInvalidTimestamp.html#%3Cinit%3E()"/>
         /// </summary>
         public UsePartitionTimeOnInvalidTimestamp() : base(JVMBridgeBase.InitializerInstance)
         {

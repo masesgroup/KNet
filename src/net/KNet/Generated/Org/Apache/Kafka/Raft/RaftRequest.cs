@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Raft
 {
     #region RaftRequest declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/RaftRequest.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/RaftRequest.html"/>
     /// </summary>
     public partial class RaftRequest : Org.Apache.Kafka.Raft.RaftMessage
     {
@@ -57,7 +57,7 @@ namespace Org.Apache.Kafka.Raft
         // TODO: complete the class
         #region Inbound declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/RaftRequest.Inbound.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/RaftRequest.Inbound.html"/>
         /// </summary>
         public partial class Inbound : Org.Apache.Kafka.Raft.RaftRequest
         {
@@ -91,7 +91,7 @@ namespace Org.Apache.Kafka.Raft
 
         #region Outbound declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/RaftRequest.Outbound.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/RaftRequest.Outbound.html"/>
         /// </summary>
         public partial class Outbound : Org.Apache.Kafka.Raft.RaftRequest
         {
@@ -148,7 +148,7 @@ namespace Org.Apache.Kafka.Raft
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/RaftRequest.html#correlationId()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/RaftRequest.html#correlationId()"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int CorrelationId()
@@ -156,7 +156,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<int>("correlationId", "()I");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/RaftRequest.html#createdTimeMs()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/RaftRequest.html#createdTimeMs()"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long CreatedTimeMs()
@@ -180,7 +180,7 @@ namespace Org.Apache.Kafka.Raft
 
             #region Fields
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/RaftRequest.Inbound.html#completion"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/RaftRequest.Inbound.html#completion"/>
             /// </summary>
             public Java.Util.Concurrent.CompletableFuture completion { get { return IGetField<Java.Util.Concurrent.CompletableFuture>("completion"); } set { ISetField("completion", value); } }
 
@@ -192,7 +192,7 @@ namespace Org.Apache.Kafka.Raft
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/RaftRequest.Inbound.html#apiVersion()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/RaftRequest.Inbound.html#apiVersion()"/>
             /// </summary>
             /// <returns><see cref="short"/></returns>
             public short ApiVersion()
@@ -223,7 +223,7 @@ namespace Org.Apache.Kafka.Raft
 
             #region Fields
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/RaftRequest.Outbound.html#completion"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/RaftRequest.Outbound.html#completion"/>
             /// </summary>
             public Java.Util.Concurrent.CompletableFuture completion { get { return IGetField<Java.Util.Concurrent.CompletableFuture>("completion"); } set { ISetField("completion", value); } }
 
@@ -235,7 +235,7 @@ namespace Org.Apache.Kafka.Raft
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/RaftRequest.Outbound.html#destination()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/RaftRequest.Outbound.html#destination()"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Common.Node"/></returns>
             public Org.Apache.Kafka.Common.Node Destination()

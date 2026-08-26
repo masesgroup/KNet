@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Tools.Api
 {
     #region LongDecoder declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools-api/4.2.1/org/apache/kafka/tools/api/LongDecoder.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools-api/4.3.1/org/apache/kafka/tools/api/LongDecoder.html"/>
     /// </summary>
     public partial class LongDecoder : Org.Apache.Kafka.Tools.Api.Decoder<Java.Lang.Long>
     {
@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Tools.Api
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools-api/4.2.1/org/apache/kafka/tools/api/LongDecoder.html#%3Cinit%3E()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools-api/4.3.1/org/apache/kafka/tools/api/LongDecoder.html#%3Cinit%3E()"/>
         /// </summary>
         public LongDecoder() : base(JVMBridgeBase.InitializerInstance)
         {
@@ -94,7 +94,7 @@ namespace Org.Apache.Kafka.Tools.Api
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools-api/4.2.1/org/apache/kafka/tools/api/LongDecoder.html#fromBytes(byte[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools-api/4.3.1/org/apache/kafka/tools/api/LongDecoder.html#fromBytes(byte[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="byte"/></param>
         /// <returns><see cref="object"/></returns>

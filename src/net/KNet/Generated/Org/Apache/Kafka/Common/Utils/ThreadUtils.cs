@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Utils
 {
     #region ThreadUtils declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/utils/ThreadUtils.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/utils/ThreadUtils.html"/>
     /// </summary>
     public partial class ThreadUtils : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ThreadUtils>
     {
@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Common.Utils
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/utils/ThreadUtils.html#%3Cinit%3E()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/utils/ThreadUtils.html#%3Cinit%3E()"/>
         /// </summary>
         public ThreadUtils() : base(JVMBridgeBase.InitializerInstance)
         {
@@ -90,7 +90,7 @@ namespace Org.Apache.Kafka.Common.Utils
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/utils/ThreadUtils.html#createThreadFactory(java.lang.String,boolean,java.lang.Thread.UncaughtExceptionHandler)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/utils/ThreadUtils.html#createThreadFactory(java.lang.String,boolean,java.lang.Thread.UncaughtExceptionHandler)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="bool"/></param>
@@ -101,7 +101,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return SExecuteWithSignature<Java.Util.Concurrent.ThreadFactory>(LocalBridgeClazz, "createThreadFactory", "(Ljava/lang/String;ZLjava/lang/Thread$UncaughtExceptionHandler;)Ljava/util/concurrent/ThreadFactory;", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/utils/ThreadUtils.html#createThreadFactory(java.lang.String,boolean)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/utils/ThreadUtils.html#createThreadFactory(java.lang.String,boolean)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="bool"/></param>
@@ -111,7 +111,7 @@ namespace Org.Apache.Kafka.Common.Utils
             return SExecuteWithSignature<Java.Util.Concurrent.ThreadFactory>(LocalBridgeClazz, "createThreadFactory", "(Ljava/lang/String;Z)Ljava/util/concurrent/ThreadFactory;", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/utils/ThreadUtils.html#shutdownExecutorServiceQuietly(java.util.concurrent.ExecutorService,long,java.util.concurrent.TimeUnit)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/utils/ThreadUtils.html#shutdownExecutorServiceQuietly(java.util.concurrent.ExecutorService,long,java.util.concurrent.TimeUnit)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Concurrent.ExecutorService"/></param>
         /// <param name="arg1"><see cref="long"/></param>

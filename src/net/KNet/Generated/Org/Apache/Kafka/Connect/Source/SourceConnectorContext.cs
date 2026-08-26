@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Connect.Source
 {
     #region SourceConnectorContext declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.2.1/org/apache/kafka/connect/source/SourceConnectorContext.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.3.1/org/apache/kafka/connect/source/SourceConnectorContext.html"/>
     /// </summary>
     public partial class SourceConnectorContext : Org.Apache.Kafka.Connect.Connector.ConnectorContext
     {
@@ -61,7 +61,7 @@ namespace Org.Apache.Kafka.Connect.Source
 
     #region ISourceConnectorContext
     /// <summary>
-    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.2.1/org/apache/kafka/connect/source/SourceConnectorContext.html"/>
+    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.3.1/org/apache/kafka/connect/source/SourceConnectorContext.html"/>
     /// </summary>
     public partial interface ISourceConnectorContext : Org.Apache.Kafka.Connect.Connector.IConnectorContext
     {

@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Connect.Errors
 {
     #region IllegalWorkerStateException declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.2.1/org/apache/kafka/connect/errors/IllegalWorkerStateException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-api/4.3.1/org/apache/kafka/connect/errors/IllegalWorkerStateException.html"/>
     /// </summary>
     public partial class IllegalWorkerStateException : Org.Apache.Kafka.Connect.Errors.ConnectException
     {

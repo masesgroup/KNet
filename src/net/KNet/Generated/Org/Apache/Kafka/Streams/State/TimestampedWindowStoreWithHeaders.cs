@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.State
 {
     #region TimestampedWindowStoreWithHeaders declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/state/TimestampedWindowStoreWithHeaders.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/state/TimestampedWindowStoreWithHeaders.html"/>
     /// </summary>
     public partial class TimestampedWindowStoreWithHeaders : Org.Apache.Kafka.Streams.State.WindowStore
     {
@@ -61,7 +61,7 @@ namespace Org.Apache.Kafka.Streams.State
 
     #region TimestampedWindowStoreWithHeaders<K, V> declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/state/TimestampedWindowStoreWithHeaders.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/state/TimestampedWindowStoreWithHeaders.html"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
@@ -128,7 +128,7 @@ namespace Org.Apache.Kafka.Streams.State
 
     #region ITimestampedWindowStoreWithHeaders<K, V>
     /// <summary>
-    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/state/TimestampedWindowStoreWithHeaders.html"/>
+    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/state/TimestampedWindowStoreWithHeaders.html"/>
     /// </summary>
     public partial interface ITimestampedWindowStoreWithHeaders<K, V> : Org.Apache.Kafka.Streams.State.IWindowStore<K, Org.Apache.Kafka.Streams.State.ValueTimestampHeaders<V>>
     {

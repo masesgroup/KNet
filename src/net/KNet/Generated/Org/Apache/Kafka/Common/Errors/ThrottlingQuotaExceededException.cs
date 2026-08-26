@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Errors
 {
     #region ThrottlingQuotaExceededException declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/errors/ThrottlingQuotaExceededException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/errors/ThrottlingQuotaExceededException.html"/>
     /// </summary>
     public partial class ThrottlingQuotaExceededException : Org.Apache.Kafka.Common.Errors.RetriableException
     {

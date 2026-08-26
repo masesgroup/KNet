@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Connect.Util
 {
     #region FutureCallback declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.2.1/org/apache/kafka/connect/util/FutureCallback.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.3.1/org/apache/kafka/connect/util/FutureCallback.html"/>
     /// </summary>
     public partial class FutureCallback : Org.Apache.Kafka.Connect.Util.ConvertingFutureCallback
     {
@@ -61,7 +61,7 @@ namespace Org.Apache.Kafka.Connect.Util
 
     #region FutureCallback<T> declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.2.1/org/apache/kafka/connect/util/FutureCallback.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.3.1/org/apache/kafka/connect/util/FutureCallback.html"/>
     /// </summary>
     /// <typeparam name="T"></typeparam>
     public partial class FutureCallback<T> : Org.Apache.Kafka.Connect.Util.ConvertingFutureCallback<T, T>
@@ -99,7 +99,7 @@ namespace Org.Apache.Kafka.Connect.Util
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.2.1/org/apache/kafka/connect/util/FutureCallback.html#%3Cinit%3E()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.3.1/org/apache/kafka/connect/util/FutureCallback.html#%3Cinit%3E()"/>
         /// </summary>
         public FutureCallback() : base(JVMBridgeBase.InitializerInstance)
         {
@@ -113,7 +113,7 @@ namespace Org.Apache.Kafka.Connect.Util
             return JVMBridgeBase.New<FutureCallback>();
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.2.1/org/apache/kafka/connect/util/FutureCallback.html#%3Cinit%3E(org.apache.kafka.connect.util.Callback)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.3.1/org/apache/kafka/connect/util/FutureCallback.html#%3Cinit%3E(org.apache.kafka.connect.util.Callback)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Util.Callback"/></param>
         public FutureCallback(Org.Apache.Kafka.Connect.Util.Callback arg0) : base(JVMBridgeBase.InitializerInstance)
@@ -159,7 +159,7 @@ namespace Org.Apache.Kafka.Connect.Util
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.2.1/org/apache/kafka/connect/util/FutureCallback.html#%3Cinit%3E()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.3.1/org/apache/kafka/connect/util/FutureCallback.html#%3Cinit%3E()"/>
         /// </summary>
         public FutureCallback() : base(JVMBridgeBase.InitializerInstance)
         {
@@ -173,7 +173,7 @@ namespace Org.Apache.Kafka.Connect.Util
             return JVMBridgeBase.New<FutureCallback<T>>();
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.2.1/org/apache/kafka/connect/util/FutureCallback.html#%3Cinit%3E(org.apache.kafka.connect.util.Callback)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.3.1/org/apache/kafka/connect/util/FutureCallback.html#%3Cinit%3E(org.apache.kafka.connect.util.Callback)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Connect.Util.Callback"/></param>
         public FutureCallback(Org.Apache.Kafka.Connect.Util.Callback<T> arg0) : base(JVMBridgeBase.InitializerInstance)

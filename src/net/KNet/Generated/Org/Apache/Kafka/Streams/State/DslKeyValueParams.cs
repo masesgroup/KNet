@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.State
 {
     #region DslKeyValueParams declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/state/DslKeyValueParams.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/state/DslKeyValueParams.html"/>
     /// </summary>
     public partial class DslKeyValueParams : MASES.JCOBridge.C2JBridge.JVMBridgeBase<DslKeyValueParams>
     {
@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Streams.State
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/state/DslKeyValueParams.html#%3Cinit%3E(java.lang.String,boolean)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/state/DslKeyValueParams.html#%3Cinit%3E(java.lang.String,boolean)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="bool"/></param>
@@ -81,7 +81,7 @@ namespace Org.Apache.Kafka.Streams.State
             return JVMBridgeBase.New<DslKeyValueParams>(arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/state/DslKeyValueParams.html#%3Cinit%3E(java.lang.String,org.apache.kafka.streams.DslStoreFormat)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/state/DslKeyValueParams.html#%3Cinit%3E(java.lang.String,org.apache.kafka.streams.DslStoreFormat)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.DslStoreFormat"/></param>
@@ -113,7 +113,7 @@ namespace Org.Apache.Kafka.Streams.State
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/state/DslKeyValueParams.html#isTimestamped()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/state/DslKeyValueParams.html#isTimestamped()"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         [global::System.Obsolete("Deprecated in JVM")]
@@ -122,7 +122,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecuteWithSignature<bool>("isTimestamped", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/state/DslKeyValueParams.html#name()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/state/DslKeyValueParams.html#name()"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String Name()
@@ -130,7 +130,7 @@ namespace Org.Apache.Kafka.Streams.State
             return IExecuteWithSignature<Java.Lang.String>("name", "()Ljava/lang/String;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/state/DslKeyValueParams.html#dslStoreFormat()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/state/DslKeyValueParams.html#dslStoreFormat()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Streams.DslStoreFormat"/></returns>
         public Org.Apache.Kafka.Streams.DslStoreFormat DslStoreFormat()

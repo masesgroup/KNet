@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common
 {
     #region ElectionType declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/ElectionType.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/ElectionType.html"/>
     /// </summary>
     public partial class ElectionType : Java.Lang.Enum<Org.Apache.Kafka.Common.ElectionType>
     {
@@ -72,15 +72,15 @@ namespace Org.Apache.Kafka.Common
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/ElectionType.html#value"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/ElectionType.html#value"/>
         /// </summary>
         public byte value { get { return IGetField<byte>("value"); } set { ISetField("value", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/ElectionType.html#PREFERRED"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/ElectionType.html#PREFERRED"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.ElectionType PREFERRED { get { return SGetField<Org.Apache.Kafka.Common.ElectionType>(LocalBridgeClazz, "PREFERRED"); } set { SSetField(LocalBridgeClazz, "PREFERRED", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/ElectionType.html#UNCLEAN"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/ElectionType.html#UNCLEAN"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.ElectionType UNCLEAN { get { return SGetField<Org.Apache.Kafka.Common.ElectionType>(LocalBridgeClazz, "UNCLEAN"); } set { SSetField(LocalBridgeClazz, "UNCLEAN", value); } }
 
@@ -88,7 +88,7 @@ namespace Org.Apache.Kafka.Common
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/ElectionType.html#valueOf(byte)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/ElectionType.html#valueOf(byte)"/>
         /// </summary>
         /// <param name="arg0"><see cref="byte"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.ElectionType"/></returns>
@@ -97,7 +97,7 @@ namespace Org.Apache.Kafka.Common
             return SExecuteWithSignature<Org.Apache.Kafka.Common.ElectionType>(LocalBridgeClazz, "valueOf", "(B)Lorg/apache/kafka/common/ElectionType;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/ElectionType.html#valueOf(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/ElectionType.html#valueOf(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.ElectionType"/></returns>
@@ -106,7 +106,7 @@ namespace Org.Apache.Kafka.Common
             return SExecuteWithSignature<Org.Apache.Kafka.Common.ElectionType>(LocalBridgeClazz, "valueOf", "(Ljava/lang/String;)Lorg/apache/kafka/common/ElectionType;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/ElectionType.html#values()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/ElectionType.html#values()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.ElectionType"/></returns>
         public static Org.Apache.Kafka.Common.ElectionType[] Values()

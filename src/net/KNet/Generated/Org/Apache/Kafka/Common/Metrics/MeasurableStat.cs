@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Metrics
 {
     #region MeasurableStat declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/metrics/MeasurableStat.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/metrics/MeasurableStat.html"/>
     /// </summary>
     public partial class MeasurableStat : MASES.JCOBridge.C2JBridge.JVMBridgeBase<MeasurableStat>
     {
@@ -61,7 +61,7 @@ namespace Org.Apache.Kafka.Common.Metrics
 
     #region IMeasurableStat
     /// <summary>
-    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/metrics/MeasurableStat.html"/>
+    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/metrics/MeasurableStat.html"/>
     /// </summary>
     public partial interface IMeasurableStat
     {

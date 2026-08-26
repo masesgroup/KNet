@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Raft
 {
     #region TimingWheelExpirationService declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/TimingWheelExpirationService.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/TimingWheelExpirationService.html"/>
     /// </summary>
     public partial class TimingWheelExpirationService : Org.Apache.Kafka.Raft.ExpirationService
     {
@@ -80,7 +80,7 @@ namespace Org.Apache.Kafka.Raft
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/TimingWheelExpirationService.html#failAfter(long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/TimingWheelExpirationService.html#failAfter(long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <typeparam name="T"></typeparam>
@@ -90,7 +90,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<Java.Util.Concurrent.CompletableFuture<T>>("failAfter", "(J)Ljava/util/concurrent/CompletableFuture;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.2.1/org/apache/kafka/raft/TimingWheelExpirationService.html#shutdown()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/TimingWheelExpirationService.html#shutdown()"/>
         /// </summary>
         /// <exception cref="Java.Lang.InterruptedException"/>
         public void Shutdown()

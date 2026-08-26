@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Clients
 {
     #region GroupRebalanceConfig declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/GroupRebalanceConfig.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/GroupRebalanceConfig.html"/>
     /// </summary>
     public partial class GroupRebalanceConfig : MASES.JCOBridge.C2JBridge.JVMBridgeBase<GroupRebalanceConfig>
     {
@@ -57,7 +57,7 @@ namespace Org.Apache.Kafka.Clients
         // TODO: complete the class
         #region ProtocolType declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/GroupRebalanceConfig.ProtocolType.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/GroupRebalanceConfig.ProtocolType.html"/>
         /// </summary>
         public partial class ProtocolType : Java.Lang.Enum<Org.Apache.Kafka.Clients.GroupRebalanceConfig.ProtocolType>
         {
@@ -98,7 +98,7 @@ namespace Org.Apache.Kafka.Clients
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/GroupRebalanceConfig.html#%3Cinit%3E(int,int,int,java.lang.String,java.util.Optional,java.lang.String,long,long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/GroupRebalanceConfig.html#%3Cinit%3E(int,int,int,java.lang.String,java.util.Optional,java.lang.String,long,long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <param name="arg1"><see cref="int"/></param>
@@ -120,7 +120,7 @@ namespace Org.Apache.Kafka.Clients
             return JVMBridgeBase.New<GroupRebalanceConfig>(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/GroupRebalanceConfig.html#%3Cinit%3E(org.apache.kafka.common.config.AbstractConfig,org.apache.kafka.clients.GroupRebalanceConfig.ProtocolType)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/GroupRebalanceConfig.html#%3Cinit%3E(org.apache.kafka.common.config.AbstractConfig,org.apache.kafka.clients.GroupRebalanceConfig.ProtocolType)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Config.AbstractConfig"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.GroupRebalanceConfig.ProtocolType"/></param>
@@ -144,35 +144,35 @@ namespace Org.Apache.Kafka.Clients
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/GroupRebalanceConfig.html#heartbeatIntervalMs"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/GroupRebalanceConfig.html#heartbeatIntervalMs"/>
         /// </summary>
         public int heartbeatIntervalMs { get { return IGetField<int>("heartbeatIntervalMs"); } set { ISetField("heartbeatIntervalMs", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/GroupRebalanceConfig.html#rebalanceTimeoutMs"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/GroupRebalanceConfig.html#rebalanceTimeoutMs"/>
         /// </summary>
         public int rebalanceTimeoutMs { get { return IGetField<int>("rebalanceTimeoutMs"); } set { ISetField("rebalanceTimeoutMs", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/GroupRebalanceConfig.html#sessionTimeoutMs"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/GroupRebalanceConfig.html#sessionTimeoutMs"/>
         /// </summary>
         public int sessionTimeoutMs { get { return IGetField<int>("sessionTimeoutMs"); } set { ISetField("sessionTimeoutMs", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/GroupRebalanceConfig.html#groupId"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/GroupRebalanceConfig.html#groupId"/>
         /// </summary>
         public Java.Lang.String groupId { get { return IGetField<Java.Lang.String>("groupId"); } set { ISetField("groupId", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/GroupRebalanceConfig.html#groupInstanceId"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/GroupRebalanceConfig.html#groupInstanceId"/>
         /// </summary>
         public Java.Util.Optional groupInstanceId { get { return IGetField<Java.Util.Optional>("groupInstanceId"); } set { ISetField("groupInstanceId", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/GroupRebalanceConfig.html#rackId"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/GroupRebalanceConfig.html#rackId"/>
         /// </summary>
         public Java.Util.Optional rackId { get { return IGetField<Java.Util.Optional>("rackId"); } set { ISetField("rackId", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/GroupRebalanceConfig.html#retryBackoffMaxMs"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/GroupRebalanceConfig.html#retryBackoffMaxMs"/>
         /// </summary>
         public long retryBackoffMaxMs { get { return IGetField<long>("retryBackoffMaxMs"); } set { ISetField("retryBackoffMaxMs", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/GroupRebalanceConfig.html#retryBackoffMs"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/GroupRebalanceConfig.html#retryBackoffMs"/>
         /// </summary>
         public long retryBackoffMs { get { return IGetField<long>("retryBackoffMs"); } set { ISetField("retryBackoffMs", value); } }
 
@@ -200,15 +200,15 @@ namespace Org.Apache.Kafka.Clients
 
             #region Fields
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/GroupRebalanceConfig.ProtocolType.html#CONNECT"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/GroupRebalanceConfig.ProtocolType.html#CONNECT"/>
             /// </summary>
             public static Org.Apache.Kafka.Clients.GroupRebalanceConfig.ProtocolType CONNECT { get { return SGetField<Org.Apache.Kafka.Clients.GroupRebalanceConfig.ProtocolType>(LocalBridgeClazz, "CONNECT"); } set { SSetField(LocalBridgeClazz, "CONNECT", value); } }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/GroupRebalanceConfig.ProtocolType.html#CONSUMER"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/GroupRebalanceConfig.ProtocolType.html#CONSUMER"/>
             /// </summary>
             public static Org.Apache.Kafka.Clients.GroupRebalanceConfig.ProtocolType CONSUMER { get { return SGetField<Org.Apache.Kafka.Clients.GroupRebalanceConfig.ProtocolType>(LocalBridgeClazz, "CONSUMER"); } set { SSetField(LocalBridgeClazz, "CONSUMER", value); } }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/GroupRebalanceConfig.ProtocolType.html#SHARE"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/GroupRebalanceConfig.ProtocolType.html#SHARE"/>
             /// </summary>
             public static Org.Apache.Kafka.Clients.GroupRebalanceConfig.ProtocolType SHARE { get { return SGetField<Org.Apache.Kafka.Clients.GroupRebalanceConfig.ProtocolType>(LocalBridgeClazz, "SHARE"); } set { SSetField(LocalBridgeClazz, "SHARE", value); } }
 
@@ -216,7 +216,7 @@ namespace Org.Apache.Kafka.Clients
 
             #region Static methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/GroupRebalanceConfig.ProtocolType.html#valueOf(java.lang.String)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/GroupRebalanceConfig.ProtocolType.html#valueOf(java.lang.String)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Lang.String"/></param>
             /// <returns><see cref="Org.Apache.Kafka.Clients.GroupRebalanceConfig.ProtocolType"/></returns>
@@ -225,7 +225,7 @@ namespace Org.Apache.Kafka.Clients
                 return SExecuteWithSignature<Org.Apache.Kafka.Clients.GroupRebalanceConfig.ProtocolType>(LocalBridgeClazz, "valueOf", "(Ljava/lang/String;)Lorg/apache/kafka/clients/GroupRebalanceConfig$ProtocolType;", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/GroupRebalanceConfig.ProtocolType.html#values()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/GroupRebalanceConfig.ProtocolType.html#values()"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Clients.GroupRebalanceConfig.ProtocolType"/></returns>
             public static Org.Apache.Kafka.Clients.GroupRebalanceConfig.ProtocolType[] Values()

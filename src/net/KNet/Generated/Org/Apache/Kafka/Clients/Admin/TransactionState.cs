@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 {
     #region TransactionState declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/admin/TransactionState.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/admin/TransactionState.html"/>
     /// </summary>
     public partial class TransactionState : Java.Lang.Enum<Org.Apache.Kafka.Clients.Admin.TransactionState>
     {
@@ -72,35 +72,35 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/admin/TransactionState.html#COMPLETE_ABORT"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/admin/TransactionState.html#COMPLETE_ABORT"/>
         /// </summary>
         public static Org.Apache.Kafka.Clients.Admin.TransactionState COMPLETE_ABORT { get { return SGetField<Org.Apache.Kafka.Clients.Admin.TransactionState>(LocalBridgeClazz, "COMPLETE_ABORT"); } set { SSetField(LocalBridgeClazz, "COMPLETE_ABORT", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/admin/TransactionState.html#COMPLETE_COMMIT"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/admin/TransactionState.html#COMPLETE_COMMIT"/>
         /// </summary>
         public static Org.Apache.Kafka.Clients.Admin.TransactionState COMPLETE_COMMIT { get { return SGetField<Org.Apache.Kafka.Clients.Admin.TransactionState>(LocalBridgeClazz, "COMPLETE_COMMIT"); } set { SSetField(LocalBridgeClazz, "COMPLETE_COMMIT", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/admin/TransactionState.html#EMPTY"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/admin/TransactionState.html#EMPTY"/>
         /// </summary>
         public static Org.Apache.Kafka.Clients.Admin.TransactionState EMPTY { get { return SGetField<Org.Apache.Kafka.Clients.Admin.TransactionState>(LocalBridgeClazz, "EMPTY"); } set { SSetField(LocalBridgeClazz, "EMPTY", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/admin/TransactionState.html#ONGOING"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/admin/TransactionState.html#ONGOING"/>
         /// </summary>
         public static Org.Apache.Kafka.Clients.Admin.TransactionState ONGOING { get { return SGetField<Org.Apache.Kafka.Clients.Admin.TransactionState>(LocalBridgeClazz, "ONGOING"); } set { SSetField(LocalBridgeClazz, "ONGOING", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/admin/TransactionState.html#PREPARE_ABORT"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/admin/TransactionState.html#PREPARE_ABORT"/>
         /// </summary>
         public static Org.Apache.Kafka.Clients.Admin.TransactionState PREPARE_ABORT { get { return SGetField<Org.Apache.Kafka.Clients.Admin.TransactionState>(LocalBridgeClazz, "PREPARE_ABORT"); } set { SSetField(LocalBridgeClazz, "PREPARE_ABORT", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/admin/TransactionState.html#PREPARE_COMMIT"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/admin/TransactionState.html#PREPARE_COMMIT"/>
         /// </summary>
         public static Org.Apache.Kafka.Clients.Admin.TransactionState PREPARE_COMMIT { get { return SGetField<Org.Apache.Kafka.Clients.Admin.TransactionState>(LocalBridgeClazz, "PREPARE_COMMIT"); } set { SSetField(LocalBridgeClazz, "PREPARE_COMMIT", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/admin/TransactionState.html#PREPARE_EPOCH_FENCE"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/admin/TransactionState.html#PREPARE_EPOCH_FENCE"/>
         /// </summary>
         public static Org.Apache.Kafka.Clients.Admin.TransactionState PREPARE_EPOCH_FENCE { get { return SGetField<Org.Apache.Kafka.Clients.Admin.TransactionState>(LocalBridgeClazz, "PREPARE_EPOCH_FENCE"); } set { SSetField(LocalBridgeClazz, "PREPARE_EPOCH_FENCE", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/admin/TransactionState.html#UNKNOWN"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/admin/TransactionState.html#UNKNOWN"/>
         /// </summary>
         public static Org.Apache.Kafka.Clients.Admin.TransactionState UNKNOWN { get { return SGetField<Org.Apache.Kafka.Clients.Admin.TransactionState>(LocalBridgeClazz, "UNKNOWN"); } set { SSetField(LocalBridgeClazz, "UNKNOWN", value); } }
 
@@ -108,7 +108,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/admin/TransactionState.html#parse(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/admin/TransactionState.html#parse(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.TransactionState"/></returns>
@@ -117,7 +117,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return SExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.TransactionState>(LocalBridgeClazz, "parse", "(Ljava/lang/String;)Lorg/apache/kafka/clients/admin/TransactionState;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/admin/TransactionState.html#valueOf(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/admin/TransactionState.html#valueOf(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.TransactionState"/></returns>
@@ -126,7 +126,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return SExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.TransactionState>(LocalBridgeClazz, "valueOf", "(Ljava/lang/String;)Lorg/apache/kafka/clients/admin/TransactionState;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/clients/admin/TransactionState.html#values()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/admin/TransactionState.html#values()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.TransactionState"/></returns>
         public static Org.Apache.Kafka.Clients.Admin.TransactionState[] Values()

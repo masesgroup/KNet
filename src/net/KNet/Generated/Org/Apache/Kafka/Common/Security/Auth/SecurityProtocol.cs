@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Security.Auth
 {
     #region SecurityProtocol declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/security/auth/SecurityProtocol.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/security/auth/SecurityProtocol.html"/>
     /// </summary>
     public partial class SecurityProtocol : Java.Lang.Enum<Org.Apache.Kafka.Common.Security.Auth.SecurityProtocol>
     {
@@ -72,27 +72,27 @@ namespace Org.Apache.Kafka.Common.Security.Auth
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/security/auth/SecurityProtocol.html#name"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/security/auth/SecurityProtocol.html#name"/>
         /// </summary>
         public Java.Lang.String name { get { return IGetField<Java.Lang.String>("name"); } set { ISetField("name", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/security/auth/SecurityProtocol.html#id"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/security/auth/SecurityProtocol.html#id"/>
         /// </summary>
         public short id { get { return IGetField<short>("id"); } set { ISetField("id", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/security/auth/SecurityProtocol.html#PLAINTEXT"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/security/auth/SecurityProtocol.html#PLAINTEXT"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Security.Auth.SecurityProtocol PLAINTEXT { get { return SGetField<Org.Apache.Kafka.Common.Security.Auth.SecurityProtocol>(LocalBridgeClazz, "PLAINTEXT"); } set { SSetField(LocalBridgeClazz, "PLAINTEXT", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/security/auth/SecurityProtocol.html#SASL_PLAINTEXT"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/security/auth/SecurityProtocol.html#SASL_PLAINTEXT"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Security.Auth.SecurityProtocol SASL_PLAINTEXT { get { return SGetField<Org.Apache.Kafka.Common.Security.Auth.SecurityProtocol>(LocalBridgeClazz, "SASL_PLAINTEXT"); } set { SSetField(LocalBridgeClazz, "SASL_PLAINTEXT", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/security/auth/SecurityProtocol.html#SASL_SSL"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/security/auth/SecurityProtocol.html#SASL_SSL"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Security.Auth.SecurityProtocol SASL_SSL { get { return SGetField<Org.Apache.Kafka.Common.Security.Auth.SecurityProtocol>(LocalBridgeClazz, "SASL_SSL"); } set { SSetField(LocalBridgeClazz, "SASL_SSL", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/security/auth/SecurityProtocol.html#SSL"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/security/auth/SecurityProtocol.html#SSL"/>
         /// </summary>
         public static Org.Apache.Kafka.Common.Security.Auth.SecurityProtocol SSL { get { return SGetField<Org.Apache.Kafka.Common.Security.Auth.SecurityProtocol>(LocalBridgeClazz, "SSL"); } set { SSetField(LocalBridgeClazz, "SSL", value); } }
 
@@ -100,7 +100,7 @@ namespace Org.Apache.Kafka.Common.Security.Auth
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/security/auth/SecurityProtocol.html#names()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/security/auth/SecurityProtocol.html#names()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.List"/></returns>
         public static Java.Util.List<Java.Lang.String> Names()
@@ -108,7 +108,7 @@ namespace Org.Apache.Kafka.Common.Security.Auth
             return SExecuteWithSignature<Java.Util.List<Java.Lang.String>>(LocalBridgeClazz, "names", "()Ljava/util/List;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/security/auth/SecurityProtocol.html#forId(short)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/security/auth/SecurityProtocol.html#forId(short)"/>
         /// </summary>
         /// <param name="arg0"><see cref="short"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Security.Auth.SecurityProtocol"/></returns>
@@ -117,7 +117,7 @@ namespace Org.Apache.Kafka.Common.Security.Auth
             return SExecuteWithSignature<Org.Apache.Kafka.Common.Security.Auth.SecurityProtocol>(LocalBridgeClazz, "forId", "(S)Lorg/apache/kafka/common/security/auth/SecurityProtocol;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/security/auth/SecurityProtocol.html#forName(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/security/auth/SecurityProtocol.html#forName(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Security.Auth.SecurityProtocol"/></returns>
@@ -126,7 +126,7 @@ namespace Org.Apache.Kafka.Common.Security.Auth
             return SExecuteWithSignature<Org.Apache.Kafka.Common.Security.Auth.SecurityProtocol>(LocalBridgeClazz, "forName", "(Ljava/lang/String;)Lorg/apache/kafka/common/security/auth/SecurityProtocol;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/security/auth/SecurityProtocol.html#valueOf(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/security/auth/SecurityProtocol.html#valueOf(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Common.Security.Auth.SecurityProtocol"/></returns>
@@ -135,7 +135,7 @@ namespace Org.Apache.Kafka.Common.Security.Auth
             return SExecuteWithSignature<Org.Apache.Kafka.Common.Security.Auth.SecurityProtocol>(LocalBridgeClazz, "valueOf", "(Ljava/lang/String;)Lorg/apache/kafka/common/security/auth/SecurityProtocol;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.1/org/apache/kafka/common/security/auth/SecurityProtocol.html#values()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/security/auth/SecurityProtocol.html#values()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Security.Auth.SecurityProtocol"/></returns>
         public static Org.Apache.Kafka.Common.Security.Auth.SecurityProtocol[] Values()

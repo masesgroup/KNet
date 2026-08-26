@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.Errors
 {
     #region TaskAssignmentException declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/errors/TaskAssignmentException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/errors/TaskAssignmentException.html"/>
     /// </summary>
     public partial class TaskAssignmentException : Org.Apache.Kafka.Streams.Errors.StreamsException
     {
