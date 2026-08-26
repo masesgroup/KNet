@@ -382,6 +382,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             System.Collections.Generic.Dictionary<int, long> dictionary = new();
             try
             {
+                using var scope = new JCOBridgeDisposeFastScope();
                 using Java.Lang.String jTopic = topicName;
                 using var coll = Collections.Singleton(jTopic);
                 using DescribeTopicsResult describeTopicsResult = this.DescribeTopics(coll);

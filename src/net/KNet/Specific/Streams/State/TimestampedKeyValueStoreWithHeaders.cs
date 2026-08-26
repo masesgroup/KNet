@@ -1,0 +1,122 @@
+﻿/*
+*  Copyright (c) 2021-2026 MASES s.r.l.
+*
+*  Licensed under the Apache License, Version 2.0 (the "License");
+*  you may not use this file except in compliance with the License.
+*  You may obtain a copy of the License at
+*
+*  http://www.apache.org/licenses/LICENSE-2.0
+*
+*  Unless required by applicable law or agreed to in writing, software
+*  distributed under the License is distributed on an "AS IS" BASIS,
+*  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+*  See the License for the specific language governing permissions and
+*  limitations under the License.
+*
+*  Refer to LICENSE for more information.
+*/
+
+using MASES.KNet.Serialization;
+using System;
+
+namespace MASES.KNet.Streams.State
+{
+    /// <summary>
+    /// KNet implementation of <see cref="Org.Apache.Kafka.Streams.State.ReadOnlySessionStore{TJVMK, TJVMV}"/> 
+    /// </summary>
+    /// <typeparam name="K">The key type</typeparam>
+    /// <typeparam name="V">The value type</typeparam>
+    /// <typeparam name="TJVMK">The JVM type of <typeparamref name="K"/></typeparam>
+    /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
+    public class TimestampedKeyValueStoreWithHeaders<K, V, TJVMK, TJVMV> : ManagedStore<Org.Apache.Kafka.Streams.State.ReadOnlyKeyValueStore<TJVMK, Org.Apache.Kafka.Streams.State.ValueTimestampHeaders<TJVMV>>>
+    {
+        /// <summary>
+        /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#approximateNumEntries()"/>
+        /// </summary>
+        /// <returns><see cref="long"/></returns>
+        public virtual long ApproximateNumEntries() => Store.ApproximateNumEntries();
+        /// <summary>
+        /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#all()"/>
+        /// </summary>
+        /// <returns><see cref="KeyValueIterator{K, V, TJVMK, TJVMV}"/></returns>
+        public virtual TimestampedKeyValueWithHeadersIterator<K, V, TJVMK, TJVMV> All() => new(Factory, Store.All());
+        /// <summary>
+        /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#range(java.lang.Object,java.lang.Object)"/>
+        /// </summary>
+        /// <param name="arg0"><typeparamref name="K"/></param>
+        /// <param name="arg1"><typeparamref name="V"/></param>
+        /// <returns><see cref="KeyValueIterator{K, V, TJVMK, TJVMV}"/></returns>
+        public virtual TimestampedKeyValueWithHeadersIterator<K, V, TJVMK, TJVMV> Range(K arg0, K arg1)
+        {
+            IGenericSerDesFactory factory = Factory;
+            var _keySerDes = factory?.BuildKeySerDes<K, TJVMK>();
+
+            var r0 = _keySerDes.Serialize((Java.Lang.String)null, arg0);
+            var r1 = _keySerDes.Serialize((Java.Lang.String)null, arg1);
+            using var disposable0 = r0 as IDisposable;
+            using var disposable1 = r1 as IDisposable;
+
+            return new(factory, Store.Range(r0, r1));
+        }
+        /// <summary>
+        /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#get(java.lang.Object)"/>
+        /// </summary>
+        /// <param name="arg0"><typeparamref name="K"/></param>
+        /// <returns><typeparamref name="V"/></returns>
+        public virtual ValueTimestampHeaders<V, TJVMV> Get(K arg0)
+        {
+            IGenericSerDesFactory factory = Factory;
+            var _keySerDes = factory?.BuildKeySerDes<K, TJVMK>();
+
+            var r0 = _keySerDes.Serialize((Java.Lang.String)null, arg0);
+            var res = Store.Get(r0);
+            using var disposable0 = r0 as IDisposable;
+            using var disposable1 = res as IDisposable;
+
+            return new ValueTimestampHeaders<V, TJVMV>(factory, res);
+        }
+        /// <summary>
+        /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#prefixScan(java.lang.Object,org.apache.kafka.common.serialization.Serializer)"/>
+        /// </summary>
+        /// <returns><see cref="TimestampedKeyValueWithHeadersIterator{K, V, TJVMK, TJVMV}"/></returns>
+        public TimestampedKeyValueWithHeadersIterator<K, V, TJVMK, TJVMV> PrefixScan<P, TJVMP>(P arg0, ISerDes<P, TJVMP> arg1)
+        {
+            var r0 = arg1.Serialize((Java.Lang.String)null, arg0);
+            using var disposable0 = r0 as IDisposable;
+
+            return new(Factory, Store.PrefixScan(r0, arg1.KafkaSerializer));
+        }
+        /// <summary>
+        /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#reverseAll()"/>
+        /// </summary>
+        /// <returns><see cref="KeyValueIterator{K, V, TJVMK, TJVMV}"/></returns>
+        public virtual TimestampedKeyValueWithHeadersIterator<K, V, TJVMK, TJVMV> ReverseAll() => new(Factory, Store.ReverseAll());
+        /// <summary>
+        /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#reverseRange(java.lang.Object,java.lang.Object)"/>
+        /// </summary>
+        /// <param name="arg0"><typeparamref name="K"/></param>
+        /// <param name="arg1"><typeparamref name="K"/></param>
+        /// <returns><see cref="KeyValueIterator{K, V, TJVMK, TJVMV}"/></returns>
+        public virtual TimestampedKeyValueWithHeadersIterator<K, V, TJVMK, TJVMV> ReverseRange(K arg0, K arg1)
+        {
+            IGenericSerDesFactory factory = Factory;
+            var _keySerDes = factory?.BuildKeySerDes<K, TJVMK>();
+
+            var r0 = _keySerDes.Serialize((Java.Lang.String)null, arg0);
+            var r1 = _keySerDes.Serialize((Java.Lang.String)null, arg1);
+            using var disposable0 = r0 as IDisposable;
+            using var disposable1 = r1 as IDisposable;
+
+            return new(factory, Store.ReverseRange(r0, r1));
+        }
+    }
+
+    /// <summary>
+    /// KNet implementation of <see cref="Org.Apache.Kafka.Streams.State.ReadOnlySessionStore{K, V}"/> 
+    /// </summary>
+    /// <typeparam name="K">The key type</typeparam>
+    /// <typeparam name="V">The value type</typeparam>
+    public class TimestampedKeyValueStoreWithHeaders<K, V> : TimestampedKeyValueStoreWithHeaders<K, V, byte[], byte[]>
+    {
+    }
+}
