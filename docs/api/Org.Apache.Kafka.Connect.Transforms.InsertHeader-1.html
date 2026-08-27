@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class InsertHeader&lt;R&gt; | MASES Group - KNet ">
       <meta name="description" content="This is a descriptive page of KNet, the .NET suite for Apache Kafka">
-      <meta name="description" content="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/InsertHeader.html">
+      <meta name="description" content="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/InsertHeader.html">
       <link rel="icon" href="../images/favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -89,7 +89,7 @@
 
 
   <h1 id="Org_Apache_Kafka_Connect_Transforms_InsertHeader_1" data-uid="Org.Apache.Kafka.Connect.Transforms.InsertHeader`1" class="text-break">
-Class InsertHeader&lt;R&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/InsertHeader.cs/#L207"><i class="bi bi-code-slash"></i></a>
+Class InsertHeader&lt;R&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/InsertHeader.cs/#L199"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -97,12 +97,12 @@ Class InsertHeader&lt;R&gt;  <a class="header-action link-secondary" title="View
   <dl><dt>Assembly</dt><dd>MASES.KNet.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/InsertHeader.html">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/InsertHeader.html</a></p>
+  <div class="markdown summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/InsertHeader.html">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/InsertHeader.html</a></p>
 </div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class InsertHeader&lt;R&gt; : JVMBridgeBase&lt;InsertHeader&lt;R&gt;&gt;, IDynamicMetaObjectProvider, IJVMBridgeCore, IEquatable&lt;IJVMBridgeBaseInstance&gt;, IDisposable, IJVMBridgeBaseStatic, IJVMBridgeBase, IJVMBridgeBaseInstance, IJVMBridgeDefinition, ITransformation&lt;R&gt;, IVersioned where R : ConnectRecord&lt;R&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class InsertHeader&lt;R&gt; : Transformation&lt;R&gt;, IDynamicMetaObjectProvider, IJVMBridgeCore, IEquatable&lt;IJVMBridgeBaseInstance&gt;, IDisposable, IJVMBridgeBaseStatic, IJVMBridgeBase, IJVMBridgeBaseInstance, IJVMBridgeDefinition, ITransformation&lt;R&gt;, IConfigurable, ICloseable, IAutoCloseable, IConnectPlugin, IVersioned where R : ConnectRecord&lt;R&gt;</code></pre>
   </div>
 
 
@@ -120,7 +120,8 @@ Class InsertHeader&lt;R&gt;  <a class="header-action link-secondary" title="View
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject">DynamicObject</a></div>
       <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html">JVMBridgeBase</a></div>
-      <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html">JVMBridgeBase</a>&lt;<a class="xref" href="Org.Apache.Kafka.Connect.Transforms.InsertHeader-1.html">InsertHeader</a>&lt;R&gt;&gt;</div>
+      <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html">JVMBridgeBase</a>&lt;<a class="xref" href="Org.Apache.Kafka.Connect.Transforms.Transformation-1.html">Transformation</a>&lt;R&gt;&gt;</div>
+      <div><a class="xref" href="Org.Apache.Kafka.Connect.Transforms.Transformation-1.html">Transformation</a>&lt;R&gt;</div>
       <div><span class="xref">InsertHeader&lt;R&gt;</span></div>
     </dd>
   </dl>
@@ -137,6 +138,10 @@ Class InsertHeader&lt;R&gt;  <a class="header-action link-secondary" title="View
       <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBaseInstance.html">IJVMBridgeBaseInstance</a></div>
       <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html">IJVMBridgeDefinition</a></div>
       <div><a class="xref" href="Org.Apache.Kafka.Connect.Transforms.ITransformation-1.html">ITransformation</a>&lt;R&gt;</div>
+      <div><a class="xref" href="Org.Apache.Kafka.Common.IConfigurable.html">IConfigurable</a></div>
+      <div><a class="xref" href="https://jnet.masesgroup.com/api/Java.Io.ICloseable.html">ICloseable</a></div>
+      <div><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.IAutoCloseable.html">IAutoCloseable</a></div>
+      <div><a class="xref" href="Org.Apache.Kafka.Connect.Components.IConnectPlugin.html">IConnectPlugin</a></div>
       <div><a class="xref" href="Org.Apache.Kafka.Connect.Components.IVersioned.html">IVersioned</a></div>
     </dd>
   </dl>
@@ -156,10 +161,10 @@ Class InsertHeader&lt;R&gt;  <a class="header-action link-secondary" title="View
 
   <h3 id="Org_Apache_Kafka_Connect_Transforms_InsertHeader_1__ctor" data-uid="Org.Apache.Kafka.Connect.Transforms.InsertHeader`1.#ctor">
   InsertHeader()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/InsertHeader.cs/#L213"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/InsertHeader.cs/#L205"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/InsertHeader.html#%3Cinit%3E()">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/InsertHeader.html#%3Cinit%3E()</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/InsertHeader.html#%3Cinit%3E()">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/InsertHeader.html#%3Cinit%3E()</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -252,10 +257,10 @@ public InsertHeader(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Transforms_InsertHeader_1_CONFIG_DEF" data-uid="Org.Apache.Kafka.Connect.Transforms.InsertHeader`1.CONFIG_DEF">
   CONFIG_DEF
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/InsertHeader.cs/#L259"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/InsertHeader.cs/#L243"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/InsertHeader.html#CONFIG_DEF">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/InsertHeader.html#CONFIG_DEF</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/InsertHeader.html#CONFIG_DEF">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/InsertHeader.html#CONFIG_DEF</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -284,10 +289,10 @@ public InsertHeader(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Transforms_InsertHeader_1_HEADER_FIELD" data-uid="Org.Apache.Kafka.Connect.Transforms.InsertHeader`1.HEADER_FIELD">
   HEADER_FIELD
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/InsertHeader.cs/#L247"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/InsertHeader.cs/#L231"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/InsertHeader.html#HEADER_FIELD">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/InsertHeader.html#HEADER_FIELD</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/InsertHeader.html#HEADER_FIELD">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/InsertHeader.html#HEADER_FIELD</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -444,10 +449,10 @@ public InsertHeader(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Transforms_InsertHeader_1_OVERVIEW_DOC" data-uid="Org.Apache.Kafka.Connect.Transforms.InsertHeader`1.OVERVIEW_DOC">
   OVERVIEW_DOC
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/InsertHeader.cs/#L251"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/InsertHeader.cs/#L235"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/InsertHeader.html#OVERVIEW_DOC">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/InsertHeader.html#OVERVIEW_DOC</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/InsertHeader.html#OVERVIEW_DOC">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/InsertHeader.html#OVERVIEW_DOC</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -476,10 +481,10 @@ public InsertHeader(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Transforms_InsertHeader_1_VALUE_LITERAL_FIELD" data-uid="Org.Apache.Kafka.Connect.Transforms.InsertHeader`1.VALUE_LITERAL_FIELD">
   VALUE_LITERAL_FIELD
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/InsertHeader.cs/#L255"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/InsertHeader.cs/#L239"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/InsertHeader.html#VALUE_LITERAL_FIELD">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/InsertHeader.html#VALUE_LITERAL_FIELD</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/InsertHeader.html#VALUE_LITERAL_FIELD">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/InsertHeader.html#VALUE_LITERAL_FIELD</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -512,10 +517,10 @@ public InsertHeader(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Transforms_InsertHeader_1_Apply__0_" data-uid="Org.Apache.Kafka.Connect.Transforms.InsertHeader`1.Apply(`0)">
   Apply(R)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/InsertHeader.cs/#L289"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/InsertHeader.cs/#L273"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/InsertHeader.html#apply(org.apache.kafka.connect.connector.ConnectRecord)">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/InsertHeader.html#apply(org.apache.kafka.connect.connector.ConnectRecord)</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/InsertHeader.html#apply(org.apache.kafka.connect.connector.ConnectRecord)">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/InsertHeader.html#apply(org.apache.kafka.connect.connector.ConnectRecord)</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -551,10 +556,10 @@ public InsertHeader(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Transforms_InsertHeader_1_Close" data-uid="Org.Apache.Kafka.Connect.Transforms.InsertHeader`1.Close">
   Close()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/InsertHeader.cs/#L296"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/InsertHeader.cs/#L280"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/InsertHeader.html#close()">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/InsertHeader.html#close()</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/InsertHeader.html#close()">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/InsertHeader.html#close()</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -578,10 +583,10 @@ public InsertHeader(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Transforms_InsertHeader_1_Config" data-uid="Org.Apache.Kafka.Connect.Transforms.InsertHeader`1.Config">
   Config()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/InsertHeader.cs/#L280"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/InsertHeader.cs/#L264"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/InsertHeader.html#config()">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/InsertHeader.html#config()</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/InsertHeader.html#config()">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/InsertHeader.html#config()</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -611,10 +616,10 @@ public InsertHeader(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Transforms_InsertHeader_1_Configure_Java_Util_Map_Java_Lang_String_System_Object__" data-uid="Org.Apache.Kafka.Connect.Transforms.InsertHeader`1.Configure(Java.Util.Map{Java.Lang.String,System.Object})">
   Configure(Map&lt;String, object&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/InsertHeader.cs/#L304"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/InsertHeader.cs/#L288"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/InsertHeader.html#configure(java.util.Map)">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/InsertHeader.html#configure(java.util.Map)</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/InsertHeader.html#configure(java.util.Map)">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/InsertHeader.html#configure(java.util.Map)</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -644,7 +649,7 @@ public InsertHeader(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Transforms_InsertHeader_1_CreatePoolableInstance" data-uid="Org.Apache.Kafka.Connect.Transforms.InsertHeader`1.CreatePoolableInstance">
   CreatePoolableInstance()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/InsertHeader.cs/#L220"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/InsertHeader.cs/#L212"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>HPA initializer for InsertHeader()</p>
@@ -676,10 +681,10 @@ public InsertHeader(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Transforms_InsertHeader_1_Version" data-uid="Org.Apache.Kafka.Connect.Transforms.InsertHeader`1.Version">
   Version()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/InsertHeader.cs/#L272"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/InsertHeader.cs/#L256"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/InsertHeader.html#version()">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/InsertHeader.html#version()</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/InsertHeader.html#version()">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/InsertHeader.html#version()</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -711,46 +716,9 @@ public InsertHeader(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <a id="Org_Apache_Kafka_Connect_Transforms_InsertHeader_1_op_Implicit_" data-uid="Org.Apache.Kafka.Connect.Transforms.InsertHeader`1.op_Implicit*"></a>
 
-  <h3 id="Org_Apache_Kafka_Connect_Transforms_InsertHeader_1_op_Implicit_Org_Apache_Kafka_Connect_Transforms_InsertHeader__0___Org_Apache_Kafka_Connect_Components_Versioned" data-uid="Org.Apache.Kafka.Connect.Transforms.InsertHeader`1.op_Implicit(Org.Apache.Kafka.Connect.Transforms.InsertHeader{`0})~Org.Apache.Kafka.Connect.Components.Versioned">
-  implicit operator Versioned(InsertHeader&lt;R&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/InsertHeader.cs/#L235"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Converter from <a class="xref" href="Org.Apache.Kafka.Connect.Transforms.InsertHeader-1.html">InsertHeader&lt;R&gt;</a> to <a class="xref" href="Org.Apache.Kafka.Connect.Components.Versioned.html">Versioned</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static implicit operator Versioned(InsertHeader&lt;R&gt; t)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>t</code> <a class="xref" href="Org.Apache.Kafka.Connect.Transforms.InsertHeader-1.html">InsertHeader</a>&lt;R&gt;</dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="Org.Apache.Kafka.Connect.Components.Versioned.html">Versioned</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="Org_Apache_Kafka_Connect_Transforms_InsertHeader_1_op_Implicit_" data-uid="Org.Apache.Kafka.Connect.Transforms.InsertHeader`1.op_Implicit*"></a>
-
   <h3 id="Org_Apache_Kafka_Connect_Transforms_InsertHeader_1_op_Implicit_Org_Apache_Kafka_Connect_Transforms_InsertHeader__0___Org_Apache_Kafka_Connect_Transforms_InsertHeader" data-uid="Org.Apache.Kafka.Connect.Transforms.InsertHeader`1.op_Implicit(Org.Apache.Kafka.Connect.Transforms.InsertHeader{`0})~Org.Apache.Kafka.Connect.Transforms.InsertHeader">
   implicit operator InsertHeader(InsertHeader&lt;R&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/InsertHeader.cs/#L239"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/InsertHeader.cs/#L223"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Converter from <a class="xref" href="Org.Apache.Kafka.Connect.Transforms.InsertHeader-1.html">InsertHeader&lt;R&gt;</a> to <a class="xref" href="Org.Apache.Kafka.Connect.Transforms.InsertHeader.html">InsertHeader</a></p>
@@ -783,48 +751,11 @@ public InsertHeader(IJVMBridgeBaseInitializer initializer)</code></pre>
 
 
 
-  <a id="Org_Apache_Kafka_Connect_Transforms_InsertHeader_1_op_Implicit_" data-uid="Org.Apache.Kafka.Connect.Transforms.InsertHeader`1.op_Implicit*"></a>
-
-  <h3 id="Org_Apache_Kafka_Connect_Transforms_InsertHeader_1_op_Implicit_Org_Apache_Kafka_Connect_Transforms_InsertHeader__0___Org_Apache_Kafka_Connect_Transforms_Transformation__0_" data-uid="Org.Apache.Kafka.Connect.Transforms.InsertHeader`1.op_Implicit(Org.Apache.Kafka.Connect.Transforms.InsertHeader{`0})~Org.Apache.Kafka.Connect.Transforms.Transformation{`0}">
-  implicit operator Transformation&lt;R&gt;(InsertHeader&lt;R&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/InsertHeader.cs/#L231"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Converter from <a class="xref" href="Org.Apache.Kafka.Connect.Transforms.InsertHeader-1.html">InsertHeader&lt;R&gt;</a> to <a class="xref" href="Org.Apache.Kafka.Connect.Transforms.Transformation-1.html">Transformation&lt;R&gt;</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static implicit operator Transformation&lt;R&gt;(InsertHeader&lt;R&gt; t)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>t</code> <a class="xref" href="Org.Apache.Kafka.Connect.Transforms.InsertHeader-1.html">InsertHeader</a>&lt;R&gt;</dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="Org.Apache.Kafka.Connect.Transforms.Transformation-1.html">Transformation</a>&lt;R&gt;</dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/InsertHeader.cs/#L207" class="edit-link">Edit this page</a>
+          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/InsertHeader.cs/#L199" class="edit-link">Edit this page</a>
         </div>
 
 

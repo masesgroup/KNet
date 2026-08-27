@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class TimestampConverter&lt;R&gt; | MASES Group - KNet ">
       <meta name="description" content="This is a descriptive page of KNet, the .NET suite for Apache Kafka">
-      <meta name="description" content="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/TimestampConverter.html">
+      <meta name="description" content="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/TimestampConverter.html">
       <link rel="icon" href="../images/favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -89,7 +89,7 @@
 
 
   <h1 id="Org_Apache_Kafka_Connect_Transforms_TimestampConverter_1" data-uid="Org.Apache.Kafka.Connect.Transforms.TimestampConverter`1" class="text-break">
-Class TimestampConverter&lt;R&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/TimestampConverter.cs/#L557"><i class="bi bi-code-slash"></i></a>
+Class TimestampConverter&lt;R&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/TimestampConverter.cs/#L549"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -97,12 +97,12 @@ Class TimestampConverter&lt;R&gt;  <a class="header-action link-secondary" title
   <dl><dt>Assembly</dt><dd>MASES.KNet.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/TimestampConverter.html">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/TimestampConverter.html</a></p>
+  <div class="markdown summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/TimestampConverter.html">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/TimestampConverter.html</a></p>
 </div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class TimestampConverter&lt;R&gt; : JVMBridgeBase&lt;TimestampConverter&lt;R&gt;&gt;, IDynamicMetaObjectProvider, IJVMBridgeCore, IEquatable&lt;IJVMBridgeBaseInstance&gt;, IDisposable, IJVMBridgeBaseStatic, IJVMBridgeBase, IJVMBridgeBaseInstance, IJVMBridgeDefinition, ITransformation&lt;R&gt;, IVersioned where R : ConnectRecord&lt;R&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class TimestampConverter&lt;R&gt; : Transformation&lt;R&gt;, IDynamicMetaObjectProvider, IJVMBridgeCore, IEquatable&lt;IJVMBridgeBaseInstance&gt;, IDisposable, IJVMBridgeBaseStatic, IJVMBridgeBase, IJVMBridgeBaseInstance, IJVMBridgeDefinition, ITransformation&lt;R&gt;, IConfigurable, ICloseable, IAutoCloseable, IConnectPlugin, IVersioned where R : ConnectRecord&lt;R&gt;</code></pre>
   </div>
 
 
@@ -120,7 +120,8 @@ Class TimestampConverter&lt;R&gt;  <a class="header-action link-secondary" title
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject">DynamicObject</a></div>
       <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html">JVMBridgeBase</a></div>
-      <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html">JVMBridgeBase</a>&lt;<a class="xref" href="Org.Apache.Kafka.Connect.Transforms.TimestampConverter-1.html">TimestampConverter</a>&lt;R&gt;&gt;</div>
+      <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html">JVMBridgeBase</a>&lt;<a class="xref" href="Org.Apache.Kafka.Connect.Transforms.Transformation-1.html">Transformation</a>&lt;R&gt;&gt;</div>
+      <div><a class="xref" href="Org.Apache.Kafka.Connect.Transforms.Transformation-1.html">Transformation</a>&lt;R&gt;</div>
       <div><span class="xref">TimestampConverter&lt;R&gt;</span></div>
     </dd>
   </dl>
@@ -137,6 +138,10 @@ Class TimestampConverter&lt;R&gt;  <a class="header-action link-secondary" title
       <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBaseInstance.html">IJVMBridgeBaseInstance</a></div>
       <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html">IJVMBridgeDefinition</a></div>
       <div><a class="xref" href="Org.Apache.Kafka.Connect.Transforms.ITransformation-1.html">ITransformation</a>&lt;R&gt;</div>
+      <div><a class="xref" href="Org.Apache.Kafka.Common.IConfigurable.html">IConfigurable</a></div>
+      <div><a class="xref" href="https://jnet.masesgroup.com/api/Java.Io.ICloseable.html">ICloseable</a></div>
+      <div><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.IAutoCloseable.html">IAutoCloseable</a></div>
+      <div><a class="xref" href="Org.Apache.Kafka.Connect.Components.IConnectPlugin.html">IConnectPlugin</a></div>
       <div><a class="xref" href="Org.Apache.Kafka.Connect.Components.IVersioned.html">IVersioned</a></div>
     </dd>
   </dl>
@@ -163,10 +168,10 @@ Class TimestampConverter&lt;R&gt;  <a class="header-action link-secondary" title
 
   <h3 id="Org_Apache_Kafka_Connect_Transforms_TimestampConverter_1__ctor" data-uid="Org.Apache.Kafka.Connect.Transforms.TimestampConverter`1.#ctor">
   TimestampConverter()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/TimestampConverter.cs/#L563"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/TimestampConverter.cs/#L555"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/TimestampConverter.html#%3Cinit%3E()">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/TimestampConverter.html#%3Cinit%3E()</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/TimestampConverter.html#%3Cinit%3E()">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/TimestampConverter.html#%3Cinit%3E()</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -259,10 +264,10 @@ public TimestampConverter(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Transforms_TimestampConverter_1_CONFIG_DEF" data-uid="Org.Apache.Kafka.Connect.Transforms.TimestampConverter`1.CONFIG_DEF">
   CONFIG_DEF
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/TimestampConverter.cs/#L621"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/TimestampConverter.cs/#L605"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/TimestampConverter.html#CONFIG_DEF">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/TimestampConverter.html#CONFIG_DEF</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/TimestampConverter.html#CONFIG_DEF">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/TimestampConverter.html#CONFIG_DEF</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -291,10 +296,10 @@ public TimestampConverter(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Transforms_TimestampConverter_1_FIELD_CONFIG" data-uid="Org.Apache.Kafka.Connect.Transforms.TimestampConverter`1.FIELD_CONFIG">
   FIELD_CONFIG
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/TimestampConverter.cs/#L597"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/TimestampConverter.cs/#L581"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/TimestampConverter.html#FIELD_CONFIG">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/TimestampConverter.html#FIELD_CONFIG</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/TimestampConverter.html#FIELD_CONFIG">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/TimestampConverter.html#FIELD_CONFIG</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -323,10 +328,10 @@ public TimestampConverter(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Transforms_TimestampConverter_1_FORMAT_CONFIG" data-uid="Org.Apache.Kafka.Connect.Transforms.TimestampConverter`1.FORMAT_CONFIG">
   FORMAT_CONFIG
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/TimestampConverter.cs/#L601"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/TimestampConverter.cs/#L585"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/TimestampConverter.html#FORMAT_CONFIG">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/TimestampConverter.html#FORMAT_CONFIG</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/TimestampConverter.html#FORMAT_CONFIG">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/TimestampConverter.html#FORMAT_CONFIG</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -483,10 +488,10 @@ public TimestampConverter(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Transforms_TimestampConverter_1_OPTIONAL_DATE_SCHEMA" data-uid="Org.Apache.Kafka.Connect.Transforms.TimestampConverter`1.OPTIONAL_DATE_SCHEMA">
   OPTIONAL_DATE_SCHEMA
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/TimestampConverter.cs/#L625"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/TimestampConverter.cs/#L609"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/TimestampConverter.html#OPTIONAL_DATE_SCHEMA">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/TimestampConverter.html#OPTIONAL_DATE_SCHEMA</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/TimestampConverter.html#OPTIONAL_DATE_SCHEMA">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/TimestampConverter.html#OPTIONAL_DATE_SCHEMA</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -515,10 +520,10 @@ public TimestampConverter(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Transforms_TimestampConverter_1_OPTIONAL_TIMESTAMP_SCHEMA" data-uid="Org.Apache.Kafka.Connect.Transforms.TimestampConverter`1.OPTIONAL_TIMESTAMP_SCHEMA">
   OPTIONAL_TIMESTAMP_SCHEMA
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/TimestampConverter.cs/#L633"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/TimestampConverter.cs/#L617"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/TimestampConverter.html#OPTIONAL_TIMESTAMP_SCHEMA">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/TimestampConverter.html#OPTIONAL_TIMESTAMP_SCHEMA</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/TimestampConverter.html#OPTIONAL_TIMESTAMP_SCHEMA">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/TimestampConverter.html#OPTIONAL_TIMESTAMP_SCHEMA</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -547,10 +552,10 @@ public TimestampConverter(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Transforms_TimestampConverter_1_OPTIONAL_TIME_SCHEMA" data-uid="Org.Apache.Kafka.Connect.Transforms.TimestampConverter`1.OPTIONAL_TIME_SCHEMA">
   OPTIONAL_TIME_SCHEMA
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/TimestampConverter.cs/#L629"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/TimestampConverter.cs/#L613"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/TimestampConverter.html#OPTIONAL_TIME_SCHEMA">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/TimestampConverter.html#OPTIONAL_TIME_SCHEMA</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/TimestampConverter.html#OPTIONAL_TIME_SCHEMA">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/TimestampConverter.html#OPTIONAL_TIME_SCHEMA</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -579,10 +584,10 @@ public TimestampConverter(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Transforms_TimestampConverter_1_OVERVIEW_DOC" data-uid="Org.Apache.Kafka.Connect.Transforms.TimestampConverter`1.OVERVIEW_DOC">
   OVERVIEW_DOC
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/TimestampConverter.cs/#L605"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/TimestampConverter.cs/#L589"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/TimestampConverter.html#OVERVIEW_DOC">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/TimestampConverter.html#OVERVIEW_DOC</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/TimestampConverter.html#OVERVIEW_DOC">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/TimestampConverter.html#OVERVIEW_DOC</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -611,10 +616,10 @@ public TimestampConverter(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Transforms_TimestampConverter_1_REPLACE_NULL_WITH_DEFAULT_CONFIG" data-uid="Org.Apache.Kafka.Connect.Transforms.TimestampConverter`1.REPLACE_NULL_WITH_DEFAULT_CONFIG">
   REPLACE_NULL_WITH_DEFAULT_CONFIG
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/TimestampConverter.cs/#L609"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/TimestampConverter.cs/#L593"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/TimestampConverter.html#REPLACE_NULL_WITH_DEFAULT_CONFIG">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/TimestampConverter.html#REPLACE_NULL_WITH_DEFAULT_CONFIG</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/TimestampConverter.html#REPLACE_NULL_WITH_DEFAULT_CONFIG">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/TimestampConverter.html#REPLACE_NULL_WITH_DEFAULT_CONFIG</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -643,10 +648,10 @@ public TimestampConverter(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Transforms_TimestampConverter_1_TARGET_TYPE_CONFIG" data-uid="Org.Apache.Kafka.Connect.Transforms.TimestampConverter`1.TARGET_TYPE_CONFIG">
   TARGET_TYPE_CONFIG
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/TimestampConverter.cs/#L613"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/TimestampConverter.cs/#L597"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/TimestampConverter.html#TARGET_TYPE_CONFIG">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/TimestampConverter.html#TARGET_TYPE_CONFIG</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/TimestampConverter.html#TARGET_TYPE_CONFIG">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/TimestampConverter.html#TARGET_TYPE_CONFIG</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -675,10 +680,10 @@ public TimestampConverter(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Transforms_TimestampConverter_1_UNIX_PRECISION_CONFIG" data-uid="Org.Apache.Kafka.Connect.Transforms.TimestampConverter`1.UNIX_PRECISION_CONFIG">
   UNIX_PRECISION_CONFIG
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/TimestampConverter.cs/#L617"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/TimestampConverter.cs/#L601"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/TimestampConverter.html#UNIX_PRECISION_CONFIG">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/TimestampConverter.html#UNIX_PRECISION_CONFIG</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/TimestampConverter.html#UNIX_PRECISION_CONFIG">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/TimestampConverter.html#UNIX_PRECISION_CONFIG</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -711,10 +716,10 @@ public TimestampConverter(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Transforms_TimestampConverter_1_Apply__0_" data-uid="Org.Apache.Kafka.Connect.Transforms.TimestampConverter`1.Apply(`0)">
   Apply(R)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/TimestampConverter.cs/#L663"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/TimestampConverter.cs/#L647"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/TimestampConverter.html#apply(org.apache.kafka.connect.connector.ConnectRecord)">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/TimestampConverter.html#apply(org.apache.kafka.connect.connector.ConnectRecord)</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/TimestampConverter.html#apply(org.apache.kafka.connect.connector.ConnectRecord)">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/TimestampConverter.html#apply(org.apache.kafka.connect.connector.ConnectRecord)</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -750,10 +755,10 @@ public TimestampConverter(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Transforms_TimestampConverter_1_Close" data-uid="Org.Apache.Kafka.Connect.Transforms.TimestampConverter`1.Close">
   Close()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/TimestampConverter.cs/#L670"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/TimestampConverter.cs/#L654"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/TimestampConverter.html#close()">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/TimestampConverter.html#close()</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/TimestampConverter.html#close()">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/TimestampConverter.html#close()</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -777,10 +782,10 @@ public TimestampConverter(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Transforms_TimestampConverter_1_ConfigMethod" data-uid="Org.Apache.Kafka.Connect.Transforms.TimestampConverter`1.ConfigMethod">
   ConfigMethod()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/TimestampConverter.cs/#L654"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/TimestampConverter.cs/#L638"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/TimestampConverter.html#config()">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/TimestampConverter.html#config()</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/TimestampConverter.html#config()">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/TimestampConverter.html#config()</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -810,10 +815,10 @@ public TimestampConverter(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Transforms_TimestampConverter_1_Configure_Java_Util_Map_Java_Lang_String_System_Object__" data-uid="Org.Apache.Kafka.Connect.Transforms.TimestampConverter`1.Configure(Java.Util.Map{Java.Lang.String,System.Object})">
   Configure(Map&lt;String, object&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/TimestampConverter.cs/#L678"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/TimestampConverter.cs/#L662"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/TimestampConverter.html#configure(java.util.Map)">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/TimestampConverter.html#configure(java.util.Map)</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/TimestampConverter.html#configure(java.util.Map)">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/TimestampConverter.html#configure(java.util.Map)</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -843,7 +848,7 @@ public TimestampConverter(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Transforms_TimestampConverter_1_CreatePoolableInstance" data-uid="Org.Apache.Kafka.Connect.Transforms.TimestampConverter`1.CreatePoolableInstance">
   CreatePoolableInstance()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/TimestampConverter.cs/#L570"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/TimestampConverter.cs/#L562"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>HPA initializer for TimestampConverter()</p>
@@ -875,10 +880,10 @@ public TimestampConverter(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Transforms_TimestampConverter_1_Version" data-uid="Org.Apache.Kafka.Connect.Transforms.TimestampConverter`1.Version">
   Version()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/TimestampConverter.cs/#L646"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/TimestampConverter.cs/#L630"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/TimestampConverter.html#version()">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/TimestampConverter.html#version()</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/TimestampConverter.html#version()">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/TimestampConverter.html#version()</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -910,46 +915,9 @@ public TimestampConverter(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <a id="Org_Apache_Kafka_Connect_Transforms_TimestampConverter_1_op_Implicit_" data-uid="Org.Apache.Kafka.Connect.Transforms.TimestampConverter`1.op_Implicit*"></a>
 
-  <h3 id="Org_Apache_Kafka_Connect_Transforms_TimestampConverter_1_op_Implicit_Org_Apache_Kafka_Connect_Transforms_TimestampConverter__0___Org_Apache_Kafka_Connect_Components_Versioned" data-uid="Org.Apache.Kafka.Connect.Transforms.TimestampConverter`1.op_Implicit(Org.Apache.Kafka.Connect.Transforms.TimestampConverter{`0})~Org.Apache.Kafka.Connect.Components.Versioned">
-  implicit operator Versioned(TimestampConverter&lt;R&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/TimestampConverter.cs/#L585"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Converter from <a class="xref" href="Org.Apache.Kafka.Connect.Transforms.TimestampConverter-1.html">TimestampConverter&lt;R&gt;</a> to <a class="xref" href="Org.Apache.Kafka.Connect.Components.Versioned.html">Versioned</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static implicit operator Versioned(TimestampConverter&lt;R&gt; t)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>t</code> <a class="xref" href="Org.Apache.Kafka.Connect.Transforms.TimestampConverter-1.html">TimestampConverter</a>&lt;R&gt;</dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="Org.Apache.Kafka.Connect.Components.Versioned.html">Versioned</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="Org_Apache_Kafka_Connect_Transforms_TimestampConverter_1_op_Implicit_" data-uid="Org.Apache.Kafka.Connect.Transforms.TimestampConverter`1.op_Implicit*"></a>
-
   <h3 id="Org_Apache_Kafka_Connect_Transforms_TimestampConverter_1_op_Implicit_Org_Apache_Kafka_Connect_Transforms_TimestampConverter__0___Org_Apache_Kafka_Connect_Transforms_TimestampConverter" data-uid="Org.Apache.Kafka.Connect.Transforms.TimestampConverter`1.op_Implicit(Org.Apache.Kafka.Connect.Transforms.TimestampConverter{`0})~Org.Apache.Kafka.Connect.Transforms.TimestampConverter">
   implicit operator TimestampConverter(TimestampConverter&lt;R&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/TimestampConverter.cs/#L589"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/TimestampConverter.cs/#L573"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Converter from <a class="xref" href="Org.Apache.Kafka.Connect.Transforms.TimestampConverter-1.html">TimestampConverter&lt;R&gt;</a> to <a class="xref" href="Org.Apache.Kafka.Connect.Transforms.TimestampConverter.html">TimestampConverter</a></p>
@@ -982,48 +950,11 @@ public TimestampConverter(IJVMBridgeBaseInitializer initializer)</code></pre>
 
 
 
-  <a id="Org_Apache_Kafka_Connect_Transforms_TimestampConverter_1_op_Implicit_" data-uid="Org.Apache.Kafka.Connect.Transforms.TimestampConverter`1.op_Implicit*"></a>
-
-  <h3 id="Org_Apache_Kafka_Connect_Transforms_TimestampConverter_1_op_Implicit_Org_Apache_Kafka_Connect_Transforms_TimestampConverter__0___Org_Apache_Kafka_Connect_Transforms_Transformation__0_" data-uid="Org.Apache.Kafka.Connect.Transforms.TimestampConverter`1.op_Implicit(Org.Apache.Kafka.Connect.Transforms.TimestampConverter{`0})~Org.Apache.Kafka.Connect.Transforms.Transformation{`0}">
-  implicit operator Transformation&lt;R&gt;(TimestampConverter&lt;R&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/TimestampConverter.cs/#L581"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Converter from <a class="xref" href="Org.Apache.Kafka.Connect.Transforms.TimestampConverter-1.html">TimestampConverter&lt;R&gt;</a> to <a class="xref" href="Org.Apache.Kafka.Connect.Transforms.Transformation-1.html">Transformation&lt;R&gt;</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static implicit operator Transformation&lt;R&gt;(TimestampConverter&lt;R&gt; t)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>t</code> <a class="xref" href="Org.Apache.Kafka.Connect.Transforms.TimestampConverter-1.html">TimestampConverter</a>&lt;R&gt;</dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="Org.Apache.Kafka.Connect.Transforms.Transformation-1.html">Transformation</a>&lt;R&gt;</dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/TimestampConverter.cs/#L557" class="edit-link">Edit this page</a>
+          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/TimestampConverter.cs/#L549" class="edit-link">Edit this page</a>
         </div>
 
 
