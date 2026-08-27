@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class StateStore | MASES Group - KNet ">
       <meta name="description" content="This is a descriptive page of KNet, the .NET suite for Apache Kafka">
-      <meta name="description" content="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/StateStore.html">
+      <meta name="description" content="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/processor/StateStore.html">
       <link rel="icon" href="../images/favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -97,7 +97,7 @@ Class StateStore  <a class="header-action link-secondary" title="View source" hr
   <dl><dt>Assembly</dt><dd>MASES.KNet.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/StateStore.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/StateStore.html</a></p>
+  <div class="markdown summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/processor/StateStore.html">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/processor/StateStore.html</a></p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -356,7 +356,7 @@ public StateStore(IJVMBridgeBaseInitializer initializer)</code></pre>
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/StateStore.cs/#L103"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/StateStore.html#getPosition()">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/StateStore.html#getPosition()</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/processor/StateStore.html#getPosition()">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/processor/StateStore.html#getPosition()</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -392,7 +392,7 @@ public StateStore(IJVMBridgeBaseInitializer initializer)</code></pre>
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/StateStore.cs/#L134"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/StateStore.html#close()">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/StateStore.html#close()</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/processor/StateStore.html#close()">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/processor/StateStore.html#close()</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -412,19 +412,92 @@ public StateStore(IJVMBridgeBaseInitializer initializer)</code></pre>
 
 
 
-  <a id="Org_Apache_Kafka_Streams_Processor_StateStore_Flush_" data-uid="Org.Apache.Kafka.Streams.Processor.StateStore.Flush*"></a>
+  <a id="Org_Apache_Kafka_Streams_Processor_StateStore_Commit_" data-uid="Org.Apache.Kafka.Streams.Processor.StateStore.Commit*"></a>
 
-  <h3 id="Org_Apache_Kafka_Streams_Processor_StateStore_Flush" data-uid="Org.Apache.Kafka.Streams.Processor.StateStore.Flush">
-  Flush()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/StateStore.cs/#L141"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Org_Apache_Kafka_Streams_Processor_StateStore_Commit_Java_Util_Map_Org_Apache_Kafka_Common_TopicPartition_Java_Lang_Long__" data-uid="Org.Apache.Kafka.Streams.Processor.StateStore.Commit(Java.Util.Map{Org.Apache.Kafka.Common.TopicPartition,Java.Lang.Long})">
+  Commit(Map&lt;TopicPartition, Long&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/StateStore.cs/#L181"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/StateStore.html#flush()">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/StateStore.html#flush()</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/processor/StateStore.html#commit(java.util.Map)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/processor/StateStore.html#commit(java.util.Map)</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Flush()</code></pre>
+    <pre><code class="lang-csharp hljs">public void Commit(Map&lt;TopicPartition, Long&gt; arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map-2.html">Map</a>&lt;<a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a>, <a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Long.html">Long</a>&gt;</dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Util.Map.html">Map</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Streams_Processor_StateStore_CommittedOffset_" data-uid="Org.Apache.Kafka.Streams.Processor.StateStore.CommittedOffset*"></a>
+
+  <h3 id="Org_Apache_Kafka_Streams_Processor_StateStore_CommittedOffset_Org_Apache_Kafka_Common_TopicPartition_" data-uid="Org.Apache.Kafka.Streams.Processor.StateStore.CommittedOffset(Org.Apache.Kafka.Common.TopicPartition)">
+  CommittedOffset(TopicPartition)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/StateStore.cs/#L173"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/processor/StateStore.html#committedOffset(org.apache.kafka.common.TopicPartition)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/processor/StateStore.html#committedOffset(org.apache.kafka.common.TopicPartition)</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Long CommittedOffset(TopicPartition arg0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg0</code> <a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a></dt>
+    <dd><p><a class="xref" href="Org.Apache.Kafka.Common.TopicPartition.html">TopicPartition</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Long.html">Long</a></dt>
+    <dd><p><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.Long.html">Long</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Streams_Processor_StateStore_Flush_" data-uid="Org.Apache.Kafka.Streams.Processor.StateStore.Flush*"></a>
+
+  <h3 id="Org_Apache_Kafka_Streams_Processor_StateStore_Flush" data-uid="Org.Apache.Kafka.Streams.Processor.StateStore.Flush">
+  Flush()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/StateStore.cs/#L188"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/processor/StateStore.html#flush()">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/processor/StateStore.html#flush()</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Deprecated in JVM&quot;)]
+public void Flush()</code></pre>
   </div>
 
 
@@ -443,10 +516,10 @@ public StateStore(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Streams_Processor_StateStore_Init_Org_Apache_Kafka_Streams_Processor_StateStoreContext_Org_Apache_Kafka_Streams_Processor_StateStore_" data-uid="Org.Apache.Kafka.Streams.Processor.StateStore.Init(Org.Apache.Kafka.Streams.Processor.StateStoreContext,Org.Apache.Kafka.Streams.Processor.StateStore)">
   Init(StateStoreContext, StateStore)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/StateStore.cs/#L150"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/StateStore.cs/#L143"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/StateStore.html#init(org.apache.kafka.streams.processor.StateStoreContext,org.apache.kafka.streams.processor.StateStore)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/StateStore.html#init(org.apache.kafka.streams.processor.StateStoreContext,org.apache.kafka.streams.processor.StateStore)</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/processor/StateStore.html#init(org.apache.kafka.streams.processor.StateStoreContext,org.apache.kafka.streams.processor.StateStore)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/processor/StateStore.html#init(org.apache.kafka.streams.processor.StateStoreContext,org.apache.kafka.streams.processor.StateStore)</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -482,12 +555,46 @@ public StateStore(IJVMBridgeBaseInitializer initializer)</code></pre>
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/StateStore.cs/#L111"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/StateStore.html#isOpen()">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/StateStore.html#isOpen()</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/processor/StateStore.html#isOpen()">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/processor/StateStore.html#isOpen()</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public bool IsOpen()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Streams_Processor_StateStore_ManagesOffsets_" data-uid="Org.Apache.Kafka.Streams.Processor.StateStore.ManagesOffsets*"></a>
+
+  <h3 id="Org_Apache_Kafka_Streams_Processor_StateStore_ManagesOffsets" data-uid="Org.Apache.Kafka.Streams.Processor.StateStore.ManagesOffsets">
+  ManagesOffsets()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/StateStore.cs/#L163"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/processor/StateStore.html#managesOffsets()">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/processor/StateStore.html#managesOffsets()</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Deprecated in JVM&quot;)]
+public bool ManagesOffsets()</code></pre>
   </div>
 
 
@@ -515,7 +622,7 @@ public StateStore(IJVMBridgeBaseInitializer initializer)</code></pre>
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/StateStore.cs/#L127"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/StateStore.html#name()">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/StateStore.html#name()</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/processor/StateStore.html#name()">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/processor/StateStore.html#name()</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -548,7 +655,7 @@ public StateStore(IJVMBridgeBaseInitializer initializer)</code></pre>
   <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/StateStore.cs/#L119"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/StateStore.html#persistent()">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/StateStore.html#persistent()</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/processor/StateStore.html#persistent()">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/processor/StateStore.html#persistent()</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -578,10 +685,10 @@ public StateStore(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Streams_Processor_StateStore_Query__1_Org_Apache_Kafka_Streams_Query_Query___0__Org_Apache_Kafka_Streams_Query_PositionBound_Org_Apache_Kafka_Streams_Query_QueryConfig_" data-uid="Org.Apache.Kafka.Streams.Processor.StateStore.Query``1(Org.Apache.Kafka.Streams.Query.Query{``0},Org.Apache.Kafka.Streams.Query.PositionBound,Org.Apache.Kafka.Streams.Query.QueryConfig)">
   Query&lt;R&gt;(Query&lt;R&gt;, PositionBound, QueryConfig)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/StateStore.cs/#L162"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Streams/Processor/StateStore.cs/#L155"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/StateStore.html#query(org.apache.kafka.streams.query.Query,org.apache.kafka.streams.query.PositionBound,org.apache.kafka.streams.query.QueryConfig)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.2.1/org/apache/kafka/streams/processor/StateStore.html#query(org.apache.kafka.streams.query.Query,org.apache.kafka.streams.query.PositionBound,org.apache.kafka.streams.query.QueryConfig)</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/processor/StateStore.html#query(org.apache.kafka.streams.query.Query,org.apache.kafka.streams.query.PositionBound,org.apache.kafka.streams.query.QueryConfig)">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/processor/StateStore.html#query(org.apache.kafka.streams.query.Query,org.apache.kafka.streams.query.PositionBound,org.apache.kafka.streams.query.QueryConfig)</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 

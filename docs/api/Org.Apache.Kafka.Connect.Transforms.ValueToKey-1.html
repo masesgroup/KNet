@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class ValueToKey&lt;R&gt; | MASES Group - KNet ">
       <meta name="description" content="This is a descriptive page of KNet, the .NET suite for Apache Kafka">
-      <meta name="description" content="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/ValueToKey.html">
+      <meta name="description" content="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/ValueToKey.html">
       <link rel="icon" href="../images/favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -89,7 +89,7 @@
 
 
   <h1 id="Org_Apache_Kafka_Connect_Transforms_ValueToKey_1" data-uid="Org.Apache.Kafka.Connect.Transforms.ValueToKey`1" class="text-break">
-Class ValueToKey&lt;R&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/ValueToKey.cs/#L207"><i class="bi bi-code-slash"></i></a>
+Class ValueToKey&lt;R&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/ValueToKey.cs/#L199"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -97,12 +97,12 @@ Class ValueToKey&lt;R&gt;  <a class="header-action link-secondary" title="View s
   <dl><dt>Assembly</dt><dd>MASES.KNet.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/ValueToKey.html">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/ValueToKey.html</a></p>
+  <div class="markdown summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/ValueToKey.html">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/ValueToKey.html</a></p>
 </div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ValueToKey&lt;R&gt; : JVMBridgeBase&lt;ValueToKey&lt;R&gt;&gt;, IDynamicMetaObjectProvider, IJVMBridgeCore, IEquatable&lt;IJVMBridgeBaseInstance&gt;, IDisposable, IJVMBridgeBaseStatic, IJVMBridgeBase, IJVMBridgeBaseInstance, IJVMBridgeDefinition, ITransformation&lt;R&gt;, IVersioned where R : ConnectRecord&lt;R&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class ValueToKey&lt;R&gt; : Transformation&lt;R&gt;, IDynamicMetaObjectProvider, IJVMBridgeCore, IEquatable&lt;IJVMBridgeBaseInstance&gt;, IDisposable, IJVMBridgeBaseStatic, IJVMBridgeBase, IJVMBridgeBaseInstance, IJVMBridgeDefinition, ITransformation&lt;R&gt;, IConfigurable, ICloseable, IAutoCloseable, IConnectPlugin, IVersioned where R : ConnectRecord&lt;R&gt;</code></pre>
   </div>
 
 
@@ -120,7 +120,8 @@ Class ValueToKey&lt;R&gt;  <a class="header-action link-secondary" title="View s
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject">DynamicObject</a></div>
       <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html">JVMBridgeBase</a></div>
-      <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html">JVMBridgeBase</a>&lt;<a class="xref" href="Org.Apache.Kafka.Connect.Transforms.ValueToKey-1.html">ValueToKey</a>&lt;R&gt;&gt;</div>
+      <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html">JVMBridgeBase</a>&lt;<a class="xref" href="Org.Apache.Kafka.Connect.Transforms.Transformation-1.html">Transformation</a>&lt;R&gt;&gt;</div>
+      <div><a class="xref" href="Org.Apache.Kafka.Connect.Transforms.Transformation-1.html">Transformation</a>&lt;R&gt;</div>
       <div><span class="xref">ValueToKey&lt;R&gt;</span></div>
     </dd>
   </dl>
@@ -137,6 +138,10 @@ Class ValueToKey&lt;R&gt;  <a class="header-action link-secondary" title="View s
       <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBaseInstance.html">IJVMBridgeBaseInstance</a></div>
       <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html">IJVMBridgeDefinition</a></div>
       <div><a class="xref" href="Org.Apache.Kafka.Connect.Transforms.ITransformation-1.html">ITransformation</a>&lt;R&gt;</div>
+      <div><a class="xref" href="Org.Apache.Kafka.Common.IConfigurable.html">IConfigurable</a></div>
+      <div><a class="xref" href="https://jnet.masesgroup.com/api/Java.Io.ICloseable.html">ICloseable</a></div>
+      <div><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.IAutoCloseable.html">IAutoCloseable</a></div>
+      <div><a class="xref" href="Org.Apache.Kafka.Connect.Components.IConnectPlugin.html">IConnectPlugin</a></div>
       <div><a class="xref" href="Org.Apache.Kafka.Connect.Components.IVersioned.html">IVersioned</a></div>
     </dd>
   </dl>
@@ -156,10 +161,10 @@ Class ValueToKey&lt;R&gt;  <a class="header-action link-secondary" title="View s
 
   <h3 id="Org_Apache_Kafka_Connect_Transforms_ValueToKey_1__ctor" data-uid="Org.Apache.Kafka.Connect.Transforms.ValueToKey`1.#ctor">
   ValueToKey()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/ValueToKey.cs/#L213"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/ValueToKey.cs/#L205"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/ValueToKey.html#%3Cinit%3E()">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/ValueToKey.html#%3Cinit%3E()</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/ValueToKey.html#%3Cinit%3E()">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/ValueToKey.html#%3Cinit%3E()</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -252,10 +257,10 @@ public ValueToKey(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Transforms_ValueToKey_1_CONFIG_DEF" data-uid="Org.Apache.Kafka.Connect.Transforms.ValueToKey`1.CONFIG_DEF">
   CONFIG_DEF
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/ValueToKey.cs/#L259"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/ValueToKey.cs/#L243"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/ValueToKey.html#CONFIG_DEF">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/ValueToKey.html#CONFIG_DEF</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/ValueToKey.html#CONFIG_DEF">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/ValueToKey.html#CONFIG_DEF</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -284,10 +289,10 @@ public ValueToKey(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Transforms_ValueToKey_1_FIELDS_CONFIG" data-uid="Org.Apache.Kafka.Connect.Transforms.ValueToKey`1.FIELDS_CONFIG">
   FIELDS_CONFIG
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/ValueToKey.cs/#L247"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/ValueToKey.cs/#L231"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/ValueToKey.html#FIELDS_CONFIG">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/ValueToKey.html#FIELDS_CONFIG</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/ValueToKey.html#FIELDS_CONFIG">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/ValueToKey.html#FIELDS_CONFIG</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -444,10 +449,10 @@ public ValueToKey(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Transforms_ValueToKey_1_OVERVIEW_DOC" data-uid="Org.Apache.Kafka.Connect.Transforms.ValueToKey`1.OVERVIEW_DOC">
   OVERVIEW_DOC
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/ValueToKey.cs/#L251"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/ValueToKey.cs/#L235"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/ValueToKey.html#OVERVIEW_DOC">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/ValueToKey.html#OVERVIEW_DOC</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/ValueToKey.html#OVERVIEW_DOC">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/ValueToKey.html#OVERVIEW_DOC</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -476,10 +481,10 @@ public ValueToKey(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Transforms_ValueToKey_1_REPLACE_NULL_WITH_DEFAULT_CONFIG" data-uid="Org.Apache.Kafka.Connect.Transforms.ValueToKey`1.REPLACE_NULL_WITH_DEFAULT_CONFIG">
   REPLACE_NULL_WITH_DEFAULT_CONFIG
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/ValueToKey.cs/#L255"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/ValueToKey.cs/#L239"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/ValueToKey.html#REPLACE_NULL_WITH_DEFAULT_CONFIG">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/ValueToKey.html#REPLACE_NULL_WITH_DEFAULT_CONFIG</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/ValueToKey.html#REPLACE_NULL_WITH_DEFAULT_CONFIG">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/ValueToKey.html#REPLACE_NULL_WITH_DEFAULT_CONFIG</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -512,10 +517,10 @@ public ValueToKey(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Transforms_ValueToKey_1_Apply__0_" data-uid="Org.Apache.Kafka.Connect.Transforms.ValueToKey`1.Apply(`0)">
   Apply(R)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/ValueToKey.cs/#L289"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/ValueToKey.cs/#L273"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/ValueToKey.html#apply(org.apache.kafka.connect.connector.ConnectRecord)">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/ValueToKey.html#apply(org.apache.kafka.connect.connector.ConnectRecord)</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/ValueToKey.html#apply(org.apache.kafka.connect.connector.ConnectRecord)">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/ValueToKey.html#apply(org.apache.kafka.connect.connector.ConnectRecord)</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -551,10 +556,10 @@ public ValueToKey(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Transforms_ValueToKey_1_Close" data-uid="Org.Apache.Kafka.Connect.Transforms.ValueToKey`1.Close">
   Close()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/ValueToKey.cs/#L296"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/ValueToKey.cs/#L280"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/ValueToKey.html#close()">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/ValueToKey.html#close()</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/ValueToKey.html#close()">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/ValueToKey.html#close()</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -578,10 +583,10 @@ public ValueToKey(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Transforms_ValueToKey_1_Config" data-uid="Org.Apache.Kafka.Connect.Transforms.ValueToKey`1.Config">
   Config()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/ValueToKey.cs/#L280"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/ValueToKey.cs/#L264"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/ValueToKey.html#config()">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/ValueToKey.html#config()</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/ValueToKey.html#config()">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/ValueToKey.html#config()</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -611,10 +616,10 @@ public ValueToKey(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Transforms_ValueToKey_1_Configure_Java_Util_Map_Java_Lang_String_System_Object__" data-uid="Org.Apache.Kafka.Connect.Transforms.ValueToKey`1.Configure(Java.Util.Map{Java.Lang.String,System.Object})">
   Configure(Map&lt;String, object&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/ValueToKey.cs/#L304"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/ValueToKey.cs/#L288"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/ValueToKey.html#configure(java.util.Map)">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/ValueToKey.html#configure(java.util.Map)</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/ValueToKey.html#configure(java.util.Map)">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/ValueToKey.html#configure(java.util.Map)</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -644,7 +649,7 @@ public ValueToKey(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Transforms_ValueToKey_1_CreatePoolableInstance" data-uid="Org.Apache.Kafka.Connect.Transforms.ValueToKey`1.CreatePoolableInstance">
   CreatePoolableInstance()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/ValueToKey.cs/#L220"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/ValueToKey.cs/#L212"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>HPA initializer for ValueToKey()</p>
@@ -676,10 +681,10 @@ public ValueToKey(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Transforms_ValueToKey_1_Version" data-uid="Org.Apache.Kafka.Connect.Transforms.ValueToKey`1.Version">
   Version()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/ValueToKey.cs/#L272"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/ValueToKey.cs/#L256"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/ValueToKey.html#version()">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/ValueToKey.html#version()</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/ValueToKey.html#version()">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/ValueToKey.html#version()</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -711,83 +716,9 @@ public ValueToKey(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <a id="Org_Apache_Kafka_Connect_Transforms_ValueToKey_1_op_Implicit_" data-uid="Org.Apache.Kafka.Connect.Transforms.ValueToKey`1.op_Implicit*"></a>
 
-  <h3 id="Org_Apache_Kafka_Connect_Transforms_ValueToKey_1_op_Implicit_Org_Apache_Kafka_Connect_Transforms_ValueToKey__0___Org_Apache_Kafka_Connect_Components_Versioned" data-uid="Org.Apache.Kafka.Connect.Transforms.ValueToKey`1.op_Implicit(Org.Apache.Kafka.Connect.Transforms.ValueToKey{`0})~Org.Apache.Kafka.Connect.Components.Versioned">
-  implicit operator Versioned(ValueToKey&lt;R&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/ValueToKey.cs/#L235"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Converter from <a class="xref" href="Org.Apache.Kafka.Connect.Transforms.ValueToKey-1.html">ValueToKey&lt;R&gt;</a> to <a class="xref" href="Org.Apache.Kafka.Connect.Components.Versioned.html">Versioned</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static implicit operator Versioned(ValueToKey&lt;R&gt; t)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>t</code> <a class="xref" href="Org.Apache.Kafka.Connect.Transforms.ValueToKey-1.html">ValueToKey</a>&lt;R&gt;</dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="Org.Apache.Kafka.Connect.Components.Versioned.html">Versioned</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="Org_Apache_Kafka_Connect_Transforms_ValueToKey_1_op_Implicit_" data-uid="Org.Apache.Kafka.Connect.Transforms.ValueToKey`1.op_Implicit*"></a>
-
-  <h3 id="Org_Apache_Kafka_Connect_Transforms_ValueToKey_1_op_Implicit_Org_Apache_Kafka_Connect_Transforms_ValueToKey__0___Org_Apache_Kafka_Connect_Transforms_Transformation__0_" data-uid="Org.Apache.Kafka.Connect.Transforms.ValueToKey`1.op_Implicit(Org.Apache.Kafka.Connect.Transforms.ValueToKey{`0})~Org.Apache.Kafka.Connect.Transforms.Transformation{`0}">
-  implicit operator Transformation&lt;R&gt;(ValueToKey&lt;R&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/ValueToKey.cs/#L231"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Converter from <a class="xref" href="Org.Apache.Kafka.Connect.Transforms.ValueToKey-1.html">ValueToKey&lt;R&gt;</a> to <a class="xref" href="Org.Apache.Kafka.Connect.Transforms.Transformation-1.html">Transformation&lt;R&gt;</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static implicit operator Transformation&lt;R&gt;(ValueToKey&lt;R&gt; t)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>t</code> <a class="xref" href="Org.Apache.Kafka.Connect.Transforms.ValueToKey-1.html">ValueToKey</a>&lt;R&gt;</dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="Org.Apache.Kafka.Connect.Transforms.Transformation-1.html">Transformation</a>&lt;R&gt;</dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="Org_Apache_Kafka_Connect_Transforms_ValueToKey_1_op_Implicit_" data-uid="Org.Apache.Kafka.Connect.Transforms.ValueToKey`1.op_Implicit*"></a>
-
   <h3 id="Org_Apache_Kafka_Connect_Transforms_ValueToKey_1_op_Implicit_Org_Apache_Kafka_Connect_Transforms_ValueToKey__0___Org_Apache_Kafka_Connect_Transforms_ValueToKey" data-uid="Org.Apache.Kafka.Connect.Transforms.ValueToKey`1.op_Implicit(Org.Apache.Kafka.Connect.Transforms.ValueToKey{`0})~Org.Apache.Kafka.Connect.Transforms.ValueToKey">
   implicit operator ValueToKey(ValueToKey&lt;R&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/ValueToKey.cs/#L239"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/ValueToKey.cs/#L223"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Converter from <a class="xref" href="Org.Apache.Kafka.Connect.Transforms.ValueToKey-1.html">ValueToKey&lt;R&gt;</a> to <a class="xref" href="Org.Apache.Kafka.Connect.Transforms.ValueToKey.html">ValueToKey</a></p>
@@ -824,7 +755,7 @@ public ValueToKey(IJVMBridgeBaseInitializer initializer)</code></pre>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/ValueToKey.cs/#L207" class="edit-link">Edit this page</a>
+          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/ValueToKey.cs/#L199" class="edit-link">Edit this page</a>
         </div>
 
 

@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class HeaderFrom&lt;R&gt; | MASES Group - KNet ">
       <meta name="description" content="This is a descriptive page of KNet, the .NET suite for Apache Kafka">
-      <meta name="description" content="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/HeaderFrom.html">
+      <meta name="description" content="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/HeaderFrom.html">
       <link rel="icon" href="../images/favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -89,7 +89,7 @@
 
 
   <h1 id="Org_Apache_Kafka_Connect_Transforms_HeaderFrom_1" data-uid="Org.Apache.Kafka.Connect.Transforms.HeaderFrom`1" class="text-break">
-Class HeaderFrom&lt;R&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/HeaderFrom.cs/#L577"><i class="bi bi-code-slash"></i></a>
+Class HeaderFrom&lt;R&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/HeaderFrom.cs/#L569"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -97,12 +97,12 @@ Class HeaderFrom&lt;R&gt;  <a class="header-action link-secondary" title="View s
   <dl><dt>Assembly</dt><dd>MASES.KNet.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/HeaderFrom.html">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/HeaderFrom.html</a></p>
+  <div class="markdown summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/HeaderFrom.html">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/HeaderFrom.html</a></p>
 </div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class HeaderFrom&lt;R&gt; : JVMBridgeBase&lt;HeaderFrom&lt;R&gt;&gt;, IDynamicMetaObjectProvider, IJVMBridgeCore, IEquatable&lt;IJVMBridgeBaseInstance&gt;, IDisposable, IJVMBridgeBaseStatic, IJVMBridgeBase, IJVMBridgeBaseInstance, IJVMBridgeDefinition, ITransformation&lt;R&gt;, IVersioned where R : ConnectRecord&lt;R&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class HeaderFrom&lt;R&gt; : Transformation&lt;R&gt;, IDynamicMetaObjectProvider, IJVMBridgeCore, IEquatable&lt;IJVMBridgeBaseInstance&gt;, IDisposable, IJVMBridgeBaseStatic, IJVMBridgeBase, IJVMBridgeBaseInstance, IJVMBridgeDefinition, ITransformation&lt;R&gt;, IConfigurable, ICloseable, IAutoCloseable, IConnectPlugin, IVersioned where R : ConnectRecord&lt;R&gt;</code></pre>
   </div>
 
 
@@ -120,7 +120,8 @@ Class HeaderFrom&lt;R&gt;  <a class="header-action link-secondary" title="View s
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.dynamic.dynamicobject">DynamicObject</a></div>
       <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase.html">JVMBridgeBase</a></div>
-      <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html">JVMBridgeBase</a>&lt;<a class="xref" href="Org.Apache.Kafka.Connect.Transforms.HeaderFrom-1.html">HeaderFrom</a>&lt;R&gt;&gt;</div>
+      <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.JVMBridgeBase-1.html">JVMBridgeBase</a>&lt;<a class="xref" href="Org.Apache.Kafka.Connect.Transforms.Transformation-1.html">Transformation</a>&lt;R&gt;&gt;</div>
+      <div><a class="xref" href="Org.Apache.Kafka.Connect.Transforms.Transformation-1.html">Transformation</a>&lt;R&gt;</div>
       <div><span class="xref">HeaderFrom&lt;R&gt;</span></div>
     </dd>
   </dl>
@@ -137,6 +138,10 @@ Class HeaderFrom&lt;R&gt;  <a class="header-action link-secondary" title="View s
       <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeBaseInstance.html">IJVMBridgeBaseInstance</a></div>
       <div><a class="xref" href="https://jcobridge-api.masesgroup.com/api/MASES.JCOBridge.C2JBridge.IJVMBridgeDefinition.html">IJVMBridgeDefinition</a></div>
       <div><a class="xref" href="Org.Apache.Kafka.Connect.Transforms.ITransformation-1.html">ITransformation</a>&lt;R&gt;</div>
+      <div><a class="xref" href="Org.Apache.Kafka.Common.IConfigurable.html">IConfigurable</a></div>
+      <div><a class="xref" href="https://jnet.masesgroup.com/api/Java.Io.ICloseable.html">ICloseable</a></div>
+      <div><a class="xref" href="https://jnet.masesgroup.com/api/Java.Lang.IAutoCloseable.html">IAutoCloseable</a></div>
+      <div><a class="xref" href="Org.Apache.Kafka.Connect.Components.IConnectPlugin.html">IConnectPlugin</a></div>
       <div><a class="xref" href="Org.Apache.Kafka.Connect.Components.IVersioned.html">IVersioned</a></div>
     </dd>
   </dl>
@@ -163,10 +168,10 @@ Class HeaderFrom&lt;R&gt;  <a class="header-action link-secondary" title="View s
 
   <h3 id="Org_Apache_Kafka_Connect_Transforms_HeaderFrom_1__ctor" data-uid="Org.Apache.Kafka.Connect.Transforms.HeaderFrom`1.#ctor">
   HeaderFrom()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/HeaderFrom.cs/#L583"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/HeaderFrom.cs/#L575"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/HeaderFrom.html#%3Cinit%3E()">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/HeaderFrom.html#%3Cinit%3E()</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/HeaderFrom.html#%3Cinit%3E()">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/HeaderFrom.html#%3Cinit%3E()</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -259,10 +264,10 @@ public HeaderFrom(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Transforms_HeaderFrom_1_CONFIG_DEF" data-uid="Org.Apache.Kafka.Connect.Transforms.HeaderFrom`1.CONFIG_DEF">
   CONFIG_DEF
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/HeaderFrom.cs/#L637"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/HeaderFrom.cs/#L621"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/HeaderFrom.html#CONFIG_DEF">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/HeaderFrom.html#CONFIG_DEF</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/HeaderFrom.html#CONFIG_DEF">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/HeaderFrom.html#CONFIG_DEF</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -291,10 +296,10 @@ public HeaderFrom(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Transforms_HeaderFrom_1_FIELDS_FIELD" data-uid="Org.Apache.Kafka.Connect.Transforms.HeaderFrom`1.FIELDS_FIELD">
   FIELDS_FIELD
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/HeaderFrom.cs/#L617"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/HeaderFrom.cs/#L601"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/HeaderFrom.html#FIELDS_FIELD">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/HeaderFrom.html#FIELDS_FIELD</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/HeaderFrom.html#FIELDS_FIELD">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/HeaderFrom.html#FIELDS_FIELD</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -323,10 +328,10 @@ public HeaderFrom(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Transforms_HeaderFrom_1_HEADERS_FIELD" data-uid="Org.Apache.Kafka.Connect.Transforms.HeaderFrom`1.HEADERS_FIELD">
   HEADERS_FIELD
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/HeaderFrom.cs/#L621"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/HeaderFrom.cs/#L605"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/HeaderFrom.html#HEADERS_FIELD">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/HeaderFrom.html#HEADERS_FIELD</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/HeaderFrom.html#HEADERS_FIELD">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/HeaderFrom.html#HEADERS_FIELD</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -483,10 +488,10 @@ public HeaderFrom(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Transforms_HeaderFrom_1_OPERATION_FIELD" data-uid="Org.Apache.Kafka.Connect.Transforms.HeaderFrom`1.OPERATION_FIELD">
   OPERATION_FIELD
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/HeaderFrom.cs/#L625"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/HeaderFrom.cs/#L609"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/HeaderFrom.html#OPERATION_FIELD">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/HeaderFrom.html#OPERATION_FIELD</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/HeaderFrom.html#OPERATION_FIELD">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/HeaderFrom.html#OPERATION_FIELD</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -515,10 +520,10 @@ public HeaderFrom(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Transforms_HeaderFrom_1_OVERVIEW_DOC" data-uid="Org.Apache.Kafka.Connect.Transforms.HeaderFrom`1.OVERVIEW_DOC">
   OVERVIEW_DOC
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/HeaderFrom.cs/#L629"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/HeaderFrom.cs/#L613"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/HeaderFrom.html#OVERVIEW_DOC">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/HeaderFrom.html#OVERVIEW_DOC</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/HeaderFrom.html#OVERVIEW_DOC">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/HeaderFrom.html#OVERVIEW_DOC</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -547,10 +552,10 @@ public HeaderFrom(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Transforms_HeaderFrom_1_REPLACE_NULL_WITH_DEFAULT_FIELD" data-uid="Org.Apache.Kafka.Connect.Transforms.HeaderFrom`1.REPLACE_NULL_WITH_DEFAULT_FIELD">
   REPLACE_NULL_WITH_DEFAULT_FIELD
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/HeaderFrom.cs/#L633"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/HeaderFrom.cs/#L617"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/HeaderFrom.html#REPLACE_NULL_WITH_DEFAULT_FIELD">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/HeaderFrom.html#REPLACE_NULL_WITH_DEFAULT_FIELD</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/HeaderFrom.html#REPLACE_NULL_WITH_DEFAULT_FIELD">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/HeaderFrom.html#REPLACE_NULL_WITH_DEFAULT_FIELD</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -583,10 +588,10 @@ public HeaderFrom(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Transforms_HeaderFrom_1_Apply__0_" data-uid="Org.Apache.Kafka.Connect.Transforms.HeaderFrom`1.Apply(`0)">
   Apply(R)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/HeaderFrom.cs/#L667"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/HeaderFrom.cs/#L651"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/HeaderFrom.html#apply(org.apache.kafka.connect.connector.ConnectRecord)">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/HeaderFrom.html#apply(org.apache.kafka.connect.connector.ConnectRecord)</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/HeaderFrom.html#apply(org.apache.kafka.connect.connector.ConnectRecord)">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/HeaderFrom.html#apply(org.apache.kafka.connect.connector.ConnectRecord)</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -622,10 +627,10 @@ public HeaderFrom(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Transforms_HeaderFrom_1_Close" data-uid="Org.Apache.Kafka.Connect.Transforms.HeaderFrom`1.Close">
   Close()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/HeaderFrom.cs/#L674"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/HeaderFrom.cs/#L658"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/HeaderFrom.html#close()">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/HeaderFrom.html#close()</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/HeaderFrom.html#close()">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/HeaderFrom.html#close()</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -649,10 +654,10 @@ public HeaderFrom(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Transforms_HeaderFrom_1_Config" data-uid="Org.Apache.Kafka.Connect.Transforms.HeaderFrom`1.Config">
   Config()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/HeaderFrom.cs/#L658"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/HeaderFrom.cs/#L642"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/HeaderFrom.html#config()">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/HeaderFrom.html#config()</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/HeaderFrom.html#config()">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/HeaderFrom.html#config()</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -682,10 +687,10 @@ public HeaderFrom(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Transforms_HeaderFrom_1_Configure_Java_Util_Map_Java_Lang_String_System_Object__" data-uid="Org.Apache.Kafka.Connect.Transforms.HeaderFrom`1.Configure(Java.Util.Map{Java.Lang.String,System.Object})">
   Configure(Map&lt;String, object&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/HeaderFrom.cs/#L682"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/HeaderFrom.cs/#L666"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/HeaderFrom.html#configure(java.util.Map)">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/HeaderFrom.html#configure(java.util.Map)</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/HeaderFrom.html#configure(java.util.Map)">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/HeaderFrom.html#configure(java.util.Map)</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -715,7 +720,7 @@ public HeaderFrom(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Transforms_HeaderFrom_1_CreatePoolableInstance" data-uid="Org.Apache.Kafka.Connect.Transforms.HeaderFrom`1.CreatePoolableInstance">
   CreatePoolableInstance()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/HeaderFrom.cs/#L590"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/HeaderFrom.cs/#L582"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>HPA initializer for HeaderFrom()</p>
@@ -747,10 +752,10 @@ public HeaderFrom(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <h3 id="Org_Apache_Kafka_Connect_Transforms_HeaderFrom_1_Version" data-uid="Org.Apache.Kafka.Connect.Transforms.HeaderFrom`1.Version">
   Version()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/HeaderFrom.cs/#L650"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/HeaderFrom.cs/#L634"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/HeaderFrom.html#version()">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.2.1/org/apache/kafka/connect/transforms/HeaderFrom.html#version()</a></p>
+  <div class="markdown level1 summary"><p><a href="https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/HeaderFrom.html#version()">https://www.javadoc.io/doc/org.apache.kafka/connect-transforms/4.3.1/org/apache/kafka/connect/transforms/HeaderFrom.html#version()</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -782,46 +787,9 @@ public HeaderFrom(IJVMBridgeBaseInitializer initializer)</code></pre>
 
   <a id="Org_Apache_Kafka_Connect_Transforms_HeaderFrom_1_op_Implicit_" data-uid="Org.Apache.Kafka.Connect.Transforms.HeaderFrom`1.op_Implicit*"></a>
 
-  <h3 id="Org_Apache_Kafka_Connect_Transforms_HeaderFrom_1_op_Implicit_Org_Apache_Kafka_Connect_Transforms_HeaderFrom__0___Org_Apache_Kafka_Connect_Components_Versioned" data-uid="Org.Apache.Kafka.Connect.Transforms.HeaderFrom`1.op_Implicit(Org.Apache.Kafka.Connect.Transforms.HeaderFrom{`0})~Org.Apache.Kafka.Connect.Components.Versioned">
-  implicit operator Versioned(HeaderFrom&lt;R&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/HeaderFrom.cs/#L605"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Converter from <a class="xref" href="Org.Apache.Kafka.Connect.Transforms.HeaderFrom-1.html">HeaderFrom&lt;R&gt;</a> to <a class="xref" href="Org.Apache.Kafka.Connect.Components.Versioned.html">Versioned</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static implicit operator Versioned(HeaderFrom&lt;R&gt; t)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>t</code> <a class="xref" href="Org.Apache.Kafka.Connect.Transforms.HeaderFrom-1.html">HeaderFrom</a>&lt;R&gt;</dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="Org.Apache.Kafka.Connect.Components.Versioned.html">Versioned</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="Org_Apache_Kafka_Connect_Transforms_HeaderFrom_1_op_Implicit_" data-uid="Org.Apache.Kafka.Connect.Transforms.HeaderFrom`1.op_Implicit*"></a>
-
   <h3 id="Org_Apache_Kafka_Connect_Transforms_HeaderFrom_1_op_Implicit_Org_Apache_Kafka_Connect_Transforms_HeaderFrom__0___Org_Apache_Kafka_Connect_Transforms_HeaderFrom" data-uid="Org.Apache.Kafka.Connect.Transforms.HeaderFrom`1.op_Implicit(Org.Apache.Kafka.Connect.Transforms.HeaderFrom{`0})~Org.Apache.Kafka.Connect.Transforms.HeaderFrom">
   implicit operator HeaderFrom(HeaderFrom&lt;R&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/HeaderFrom.cs/#L609"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/HeaderFrom.cs/#L593"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Converter from <a class="xref" href="Org.Apache.Kafka.Connect.Transforms.HeaderFrom-1.html">HeaderFrom&lt;R&gt;</a> to <a class="xref" href="Org.Apache.Kafka.Connect.Transforms.HeaderFrom.html">HeaderFrom</a></p>
@@ -854,48 +822,11 @@ public HeaderFrom(IJVMBridgeBaseInitializer initializer)</code></pre>
 
 
 
-  <a id="Org_Apache_Kafka_Connect_Transforms_HeaderFrom_1_op_Implicit_" data-uid="Org.Apache.Kafka.Connect.Transforms.HeaderFrom`1.op_Implicit*"></a>
-
-  <h3 id="Org_Apache_Kafka_Connect_Transforms_HeaderFrom_1_op_Implicit_Org_Apache_Kafka_Connect_Transforms_HeaderFrom__0___Org_Apache_Kafka_Connect_Transforms_Transformation__0_" data-uid="Org.Apache.Kafka.Connect.Transforms.HeaderFrom`1.op_Implicit(Org.Apache.Kafka.Connect.Transforms.HeaderFrom{`0})~Org.Apache.Kafka.Connect.Transforms.Transformation{`0}">
-  implicit operator Transformation&lt;R&gt;(HeaderFrom&lt;R&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/HeaderFrom.cs/#L601"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Converter from <a class="xref" href="Org.Apache.Kafka.Connect.Transforms.HeaderFrom-1.html">HeaderFrom&lt;R&gt;</a> to <a class="xref" href="Org.Apache.Kafka.Connect.Transforms.Transformation-1.html">Transformation&lt;R&gt;</a></p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static implicit operator Transformation&lt;R&gt;(HeaderFrom&lt;R&gt; t)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>t</code> <a class="xref" href="Org.Apache.Kafka.Connect.Transforms.HeaderFrom-1.html">HeaderFrom</a>&lt;R&gt;</dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="Org.Apache.Kafka.Connect.Transforms.Transformation-1.html">Transformation</a>&lt;R&gt;</dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/HeaderFrom.cs/#L577" class="edit-link">Edit this page</a>
+          <a href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Generated/Org/Apache/Kafka/Connect/Transforms/HeaderFrom.cs/#L569" class="edit-link">Edit this page</a>
         </div>
 
 
