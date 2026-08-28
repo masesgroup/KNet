@@ -3499,6 +3499,90 @@ public AlterConfigsResult AlterConfigs(Map&lt;ConfigResource, Config&gt; arg0, A
 
 
 
+  <a id="Org_Apache_Kafka_Clients_Admin_Admin_EarliestLocalPartitionOffsetForTopic_" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.EarliestLocalPartitionOffsetForTopic*"></a>
+
+  <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_EarliestLocalPartitionOffsetForTopic_System_String_System_Int64_" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.EarliestLocalPartitionOffsetForTopic(System.String,System.Int64)">
+  EarliestLocalPartitionOffsetForTopic(string, long)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Developed/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L342"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary&lt;TKey, TValue&gt;</a> containing the EarliestLocal offset for each partition of the <code class="paramref">topicName</code></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IDictionary&lt;int, long&gt; EarliestLocalPartitionOffsetForTopic(string topicName, long delta = 0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>topicName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The topic to be queried</p>
+</dd>
+    <dt><code>delta</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p>A value to be added to each offset retrieved</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>&gt;</dt>
+    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary&lt;TKey, TValue&gt;</a> containing the EarliestLocal offset for each partition</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Clients_Admin_Admin_EarliestPartitionOffsetForTopic_" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.EarliestPartitionOffsetForTopic*"></a>
+
+  <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_EarliestPartitionOffsetForTopic_System_String_System_Int64_" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.EarliestPartitionOffsetForTopic(System.String,System.Int64)">
+  EarliestPartitionOffsetForTopic(string, long)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Developed/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L335"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary&lt;TKey, TValue&gt;</a> containing the Earliest offset for each partition of the <code class="paramref">topicName</code></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IDictionary&lt;int, long&gt; EarliestPartitionOffsetForTopic(string topicName, long delta = 0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>topicName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The topic to be queried</p>
+</dd>
+    <dt><code>delta</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p>A value to be added to each offset retrieved</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>&gt;</dt>
+    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary&lt;TKey, TValue&gt;</a> containing the Earliest offset for each partition</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Org_Apache_Kafka_Clients_Admin_Admin_ElectLeaders_" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.ElectLeaders*"></a>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_ElectLeaders_Org_Apache_Kafka_Common_ElectionType_Java_Util_Set_Org_Apache_Kafka_Common_TopicPartition__" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.ElectLeaders(Org.Apache.Kafka.Common.ElectionType,Java.Util.Set{Org.Apache.Kafka.Common.TopicPartition})">
@@ -3748,11 +3832,101 @@ public AlterConfigsResult AlterConfigs(Map&lt;ConfigResource, Config&gt; arg0, A
 
 
 
+  <a id="Org_Apache_Kafka_Clients_Admin_Admin_ForTimestampPartitionOffsetForTopic_" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.ForTimestampPartitionOffsetForTopic*"></a>
+
+  <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_ForTimestampPartitionOffsetForTopic_System_String_System_DateTime_System_Int64_" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.ForTimestampPartitionOffsetForTopic(System.String,System.DateTime,System.Int64)">
+  ForTimestampPartitionOffsetForTopic(string, DateTime, long)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Developed/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L315"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary&lt;TKey, TValue&gt;</a> containing the ForTimestamp offset for each partition of the <code class="paramref">topicName</code></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IDictionary&lt;int, long&gt; ForTimestampPartitionOffsetForTopic(string topicName, DateTime timestamp, long delta = 0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>topicName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The topic to be queried</p>
+</dd>
+    <dt><code>timestamp</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></dt>
+    <dd><p>The starting <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></p>
+</dd>
+    <dt><code>delta</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p>A value to be added to each offset retrieved</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>&gt;</dt>
+    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary&lt;TKey, TValue&gt;</a> containing the ForTimestamp offset for each partition</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Clients_Admin_Admin_ForTimestampPartitionOffsetForTopic_" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.ForTimestampPartitionOffsetForTopic*"></a>
+
+  <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_ForTimestampPartitionOffsetForTopic_System_String_System_Int64_System_Int64_" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.ForTimestampPartitionOffsetForTopic(System.String,System.Int64,System.Int64)">
+  ForTimestampPartitionOffsetForTopic(string, long, long)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Developed/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L321"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary&lt;TKey, TValue&gt;</a> containing the ForTimestamp offset for each partition of the <code class="paramref">topicName</code></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IDictionary&lt;int, long&gt; ForTimestampPartitionOffsetForTopic(string topicName, long timestamp, long delta = 0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>topicName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The topic to be queried</p>
+</dd>
+    <dt><code>timestamp</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p>The starting Unix time in milliseconds</p>
+</dd>
+    <dt><code>delta</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p>A value to be added to each offset retrieved</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>&gt;</dt>
+    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary&lt;TKey, TValue&gt;</a> containing the ForTimestamp offset for each partition</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
   <a id="Org_Apache_Kafka_Clients_Admin_Admin_GetClusterId_" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.GetClusterId*"></a>
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_GetClusterId" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.GetClusterId">
   GetClusterId()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Developed/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L244"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Developed/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L298"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Returns the unique cluster id associated to the instance</p>
@@ -3866,15 +4040,16 @@ public AlterConfigsResult AlterConfigs(Map&lt;ConfigResource, Config&gt; arg0, A
 
   <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_LastPartitionOffsetForTopic_System_String_" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.LastPartitionOffsetForTopic(System.String)">
   LastPartitionOffsetForTopic(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Developed/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L261"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Developed/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L363"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Returns a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary&lt;TKey, TValue&gt;</a> containing the last offset for each partition of the <code class="paramref">topicName</code></p>
+  <div class="markdown level1 summary"><p>Returns a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary&lt;TKey, TValue&gt;</a> containing the Latest offset for each partition of the <code class="paramref">topicName</code></p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IDictionary&lt;int, long&gt; LastPartitionOffsetForTopic(string topicName)</code></pre>
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Use LatestTieredPartitionOffsetForTopic&quot;, true)]
+public IDictionary&lt;int, long&gt; LastPartitionOffsetForTopic(string topicName)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -3887,7 +4062,91 @@ public AlterConfigsResult AlterConfigs(Map&lt;ConfigResource, Config&gt; arg0, A
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>&gt;</dt>
-    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary&lt;TKey, TValue&gt;</a> containing the last offset for each partition</p>
+    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary&lt;TKey, TValue&gt;</a> containing the Latest offset for each partition</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Clients_Admin_Admin_LatestPartitionOffsetForTopic_" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.LatestPartitionOffsetForTopic*"></a>
+
+  <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_LatestPartitionOffsetForTopic_System_String_System_Int64_" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.LatestPartitionOffsetForTopic(System.String,System.Int64)">
+  LatestPartitionOffsetForTopic(string, long)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Developed/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L349"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary&lt;TKey, TValue&gt;</a> containing the Latest offset for each partition of the <code class="paramref">topicName</code></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IDictionary&lt;int, long&gt; LatestPartitionOffsetForTopic(string topicName, long delta = -1)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>topicName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The topic to be queried</p>
+</dd>
+    <dt><code>delta</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p>A value to be added to each offset retrieved</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>&gt;</dt>
+    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary&lt;TKey, TValue&gt;</a> containing the Latest offset for each partition</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Clients_Admin_Admin_LatestTieredPartitionOffsetForTopic_" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.LatestTieredPartitionOffsetForTopic*"></a>
+
+  <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_LatestTieredPartitionOffsetForTopic_System_String_System_Int64_" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.LatestTieredPartitionOffsetForTopic(System.String,System.Int64)">
+  LatestTieredPartitionOffsetForTopic(string, long)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Developed/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L356"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary&lt;TKey, TValue&gt;</a> containing the LatestTiered offset for each partition of the <code class="paramref">topicName</code></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IDictionary&lt;int, long&gt; LatestTieredPartitionOffsetForTopic(string topicName, long delta = -1)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>topicName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The topic to be queried</p>
+</dd>
+    <dt><code>delta</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p>A value to be added to each offset retrieved</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>&gt;</dt>
+    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary&lt;TKey, TValue&gt;</a> containing the LatestTiered offset for each partition</p>
 </dd>
   </dl>
 
@@ -4614,6 +4873,48 @@ public AlterConfigsResult AlterConfigs(Map&lt;ConfigResource, Config&gt; arg0, A
   <dl class="parameters">
     <dt><a class="xref" href="Org.Apache.Kafka.Clients.Admin.ListTransactionsResult.html">ListTransactionsResult</a></dt>
     <dd><p><a class="xref" href="Org.Apache.Kafka.Clients.Admin.ListTransactionsResult.html">ListTransactionsResult</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Org_Apache_Kafka_Clients_Admin_Admin_MaxTimestampPartitionOffsetForTopic_" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.MaxTimestampPartitionOffsetForTopic*"></a>
+
+  <h3 id="Org_Apache_Kafka_Clients_Admin_Admin_MaxTimestampPartitionOffsetForTopic_System_String_System_Int64_" data-uid="Org.Apache.Kafka.Clients.Admin.Admin.MaxTimestampPartitionOffsetForTopic(System.String,System.Int64)">
+  MaxTimestampPartitionOffsetForTopic(string, long)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/release/2.9.X/src/net/KNet/Developed/Org/Apache/Kafka/Clients/Admin/Admin.cs/#L328"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary&lt;TKey, TValue&gt;</a> containing the MaxTimestamp offset for each partition of the <code class="paramref">topicName</code></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IDictionary&lt;int, long&gt; MaxTimestampPartitionOffsetForTopic(string topicName, long delta = 0)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>topicName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The topic to be queried</p>
+</dd>
+    <dt><code>delta</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a></dt>
+    <dd><p>A value to be added to each offset retrieved</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>&gt;</dt>
+    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary&lt;TKey, TValue&gt;</a> containing the MaxTimestamp offset for each partition</p>
 </dd>
   </dl>
 
