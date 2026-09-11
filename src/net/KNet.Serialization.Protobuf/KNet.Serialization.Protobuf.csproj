@@ -19,6 +19,7 @@
 	</ItemGroup>
 	<ItemGroup>
 	  <PackageReference Include="Google.Protobuf" Version="3.36.1" />
+	</ItemGroup>
 	<ItemGroup>
 	  <ProjectReference Include="..\KNet\KNet.csproj" />
 	</ItemGroup>
