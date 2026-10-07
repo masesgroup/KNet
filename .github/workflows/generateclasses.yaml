@@ -193,7 +193,7 @@ jobs:
 
       - name: Request a PR to commit changes made with latest published version of JNetReflector
         if: ${{ inputs.GeneratePR == true && inputs.UseLatestJNetReflectorSource == false && inputs.UseLastRepositoryBuild == false }}
-        uses: peter-evans/create-pull-request@v8
+        branch: generated-classes-latest-update-${{ github.run_number }}
         with:
           branch-suffix: short-commit-hash
           add-paths: src/*.*
@@ -203,4 +203,5 @@ jobs:
             Automated changes by GitHub action, fix #92
           reviewers: masesdevelopers
           assignees: masesdevelopers
-          labels: java, .NET, enhancement 
+          labels: java, .NET, enhancement
+          delete-branch: true

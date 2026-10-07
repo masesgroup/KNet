@@ -62,7 +62,7 @@ jobs:
 
       - name: Request a PR to commit changes
         if: ${{ github.repository_owner == 'masesgroup' && inputs.GeneratePR == true }} #do not push any changes outside main repo or GeneratePR is false
-        uses: peter-evans/create-pull-request@v8
+        branch: docs-latest-update-${{ github.run_number }}
         with:
           branch-suffix: short-commit-hash
           add-paths: docs/*.*
@@ -72,3 +72,4 @@ jobs:
           reviewers: masesdevelopers
           assignees: masesdevelopers
           labels: documentation, enhancement
+          delete-branch: true
