@@ -96,7 +96,7 @@ jobs:
       - name: Request a PR to commit changes
         uses: peter-evans/create-pull-request@v8
         with:
-          branch-suffix: short-commit-hash
+          branch: update-version-${{ github.run_number }}
           add-paths: src/*.*
           commit-message: Update version from ${{ inputs.CurrentVersion }}${{ env.PRE_C }} to ${{ inputs.NewVersion }}${{ env.PRE_N }}
           title: Update version from ${{ inputs.CurrentVersion }}${{ env.PRE_C }} to ${{ inputs.NewVersion }}${{ env.PRE_N }}
@@ -105,3 +105,4 @@ jobs:
           reviewers: masesdevelopers
           assignees: masesdevelopers
           labels: enhancement, Docker, java, KNet, KNetCLI, KNetConnectSDK, KNetPS, KNetSerDes, KNetTemplates, .NET
+          delete-branch: true
