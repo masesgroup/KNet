@@ -35,7 +35,7 @@ jobs:
       - name: Request a PR to commit changes
         uses: peter-evans/create-pull-request@v8
         with:
-          branch-suffix: short-commit-hash
+          branch: update-copyright-${{ github.run_number }}
           add-paths: ./*.*
           commit-message: Update copyright from ${{ inputs.CurrentYear }} to ${{ inputs.NewYear }}
           title: Update copyright from ${{ inputs.CurrentYear }} to ${{ inputs.NewYear }}
@@ -43,4 +43,5 @@ jobs:
             Automated changes by GitHub action fix #1452
           reviewers: masesdevelopers
           assignees: masesdevelopers
-          labels: enhancement, Docker, java, KNet, KNetCLI, KNetConnectSDK, KNetPS, KNetSerDes, KNetTemplates, .NET 
+          labels: enhancement, Docker, java, KNet, KNetCLI, KNetConnectSDK, KNetPS, KNetSerDes, KNetTemplates, .NET
+          delete-branch: true
