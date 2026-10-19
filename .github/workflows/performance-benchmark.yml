@@ -297,10 +297,10 @@ jobs:
           - 9092:9092
         env:
           KNET_DOCKER_RUNNING_MODE: server-standalone
-          JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_6_9 }}
+          JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_6_10 }}
 
     env:
-      JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_6_9 }}
+      JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_6_10 }}
       RESULTS_DIR: ${{ github.workspace }}/benchmark-results
 
     steps:
