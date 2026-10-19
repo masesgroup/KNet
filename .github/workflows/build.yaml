@@ -144,9 +144,8 @@ jobs:
 
       - uses: actions/setup-dotnet@v6
         with:
-          dotnet-version: |
-            9.x
-            10.x
+          dotnet-version: '11.0.x'
+          dotnet-quality: 'preview'
 
       - name: Download pscp directly
         if: ${{ inputs.UseSpecialSettings == true }}
@@ -264,6 +263,7 @@ jobs:
           Copy-Item .github\workflows\support\* -Destination bin\net8.0\ -Force
           Copy-Item .github\workflows\support\* -Destination bin\net9.0\ -Force
           Copy-Item .github\workflows\support\* -Destination bin\net10.0\ -Force
+          Copy-Item .github\workflows\support\* -Destination bin\net11.0\ -Force
 
       - name: Save KNet net462 bin in cache
         uses: actions/cache/save@v6
@@ -293,6 +293,13 @@ jobs:
           path: ./bin/net10.0/
           key: KNet_${{ github.run_number }}_${{ github.run_attempt }}_net10.0_bin_${{ github.sha }}
 
+      - name: Save KNet net11.0 bin in cache
+        uses: actions/cache/save@v6
+        with:
+          enableCrossOsArchive: true
+          path: ./bin/net11.0/
+          key: KNet_${{ github.run_number }}_${{ github.run_attempt }}_net11.0_bin_${{ github.sha }}
+
       - name: Save KNet NuGet in cache
         uses: actions/cache/save@v6
         with:
@@ -321,9 +328,8 @@ jobs:
 
       - uses: actions/setup-dotnet@v6
         with:
-          dotnet-version: |
-            9.x
-            10.x
+          dotnet-version: '11.0.x'
+          dotnet-quality: 'preview'
 
       - name: Install sshpass
         if: ${{ inputs.UseSpecialSettings == true }}
@@ -452,13 +458,13 @@ jobs:
           - 9092:9092
         env:
           KNET_DOCKER_RUNNING_MODE: server
-          JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_6_9 }}
+          JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_6_10 }}
           
     strategy:
       fail-fast: false
       matrix:
         os: [ 'ubuntu-latest' ] #, 'macos-latest', 'macos-13' , 'windows-latest' ] # not available services in this runners, checks done in execute_tests_other
-        framework: [ 'net8.0', 'net9.0', 'net10.0' ]
+        framework: [ 'net8.0', 'net9.0', 'net10.0', 'net11.0' ]
         jdk_vendor: [ 'temurin', 'microsoft', 'corretto', 'zulu', 'oracle', 'graalvm' ]
         jdk_version: [ '11', '17', '21' ] # only LTS versions
         exclude:
@@ -476,7 +482,7 @@ jobs:
       DOTNET_CreateDumpVerboseDiagnostics: ${{ inputs.EnableVerboseDiagnosticProcessDump }}
       DOTNET_EnableCrashReport: ${{ inputs.EnableProcessDump }}
       DOTNET_CreateDumpLogToFile: ${{ github.workspace }}/coredump.diagnostic
-      JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_6_9 }}
+      JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_6_10 }}
       
     steps:
       - name: Restore KNet ${{ matrix.framework }} bin from cache
@@ -503,16 +509,10 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
 
       - uses: actions/setup-dotnet@v6
-        if: ${{ matrix.framework == 'net9.0' }}
+        if: ${{ matrix.framework == 'net11.0' }}
         with:
-          dotnet-version: |
-            9.x
-
-      - uses: actions/setup-dotnet@v6
-        if: ${{ matrix.framework == 'net10.0' }}
-        with:
-          dotnet-version: |
-            10.x
+          dotnet-version: '11.0.x'
+          dotnet-quality: 'preview'
 
       - name: Execute KNetTest on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
         continue-on-error: ${{ inputs.ForceContinueOnError == true }}
@@ -553,7 +553,7 @@ jobs:
       fail-fast: false
       matrix:
         os: [ 'windows-2022' ] # 'macos-13' removed waiting https://github.com/masesgroup/JNet/issues/518
-        framework: [ 'net462', 'net8.0', 'net9.0', 'net10.0' ]
+        framework: [ 'net462', 'net8.0', 'net9.0', 'net10.0', 'net11.0' ]
         jdk_vendor: [ 'temurin', 'microsoft', 'corretto', 'zulu', 'oracle', 'graalvm' ]
         jdk_version: [ '11', '17', '21' ] # only LTS versions
         exclude:
@@ -571,7 +571,7 @@ jobs:
       DOTNET_CreateDumpVerboseDiagnostics: ${{ inputs.EnableVerboseDiagnosticProcessDump }}
       DOTNET_EnableCrashReport: ${{ inputs.EnableProcessDump }}
       DOTNET_CreateDumpLogToFile: ${{ github.workspace }}/coredump.diagnostic
-      JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_6_9 }}
+      JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_6_10 }}
       
     steps:
       - name: Restore KNet ${{ matrix.framework }} bin from cache
@@ -606,10 +606,10 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
 
       - uses: actions/setup-dotnet@v6
-        if: ${{ matrix.framework == 'net10.0' }}
+        if: ${{ matrix.framework == 'net11.0' }}
         with:
-          dotnet-version: |
-            10.x
+          dotnet-version: '11.0.x'
+          dotnet-quality: 'preview'
 
       - name: Download Procdump and prepare # see https://gist.github.com/Sedeniono/e6d6504e3bf0645937852ee5681ef9ee and https://learn.microsoft.com/it-it/sysinternals/downloads/procdump
         if: ${{ inputs.EnableProcessDump == 1 }}
@@ -668,7 +668,7 @@ jobs:
       fail-fast: false
       matrix:
         os: [ 'macos-14' ] # 'macos-13' removed waiting https://github.com/masesgroup/JNet/issues/518
-        framework: [ 'net8.0', 'net9.0', 'net10.0' ]
+        framework: [ 'net8.0', 'net9.0', 'net10.0', 'net11.0' ]
         jdk_vendor: [ 'temurin', 'microsoft', 'corretto', 'zulu', 'oracle', 'graalvm' ]
         jdk_version: [ '11', '17', '21' ] # only supported LTS versions
         exclude:
@@ -686,7 +686,7 @@ jobs:
       DOTNET_CreateDumpVerboseDiagnostics: ${{ inputs.EnableVerboseDiagnosticProcessDump }}
       DOTNET_EnableCrashReport: ${{ inputs.EnableProcessDump }}
       DOTNET_CreateDumpLogToFile: ${{ github.workspace }}/coredump.diagnostic
-      JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_6_9 }}
+      JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_6_10 }}
       
     steps:
       - name: Restore KNet ${{ matrix.framework }} bin from cache
@@ -721,22 +721,10 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
 
       - uses: actions/setup-dotnet@v6
-        if: ${{ matrix.framework == 'net8.0' }}
+        if: ${{ matrix.framework == 'net11.0' }}
         with:
-          dotnet-version: |
-            8.x
-
-      - uses: actions/setup-dotnet@v6
-        if: ${{ matrix.framework == 'net9.0' }}
-        with:
-          dotnet-version: |
-            9.x
-
-      - uses: actions/setup-dotnet@v6
-        if: ${{ matrix.framework == 'net10.0' }}
-        with:
-          dotnet-version: |
-            10.x
+          dotnet-version: '11.0.x'
+          dotnet-quality: 'preview'
 
       - name: Use latest version of KNetCLI
         run: dotnet tool update -g MASES.KNetCLI --prerelease --source ${{ github.workspace }}/bin
