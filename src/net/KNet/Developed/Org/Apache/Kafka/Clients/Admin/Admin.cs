@@ -286,7 +286,6 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// Returns a <see cref="System.Collections.Generic.IDictionary{TKey, TValue}"/> containing the Latest offset for each partition of the <paramref name="topicName"/>
         /// </summary>
         /// <param name="topicName">The topic to be queried</param>
-        /// <param name="delta">A value to be added to each offset retrieved</param>
         /// <returns>A <see cref="System.Collections.Generic.IDictionary{TKey, TValue}"/> containing the Latest offset for each partition</returns>
         [Obsolete("Use LatestTieredPartitionOffsetForTopic", true)]
         System.Collections.Generic.IDictionary<int, long> LastPartitionOffsetForTopic(string topicName);
