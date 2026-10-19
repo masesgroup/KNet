@@ -76,10 +76,8 @@ jobs:
 
       - uses: actions/setup-dotnet@v6
         with:
-          dotnet-version: |
-            8.x
-            9.x
-            10.x
+          dotnet-version: '11.0.x'
+          dotnet-quality: 'preview'
 
       - name: Download pscp directly
         if: ${{ inputs.UseSpecialSettings == true }}
