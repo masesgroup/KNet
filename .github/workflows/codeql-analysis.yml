@@ -89,11 +89,10 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v7
 
-    - uses: actions/setup-dotnet@v6
-      with:
-        dotnet-version: |
-          9.x
-          10.x
+      - uses: actions/setup-dotnet@v6
+        with:
+          dotnet-version: '11.0.x'
+          dotnet-quality: 'preview'
 
     # Initializes the CodeQL tools for scanning.
     - name: Initialize CodeQL
