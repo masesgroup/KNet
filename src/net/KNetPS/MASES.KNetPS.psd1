@@ -8,7 +8,7 @@
 
 RootModule = 'MASES.KNetPS.psm1'
 
-ModuleVersion = '3.3.0'
+ModuleVersion = '3.3.1'
 
 CompatiblePSEditions = 'Desktop', 'Core'
 
@@ -119,7 +119,7 @@ PrivateData = @{
 
     PSData = @{
 
-        Prerelease = ''
+        Prerelease = 'preview20261019'
 
         Tags = @('KNetPS', 'PSEdition_Core', 'PSEdition_Desktop', 'Windows', 'Linux', 'Apache', 'Kafka', 'ApacheKafka', 'Admin', 'Consumer', 'Producer')
 
