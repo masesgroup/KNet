@@ -35,15 +35,14 @@ jobs:
       - name: Common site
         uses: actions/checkout@v7
         with:
+          fetch-depth: '1'
           repository: masesgroup/CommonTools
           path: CommonTools
 
-
       - uses: actions/setup-dotnet@v6
         with:
-          dotnet-version: |
-            9.x
-            10.x
+          dotnet-version: '11.0.x'
+          dotnet-quality: 'preview'
 
       - name: Clear documentation folder 
         run: Remove-Item .\docs\* -Recurse -Force -Exclude _config.yml,CNAME

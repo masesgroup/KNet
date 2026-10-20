@@ -37,6 +37,11 @@ on:
         required: false
         default: false
         type: boolean
+      EnableLinuxTests:
+        description: 'Enable tests in Linux'
+        required: false
+        default: true
+        type: boolean
       EnableWindowsTests:
         description: 'Executes tests on Windows'
         required: false
@@ -171,9 +176,9 @@ jobs:
       UseSpecialSettings: ${{ inputs.UseSpecialSettings || false }}
       SpecialSettingsSource: ${{ inputs.SpecialSettingsSource || 'source.zip' }}
       ExecuteOnMoreOSes: ${{ inputs.ExecuteOnMoreOSes || github.event_name == 'schedule' }}
-      ExecuteOnLargerJDKSet: ${{ inputs.ExecuteOnLargerJDKSet || github.ref_name == 'master' || github.event_name == 'schedule' }}
-      EnableLinuxTests: true
-      EnableWindowsTests: ${{ inputs.EnableWindowsTests || github.ref_name == 'master' || github.event_name == 'schedule' }}
+      ExecuteOnLargerJDKSet: ${{ (github.event_name == 'workflow_dispatch' && inputs.ExecuteOnLargerJDKSet) || (github.event_name != 'workflow_dispatch' && (github.ref_name == 'master' || github.event_name == 'schedule')) }}
+      EnableLinuxTests: ${{ github.event_name != 'workflow_dispatch' || inputs.EnableLinuxTests }}
+      EnableWindowsTests: ${{ (github.event_name == 'workflow_dispatch' && inputs.EnableWindowsTests) || (github.event_name != 'workflow_dispatch' && (github.ref_name == 'master' || github.event_name == 'schedule')) }}
       EnableMacOSTests: ${{ inputs.EnableMacOSTests || github.event_name == 'schedule' }}
       UseLastRepositoryBuild: ${{ inputs.UseLastRepositoryBuild || false }}
       ForceContinueOnError: ${{ inputs.ForceContinueOnError || false }}
@@ -184,7 +189,7 @@ jobs:
     secrets:
       actor: ${{ github.actor }}
       GITHUB_TOKEN_INHERITED: ${{ secrets.GITHUB_TOKEN }}
-      JCOBRIDGE_ENCODED: ${{ secrets.JCOBRIDGE_ENCODED_2_6_9 }}
+      JCOBRIDGE_ENCODED: ${{ secrets.JCOBRIDGE_ENCODED_2_6_10 }}
       SFTP_SERVER: ${{ secrets.SFTP_SERVER }}
       SFTP_USERNAME: ${{ secrets.SFTP_USERNAME }}
       SFTP_PASSWORD: ${{ secrets.SFTP_PASSWORD }}
