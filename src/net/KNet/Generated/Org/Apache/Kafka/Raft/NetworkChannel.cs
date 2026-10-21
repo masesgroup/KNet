@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Raft
 {
     #region NetworkChannel declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/NetworkChannel.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.4.0/org/apache/kafka/raft/NetworkChannel.html"/>
     /// </summary>
     public partial class NetworkChannel : Java.Lang.AutoCloseable
     {
@@ -61,7 +61,7 @@ namespace Org.Apache.Kafka.Raft
 
     #region INetworkChannel
     /// <summary>
-    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/NetworkChannel.html"/>
+    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.4.0/org/apache/kafka/raft/NetworkChannel.html"/>
     /// </summary>
     public partial interface INetworkChannel : Java.Lang.IAutoCloseable
     {
@@ -98,7 +98,7 @@ namespace Org.Apache.Kafka.Raft
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/NetworkChannel.html#newCorrelationId()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.4.0/org/apache/kafka/raft/NetworkChannel.html#newCorrelationId()"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int NewCorrelationId()
@@ -106,7 +106,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<int>("newCorrelationId", "()I");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/NetworkChannel.html#send(org.apache.kafka.raft.RaftRequest.Outbound)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.4.0/org/apache/kafka/raft/NetworkChannel.html#send(org.apache.kafka.raft.RaftRequest.Outbound)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Raft.RaftRequest.Outbound"/></param>
         /// <returns><see cref="Java.Util.Concurrent.CompletionStage"/></returns>

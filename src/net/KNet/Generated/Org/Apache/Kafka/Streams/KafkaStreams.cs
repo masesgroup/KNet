@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams
 {
     #region KafkaStreams declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/KafkaStreams.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.4.0/org/apache/kafka/streams/KafkaStreams.html"/>
     /// </summary>
     public partial class KafkaStreams : Java.Lang.AutoCloseable
     {
@@ -57,7 +57,7 @@ namespace Org.Apache.Kafka.Streams
         // TODO: complete the class
         #region CloseOptions declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/KafkaStreams.CloseOptions.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.4.0/org/apache/kafka/streams/KafkaStreams.CloseOptions.html"/>
         /// </summary>
         [global::System.Obsolete("Deprecated in JVM")]
         public partial class CloseOptions : MASES.JCOBridge.C2JBridge.JVMBridgeBase<CloseOptions>
@@ -92,7 +92,7 @@ namespace Org.Apache.Kafka.Streams
 
         #region State declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/KafkaStreams.State.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.4.0/org/apache/kafka/streams/KafkaStreams.State.html"/>
         /// </summary>
         public partial class State : Java.Lang.Enum<Org.Apache.Kafka.Streams.KafkaStreams.State>
         {
@@ -126,7 +126,7 @@ namespace Org.Apache.Kafka.Streams
 
         #region StateListener declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/KafkaStreams.StateListener.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.4.0/org/apache/kafka/streams/KafkaStreams.StateListener.html"/>
         /// </summary>
         public partial class StateListener : MASES.JCOBridge.C2JBridge.JVMBridgeListener
         {
@@ -251,7 +251,7 @@ namespace Org.Apache.Kafka.Streams
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/KafkaStreams.html#%3Cinit%3E(org.apache.kafka.streams.Topology,java.util.Properties,org.apache.kafka.common.utils.Time)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.4.0/org/apache/kafka/streams/KafkaStreams.html#%3Cinit%3E(org.apache.kafka.streams.Topology,java.util.Properties,org.apache.kafka.common.utils.Time)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Topology"/></param>
         /// <param name="arg1"><see cref="Java.Util.Properties"/></param>
@@ -268,7 +268,7 @@ namespace Org.Apache.Kafka.Streams
             return JVMBridgeBase.New<KafkaStreams>(arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/KafkaStreams.html#%3Cinit%3E(org.apache.kafka.streams.Topology,java.util.Properties,org.apache.kafka.streams.KafkaClientSupplier,org.apache.kafka.common.utils.Time)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.4.0/org/apache/kafka/streams/KafkaStreams.html#%3Cinit%3E(org.apache.kafka.streams.Topology,java.util.Properties,org.apache.kafka.streams.KafkaClientSupplier,org.apache.kafka.common.utils.Time)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Topology"/></param>
         /// <param name="arg1"><see cref="Java.Util.Properties"/></param>
@@ -286,7 +286,7 @@ namespace Org.Apache.Kafka.Streams
             return JVMBridgeBase.New<KafkaStreams>(arg0, arg1, arg2, arg3);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/KafkaStreams.html#%3Cinit%3E(org.apache.kafka.streams.Topology,java.util.Properties,org.apache.kafka.streams.KafkaClientSupplier)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.4.0/org/apache/kafka/streams/KafkaStreams.html#%3Cinit%3E(org.apache.kafka.streams.Topology,java.util.Properties,org.apache.kafka.streams.KafkaClientSupplier)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Topology"/></param>
         /// <param name="arg1"><see cref="Java.Util.Properties"/></param>
@@ -303,7 +303,7 @@ namespace Org.Apache.Kafka.Streams
             return JVMBridgeBase.New<KafkaStreams>(arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/KafkaStreams.html#%3Cinit%3E(org.apache.kafka.streams.Topology,java.util.Properties)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.4.0/org/apache/kafka/streams/KafkaStreams.html#%3Cinit%3E(org.apache.kafka.streams.Topology,java.util.Properties)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Topology"/></param>
         /// <param name="arg1"><see cref="Java.Util.Properties"/></param>
@@ -319,7 +319,7 @@ namespace Org.Apache.Kafka.Streams
             return JVMBridgeBase.New<KafkaStreams>(arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/KafkaStreams.html#%3Cinit%3E(org.apache.kafka.streams.Topology,org.apache.kafka.streams.StreamsConfig,org.apache.kafka.common.utils.Time)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.4.0/org/apache/kafka/streams/KafkaStreams.html#%3Cinit%3E(org.apache.kafka.streams.Topology,org.apache.kafka.streams.StreamsConfig,org.apache.kafka.common.utils.Time)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Topology"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.StreamsConfig"/></param>
@@ -336,7 +336,7 @@ namespace Org.Apache.Kafka.Streams
             return JVMBridgeBase.New<KafkaStreams>(arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/KafkaStreams.html#%3Cinit%3E(org.apache.kafka.streams.Topology,org.apache.kafka.streams.StreamsConfig,org.apache.kafka.streams.KafkaClientSupplier)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.4.0/org/apache/kafka/streams/KafkaStreams.html#%3Cinit%3E(org.apache.kafka.streams.Topology,org.apache.kafka.streams.StreamsConfig,org.apache.kafka.streams.KafkaClientSupplier)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Topology"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.StreamsConfig"/></param>
@@ -353,7 +353,7 @@ namespace Org.Apache.Kafka.Streams
             return JVMBridgeBase.New<KafkaStreams>(arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/KafkaStreams.html#%3Cinit%3E(org.apache.kafka.streams.Topology,org.apache.kafka.streams.StreamsConfig)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.4.0/org/apache/kafka/streams/KafkaStreams.html#%3Cinit%3E(org.apache.kafka.streams.Topology,org.apache.kafka.streams.StreamsConfig)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Topology"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.StreamsConfig"/></param>
@@ -385,7 +385,7 @@ namespace Org.Apache.Kafka.Streams
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/KafkaStreams.html#queryMetadataForKey(java.lang.String,java.lang.Object,org.apache.kafka.common.header.Headers,org.apache.kafka.common.serialization.Serializer)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.4.0/org/apache/kafka/streams/KafkaStreams.html#queryMetadataForKey(java.lang.String,java.lang.Object,org.apache.kafka.common.header.Headers,org.apache.kafka.common.serialization.Serializer)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><typeparamref name="K"/></param>
@@ -398,7 +398,7 @@ namespace Org.Apache.Kafka.Streams
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.KeyQueryMetadata>("queryMetadataForKey", "(Ljava/lang/String;Ljava/lang/Object;Lorg/apache/kafka/common/header/Headers;Lorg/apache/kafka/common/serialization/Serializer;)Lorg/apache/kafka/streams/KeyQueryMetadata;", arg0, arg1, arg2, arg3);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/KafkaStreams.html#queryMetadataForKey(java.lang.String,java.lang.Object,org.apache.kafka.common.header.Headers,org.apache.kafka.streams.processor.StreamPartitioner)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.4.0/org/apache/kafka/streams/KafkaStreams.html#queryMetadataForKey(java.lang.String,java.lang.Object,org.apache.kafka.common.header.Headers,org.apache.kafka.streams.processor.StreamPartitioner)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><typeparamref name="K"/></param>
@@ -412,7 +412,7 @@ namespace Org.Apache.Kafka.Streams
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.KeyQueryMetadata>("queryMetadataForKey", "(Ljava/lang/String;Ljava/lang/Object;Lorg/apache/kafka/common/header/Headers;Lorg/apache/kafka/streams/processor/StreamPartitioner;)Lorg/apache/kafka/streams/KeyQueryMetadata;", arg0, arg1, arg2, arg3);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/KafkaStreams.html#queryMetadataForKey(java.lang.String,java.lang.Object,org.apache.kafka.common.serialization.Serializer)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.4.0/org/apache/kafka/streams/KafkaStreams.html#queryMetadataForKey(java.lang.String,java.lang.Object,org.apache.kafka.common.serialization.Serializer)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><typeparamref name="K"/></param>
@@ -424,7 +424,7 @@ namespace Org.Apache.Kafka.Streams
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.KeyQueryMetadata>("queryMetadataForKey", "(Ljava/lang/String;Ljava/lang/Object;Lorg/apache/kafka/common/serialization/Serializer;)Lorg/apache/kafka/streams/KeyQueryMetadata;", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/KafkaStreams.html#queryMetadataForKey(java.lang.String,java.lang.Object,org.apache.kafka.streams.processor.StreamPartitioner)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.4.0/org/apache/kafka/streams/KafkaStreams.html#queryMetadataForKey(java.lang.String,java.lang.Object,org.apache.kafka.streams.processor.StreamPartitioner)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><typeparamref name="K"/></param>
@@ -437,7 +437,7 @@ namespace Org.Apache.Kafka.Streams
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.KeyQueryMetadata>("queryMetadataForKey", "(Ljava/lang/String;Ljava/lang/Object;Lorg/apache/kafka/streams/processor/StreamPartitioner;)Lorg/apache/kafka/streams/KeyQueryMetadata;", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/KafkaStreams.html#query(org.apache.kafka.streams.query.StateQueryRequest)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.4.0/org/apache/kafka/streams/KafkaStreams.html#query(org.apache.kafka.streams.query.StateQueryRequest)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Query.StateQueryRequest"/></param>
         /// <typeparam name="R"></typeparam>
@@ -447,7 +447,7 @@ namespace Org.Apache.Kafka.Streams
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.Query.StateQueryResult<R>>("query", "(Lorg/apache/kafka/streams/query/StateQueryRequest;)Lorg/apache/kafka/streams/query/StateQueryResult;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/KafkaStreams.html#store(org.apache.kafka.streams.StoreQueryParameters)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.4.0/org/apache/kafka/streams/KafkaStreams.html#store(org.apache.kafka.streams.StoreQueryParameters)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.StoreQueryParameters"/></param>
         /// <typeparam name="T"></typeparam>
@@ -457,7 +457,7 @@ namespace Org.Apache.Kafka.Streams
             return IExecuteWithSignature<T>("store", "(Lorg/apache/kafka/streams/StoreQueryParameters;)Ljava/lang/Object;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/KafkaStreams.html#isPaused()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.4.0/org/apache/kafka/streams/KafkaStreams.html#isPaused()"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool IsPaused()
@@ -465,7 +465,7 @@ namespace Org.Apache.Kafka.Streams
             return IExecuteWithSignature<bool>("isPaused", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/KafkaStreams.html#metadataForAllStreamsClients()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.4.0/org/apache/kafka/streams/KafkaStreams.html#metadataForAllStreamsClients()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Collection"/></returns>
         public Java.Util.Collection<Org.Apache.Kafka.Streams.StreamsMetadata> MetadataForAllStreamsClients()
@@ -473,7 +473,7 @@ namespace Org.Apache.Kafka.Streams
             return IExecuteWithSignature<Java.Util.Collection<Org.Apache.Kafka.Streams.StreamsMetadata>>("metadataForAllStreamsClients", "()Ljava/util/Collection;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/KafkaStreams.html#streamsMetadataForStore(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.4.0/org/apache/kafka/streams/KafkaStreams.html#streamsMetadataForStore(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Java.Util.Collection"/></returns>
@@ -482,7 +482,7 @@ namespace Org.Apache.Kafka.Streams
             return IExecuteWithSignature<Java.Util.Collection<Org.Apache.Kafka.Streams.StreamsMetadata>>("streamsMetadataForStore", "(Ljava/lang/String;)Ljava/util/Collection;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/KafkaStreams.html#allLocalStorePartitionLags()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.4.0/org/apache/kafka/streams/KafkaStreams.html#allLocalStorePartitionLags()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Map"/></returns>
         public Java.Util.Map<Java.Lang.String, Java.Util.Map<Java.Lang.Integer, Org.Apache.Kafka.Streams.LagInfo>> AllLocalStorePartitionLags()
@@ -490,7 +490,7 @@ namespace Org.Apache.Kafka.Streams
             return IExecuteWithSignature<Java.Util.Map<Java.Lang.String, Java.Util.Map<Java.Lang.Integer, Org.Apache.Kafka.Streams.LagInfo>>>("allLocalStorePartitionLags", "()Ljava/util/Map;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/KafkaStreams.html#metrics()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.4.0/org/apache/kafka/streams/KafkaStreams.html#metrics()"/>
         /// </summary>
         /// <typeparam name="ReturnExtendsOrg_Apache_Kafka_Common_Metric"><see cref="Org.Apache.Kafka.Common.Metric"/></typeparam>
         /// <returns><see cref="Java.Util.Map"/></returns>
@@ -499,7 +499,7 @@ namespace Org.Apache.Kafka.Streams
             return IExecuteWithSignature<Java.Util.Map<Org.Apache.Kafka.Common.MetricName, ReturnExtendsOrg_Apache_Kafka_Common_Metric>>("metrics", "()Ljava/util/Map;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/KafkaStreams.html#addStreamThread()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.4.0/org/apache/kafka/streams/KafkaStreams.html#addStreamThread()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Optional"/></returns>
         public Java.Util.Optional<Java.Lang.String> AddStreamThread()
@@ -507,7 +507,7 @@ namespace Org.Apache.Kafka.Streams
             return IExecuteWithSignature<Java.Util.Optional<Java.Lang.String>>("addStreamThread", "()Ljava/util/Optional;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/KafkaStreams.html#removeStreamThread()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.4.0/org/apache/kafka/streams/KafkaStreams.html#removeStreamThread()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Optional"/></returns>
         public Java.Util.Optional<Java.Lang.String> RemoveStreamThread()
@@ -515,7 +515,7 @@ namespace Org.Apache.Kafka.Streams
             return IExecuteWithSignature<Java.Util.Optional<Java.Lang.String>>("removeStreamThread", "()Ljava/util/Optional;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/KafkaStreams.html#removeStreamThread(java.time.Duration)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.4.0/org/apache/kafka/streams/KafkaStreams.html#removeStreamThread(java.time.Duration)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Time.Duration"/></param>
         /// <returns><see cref="Java.Util.Optional"/></returns>
@@ -524,7 +524,7 @@ namespace Org.Apache.Kafka.Streams
             return IExecuteWithSignature<Java.Util.Optional<Java.Lang.String>>("removeStreamThread", "(Ljava/time/Duration;)Ljava/util/Optional;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/KafkaStreams.html#metadataForLocalThreads()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.4.0/org/apache/kafka/streams/KafkaStreams.html#metadataForLocalThreads()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Set"/></returns>
         public Java.Util.Set<Org.Apache.Kafka.Streams.ThreadMetadata> MetadataForLocalThreads()
@@ -532,7 +532,7 @@ namespace Org.Apache.Kafka.Streams
             return IExecuteWithSignature<Java.Util.Set<Org.Apache.Kafka.Streams.ThreadMetadata>>("metadataForLocalThreads", "()Ljava/util/Set;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/KafkaStreams.html#state()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.4.0/org/apache/kafka/streams/KafkaStreams.html#state()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Streams.KafkaStreams.State"/></returns>
         public Org.Apache.Kafka.Streams.KafkaStreams.State StateMethod()
@@ -540,7 +540,7 @@ namespace Org.Apache.Kafka.Streams
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.KafkaStreams.State>("state", "()Lorg/apache/kafka/streams/KafkaStreams$State;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/KafkaStreams.html#close(java.time.Duration)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.4.0/org/apache/kafka/streams/KafkaStreams.html#close(java.time.Duration)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Time.Duration"/></param>
         /// <returns><see cref="bool"/></returns>
@@ -550,7 +550,7 @@ namespace Org.Apache.Kafka.Streams
             return IExecuteWithSignature<bool>("close", "(Ljava/time/Duration;)Z", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/KafkaStreams.html#close(org.apache.kafka.streams.CloseOptions)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.4.0/org/apache/kafka/streams/KafkaStreams.html#close(org.apache.kafka.streams.CloseOptions)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.CloseOptions"/></param>
         /// <returns><see cref="bool"/></returns>
@@ -560,7 +560,7 @@ namespace Org.Apache.Kafka.Streams
             return IExecuteWithSignature<bool>("close", "(Lorg/apache/kafka/streams/CloseOptions;)Z", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/KafkaStreams.html#close(org.apache.kafka.streams.KafkaStreams.CloseOptions)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.4.0/org/apache/kafka/streams/KafkaStreams.html#close(org.apache.kafka.streams.KafkaStreams.CloseOptions)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.KafkaStreams.CloseOptions"/></param>
         /// <returns><see cref="bool"/></returns>
@@ -571,7 +571,7 @@ namespace Org.Apache.Kafka.Streams
             return IExecuteWithSignature<bool>("close", "(Lorg/apache/kafka/streams/KafkaStreams$CloseOptions;)Z", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/KafkaStreams.html#clientInstanceIds(java.time.Duration)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.4.0/org/apache/kafka/streams/KafkaStreams.html#clientInstanceIds(java.time.Duration)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Time.Duration"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Streams.ClientInstanceIds"/></returns>
@@ -580,7 +580,7 @@ namespace Org.Apache.Kafka.Streams
             return IExecuteWithSignature<Org.Apache.Kafka.Streams.ClientInstanceIds>("clientInstanceIds", "(Ljava/time/Duration;)Lorg/apache/kafka/streams/ClientInstanceIds;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/KafkaStreams.html#start()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.4.0/org/apache/kafka/streams/KafkaStreams.html#start()"/>
         /// </summary>
         /// <exception cref="Java.Lang.IllegalStateException"/>
         /// <exception cref="Org.Apache.Kafka.Streams.Errors.StreamsException"/>
@@ -589,35 +589,35 @@ namespace Org.Apache.Kafka.Streams
             IExecuteWithSignature("start", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/KafkaStreams.html#cleanUp()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.4.0/org/apache/kafka/streams/KafkaStreams.html#cleanUp()"/>
         /// </summary>
         public void CleanUp()
         {
             IExecuteWithSignature("cleanUp", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/KafkaStreams.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.4.0/org/apache/kafka/streams/KafkaStreams.html#close()"/>
         /// </summary>
         public void Close()
         {
             IExecuteWithSignature("close", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/KafkaStreams.html#pause()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.4.0/org/apache/kafka/streams/KafkaStreams.html#pause()"/>
         /// </summary>
         public void Pause()
         {
             IExecuteWithSignature("pause", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/KafkaStreams.html#resume()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.4.0/org/apache/kafka/streams/KafkaStreams.html#resume()"/>
         /// </summary>
         public void Resume()
         {
             IExecuteWithSignature("resume", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/KafkaStreams.html#setGlobalStateRestoreListener(org.apache.kafka.streams.processor.StateRestoreListener)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.4.0/org/apache/kafka/streams/KafkaStreams.html#setGlobalStateRestoreListener(org.apache.kafka.streams.processor.StateRestoreListener)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Processor.StateRestoreListener"/></param>
         public void SetGlobalStateRestoreListener(Org.Apache.Kafka.Streams.Processor.StateRestoreListener arg0)
@@ -625,7 +625,7 @@ namespace Org.Apache.Kafka.Streams
             IExecuteWithSignature("setGlobalStateRestoreListener", "(Lorg/apache/kafka/streams/processor/StateRestoreListener;)V", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/KafkaStreams.html#setStandbyUpdateListener(org.apache.kafka.streams.processor.StandbyUpdateListener)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.4.0/org/apache/kafka/streams/KafkaStreams.html#setStandbyUpdateListener(org.apache.kafka.streams.processor.StandbyUpdateListener)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Processor.StandbyUpdateListener"/></param>
         public void SetStandbyUpdateListener(Org.Apache.Kafka.Streams.Processor.StandbyUpdateListener arg0)
@@ -633,7 +633,7 @@ namespace Org.Apache.Kafka.Streams
             IExecuteWithSignature("setStandbyUpdateListener", "(Lorg/apache/kafka/streams/processor/StandbyUpdateListener;)V", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/KafkaStreams.html#setStateListener(org.apache.kafka.streams.KafkaStreams.StateListener)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.4.0/org/apache/kafka/streams/KafkaStreams.html#setStateListener(org.apache.kafka.streams.KafkaStreams.StateListener)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.KafkaStreams.StateListener"/></param>
         public void SetStateListener(Org.Apache.Kafka.Streams.KafkaStreams.StateListener arg0)
@@ -641,7 +641,7 @@ namespace Org.Apache.Kafka.Streams
             IExecuteWithSignature("setStateListener", "(Lorg/apache/kafka/streams/KafkaStreams$StateListener;)V", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/KafkaStreams.html#setUncaughtExceptionHandler(org.apache.kafka.streams.errors.StreamsUncaughtExceptionHandler)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.4.0/org/apache/kafka/streams/KafkaStreams.html#setUncaughtExceptionHandler(org.apache.kafka.streams.errors.StreamsUncaughtExceptionHandler)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.Errors.StreamsUncaughtExceptionHandler"/></param>
         public void SetUncaughtExceptionHandler(Org.Apache.Kafka.Streams.Errors.StreamsUncaughtExceptionHandler arg0)
@@ -657,7 +657,7 @@ namespace Org.Apache.Kafka.Streams
         {
             #region Constructors
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/KafkaStreams.CloseOptions.html#%3Cinit%3E()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.4.0/org/apache/kafka/streams/KafkaStreams.CloseOptions.html#%3Cinit%3E()"/>
             /// </summary>
             public CloseOptions() : base(JVMBridgeBase.InitializerInstance)
             {
@@ -687,7 +687,7 @@ namespace Org.Apache.Kafka.Streams
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/KafkaStreams.CloseOptions.html#leaveGroup(boolean)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.4.0/org/apache/kafka/streams/KafkaStreams.CloseOptions.html#leaveGroup(boolean)"/>
             /// </summary>
             /// <param name="arg0"><see cref="bool"/></param>
             /// <returns><see cref="Org.Apache.Kafka.Streams.KafkaStreams.CloseOptions"/></returns>
@@ -697,7 +697,7 @@ namespace Org.Apache.Kafka.Streams
                 return IExecuteWithSignature<Org.Apache.Kafka.Streams.KafkaStreams.CloseOptions>("leaveGroup", "(Z)Lorg/apache/kafka/streams/KafkaStreams$CloseOptions;", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/KafkaStreams.CloseOptions.html#timeout(java.time.Duration)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.4.0/org/apache/kafka/streams/KafkaStreams.CloseOptions.html#timeout(java.time.Duration)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Time.Duration"/></param>
             /// <returns><see cref="Org.Apache.Kafka.Streams.KafkaStreams.CloseOptions"/></returns>
@@ -730,31 +730,31 @@ namespace Org.Apache.Kafka.Streams
 
             #region Fields
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/KafkaStreams.State.html#CREATED"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.4.0/org/apache/kafka/streams/KafkaStreams.State.html#CREATED"/>
             /// </summary>
             public static Org.Apache.Kafka.Streams.KafkaStreams.State CREATED { get { return SGetField<Org.Apache.Kafka.Streams.KafkaStreams.State>(LocalBridgeClazz, "CREATED"); } set { SSetField(LocalBridgeClazz, "CREATED", value); } }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/KafkaStreams.State.html#ERROR"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.4.0/org/apache/kafka/streams/KafkaStreams.State.html#ERROR"/>
             /// </summary>
             public static Org.Apache.Kafka.Streams.KafkaStreams.State ERROR { get { return SGetField<Org.Apache.Kafka.Streams.KafkaStreams.State>(LocalBridgeClazz, "ERROR"); } set { SSetField(LocalBridgeClazz, "ERROR", value); } }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/KafkaStreams.State.html#NOT_RUNNING"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.4.0/org/apache/kafka/streams/KafkaStreams.State.html#NOT_RUNNING"/>
             /// </summary>
             public static Org.Apache.Kafka.Streams.KafkaStreams.State NOT_RUNNING { get { return SGetField<Org.Apache.Kafka.Streams.KafkaStreams.State>(LocalBridgeClazz, "NOT_RUNNING"); } set { SSetField(LocalBridgeClazz, "NOT_RUNNING", value); } }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/KafkaStreams.State.html#PENDING_ERROR"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.4.0/org/apache/kafka/streams/KafkaStreams.State.html#PENDING_ERROR"/>
             /// </summary>
             public static Org.Apache.Kafka.Streams.KafkaStreams.State PENDING_ERROR { get { return SGetField<Org.Apache.Kafka.Streams.KafkaStreams.State>(LocalBridgeClazz, "PENDING_ERROR"); } set { SSetField(LocalBridgeClazz, "PENDING_ERROR", value); } }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/KafkaStreams.State.html#PENDING_SHUTDOWN"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.4.0/org/apache/kafka/streams/KafkaStreams.State.html#PENDING_SHUTDOWN"/>
             /// </summary>
             public static Org.Apache.Kafka.Streams.KafkaStreams.State PENDING_SHUTDOWN { get { return SGetField<Org.Apache.Kafka.Streams.KafkaStreams.State>(LocalBridgeClazz, "PENDING_SHUTDOWN"); } set { SSetField(LocalBridgeClazz, "PENDING_SHUTDOWN", value); } }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/KafkaStreams.State.html#REBALANCING"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.4.0/org/apache/kafka/streams/KafkaStreams.State.html#REBALANCING"/>
             /// </summary>
             public static Org.Apache.Kafka.Streams.KafkaStreams.State REBALANCING { get { return SGetField<Org.Apache.Kafka.Streams.KafkaStreams.State>(LocalBridgeClazz, "REBALANCING"); } set { SSetField(LocalBridgeClazz, "REBALANCING", value); } }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/KafkaStreams.State.html#RUNNING"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.4.0/org/apache/kafka/streams/KafkaStreams.State.html#RUNNING"/>
             /// </summary>
             public static Org.Apache.Kafka.Streams.KafkaStreams.State RUNNING { get { return SGetField<Org.Apache.Kafka.Streams.KafkaStreams.State>(LocalBridgeClazz, "RUNNING"); } set { SSetField(LocalBridgeClazz, "RUNNING", value); } }
 
@@ -762,7 +762,7 @@ namespace Org.Apache.Kafka.Streams
 
             #region Static methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/KafkaStreams.State.html#valueOf(java.lang.String)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.4.0/org/apache/kafka/streams/KafkaStreams.State.html#valueOf(java.lang.String)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Lang.String"/></param>
             /// <returns><see cref="Org.Apache.Kafka.Streams.KafkaStreams.State"/></returns>
@@ -771,7 +771,7 @@ namespace Org.Apache.Kafka.Streams
                 return SExecuteWithSignature<Org.Apache.Kafka.Streams.KafkaStreams.State>(LocalBridgeClazz, "valueOf", "(Ljava/lang/String;)Lorg/apache/kafka/streams/KafkaStreams$State;", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/KafkaStreams.State.html#values()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.4.0/org/apache/kafka/streams/KafkaStreams.State.html#values()"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Streams.KafkaStreams.State"/></returns>
             public static Org.Apache.Kafka.Streams.KafkaStreams.State[] Values()
@@ -783,7 +783,7 @@ namespace Org.Apache.Kafka.Streams
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/KafkaStreams.State.html#hasCompletedShutdown()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.4.0/org/apache/kafka/streams/KafkaStreams.State.html#hasCompletedShutdown()"/>
             /// </summary>
             /// <returns><see cref="bool"/></returns>
             public bool HasCompletedShutdown()
@@ -791,7 +791,7 @@ namespace Org.Apache.Kafka.Streams
                 return IExecuteWithSignature<bool>("hasCompletedShutdown", "()Z");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/KafkaStreams.State.html#hasNotStarted()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.4.0/org/apache/kafka/streams/KafkaStreams.State.html#hasNotStarted()"/>
             /// </summary>
             /// <returns><see cref="bool"/></returns>
             public bool HasNotStarted()
@@ -799,7 +799,7 @@ namespace Org.Apache.Kafka.Streams
                 return IExecuteWithSignature<bool>("hasNotStarted", "()Z");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/KafkaStreams.State.html#hasStartedOrFinishedShuttingDown()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.4.0/org/apache/kafka/streams/KafkaStreams.State.html#hasStartedOrFinishedShuttingDown()"/>
             /// </summary>
             /// <returns><see cref="bool"/></returns>
             public bool HasStartedOrFinishedShuttingDown()
@@ -807,7 +807,7 @@ namespace Org.Apache.Kafka.Streams
                 return IExecuteWithSignature<bool>("hasStartedOrFinishedShuttingDown", "()Z");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/KafkaStreams.State.html#isRunningOrRebalancing()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.4.0/org/apache/kafka/streams/KafkaStreams.State.html#isRunningOrRebalancing()"/>
             /// </summary>
             /// <returns><see cref="bool"/></returns>
             public bool IsRunningOrRebalancing()
@@ -815,7 +815,7 @@ namespace Org.Apache.Kafka.Streams
                 return IExecuteWithSignature<bool>("isRunningOrRebalancing", "()Z");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/KafkaStreams.State.html#isShuttingDown()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.4.0/org/apache/kafka/streams/KafkaStreams.State.html#isShuttingDown()"/>
             /// </summary>
             /// <returns><see cref="bool"/></returns>
             public bool IsShuttingDown()
@@ -823,7 +823,7 @@ namespace Org.Apache.Kafka.Streams
                 return IExecuteWithSignature<bool>("isShuttingDown", "()Z");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/KafkaStreams.State.html#isValidTransition(org.apache.kafka.streams.KafkaStreams.State)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.4.0/org/apache/kafka/streams/KafkaStreams.State.html#isValidTransition(org.apache.kafka.streams.KafkaStreams.State)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.KafkaStreams.State"/></param>
             /// <returns><see cref="bool"/></returns>
@@ -880,7 +880,7 @@ namespace Org.Apache.Kafka.Streams
             }
 
             /// <summary>
-            /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/KafkaStreams.StateListener.html#onChange(org.apache.kafka.streams.KafkaStreams.State,org.apache.kafka.streams.KafkaStreams.State)"/>
+            /// Handler for <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.4.0/org/apache/kafka/streams/KafkaStreams.StateListener.html#onChange(org.apache.kafka.streams.KafkaStreams.State,org.apache.kafka.streams.KafkaStreams.State)"/>
             /// </summary>
             /// <remarks>
             /// Assign a delegate to handle the event without subclassing. If both this handler and a virtual method override are present,
@@ -913,7 +913,7 @@ namespace Org.Apache.Kafka.Streams
             }
 
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/KafkaStreams.StateListener.html#onChange(org.apache.kafka.streams.KafkaStreams.State,org.apache.kafka.streams.KafkaStreams.State)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.4.0/org/apache/kafka/streams/KafkaStreams.StateListener.html#onChange(org.apache.kafka.streams.KafkaStreams.State,org.apache.kafka.streams.KafkaStreams.State)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.KafkaStreams.State"/></param>
             /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.KafkaStreams.State"/></param>
@@ -953,7 +953,7 @@ namespace Org.Apache.Kafka.Streams
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/KafkaStreams.StateListener.html#onChange(org.apache.kafka.streams.KafkaStreams.State,org.apache.kafka.streams.KafkaStreams.State)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.4.0/org/apache/kafka/streams/KafkaStreams.StateListener.html#onChange(org.apache.kafka.streams.KafkaStreams.State,org.apache.kafka.streams.KafkaStreams.State)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Org.Apache.Kafka.Streams.KafkaStreams.State"/></param>
             /// <param name="arg1"><see cref="Org.Apache.Kafka.Streams.KafkaStreams.State"/></param>

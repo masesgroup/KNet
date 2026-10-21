@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Errors
 {
     #region BootstrapResolutionException declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/errors/BootstrapResolutionException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.4.0/org/apache/kafka/common/errors/BootstrapResolutionException.html"/>
     /// </summary>
     public partial class BootstrapResolutionException : Org.Apache.Kafka.Common.KafkaException
     {

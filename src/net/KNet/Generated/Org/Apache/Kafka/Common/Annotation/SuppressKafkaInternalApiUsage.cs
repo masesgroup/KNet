@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Annotation
 {
     #region SuppressKafkaInternalApiUsage declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/annotation/SuppressKafkaInternalApiUsage.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.4.0/org/apache/kafka/common/annotation/SuppressKafkaInternalApiUsage.html"/>
     /// </summary>
     public partial class SuppressKafkaInternalApiUsage : Java.Lang.Annotation.Annotation
     {
@@ -61,7 +61,7 @@ namespace Org.Apache.Kafka.Common.Annotation
 
     #region ISuppressKafkaInternalApiUsage
     /// <summary>
-    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/annotation/SuppressKafkaInternalApiUsage.html"/>
+    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.4.0/org/apache/kafka/common/annotation/SuppressKafkaInternalApiUsage.html"/>
     /// </summary>
     public partial interface ISuppressKafkaInternalApiUsage : Java.Lang.Annotation.IAnnotation
     {
@@ -98,7 +98,7 @@ namespace Org.Apache.Kafka.Common.Annotation
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/annotation/SuppressKafkaInternalApiUsage.html#value()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.4.0/org/apache/kafka/common/annotation/SuppressKafkaInternalApiUsage.html#value()"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String Value()

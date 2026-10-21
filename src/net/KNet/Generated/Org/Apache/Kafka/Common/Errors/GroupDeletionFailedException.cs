@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Errors
 {
     #region GroupDeletionFailedException declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/errors/GroupDeletionFailedException.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.4.0/org/apache/kafka/common/errors/GroupDeletionFailedException.html"/>
     /// </summary>
     public partial class GroupDeletionFailedException : Org.Apache.Kafka.Common.Errors.ApiException
     {

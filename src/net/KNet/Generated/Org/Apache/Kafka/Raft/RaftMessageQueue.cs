@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Raft
 {
     #region RaftMessageQueue declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/RaftMessageQueue.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.4.0/org/apache/kafka/raft/RaftMessageQueue.html"/>
     /// </summary>
     public partial class RaftMessageQueue : MASES.JCOBridge.C2JBridge.JVMBridgeBase<RaftMessageQueue>
     {
@@ -57,7 +57,7 @@ namespace Org.Apache.Kafka.Raft
         // TODO: complete the class
         #region QueueEntry declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/RaftMessageQueue.QueueEntry.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.4.0/org/apache/kafka/raft/RaftMessageQueue.QueueEntry.html"/>
         /// </summary>
         public partial class QueueEntry : MASES.JCOBridge.C2JBridge.JVMBridgeBase<QueueEntry>
         {
@@ -95,7 +95,7 @@ namespace Org.Apache.Kafka.Raft
 
     #region IRaftMessageQueue
     /// <summary>
-    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/RaftMessageQueue.html"/>
+    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.4.0/org/apache/kafka/raft/RaftMessageQueue.html"/>
     /// </summary>
     public partial interface IRaftMessageQueue
     {
@@ -132,7 +132,7 @@ namespace Org.Apache.Kafka.Raft
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/RaftMessageQueue.html#isEmpty()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.4.0/org/apache/kafka/raft/RaftMessageQueue.html#isEmpty()"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool IsEmpty()
@@ -140,7 +140,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<bool>("isEmpty", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/RaftMessageQueue.html#add(org.apache.kafka.raft.RaftMessage)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.4.0/org/apache/kafka/raft/RaftMessageQueue.html#add(org.apache.kafka.raft.RaftMessage)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Raft.RaftMessage"/></param>
         /// <returns><see cref="Java.Util.Concurrent.CompletionStage"/></returns>
@@ -149,7 +149,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<Java.Util.Concurrent.CompletionStage<Org.Apache.Kafka.Raft.RaftMessage>>("add", "(Lorg/apache/kafka/raft/RaftMessage;)Ljava/util/concurrent/CompletionStage;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/RaftMessageQueue.html#poll(long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.4.0/org/apache/kafka/raft/RaftMessageQueue.html#poll(long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <returns><see cref="Java.Util.Optional"/></returns>
@@ -158,7 +158,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<Java.Util.Optional<Org.Apache.Kafka.Raft.RaftMessageQueue.QueueEntry>>("poll", "(J)Ljava/util/Optional;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/RaftMessageQueue.html#wakeup()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.4.0/org/apache/kafka/raft/RaftMessageQueue.html#wakeup()"/>
         /// </summary>
         public void Wakeup()
         {
@@ -189,7 +189,7 @@ namespace Org.Apache.Kafka.Raft
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/RaftMessageQueue.QueueEntry.html#future()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.4.0/org/apache/kafka/raft/RaftMessageQueue.QueueEntry.html#future()"/>
             /// </summary>
             /// <returns><see cref="Java.Util.Concurrent.CompletableFuture"/></returns>
             public Java.Util.Concurrent.CompletableFuture<Org.Apache.Kafka.Raft.RaftMessage> Future()
@@ -197,7 +197,7 @@ namespace Org.Apache.Kafka.Raft
                 return IExecuteWithSignature<Java.Util.Concurrent.CompletableFuture<Org.Apache.Kafka.Raft.RaftMessage>>("future", "()Ljava/util/concurrent/CompletableFuture;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/RaftMessageQueue.QueueEntry.html#message()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.4.0/org/apache/kafka/raft/RaftMessageQueue.QueueEntry.html#message()"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Raft.RaftMessage"/></returns>
             public Org.Apache.Kafka.Raft.RaftMessage Message()

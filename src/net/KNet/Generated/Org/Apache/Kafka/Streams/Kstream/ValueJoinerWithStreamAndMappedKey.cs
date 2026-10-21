@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 {
     #region ValueJoinerWithStreamAndMappedKey declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/kstream/ValueJoinerWithStreamAndMappedKey.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.4.0/org/apache/kafka/streams/kstream/ValueJoinerWithStreamAndMappedKey.html"/>
     /// </summary>
     public partial class ValueJoinerWithStreamAndMappedKey : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ValueJoinerWithStreamAndMappedKey>
     {
@@ -61,7 +61,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region ValueJoinerWithStreamAndMappedKey<StreamKey, TableKey, StreamValue, TableValue, VOut> declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/kstream/ValueJoinerWithStreamAndMappedKey.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.4.0/org/apache/kafka/streams/kstream/ValueJoinerWithStreamAndMappedKey.html"/>
     /// </summary>
     /// <typeparam name="StreamKey"></typeparam>
     /// <typeparam name="TableKey"></typeparam>
@@ -119,7 +119,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/kstream/ValueJoinerWithStreamAndMappedKey.html#apply(java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.4.0/org/apache/kafka/streams/kstream/ValueJoinerWithStreamAndMappedKey.html#apply(java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
         /// <param name="arg1"><see cref="object"/></param>
@@ -143,7 +143,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
     #region IValueJoinerWithStreamAndMappedKey<StreamKey, TableKey, StreamValue, TableValue, VOut>
     /// <summary>
-    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/kstream/ValueJoinerWithStreamAndMappedKey.html"/>
+    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.4.0/org/apache/kafka/streams/kstream/ValueJoinerWithStreamAndMappedKey.html"/>
     /// </summary>
     public partial interface IValueJoinerWithStreamAndMappedKey<StreamKey, TableKey, StreamValue, TableValue, VOut>
     {
@@ -184,7 +184,7 @@ namespace Org.Apache.Kafka.Streams.Kstream
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/kstream/ValueJoinerWithStreamAndMappedKey.html#apply(java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.4.0/org/apache/kafka/streams/kstream/ValueJoinerWithStreamAndMappedKey.html#apply(java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object)"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="StreamKey"/></param>
         /// <param name="arg1"><typeparamref name="TableKey"/></param>
