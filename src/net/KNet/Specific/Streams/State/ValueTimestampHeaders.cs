@@ -44,7 +44,6 @@ namespace MASES.KNet.Streams.State
         internal static ValueTimestampHeaders<V, TJVMV> Create(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.State.ValueTimestampHeaders<TJVMV> valueAndTimestamp)
         {
             bool fromPool = false;
-            _pool.Rent(ref fromPool);
             var instance = _pool.Rent(ref fromPool);
             instance.Setup(factory, valueAndTimestamp, fromPool);
             return instance;

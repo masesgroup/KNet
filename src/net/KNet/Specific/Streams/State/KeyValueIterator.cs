@@ -33,7 +33,8 @@ namespace MASES.KNet.Streams.State
     /// <typeparam name="V">The value type</typeparam>
     /// <typeparam name="TJVMK">The JVM type of <typeparamref name="K"/></typeparam>
     /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
-    public sealed class KeyValueIterator<K, V, TJVMK, TJVMV> : CommonIterator<KeyValue<K, V, TJVMK, TJVMV>>, IKNetInnerReference<Org.Apache.Kafka.Streams.State.KeyValueIterator<TJVMK, TJVMV>>
+    public sealed class KeyValueIterator<K, V, TJVMK, TJVMV> : CommonIterator<KeyValueIterator<K, V, TJVMK, TJVMV>, KeyValue<K, V, TJVMK, TJVMV>>, 
+                                                               IKNetInnerReference<Org.Apache.Kafka.Streams.State.KeyValueIterator<TJVMK, TJVMV>>
     {
 #if NET7_0_OR_GREATER
         sealed class PrefetchableLocalEnumerator(IGenericSerDesFactory factory,
@@ -127,9 +128,17 @@ namespace MASES.KNet.Streams.State
         ISerDes<K, TJVMK> _keySerDes = null;
         ISerDes<V, TJVMV> _valueSerDes = null;
 
-        internal KeyValueIterator(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.State.KeyValueIterator<TJVMK, TJVMV> iterator)
-            : base(factory)
+        internal static KeyValueIterator<K, V, TJVMK, TJVMV> Create(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.State.KeyValueIterator<TJVMK, TJVMV> iterator)
         {
+            bool fromPool = false;
+            var instance = ObjectPool.Rent(ref fromPool);
+            instance.Setup(factory, iterator, fromPool);
+            return instance;
+        }
+
+        void Setup(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.State.KeyValueIterator<TJVMK, TJVMV> iterator, bool fromPool)
+        {
+            _factory = factory;
             _iterator = iterator;
         }
 
@@ -141,6 +150,7 @@ namespace MASES.KNet.Streams.State
         {
             _iterator?.Dispose();
             _iterator = null;
+            ObjectPool.Return(this);
             base.Dispose(disposing);
         }
 
