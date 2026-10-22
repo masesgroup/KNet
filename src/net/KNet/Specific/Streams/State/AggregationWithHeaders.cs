@@ -17,6 +17,7 @@
 */
 
 using Java.Util;
+using MASES.JCOBridge.C2JBridge;
 using MASES.KNet.Serialization;
 using MASES.KNet.Streams.Processor.Api;
 using System;
@@ -31,12 +32,25 @@ namespace MASES.KNet.Streams.State
     /// <typeparam name="TJVMAGG">The JVM type of <typeparamref name="AGG"/></typeparam>
     public class AggregationWithHeaders<AGG, TJVMAGG> : IKNetInnerReference<Org.Apache.Kafka.Streams.State.AggregationWithHeaders<TJVMAGG>>, IGenericSerDesFactoryApplier, IDisposable
     {
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
+        static AggregationWithHeaders<AGG, TJVMAGG> Allocate() => new AggregationWithHeaders<AGG, TJVMAGG>();
+        static JCOBridgeObjectPool<AggregationWithHeaders<AGG, TJVMAGG>> _pool = new JCOBridgeObjectPool<AggregationWithHeaders<AGG, TJVMAGG>>(Allocate);
+
         Org.Apache.Kafka.Streams.State.AggregationWithHeaders<TJVMAGG> _inner;
         ISerDes<AGG, TJVMAGG> _aggreationSerDes;
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set => _factory = value; }
 
-        internal AggregationWithHeaders(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.State.AggregationWithHeaders<TJVMAGG> aggregatationHeaders)
+        internal static AggregationWithHeaders<AGG, TJVMAGG> Create(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.State.AggregationWithHeaders<TJVMAGG> aggregatationHeaders)
+        {
+            bool fromPool = false;
+            _pool.Rent(ref fromPool);
+            var instance = _pool.Rent(ref fromPool);
+            instance.Setup(factory, aggregatationHeaders, fromPool);
+            return instance;
+        }
+
+        void Setup(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.State.AggregationWithHeaders<TJVMAGG> aggregatationHeaders, bool fromPool)
         {
             _factory = factory;
             _inner = aggregatationHeaders;
@@ -75,6 +89,7 @@ namespace MASES.KNet.Streams.State
             {
                 _inner?.Dispose();
                 _inner = null;
+                _pool.Return(this);
             }
         }
 

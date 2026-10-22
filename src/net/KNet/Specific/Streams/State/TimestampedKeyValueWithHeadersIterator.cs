@@ -51,9 +51,9 @@ namespace MASES.KNet.Streams.State
             {
                 if (input is IJavaObject obj)
                 {
-                    return new TimestampedKeyValueHeaders<K, V, TJVMK, TJVMV>(_factory,
-                                                                              JVMBridgeBase.WrapsDirect<Org.Apache.Kafka.Streams.KeyValue<TJVMK, Org.Apache.Kafka.Streams.State.ValueTimestampHeaders<TJVMV>>>(obj),
-                                                                              keySerDes, true);
+                    return TimestampedKeyValueHeaders<K, V, TJVMK, TJVMV>.Create(_factory,
+                                                                                 JVMBridgeBase.WrapsDirect<Org.Apache.Kafka.Streams.KeyValue<TJVMK, Org.Apache.Kafka.Streams.State.ValueTimestampHeaders<TJVMV>>>(obj),
+                                                                                 keySerDes, true);
                 }
                 throw new InvalidCastException($"input is not a valid IJavaObject");
             }
@@ -95,9 +95,9 @@ namespace MASES.KNet.Streams.State
             {
                 if (input is IJavaObject obj)
                 {
-                    return new TimestampedKeyValueHeaders<K, V, TJVMK, TJVMV>(_factory,
-                                                                              JVMBridgeBase.WrapsDirect<Org.Apache.Kafka.Streams.KeyValue<TJVMK, Org.Apache.Kafka.Streams.State.ValueTimestampHeaders<TJVMV>>>(obj),
-                                                                              _keySerDes, false);
+                    return TimestampedKeyValueHeaders<K, V, TJVMK, TJVMV>.Create(_factory,
+                                                                                 JVMBridgeBase.WrapsDirect<Org.Apache.Kafka.Streams.KeyValue<TJVMK, Org.Apache.Kafka.Streams.State.ValueTimestampHeaders<TJVMV>>>(obj),
+                                                                                 _keySerDes, false);
                 }
                 throw new InvalidCastException($"input is not a valid IJavaObject");
             }
@@ -162,7 +162,7 @@ namespace MASES.KNet.Streams.State
             _keySerDes ??= factory?.BuildKeySerDes<K, TJVMK>();
             var kv = _iterator.Next();
             if (kv == null) return null;
-            return new TimestampedKeyValueHeaders<K, V, TJVMK, TJVMV>(factory, kv, _keySerDes, false);
+            return TimestampedKeyValueHeaders<K, V, TJVMK, TJVMV>.Create(factory, kv, _keySerDes, false);
         }
         /// <summary>
         /// <see href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Iterator.html#remove()"/>

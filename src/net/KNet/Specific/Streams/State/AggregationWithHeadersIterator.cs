@@ -51,8 +51,8 @@ namespace MASES.KNet.Streams.State
             {
                 if (input is IJavaObject obj)
                 {
-                    return new AggregationWithHeaders<AGG, TJVMAGG>(_factory,
-                                                                    JVMBridgeBase.WrapsDirect<Org.Apache.Kafka.Streams.State.AggregationWithHeaders<TJVMAGG>>(obj));
+                    return AggregationWithHeaders<AGG, TJVMAGG>.Create(_factory,
+                                                                       JVMBridgeBase.WrapsDirect<Org.Apache.Kafka.Streams.State.AggregationWithHeaders<TJVMAGG>>(obj));
                 }
                 throw new InvalidCastException($"input is not a valid IJavaObject");
             }
@@ -91,8 +91,8 @@ namespace MASES.KNet.Streams.State
             {
                 if (input is IJavaObject obj)
                 {
-                    return new AggregationWithHeaders<AGG, TJVMAGG>(_factory,
-                                                                    JVMBridgeBase.WrapsDirect<Org.Apache.Kafka.Streams.State.AggregationWithHeaders<TJVMAGG>>(obj));
+                    return AggregationWithHeaders<AGG, TJVMAGG>.Create(_factory,
+                                                                       JVMBridgeBase.WrapsDirect<Org.Apache.Kafka.Streams.State.AggregationWithHeaders<TJVMAGG>>(obj));
                 }
                 throw new InvalidCastException($"input is not a valid IJavaObject");
             }
@@ -155,7 +155,7 @@ namespace MASES.KNet.Streams.State
             IGenericSerDesFactory factory = Factory;
             var kv = _iterator.Next();
             if (kv == null) return null;
-            return new AggregationWithHeaders<AGG, TJVMAGG>(factory, kv.value);
+            return AggregationWithHeaders<AGG, TJVMAGG>.Create(factory, kv.value);
         }
         /// <summary>
         /// <see href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Iterator.html#remove()"/>
