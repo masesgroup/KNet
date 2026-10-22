@@ -41,7 +41,7 @@ namespace MASES.KNet.Streams.State
         /// <summary>
         /// Converter from <see cref="TimestampedWindowStoreIterator{V, TJVMV}"/> to <see cref="KeyValueIterator{K, V, TJVMK, TJVMV}"/>
         /// </summary>
-        public static implicit operator TimestampedKeyValueIterator<long, V, Java.Lang.Long, TJVMV>(TimestampedWindowStoreIterator<V, TJVMV> t) => new TimestampedKeyValueIterator<long, V, Java.Lang.Long, TJVMV>(t._factory, t._iterator.Cast<Org.Apache.Kafka.Streams.State.KeyValueIterator<Java.Lang.Long, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV>>>());
+        public static implicit operator TimestampedKeyValueIterator<long, V, Java.Lang.Long, TJVMV>(TimestampedWindowStoreIterator<V, TJVMV> t) => TimestampedKeyValueIterator<long, V, Java.Lang.Long, TJVMV>.Create(t._factory, t._iterator.Cast<Org.Apache.Kafka.Streams.State.KeyValueIterator<Java.Lang.Long, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV>>>());
 
         /// <summary>
         /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/state/KeyValueIterator.html#close()"/>

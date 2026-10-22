@@ -29,18 +29,22 @@ namespace MASES.KNet.Streams.State
     /// <summary>
     /// A common class for all iterators
     /// </summary>
+    /// <typeparam name="TIterator">The class implementing <see cref="CommonIterator{TIterator, TIteratorType}"/></typeparam>
     /// <typeparam name="TIteratorType">The return <see cref="Type"/> of <see cref="IEnumerable{T}"/> and <see cref="IAsyncEnumerable{T}"/></typeparam>
-    public abstract class CommonIterator<TIteratorType> : IGenericSerDesFactoryApplier, IEnumerable<TIteratorType>, IAsyncEnumerable<TIteratorType>, IDisposable, IAsyncDisposable
+    public abstract class CommonIterator<TIterator, TIteratorType> : IGenericSerDesFactoryApplier, IEnumerable<TIteratorType>, IAsyncEnumerable<TIteratorType>, IDisposable, IAsyncDisposable
+        where TIterator: CommonIterator<TIterator, TIteratorType>, new()
     {
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
+        static TIterator Allocate() => new TIterator();
         /// <summary>
-        /// Initialize a new instance of <see cref="CommonIterator{TIteratorType}"/>
+        /// Pool of objects managed from <see cref="JCOBridgeObjectPool{TIterator}"/>
         /// </summary>
-        /// <param name="factory">The <see cref="IGenericSerDesFactory"/> associated to this instance</param>
-        protected CommonIterator(IGenericSerDesFactory factory)
-        {
-            _factory = factory;
-        }
-        IGenericSerDesFactory _factory;
+        protected static JCOBridgeObjectPool<TIterator> ObjectPool = new JCOBridgeObjectPool<TIterator>(Allocate);
+
+        /// <summary>
+        /// The <see cref="IGenericSerDesFactory"/> factory received
+        /// </summary>
+        protected IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set => _factory = value; }
         /// <summary>
         /// Returns the current <see cref="IGenericSerDesFactory"/>
@@ -81,7 +85,6 @@ namespace MASES.KNet.Streams.State
         {
             if (Interlocked.Exchange(ref _disposed, 1) != 0)
                 return;
-
         }
         /// <inheritdoc cref="IAsyncDisposable.DisposeAsync"/>
         public ValueTask DisposeAsync()

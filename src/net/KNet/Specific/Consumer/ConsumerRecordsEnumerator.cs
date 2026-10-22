@@ -41,7 +41,6 @@ namespace MASES.KNet.Consumer
         internal static ConsumerRecordsEnumerator<K, V, TJVMK, TJVMV> Create(Org.Apache.Kafka.Clients.Consumer.ConsumerRecords<TJVMK, TJVMV> records, IDeserializer<K, TJVMK> keyDeserializer, IDeserializer<V, TJVMV> valueDeserializer)
         {
             bool fromPool = false;
-            _pool.Rent(ref fromPool);
             var instance = _pool.Rent(ref fromPool);
             instance.Setup(records, keyDeserializer, valueDeserializer, fromPool);
             return instance;
@@ -58,7 +57,6 @@ namespace MASES.KNet.Consumer
         internal static ConsumerRecordsEnumerator<K, V, TJVMK, TJVMV> Create(Org.Apache.Kafka.Clients.Consumer.ConsumerRecords<TJVMK, TJVMV> records, IDeserializer<K, TJVMK> keyDeserializer, IDeserializer<V, TJVMV> valueDeserializer, CancellationToken cancellationToken)
         {
             bool fromPool = false;
-            _pool.Rent(ref fromPool);
             var instance = _pool.Rent(ref fromPool);
             instance.Setup(records, keyDeserializer, valueDeserializer, cancellationToken, fromPool);
             return instance;
