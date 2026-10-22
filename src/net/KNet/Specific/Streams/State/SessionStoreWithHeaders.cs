@@ -28,7 +28,7 @@ namespace MASES.KNet.Streams.State
     /// <typeparam name="K">The key type</typeparam>
     /// <typeparam name="AGG">The value type</typeparam>
     /// <typeparam name="TJVMK">The JVM type of <typeparamref name="K"/></typeparam>
-    /// <typeparam name="TJVMAGG">The JVM type of <typeparamref name="V"/></typeparam>
+    /// <typeparam name="TJVMAGG">The JVM type of <typeparamref name="AGG"/></typeparam>
     public class SessionStoreWithHeaders<K, AGG, TJVMK, TJVMAGG> : ManagedStore<Org.Apache.Kafka.Streams.State.ReadOnlySessionStore<TJVMK, Org.Apache.Kafka.Streams.State.AggregationWithHeaders<TJVMAGG>>>
     {
         /// <summary>
