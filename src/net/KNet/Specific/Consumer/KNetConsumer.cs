@@ -195,14 +195,14 @@ namespace MASES.KNet.Consumer
         public new ConsumerRecords<K, V, TJVMK, TJVMV> Poll(long timeoutMs)
         {
             var records = base.Poll(timeoutMs);
-            return new ConsumerRecords<K, V, TJVMK, TJVMV>(records, _keyDeserializer, _valueDeserializer);
+            return ConsumerRecords<K, V, TJVMK, TJVMV>.Create(records, _keyDeserializer, _valueDeserializer);
         }
         /// <inheritdoc cref="IConsumer{K, V, TJVMK, TJVMV}.Poll(TimeSpan)"/>
         public ConsumerRecords<K, V, TJVMK, TJVMV> Poll(TimeSpan timeout)
         {
             using Duration duration = timeout;
             var records = base.Poll(duration);
-            return new ConsumerRecords<K, V, TJVMK, TJVMV>(records, _keyDeserializer, _valueDeserializer);
+            return ConsumerRecords<K, V, TJVMK, TJVMV>.Create(records, _keyDeserializer, _valueDeserializer);
         }
 
         Func<ConsumerRecord<K, V, TJVMK, TJVMV>, bool> _actionCallback = null;

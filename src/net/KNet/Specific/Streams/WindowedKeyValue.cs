@@ -106,6 +106,7 @@ namespace MASES.KNet.Streams
             {
                 _valueInner?.Dispose();
                 _valueInner = null;
+                _key?.Dispose();
                 _key = null;
                 _value = default;
                 _valueStored = false;
@@ -122,7 +123,7 @@ namespace MASES.KNet.Streams
             get
             {
                 CheckDisposed();
-                _key ??= new Windowed<K, TJVMK>(_factory, _valueInner.key);
+                _key ??= Windowed<K, TJVMK>.Create(_factory, _valueInner.key);
                 return _key;
             }
         }
