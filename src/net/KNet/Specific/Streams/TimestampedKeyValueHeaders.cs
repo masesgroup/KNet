@@ -112,6 +112,7 @@ namespace MASES.KNet.Streams
                 _inner = null;
                 _key = default;
                 _keyStored = false;
+                _value?.Dispose();
                 _value = null;
                 _keySerDes = null;
                 _pool.Return(this);
@@ -145,7 +146,7 @@ namespace MASES.KNet.Streams
             get
             {
                 CheckDisposed();
-                _value ??= new ValueTimestampHeaders<V, TJVMV>(_factory, _inner.value);
+                _value ??= ValueTimestampHeaders<V, TJVMV>.Create(_factory, _inner.value);
                 return _value;
             }
         }

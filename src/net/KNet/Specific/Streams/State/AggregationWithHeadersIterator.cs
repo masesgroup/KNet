@@ -173,7 +173,7 @@ namespace MASES.KNet.Streams.State
             var kk = _iterator.PeekNextKey();
             using var disposable0 = kk as IDisposable;
             _keySerDes ??= Factory?.BuildKeySerDes<K, TJVMK>();
-            return new Windowed<K, TJVMK>(Factory, kk);
+            return Windowed<K, TJVMK>.Create(Factory, kk);
         }
         /// <summary>
         /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/state/KeyValueIterator.html#close()"/>

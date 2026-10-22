@@ -16,6 +16,7 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.JCOBridge.C2JBridge;
 using MASES.KNet.Serialization;
 using System;
 using System.Threading;
@@ -29,12 +30,25 @@ namespace MASES.KNet.Streams.Kstream
     /// <typeparam name="TJVMK">The JVM type of <typeparamref name="K"/></typeparam>
     public class Windowed<K, TJVMK> : IKNetInnerReference<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>>, IGenericSerDesFactoryApplier, IDisposable
     {
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
+        static Windowed<K, TJVMK> Allocate() => new Windowed<K, TJVMK>();
+        static JCOBridgeObjectPool<Windowed<K, TJVMK>> _pool = new JCOBridgeObjectPool<Windowed<K, TJVMK>>(Allocate);
+
         Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK> _inner;
         ISerDes<K, TJVMK> _keySerDes = null;
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set => _factory = value; }
 
-        internal Windowed(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK> windowed)
+        internal static Windowed<K, TJVMK> Create(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK> windowed)
+        {
+            bool fromPool = false;
+            _pool.Rent(ref fromPool);
+            var instance = _pool.Rent(ref fromPool);
+            instance.Setup(factory, windowed, fromPool);
+            return instance;
+        }
+
+        void Setup(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK> windowed, bool fromPool)
         {
             _factory = factory;
             _inner = windowed;
@@ -73,6 +87,7 @@ namespace MASES.KNet.Streams.Kstream
             {
                 _inner?.Dispose();
                 _inner = null;
+                _pool.Return(this);
             }
         }
 

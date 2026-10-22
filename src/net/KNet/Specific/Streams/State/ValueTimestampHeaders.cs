@@ -17,6 +17,7 @@
 */
 
 using Java.Util;
+using MASES.JCOBridge.C2JBridge;
 using MASES.KNet.Serialization;
 using MASES.KNet.Streams.Processor.Api;
 using System;
@@ -31,12 +32,25 @@ namespace MASES.KNet.Streams.State
     /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
     public class ValueTimestampHeaders<V, TJVMV> : IKNetInnerReference<Org.Apache.Kafka.Streams.State.ValueTimestampHeaders<TJVMV>>, IGenericSerDesFactoryApplier, IDisposable
     {
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
+        static ValueTimestampHeaders<V, TJVMV> Allocate() => new ValueTimestampHeaders<V, TJVMV>();
+        static JCOBridgeObjectPool<ValueTimestampHeaders<V, TJVMV>> _pool = new JCOBridgeObjectPool<ValueTimestampHeaders<V, TJVMV>>(Allocate);
+
         Org.Apache.Kafka.Streams.State.ValueTimestampHeaders<TJVMV> _inner;
         ISerDes<V, TJVMV> _valueSerDes;
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set => _factory = value; }
 
-        internal ValueTimestampHeaders(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.State.ValueTimestampHeaders<TJVMV> valueAndTimestamp)
+        internal static ValueTimestampHeaders<V, TJVMV> Create(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.State.ValueTimestampHeaders<TJVMV> valueAndTimestamp)
+        {
+            bool fromPool = false;
+            _pool.Rent(ref fromPool);
+            var instance = _pool.Rent(ref fromPool);
+            instance.Setup(factory, valueAndTimestamp, fromPool);
+            return instance;
+        }
+
+        void Setup(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.State.ValueTimestampHeaders<TJVMV> valueAndTimestamp, bool fromPool)
         {
             _factory = factory;
             _inner = valueAndTimestamp;
@@ -75,6 +89,7 @@ namespace MASES.KNet.Streams.State
             {
                 _inner?.Dispose();
                 _inner = null;
+                _pool.Return(this);
             }
         }
 
