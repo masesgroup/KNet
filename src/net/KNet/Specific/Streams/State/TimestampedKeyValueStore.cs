@@ -73,7 +73,7 @@ namespace MASES.KNet.Streams.State
             using var disposable0 = r0 as IDisposable;
             using var disposable1 = res as IDisposable;
 
-            return new ValueAndTimestamp<V, TJVMV>(factory, res);
+            return ValueAndTimestamp<V, TJVMV>.Create(factory, res);
         }
         /// <summary>
         /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#prefixScan(java.lang.Object,org.apache.kafka.common.serialization.Serializer)"/>

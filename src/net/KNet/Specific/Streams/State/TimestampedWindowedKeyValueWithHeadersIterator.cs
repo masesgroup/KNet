@@ -167,7 +167,7 @@ namespace MASES.KNet.Streams.State
         public Windowed<K, TJVMK> PeekNextKey()
         {
             var kk = _iterator.PeekNextKey();
-            return new Windowed<K, TJVMK>(Factory, kk);
+            return Windowed<K, TJVMK>.Create(Factory, kk);
         }
         /// <summary>
         /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/state/KeyValueIterator.html#close()"/>
