@@ -17,6 +17,7 @@
 */
 
 using Java.Util;
+using MASES.JCOBridge.C2JBridge;
 using MASES.KNet.Serialization;
 using MASES.KNet.Streams.Processor.Api;
 using System;
@@ -31,12 +32,25 @@ namespace MASES.KNet.Streams.State
     /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
     public class ValueAndTimestamp<V, TJVMV> : IKNetInnerReference<Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV>>, IGenericSerDesFactoryApplier, IDisposable
     {
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
+        static ValueAndTimestamp<V, TJVMV> Allocate() => new ValueAndTimestamp<V, TJVMV>();
+        static JCOBridgeObjectPool<ValueAndTimestamp<V, TJVMV>> _pool = new JCOBridgeObjectPool<ValueAndTimestamp<V, TJVMV>>(Allocate);
+
         Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV> _inner;
         ISerDes<V, TJVMV> _valueSerDes;
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set => _factory = value; }
 
-        internal ValueAndTimestamp(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV> valueAndTimestamp)
+        internal static ValueAndTimestamp<V, TJVMV> Create(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV> valueAndTimestamp)
+        {
+            bool fromPool = false;
+            _pool.Rent(ref fromPool);
+            var instance = _pool.Rent(ref fromPool);
+            instance.Setup(factory, valueAndTimestamp, fromPool);
+            return instance;
+        }
+
+        void Setup(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV> valueAndTimestamp, bool fromPool)
         {
             _factory = factory;
             _inner = valueAndTimestamp;
@@ -75,6 +89,7 @@ namespace MASES.KNet.Streams.State
             {
                 _inner?.Dispose();
                 _inner = null;
+                _pool.Return(this);
             }
         }
 

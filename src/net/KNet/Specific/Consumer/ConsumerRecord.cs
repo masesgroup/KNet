@@ -16,6 +16,7 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.JCOBridge.C2JBridge;
 using MASES.KNet.Serialization;
 using System;
 using System.Threading;
@@ -31,19 +32,36 @@ namespace MASES.KNet.Consumer
     /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
     public class ConsumerRecord<K, V, TJVMK, TJVMV> : IKNetInnerReference<Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<TJVMK, TJVMV>>, IGenericSerDesFactoryApplier, IDisposable
     {
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
+        static ConsumerRecord<K, V, TJVMK, TJVMV> Allocate() => new ConsumerRecord<K, V, TJVMK, TJVMV>();
+        static JCOBridgeObjectPool<ConsumerRecord<K, V, TJVMK, TJVMV>> _pool = new JCOBridgeObjectPool<ConsumerRecord<K, V, TJVMK, TJVMV>>(Allocate);
+
         IDeserializer<K, TJVMK> _keyDeserializer;
         IDeserializer<V, TJVMV> _valueDeserializer;
         Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<TJVMK, TJVMV> _record;
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set => _factory = value; }
+
+        internal static ConsumerRecord<K, V, TJVMK, TJVMV> Create(Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<TJVMK, TJVMV> record, IDeserializer<K, TJVMK> keyDeserializer, IDeserializer<V, TJVMV> valueDeserializer, bool fromPrefetched)
+        {
+            bool fromPool = false;
+            _pool.Rent(ref fromPool);
+            var instance = _pool.Rent(ref fromPool);
+            instance.Setup(record, keyDeserializer, valueDeserializer, fromPrefetched, fromPool);
+            return instance;
+        }
+
         /// <summary>
         /// Initialize a new <see cref="ConsumerRecord{K, V, TJVMK, TJVMV}"/>
         /// </summary>
         /// <param name="record">The <see cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRecord{TJVMK, TJVMV}"/> to use for initialization</param>
         /// <param name="keyDeserializer">Key serializer base on <see cref="SerDes{K, TJVMK}"/></param>
         /// <param name="valueDeserializer">Value serializer base on <see cref="SerDes{V, TJVMV}"/></param>
-        /// <param name="fromPrefetched">True if the initialization comes from the prefetch iterator</param>
-        internal ConsumerRecord(Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<TJVMK, TJVMV> record, IDeserializer<K, TJVMK> keyDeserializer, IDeserializer<V, TJVMV> valueDeserializer, bool fromPrefetched)
+        /// <param name="fromPrefetched"><see langword="true"/> if the initialization comes from the prefetch iterator</param>
+        /// <param name="fromPool"><see langword="true"/> if the instance comes from the object pool</param>
+        void Setup(Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<TJVMK, TJVMV> record, 
+                   IDeserializer<K, TJVMK> keyDeserializer, IDeserializer<V, TJVMV> valueDeserializer, 
+                   bool fromPrefetched, bool fromPool)
         {
             _record = record;
             _keyDeserializer = keyDeserializer;
@@ -55,12 +73,23 @@ namespace MASES.KNet.Consumer
                 _ = Value;
             }
         }
+
+        internal static ConsumerRecord<K, V, TJVMK, TJVMV> Create(Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<TJVMK, TJVMV> record, IGenericSerDesFactory factory)
+        {
+            bool fromPool = false;
+            _pool.Rent(ref fromPool);
+            var instance = _pool.Rent(ref fromPool);
+            instance.Setup(record, factory, fromPool);
+            return instance;
+        }
+
         /// <summary>
         /// Initialize a new <see cref="ConsumerRecord{K, V, TJVMK, TJVMV}"/>
         /// </summary>
         /// <param name="record">The <see cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRecord{TJVMK, TJVMV}"/> to use for initialization</param>
         /// <param name="factory"><see cref="IGenericSerDesFactory"/></param>
-        internal ConsumerRecord(Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<TJVMK, TJVMV> record, IGenericSerDesFactory factory)
+        /// <param name="fromPool"><see langword="true"/> if the instance comes from the object pool</param>
+        void Setup(Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<TJVMK, TJVMV> record, IGenericSerDesFactory factory, bool fromPool)
         {
             _record = record;
             _factory = factory;
@@ -108,6 +137,7 @@ namespace MASES.KNet.Consumer
                 _localKey = default;
                 _localValueDes = false;
                 _localValue = default;
+                _pool.Return(this);
             }
         }
 

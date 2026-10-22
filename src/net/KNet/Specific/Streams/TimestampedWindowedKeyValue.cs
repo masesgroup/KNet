@@ -95,7 +95,9 @@ namespace MASES.KNet.Streams
             {
                 _valueInner?.Dispose();
                 _valueInner = default;
+                _key?.Dispose();
                 _key = null;
+                _value?.Dispose();
                 _value = null;
                 _pool.Return(this);
             }
@@ -109,7 +111,7 @@ namespace MASES.KNet.Streams
             get
             {
                 CheckDisposed();
-                _key ??= new Windowed<K, TJVMK>(_factory, _valueInner.key);
+                _key ??= Windowed<K, TJVMK>.Create(_factory, _valueInner.key);
                 return _key;
             }
         }
@@ -121,7 +123,7 @@ namespace MASES.KNet.Streams
             get
             {
                 CheckDisposed();
-                _value ??= new ValueAndTimestamp<V, TJVMV>(_factory, _valueInner.value);
+                _value ??= ValueAndTimestamp<V, TJVMV>.Create(_factory, _valueInner.value);
                 return _value;
             }
         }

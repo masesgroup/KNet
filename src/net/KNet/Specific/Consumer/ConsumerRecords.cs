@@ -16,6 +16,7 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.JCOBridge.C2JBridge;
 using MASES.KNet.Serialization;
 using System;
 using System.Collections.Generic;
@@ -33,16 +34,31 @@ namespace MASES.KNet.Consumer
     /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
     public class ConsumerRecords<K, V, TJVMK, TJVMV> : IKNetInnerReference<Org.Apache.Kafka.Clients.Consumer.ConsumerRecords<TJVMK, TJVMV>>, IEnumerable<ConsumerRecord<K, V, TJVMK, TJVMV>>, IAsyncEnumerable<ConsumerRecord<K, V, TJVMK, TJVMV>>, IDisposable
     {
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
+        static ConsumerRecords<K, V, TJVMK, TJVMV> Allocate() => new ConsumerRecords<K, V, TJVMK, TJVMV>();
+        static JCOBridgeObjectPool<ConsumerRecords<K, V, TJVMK, TJVMV>> _pool = new JCOBridgeObjectPool<ConsumerRecords<K, V, TJVMK, TJVMV>>(Allocate);
+
         ISerDes<K, TJVMK> _keyDeserializer;
         ISerDes<V, TJVMV> _valueDeserializer;
         Org.Apache.Kafka.Clients.Consumer.ConsumerRecords<TJVMK, TJVMV> _records;
+
+        internal static ConsumerRecords<K, V, TJVMK, TJVMV> Create(Org.Apache.Kafka.Clients.Consumer.ConsumerRecords<TJVMK, TJVMV> record, ISerDes<K, TJVMK> keyDeserializer, ISerDes<V, TJVMV> valueDeserializer)
+        {
+            bool fromPool = false;
+            _pool.Rent(ref fromPool);
+            var instance = _pool.Rent(ref fromPool);
+            instance.Setup(record, keyDeserializer, valueDeserializer, fromPool);
+            return instance;
+        }
+
         /// <summary>
         /// Initialize a new <see cref="ConsumerRecord{K, V, TJVMK, TJVMV}"/>
         /// </summary>
         /// <param name="records">The <see cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRecords{K, V}"/> to use for initialization</param>
         /// <param name="keyDeserializer">Key serializer base on <see cref="SerDes{K, TJVMK}"/></param>
         /// <param name="valueDeserializer">Value serializer base on <see cref="SerDes{V, TJVMV}"/></param>
-        internal ConsumerRecords(Org.Apache.Kafka.Clients.Consumer.ConsumerRecords<TJVMK, TJVMV> records, ISerDes<K, TJVMK> keyDeserializer, ISerDes<V, TJVMV> valueDeserializer)
+        /// <param name="fromPool"><see langword="true"/> if the instance comes from the object pool</param>
+        void Setup(Org.Apache.Kafka.Clients.Consumer.ConsumerRecords<TJVMK, TJVMV> records, ISerDes<K, TJVMK> keyDeserializer, ISerDes<V, TJVMV> valueDeserializer, bool fromPool)
         {
             _records = records;
             _keyDeserializer = keyDeserializer;
@@ -82,6 +98,7 @@ namespace MASES.KNet.Consumer
                 _records = null;
                 _keyDeserializer = null;
                 _valueDeserializer = null;
+                _pool.Return(this);
             }
         }
 
@@ -183,7 +200,7 @@ namespace MASES.KNet.Consumer
                 return new ConsumerRecordsPrefetchableEnumerator<K, V, TJVMK, TJVMV>(_records.Iterator(), _keyDeserializer, _valueDeserializer, false);
             else
 #endif
-                return new ConsumerRecordsEnumerator<K, V, TJVMK, TJVMV>(_records, _keyDeserializer, _valueDeserializer);
+                return ConsumerRecordsEnumerator<K, V, TJVMK, TJVMV>.Create(_records, _keyDeserializer, _valueDeserializer);
         }
 
         System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
@@ -194,7 +211,7 @@ namespace MASES.KNet.Consumer
                 return new ConsumerRecordsPrefetchableEnumerator<K, V, TJVMK, TJVMV>(_records.Iterator(), _keyDeserializer, _valueDeserializer, false);
             else
 #endif
-                return new ConsumerRecordsEnumerator<K, V, TJVMK, TJVMV>(_records, _keyDeserializer, _valueDeserializer);
+                return ConsumerRecordsEnumerator<K, V, TJVMK, TJVMV>.Create(_records, _keyDeserializer, _valueDeserializer);
         }
 
         IAsyncEnumerator<ConsumerRecord<K, V, TJVMK, TJVMV>> IAsyncEnumerable<ConsumerRecord<K, V, TJVMK, TJVMV>>.GetAsyncEnumerator(CancellationToken cancellationToken)
@@ -205,7 +222,7 @@ namespace MASES.KNet.Consumer
                 return new ConsumerRecordsPrefetchableEnumerator<K, V, TJVMK, TJVMV>(_records.Iterator(), _keyDeserializer, _valueDeserializer, true, cancellationToken);
             else
 #endif
-                return new ConsumerRecordsEnumerator<K, V, TJVMK, TJVMV>(_records, _keyDeserializer, _valueDeserializer, cancellationToken);
+                return ConsumerRecordsEnumerator<K, V, TJVMK, TJVMV>.Create(_records, _keyDeserializer, _valueDeserializer, cancellationToken);
         }
     }
 }

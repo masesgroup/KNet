@@ -59,7 +59,7 @@ namespace MASES.KNet.Streams.Processor
             _valueSerializer ??= _factory?.BuildValueSerDes<V, TJVMV>();
             var record = arg0.CastDirectAndDispose<Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<TJVMK, TJVMV>>(); // KNet consider the data within Apache Kafka Streams defined always as byte[]
 
-            _record = new ConsumerRecord<K, V, TJVMK, TJVMV>(record, _factory);
+            _record = ConsumerRecord<K, V, TJVMK, TJVMV>.Create(record, _factory);
             _partitionTime = (arg1 == -1) ? null : DateTimeOffset.FromUnixTimeMilliseconds(arg1).DateTime;
             var res = (OnExtract != null) ? OnExtract(this) : Extract();
             return new DateTimeOffset(res).ToUnixTimeMilliseconds();

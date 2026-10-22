@@ -101,7 +101,7 @@ namespace MASES.KNet.Streams.State
             using var disposable0 = r0 as IDisposable;
             using var disposable1 = agg as IDisposable;
 
-            return new ValueAndTimestamp<V, TJVMV>(factory, agg);
+            return ValueAndTimestamp<V, TJVMV>.Create(factory, agg);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#backwardAll()"/>
