@@ -54,7 +54,6 @@ namespace MASES.KNet.Streams
                                                                        bool fromPrefetched)
         {
             bool fromPool = false;
-            _pool.Rent(ref fromPool);
             var instance = _pool.Rent(ref fromPool);
             instance.Setup(factory, value, keySerDes, fromPrefetched, fromPool);
             return instance;

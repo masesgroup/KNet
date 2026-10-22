@@ -39,7 +39,6 @@ namespace MASES.KNet.Streams
         static TimestampedWindowedKeyValue<K, V, TJVMK, TJVMV> Allocate() => new TimestampedWindowedKeyValue<K, V, TJVMK, TJVMV>();
         static JCOBridgeObjectPool<TimestampedWindowedKeyValue<K, V, TJVMK, TJVMV>> _pool = new JCOBridgeObjectPool<TimestampedWindowedKeyValue<K, V, TJVMK, TJVMV>>(Allocate);
 
-
         Org.Apache.Kafka.Streams.KeyValue<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV>> _valueInner;
         Windowed<K, TJVMK> _key = null;
         ValueAndTimestamp<V, TJVMV> _value = null;
@@ -50,7 +49,6 @@ namespace MASES.KNet.Streams
                                                                                Org.Apache.Kafka.Streams.KeyValue<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV>> value)
         {
             bool fromPool = false;
-            _pool.Rent(ref fromPool);
             var instance = _pool.Rent(ref fromPool);
             instance.Setup(factory, value, fromPool);
             return instance;

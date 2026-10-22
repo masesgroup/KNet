@@ -42,7 +42,6 @@ namespace MASES.KNet.Streams.Kstream
         internal static Windowed<K, TJVMK> Create(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK> windowed)
         {
             bool fromPool = false;
-            _pool.Rent(ref fromPool);
             var instance = _pool.Rent(ref fromPool);
             instance.Setup(factory, windowed, fromPool);
             return instance;

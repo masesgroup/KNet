@@ -45,7 +45,6 @@ namespace MASES.KNet.Consumer
         internal static ConsumerRecord<K, V, TJVMK, TJVMV> Create(Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<TJVMK, TJVMV> record, IDeserializer<K, TJVMK> keyDeserializer, IDeserializer<V, TJVMV> valueDeserializer, bool fromPrefetched)
         {
             bool fromPool = false;
-            _pool.Rent(ref fromPool);
             var instance = _pool.Rent(ref fromPool);
             instance.Setup(record, keyDeserializer, valueDeserializer, fromPrefetched, fromPool);
             return instance;
@@ -77,7 +76,6 @@ namespace MASES.KNet.Consumer
         internal static ConsumerRecord<K, V, TJVMK, TJVMV> Create(Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<TJVMK, TJVMV> record, IGenericSerDesFactory factory)
         {
             bool fromPool = false;
-            _pool.Rent(ref fromPool);
             var instance = _pool.Rent(ref fromPool);
             instance.Setup(record, factory, fromPool);
             return instance;
