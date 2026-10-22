@@ -52,9 +52,9 @@ namespace MASES.KNet.Streams.State
             {
                 if (input is IJavaObject obj)
                 {
-                    return new KeyValue<K, V, TJVMK, TJVMV>(_factory,
-                                                            JVMBridgeBase.WrapsDirect<Org.Apache.Kafka.Streams.KeyValue<TJVMK, TJVMV>>(obj),
-                                                            keySerDes, valueSerDes, true);
+                    return KeyValue<K, V, TJVMK, TJVMV>.Create(_factory,
+                                                               JVMBridgeBase.WrapsDirect<Org.Apache.Kafka.Streams.KeyValue<TJVMK, TJVMV>>(obj),
+                                                               keySerDes, valueSerDes, true);
                 }
                 throw new InvalidCastException($"input is not a valid IJavaObject");
             }
@@ -100,11 +100,11 @@ namespace MASES.KNet.Streams.State
             {
                 if (input is IJavaObject obj)
                 {
-                    return new KeyValue<K, V, TJVMK, TJVMV>(_factory,
-                                                            JVMBridgeBase.WrapsDirect<Org.Apache.Kafka.Streams.KeyValue<TJVMK, TJVMV>>(obj),
-                                                            _keySerDes,
-                                                            _valueSerDes,
-                                                            false);
+                    return KeyValue<K, V, TJVMK, TJVMV>.Create(_factory,
+                                                               JVMBridgeBase.WrapsDirect<Org.Apache.Kafka.Streams.KeyValue<TJVMK, TJVMV>>(obj),
+                                                               _keySerDes,
+                                                               _valueSerDes,
+                                                               false);
                 }
                 throw new InvalidCastException($"input is not a valid IJavaObject");
             }
@@ -176,7 +176,7 @@ namespace MASES.KNet.Streams.State
             _valueSerDes ??= factory?.BuildValueSerDes<V, TJVMV>();
             var kv = _iterator.Next();
             if (kv == null) return null;
-            return new KeyValue<K, V, TJVMK, TJVMV>(factory, kv, _keySerDes, _valueSerDes, false);
+            return KeyValue<K, V, TJVMK, TJVMV>.Create(factory, kv, _keySerDes, _valueSerDes, false);
         }
         /// <summary>
         /// <see href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Iterator.html#remove()"/>

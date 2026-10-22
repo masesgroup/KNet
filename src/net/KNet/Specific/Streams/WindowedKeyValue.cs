@@ -16,6 +16,7 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.JCOBridge.C2JBridge;
 using MASES.KNet.Serialization;
 using MASES.KNet.Streams.Kstream;
 using MASES.KNet.Streams.Processor.Api;
@@ -33,6 +34,10 @@ namespace MASES.KNet.Streams
     /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
     public sealed class WindowedKeyValue<K, V, TJVMK, TJVMV> : IKNetInnerReference<Org.Apache.Kafka.Streams.KeyValue<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, TJVMV>>, IGenericSerDesFactoryApplier, IDisposable
     {
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
+        static WindowedKeyValue<K, V, TJVMK, TJVMV> Allocate() => new WindowedKeyValue<K, V, TJVMK, TJVMV>();
+        static JCOBridgeObjectPool<WindowedKeyValue<K, V, TJVMK, TJVMV>> _pool = new JCOBridgeObjectPool<WindowedKeyValue<K, V, TJVMK, TJVMV>>(Allocate);
+
         Org.Apache.Kafka.Streams.KeyValue<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, TJVMV> _valueInner;
         Windowed<K, TJVMK> _key = null;
         V _value;
@@ -41,10 +46,23 @@ namespace MASES.KNet.Streams
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set => _factory = value; }
 
-        internal WindowedKeyValue(IGenericSerDesFactory factory,
-                                  Org.Apache.Kafka.Streams.KeyValue<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, TJVMV> value,
-                                  ISerDes<V, TJVMV> valueSerDes,
-                                  bool fromPrefetched)
+        internal static WindowedKeyValue<K, V, TJVMK, TJVMV> Create(IGenericSerDesFactory factory,
+                                                                    Org.Apache.Kafka.Streams.KeyValue<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, TJVMV> value,
+                                                                    ISerDes<V, TJVMV> valueSerDes,
+                                                                    bool fromPrefetched)
+        {
+            bool fromPool = false;
+            _pool.Rent(ref fromPool);
+            var instance = _pool.Rent(ref fromPool);
+            instance.Setup(factory, value, valueSerDes, fromPrefetched, fromPool);
+            return instance;
+        }
+
+        void Setup(IGenericSerDesFactory factory,
+                   Org.Apache.Kafka.Streams.KeyValue<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, TJVMV> value,
+                   ISerDes<V, TJVMV> valueSerDes,
+                   bool fromPrefetched,
+                   bool fromPool)
         {
             _factory = factory;
             _valueInner = value;
@@ -92,6 +110,7 @@ namespace MASES.KNet.Streams
                 _value = default;
                 _valueStored = false;
                 _valueSerDes = null;
+                _pool.Return(this);
             }
         }
 
