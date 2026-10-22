@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Tools.Streams
 {
     #region TopologyDescriptionFormatter declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.3.1/org/apache/kafka/tools/streams/TopologyDescriptionFormatter.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.4.0/org/apache/kafka/tools/streams/TopologyDescriptionFormatter.html"/>
     /// </summary>
     public partial class TopologyDescriptionFormatter : MASES.JCOBridge.C2JBridge.JVMBridgeBase<TopologyDescriptionFormatter>
     {
@@ -76,7 +76,7 @@ namespace Org.Apache.Kafka.Tools.Streams
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.3.1/org/apache/kafka/tools/streams/TopologyDescriptionFormatter.html#format(org.apache.kafka.clients.admin.StreamsGroupTopologyDescription)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.4.0/org/apache/kafka/tools/streams/TopologyDescriptionFormatter.html#format(org.apache.kafka.clients.admin.StreamsGroupTopologyDescription)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Clients.Admin.StreamsGroupTopologyDescription"/></param>
         /// <returns><see cref="Java.Lang.String"/></returns>

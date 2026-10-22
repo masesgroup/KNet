@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Metadata.Properties
 {
     #region MetaProperties declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/metadata/properties/MetaProperties.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.4.0/org/apache/kafka/metadata/properties/MetaProperties.html"/>
     /// </summary>
     public partial class MetaProperties : MASES.JCOBridge.C2JBridge.JVMBridgeBase<MetaProperties>
     {
@@ -57,7 +57,7 @@ namespace Org.Apache.Kafka.Metadata.Properties
         // TODO: complete the class
         #region Builder declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/metadata/properties/MetaProperties.Builder.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.4.0/org/apache/kafka/metadata/properties/MetaProperties.Builder.html"/>
         /// </summary>
         public partial class Builder : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Builder>
         {
@@ -114,7 +114,7 @@ namespace Org.Apache.Kafka.Metadata.Properties
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/metadata/properties/MetaProperties.html#clusterId()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.4.0/org/apache/kafka/metadata/properties/MetaProperties.html#clusterId()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Optional"/></returns>
         public Java.Util.Optional<Java.Lang.String> ClusterId()
@@ -122,7 +122,7 @@ namespace Org.Apache.Kafka.Metadata.Properties
             return IExecuteWithSignature<Java.Util.Optional<Java.Lang.String>>("clusterId", "()Ljava/util/Optional;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/metadata/properties/MetaProperties.html#directoryId()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.4.0/org/apache/kafka/metadata/properties/MetaProperties.html#directoryId()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Optional"/></returns>
         public Java.Util.Optional<Org.Apache.Kafka.Common.Uuid> DirectoryId()
@@ -130,7 +130,7 @@ namespace Org.Apache.Kafka.Metadata.Properties
             return IExecuteWithSignature<Java.Util.Optional<Org.Apache.Kafka.Common.Uuid>>("directoryId", "()Ljava/util/Optional;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/metadata/properties/MetaProperties.html#nodeId()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.4.0/org/apache/kafka/metadata/properties/MetaProperties.html#nodeId()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.OptionalInt"/></returns>
         public Java.Util.OptionalInt NodeId()
@@ -138,7 +138,7 @@ namespace Org.Apache.Kafka.Metadata.Properties
             return IExecuteWithSignature<Java.Util.OptionalInt>("nodeId", "()Ljava/util/OptionalInt;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/metadata/properties/MetaProperties.html#toProperties()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.4.0/org/apache/kafka/metadata/properties/MetaProperties.html#toProperties()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Properties"/></returns>
         public Java.Util.Properties ToProperties()
@@ -146,7 +146,7 @@ namespace Org.Apache.Kafka.Metadata.Properties
             return IExecuteWithSignature<Java.Util.Properties>("toProperties", "()Ljava/util/Properties;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/metadata/properties/MetaProperties.html#version()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.4.0/org/apache/kafka/metadata/properties/MetaProperties.html#version()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Metadata.Properties.MetaPropertiesVersion"/></returns>
         public Org.Apache.Kafka.Metadata.Properties.MetaPropertiesVersion Version()
@@ -162,7 +162,7 @@ namespace Org.Apache.Kafka.Metadata.Properties
         {
             #region Constructors
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/metadata/properties/MetaProperties.Builder.html#%3Cinit%3E()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.4.0/org/apache/kafka/metadata/properties/MetaProperties.Builder.html#%3Cinit%3E()"/>
             /// </summary>
             public Builder() : base(JVMBridgeBase.InitializerInstance)
             {
@@ -176,7 +176,7 @@ namespace Org.Apache.Kafka.Metadata.Properties
                 return JVMBridgeBase.New<Builder>();
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/metadata/properties/MetaProperties.Builder.html#%3Cinit%3E(java.util.Properties)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.4.0/org/apache/kafka/metadata/properties/MetaProperties.Builder.html#%3Cinit%3E(java.util.Properties)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Util.Properties"/></param>
             public Builder(Java.Util.Properties arg0) : base(JVMBridgeBase.InitializerInstance)
@@ -191,7 +191,7 @@ namespace Org.Apache.Kafka.Metadata.Properties
                 return JVMBridgeBase.New<Builder>(arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/metadata/properties/MetaProperties.Builder.html#%3Cinit%3E(org.apache.kafka.metadata.properties.MetaProperties)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.4.0/org/apache/kafka/metadata/properties/MetaProperties.Builder.html#%3Cinit%3E(org.apache.kafka.metadata.properties.MetaProperties)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Org.Apache.Kafka.Metadata.Properties.MetaProperties"/></param>
             public Builder(Org.Apache.Kafka.Metadata.Properties.MetaProperties arg0) : base(JVMBridgeBase.InitializerInstance)
@@ -222,7 +222,7 @@ namespace Org.Apache.Kafka.Metadata.Properties
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/metadata/properties/MetaProperties.Builder.html#clusterId()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.4.0/org/apache/kafka/metadata/properties/MetaProperties.Builder.html#clusterId()"/>
             /// </summary>
             /// <returns><see cref="Java.Util.Optional"/></returns>
             public Java.Util.Optional<Java.Lang.String> ClusterId()
@@ -230,7 +230,7 @@ namespace Org.Apache.Kafka.Metadata.Properties
                 return IExecuteWithSignature<Java.Util.Optional<Java.Lang.String>>("clusterId", "()Ljava/util/Optional;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/metadata/properties/MetaProperties.Builder.html#directoryId()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.4.0/org/apache/kafka/metadata/properties/MetaProperties.Builder.html#directoryId()"/>
             /// </summary>
             /// <returns><see cref="Java.Util.Optional"/></returns>
             public Java.Util.Optional<Org.Apache.Kafka.Common.Uuid> DirectoryId()
@@ -238,7 +238,7 @@ namespace Org.Apache.Kafka.Metadata.Properties
                 return IExecuteWithSignature<Java.Util.Optional<Org.Apache.Kafka.Common.Uuid>>("directoryId", "()Ljava/util/Optional;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/metadata/properties/MetaProperties.Builder.html#nodeId()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.4.0/org/apache/kafka/metadata/properties/MetaProperties.Builder.html#nodeId()"/>
             /// </summary>
             /// <returns><see cref="Java.Util.OptionalInt"/></returns>
             public Java.Util.OptionalInt NodeId()
@@ -246,7 +246,7 @@ namespace Org.Apache.Kafka.Metadata.Properties
                 return IExecuteWithSignature<Java.Util.OptionalInt>("nodeId", "()Ljava/util/OptionalInt;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/metadata/properties/MetaProperties.Builder.html#build()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.4.0/org/apache/kafka/metadata/properties/MetaProperties.Builder.html#build()"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Metadata.Properties.MetaProperties"/></returns>
             public Org.Apache.Kafka.Metadata.Properties.MetaProperties Build()
@@ -254,7 +254,7 @@ namespace Org.Apache.Kafka.Metadata.Properties
                 return IExecuteWithSignature<Org.Apache.Kafka.Metadata.Properties.MetaProperties>("build", "()Lorg/apache/kafka/metadata/properties/MetaProperties;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/metadata/properties/MetaProperties.Builder.html#setClusterId(java.lang.String)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.4.0/org/apache/kafka/metadata/properties/MetaProperties.Builder.html#setClusterId(java.lang.String)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Lang.String"/></param>
             /// <returns><see cref="Org.Apache.Kafka.Metadata.Properties.MetaProperties.Builder"/></returns>
@@ -263,7 +263,7 @@ namespace Org.Apache.Kafka.Metadata.Properties
                 return IExecuteWithSignature<Org.Apache.Kafka.Metadata.Properties.MetaProperties.Builder>("setClusterId", "(Ljava/lang/String;)Lorg/apache/kafka/metadata/properties/MetaProperties$Builder;", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/metadata/properties/MetaProperties.Builder.html#setClusterId(java.util.Optional)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.4.0/org/apache/kafka/metadata/properties/MetaProperties.Builder.html#setClusterId(java.util.Optional)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Util.Optional"/></param>
             /// <returns><see cref="Org.Apache.Kafka.Metadata.Properties.MetaProperties.Builder"/></returns>
@@ -272,7 +272,7 @@ namespace Org.Apache.Kafka.Metadata.Properties
                 return IExecuteWithSignature<Org.Apache.Kafka.Metadata.Properties.MetaProperties.Builder>("setClusterId", "(Ljava/util/Optional;)Lorg/apache/kafka/metadata/properties/MetaProperties$Builder;", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/metadata/properties/MetaProperties.Builder.html#setDirectoryId(java.util.Optional)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.4.0/org/apache/kafka/metadata/properties/MetaProperties.Builder.html#setDirectoryId(java.util.Optional)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Util.Optional"/></param>
             /// <returns><see cref="Org.Apache.Kafka.Metadata.Properties.MetaProperties.Builder"/></returns>
@@ -281,7 +281,7 @@ namespace Org.Apache.Kafka.Metadata.Properties
                 return IExecuteWithSignature<Org.Apache.Kafka.Metadata.Properties.MetaProperties.Builder>("setDirectoryId", "(Ljava/util/Optional;)Lorg/apache/kafka/metadata/properties/MetaProperties$Builder;", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/metadata/properties/MetaProperties.Builder.html#setDirectoryId(org.apache.kafka.common.Uuid)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.4.0/org/apache/kafka/metadata/properties/MetaProperties.Builder.html#setDirectoryId(org.apache.kafka.common.Uuid)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Uuid"/></param>
             /// <returns><see cref="Org.Apache.Kafka.Metadata.Properties.MetaProperties.Builder"/></returns>
@@ -290,7 +290,7 @@ namespace Org.Apache.Kafka.Metadata.Properties
                 return IExecuteWithSignature<Org.Apache.Kafka.Metadata.Properties.MetaProperties.Builder>("setDirectoryId", "(Lorg/apache/kafka/common/Uuid;)Lorg/apache/kafka/metadata/properties/MetaProperties$Builder;", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/metadata/properties/MetaProperties.Builder.html#setNodeId(int)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.4.0/org/apache/kafka/metadata/properties/MetaProperties.Builder.html#setNodeId(int)"/>
             /// </summary>
             /// <param name="arg0"><see cref="int"/></param>
             /// <returns><see cref="Org.Apache.Kafka.Metadata.Properties.MetaProperties.Builder"/></returns>
@@ -299,7 +299,7 @@ namespace Org.Apache.Kafka.Metadata.Properties
                 return IExecuteWithSignature<Org.Apache.Kafka.Metadata.Properties.MetaProperties.Builder>("setNodeId", "(I)Lorg/apache/kafka/metadata/properties/MetaProperties$Builder;", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/metadata/properties/MetaProperties.Builder.html#setNodeId(java.util.OptionalInt)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.4.0/org/apache/kafka/metadata/properties/MetaProperties.Builder.html#setNodeId(java.util.OptionalInt)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Util.OptionalInt"/></param>
             /// <returns><see cref="Org.Apache.Kafka.Metadata.Properties.MetaProperties.Builder"/></returns>
@@ -308,7 +308,7 @@ namespace Org.Apache.Kafka.Metadata.Properties
                 return IExecuteWithSignature<Org.Apache.Kafka.Metadata.Properties.MetaProperties.Builder>("setNodeId", "(Ljava/util/OptionalInt;)Lorg/apache/kafka/metadata/properties/MetaProperties$Builder;", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/metadata/properties/MetaProperties.Builder.html#setVersion(org.apache.kafka.metadata.properties.MetaPropertiesVersion)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.4.0/org/apache/kafka/metadata/properties/MetaProperties.Builder.html#setVersion(org.apache.kafka.metadata.properties.MetaPropertiesVersion)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Org.Apache.Kafka.Metadata.Properties.MetaPropertiesVersion"/></param>
             /// <returns><see cref="Org.Apache.Kafka.Metadata.Properties.MetaProperties.Builder"/></returns>
@@ -317,7 +317,7 @@ namespace Org.Apache.Kafka.Metadata.Properties
                 return IExecuteWithSignature<Org.Apache.Kafka.Metadata.Properties.MetaProperties.Builder>("setVersion", "(Lorg/apache/kafka/metadata/properties/MetaPropertiesVersion;)Lorg/apache/kafka/metadata/properties/MetaProperties$Builder;", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/metadata/properties/MetaProperties.Builder.html#version()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.4.0/org/apache/kafka/metadata/properties/MetaProperties.Builder.html#version()"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Metadata.Properties.MetaPropertiesVersion"/></returns>
             public Org.Apache.Kafka.Metadata.Properties.MetaPropertiesVersion Version()

@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Tools
 {
     #region ProducerPerformance declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.3.1/org/apache/kafka/tools/ProducerPerformance.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.4.0/org/apache/kafka/tools/ProducerPerformance.html"/>
     /// </summary>
     public partial class ProducerPerformance : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ProducerPerformance>, MASES.JCOBridge.C2JBridge.IJVMBridgeMain
     {
@@ -57,7 +57,7 @@ namespace Org.Apache.Kafka.Tools
         // TODO: complete the class
         #region KeyDistribution declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.3.1/org/apache/kafka/tools/ProducerPerformance.KeyDistribution.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.4.0/org/apache/kafka/tools/ProducerPerformance.KeyDistribution.html"/>
         /// </summary>
         public partial class KeyDistribution : Java.Lang.Enum<Org.Apache.Kafka.Tools.ProducerPerformance.KeyDistribution>
         {
@@ -98,7 +98,7 @@ namespace Org.Apache.Kafka.Tools
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.3.1/org/apache/kafka/tools/ProducerPerformance.html#%3Cinit%3E()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.4.0/org/apache/kafka/tools/ProducerPerformance.html#%3Cinit%3E()"/>
         /// </summary>
         public ProducerPerformance() : base(JVMBridgeBase.InitializerInstance)
         {
@@ -120,11 +120,11 @@ namespace Org.Apache.Kafka.Tools
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.3.1/org/apache/kafka/tools/ProducerPerformance.html#DEFAULT_TRANSACTION_ID_PREFIX"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.4.0/org/apache/kafka/tools/ProducerPerformance.html#DEFAULT_TRANSACTION_ID_PREFIX"/>
         /// </summary>
         public static Java.Lang.String DEFAULT_TRANSACTION_ID_PREFIX { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "DEFAULT_TRANSACTION_ID_PREFIX"); } set { SSetField(LocalBridgeClazz, "DEFAULT_TRANSACTION_ID_PREFIX", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.3.1/org/apache/kafka/tools/ProducerPerformance.html#DEFAULT_TRANSACTION_DURATION_MS"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.4.0/org/apache/kafka/tools/ProducerPerformance.html#DEFAULT_TRANSACTION_DURATION_MS"/>
         /// </summary>
         public static long DEFAULT_TRANSACTION_DURATION_MS { get { return SGetField<long>(LocalBridgeClazz, "DEFAULT_TRANSACTION_DURATION_MS"); } set { SSetField(LocalBridgeClazz, "DEFAULT_TRANSACTION_DURATION_MS", value); } }
 
@@ -132,7 +132,7 @@ namespace Org.Apache.Kafka.Tools
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.3.1/org/apache/kafka/tools/ProducerPerformance.html#main(java.lang.String[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.4.0/org/apache/kafka/tools/ProducerPerformance.html#main(java.lang.String[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <exception cref="Java.Lang.Exception"/>
@@ -161,15 +161,15 @@ namespace Org.Apache.Kafka.Tools
 
             #region Fields
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.3.1/org/apache/kafka/tools/ProducerPerformance.KeyDistribution.html#NONE"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.4.0/org/apache/kafka/tools/ProducerPerformance.KeyDistribution.html#NONE"/>
             /// </summary>
             public static Org.Apache.Kafka.Tools.ProducerPerformance.KeyDistribution NONE { get { return SGetField<Org.Apache.Kafka.Tools.ProducerPerformance.KeyDistribution>(LocalBridgeClazz, "NONE"); } set { SSetField(LocalBridgeClazz, "NONE", value); } }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.3.1/org/apache/kafka/tools/ProducerPerformance.KeyDistribution.html#RANDOM"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.4.0/org/apache/kafka/tools/ProducerPerformance.KeyDistribution.html#RANDOM"/>
             /// </summary>
             public static Org.Apache.Kafka.Tools.ProducerPerformance.KeyDistribution RANDOM { get { return SGetField<Org.Apache.Kafka.Tools.ProducerPerformance.KeyDistribution>(LocalBridgeClazz, "RANDOM"); } set { SSetField(LocalBridgeClazz, "RANDOM", value); } }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.3.1/org/apache/kafka/tools/ProducerPerformance.KeyDistribution.html#RANGE"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.4.0/org/apache/kafka/tools/ProducerPerformance.KeyDistribution.html#RANGE"/>
             /// </summary>
             public static Org.Apache.Kafka.Tools.ProducerPerformance.KeyDistribution RANGE { get { return SGetField<Org.Apache.Kafka.Tools.ProducerPerformance.KeyDistribution>(LocalBridgeClazz, "RANGE"); } set { SSetField(LocalBridgeClazz, "RANGE", value); } }
 
@@ -177,7 +177,7 @@ namespace Org.Apache.Kafka.Tools
 
             #region Static methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.3.1/org/apache/kafka/tools/ProducerPerformance.KeyDistribution.html#fromString(java.lang.String)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.4.0/org/apache/kafka/tools/ProducerPerformance.KeyDistribution.html#fromString(java.lang.String)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Lang.String"/></param>
             /// <returns><see cref="Org.Apache.Kafka.Tools.ProducerPerformance.KeyDistribution"/></returns>
@@ -186,7 +186,7 @@ namespace Org.Apache.Kafka.Tools
                 return SExecuteWithSignature<Org.Apache.Kafka.Tools.ProducerPerformance.KeyDistribution>(LocalBridgeClazz, "fromString", "(Ljava/lang/String;)Lorg/apache/kafka/tools/ProducerPerformance$KeyDistribution;", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.3.1/org/apache/kafka/tools/ProducerPerformance.KeyDistribution.html#valueOf(java.lang.String)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.4.0/org/apache/kafka/tools/ProducerPerformance.KeyDistribution.html#valueOf(java.lang.String)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Lang.String"/></param>
             /// <returns><see cref="Org.Apache.Kafka.Tools.ProducerPerformance.KeyDistribution"/></returns>
@@ -195,7 +195,7 @@ namespace Org.Apache.Kafka.Tools
                 return SExecuteWithSignature<Org.Apache.Kafka.Tools.ProducerPerformance.KeyDistribution>(LocalBridgeClazz, "valueOf", "(Ljava/lang/String;)Lorg/apache/kafka/tools/ProducerPerformance$KeyDistribution;", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.3.1/org/apache/kafka/tools/ProducerPerformance.KeyDistribution.html#values()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.4.0/org/apache/kafka/tools/ProducerPerformance.KeyDistribution.html#values()"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Tools.ProducerPerformance.KeyDistribution"/></returns>
             public static Org.Apache.Kafka.Tools.ProducerPerformance.KeyDistribution[] Values()

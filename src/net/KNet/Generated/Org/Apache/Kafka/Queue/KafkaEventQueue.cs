@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Queue
 {
     #region KafkaEventQueue declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/queue/KafkaEventQueue.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.4.0/org/apache/kafka/queue/KafkaEventQueue.html"/>
     /// </summary>
     public partial class KafkaEventQueue : Org.Apache.Kafka.Queue.EventQueue
     {
@@ -72,7 +72,7 @@ namespace Org.Apache.Kafka.Queue
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/queue/KafkaEventQueue.html#EVENT_HANDLER_THREAD_SUFFIX"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.4.0/org/apache/kafka/queue/KafkaEventQueue.html#EVENT_HANDLER_THREAD_SUFFIX"/>
         /// </summary>
         public static Java.Lang.String EVENT_HANDLER_THREAD_SUFFIX { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "EVENT_HANDLER_THREAD_SUFFIX"); } set { SSetField(LocalBridgeClazz, "EVENT_HANDLER_THREAD_SUFFIX", value); } }
 
@@ -84,7 +84,7 @@ namespace Org.Apache.Kafka.Queue
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/queue/KafkaEventQueue.html#size()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.4.0/org/apache/kafka/queue/KafkaEventQueue.html#size()"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int Size()
@@ -92,7 +92,7 @@ namespace Org.Apache.Kafka.Queue
             return IExecuteWithSignature<int>("size", "()I");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/queue/KafkaEventQueue.html#firstDeferredIfIdling()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.4.0/org/apache/kafka/queue/KafkaEventQueue.html#firstDeferredIfIdling()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Optional"/></returns>
         public Java.Util.Optional<Org.Apache.Kafka.Queue.EventQueue.Event> FirstDeferredIfIdling()
@@ -100,7 +100,7 @@ namespace Org.Apache.Kafka.Queue
             return IExecuteWithSignature<Java.Util.Optional<Org.Apache.Kafka.Queue.EventQueue.Event>>("firstDeferredIfIdling", "()Ljava/util/Optional;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/queue/KafkaEventQueue.html#time()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.4.0/org/apache/kafka/queue/KafkaEventQueue.html#time()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Utils.Time"/></returns>
         public Org.Apache.Kafka.Common.Utils.Time Time()
@@ -108,7 +108,7 @@ namespace Org.Apache.Kafka.Queue
             return IExecuteWithSignature<Org.Apache.Kafka.Common.Utils.Time>("time", "()Lorg/apache/kafka/common/utils/Time;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/queue/KafkaEventQueue.html#beginShutdown(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.4.0/org/apache/kafka/queue/KafkaEventQueue.html#beginShutdown(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         public void BeginShutdown(Java.Lang.String arg0)
@@ -116,7 +116,7 @@ namespace Org.Apache.Kafka.Queue
             IExecuteWithSignature("beginShutdown", "(Ljava/lang/String;)V", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/queue/KafkaEventQueue.html#cancelDeferred(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.4.0/org/apache/kafka/queue/KafkaEventQueue.html#cancelDeferred(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         public void CancelDeferred(Java.Lang.String arg0)
@@ -124,7 +124,7 @@ namespace Org.Apache.Kafka.Queue
             IExecuteWithSignature("cancelDeferred", "(Ljava/lang/String;)V", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/queue/KafkaEventQueue.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.4.0/org/apache/kafka/queue/KafkaEventQueue.html#close()"/>
         /// </summary>
         /// <exception cref="Java.Lang.InterruptedException"/>
         public void Close()
@@ -132,7 +132,7 @@ namespace Org.Apache.Kafka.Queue
             IExecuteWithSignature("close", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/queue/KafkaEventQueue.html#enqueue(org.apache.kafka.queue.EventQueue.EventInsertionType,java.lang.String,java.util.function.UnaryOperator,org.apache.kafka.queue.EventQueue.Event)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.4.0/org/apache/kafka/queue/KafkaEventQueue.html#enqueue(org.apache.kafka.queue.EventQueue.EventInsertionType,java.lang.String,java.util.function.UnaryOperator,org.apache.kafka.queue.EventQueue.Event)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Queue.EventQueue.EventInsertionType"/></param>
         /// <param name="arg1"><see cref="Java.Lang.String"/></param>
@@ -143,7 +143,7 @@ namespace Org.Apache.Kafka.Queue
             IExecuteWithSignature("enqueue", "(Lorg/apache/kafka/queue/EventQueue$EventInsertionType;Ljava/lang/String;Ljava/util/function/UnaryOperator;Lorg/apache/kafka/queue/EventQueue$Event;)V", arg0, arg1, arg2, arg3);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/queue/KafkaEventQueue.html#wakeup()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.4.0/org/apache/kafka/queue/KafkaEventQueue.html#wakeup()"/>
         /// </summary>
         public void Wakeup()
         {

@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.State
 {
     #region ReadOnlyRecordIterator declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/state/ReadOnlyRecordIterator.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.4.0/org/apache/kafka/streams/state/ReadOnlyRecordIterator.html"/>
     /// </summary>
     public partial class ReadOnlyRecordIterator : Java.Util.Iterator
     {
@@ -61,7 +61,7 @@ namespace Org.Apache.Kafka.Streams.State
 
     #region ReadOnlyRecordIterator<K, V> declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/state/ReadOnlyRecordIterator.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.4.0/org/apache/kafka/streams/state/ReadOnlyRecordIterator.html"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
@@ -120,7 +120,7 @@ namespace Org.Apache.Kafka.Streams.State
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/state/ReadOnlyRecordIterator.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.4.0/org/apache/kafka/streams/state/ReadOnlyRecordIterator.html#close()"/>
         /// </summary>
         public void Close()
         {
@@ -139,7 +139,7 @@ namespace Org.Apache.Kafka.Streams.State
 
     #region IReadOnlyRecordIterator<K, V>
     /// <summary>
-    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/state/ReadOnlyRecordIterator.html"/>
+    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.4.0/org/apache/kafka/streams/state/ReadOnlyRecordIterator.html"/>
     /// </summary>
     public partial interface IReadOnlyRecordIterator<K, V>
     {
@@ -184,7 +184,7 @@ namespace Org.Apache.Kafka.Streams.State
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/state/ReadOnlyRecordIterator.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.4.0/org/apache/kafka/streams/state/ReadOnlyRecordIterator.html#close()"/>
         /// </summary>
         public void Close()
         {
