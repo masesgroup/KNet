@@ -83,7 +83,7 @@ namespace MASES.KNet.Streams.State
             var r0 = _keySerDes.Serialize((Java.Lang.String)null, arg0);
             using var disposable0 = r0 as IDisposable;
 
-            return new WindowStoreIterator<V, TJVMV>(factory, Store.Fetch(r0, arg1, arg2));
+            return WindowStoreIterator<V, TJVMV>.Create(factory, Store.Fetch(r0, arg1, arg2));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#fetch(java.lang.Object,long)"/>
@@ -157,7 +157,7 @@ namespace MASES.KNet.Streams.State
             var r0 = _keySerDes.Serialize((Java.Lang.String)null, arg0);
             using var disposable0 = r0 as IDisposable;
 
-            return new WindowStoreIterator<V, TJVMV>(factory, Store.BackwardFetch(r0, arg1, arg2));
+            return WindowStoreIterator<V, TJVMV>.Create(factory, Store.BackwardFetch(r0, arg1, arg2));
         }
     }
 
