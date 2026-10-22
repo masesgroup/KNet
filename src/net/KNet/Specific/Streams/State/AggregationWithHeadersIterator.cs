@@ -34,7 +34,8 @@ namespace MASES.KNet.Streams.State
     /// <typeparam name="AGG">The key type</typeparam>
     /// <typeparam name="TJVMK">The JVM type of <typeparamref name="K"/></typeparam>
     /// <typeparam name="TJVMAGG">The JVM type of <typeparamref name="AGG"/></typeparam>
-    public sealed class AggregationWithHeadersIterator<K, AGG, TJVMK, TJVMAGG> : CommonIterator<AggregationWithHeaders<AGG, TJVMAGG>>, IKNetInnerReference<Org.Apache.Kafka.Streams.State.KeyValueIterator<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, Org.Apache.Kafka.Streams.State.AggregationWithHeaders<TJVMAGG>>>
+    public sealed class AggregationWithHeadersIterator<K, AGG, TJVMK, TJVMAGG> : CommonIterator<AggregationWithHeadersIterator<K, AGG, TJVMK, TJVMAGG>, AggregationWithHeaders<AGG, TJVMAGG>>, 
+                                                                                 IKNetInnerReference<Org.Apache.Kafka.Streams.State.KeyValueIterator<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, Org.Apache.Kafka.Streams.State.AggregationWithHeaders<TJVMAGG>>>
     {
 #if NET7_0_OR_GREATER
         sealed class PrefetchableLocalEnumerator(IGenericSerDesFactory factory,
@@ -114,9 +115,20 @@ namespace MASES.KNet.Streams.State
         Org.Apache.Kafka.Streams.State.KeyValueIterator<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, Org.Apache.Kafka.Streams.State.AggregationWithHeaders<TJVMAGG>> _iterator = null;
         ISerDes<K, TJVMK> _keySerDes;
 
-        internal AggregationWithHeadersIterator(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.State.KeyValueIterator<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, Org.Apache.Kafka.Streams.State.AggregationWithHeaders<TJVMAGG>> iterator)
-            : base(factory)
+        internal static AggregationWithHeadersIterator<K, AGG, TJVMK, TJVMAGG> Create(IGenericSerDesFactory factory, 
+                                                                                      Org.Apache.Kafka.Streams.State.KeyValueIterator<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, Org.Apache.Kafka.Streams.State.AggregationWithHeaders<TJVMAGG>> iterator)
         {
+            bool fromPool = false;
+            var instance = ObjectPool.Rent(ref fromPool);
+            instance.Setup(factory, iterator, fromPool);
+            return instance;
+        }
+
+        void Setup(IGenericSerDesFactory factory, 
+                   Org.Apache.Kafka.Streams.State.KeyValueIterator<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, Org.Apache.Kafka.Streams.State.AggregationWithHeaders<TJVMAGG>> iterator,
+                   bool fromPool)
+        {
+            _factory = factory;
             _iterator = iterator;
         }
 
@@ -128,6 +140,7 @@ namespace MASES.KNet.Streams.State
         {
             _iterator?.Dispose();
             _iterator = null;
+            ObjectPool.Return(this);
             base.Dispose(disposing);
         }
 

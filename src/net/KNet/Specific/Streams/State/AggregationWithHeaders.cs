@@ -44,7 +44,6 @@ namespace MASES.KNet.Streams.State
         internal static AggregationWithHeaders<AGG, TJVMAGG> Create(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.State.AggregationWithHeaders<TJVMAGG> aggregatationHeaders)
         {
             bool fromPool = false;
-            _pool.Rent(ref fromPool);
             var instance = _pool.Rent(ref fromPool);
             instance.Setup(factory, aggregatationHeaders, fromPool);
             return instance;

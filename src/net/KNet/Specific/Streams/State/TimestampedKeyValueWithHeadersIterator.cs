@@ -33,7 +33,8 @@ namespace MASES.KNet.Streams.State
     /// <typeparam name="V">The value type</typeparam>
     /// <typeparam name="TJVMK">The JVM type of <typeparamref name="K"/></typeparam>
     /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
-    public sealed class TimestampedKeyValueWithHeadersIterator<K, V, TJVMK, TJVMV> : CommonIterator<TimestampedKeyValueHeaders<K, V, TJVMK, TJVMV>>, IKNetInnerReference<Org.Apache.Kafka.Streams.State.KeyValueIterator<TJVMK, Org.Apache.Kafka.Streams.State.ValueTimestampHeaders<TJVMV>>>
+    public sealed class TimestampedKeyValueWithHeadersIterator<K, V, TJVMK, TJVMV> : CommonIterator<TimestampedKeyValueWithHeadersIterator<K, V, TJVMK, TJVMV>, TimestampedKeyValueHeaders<K, V, TJVMK, TJVMV>>, 
+                                                                                     IKNetInnerReference<Org.Apache.Kafka.Streams.State.KeyValueIterator<TJVMK, Org.Apache.Kafka.Streams.State.ValueTimestampHeaders<TJVMV>>>
     {
 #if NET7_0_OR_GREATER
         sealed class PrefetchableLocalEnumerator(IGenericSerDesFactory factory,
@@ -119,9 +120,18 @@ namespace MASES.KNet.Streams.State
         Org.Apache.Kafka.Streams.State.KeyValueIterator<TJVMK, Org.Apache.Kafka.Streams.State.ValueTimestampHeaders<TJVMV>> _iterator = null;
         ISerDes<K, TJVMK> _keySerDes;
 
-        internal TimestampedKeyValueWithHeadersIterator(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.State.KeyValueIterator<TJVMK, Org.Apache.Kafka.Streams.State.ValueTimestampHeaders<TJVMV>> iterator)
-            : base(factory)
+        internal static TimestampedKeyValueWithHeadersIterator<K, V, TJVMK, TJVMV> Create(IGenericSerDesFactory factory, 
+                                                                                          Org.Apache.Kafka.Streams.State.KeyValueIterator<TJVMK, Org.Apache.Kafka.Streams.State.ValueTimestampHeaders<TJVMV>> iterator)
         {
+            bool fromPool = false;
+            var instance = ObjectPool.Rent(ref fromPool);
+            instance.Setup(factory, iterator, fromPool);
+            return instance;
+        }
+
+        void Setup(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.State.KeyValueIterator<TJVMK, Org.Apache.Kafka.Streams.State.ValueTimestampHeaders<TJVMV>> iterator, bool fromPool)
+        {
+            _factory = factory;
             _iterator = iterator;
         }
 
@@ -133,6 +143,7 @@ namespace MASES.KNet.Streams.State
         {
             _iterator?.Dispose();
             _iterator = null;
+            ObjectPool.Return(this);
             base.Dispose(disposing);
         }
 
