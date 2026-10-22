@@ -52,9 +52,9 @@ namespace MASES.KNet.Streams.State
             {
                 if (input is IJavaObject obj)
                 {
-                    return new WindowedKeyValue<K, V, TJVMK, TJVMV>(_factory,
-                                                                    JVMBridgeBase.WrapsDirect<Org.Apache.Kafka.Streams.KeyValue<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, TJVMV>>(obj),
-                                                                    valueSerDes, true);
+                    return WindowedKeyValue<K, V, TJVMK, TJVMV>.Create(_factory,
+                                                                       JVMBridgeBase.WrapsDirect<Org.Apache.Kafka.Streams.KeyValue<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, TJVMV>>(obj),
+                                                                       valueSerDes, true);
                 }
                 throw new InvalidCastException($"input is not a valid IJavaObject");
             }
@@ -97,9 +97,9 @@ namespace MASES.KNet.Streams.State
             {
                 if (input is IJavaObject obj)
                 {
-                    return new WindowedKeyValue<K, V, TJVMK, TJVMV>(_factory,
-                                                                    JVMBridgeBase.WrapsDirect<Org.Apache.Kafka.Streams.KeyValue<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, TJVMV>>(obj),
-                                                                    _valueSerDes, false);
+                    return WindowedKeyValue<K, V, TJVMK, TJVMV>.Create(_factory,
+                                                                       JVMBridgeBase.WrapsDirect<Org.Apache.Kafka.Streams.KeyValue<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, TJVMV>>(obj),
+                                                                       _valueSerDes, false);
                 }
                 throw new InvalidCastException($"input is not a valid IJavaObject");
             }
@@ -164,7 +164,7 @@ namespace MASES.KNet.Streams.State
             _valueSerDes ??= factory?.BuildValueSerDes<V, TJVMV>();
             var kv = _iterator.Next();
             if (kv == null) return null;
-            return new WindowedKeyValue<K, V, TJVMK, TJVMV>(factory, kv, _valueSerDes, false);
+            return WindowedKeyValue<K, V, TJVMK, TJVMV>.Create(factory, kv, _valueSerDes, false);
         }
         /// <summary>
         /// <see href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Iterator.html#remove()"/>

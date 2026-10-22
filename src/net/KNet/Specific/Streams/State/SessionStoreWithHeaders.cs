@@ -82,7 +82,7 @@ namespace MASES.KNet.Streams.State
             using var disposable0 = r0 as IDisposable;
             using var disposable1 = agg as IDisposable;
 
-            return new AggregationWithHeaders<AGG, TJVMAGG>(Factory, agg);
+            return AggregationWithHeaders<AGG, TJVMAGG>.Create(Factory, agg);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/state/ReadOnlySessionStore.html#fetchSession(java.lang.Object,long,long)"/>
@@ -102,7 +102,7 @@ namespace MASES.KNet.Streams.State
             using var disposable0 = r0 as IDisposable;
             using var disposable1 = agg as IDisposable;
 
-            return new AggregationWithHeaders<AGG, TJVMAGG>(Factory, agg);
+            return AggregationWithHeaders<AGG, TJVMAGG>.Create(Factory, agg);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/state/ReadOnlySessionStore.html#backwardFetch(java.lang.Object,java.lang.Object)"/>

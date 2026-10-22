@@ -16,6 +16,7 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.JCOBridge.C2JBridge;
 using MASES.KNet.Serialization;
 using MASES.KNet.Streams.Kstream;
 using MASES.KNet.Streams.Processor.Api;
@@ -34,14 +35,29 @@ namespace MASES.KNet.Streams
     /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
     public sealed class TimestampedWindowedKeyValueWithHeaders<K, V, TJVMK, TJVMV> : IKNetInnerReference<Org.Apache.Kafka.Streams.KeyValue<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, Org.Apache.Kafka.Streams.State.ValueTimestampHeaders<TJVMV>>>, IGenericSerDesFactoryApplier, IDisposable
     {
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
+        static TimestampedWindowedKeyValueWithHeaders<K, V, TJVMK, TJVMV> Allocate() => new TimestampedWindowedKeyValueWithHeaders<K, V, TJVMK, TJVMV>();
+        static JCOBridgeObjectPool<TimestampedWindowedKeyValueWithHeaders<K, V, TJVMK, TJVMV>> _pool = new JCOBridgeObjectPool<TimestampedWindowedKeyValueWithHeaders<K, V, TJVMK, TJVMV>>(Allocate);
+
         Org.Apache.Kafka.Streams.KeyValue<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, Org.Apache.Kafka.Streams.State.ValueTimestampHeaders<TJVMV>> _valueInner;
         Windowed<K, TJVMK> _key = null;
         ValueTimestampHeaders<V, TJVMV> _value = null;
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set => _factory = value; }
 
-        internal TimestampedWindowedKeyValueWithHeaders(IGenericSerDesFactory factory,
-                                                        Org.Apache.Kafka.Streams.KeyValue<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, Org.Apache.Kafka.Streams.State.ValueTimestampHeaders<TJVMV>> value)
+        internal static TimestampedWindowedKeyValueWithHeaders<K, V, TJVMK, TJVMV> Create(IGenericSerDesFactory factory,
+                                                                                          Org.Apache.Kafka.Streams.KeyValue<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, Org.Apache.Kafka.Streams.State.ValueTimestampHeaders<TJVMV>> value)
+        {
+            bool fromPool = false;
+            _pool.Rent(ref fromPool);
+            var instance = _pool.Rent(ref fromPool);
+            instance.Setup(factory, value, fromPool);
+            return instance;
+        }
+
+        void Setup(IGenericSerDesFactory factory,
+                   Org.Apache.Kafka.Streams.KeyValue<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, Org.Apache.Kafka.Streams.State.ValueTimestampHeaders<TJVMV>> value,
+                   bool fromPool)
         {
             _factory = factory;
             _valueInner = value;
@@ -80,6 +96,7 @@ namespace MASES.KNet.Streams
                 _valueInner = default;
                 _key = null;
                 _value = null;
+                _pool.Return(this);
             }
         }
 

@@ -51,7 +51,7 @@ namespace MASES.KNet.Streams.State
             {
                 if (input is IJavaObject obj)
                 {
-                    return new TimestampedWindowedKeyValueWithHeaders<K, V, TJVMK, TJVMV>(_factory, JVMBridgeBase.WrapsDirect<Org.Apache.Kafka.Streams.KeyValue<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, Org.Apache.Kafka.Streams.State.ValueTimestampHeaders<TJVMV>>>(obj));
+                    return TimestampedWindowedKeyValueWithHeaders<K, V, TJVMK, TJVMV>.Create(_factory, JVMBridgeBase.WrapsDirect<Org.Apache.Kafka.Streams.KeyValue<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, Org.Apache.Kafka.Streams.State.ValueTimestampHeaders<TJVMV>>>(obj));
                 }
                 throw new InvalidCastException($"input is not a valid IJavaObject");
             }
@@ -90,7 +90,7 @@ namespace MASES.KNet.Streams.State
             {
                 if (input is IJavaObject obj)
                 {
-                    return new TimestampedWindowedKeyValueWithHeaders<K, V, TJVMK, TJVMV>(_factory, JVMBridgeBase.WrapsDirect<Org.Apache.Kafka.Streams.KeyValue<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, Org.Apache.Kafka.Streams.State.ValueTimestampHeaders<TJVMV>>>(obj));
+                    return TimestampedWindowedKeyValueWithHeaders<K, V, TJVMK, TJVMV>.Create(_factory, JVMBridgeBase.WrapsDirect<Org.Apache.Kafka.Streams.KeyValue<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, Org.Apache.Kafka.Streams.State.ValueTimestampHeaders<TJVMV>>>(obj));
                 }
                 throw new InvalidCastException($"input is not a valid IJavaObject");
             }
@@ -151,7 +151,7 @@ namespace MASES.KNet.Streams.State
         {
             var kv = _iterator.Next();
             if (kv == null) return null;
-            return new TimestampedWindowedKeyValueWithHeaders<K, V, TJVMK, TJVMV>(Factory, kv);
+            return TimestampedWindowedKeyValueWithHeaders<K, V, TJVMK, TJVMV>.Create(Factory, kv);
         }
         /// <summary>
         /// <see href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Iterator.html#remove()"/>
