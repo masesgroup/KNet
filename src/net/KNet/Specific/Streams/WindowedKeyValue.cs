@@ -63,6 +63,11 @@ namespace MASES.KNet.Streams
                    bool fromPrefetched,
                    bool fromPool)
         {
+            if (fromPool)
+            {
+                Interlocked.Exchange(ref _disposed, 0);
+                GC.ReRegisterForFinalize(this);
+            }
             _factory = factory;
             _valueInner = value;
             _valueSerDes = valueSerDes;

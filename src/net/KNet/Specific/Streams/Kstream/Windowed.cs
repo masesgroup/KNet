@@ -49,6 +49,11 @@ namespace MASES.KNet.Streams.Kstream
 
         void Setup(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK> windowed, bool fromPool)
         {
+            if (fromPool)
+            {
+                Interlocked.Exchange(ref _disposed, 0);
+                GC.ReRegisterForFinalize(this);
+            }
             _factory = factory;
             _inner = windowed;
         }
