@@ -30,7 +30,7 @@ namespace MASES.KNet.Streams.State
     /// </summary>
     /// <typeparam name="AGG">The value type</typeparam>
     /// <typeparam name="TJVMAGG">The JVM type of <typeparamref name="AGG"/></typeparam>
-    public class AggregationWithHeaders<AGG, TJVMAGG> : IKNetInnerReference<Org.Apache.Kafka.Streams.State.AggregationWithHeaders<TJVMAGG>>, IGenericSerDesFactoryApplier, IDisposable
+    public sealed class AggregationWithHeaders<AGG, TJVMAGG> : IKNetInnerReference<Org.Apache.Kafka.Streams.State.AggregationWithHeaders<TJVMAGG>>, IGenericSerDesFactoryApplier, IDisposable
     {
         [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         static AggregationWithHeaders<AGG, TJVMAGG> Allocate() => new AggregationWithHeaders<AGG, TJVMAGG>();
@@ -53,7 +53,7 @@ namespace MASES.KNet.Streams.State
         {
             if (fromPool)
             {
-                Interlocked.Exchange(ref _disposed, 0);
+                _disposed = 0;
                 GC.ReRegisterForFinalize(this);
             }
             _factory = factory;

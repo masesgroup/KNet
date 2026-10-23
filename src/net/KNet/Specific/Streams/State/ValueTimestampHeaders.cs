@@ -30,7 +30,7 @@ namespace MASES.KNet.Streams.State
     /// </summary>
     /// <typeparam name="V">The value type</typeparam>
     /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
-    public class ValueTimestampHeaders<V, TJVMV> : IKNetInnerReference<Org.Apache.Kafka.Streams.State.ValueTimestampHeaders<TJVMV>>, IGenericSerDesFactoryApplier, IDisposable
+    public sealed class ValueTimestampHeaders<V, TJVMV> : IKNetInnerReference<Org.Apache.Kafka.Streams.State.ValueTimestampHeaders<TJVMV>>, IGenericSerDesFactoryApplier, IDisposable
     {
         [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         static ValueTimestampHeaders<V, TJVMV> Allocate() => new ValueTimestampHeaders<V, TJVMV>();
@@ -53,7 +53,7 @@ namespace MASES.KNet.Streams.State
         {
             if (fromPool)
             {
-                Interlocked.Exchange(ref _disposed, 0);
+                _disposed = 0;
                 GC.ReRegisterForFinalize(this);
             }
             _factory = factory;

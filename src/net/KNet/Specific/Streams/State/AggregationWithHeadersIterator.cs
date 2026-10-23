@@ -128,6 +128,11 @@ namespace MASES.KNet.Streams.State
                    Org.Apache.Kafka.Streams.State.KeyValueIterator<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, Org.Apache.Kafka.Streams.State.AggregationWithHeaders<TJVMAGG>> iterator,
                    bool fromPool)
         {
+            if (fromPool)
+            {
+                _disposed = 0;
+                GC.ReRegisterForFinalize(this);
+            }
             _factory = factory;
             _iterator = iterator;
         }
