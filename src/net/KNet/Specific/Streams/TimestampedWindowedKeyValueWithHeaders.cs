@@ -39,11 +39,28 @@ namespace MASES.KNet.Streams
         static TimestampedWindowedKeyValueWithHeaders<K, V, TJVMK, TJVMV> Allocate() => new TimestampedWindowedKeyValueWithHeaders<K, V, TJVMK, TJVMV>();
         static JCOBridgeObjectPool<TimestampedWindowedKeyValueWithHeaders<K, V, TJVMK, TJVMV>> _pool = new JCOBridgeObjectPool<TimestampedWindowedKeyValueWithHeaders<K, V, TJVMK, TJVMV>>(Allocate);
 
-        Org.Apache.Kafka.Streams.KeyValue<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, Org.Apache.Kafka.Streams.State.ValueTimestampHeaders<TJVMV>> _valueInner;
-        Windowed<K, TJVMK> _key = null;
-        ValueTimestampHeaders<V, TJVMV> _value = null;
-        IGenericSerDesFactory _factory;
-        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set => _factory = value; }
+        struct TimestampedWindowedKeyValueWithHeadersState
+        {
+            public TimestampedWindowedKeyValueWithHeadersState(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.KeyValue<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, Org.Apache.Kafka.Streams.State.ValueTimestampHeaders<TJVMV>> inner)
+            {
+                Factory = factory;
+                Inner = inner;
+            }
+
+            public Org.Apache.Kafka.Streams.KeyValue<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, Org.Apache.Kafka.Streams.State.ValueTimestampHeaders<TJVMV>> Inner;
+            public Windowed<K, TJVMK> Key;
+            public ValueTimestampHeaders<V, TJVMV> Value;
+            public IGenericSerDesFactory Factory;
+
+            public void Dispose()
+            {
+                Inner?.Dispose();
+            }
+        }
+
+        TimestampedWindowedKeyValueWithHeadersState _state;
+
+        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _state.Factory; set => _state.Factory = value; }
 
         internal static TimestampedWindowedKeyValueWithHeaders<K, V, TJVMK, TJVMV> Create(IGenericSerDesFactory factory,
                                                                                           Org.Apache.Kafka.Streams.KeyValue<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, Org.Apache.Kafka.Streams.State.ValueTimestampHeaders<TJVMV>> value)
@@ -55,20 +72,19 @@ namespace MASES.KNet.Streams
         }
 
         void Setup(IGenericSerDesFactory factory,
-                   Org.Apache.Kafka.Streams.KeyValue<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, Org.Apache.Kafka.Streams.State.ValueTimestampHeaders<TJVMV>> value,
+                   Org.Apache.Kafka.Streams.KeyValue<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, Org.Apache.Kafka.Streams.State.ValueTimestampHeaders<TJVMV>> inner,
                    bool fromPool)
         {
             if (fromPool)
             {
-                _disposed = 0;
+                Interlocked.Exchange(ref _disposed, 0);
                 GC.ReRegisterForFinalize(this);
             }
-            _factory = factory;
-            _valueInner = value;
+            _state = new TimestampedWindowedKeyValueWithHeadersState(factory, inner);
         }
 
         /// <inheritdoc/>
-        public Org.Apache.Kafka.Streams.KeyValue<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, Org.Apache.Kafka.Streams.State.ValueTimestampHeaders<TJVMV>> InnerReference => _valueInner;
+        public Org.Apache.Kafka.Streams.KeyValue<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, Org.Apache.Kafka.Streams.State.ValueTimestampHeaders<TJVMV>> InnerReference => _state.Inner;
 
         volatile int _disposed; // 0 = live, 1 = disposed
         /// <summary>
@@ -96,12 +112,8 @@ namespace MASES.KNet.Streams
 
             if (disposing)
             {
-                _valueInner?.Dispose();
-                _valueInner = default;
-                _key?.Dispose();
-                _key = null;
-                _value?.Dispose();
-                _value = null;
+                _state.Dispose();
+                _state = default;
                 _pool.Return(this);
             }
         }
@@ -114,8 +126,8 @@ namespace MASES.KNet.Streams
             get
             {
                 CheckDisposed();
-                _key ??= Windowed<K, TJVMK>.Create(_factory, _valueInner.key);
-                return _key;
+                _state.Key ??= Windowed<K, TJVMK>.Create(_state.Factory, _state.Inner.key);
+                return _state.Key;
             }
         }
         /// <summary>
@@ -126,8 +138,8 @@ namespace MASES.KNet.Streams
             get
             {
                 CheckDisposed();
-                _value ??= ValueTimestampHeaders<V, TJVMV>.Create(_factory, _valueInner.value);
-                return _value;
+                _state.Value ??= ValueTimestampHeaders<V, TJVMV>.Create(_state.Factory, _state.Inner.value);
+                return _state.Value;
             }
         }
     }
