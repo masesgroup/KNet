@@ -50,7 +50,7 @@ namespace MASES.KNet.Consumer
         {
             if (fromPool)
             {
-                _disposed = 0;
+                Interlocked.Exchange(ref _disposed, 0);
                 GC.ReRegisterForFinalize(this);
             }
             _records = records;
@@ -71,7 +71,7 @@ namespace MASES.KNet.Consumer
         {
             if (fromPool)
             {
-                _disposed = 0;
+                Interlocked.Exchange(ref _disposed, 0);
                 GC.ReRegisterForFinalize(this);
             }
             _records = records;
