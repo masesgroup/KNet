@@ -84,7 +84,7 @@ namespace MASES.KNet.Consumer
         }
 
         /// <inheritdoc/>
-        public Org.Apache.Kafka.Clients.Consumer.ConsumerRecords<TJVMK, TJVMV> InnerReference => _records;
+        public Org.Apache.Kafka.Clients.Consumer.ConsumerRecords<TJVMK, TJVMV> InnerReference => _state.Records;
 
         volatile int _disposed; // 0 = live, 1 = disposed
         /// <summary>
