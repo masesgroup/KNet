@@ -29,22 +29,40 @@ namespace MASES.KNet.Streams.State
     /// <summary>
     /// A common class for all iterators
     /// </summary>
-    /// <typeparam name="TIterator">The class implementing <see cref="CommonIterator{TIterator, TIteratorType}"/></typeparam>
+    /// <typeparam name="TIterator">The class implementing <see cref="CommonIterator{TIterator, TIteratorType, TNativeIterator}"/></typeparam>
     /// <typeparam name="TIteratorType">The return <see cref="Type"/> of <see cref="IEnumerable{T}"/> and <see cref="IAsyncEnumerable{T}"/></typeparam>
-    public abstract class CommonIterator<TIterator, TIteratorType> : IGenericSerDesFactoryApplier, IEnumerable<TIteratorType>, IAsyncEnumerable<TIteratorType>, IDisposable, IAsyncDisposable
-        where TIterator: CommonIterator<TIterator, TIteratorType>, new()
+    /// <typeparam name="TNativeIterator">The underlying native iterator</typeparam>
+    public abstract class CommonIterator<TIterator, TIteratorType, TNativeIterator> : IGenericSerDesFactoryApplier, IEnumerable<TIteratorType>, IAsyncEnumerable<TIteratorType>, IDisposable, IAsyncDisposable,
+                                                                                      IKNetInnerReference<TNativeIterator>
+        where TIterator: CommonIterator<TIterator, TIteratorType, TNativeIterator>, new()
+        where TNativeIterator : class, IDisposable
     {
         [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         static TIterator Allocate() => new TIterator();
+        /// <summary>
+        /// Initialize <see cref="CommonIterator{TIterator, TIteratorType, TNativeIterator}"/>
+        /// </summary>
+        /// <param name="factory"></param>
+        /// <param name="iterator"></param>
+        /// <param name="fromPool"></param>
+        protected void Setup(IGenericSerDesFactory factory, TNativeIterator iterator, bool fromPool)
+        {
+            if (fromPool)
+            {
+                _disposed = 0;
+                GC.ReRegisterForFinalize(this);
+            }
+            _iterator = iterator;
+            _factory = factory;
+        }
+
         /// <summary>
         /// Pool of objects managed from <see cref="JCOBridgeObjectPool{TIterator}"/>
         /// </summary>
         protected static JCOBridgeObjectPool<TIterator> ObjectPool = new JCOBridgeObjectPool<TIterator>(Allocate);
 
-        /// <summary>
-        /// The <see cref="IGenericSerDesFactory"/> factory received
-        /// </summary>
-        protected IGenericSerDesFactory _factory;
+        TNativeIterator _iterator;
+        IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set => _factory = value; }
         /// <summary>
         /// Returns the current <see cref="IGenericSerDesFactory"/>
@@ -61,6 +79,10 @@ namespace MASES.KNet.Streams.State
                 return factory;
             }
         }
+
+        /// <inheritdoc/>
+        public TNativeIterator InnerReference => _iterator;
+
         /// <summary>
         /// Stores the disposed status
         /// </summary>
@@ -87,6 +109,9 @@ namespace MASES.KNet.Streams.State
         {
             if (Interlocked.Exchange(ref _disposed, 1) != 0)
                 return;
+
+            _iterator?.Dispose();
+            _iterator = null;
         }
         /// <inheritdoc cref="IAsyncDisposable.DisposeAsync"/>
         public ValueTask DisposeAsync()

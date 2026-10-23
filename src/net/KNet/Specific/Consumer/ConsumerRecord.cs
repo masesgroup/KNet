@@ -36,11 +36,49 @@ namespace MASES.KNet.Consumer
         static ConsumerRecord<K, V, TJVMK, TJVMV> Allocate() => new ConsumerRecord<K, V, TJVMK, TJVMV>();
         static JCOBridgeObjectPool<ConsumerRecord<K, V, TJVMK, TJVMV>> _pool = new JCOBridgeObjectPool<ConsumerRecord<K, V, TJVMK, TJVMV>>(Allocate);
 
-        IDeserializer<K, TJVMK> _keyDeserializer;
-        IDeserializer<V, TJVMV> _valueDeserializer;
-        Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<TJVMK, TJVMV> _record;
-        IGenericSerDesFactory _factory;
-        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set => _factory = value; }
+        struct ConsumerRecordState
+        {
+            public ConsumerRecordState(Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<TJVMK, TJVMV> record, IDeserializer<K, TJVMK> keyDeserializer, IDeserializer<V, TJVMV> valueDeserializer)
+            {
+                Record = record;
+                KeyDeserializer = keyDeserializer;
+                ValueDeserializer = valueDeserializer;
+            }
+
+            public ConsumerRecordState(Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<TJVMK, TJVMV> record, IGenericSerDesFactory factory)
+            {
+                Record = record;
+                Factory = factory;
+            }
+
+            public Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<TJVMK, TJVMV> Record;
+            public IDeserializer<K, TJVMK> KeyDeserializer;
+            public IDeserializer<V, TJVMV> ValueDeserializer;
+
+            public string Topic;
+            public int? Partition;
+            public Org.Apache.Kafka.Common.Header.Headers Headers;
+            public long? Offset;
+            public long? Timestamp;
+            public Org.Apache.Kafka.Common.Record.TimestampType TimestampType;
+            public int? SerializedKeySize;
+            public int? SerializedValueSize;
+            public bool LocalKeyDes;
+            public K LocalKey;
+            public bool LocalValueDes;
+            public V LocalValue;
+
+            public IGenericSerDesFactory Factory;
+
+            public void Dispose()
+            {
+                Record?.Dispose();
+            }
+        }
+
+        ConsumerRecordState _state;
+
+        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _state.Factory; set => _state.Factory = value; }
 
         internal static ConsumerRecord<K, V, TJVMK, TJVMV> Create(Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<TJVMK, TJVMV> record, IDeserializer<K, TJVMK> keyDeserializer, IDeserializer<V, TJVMV> valueDeserializer, bool fromPrefetched)
         {
@@ -67,9 +105,9 @@ namespace MASES.KNet.Consumer
                 _disposed = 0;
                 GC.ReRegisterForFinalize(this);
             }
-            _record = record;
-            _keyDeserializer = keyDeserializer;
-            _valueDeserializer = valueDeserializer;
+
+            _state = new ConsumerRecordState(record, keyDeserializer, valueDeserializer);
+
             if (fromPrefetched)
             {
                 // the following lines will read and prepares Key, Value, Topic, Headers
@@ -99,11 +137,10 @@ namespace MASES.KNet.Consumer
                 _disposed = 0;
                 GC.ReRegisterForFinalize(this);
             }
-            _record = record;
-            _factory = factory;
+            _state = new ConsumerRecordState(record, factory);
         }
         /// <inheritdoc/>
-        public Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<TJVMK, TJVMV> InnerReference => _record;
+        public Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<TJVMK, TJVMV> InnerReference => _state.Record;
 
         volatile int _disposed; // 0 = live, 1 = disposed
         /// <summary>
@@ -131,37 +168,24 @@ namespace MASES.KNet.Consumer
 
             if (disposing)
             {
-                _record?.Dispose();
-                _record = null;
-                _headers = null;
-                _topic = null;
-                _partition = null;
-                _offset = null;
-                _timestamp = null;
-                _timestampType = null;
-                _serializedKeySize = null;
-                _serializedValueSize = null;
-                _localKeyDes = false;
-                _localKey = default;
-                _localValueDes = false;
-                _localValue = default;
+                _state.Dispose();
+                _state = default;
                 _pool.Return(this);
             }
         }
 
-        string _topic = null;
         /// <inheritdoc cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRecord{K, V}.Topic"/>
         public string Topic
         {
             get
             {
                 CheckDisposed(); 
-                if (_topic == null)
+                if (_state.Topic == null)
                 {
-                    using var topic = _record.Topic();
-                    _topic = topic;
+                    using var topic = _state.Record.Topic();
+                    _state.Topic = topic;
                 }
-                return _topic;
+                return _state.Topic;
             }
         }
         /// <inheritdoc cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRecord{K, V}.LeaderEpoch"/>
@@ -170,7 +194,7 @@ namespace MASES.KNet.Consumer
             get
             {
                 CheckDisposed();
-                using var epoch = _record.LeaderEpoch();
+                using var epoch = _state.Record.LeaderEpoch();
                 if (epoch.IsPresent())
                 {
                     using var integer = epoch.Get();
@@ -179,31 +203,28 @@ namespace MASES.KNet.Consumer
                 return null;
             }
         }
-        int? _partition = null;
         /// <inheritdoc cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRecord{K, V}.Partition"/>
         public int Partition
         {
             get
             {
-                CheckDisposed(); return _partition ??= _record.Partition();
+                CheckDisposed(); return _state.Partition ??= _state.Record.Partition();
             }
         }
-        Org.Apache.Kafka.Common.Header.Headers _headers = null;
         /// <inheritdoc cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRecord{K, V}.Headers"/>
         public Org.Apache.Kafka.Common.Header.Headers Headers
         {
             get
             {
-                CheckDisposed(); return _headers ??= _record.Headers();
+                CheckDisposed(); return _state.Headers ??= _state.Record.Headers();
             }
         }
-        long? _offset = null;
         /// <inheritdoc cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRecord{K, V}.Offset"/>
         public long Offset
         {
             get
             {
-                CheckDisposed(); return _offset ??= _record.Offset();
+                CheckDisposed(); return _state.Offset ??= _state.Record.Offset();
             }
         }
         /// <inheritdoc cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRecord{K, V}.DateTime"/>
@@ -211,89 +232,81 @@ namespace MASES.KNet.Consumer
         {
             get
             {
-                CheckDisposed(); return _record.DateTime;
+                CheckDisposed(); return _state.Record.DateTime;
             }
         }
-        long? _timestamp = null;
         /// <inheritdoc cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRecord{K, V}.Timestamp"/>
         public long Timestamp
         {
             get
             {
-                CheckDisposed(); return _timestamp ??= _record.Timestamp();
+                CheckDisposed(); return _state.Timestamp ??= _state.Record.Timestamp();
             }
         }
-        Org.Apache.Kafka.Common.Record.TimestampType _timestampType = null;
         /// <inheritdoc cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRecord{K, V}.TimestampType"/>
         public Org.Apache.Kafka.Common.Record.TimestampType TimestampType
         {
             get
             {
-                CheckDisposed(); return _timestampType ??= _record.TimestampType();
+                CheckDisposed(); return _state.TimestampType ??= _state.Record.TimestampType();
             }
         }
-        int? _serializedKeySize = null;
         /// <inheritdoc cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRecord{K, V}.SerializedKeySize"/>
         public int SerializedKeySize
         {
             get
             {
-                CheckDisposed(); return _serializedKeySize ??= _record.SerializedKeySize();
+                CheckDisposed(); return _state.SerializedKeySize ??= _state.Record.SerializedKeySize();
             }
         }
-        int? _serializedValueSize = null;
         /// <inheritdoc cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRecord{K, V}.SerializedValueSize"/>
         public int SerializedValueSize
         {
             get
             {
-                CheckDisposed(); return _serializedValueSize ??= _record.SerializedValueSize();
+                CheckDisposed(); return _state.SerializedValueSize ??= _state.Record.SerializedValueSize();
             }
         }
 
-        bool _localKeyDes = false;
-        K _localKey = default;
         /// <inheritdoc cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRecord{K, V}.Key"/>
         public K Key
         {
             get
             {
                 CheckDisposed();
-                if (!_localKeyDes)
+                if (!_state.LocalKeyDes)
                 {
-                    _keyDeserializer ??= _factory?.BuildKeySerDes<K, TJVMK>();
-                    using var topic = _record.Topic();
-                    using var headers = _record.Headers();
-                    var key = _record.Key();
+                    _state.KeyDeserializer ??= _state.Factory?.BuildKeySerDes<K, TJVMK>();
+                    using var topic = _state.Record.Topic();
+                    using var headers = _state.Record.Headers();
+                    var key = _state.Record.Key();
                     using var disposable = key as IDisposable;
-                    _localKey = _keyDeserializer.UseHeaders ? _keyDeserializer.DeserializeWithHeaders(topic, headers, key)
-                                                            : _keyDeserializer.Deserialize(topic, key);
-                    _localKeyDes = true;
+                    _state.LocalKey = _state.KeyDeserializer.UseHeaders ? _state.KeyDeserializer.DeserializeWithHeaders(topic, headers, key)
+                                                                        : _state.KeyDeserializer.Deserialize(topic, key);
+                    _state.LocalKeyDes = true;
                 }
-                return _localKey;
+                return _state.LocalKey;
             }
         }
 
-        bool _localValueDes = false;
-        V _localValue = default;
         /// <inheritdoc cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRecord{K, V}.Value"/>
         public V Value
         {
             get
             {
                 CheckDisposed();
-                if (!_localValueDes)
+                if (!_state.LocalValueDes)
                 {
-                    _valueDeserializer ??= _factory?.BuildValueSerDes<V, TJVMV>();
-                    using var topic = _record.Topic();
-                    using var headers = _record.Headers();
-                    var value = _record.Value();
+                    _state.ValueDeserializer ??= _state.Factory?.BuildValueSerDes<V, TJVMV>();
+                    using var topic = _state.Record.Topic();
+                    using var headers = _state.Record.Headers();
+                    var value = _state.Record.Value();
                     using var disposable = value as IDisposable;
-                    _localValue = _valueDeserializer.UseHeaders ? _valueDeserializer.DeserializeWithHeaders(topic, headers, value)
-                                                                : _valueDeserializer.Deserialize(topic, value);
-                    _localValueDes = true;
+                    _state.LocalValue = _state.ValueDeserializer.UseHeaders ? _state.ValueDeserializer.DeserializeWithHeaders(topic, headers, value)
+                                                                            : _state.ValueDeserializer.Deserialize(topic, value);
+                    _state.LocalValueDes = true;
                 }
-                return _localValue;
+                return _state.LocalValue;
             }
         }
         /// <inheritdoc cref="object.ToString"/>
