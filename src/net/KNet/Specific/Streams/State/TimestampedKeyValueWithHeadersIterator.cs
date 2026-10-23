@@ -33,8 +33,7 @@ namespace MASES.KNet.Streams.State
     /// <typeparam name="V">The value type</typeparam>
     /// <typeparam name="TJVMK">The JVM type of <typeparamref name="K"/></typeparam>
     /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
-    public sealed class TimestampedKeyValueWithHeadersIterator<K, V, TJVMK, TJVMV> : CommonIterator<TimestampedKeyValueWithHeadersIterator<K, V, TJVMK, TJVMV>, TimestampedKeyValueHeaders<K, V, TJVMK, TJVMV>>, 
-                                                                                     IKNetInnerReference<Org.Apache.Kafka.Streams.State.KeyValueIterator<TJVMK, Org.Apache.Kafka.Streams.State.ValueTimestampHeaders<TJVMV>>>
+    public sealed class TimestampedKeyValueWithHeadersIterator<K, V, TJVMK, TJVMV> : CommonIterator<TimestampedKeyValueWithHeadersIterator<K, V, TJVMK, TJVMV>, TimestampedKeyValueHeaders<K, V, TJVMK, TJVMV>, Org.Apache.Kafka.Streams.State.KeyValueIterator<TJVMK, Org.Apache.Kafka.Streams.State.ValueTimestampHeaders<TJVMV>>>
     {
 #if NET7_0_OR_GREATER
         sealed class PrefetchableLocalEnumerator(IGenericSerDesFactory factory,
@@ -117,7 +116,6 @@ namespace MASES.KNet.Streams.State
             }
         }
 
-        Org.Apache.Kafka.Streams.State.KeyValueIterator<TJVMK, Org.Apache.Kafka.Streams.State.ValueTimestampHeaders<TJVMV>> _iterator = null;
         ISerDes<K, TJVMK> _keySerDes;
 
         internal static TimestampedKeyValueWithHeadersIterator<K, V, TJVMK, TJVMV> Create(IGenericSerDesFactory factory, 
@@ -129,27 +127,12 @@ namespace MASES.KNet.Streams.State
             return instance;
         }
 
-        void Setup(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.State.KeyValueIterator<TJVMK, Org.Apache.Kafka.Streams.State.ValueTimestampHeaders<TJVMV>> iterator, bool fromPool)
-        {
-            if (fromPool)
-            {
-                _disposed = 0;
-                GC.ReRegisterForFinalize(this);
-            }
-            _factory = factory;
-            _iterator = iterator;
-        }
-
-        /// <inheritdoc/>
-        public Org.Apache.Kafka.Streams.State.KeyValueIterator<TJVMK, Org.Apache.Kafka.Streams.State.ValueTimestampHeaders<TJVMV>> InnerReference => _iterator;
-
         /// <inheritdoc/>
         protected override void Dispose(bool disposing)
         {
-            _iterator?.Dispose();
-            _iterator = null;
-            ObjectPool.Return(this);
             base.Dispose(disposing);
+            _keySerDes = null;
+            ObjectPool.Return(this);
         }
 
         /// <inheritdoc/>
@@ -160,15 +143,15 @@ namespace MASES.KNet.Streams.State
 #if NET7_0_OR_GREATER
             if (usePrefetch)
             {
-                return new PrefetchableLocalEnumerator(_factory, _iterator.BridgeInstance, _keySerDes, isAsync, cancellationToken);
+                return new PrefetchableLocalEnumerator(_factory, InnerReference.BridgeInstance, _keySerDes, isAsync, cancellationToken);
             }
 #endif
-            return new StandardLocalEnumerator(_factory, _iterator.BridgeInstance, _keySerDes);
+            return new StandardLocalEnumerator(_factory, InnerReference.BridgeInstance, _keySerDes);
         }
         /// <summary>
         /// KNet implementation of <see href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Iterator.html#hasNext()"/> 
         /// </summary>
-        public bool HasNext() => _iterator.HasNext();
+        public bool HasNext() => InnerReference.HasNext();
         /// <summary>
         /// KNet implementation of <see href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Iterator.html#next()"/> 
         /// </summary>
@@ -176,7 +159,7 @@ namespace MASES.KNet.Streams.State
         {
             IGenericSerDesFactory factory = Factory;
             _keySerDes ??= factory?.BuildKeySerDes<K, TJVMK>();
-            var kv = _iterator.Next();
+            var kv = InnerReference.Next();
             if (kv == null) return null;
             return TimestampedKeyValueHeaders<K, V, TJVMK, TJVMV>.Create(factory, kv, _keySerDes, false);
         }
@@ -185,7 +168,7 @@ namespace MASES.KNet.Streams.State
         /// </summary>
         public void Remove()
         {
-            _iterator.Remove();
+            InnerReference.Remove();
         }
         /// <summary>
         /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/state/KeyValueIterator.html#peekNextKey()"/>
@@ -194,7 +177,7 @@ namespace MASES.KNet.Streams.State
         public K PeekNextKey()
         {
             _keySerDes ??= Factory?.BuildKeySerDes<K, TJVMK>();
-            var kk = _iterator.PeekNextKey();
+            var kk = InnerReference.PeekNextKey();
             using var disposable0 = kk as IDisposable;
 
             return _keySerDes.Deserialize((Java.Lang.String)null, kk);
@@ -204,7 +187,7 @@ namespace MASES.KNet.Streams.State
         /// </summary>
         public void Close()
         {
-            _iterator.Close();
+            InnerReference.Close();
         }
     }
 }
