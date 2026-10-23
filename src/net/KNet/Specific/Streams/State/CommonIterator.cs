@@ -61,8 +61,10 @@ namespace MASES.KNet.Streams.State
                 return factory;
             }
         }
-
-        volatile int _disposed; // 0 = live, 1 = disposed
+        /// <summary>
+        /// Stores the disposed status
+        /// </summary>
+        protected volatile int _disposed; // 0 = live, 1 = disposed
         /// <summary>
         /// Test if this instance was disposed
         /// </summary>
