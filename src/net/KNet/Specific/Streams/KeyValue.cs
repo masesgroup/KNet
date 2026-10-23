@@ -36,15 +36,33 @@ namespace MASES.KNet.Streams
         static KeyValue<K, V, TJVMK, TJVMV> Allocate() => new KeyValue<K, V, TJVMK, TJVMV>();
         static JCOBridgeObjectPool<KeyValue<K, V, TJVMK, TJVMV>> _pool = new JCOBridgeObjectPool<KeyValue<K, V, TJVMK, TJVMV>>(Allocate);
 
-        Org.Apache.Kafka.Streams.KeyValue<TJVMK, TJVMV> _inner = null;
-        K _key;
-        bool _keyStored;
-        V _value;
-        bool _valueStored;
-        ISerDes<K, TJVMK> _keySerDes = null;
-        ISerDes<V, TJVMV> _valueSerDes = null;
-        IGenericSerDesFactory _factory;
-        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set => _factory = value; }
+        struct KeyValueState
+        {
+            public KeyValueState(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.KeyValue<TJVMK, TJVMV> inner, ISerDes<K, TJVMK> keySerDes, ISerDes<V, TJVMV> valueSerDes)
+            {
+                Factory = factory;
+                Inner = inner;
+                KeySerDes = keySerDes;
+                ValueSerDes = valueSerDes;
+            }
+            public Org.Apache.Kafka.Streams.KeyValue<TJVMK, TJVMV> Inner;
+            public K Key;
+            public bool KeyStored;
+            public V Value;
+            public bool ValueStored;
+            public ISerDes<K, TJVMK> KeySerDes;
+            public ISerDes<V, TJVMV> ValueSerDes;
+            public IGenericSerDesFactory Factory;
+
+            public void Dispose()
+            {
+                Inner?.Dispose();
+            }
+        }
+
+        KeyValueState _state;
+
+        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _state.Factory; set => _state.Factory = value; }
 
         internal static KeyValue<K, V, TJVMK, TJVMV> Create(IGenericSerDesFactory factory,
                                                             Org.Apache.Kafka.Streams.KeyValue<TJVMK, TJVMV> value,
@@ -70,29 +88,26 @@ namespace MASES.KNet.Streams
                 _disposed = 0;
                 GC.ReRegisterForFinalize(this);
             }
-            _factory = factory;
-            _inner = value;
-            _keySerDes = keySerDes;
-            _valueSerDes = valueSerDes;
+            _state = new KeyValueState(factory, value, keySerDes, valueSerDes);
             if (fromPrefetched)
             {
-                _keySerDes ??= _factory?.BuildKeySerDes<K, TJVMK>();
-                if (_keySerDes == null) throw new InvalidOperationException("Unable to resolve key serializer/deserializer for prefetched KeyValue.");
-                var jKey = _inner.key;
+                _state.KeySerDes ??= _state.Factory?.BuildKeySerDes<K, TJVMK>();
+                if (_state.KeySerDes == null) throw new InvalidOperationException("Unable to resolve key serializer/deserializer for prefetched KeyValue.");
+                var jKey = _state.Inner.key;
                 using var disposable = jKey as IDisposable;
-                _key = _keySerDes.Deserialize((Java.Lang.String)null, jKey);
-                _keyStored = true;
-                _valueSerDes ??= _factory?.BuildValueSerDes<V, TJVMV>();
-                if (_valueSerDes == null) throw new InvalidOperationException("Unable to resolve value serializer/deserializer for prefetched KeyValue.");
-                var jValue = _inner.value;
+                _state.Key = _state.KeySerDes.Deserialize((Java.Lang.String)null, jKey);
+                _state.KeyStored = true;
+                _state.ValueSerDes ??= _state.Factory?.BuildValueSerDes<V, TJVMV>();
+                if (_state.ValueSerDes == null) throw new InvalidOperationException("Unable to resolve value serializer/deserializer for prefetched KeyValue.");
+                var jValue = _state.Inner.value;
                 using var disposable2 = jValue as IDisposable;
-                _value = _valueSerDes.Deserialize((Java.Lang.String)null, jValue);
-                _valueStored = true;
+                _state.Value = _state.ValueSerDes.Deserialize((Java.Lang.String)null, jValue);
+                _state.ValueStored = true;
             }
         }
 
         /// <inheritdoc/>
-        public Org.Apache.Kafka.Streams.KeyValue<TJVMK, TJVMV> InnerReference => _inner;
+        public Org.Apache.Kafka.Streams.KeyValue<TJVMK, TJVMV> InnerReference => _state.Inner;
 
         volatile int _disposed; // 0 = live, 1 = disposed
         /// <summary>
@@ -120,12 +135,8 @@ namespace MASES.KNet.Streams
 
             if (disposing)
             {
-                _inner?.Dispose();
-                _inner = null;
-                _key = default;
-                _keyStored = false;
-                _value = default;
-                _valueStored = true;
+                _state.Dispose();
+                _state = default;
                 _pool.Return(this);
             }
         }
@@ -138,15 +149,15 @@ namespace MASES.KNet.Streams
             get
             {
                 CheckDisposed();
-                if (!_keyStored)
+                if (!_state.KeyStored)
                 {
-                    _keySerDes ??= _factory?.BuildKeySerDes<K, TJVMK>() ?? throw new InvalidOperationException("Key serializer/deserializer is not available.");
-                    var key = _inner.key;
+                    _state.KeySerDes ??= _state.Factory?.BuildKeySerDes<K, TJVMK>() ?? throw new InvalidOperationException("Key serializer/deserializer is not available.");
+                    var key = _state.Inner.key;
                     using var disposable = key as IDisposable;
-                    _key = _keySerDes.Deserialize((Java.Lang.String)null, key);
-                    _keyStored = true;
+                    _state.Key = _state.KeySerDes.Deserialize((Java.Lang.String)null, key);
+                    _state.KeyStored = true;
                 }
-                return _key;
+                return _state.Key;
             }
         }
         /// <summary>
@@ -157,15 +168,15 @@ namespace MASES.KNet.Streams
             get
             {
                 CheckDisposed();
-                if (!_valueStored)
+                if (!_state.ValueStored)
                 {
-                    _valueSerDes ??= _factory?.BuildValueSerDes<V, TJVMV>() ?? throw new InvalidOperationException("Value serializer/deserializer is not available.");
-                    var value = _inner.value;
+                    _state.ValueSerDes ??= _state.Factory?.BuildValueSerDes<V, TJVMV>() ?? throw new InvalidOperationException("Value serializer/deserializer is not available.");
+                    var value = _state.Inner.value;
                     using var disposable = value as IDisposable;
-                    _value = _valueSerDes.Deserialize((Java.Lang.String)null, value);
-                    _valueStored = true;
+                    _state.Value = _state.ValueSerDes.Deserialize((Java.Lang.String)null, value);
+                    _state.ValueStored = true;
                 }
-                return _value;
+                return _state.Value;
             }
         }
     }
