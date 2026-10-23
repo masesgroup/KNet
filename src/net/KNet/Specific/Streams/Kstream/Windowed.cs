@@ -51,7 +51,7 @@ namespace MASES.KNet.Streams.Kstream
         {
             if (fromPool)
             {
-                _disposed = 0;
+                Interlocked.Exchange(ref _disposed, 0);
                 GC.ReRegisterForFinalize(this);
             }
             _factory = factory;
@@ -69,7 +69,7 @@ namespace MASES.KNet.Streams.Kstream
         /// </summary>
         /// <exception cref="ObjectDisposedException">When this instance was disposed</exception>
         [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        protected void CheckDisposed() { if (_disposed != 0) throw new ObjectDisposedException(GetType().Name); }
+        void CheckDisposed() { if (_disposed != 0) throw new ObjectDisposedException(GetType().Name); }
         /// <inheritdoc cref="IDisposable.Dispose"/>
         public void Dispose()
         {

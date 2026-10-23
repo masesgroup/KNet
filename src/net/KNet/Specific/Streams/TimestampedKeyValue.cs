@@ -84,7 +84,7 @@ namespace MASES.KNet.Streams
         {
             if (fromPool)
             {
-                _disposed = 0;
+                Interlocked.Exchange(ref _disposed, 0);
                 GC.ReRegisterForFinalize(this);
             }
             _state = new TimestampedKeyValueState(factory, inner, keySerDes);
