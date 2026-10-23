@@ -30,7 +30,7 @@ namespace MASES.KNet.Consumer
     /// <typeparam name="V">The value type</typeparam>
     /// <typeparam name="TJVMK">The JVM type of <typeparamref name="K"/></typeparam>
     /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
-    public class ConsumerRecord<K, V, TJVMK, TJVMV> : IKNetInnerReference<Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<TJVMK, TJVMV>>, IGenericSerDesFactoryApplier, IDisposable
+    public sealed class ConsumerRecord<K, V, TJVMK, TJVMV> : IKNetInnerReference<Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<TJVMK, TJVMV>>, IGenericSerDesFactoryApplier, IDisposable
     {
         [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         static ConsumerRecord<K, V, TJVMK, TJVMV> Allocate() => new ConsumerRecord<K, V, TJVMK, TJVMV>();
@@ -64,7 +64,7 @@ namespace MASES.KNet.Consumer
         {
             if (fromPool)
             {
-                Interlocked.Exchange(ref _disposed, 0);
+                _disposed = 0;
                 GC.ReRegisterForFinalize(this);
             }
             _record = record;
@@ -96,7 +96,7 @@ namespace MASES.KNet.Consumer
         {
             if (fromPool)
             {
-                Interlocked.Exchange(ref _disposed, 0);
+                _disposed = 0;
                 GC.ReRegisterForFinalize(this);
             }
             _record = record;

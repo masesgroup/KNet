@@ -25,7 +25,7 @@ using System.Threading.Tasks;
 
 namespace MASES.KNet.Consumer
 {
-    class ConsumerRecordsEnumerator<K, V, TJVMK, TJVMV> : IKNetInnerReference<Org.Apache.Kafka.Clients.Consumer.ConsumerRecords<TJVMK, TJVMV>>, IEnumerator<ConsumerRecord<K, V, TJVMK, TJVMV>>, IAsyncEnumerator<ConsumerRecord<K, V, TJVMK, TJVMV>>
+    sealed class ConsumerRecordsEnumerator<K, V, TJVMK, TJVMV> : IKNetInnerReference<Org.Apache.Kafka.Clients.Consumer.ConsumerRecords<TJVMK, TJVMV>>, IEnumerator<ConsumerRecord<K, V, TJVMK, TJVMV>>, IAsyncEnumerator<ConsumerRecord<K, V, TJVMK, TJVMV>>
     {
         [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         static ConsumerRecordsEnumerator<K, V, TJVMK, TJVMV> Allocate() => new ConsumerRecordsEnumerator<K, V, TJVMK, TJVMV>();
@@ -50,7 +50,7 @@ namespace MASES.KNet.Consumer
         {
             if (fromPool)
             {
-                Interlocked.Exchange(ref _disposed, 0);
+                _disposed = 0;
                 GC.ReRegisterForFinalize(this);
             }
             _records = records;
@@ -69,6 +69,11 @@ namespace MASES.KNet.Consumer
 
         void Setup(Org.Apache.Kafka.Clients.Consumer.ConsumerRecords<TJVMK, TJVMV> records, IDeserializer<K, TJVMK> keyDeserializer, IDeserializer<V, TJVMV> valueDeserializer, CancellationToken cancellationToken, bool fromPool)
         {
+            if (fromPool)
+            {
+                _disposed = 0;
+                GC.ReRegisterForFinalize(this);
+            }
             _records = records;
             _recordAsyncEnumerator = _records.GetAsyncEnumerator(cancellationToken);
             _keyDeserializer = keyDeserializer;

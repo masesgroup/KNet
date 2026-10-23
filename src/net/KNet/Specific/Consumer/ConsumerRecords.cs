@@ -25,14 +25,14 @@ using System.Threading.Tasks;
 
 namespace MASES.KNet.Consumer
 {
-    /// <summary>
-    /// KNet extension of <see cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRecords{TJVMK, TJVMV}"/>
-    /// </summary>
-    /// <typeparam name="K">The key type</typeparam>
-    /// <typeparam name="V">The value type</typeparam>
-    /// <typeparam name="TJVMK">The JVM type of <typeparamref name="K"/></typeparam>
-    /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
-    public class ConsumerRecords<K, V, TJVMK, TJVMV> : IKNetInnerReference<Org.Apache.Kafka.Clients.Consumer.ConsumerRecords<TJVMK, TJVMV>>, IEnumerable<ConsumerRecord<K, V, TJVMK, TJVMV>>, IAsyncEnumerable<ConsumerRecord<K, V, TJVMK, TJVMV>>, IDisposable
+	/// <summary>
+	/// KNet extension of <see cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRecords{TJVMK, TJVMV}"/>
+	/// </summary>
+	/// <typeparam name="K">The key type</typeparam>
+	/// <typeparam name="V">The value type</typeparam>
+	/// <typeparam name="TJVMK">The JVM type of <typeparamref name="K"/></typeparam>
+	/// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
+	public sealed class ConsumerRecords<K, V, TJVMK, TJVMV> : IKNetInnerReference<Org.Apache.Kafka.Clients.Consumer.ConsumerRecords<TJVMK, TJVMV>>, IEnumerable<ConsumerRecord<K, V, TJVMK, TJVMV>>, IAsyncEnumerable<ConsumerRecord<K, V, TJVMK, TJVMV>>, IDisposable
     {
         [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         static ConsumerRecords<K, V, TJVMK, TJVMV> Allocate() => new ConsumerRecords<K, V, TJVMK, TJVMV>();
@@ -61,7 +61,7 @@ namespace MASES.KNet.Consumer
         {
             if (fromPool)
             {
-                Interlocked.Exchange(ref _disposed, 0);
+                _disposed = 0;
                 GC.ReRegisterForFinalize(this);
             }
             _records = records;
