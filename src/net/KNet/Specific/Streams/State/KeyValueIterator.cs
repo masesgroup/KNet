@@ -140,7 +140,7 @@ namespace MASES.KNet.Streams.State
         {
             if (fromPool)
             {
-                Interlocked.Exchange(ref _disposed, 0);
+                _disposed = 0;
                 GC.ReRegisterForFinalize(this);
             }
             _factory = factory;

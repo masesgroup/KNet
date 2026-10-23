@@ -28,7 +28,7 @@ namespace MASES.KNet.Streams.Kstream
     /// </summary>
     /// <typeparam name="K">The key type</typeparam>
     /// <typeparam name="TJVMK">The JVM type of <typeparamref name="K"/></typeparam>
-    public class Windowed<K, TJVMK> : IKNetInnerReference<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>>, IGenericSerDesFactoryApplier, IDisposable
+    public sealed class Windowed<K, TJVMK> : IKNetInnerReference<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>>, IGenericSerDesFactoryApplier, IDisposable
     {
         [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         static Windowed<K, TJVMK> Allocate() => new Windowed<K, TJVMK>();
@@ -51,7 +51,7 @@ namespace MASES.KNet.Streams.Kstream
         {
             if (fromPool)
             {
-                Interlocked.Exchange(ref _disposed, 0);
+                _disposed = 0;
                 GC.ReRegisterForFinalize(this);
             }
             _factory = factory;

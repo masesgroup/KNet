@@ -65,6 +65,11 @@ namespace MASES.KNet.Streams
                    bool fromPrefetched,
                    bool fromPool)
         {
+            if (fromPool)
+            {
+                _disposed = 0;
+                GC.ReRegisterForFinalize(this);
+            }
             _factory = factory;
             _inner = value;
             _keySerDes = keySerDes;
