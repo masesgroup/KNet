@@ -39,28 +39,45 @@ namespace MASES.KNet.Streams
         static TimestampedKeyValue<K, V, TJVMK, TJVMV> Allocate() => new TimestampedKeyValue<K, V, TJVMK, TJVMV>();
         static JCOBridgeObjectPool<TimestampedKeyValue<K, V, TJVMK, TJVMV>> _pool = new JCOBridgeObjectPool<TimestampedKeyValue<K, V, TJVMK, TJVMV>>(Allocate);
 
-        Org.Apache.Kafka.Streams.KeyValue<TJVMK, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV>> _inner = null;
+        struct TimestampedKeyValueState
+        {
+            public TimestampedKeyValueState(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.KeyValue<TJVMK, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV>> inner, ISerDes<K, TJVMK> keySerDes)
+            {
+                Factory = factory;
+                Inner = inner;
+                KeySerDes = keySerDes;
+            }
 
-        K _key;
-        bool _keyStored = false;
-        ValueAndTimestamp<V, TJVMV> _value = null;
-        ISerDes<K, TJVMK> _keySerDes = null;
-        IGenericSerDesFactory _factory;
-        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set => _factory = value; }
+            public Org.Apache.Kafka.Streams.KeyValue<TJVMK, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV>> Inner;
+            public K Key;
+            public bool KeyStored;
+            public ValueAndTimestamp<V, TJVMV> Value;
+            public ISerDes<K, TJVMK> KeySerDes;
+            public IGenericSerDesFactory Factory;
+
+            public void Dispose()
+            {
+                Inner.Dispose();
+            }
+        }
+
+        TimestampedKeyValueState _state;
+
+        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _state.Factory; set => _state.Factory = value; }
 
         internal static TimestampedKeyValue<K, V, TJVMK, TJVMV> Create(IGenericSerDesFactory factory,
-                                                                       Org.Apache.Kafka.Streams.KeyValue<TJVMK, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV>> value,
+                                                                       Org.Apache.Kafka.Streams.KeyValue<TJVMK, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV>> inner,
                                                                        ISerDes<K, TJVMK> keySerDes,
                                                                        bool fromPrefetched)
         {
             bool fromPool = false;
             var instance = _pool.Rent(ref fromPool);
-            instance.Setup(factory, value, keySerDes, fromPrefetched, fromPool);
+            instance.Setup(factory, inner, keySerDes, fromPrefetched, fromPool);
             return instance;
         }
 
         void Setup(IGenericSerDesFactory factory,
-                   Org.Apache.Kafka.Streams.KeyValue<TJVMK, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV>> value,
+                   Org.Apache.Kafka.Streams.KeyValue<TJVMK, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV>> inner,
                    ISerDes<K, TJVMK> keySerDes,
                    bool fromPrefetched,
                    bool fromPool)
@@ -70,21 +87,19 @@ namespace MASES.KNet.Streams
                 _disposed = 0;
                 GC.ReRegisterForFinalize(this);
             }
-            _factory = factory;
-            _inner = value;
-            _keySerDes = keySerDes;
+            _state = new TimestampedKeyValueState(factory, inner, keySerDes);
             if (fromPrefetched)
             {
-                _keySerDes ??= _factory?.BuildKeySerDes<K, TJVMK>();
-                var key = _inner.key;
+                _state.KeySerDes ??= _state.Factory?.BuildKeySerDes<K, TJVMK>();
+                var key = _state.Inner.key;
                 using var disposable = key as IDisposable;
-                _key = _keySerDes.Deserialize((Java.Lang.String)null, key);
-                _keyStored = true;
+                _state.Key = _state.KeySerDes.Deserialize((Java.Lang.String)null, key);
+                _state.KeyStored = true;
             }
         }
 
         /// <inheritdoc/>
-        public Org.Apache.Kafka.Streams.KeyValue<TJVMK, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV>> InnerReference => _inner;
+        public Org.Apache.Kafka.Streams.KeyValue<TJVMK, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV>> InnerReference => _state.Inner;
 
         volatile int _disposed; // 0 = live, 1 = disposed
         /// <summary>
@@ -112,13 +127,8 @@ namespace MASES.KNet.Streams
 
             if (disposing)
             {
-                _inner?.Dispose();
-                _inner = null;
-                _key = default;
-                _keyStored = false;
-                _value?.Dispose();
-                _value = null;
-                _keySerDes = null;
+                _state.Dispose();
+                _state = default;
                 _pool.Return(this);
             }
         }
@@ -131,15 +141,15 @@ namespace MASES.KNet.Streams
             get
             {
                 CheckDisposed();
-                if (!_keyStored)
+                if (!_state.KeyStored)
                 {
-                    _keySerDes ??= _factory?.BuildKeySerDes<K, TJVMK>();
-                    var key = _inner.key;
+                    _state.KeySerDes ??= _state.Factory?.BuildKeySerDes<K, TJVMK>();
+                    var key = _state.Inner.key;
                     using var disposable = key as IDisposable;
-                    _key = _keySerDes.Deserialize((Java.Lang.String)null, key);
-                    _keyStored = true;
+                    _state.Key = _state.KeySerDes.Deserialize((Java.Lang.String)null, key);
+                    _state.KeyStored = true;
                 }
-                return _key;
+                return _state.Key;
             }
         }
         /// <summary>
@@ -150,8 +160,8 @@ namespace MASES.KNet.Streams
             get
             {
                 CheckDisposed();
-                _value ??= ValueAndTimestamp<V, TJVMV>.Create(_factory, _inner.value);
-                return _value;
+                _state.Value ??= ValueAndTimestamp<V, TJVMV>.Create(_state.Factory, _state.Inner.value);
+                return _state.Value;
             }
         }
     }
