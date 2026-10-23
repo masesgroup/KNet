@@ -38,13 +38,18 @@ namespace MASES.KNet.Streams
 
         struct KeyValueState
         {
-            public KeyValueState(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.KeyValue<TJVMK, TJVMV> inner, ISerDes<K, TJVMK> keySerDes, ISerDes<V, TJVMV> valueSerDes)
+            public KeyValueState(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.KeyValue<TJVMK, TJVMV> inner, ISerDes<K, TJVMK> keySerDes, ISerDes<V, TJVMV> valueSerDes, bool fromPrefetch, bool fromPool)
             {
                 Factory = factory;
                 Inner = inner;
                 KeySerDes = keySerDes;
                 ValueSerDes = valueSerDes;
+                FromPrefetch = fromPrefetch;
+                FromPool = fromPool;
             }
+
+            public bool FromPrefetch;
+            public bool FromPool;
             public Org.Apache.Kafka.Streams.KeyValue<TJVMK, TJVMV> Inner;
             public K Key;
             public bool KeyStored;
@@ -68,11 +73,11 @@ namespace MASES.KNet.Streams
                                                             Org.Apache.Kafka.Streams.KeyValue<TJVMK, TJVMV> value,
                                                             ISerDes<K, TJVMK> keySerDes,
                                                             ISerDes<V, TJVMV> valueSerDes,
-                                                            bool fromPrefetched)
+                                                            bool fromPrefetch)
         {
             bool fromPool = false;
-            var instance = _pool.Rent(ref fromPool);
-            instance.Setup(factory, value, keySerDes, valueSerDes, fromPrefetched, fromPool);
+            var instance = fromPrefetch ? Allocate() : _pool.Rent(ref fromPool);
+            instance.Setup(factory, value, keySerDes, valueSerDes, fromPrefetch, fromPool);
             return instance;
         }
 
@@ -80,7 +85,7 @@ namespace MASES.KNet.Streams
                    Org.Apache.Kafka.Streams.KeyValue<TJVMK, TJVMV> value,
                    ISerDes<K, TJVMK> keySerDes,
                    ISerDes<V, TJVMV> valueSerDes,
-                   bool fromPrefetched,
+                   bool fromPrefetch,
                    bool fromPool)
         {
             if (fromPool)
@@ -88,8 +93,8 @@ namespace MASES.KNet.Streams
                 Interlocked.Exchange(ref _disposed, 0);
                 GC.ReRegisterForFinalize(this);
             }
-            _state = new KeyValueState(factory, value, keySerDes, valueSerDes);
-            if (fromPrefetched)
+            _state = new KeyValueState(factory, value, keySerDes, valueSerDes, fromPrefetch, fromPool);
+            if (fromPrefetch)
             {
                 _state.KeySerDes ??= _state.Factory?.BuildKeySerDes<K, TJVMK>();
                 if (_state.KeySerDes == null) throw new InvalidOperationException("Unable to resolve key serializer/deserializer for prefetched KeyValue.");
@@ -135,9 +140,10 @@ namespace MASES.KNet.Streams
 
             if (disposing)
             {
+                bool fromPrefetched = _state.FromPrefetch;
                 _state.Dispose();
                 _state = default;
-                _pool.Return(this);
+                if (!fromPrefetched) _pool.Return(this);
             }
         }
 
