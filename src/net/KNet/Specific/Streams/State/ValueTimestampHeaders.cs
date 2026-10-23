@@ -51,6 +51,11 @@ namespace MASES.KNet.Streams.State
 
         void Setup(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.State.ValueTimestampHeaders<TJVMV> valueAndTimestamp, bool fromPool)
         {
+            if (fromPool)
+            {
+                Interlocked.Exchange(ref _disposed, 0);
+                GC.ReRegisterForFinalize(this);
+            }
             _factory = factory;
             _inner = valueAndTimestamp;
         }

@@ -48,6 +48,11 @@ namespace MASES.KNet.Consumer
 
         void Setup(Org.Apache.Kafka.Clients.Consumer.ConsumerRecords<TJVMK, TJVMV> records, IDeserializer<K, TJVMK> keyDeserializer, IDeserializer<V, TJVMV> valueDeserializer, bool fromPool)
         {
+            if (fromPool)
+            {
+                Interlocked.Exchange(ref _disposed, 0);
+                GC.ReRegisterForFinalize(this);
+            }
             _records = records;
             _recordEnumerator = _records.GetEnumerator();
             _keyDeserializer = keyDeserializer;

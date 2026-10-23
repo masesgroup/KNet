@@ -62,6 +62,11 @@ namespace MASES.KNet.Consumer
                    IDeserializer<K, TJVMK> keyDeserializer, IDeserializer<V, TJVMV> valueDeserializer, 
                    bool fromPrefetched, bool fromPool)
         {
+            if (fromPool)
+            {
+                Interlocked.Exchange(ref _disposed, 0);
+                GC.ReRegisterForFinalize(this);
+            }
             _record = record;
             _keyDeserializer = keyDeserializer;
             _valueDeserializer = valueDeserializer;
@@ -89,6 +94,11 @@ namespace MASES.KNet.Consumer
         /// <param name="fromPool"><see langword="true"/> if the instance comes from the object pool</param>
         void Setup(Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<TJVMK, TJVMV> record, IGenericSerDesFactory factory, bool fromPool)
         {
+            if (fromPool)
+            {
+                Interlocked.Exchange(ref _disposed, 0);
+                GC.ReRegisterForFinalize(this);
+            }
             _record = record;
             _factory = factory;
         }
