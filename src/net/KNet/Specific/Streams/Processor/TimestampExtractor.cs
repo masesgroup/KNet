@@ -34,8 +34,6 @@ namespace MASES.KNet.Streams.Processor
     {
         ConsumerRecord<K, V, TJVMK, TJVMV> _record;
         DateTime? _partitionTime;
-        ISerDes<K, TJVMK> _keySerializer = null;
-        ISerDes<V, TJVMV> _valueSerializer = null;
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set => _factory = value; }
         /// <summary>
@@ -55,11 +53,9 @@ namespace MASES.KNet.Streams.Processor
         /// <inheritdoc/>
         public sealed override long Extract(Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<object, object> arg0, long arg1)
         {
-            _keySerializer ??= _factory?.BuildKeySerDes<K, TJVMK>();
-            _valueSerializer ??= _factory?.BuildValueSerDes<V, TJVMV>();
             var record = arg0.CastDirectAndDispose<Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<TJVMK, TJVMV>>(); // KNet consider the data within Apache Kafka Streams defined always as byte[]
 
-            _record = ConsumerRecord<K, V, TJVMK, TJVMV>.Create(record, _factory, true);
+            _record = ConsumerRecord<K, V, TJVMK, TJVMV>.Create(record, _factory, false);
             _partitionTime = (arg1 == -1) ? null : DateTimeOffset.FromUnixTimeMilliseconds(arg1).DateTime;
             var res = (OnExtract != null) ? OnExtract(this) : Extract();
             return new DateTimeOffset(res).ToUnixTimeMilliseconds();
