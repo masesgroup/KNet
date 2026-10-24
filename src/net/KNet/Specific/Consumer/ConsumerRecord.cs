@@ -286,12 +286,13 @@ namespace MASES.KNet.Consumer
                 if (!_state.LocalKeyDes)
                 {
                     _state.KeyDeserializer ??= _state.Factory?.BuildKeySerDes<K, TJVMK>();
+                    var keyDeserializer = _state.KeyDeserializer ?? throw new InvalidOperationException("Key deserializer is not available.");
                     using var topic = _state.Record.Topic();
                     using var headers = _state.Record.Headers();
                     var key = _state.Record.Key();
                     using var disposable = key as IDisposable;
-                    _state.LocalKey = _state.KeyDeserializer.UseHeaders ? _state.KeyDeserializer.DeserializeWithHeaders(topic, headers, key)
-                                                                        : _state.KeyDeserializer.Deserialize(topic, key);
+                    _state.LocalKey = keyDeserializer.UseHeaders ? keyDeserializer.DeserializeWithHeaders(topic, headers, key)
+                                                                 : keyDeserializer.Deserialize(topic, key);
                     _state.LocalKeyDes = true;
                 }
                 return _state.LocalKey;
@@ -307,12 +308,13 @@ namespace MASES.KNet.Consumer
                 if (!_state.LocalValueDes)
                 {
                     _state.ValueDeserializer ??= _state.Factory?.BuildValueSerDes<V, TJVMV>();
+                    var valueDeserializer = _state.ValueDeserializer ?? throw new InvalidOperationException("Value deserializer is not available. Ensure a valid serializer/deserializer factory is configured.");
                     using var topic = _state.Record.Topic();
                     using var headers = _state.Record.Headers();
                     var value = _state.Record.Value();
                     using var disposable = value as IDisposable;
-                    _state.LocalValue = _state.ValueDeserializer.UseHeaders ? _state.ValueDeserializer.DeserializeWithHeaders(topic, headers, value)
-                                                                            : _state.ValueDeserializer.Deserialize(topic, value);
+                    _state.LocalValue = valueDeserializer.UseHeaders ? valueDeserializer.DeserializeWithHeaders(topic, headers, value)
+                                                                     : valueDeserializer.Deserialize(topic, value);
                     _state.LocalValueDes = true;
                 }
                 return _state.LocalValue;
