@@ -123,11 +123,11 @@ namespace MASES.KNet.Consumer
             }
         }
 
-        internal static ConsumerRecord<K, V, TJVMK, TJVMV> Create(Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<TJVMK, TJVMV> record, IGenericSerDesFactory factory)
+        internal static ConsumerRecord<K, V, TJVMK, TJVMV> Create(Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<TJVMK, TJVMV> record, IGenericSerDesFactory factory, bool fromPrefetch)
         {
             bool fromPool = false;
-            var instance = _pool.Rent(ref fromPool);
-            instance.Setup(record, factory, fromPool);
+            var instance = fromPrefetch ? Allocate() : _pool.Rent(ref fromPool);
+            instance.Setup(record, factory, fromPrefetch, fromPool);
             return instance;
         }
 
@@ -136,15 +136,16 @@ namespace MASES.KNet.Consumer
         /// </summary>
         /// <param name="record">The <see cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRecord{TJVMK, TJVMV}"/> to use for initialization</param>
         /// <param name="factory"><see cref="IGenericSerDesFactory"/></param>
+        /// <param name="fromPrefetch"><see langword="true"/> if the initialization comes from the prefetch iterator</param>
         /// <param name="fromPool"><see langword="true"/> if the instance comes from the object pool</param>
-        void Setup(Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<TJVMK, TJVMV> record, IGenericSerDesFactory factory, bool fromPool)
+        void Setup(Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<TJVMK, TJVMV> record, IGenericSerDesFactory factory, bool fromPrefetch, bool fromPool)
         {
             if (fromPool)
             {
                 Interlocked.Exchange(ref _disposed, 0);
                 GC.ReRegisterForFinalize(this);
             }
-            _state = new ConsumerRecordState(record, factory, false, fromPool);
+            _state = new ConsumerRecordState(record, factory, fromPrefetch, fromPool);
         }
         /// <inheritdoc/>
         public Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<TJVMK, TJVMV> InnerReference => _state.Record;
