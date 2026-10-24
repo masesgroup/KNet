@@ -16,6 +16,7 @@
 *  Refer to LICENSE for more information.
 */
 
+using MASES.JCOBridge.C2JBridge;
 using MASES.KNet.Serialization;
 using System;
 using System.Collections.Generic;
@@ -31,26 +32,59 @@ namespace MASES.KNet.Consumer
     /// <typeparam name="V">The value type</typeparam>
     /// <typeparam name="TJVMK">The JVM type of <typeparamref name="K"/></typeparam>
     /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
-    public class ConsumerRecords<K, V, TJVMK, TJVMV> : IKNetInnerReference<Org.Apache.Kafka.Clients.Consumer.ConsumerRecords<TJVMK, TJVMV>>, IEnumerable<ConsumerRecord<K, V, TJVMK, TJVMV>>, IAsyncEnumerable<ConsumerRecord<K, V, TJVMK, TJVMV>>, IDisposable
+    public sealed class ConsumerRecords<K, V, TJVMK, TJVMV> : IKNetInnerReference<Org.Apache.Kafka.Clients.Consumer.ConsumerRecords<TJVMK, TJVMV>>, IEnumerable<ConsumerRecord<K, V, TJVMK, TJVMV>>, IAsyncEnumerable<ConsumerRecord<K, V, TJVMK, TJVMV>>, IDisposable
     {
-        ISerDes<K, TJVMK> _keyDeserializer;
-        ISerDes<V, TJVMV> _valueDeserializer;
-        Org.Apache.Kafka.Clients.Consumer.ConsumerRecords<TJVMK, TJVMV> _records;
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
+        static ConsumerRecords<K, V, TJVMK, TJVMV> Allocate() => new ConsumerRecords<K, V, TJVMK, TJVMV>();
+        static JCOBridgeObjectPool<ConsumerRecords<K, V, TJVMK, TJVMV>> _pool = new JCOBridgeObjectPool<ConsumerRecords<K, V, TJVMK, TJVMV>>(Allocate);
+
+        struct ConsumerRecordsState
+        {
+            public ConsumerRecordsState(Org.Apache.Kafka.Clients.Consumer.ConsumerRecords<TJVMK, TJVMV> records, ISerDes<K, TJVMK> keyDeserializer, ISerDes<V, TJVMV> valueDeserializer)
+            {
+                Records = records;
+                KeyDeserializer = keyDeserializer;
+                ValueDeserializer = valueDeserializer;
+            }
+            public Org.Apache.Kafka.Clients.Consumer.ConsumerRecords<TJVMK, TJVMV> Records;
+            public ISerDes<K, TJVMK> KeyDeserializer;
+            public ISerDes<V, TJVMV> ValueDeserializer;
+
+            public void Dispose()
+            {
+                Records?.Dispose();
+            }
+        }
+
+        ConsumerRecordsState _state;
+
+        internal static ConsumerRecords<K, V, TJVMK, TJVMV> Create(Org.Apache.Kafka.Clients.Consumer.ConsumerRecords<TJVMK, TJVMV> record, ISerDes<K, TJVMK> keyDeserializer, ISerDes<V, TJVMV> valueDeserializer)
+        {
+            bool fromPool = false;
+            var instance = _pool.Rent(ref fromPool);
+            instance.Setup(record, keyDeserializer, valueDeserializer, fromPool);
+            return instance;
+        }
+
         /// <summary>
         /// Initialize a new <see cref="ConsumerRecord{K, V, TJVMK, TJVMV}"/>
         /// </summary>
         /// <param name="records">The <see cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRecords{K, V}"/> to use for initialization</param>
         /// <param name="keyDeserializer">Key serializer base on <see cref="SerDes{K, TJVMK}"/></param>
         /// <param name="valueDeserializer">Value serializer base on <see cref="SerDes{V, TJVMV}"/></param>
-        internal ConsumerRecords(Org.Apache.Kafka.Clients.Consumer.ConsumerRecords<TJVMK, TJVMV> records, ISerDes<K, TJVMK> keyDeserializer, ISerDes<V, TJVMV> valueDeserializer)
+        /// <param name="fromPool"><see langword="true"/> if the instance comes from the object pool</param>
+        void Setup(Org.Apache.Kafka.Clients.Consumer.ConsumerRecords<TJVMK, TJVMV> records, ISerDes<K, TJVMK> keyDeserializer, ISerDes<V, TJVMV> valueDeserializer, bool fromPool)
         {
-            _records = records;
-            _keyDeserializer = keyDeserializer;
-            _valueDeserializer = valueDeserializer;
+            if (fromPool)
+            {
+                Interlocked.Exchange(ref _disposed, 0);
+                GC.ReRegisterForFinalize(this);
+            }
+            _state = new ConsumerRecordsState(records, keyDeserializer, valueDeserializer);
         }
 
         /// <inheritdoc/>
-        public Org.Apache.Kafka.Clients.Consumer.ConsumerRecords<TJVMK, TJVMV> InnerReference => _records;
+        public Org.Apache.Kafka.Clients.Consumer.ConsumerRecords<TJVMK, TJVMV> InnerReference => _state.Records;
 
         volatile int _disposed; // 0 = live, 1 = disposed
         /// <summary>
@@ -58,7 +92,7 @@ namespace MASES.KNet.Consumer
         /// </summary>
         /// <exception cref="ObjectDisposedException">When this instance was disposed</exception>
         [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        protected void CheckDisposed() { if (_disposed != 0) throw new ObjectDisposedException(GetType().Name); }
+        void CheckDisposed() { if (_disposed != 0) throw new ObjectDisposedException(GetType().Name); }
         /// <inheritdoc cref="IDisposable.Dispose"/>
         public void Dispose()
         {
@@ -71,17 +105,16 @@ namespace MASES.KNet.Consumer
         /// Implements the pattern described in https://learn.microsoft.com/en-en/dotnet/standard/garbage-collection/implementing-dispose
         /// </summary>
         /// <param name="disposing">The disposing parameter is a <see langword="bool"/> that indicates whether the method call comes from a <see cref="IDisposable.Dispose"/> method (its value is <see langword="true"/>) or from a finalizer (its value is <see langword="false"/>)</param>
-        protected virtual void Dispose(bool disposing)
+        void Dispose(bool disposing)
         {
             if (Interlocked.Exchange(ref _disposed, 1) != 0)
                 return;
 
             if (disposing)
             {
-                _records?.Dispose();
-                _records = null;
-                _keyDeserializer = null;
-                _valueDeserializer = null;
+                _state.Dispose();
+                _state = default;
+                _pool.Return(this);
             }
         }
 
@@ -105,7 +138,7 @@ namespace MASES.KNet.Consumer
             get
             {
                 CheckDisposed();
-                return _records.IsEmpty();
+                return _state.Records.IsEmpty();
             }
         }
         /// <summary>
@@ -116,12 +149,12 @@ namespace MASES.KNet.Consumer
             get
             {
                 CheckDisposed();
-                return _records.Count();
+                return _state.Records.Count();
             }
         }
 
         /// <summary>
-        /// Extension of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.0/org/apache/kafka/clients/consumer/ConsumerRecords.html#records(java.lang.String)"/>
+        /// Extension of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerRecords.html#records(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <returns><see cref="Java.Lang.Iterable"/> of </returns>
@@ -129,20 +162,20 @@ namespace MASES.KNet.Consumer
         {
             CheckDisposed();
             using Java.Lang.String topic = arg0;
-            return _records.Records(topic);
+            return _state.Records.Records(topic);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.0/org/apache/kafka/clients/consumer/ConsumerRecords.html#records(org.apache.kafka.common.TopicPartition)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerRecords.html#records(org.apache.kafka.common.TopicPartition)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.TopicPartition"/></param>
         /// <returns><see cref="Java.Util.List"/></returns>
         public Java.Util.List<Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<TJVMK, TJVMV>> Records(Org.Apache.Kafka.Common.TopicPartition arg0)
         {
             CheckDisposed();
-            return _records.Records(arg0);
+            return _state.Records.Records(arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.0/org/apache/kafka/clients/consumer/ConsumerRecords.html#partitions()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/consumer/ConsumerRecords.html#partitions()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Set"/></returns>
         public Java.Util.Set<Org.Apache.Kafka.Common.TopicPartition> Partitions
@@ -150,7 +183,7 @@ namespace MASES.KNet.Consumer
             get
             {
                 CheckDisposed();
-                return _records.Partitions();
+                return _state.Records.Partitions();
             }
         }
 #if NET7_0_OR_GREATER
@@ -172,7 +205,7 @@ namespace MASES.KNet.Consumer
         bool UsePrefetch()
         {
             return IsPrefecth &&
-                (PrefetchThreshold <= 0 || _records.Count() > PrefetchThreshold);
+                (PrefetchThreshold <= 0 || _state.Records.Count() > PrefetchThreshold);
         }
 #endif
         IEnumerator<ConsumerRecord<K, V, TJVMK, TJVMV>> IEnumerable<ConsumerRecord<K, V, TJVMK, TJVMV>>.GetEnumerator()
@@ -180,10 +213,10 @@ namespace MASES.KNet.Consumer
             CheckDisposed();
 #if NET7_0_OR_GREATER
             if (UsePrefetch())
-                return new ConsumerRecordsPrefetchableEnumerator<K, V, TJVMK, TJVMV>(_records.Iterator(), _keyDeserializer, _valueDeserializer, false);
+                return new ConsumerRecordsPrefetchableEnumerator<K, V, TJVMK, TJVMV>(_state.Records.Iterator(), _state.KeyDeserializer, _state.ValueDeserializer, false);
             else
 #endif
-                return new ConsumerRecordsEnumerator<K, V, TJVMK, TJVMV>(_records, _keyDeserializer, _valueDeserializer);
+                return ConsumerRecordsEnumerator<K, V, TJVMK, TJVMV>.Create(_state.Records, _state.KeyDeserializer, _state.ValueDeserializer);
         }
 
         System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
@@ -191,10 +224,10 @@ namespace MASES.KNet.Consumer
             CheckDisposed();
 #if NET7_0_OR_GREATER
             if (UsePrefetch())
-                return new ConsumerRecordsPrefetchableEnumerator<K, V, TJVMK, TJVMV>(_records.Iterator(), _keyDeserializer, _valueDeserializer, false);
+                return new ConsumerRecordsPrefetchableEnumerator<K, V, TJVMK, TJVMV>(_state.Records.Iterator(), _state.KeyDeserializer, _state.ValueDeserializer, false);
             else
 #endif
-                return new ConsumerRecordsEnumerator<K, V, TJVMK, TJVMV>(_records, _keyDeserializer, _valueDeserializer);
+                return ConsumerRecordsEnumerator<K, V, TJVMK, TJVMV>.Create(_state.Records, _state.KeyDeserializer, _state.ValueDeserializer);
         }
 
         IAsyncEnumerator<ConsumerRecord<K, V, TJVMK, TJVMV>> IAsyncEnumerable<ConsumerRecord<K, V, TJVMK, TJVMV>>.GetAsyncEnumerator(CancellationToken cancellationToken)
@@ -202,10 +235,10 @@ namespace MASES.KNet.Consumer
             CheckDisposed();
 #if NET7_0_OR_GREATER
             if (UsePrefetch())
-                return new ConsumerRecordsPrefetchableEnumerator<K, V, TJVMK, TJVMV>(_records.Iterator(), _keyDeserializer, _valueDeserializer, true, cancellationToken);
+                return new ConsumerRecordsPrefetchableEnumerator<K, V, TJVMK, TJVMV>(_state.Records.Iterator(), _state.KeyDeserializer, _state.ValueDeserializer, true, cancellationToken);
             else
 #endif
-                return new ConsumerRecordsEnumerator<K, V, TJVMK, TJVMV>(_records, _keyDeserializer, _valueDeserializer, cancellationToken);
+                return ConsumerRecordsEnumerator<K, V, TJVMK, TJVMV>.Create(_state.Records, _state.KeyDeserializer, _state.ValueDeserializer, cancellationToken);
         }
     }
 }
