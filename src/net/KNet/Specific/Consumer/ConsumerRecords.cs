@@ -183,7 +183,7 @@ namespace MASES.KNet.Consumer
             get
             {
                 CheckDisposed();
-                return _records.NextOffsets();
+                return _state.Records.NextOffsets();
             }
         }
         /// <summary>
