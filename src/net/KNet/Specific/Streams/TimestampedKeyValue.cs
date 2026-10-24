@@ -41,12 +41,17 @@ namespace MASES.KNet.Streams
 
         struct TimestampedKeyValueState
         {
-            public TimestampedKeyValueState(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.KeyValue<TJVMK, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV>> inner, ISerDes<K, TJVMK> keySerDes)
+            public TimestampedKeyValueState(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.KeyValue<TJVMK, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV>> inner, ISerDes<K, TJVMK> keySerDes, bool fromPrefetch, bool fromPool)
             {
                 Factory = factory;
                 Inner = inner;
                 KeySerDes = keySerDes;
+                FromPrefetch = fromPrefetch;
+                FromPool = fromPool;
             }
+
+            public bool FromPrefetch;
+            public bool FromPool;
 
             public Org.Apache.Kafka.Streams.KeyValue<TJVMK, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV>> Inner;
             public K Key;
@@ -68,18 +73,18 @@ namespace MASES.KNet.Streams
         internal static TimestampedKeyValue<K, V, TJVMK, TJVMV> Create(IGenericSerDesFactory factory,
                                                                        Org.Apache.Kafka.Streams.KeyValue<TJVMK, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV>> inner,
                                                                        ISerDes<K, TJVMK> keySerDes,
-                                                                       bool fromPrefetched)
+                                                                       bool fromPrefetch)
         {
             bool fromPool = false;
-            var instance = _pool.Rent(ref fromPool);
-            instance.Setup(factory, inner, keySerDes, fromPrefetched, fromPool);
+            var instance = fromPrefetch ? Allocate() : _pool.Rent(ref fromPool);
+            instance.Setup(factory, inner, keySerDes, fromPrefetch, fromPool);
             return instance;
         }
 
         void Setup(IGenericSerDesFactory factory,
                    Org.Apache.Kafka.Streams.KeyValue<TJVMK, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV>> inner,
                    ISerDes<K, TJVMK> keySerDes,
-                   bool fromPrefetched,
+                   bool fromPrefetch,
                    bool fromPool)
         {
             if (fromPool)
@@ -87,8 +92,8 @@ namespace MASES.KNet.Streams
                 Interlocked.Exchange(ref _disposed, 0);
                 GC.ReRegisterForFinalize(this);
             }
-            _state = new TimestampedKeyValueState(factory, inner, keySerDes);
-            if (fromPrefetched)
+            _state = new TimestampedKeyValueState(factory, inner, keySerDes, fromPrefetch, fromPool);
+            if (fromPrefetch)
             {
                 _state.KeySerDes ??= _state.Factory?.BuildKeySerDes<K, TJVMK>();
                 var key = _state.Inner.key;
@@ -127,9 +132,10 @@ namespace MASES.KNet.Streams
 
             if (disposing)
             {
+                bool fromPrefetch = _state.FromPrefetch;
                 _state.Dispose();
                 _state = default;
-                _pool.Return(this);
+                if (!fromPrefetch) _pool.Return(this);
             }
         }
 

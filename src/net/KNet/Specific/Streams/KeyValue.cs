@@ -140,10 +140,10 @@ namespace MASES.KNet.Streams
 
             if (disposing)
             {
-                bool fromPrefetched = _state.FromPrefetch;
+                bool fromPrefetch = _state.FromPrefetch;
                 _state.Dispose();
                 _state = default;
-                if (!fromPrefetched) _pool.Return(this);
+                if (!fromPrefetch) _pool.Return(this);
             }
         }
 

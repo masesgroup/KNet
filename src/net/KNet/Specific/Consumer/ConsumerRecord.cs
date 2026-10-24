@@ -38,18 +38,25 @@ namespace MASES.KNet.Consumer
 
         struct ConsumerRecordState
         {
-            public ConsumerRecordState(Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<TJVMK, TJVMV> record, IDeserializer<K, TJVMK> keyDeserializer, IDeserializer<V, TJVMV> valueDeserializer)
+            public ConsumerRecordState(Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<TJVMK, TJVMV> record, IDeserializer<K, TJVMK> keyDeserializer, IDeserializer<V, TJVMV> valueDeserializer, bool fromPrefetch, bool fromPool)
             {
                 Record = record;
                 KeyDeserializer = keyDeserializer;
                 ValueDeserializer = valueDeserializer;
+                FromPrefetch = fromPrefetch;
+                FromPool = fromPool;
             }
 
-            public ConsumerRecordState(Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<TJVMK, TJVMV> record, IGenericSerDesFactory factory)
+            public ConsumerRecordState(Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<TJVMK, TJVMV> record, IGenericSerDesFactory factory, bool fromPrefetch, bool fromPool)
             {
                 Record = record;
                 Factory = factory;
+                FromPrefetch = fromPrefetch;
+                FromPool = fromPool;
             }
+
+            public bool FromPrefetch;
+            public bool FromPool;
 
             public Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<TJVMK, TJVMV> Record;
             public IDeserializer<K, TJVMK> KeyDeserializer;
@@ -80,11 +87,11 @@ namespace MASES.KNet.Consumer
 
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _state.Factory; set => _state.Factory = value; }
 
-        internal static ConsumerRecord<K, V, TJVMK, TJVMV> Create(Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<TJVMK, TJVMV> record, IDeserializer<K, TJVMK> keyDeserializer, IDeserializer<V, TJVMV> valueDeserializer, bool fromPrefetched)
+        internal static ConsumerRecord<K, V, TJVMK, TJVMV> Create(Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<TJVMK, TJVMV> record, IDeserializer<K, TJVMK> keyDeserializer, IDeserializer<V, TJVMV> valueDeserializer, bool fromPrefetch)
         {
             bool fromPool = false;
-            var instance = _pool.Rent(ref fromPool);
-            instance.Setup(record, keyDeserializer, valueDeserializer, fromPrefetched, fromPool);
+            var instance = fromPrefetch ? Allocate() : _pool.Rent(ref fromPool);
+            instance.Setup(record, keyDeserializer, valueDeserializer, fromPrefetch, fromPool);
             return instance;
         }
 
@@ -94,11 +101,11 @@ namespace MASES.KNet.Consumer
         /// <param name="record">The <see cref="Org.Apache.Kafka.Clients.Consumer.ConsumerRecord{TJVMK, TJVMV}"/> to use for initialization</param>
         /// <param name="keyDeserializer">Key serializer base on <see cref="SerDes{K, TJVMK}"/></param>
         /// <param name="valueDeserializer">Value serializer base on <see cref="SerDes{V, TJVMV}"/></param>
-        /// <param name="fromPrefetched"><see langword="true"/> if the initialization comes from the prefetch iterator</param>
+        /// <param name="fromPrefetch"><see langword="true"/> if the initialization comes from the prefetch iterator</param>
         /// <param name="fromPool"><see langword="true"/> if the instance comes from the object pool</param>
         void Setup(Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<TJVMK, TJVMV> record, 
                    IDeserializer<K, TJVMK> keyDeserializer, IDeserializer<V, TJVMV> valueDeserializer, 
-                   bool fromPrefetched, bool fromPool)
+                   bool fromPrefetch, bool fromPool)
         {
             if (fromPool)
             {
@@ -106,9 +113,9 @@ namespace MASES.KNet.Consumer
                 GC.ReRegisterForFinalize(this);
             }
 
-            _state = new ConsumerRecordState(record, keyDeserializer, valueDeserializer);
+            _state = new ConsumerRecordState(record, keyDeserializer, valueDeserializer, fromPrefetch, fromPool);
 
-            if (fromPrefetched)
+            if (fromPrefetch)
             {
                 // the following lines will read and prepares Key, Value, Topic, Headers
                 _ = Key;
@@ -137,7 +144,7 @@ namespace MASES.KNet.Consumer
                 Interlocked.Exchange(ref _disposed, 0);
                 GC.ReRegisterForFinalize(this);
             }
-            _state = new ConsumerRecordState(record, factory);
+            _state = new ConsumerRecordState(record, factory, false, fromPool);
         }
         /// <inheritdoc/>
         public Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<TJVMK, TJVMV> InnerReference => _state.Record;
@@ -168,9 +175,10 @@ namespace MASES.KNet.Consumer
 
             if (disposing)
             {
+                bool fromPrefetched = _state.FromPrefetch;
                 _state.Dispose();
                 _state = default;
-                _pool.Return(this);
+                if (!fromPrefetched) _pool.Return(this);
             }
         }
 
