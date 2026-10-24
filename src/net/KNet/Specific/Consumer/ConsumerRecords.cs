@@ -154,7 +154,7 @@ namespace MASES.KNet.Consumer
         }
 
         /// <summary>
-        /// Extension of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.0/org/apache/kafka/clients/consumer/ConsumerRecords.html#records(java.lang.String)"/>
+        /// Extension of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerRecords.html#records(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="string"/></param>
         /// <returns><see cref="Java.Lang.Iterable"/> of </returns>
@@ -165,7 +165,7 @@ namespace MASES.KNet.Consumer
             return _state.Records.Records(topic);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.2.0/org/apache/kafka/clients/consumer/ConsumerRecords.html#records(org.apache.kafka.common.TopicPartition)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/3.9.2/org/apache/kafka/clients/consumer/ConsumerRecords.html#records(org.apache.kafka.common.TopicPartition)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.TopicPartition"/></param>
         /// <returns><see cref="Java.Util.List"/></returns>
