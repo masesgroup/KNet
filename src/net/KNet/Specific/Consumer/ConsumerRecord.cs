@@ -34,7 +34,7 @@ namespace MASES.KNet.Consumer
     {
         [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         static ConsumerRecord<K, V, TJVMK, TJVMV> Allocate() => new ConsumerRecord<K, V, TJVMK, TJVMV>();
-        static readonly JCOBridgeObjectPool<ConsumerRecord<K, V, TJVMK, TJVMV>> _pool = new JCOBridgeObjectPool<ConsumerRecord<K, V, TJVMK, TJVMV>>(Allocate);
+        static JCOBridgeObjectPool<ConsumerRecord<K, V, TJVMK, TJVMV>> _pool = new JCOBridgeObjectPool<ConsumerRecord<K, V, TJVMK, TJVMV>>(Allocate);
 
         struct ConsumerRecordState
         {

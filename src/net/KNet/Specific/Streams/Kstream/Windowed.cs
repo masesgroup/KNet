@@ -32,7 +32,7 @@ namespace MASES.KNet.Streams.Kstream
     {
         [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         static Windowed<K, TJVMK> Allocate() => new Windowed<K, TJVMK>();
-        static readonly JCOBridgeObjectPool<Windowed<K, TJVMK>> _pool = new JCOBridgeObjectPool<Windowed<K, TJVMK>>(Allocate);
+        static JCOBridgeObjectPool<Windowed<K, TJVMK>> _pool = new JCOBridgeObjectPool<Windowed<K, TJVMK>>(Allocate);
 
         Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK> _inner;
         ISerDes<K, TJVMK> _keySerDes = null;

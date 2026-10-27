@@ -36,9 +36,9 @@ namespace MASES.KNet.Consumer
     {
         [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         static ConsumerRecords<K, V, TJVMK, TJVMV> Allocate() => new ConsumerRecords<K, V, TJVMK, TJVMV>();
-        static readonly JCOBridgeObjectPool<ConsumerRecords<K, V, TJVMK, TJVMV>> _pool = new JCOBridgeObjectPool<ConsumerRecords<K, V, TJVMK, TJVMV>>(Allocate);
+        static JCOBridgeObjectPool<ConsumerRecords<K, V, TJVMK, TJVMV>> _pool = new JCOBridgeObjectPool<ConsumerRecords<K, V, TJVMK, TJVMV>>(Allocate);
 
-        readonly struct ConsumerRecordsState
+        struct ConsumerRecordsState
         {
             public ConsumerRecordsState(Org.Apache.Kafka.Clients.Consumer.ConsumerRecords<TJVMK, TJVMV> records, ISerDes<K, TJVMK> keyDeserializer, ISerDes<V, TJVMV> valueDeserializer)
             {
@@ -46,9 +46,9 @@ namespace MASES.KNet.Consumer
                 KeyDeserializer = keyDeserializer;
                 ValueDeserializer = valueDeserializer;
             }
-            public readonly Org.Apache.Kafka.Clients.Consumer.ConsumerRecords<TJVMK, TJVMV> Records;
-            public readonly ISerDes<K, TJVMK> KeyDeserializer;
-            public readonly ISerDes<V, TJVMV> ValueDeserializer;
+            public Org.Apache.Kafka.Clients.Consumer.ConsumerRecords<TJVMK, TJVMV> Records;
+            public ISerDes<K, TJVMK> KeyDeserializer;
+            public ISerDes<V, TJVMV> ValueDeserializer;
 
             public void Dispose()
             {

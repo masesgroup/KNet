@@ -34,7 +34,7 @@ namespace MASES.KNet.Streams.State
     {
         [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         static ValueAndTimestamp<V, TJVMV> Allocate() => new ValueAndTimestamp<V, TJVMV>();
-        static readonly JCOBridgeObjectPool<ValueAndTimestamp<V, TJVMV>> _pool = new JCOBridgeObjectPool<ValueAndTimestamp<V, TJVMV>>(Allocate);
+        static JCOBridgeObjectPool<ValueAndTimestamp<V, TJVMV>> _pool = new JCOBridgeObjectPool<ValueAndTimestamp<V, TJVMV>>(Allocate);
 
         Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV> _inner;
         ISerDes<V, TJVMV> _valueSerDes;

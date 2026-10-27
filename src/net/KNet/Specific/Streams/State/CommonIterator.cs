@@ -59,7 +59,7 @@ namespace MASES.KNet.Streams.State
         /// <summary>
         /// Pool of objects managed from <see cref="JCOBridgeObjectPool{TIterator}"/>
         /// </summary>
-        protected static readonly JCOBridgeObjectPool<TIterator> ObjectPool = new JCOBridgeObjectPool<TIterator>(Allocate);
+        protected static JCOBridgeObjectPool<TIterator> ObjectPool = new JCOBridgeObjectPool<TIterator>(Allocate);
 
         TNativeIterator _iterator;
         IGenericSerDesFactory _factory;
