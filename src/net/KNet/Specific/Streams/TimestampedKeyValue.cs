@@ -34,14 +34,40 @@ namespace MASES.KNet.Streams
     /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
     public sealed class TimestampedKeyValue<K, V, TJVMK, TJVMV> : IKNetInnerReference<Org.Apache.Kafka.Streams.KeyValue<TJVMK, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV>>>, IGenericSerDesFactoryApplier, IDisposable
     {
-        Org.Apache.Kafka.Streams.KeyValue<TJVMK, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV>> _inner = null;
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
+        static TimestampedKeyValue<K, V, TJVMK, TJVMV> Allocate() => new TimestampedKeyValue<K, V, TJVMK, TJVMV>();
+        static readonly JCOBridgeObjectPool<TimestampedKeyValue<K, V, TJVMK, TJVMV>> _pool = new JCOBridgeObjectPool<TimestampedKeyValue<K, V, TJVMK, TJVMV>>(Allocate);
 
-        K _key;
-        bool _keyStored = false;
-        ValueAndTimestamp<V, TJVMV> _value = null;
-        ISerDes<K, TJVMK> _keySerDes = null;
-        IGenericSerDesFactory _factory;
-        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set => _factory = value; }
+        struct TimestampedKeyValueState
+        {
+            public TimestampedKeyValueState(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.KeyValue<TJVMK, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV>> inner, ISerDes<K, TJVMK> keySerDes, bool fromPrefetch, bool fromPool)
+            {
+                Factory = factory;
+                Inner = inner;
+                KeySerDes = keySerDes;
+                FromPrefetch = fromPrefetch;
+                FromPool = fromPool;
+            }
+
+			public bool FromPrefetch;
+			public bool FromPool;
+
+			public Org.Apache.Kafka.Streams.KeyValue<TJVMK, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV>> Inner;
+            public K Key;
+            public bool KeyStored;
+            public ValueAndTimestamp<V, TJVMV> Value;
+			public ISerDes<K, TJVMK> KeySerDes;
+			public IGenericSerDesFactory Factory;
+
+            public void Dispose()
+            {
+                Inner.Dispose();
+            }
+        }
+
+        TimestampedKeyValueState _state;
+
+        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _state.Factory; set => _state.Factory = value; }
 
         internal TimestampedKeyValue(IGenericSerDesFactory factory,
                                      Org.Apache.Kafka.Streams.KeyValue<TJVMK, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV>> value,

@@ -31,15 +31,42 @@ namespace MASES.KNet.Streams
     /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
     public sealed class KeyValue<K, V, TJVMK, TJVMV> : IKNetInnerReference<Org.Apache.Kafka.Streams.KeyValue<TJVMK, TJVMV>>, IGenericSerDesFactoryApplier, IDisposable
     {
-        Org.Apache.Kafka.Streams.KeyValue<TJVMK, TJVMV> _inner = null;
-        K _key;
-        bool _keyStored;
-        V _value;
-        bool _valueStored;
-        ISerDes<K, TJVMK> _keySerDes = null;
-        ISerDes<V, TJVMV> _valueSerDes = null;
-        IGenericSerDesFactory _factory;
-        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set => _factory = value; }
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
+        static KeyValue<K, V, TJVMK, TJVMV> Allocate() => new KeyValue<K, V, TJVMK, TJVMV>();
+        static readonly JCOBridgeObjectPool<KeyValue<K, V, TJVMK, TJVMV>> _pool = new JCOBridgeObjectPool<KeyValue<K, V, TJVMK, TJVMV>>(Allocate);
+
+        struct KeyValueState
+        {
+            public KeyValueState(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.KeyValue<TJVMK, TJVMV> inner, ISerDes<K, TJVMK> keySerDes, ISerDes<V, TJVMV> valueSerDes, bool fromPrefetch, bool fromPool)
+            {
+                Factory = factory;
+                Inner = inner;
+                KeySerDes = keySerDes;
+                ValueSerDes = valueSerDes;
+                FromPrefetch = fromPrefetch;
+                FromPool = fromPool;
+            }
+
+            public bool FromPrefetch;
+            public bool FromPool;
+			public Org.Apache.Kafka.Streams.KeyValue<TJVMK, TJVMV> Inner;
+            public K Key;
+            public bool KeyStored;
+            public V Value;
+            public bool ValueStored;
+			public ISerDes<K, TJVMK> KeySerDes;
+			public ISerDes<V, TJVMV> ValueSerDes;
+			public IGenericSerDesFactory Factory;
+
+            public void Dispose()
+            {
+                Inner?.Dispose();
+            }
+        }
+
+        KeyValueState _state;
+
+        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _state.Factory; set => _state.Factory = value; }
 
         internal KeyValue(IGenericSerDesFactory factory,
                           Org.Apache.Kafka.Streams.KeyValue<TJVMK, TJVMV> value,
