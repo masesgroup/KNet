@@ -32,7 +32,7 @@ namespace MASES.KNet.Streams.State
     {
         [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         static WindowStoreIterator<V, TJVMV> Allocate() => new WindowStoreIterator<V, TJVMV>();
-        static JCOBridgeObjectPool<WindowStoreIterator<V, TJVMV>> _pool = new JCOBridgeObjectPool<WindowStoreIterator<V, TJVMV>>(Allocate);
+        static readonly JCOBridgeObjectPool<WindowStoreIterator<V, TJVMV>> _pool = new JCOBridgeObjectPool<WindowStoreIterator<V, TJVMV>>(Allocate);
 
         Org.Apache.Kafka.Streams.State.WindowStoreIterator<TJVMV> _iterator;
         IGenericSerDesFactory _factory;
