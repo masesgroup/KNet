@@ -31,69 +31,11 @@ namespace MASES.KNet.Consumer
     /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
     public class ConsumerRecord<K, V, TJVMK, TJVMV> : IKNetInnerReference<Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<TJVMK, TJVMV>>, IGenericSerDesFactoryApplier, IDisposable
     {
-        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        static ConsumerRecord<K, V, TJVMK, TJVMV> Allocate() => new ConsumerRecord<K, V, TJVMK, TJVMV>();
-        static readonly JCOBridgeObjectPool<ConsumerRecord<K, V, TJVMK, TJVMV>> _pool = new JCOBridgeObjectPool<ConsumerRecord<K, V, TJVMK, TJVMV>>(Allocate);
-
-        struct ConsumerRecordState
-        {
-            public ConsumerRecordState(Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<TJVMK, TJVMV> record, IDeserializer<K, TJVMK> keyDeserializer, IDeserializer<V, TJVMV> valueDeserializer, bool fromPrefetch, bool fromPool)
-            {
-                Record = record;
-                KeyDeserializer = keyDeserializer;
-                ValueDeserializer = valueDeserializer;
-                FromPrefetch = fromPrefetch;
-                FromPool = fromPool;
-            }
-
-            public ConsumerRecordState(Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<TJVMK, TJVMV> record, IGenericSerDesFactory factory, bool fromPrefetch, bool fromPool)
-            {
-                Record = record;
-                Factory = factory;
-                FromPrefetch = fromPrefetch;
-                FromPool = fromPool;
-            }
-
-            public bool FromPrefetch;
-            public bool FromPool;
-
-            public Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<TJVMK, TJVMV> Record;
-            public IDeserializer<K, TJVMK> KeyDeserializer;
-            public IDeserializer<V, TJVMV> ValueDeserializer;
-
-            public string Topic;
-            public int? Partition;
-            public Org.Apache.Kafka.Common.Header.Headers Headers;
-            public long? Offset;
-            public long? Timestamp;
-            public Org.Apache.Kafka.Common.Record.TimestampType TimestampType;
-            public int? SerializedKeySize;
-            public int? SerializedValueSize;
-            public bool LocalKeyDes;
-            public K LocalKey;
-            public bool LocalValueDes;
-            public V LocalValue;
-
-            public IGenericSerDesFactory Factory;
-
-            public void Dispose()
-            {
-                Record?.Dispose();
-            }
-        }
-
-        ConsumerRecordState _state;
-
-        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _state.Factory; set => _state.Factory = value; }
-
-        internal static ConsumerRecord<K, V, TJVMK, TJVMV> Create(Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<TJVMK, TJVMV> record, IDeserializer<K, TJVMK> keyDeserializer, IDeserializer<V, TJVMV> valueDeserializer, bool fromPrefetch)
-        {
-            bool fromPool = false;
-            var instance = fromPrefetch ? Allocate() : _pool.Rent(ref fromPool);
-            instance.Setup(record, keyDeserializer, valueDeserializer, fromPrefetch, fromPool);
-            return instance;
-        }
-
+        IDeserializer<K, TJVMK> _keyDeserializer;
+        IDeserializer<V, TJVMV> _valueDeserializer;
+        Org.Apache.Kafka.Clients.Consumer.ConsumerRecord<TJVMK, TJVMV> _record;
+        IGenericSerDesFactory _factory;
+        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set => _factory = value; }
         /// <summary>
         /// Initialize a new <see cref="ConsumerRecord{K, V, TJVMK, TJVMV}"/>
         /// </summary>
