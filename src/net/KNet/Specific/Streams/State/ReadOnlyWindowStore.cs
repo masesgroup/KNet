@@ -34,7 +34,7 @@ namespace MASES.KNet.Streams.State
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#all()"/>
         /// </summary>
         /// <returns><see cref="WindowedKeyValueIterator{K, V, TJVMK, TJVMV}"/></returns>
-        public virtual WindowedKeyValueIterator<K, V, TJVMK, TJVMV> All() => new WindowedKeyValueIterator<K, V, TJVMK, TJVMV>(Factory, Store.All());
+        public virtual WindowedKeyValueIterator<K, V, TJVMK, TJVMV> All() => WindowedKeyValueIterator<K, V, TJVMK, TJVMV>.Create(Factory, Store.All());
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#fetch(java.lang.Object,java.lang.Object,java.time.Instant,java.time.Instant)"/>
         /// </summary>
@@ -54,7 +54,7 @@ namespace MASES.KNet.Streams.State
             using var disposable0 = r0 as IDisposable;
             using var disposable1 = r1 as IDisposable;
 
-            return new WindowedKeyValueIterator<K, V, TJVMK, TJVMV>(factory, Store.Fetch(r0, r1, arg2, arg3));
+            return WindowedKeyValueIterator<K, V, TJVMK, TJVMV>.Create(factory, Store.Fetch(r0, r1, arg2, arg3));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#fetchAll(java.time.Instant,java.time.Instant)"/>
@@ -65,7 +65,7 @@ namespace MASES.KNet.Streams.State
         /// <exception cref="Java.Lang.IllegalArgumentException"/>
         public virtual WindowedKeyValueIterator<K, V, TJVMK, TJVMV> FetchAll(Java.Time.Instant arg0, Java.Time.Instant arg1)
         {
-            return new WindowedKeyValueIterator<K, V, TJVMK, TJVMV>(Factory, Store.FetchAll(arg0, arg1));
+            return WindowedKeyValueIterator<K, V, TJVMK, TJVMV>.Create(Factory, Store.FetchAll(arg0, arg1));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#fetch(java.lang.Object,java.time.Instant,java.time.Instant)"/>
@@ -83,7 +83,7 @@ namespace MASES.KNet.Streams.State
             var r0 = _keySerDes.Serialize((Java.Lang.String)null, arg0);
             using var disposable0 = r0 as IDisposable;
 
-            return new WindowStoreIterator<V, TJVMV>(factory, Store.Fetch(r0, arg1, arg2));
+            return WindowStoreIterator<V, TJVMV>.Create(factory, Store.Fetch(r0, arg1, arg2));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#fetch(java.lang.Object,long)"/>
@@ -108,7 +108,7 @@ namespace MASES.KNet.Streams.State
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#backwardAll()"/>
         /// </summary>
         /// <returns><see cref="WindowedKeyValueIterator{K, V, TJVMK, TJVMV}"/></returns>
-        public virtual WindowedKeyValueIterator<K, V, TJVMK, TJVMV> BackwardAll() => new WindowedKeyValueIterator<K, V, TJVMK, TJVMV>(Factory, Store.BackwardAll());
+        public virtual WindowedKeyValueIterator<K, V, TJVMK, TJVMV> BackwardAll() => WindowedKeyValueIterator<K, V, TJVMK, TJVMV>.Create(Factory, Store.BackwardAll());
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#backwardFetch(java.lang.Object,java.lang.Object,java.time.Instant,java.time.Instant)"/>
         /// </summary>
@@ -128,7 +128,7 @@ namespace MASES.KNet.Streams.State
             using var disposable0 = r0 as IDisposable;
             using var disposable1 = r1 as IDisposable;
 
-            return new WindowedKeyValueIterator<K, V, TJVMK, TJVMV>(factory, Store.BackwardFetch(r0, r1, arg2, arg3));
+            return WindowedKeyValueIterator<K, V, TJVMK, TJVMV>.Create(factory, Store.BackwardFetch(r0, r1, arg2, arg3));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#backwardFetchAll(java.time.Instant,java.time.Instant)"/>
@@ -139,7 +139,7 @@ namespace MASES.KNet.Streams.State
         /// <exception cref="Java.Lang.IllegalArgumentException"/>
         public virtual WindowedKeyValueIterator<K, V, TJVMK, TJVMV> BackwardFetchAll(Java.Time.Instant arg0, Java.Time.Instant arg1)
         {
-            return new WindowedKeyValueIterator<K, V, TJVMK, TJVMV>(Factory, Store.BackwardFetchAll(arg0, arg1));
+            return WindowedKeyValueIterator<K, V, TJVMK, TJVMV>.Create(Factory, Store.BackwardFetchAll(arg0, arg1));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/state/ReadOnlyWindowStore.html#backwardFetch(java.lang.Object,java.time.Instant,java.time.Instant)"/>
@@ -157,7 +157,7 @@ namespace MASES.KNet.Streams.State
             var r0 = _keySerDes.Serialize((Java.Lang.String)null, arg0);
             using var disposable0 = r0 as IDisposable;
 
-            return new WindowStoreIterator<V, TJVMV>(factory, Store.BackwardFetch(r0, arg1, arg2));
+            return WindowStoreIterator<V, TJVMV>.Create(factory, Store.BackwardFetch(r0, arg1, arg2));
         }
     }
 

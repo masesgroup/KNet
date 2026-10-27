@@ -189,7 +189,7 @@ namespace MASES.KNet.Consumer
         {
             using Duration duration = timeout;
             var records = base.Poll(duration);
-            return new ConsumerRecords<K, V, TJVMK, TJVMV>(records, _keyDeserializer, _valueDeserializer);
+            return ConsumerRecords<K, V, TJVMK, TJVMV>.Create(records, _keyDeserializer, _valueDeserializer);
         }
 
         Func<ConsumerRecord<K, V, TJVMK, TJVMV>, bool> _actionCallback = null;
