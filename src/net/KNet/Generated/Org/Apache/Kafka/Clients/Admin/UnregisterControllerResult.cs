@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 {
     #region UnregisterControllerResult declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/admin/UnregisterControllerResult.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.4.0/org/apache/kafka/clients/admin/UnregisterControllerResult.html"/>
     /// </summary>
     public partial class UnregisterControllerResult : MASES.JCOBridge.C2JBridge.JVMBridgeBase<UnregisterControllerResult>
     {
@@ -80,7 +80,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/admin/UnregisterControllerResult.html#all()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.4.0/org/apache/kafka/clients/admin/UnregisterControllerResult.html#all()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.KafkaFuture"/></returns>
         public Org.Apache.Kafka.Common.KafkaFuture<Java.Lang.Void> All()

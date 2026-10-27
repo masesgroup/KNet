@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Raft
 {
     #region KafkaRaftClient declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/KafkaRaftClient.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.4.0/org/apache/kafka/raft/KafkaRaftClient.html"/>
     /// </summary>
     public partial class KafkaRaftClient : Org.Apache.Kafka.Raft.RaftClient
     {
@@ -61,7 +61,7 @@ namespace Org.Apache.Kafka.Raft
 
     #region KafkaRaftClient<T> declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/KafkaRaftClient.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.4.0/org/apache/kafka/raft/KafkaRaftClient.html"/>
     /// </summary>
     /// <typeparam name="T"></typeparam>
     public partial class KafkaRaftClient<T> : Org.Apache.Kafka.Raft.RaftClient<T>
@@ -107,7 +107,7 @@ namespace Org.Apache.Kafka.Raft
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/KafkaRaftClient.html#MAX_BATCH_SIZE_BYTES"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.4.0/org/apache/kafka/raft/KafkaRaftClient.html#MAX_BATCH_SIZE_BYTES"/>
         /// </summary>
         public static int MAX_BATCH_SIZE_BYTES { get { return SGetField<int>(LocalBridgeClazz, "MAX_BATCH_SIZE_BYTES"); } set { SSetField(LocalBridgeClazz, "MAX_BATCH_SIZE_BYTES", value); } }
 
@@ -119,7 +119,7 @@ namespace Org.Apache.Kafka.Raft
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/KafkaRaftClient.html#isRunning()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.4.0/org/apache/kafka/raft/KafkaRaftClient.html#isRunning()"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool IsRunning()
@@ -127,7 +127,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<bool>("isRunning", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/KafkaRaftClient.html#isShuttingDown()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.4.0/org/apache/kafka/raft/KafkaRaftClient.html#isShuttingDown()"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool IsShuttingDown()
@@ -135,7 +135,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<bool>("isShuttingDown", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/KafkaRaftClient.html#shutdown(int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.4.0/org/apache/kafka/raft/KafkaRaftClient.html#shutdown(int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <returns><see cref="Java.Util.Concurrent.CompletionStage"/></returns>
@@ -144,7 +144,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<Java.Util.Concurrent.CompletionStage>("shutdown", "(I)Ljava/util/concurrent/CompletionStage;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/KafkaRaftClient.html#handle(org.apache.kafka.raft.RaftRequest.Inbound)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.4.0/org/apache/kafka/raft/KafkaRaftClient.html#handle(org.apache.kafka.raft.RaftRequest.Inbound)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Raft.RaftRequest.Inbound"/></param>
         /// <returns><see cref="Java.Util.Concurrent.CompletionStage"/></returns>
@@ -153,7 +153,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<Java.Util.Concurrent.CompletionStage>("handle", "(Lorg/apache/kafka/raft/RaftRequest$Inbound;)Ljava/util/concurrent/CompletionStage;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/KafkaRaftClient.html#nodeId()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.4.0/org/apache/kafka/raft/KafkaRaftClient.html#nodeId()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.OptionalInt"/></returns>
         public Java.Util.OptionalInt NodeId()
@@ -161,7 +161,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<Java.Util.OptionalInt>("nodeId", "()Ljava/util/OptionalInt;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/KafkaRaftClient.html#highWatermark()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.4.0/org/apache/kafka/raft/KafkaRaftClient.html#highWatermark()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.OptionalLong"/></returns>
         public Java.Util.OptionalLong HighWatermark()
@@ -169,7 +169,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<Java.Util.OptionalLong>("highWatermark", "()Ljava/util/OptionalLong;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/KafkaRaftClient.html#logEndOffset()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.4.0/org/apache/kafka/raft/KafkaRaftClient.html#logEndOffset()"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long LogEndOffset()
@@ -177,7 +177,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<long>("logEndOffset", "()J");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/KafkaRaftClient.html#prepareAppend(int,java.util.List)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.4.0/org/apache/kafka/raft/KafkaRaftClient.html#prepareAppend(int,java.util.List)"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <param name="arg1"><see cref="Java.Util.List"/></param>
@@ -187,7 +187,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<long>("prepareAppend", "(ILjava/util/List;)J", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/KafkaRaftClient.html#leaderAndEpoch()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.4.0/org/apache/kafka/raft/KafkaRaftClient.html#leaderAndEpoch()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Raft.LeaderAndEpoch"/></returns>
         public Org.Apache.Kafka.Raft.LeaderAndEpoch LeaderAndEpoch()
@@ -195,14 +195,14 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<Org.Apache.Kafka.Raft.LeaderAndEpoch>("leaderAndEpoch", "()Lorg/apache/kafka/raft/LeaderAndEpoch;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/KafkaRaftClient.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.4.0/org/apache/kafka/raft/KafkaRaftClient.html#close()"/>
         /// </summary>
         public void Close()
         {
             IExecuteWithSignature("close", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/KafkaRaftClient.html#initialize(java.util.Map,org.apache.kafka.raft.QuorumStateStore,org.apache.kafka.common.metrics.Metrics,org.apache.kafka.raft.ExternalKRaftMetrics)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.4.0/org/apache/kafka/raft/KafkaRaftClient.html#initialize(java.util.Map,org.apache.kafka.raft.QuorumStateStore,org.apache.kafka.common.metrics.Metrics,org.apache.kafka.raft.ExternalKRaftMetrics)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Raft.QuorumStateStore"/></param>
@@ -213,14 +213,14 @@ namespace Org.Apache.Kafka.Raft
             IExecuteWithSignature("initialize", "(Ljava/util/Map;Lorg/apache/kafka/raft/QuorumStateStore;Lorg/apache/kafka/common/metrics/Metrics;Lorg/apache/kafka/raft/ExternalKRaftMetrics;)V", arg0, arg1, arg2, arg3);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/KafkaRaftClient.html#poll()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.4.0/org/apache/kafka/raft/KafkaRaftClient.html#poll()"/>
         /// </summary>
         public void Poll()
         {
             IExecuteWithSignature("poll", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/KafkaRaftClient.html#register(org.apache.kafka.raft.RaftClient.Listener)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.4.0/org/apache/kafka/raft/KafkaRaftClient.html#register(org.apache.kafka.raft.RaftClient.Listener)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Raft.RaftClient.Listener"/></param>
         public void Register(Org.Apache.Kafka.Raft.RaftClient.Listener arg0)
@@ -228,7 +228,7 @@ namespace Org.Apache.Kafka.Raft
             IExecuteWithSignature("register", "(Lorg/apache/kafka/raft/RaftClient$Listener;)V", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/KafkaRaftClient.html#resign(int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.4.0/org/apache/kafka/raft/KafkaRaftClient.html#resign(int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         public void Resign(int arg0)
@@ -236,14 +236,14 @@ namespace Org.Apache.Kafka.Raft
             IExecuteWithSignature("resign", "(I)V", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/KafkaRaftClient.html#schedulePreparedAppend()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.4.0/org/apache/kafka/raft/KafkaRaftClient.html#schedulePreparedAppend()"/>
         /// </summary>
         public void SchedulePreparedAppend()
         {
             IExecuteWithSignature("schedulePreparedAppend", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/KafkaRaftClient.html#unregister(org.apache.kafka.raft.RaftClient.Listener)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.4.0/org/apache/kafka/raft/KafkaRaftClient.html#unregister(org.apache.kafka.raft.RaftClient.Listener)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Raft.RaftClient.Listener"/></param>
         public void Unregister(Org.Apache.Kafka.Raft.RaftClient.Listener arg0)
@@ -278,7 +278,7 @@ namespace Org.Apache.Kafka.Raft
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/KafkaRaftClient.html#MAX_BATCH_SIZE_BYTES"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.4.0/org/apache/kafka/raft/KafkaRaftClient.html#MAX_BATCH_SIZE_BYTES"/>
         /// </summary>
         public static int MAX_BATCH_SIZE_BYTES { get { return SGetField<int>(LocalBridgeClazz, "MAX_BATCH_SIZE_BYTES"); } set { SSetField(LocalBridgeClazz, "MAX_BATCH_SIZE_BYTES", value); } }
 
@@ -290,7 +290,7 @@ namespace Org.Apache.Kafka.Raft
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/KafkaRaftClient.html#isRunning()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.4.0/org/apache/kafka/raft/KafkaRaftClient.html#isRunning()"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool IsRunning()
@@ -298,7 +298,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<bool>("isRunning", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/KafkaRaftClient.html#isShuttingDown()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.4.0/org/apache/kafka/raft/KafkaRaftClient.html#isShuttingDown()"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool IsShuttingDown()
@@ -306,7 +306,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<bool>("isShuttingDown", "()Z");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/KafkaRaftClient.html#shutdown(int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.4.0/org/apache/kafka/raft/KafkaRaftClient.html#shutdown(int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <returns><see cref="Java.Util.Concurrent.CompletionStage"/></returns>
@@ -315,7 +315,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<Java.Util.Concurrent.CompletionStage<Java.Lang.Void>>("shutdown", "(I)Ljava/util/concurrent/CompletionStage;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/KafkaRaftClient.html#handle(org.apache.kafka.raft.RaftRequest.Inbound)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.4.0/org/apache/kafka/raft/KafkaRaftClient.html#handle(org.apache.kafka.raft.RaftRequest.Inbound)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Raft.RaftRequest.Inbound"/></param>
         /// <returns><see cref="Java.Util.Concurrent.CompletionStage"/></returns>
@@ -324,7 +324,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<Java.Util.Concurrent.CompletionStage<Org.Apache.Kafka.Raft.RaftResponse.Outbound>>("handle", "(Lorg/apache/kafka/raft/RaftRequest$Inbound;)Ljava/util/concurrent/CompletionStage;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/KafkaRaftClient.html#nodeId()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.4.0/org/apache/kafka/raft/KafkaRaftClient.html#nodeId()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.OptionalInt"/></returns>
         public Java.Util.OptionalInt NodeId()
@@ -332,7 +332,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<Java.Util.OptionalInt>("nodeId", "()Ljava/util/OptionalInt;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/KafkaRaftClient.html#highWatermark()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.4.0/org/apache/kafka/raft/KafkaRaftClient.html#highWatermark()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.OptionalLong"/></returns>
         public Java.Util.OptionalLong HighWatermark()
@@ -340,7 +340,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<Java.Util.OptionalLong>("highWatermark", "()Ljava/util/OptionalLong;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/KafkaRaftClient.html#logEndOffset()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.4.0/org/apache/kafka/raft/KafkaRaftClient.html#logEndOffset()"/>
         /// </summary>
         /// <returns><see cref="long"/></returns>
         public long LogEndOffset()
@@ -348,7 +348,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<long>("logEndOffset", "()J");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/KafkaRaftClient.html#prepareAppend(int,java.util.List)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.4.0/org/apache/kafka/raft/KafkaRaftClient.html#prepareAppend(int,java.util.List)"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <param name="arg1"><see cref="Java.Util.List"/></param>
@@ -358,7 +358,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<long>("prepareAppend", "(ILjava/util/List;)J", arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/KafkaRaftClient.html#leaderAndEpoch()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.4.0/org/apache/kafka/raft/KafkaRaftClient.html#leaderAndEpoch()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Raft.LeaderAndEpoch"/></returns>
         public Org.Apache.Kafka.Raft.LeaderAndEpoch LeaderAndEpoch()
@@ -366,14 +366,14 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<Org.Apache.Kafka.Raft.LeaderAndEpoch>("leaderAndEpoch", "()Lorg/apache/kafka/raft/LeaderAndEpoch;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/KafkaRaftClient.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.4.0/org/apache/kafka/raft/KafkaRaftClient.html#close()"/>
         /// </summary>
         public void Close()
         {
             IExecuteWithSignature("close", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/KafkaRaftClient.html#initialize(java.util.Map,org.apache.kafka.raft.QuorumStateStore,org.apache.kafka.common.metrics.Metrics,org.apache.kafka.raft.ExternalKRaftMetrics)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.4.0/org/apache/kafka/raft/KafkaRaftClient.html#initialize(java.util.Map,org.apache.kafka.raft.QuorumStateStore,org.apache.kafka.common.metrics.Metrics,org.apache.kafka.raft.ExternalKRaftMetrics)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Map"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Raft.QuorumStateStore"/></param>
@@ -384,14 +384,14 @@ namespace Org.Apache.Kafka.Raft
             IExecuteWithSignature("initialize", "(Ljava/util/Map;Lorg/apache/kafka/raft/QuorumStateStore;Lorg/apache/kafka/common/metrics/Metrics;Lorg/apache/kafka/raft/ExternalKRaftMetrics;)V", arg0, arg1, arg2, arg3);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/KafkaRaftClient.html#poll()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.4.0/org/apache/kafka/raft/KafkaRaftClient.html#poll()"/>
         /// </summary>
         public void Poll()
         {
             IExecuteWithSignature("poll", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/KafkaRaftClient.html#register(org.apache.kafka.raft.RaftClient.Listener)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.4.0/org/apache/kafka/raft/KafkaRaftClient.html#register(org.apache.kafka.raft.RaftClient.Listener)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Raft.RaftClient.Listener"/></param>
         public void Register(Org.Apache.Kafka.Raft.RaftClient.Listener<T> arg0)
@@ -399,7 +399,7 @@ namespace Org.Apache.Kafka.Raft
             IExecuteWithSignature("register", "(Lorg/apache/kafka/raft/RaftClient$Listener;)V", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/KafkaRaftClient.html#resign(int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.4.0/org/apache/kafka/raft/KafkaRaftClient.html#resign(int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         public void Resign(int arg0)
@@ -407,14 +407,14 @@ namespace Org.Apache.Kafka.Raft
             IExecuteWithSignature("resign", "(I)V", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/KafkaRaftClient.html#schedulePreparedAppend()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.4.0/org/apache/kafka/raft/KafkaRaftClient.html#schedulePreparedAppend()"/>
         /// </summary>
         public void SchedulePreparedAppend()
         {
             IExecuteWithSignature("schedulePreparedAppend", "()V");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/KafkaRaftClient.html#unregister(org.apache.kafka.raft.RaftClient.Listener)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.4.0/org/apache/kafka/raft/KafkaRaftClient.html#unregister(org.apache.kafka.raft.RaftClient.Listener)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Raft.RaftClient.Listener"/></param>
         public void Unregister(Org.Apache.Kafka.Raft.RaftClient.Listener<T> arg0)

@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Snapshot
 {
     #region Snapshots declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/snapshot/Snapshots.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.4.0/org/apache/kafka/snapshot/Snapshots.html"/>
     /// </summary>
     public partial class Snapshots : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Snapshots>
     {
@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Snapshot
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/snapshot/Snapshots.html#%3Cinit%3E()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.4.0/org/apache/kafka/snapshot/Snapshots.html#%3Cinit%3E()"/>
         /// </summary>
         public Snapshots() : base(JVMBridgeBase.InitializerInstance)
         {
@@ -86,11 +86,11 @@ namespace Org.Apache.Kafka.Snapshot
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/snapshot/Snapshots.html#DELETE_SUFFIX"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.4.0/org/apache/kafka/snapshot/Snapshots.html#DELETE_SUFFIX"/>
         /// </summary>
         public static Java.Lang.String DELETE_SUFFIX { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "DELETE_SUFFIX"); } set { SSetField(LocalBridgeClazz, "DELETE_SUFFIX", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/snapshot/Snapshots.html#SUFFIX"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.4.0/org/apache/kafka/snapshot/Snapshots.html#SUFFIX"/>
         /// </summary>
         public static Java.Lang.String SUFFIX { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "SUFFIX"); } set { SSetField(LocalBridgeClazz, "SUFFIX", value); } }
 

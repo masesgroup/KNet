@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Common.Annotation
 {
     #region InterfaceAudience declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/annotation/InterfaceAudience.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.4.0/org/apache/kafka/common/annotation/InterfaceAudience.html"/>
     /// </summary>
     public partial class InterfaceAudience : MASES.JCOBridge.C2JBridge.JVMBridgeBase<InterfaceAudience>
     {
@@ -57,7 +57,7 @@ namespace Org.Apache.Kafka.Common.Annotation
         // TODO: complete the class
         #region Private declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/annotation/InterfaceAudience.Private.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.4.0/org/apache/kafka/common/annotation/InterfaceAudience.Private.html"/>
         /// </summary>
         public partial class Private : Java.Lang.Annotation.Annotation
         {
@@ -91,7 +91,7 @@ namespace Org.Apache.Kafka.Common.Annotation
 
         #region Public declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/annotation/InterfaceAudience.Public.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.4.0/org/apache/kafka/common/annotation/InterfaceAudience.Public.html"/>
         /// </summary>
         public partial class Public : Java.Lang.Annotation.Annotation
         {
@@ -132,7 +132,7 @@ namespace Org.Apache.Kafka.Common.Annotation
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/common/annotation/InterfaceAudience.html#%3Cinit%3E()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.4.0/org/apache/kafka/common/annotation/InterfaceAudience.html#%3Cinit%3E()"/>
         /// </summary>
         public InterfaceAudience() : base(JVMBridgeBase.InitializerInstance)
         {

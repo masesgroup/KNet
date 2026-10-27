@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 {
     #region StreamsGroupDescription declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/admin/StreamsGroupDescription.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.4.0/org/apache/kafka/clients/admin/StreamsGroupDescription.html"/>
     /// </summary>
     public partial class StreamsGroupDescription : MASES.JCOBridge.C2JBridge.JVMBridgeBase<StreamsGroupDescription>
     {
@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Clients.Admin
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/admin/StreamsGroupDescription.html#%3Cinit%3E(java.lang.String,int,int,int,java.util.Collection,java.util.Collection,org.apache.kafka.common.GroupState,org.apache.kafka.common.Node,java.util.Set,java.util.Optional,org.apache.kafka.clients.admin.StreamsGroupTopologyDescriptionStatus,java.util.Optional)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.4.0/org/apache/kafka/clients/admin/StreamsGroupDescription.html#%3Cinit%3E(java.lang.String,int,int,int,java.util.Collection,java.util.Collection,org.apache.kafka.common.GroupState,org.apache.kafka.common.Node,java.util.Set,java.util.Optional,org.apache.kafka.clients.admin.StreamsGroupTopologyDescriptionStatus,java.util.Optional)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="int"/></param>
@@ -90,7 +90,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return JVMBridgeBase.New<StreamsGroupDescription>(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/admin/StreamsGroupDescription.html#%3Cinit%3E(java.lang.String,int,int,int,java.util.Collection,java.util.Collection,org.apache.kafka.common.GroupState,org.apache.kafka.common.Node,java.util.Set)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.4.0/org/apache/kafka/clients/admin/StreamsGroupDescription.html#%3Cinit%3E(java.lang.String,int,int,int,java.util.Collection,java.util.Collection,org.apache.kafka.common.GroupState,org.apache.kafka.common.Node,java.util.Set)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <param name="arg1"><see cref="int"/></param>
@@ -130,7 +130,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/admin/StreamsGroupDescription.html#groupEpoch()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.4.0/org/apache/kafka/clients/admin/StreamsGroupDescription.html#groupEpoch()"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int GroupEpoch()
@@ -138,7 +138,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<int>("groupEpoch", "()I");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/admin/StreamsGroupDescription.html#targetAssignmentEpoch()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.4.0/org/apache/kafka/clients/admin/StreamsGroupDescription.html#targetAssignmentEpoch()"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int TargetAssignmentEpoch()
@@ -146,7 +146,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<int>("targetAssignmentEpoch", "()I");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/admin/StreamsGroupDescription.html#topologyEpoch()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.4.0/org/apache/kafka/clients/admin/StreamsGroupDescription.html#topologyEpoch()"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int TopologyEpoch()
@@ -154,7 +154,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<int>("topologyEpoch", "()I");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/admin/StreamsGroupDescription.html#groupId()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.4.0/org/apache/kafka/clients/admin/StreamsGroupDescription.html#groupId()"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String GroupId()
@@ -162,7 +162,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Java.Lang.String>("groupId", "()Ljava/lang/String;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/admin/StreamsGroupDescription.html#members()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.4.0/org/apache/kafka/clients/admin/StreamsGroupDescription.html#members()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Collection"/></returns>
         public Java.Util.Collection<Org.Apache.Kafka.Clients.Admin.StreamsGroupMemberDescription> Members()
@@ -170,7 +170,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Java.Util.Collection<Org.Apache.Kafka.Clients.Admin.StreamsGroupMemberDescription>>("members", "()Ljava/util/Collection;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/admin/StreamsGroupDescription.html#subtopologies()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.4.0/org/apache/kafka/clients/admin/StreamsGroupDescription.html#subtopologies()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Collection"/></returns>
         public Java.Util.Collection<Org.Apache.Kafka.Clients.Admin.StreamsGroupSubtopologyDescription> Subtopologies()
@@ -178,7 +178,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Java.Util.Collection<Org.Apache.Kafka.Clients.Admin.StreamsGroupSubtopologyDescription>>("subtopologies", "()Ljava/util/Collection;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/admin/StreamsGroupDescription.html#assignorName()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.4.0/org/apache/kafka/clients/admin/StreamsGroupDescription.html#assignorName()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Optional"/></returns>
         public Java.Util.Optional<Java.Lang.String> AssignorName()
@@ -186,7 +186,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Java.Util.Optional<Java.Lang.String>>("assignorName", "()Ljava/util/Optional;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/admin/StreamsGroupDescription.html#topologyDescription()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.4.0/org/apache/kafka/clients/admin/StreamsGroupDescription.html#topologyDescription()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Optional"/></returns>
         public Java.Util.Optional<Org.Apache.Kafka.Clients.Admin.StreamsGroupTopologyDescription> TopologyDescription()
@@ -194,7 +194,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Java.Util.Optional<Org.Apache.Kafka.Clients.Admin.StreamsGroupTopologyDescription>>("topologyDescription", "()Ljava/util/Optional;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/admin/StreamsGroupDescription.html#authorizedOperations()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.4.0/org/apache/kafka/clients/admin/StreamsGroupDescription.html#authorizedOperations()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Set"/></returns>
         public Java.Util.Set<Org.Apache.Kafka.Common.Acl.AclOperation> AuthorizedOperations()
@@ -202,7 +202,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Java.Util.Set<Org.Apache.Kafka.Common.Acl.AclOperation>>("authorizedOperations", "()Ljava/util/Set;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/admin/StreamsGroupDescription.html#topologyDescriptionStatus()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.4.0/org/apache/kafka/clients/admin/StreamsGroupDescription.html#topologyDescriptionStatus()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.StreamsGroupTopologyDescriptionStatus"/></returns>
         public Org.Apache.Kafka.Clients.Admin.StreamsGroupTopologyDescriptionStatus TopologyDescriptionStatus()
@@ -210,7 +210,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.StreamsGroupTopologyDescriptionStatus>("topologyDescriptionStatus", "()Lorg/apache/kafka/clients/admin/StreamsGroupTopologyDescriptionStatus;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/admin/StreamsGroupDescription.html#groupState()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.4.0/org/apache/kafka/clients/admin/StreamsGroupDescription.html#groupState()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.GroupState"/></returns>
         public Org.Apache.Kafka.Common.GroupState GroupState()
@@ -218,7 +218,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return IExecuteWithSignature<Org.Apache.Kafka.Common.GroupState>("groupState", "()Lorg/apache/kafka/common/GroupState;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/admin/StreamsGroupDescription.html#coordinator()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.4.0/org/apache/kafka/clients/admin/StreamsGroupDescription.html#coordinator()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Common.Node"/></returns>
         public Org.Apache.Kafka.Common.Node Coordinator()

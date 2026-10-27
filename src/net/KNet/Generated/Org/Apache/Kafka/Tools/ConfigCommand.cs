@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Tools
 {
     #region ConfigCommand declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.3.1/org/apache/kafka/tools/ConfigCommand.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.4.0/org/apache/kafka/tools/ConfigCommand.html"/>
     /// </summary>
     public partial class ConfigCommand : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ConfigCommand>, MASES.JCOBridge.C2JBridge.IJVMBridgeMain
     {
@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Tools
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.3.1/org/apache/kafka/tools/ConfigCommand.html#%3Cinit%3E()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.4.0/org/apache/kafka/tools/ConfigCommand.html#%3Cinit%3E()"/>
         /// </summary>
         public ConfigCommand() : base(JVMBridgeBase.InitializerInstance)
         {
@@ -90,7 +90,7 @@ namespace Org.Apache.Kafka.Tools
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.3.1/org/apache/kafka/tools/ConfigCommand.html#main(java.lang.String[])"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-tools/4.4.0/org/apache/kafka/tools/ConfigCommand.html#main(java.lang.String[])"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         public static void Main(Java.Lang.String[] arg0)

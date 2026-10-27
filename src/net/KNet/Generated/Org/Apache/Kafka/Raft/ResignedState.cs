@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Raft
 {
     #region ResignedState declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/ResignedState.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.4.0/org/apache/kafka/raft/ResignedState.html"/>
     /// </summary>
     public partial class ResignedState : Org.Apache.Kafka.Raft.EpochState
     {
@@ -80,7 +80,7 @@ namespace Org.Apache.Kafka.Raft
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/ResignedState.html#canGrantVote(org.apache.kafka.raft.ReplicaKey,boolean,boolean)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.4.0/org/apache/kafka/raft/ResignedState.html#canGrantVote(org.apache.kafka.raft.ReplicaKey,boolean,boolean)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Raft.ReplicaKey"/></param>
         /// <param name="arg1"><see cref="bool"/></param>
@@ -91,7 +91,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<bool>("canGrantVote", "(Lorg/apache/kafka/raft/ReplicaKey;ZZ)Z", arg0, arg1, arg2);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/ResignedState.html#hasElectionTimeoutExpired(long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.4.0/org/apache/kafka/raft/ResignedState.html#hasElectionTimeoutExpired(long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <returns><see cref="bool"/></returns>
@@ -100,7 +100,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<bool>("hasElectionTimeoutExpired", "(J)Z", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/ResignedState.html#epoch()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.4.0/org/apache/kafka/raft/ResignedState.html#epoch()"/>
         /// </summary>
         /// <returns><see cref="int"/></returns>
         public int Epoch()
@@ -108,7 +108,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<int>("epoch", "()I");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/ResignedState.html#name()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.4.0/org/apache/kafka/raft/ResignedState.html#name()"/>
         /// </summary>
         /// <returns><see cref="Java.Lang.String"/></returns>
         public Java.Lang.String Name()
@@ -116,7 +116,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<Java.Lang.String>("name", "()Ljava/lang/String;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/ResignedState.html#preferredSuccessors()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.4.0/org/apache/kafka/raft/ResignedState.html#preferredSuccessors()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.List"/></returns>
         public Java.Util.List<Org.Apache.Kafka.Raft.ReplicaKey> PreferredSuccessors()
@@ -124,7 +124,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<Java.Util.List<Org.Apache.Kafka.Raft.ReplicaKey>>("preferredSuccessors", "()Ljava/util/List;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/ResignedState.html#unackedVoters()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.4.0/org/apache/kafka/raft/ResignedState.html#unackedVoters()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Set"/></returns>
         public Java.Util.Set<Java.Lang.Integer> UnackedVoters()
@@ -132,7 +132,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<Java.Util.Set<Java.Lang.Integer>>("unackedVoters", "()Ljava/util/Set;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/ResignedState.html#remainingElectionTimeMs(long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.4.0/org/apache/kafka/raft/ResignedState.html#remainingElectionTimeMs(long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="long"/></param>
         /// <returns><see cref="long"/></returns>
@@ -141,7 +141,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<long>("remainingElectionTimeMs", "(J)J", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/ResignedState.html#election()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.4.0/org/apache/kafka/raft/ResignedState.html#election()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Raft.ElectionState"/></returns>
         public Org.Apache.Kafka.Raft.ElectionState Election()
@@ -149,7 +149,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<Org.Apache.Kafka.Raft.ElectionState>("election", "()Lorg/apache/kafka/raft/ElectionState;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/ResignedState.html#leaderEndpoints()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.4.0/org/apache/kafka/raft/ResignedState.html#leaderEndpoints()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Raft.Endpoints"/></returns>
         public Org.Apache.Kafka.Raft.Endpoints LeaderEndpoints()
@@ -157,7 +157,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<Org.Apache.Kafka.Raft.Endpoints>("leaderEndpoints", "()Lorg/apache/kafka/raft/Endpoints;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/ResignedState.html#leaderAndEpoch()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.4.0/org/apache/kafka/raft/ResignedState.html#leaderAndEpoch()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Raft.LeaderAndEpoch"/></returns>
         public Org.Apache.Kafka.Raft.LeaderAndEpoch LeaderAndEpoch()
@@ -165,7 +165,7 @@ namespace Org.Apache.Kafka.Raft
             return IExecuteWithSignature<Org.Apache.Kafka.Raft.LeaderAndEpoch>("leaderAndEpoch", "()Lorg/apache/kafka/raft/LeaderAndEpoch;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/ResignedState.html#acknowledgeResignation(int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.4.0/org/apache/kafka/raft/ResignedState.html#acknowledgeResignation(int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         public void AcknowledgeResignation(int arg0)
@@ -173,7 +173,7 @@ namespace Org.Apache.Kafka.Raft
             IExecuteWithSignature("acknowledgeResignation", "(I)V", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.3.1/org/apache/kafka/raft/ResignedState.html#close()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-raft/4.4.0/org/apache/kafka/raft/ResignedState.html#close()"/>
         /// </summary>
         public void Close()
         {
