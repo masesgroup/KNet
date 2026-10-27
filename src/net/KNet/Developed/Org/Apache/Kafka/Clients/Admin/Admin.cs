@@ -289,7 +289,6 @@ namespace Org.Apache.Kafka.Clients.Admin
         /// Returns a <see cref="System.Collections.Generic.IDictionary{TKey, TValue}"/> containing the Latest offset for each partition of the <paramref name="topicName"/>
         /// </summary>
         /// <param name="topicName">The topic to be queried</param>
-        /// <param name="delta">A value to be added to each offset retrieved</param>
         /// <returns>A <see cref="System.Collections.Generic.IDictionary{TKey, TValue}"/> containing the Latest offset for each partition</returns>
         [Obsolete("Use LatestTieredPartitionOffsetForTopic", true)]
         System.Collections.Generic.IDictionary<int, long> LastPartitionOffsetForTopic(string topicName);
@@ -395,7 +394,7 @@ namespace Org.Apache.Kafka.Clients.Admin
                     {
                         using var key = item.Key;
                         using var value = item.Value;
-                        if (key.Equals(jTopic))
+                        if (Java.Lang.String.Equals(key, jTopic))
                         {
                             using HashMap<TopicPartition, OffsetSpec> hashMap = new();
                             using var partitions = value.Partitions();
@@ -418,7 +417,7 @@ namespace Org.Apache.Kafka.Clients.Admin
                                 using var offsetResultItemKey = offsetResultItem.Key;
                                 using var offsetResultItemValue = offsetResultItem.Value;
                                 using var offsetResultItemTopic = offsetResultItemKey.Topic();
-                                if (offsetResultItemTopic.Equals(jTopic))
+                                if (Java.Lang.String.Equals(offsetResultItemTopic, jTopic))
                                 {
                                     dictionary.Add(offsetResultItemKey.Partition(), offsetResultItemValue.Offset() + delta); // since latest means the latest used offset (a record in kafka) + 1, here we remove 1 to be in sync with received offset from kafka
                                 }

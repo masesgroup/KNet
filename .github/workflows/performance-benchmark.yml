@@ -76,10 +76,8 @@ jobs:
 
       - uses: actions/setup-dotnet@v6
         with:
-          dotnet-version: |
-            8.x
-            9.x
-            10.x
+          dotnet-version: '11.0.x'
+          dotnet-quality: 'preview'
 
       - name: Download pscp directly
         if: ${{ inputs.UseSpecialSettings == true }}
@@ -134,6 +132,7 @@ jobs:
           Copy-Item .github\workflows\support\* -Destination bin\net8.0\  -Force
           Copy-Item .github\workflows\support\* -Destination bin\net9.0\  -Force
           Copy-Item .github\workflows\support\* -Destination bin\net10.0\ -Force
+          Copy-Item .github\workflows\support\* -Destination bin\net11.0\ -Force
 
       - name: Cache bin net8.0
         uses: actions/cache/save@v6
@@ -156,6 +155,13 @@ jobs:
           path: ./bin/net10.0/
           key: KNetBenchmark_${{ github.run_number }}_${{ github.run_attempt }}_net10.0_${{ github.sha }}
 
+      - name: Cache bin net11.0
+        uses: actions/cache/save@v6
+        with:
+          enableCrossOsArchive: true
+          path: ./bin/net11.0/
+          key: KNetBenchmark_${{ github.run_number }}_${{ github.run_attempt }}_net11.0_${{ github.sha }}
+
   # ────────────────────────────────────────────────────────────────────────────
   # 2. Docker image — identical to build_common.yaml build_container_knet
   # ────────────────────────────────────────────────────────────────────────────
@@ -177,9 +183,8 @@ jobs:
 
       - uses: actions/setup-dotnet@v6
         with:
-          dotnet-version: |
-            9.x
-            10.x
+          dotnet-version: '11.0.x'
+          dotnet-quality: 'preview'
 
       - name: Install sshpass
         if: ${{ inputs.UseSpecialSettings == true }}
@@ -285,7 +290,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        framework: ['net8.0', 'net9.0', 'net10.0']
+        framework: ['net8.0', 'net9.0', 'net10.0', 'net11.0']
 
     services:
       kafka:
@@ -297,28 +302,19 @@ jobs:
           - 9092:9092
         env:
           KNET_DOCKER_RUNNING_MODE: server-standalone
-          JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_6_9 }}
+          JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_6_10 }}
 
     env:
-      JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_6_9 }}
+      JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_6_10 }}
       RESULTS_DIR: ${{ github.workspace }}/benchmark-results
 
     steps:
       # ── .NET SDK for this matrix leg ────────────────────────────────────────
       - uses: actions/setup-dotnet@v6
-        if: matrix.framework == 'net8.0'
+        if: matrix.framework == 'net11.0'
         with:
-          dotnet-version: 8.x
-
-      - uses: actions/setup-dotnet@v6
-        if: matrix.framework == 'net9.0'
-        with:
-          dotnet-version: 9.x
-
-      - uses: actions/setup-dotnet@v6
-        if: matrix.framework == 'net10.0'
-        with:
-          dotnet-version: 10.x
+          dotnet-version: '11.0.x'
+          dotnet-quality: 'preview'
 
       # ── Restore compiled binaries ────────────────────────────────────────────
       - name: Restore bin ${{ matrix.framework }} from cache
@@ -874,7 +870,7 @@ jobs:
             | **CI run** | [#${{ github.run_number }}](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}) |
             | **Commit** | `${{ github.sha }}` |
             | **Trigger** | `${{ github.event_name }}` |
-            | **Frameworks** | `net8.0` / `net9.0` / `net10.0` (knet + standard per leg) |
+            | **Frameworks** | `net8.0` / `net9.0` / `net10.0` / `net11.0` (knet + standard per leg) |
             | **Repetitions** | `${{ env.BENCH_REPEAT }}` |
             | **Packets** | `${{ env.BENCH_MIN_PKT }}` → `${{ env.BENCH_MAX_PKT }}` |
             | **Lengths (bytes)** | `${{ env.BENCH_MIN_LEN }}` → `${{ env.BENCH_MAX_LEN }}` |
