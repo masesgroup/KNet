@@ -164,5 +164,17 @@ public final class StreamPartitioner implements org.mases.jcobridge.IJCListener,
         if (_partitionsIndex <= 0) _partitionsIndex = getEventIndex("partitions");
         raiseEvent(_partitionsIndex, eventDataExchange, arg0, arg1, arg2, arg3); if (!eventDataExchange.getHasOverride()) throw new UnsupportedOperationException("The method shall be implemented in .NET side since does not have a default implementation within the JVM"); Object retVal = eventDataExchange.getReturnData(); return (java.util.Optional)retVal;
     }
+    int _partitions5Index = 0;
+    //@Override
+    public java.util.Optional partitions(java.lang.String arg0, java.lang.Object arg1, java.lang.Object arg2, org.apache.kafka.common.header.Headers arg3, int arg4) {
+        org.mases.jnet.developed.JNetEventResult eventDataExchange = new org.mases.jnet.developed.JNetEventResult();
+        if (_partitions5Index <= 0) _partitions5Index = getEventIndex("partitions5");
+        raiseEvent(_partitions5Index, eventDataExchange, arg0, arg1, arg2, arg3, arg4); Object retVal; if (!eventDataExchange.getHasOverride()) retVal = org.apache.kafka.streams.processor.StreamPartitioner.super.partitions(arg0, arg1, arg2, arg3, arg4); else retVal = eventDataExchange.getReturnData(); return (java.util.Optional)retVal;
+    }
+
+    //@Override
+    public java.util.Optional partitionsDefault(java.lang.String arg0, java.lang.Object arg1, java.lang.Object arg2, org.apache.kafka.common.header.Headers arg3, int arg4) {
+        return org.apache.kafka.streams.processor.StreamPartitioner.super.partitions(arg0, arg1, arg2, arg3, arg4);
+    }
 
 }
