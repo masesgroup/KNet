@@ -37,7 +37,7 @@ namespace MASES.KNet.Streams
     {
         [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         static TimestampedKeyValue<K, V, TJVMK, TJVMV> Allocate() => new TimestampedKeyValue<K, V, TJVMK, TJVMV>();
-        static JCOBridgeObjectPool<TimestampedKeyValue<K, V, TJVMK, TJVMV>> _pool = new JCOBridgeObjectPool<TimestampedKeyValue<K, V, TJVMK, TJVMV>>(Allocate);
+        static readonly JCOBridgeObjectPool<TimestampedKeyValue<K, V, TJVMK, TJVMV>> _pool = new JCOBridgeObjectPool<TimestampedKeyValue<K, V, TJVMK, TJVMV>>(Allocate);
 
         struct TimestampedKeyValueState
         {
@@ -50,15 +50,15 @@ namespace MASES.KNet.Streams
                 FromPool = fromPool;
             }
 
-            public bool FromPrefetch;
-            public bool FromPool;
+			public bool FromPrefetch;
+			public bool FromPool;
 
-            public Org.Apache.Kafka.Streams.KeyValue<TJVMK, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV>> Inner;
+			public Org.Apache.Kafka.Streams.KeyValue<TJVMK, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV>> Inner;
             public K Key;
             public bool KeyStored;
             public ValueAndTimestamp<V, TJVMV> Value;
-            public ISerDes<K, TJVMK> KeySerDes;
-            public IGenericSerDesFactory Factory;
+			public ISerDes<K, TJVMK> KeySerDes;
+			public IGenericSerDesFactory Factory;
 
             public void Dispose()
             {
