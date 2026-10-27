@@ -33,39 +33,13 @@ namespace MASES.KNet.Streams
     /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
     public sealed class WindowedKeyValue<K, V, TJVMK, TJVMV> : IKNetInnerReference<Org.Apache.Kafka.Streams.KeyValue<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, TJVMV>>, IGenericSerDesFactoryApplier, IDisposable
     {
-        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        static WindowedKeyValue<K, V, TJVMK, TJVMV> Allocate() => new WindowedKeyValue<K, V, TJVMK, TJVMV>();
-        static readonly JCOBridgeObjectPool<WindowedKeyValue<K, V, TJVMK, TJVMV>> _pool = new JCOBridgeObjectPool<WindowedKeyValue<K, V, TJVMK, TJVMV>>(Allocate);
-
-        struct WindowedKeyValueState
-        {
-            public WindowedKeyValueState(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.KeyValue<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, TJVMV> inner, ISerDes<V, TJVMV> valueSerDes, bool fromPrefetch, bool fromPool)
-            {
-                Factory = factory;
-                Inner = inner;
-                ValueSerDes = valueSerDes;
-                FromPrefetch = fromPrefetch;
-                FromPool = fromPool;
-            }
-
-            public bool FromPrefetch;
-            public bool FromPool;
-            public Org.Apache.Kafka.Streams.KeyValue<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, TJVMV> Inner;
-            public Windowed<K, TJVMK> Key = null;
-            public V Value;
-            public bool ValueStored;
-            public ISerDes<V, TJVMV> ValueSerDes = null;
-            public IGenericSerDesFactory Factory;
-
-            public void Dispose()
-            {
-                Inner?.Dispose();
-            }
-        }
-
-        WindowedKeyValueState _state;
-
-        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _state.Factory; set => _state.Factory = value; }
+        Org.Apache.Kafka.Streams.KeyValue<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, TJVMV> _valueInner;
+        Windowed<K, TJVMK> _key = null;
+        V _value;
+        bool _valueStored;
+        ISerDes<V, TJVMV> _valueSerDes = null;
+        IGenericSerDesFactory _factory;
+        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set => _factory = value; }
 
         internal WindowedKeyValue(IGenericSerDesFactory factory,
                                   Org.Apache.Kafka.Streams.KeyValue<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, TJVMV> value,
