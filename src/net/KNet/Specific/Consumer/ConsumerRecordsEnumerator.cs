@@ -26,10 +26,6 @@ namespace MASES.KNet.Consumer
 {
     class ConsumerRecordsEnumerator<K, V, TJVMK, TJVMV> : IKNetInnerReference<Org.Apache.Kafka.Clients.Consumer.ConsumerRecords<TJVMK, TJVMV>>, IEnumerator<ConsumerRecord<K, V, TJVMK, TJVMV>>, IAsyncEnumerator<ConsumerRecord<K, V, TJVMK, TJVMV>>
     {
-        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        static ConsumerRecordsEnumerator<K, V, TJVMK, TJVMV> Allocate() => new ConsumerRecordsEnumerator<K, V, TJVMK, TJVMV>();
-        static readonly JCOBridgeObjectPool<ConsumerRecordsEnumerator<K, V, TJVMK, TJVMV>> _pool = new JCOBridgeObjectPool<ConsumerRecordsEnumerator<K, V, TJVMK, TJVMV>>(Allocate);
-
         IDeserializer<K, TJVMK> _keyDeserializer;
         IDeserializer<V, TJVMV> _valueDeserializer;
         CancellationToken _cancellationToken;

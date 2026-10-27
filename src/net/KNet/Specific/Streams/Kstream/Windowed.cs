@@ -29,10 +29,6 @@ namespace MASES.KNet.Streams.Kstream
     /// <typeparam name="TJVMK">The JVM type of <typeparamref name="K"/></typeparam>
     public class Windowed<K, TJVMK> : IKNetInnerReference<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>>, IGenericSerDesFactoryApplier, IDisposable
     {
-        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        static Windowed<K, TJVMK> Allocate() => new Windowed<K, TJVMK>();
-        static readonly JCOBridgeObjectPool<Windowed<K, TJVMK>> _pool = new JCOBridgeObjectPool<Windowed<K, TJVMK>>(Allocate);
-
         Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK> _inner;
         ISerDes<K, TJVMK> _keySerDes = null;
         IGenericSerDesFactory _factory;
