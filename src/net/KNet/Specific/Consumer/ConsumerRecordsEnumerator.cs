@@ -29,7 +29,7 @@ namespace MASES.KNet.Consumer
     {
         [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         static ConsumerRecordsEnumerator<K, V, TJVMK, TJVMV> Allocate() => new ConsumerRecordsEnumerator<K, V, TJVMK, TJVMV>();
-        static JCOBridgeObjectPool<ConsumerRecordsEnumerator<K, V, TJVMK, TJVMV>> _pool = new JCOBridgeObjectPool<ConsumerRecordsEnumerator<K, V, TJVMK, TJVMV>>(Allocate);
+        static readonly JCOBridgeObjectPool<ConsumerRecordsEnumerator<K, V, TJVMK, TJVMV>> _pool = new JCOBridgeObjectPool<ConsumerRecordsEnumerator<K, V, TJVMK, TJVMV>>(Allocate);
 
         IDeserializer<K, TJVMK> _keyDeserializer;
         IDeserializer<V, TJVMV> _valueDeserializer;

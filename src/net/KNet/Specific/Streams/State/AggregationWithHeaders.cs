@@ -34,7 +34,7 @@ namespace MASES.KNet.Streams.State
     {
         [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         static AggregationWithHeaders<AGG, TJVMAGG> Allocate() => new AggregationWithHeaders<AGG, TJVMAGG>();
-        static JCOBridgeObjectPool<AggregationWithHeaders<AGG, TJVMAGG>> _pool = new JCOBridgeObjectPool<AggregationWithHeaders<AGG, TJVMAGG>>(Allocate);
+        static readonly JCOBridgeObjectPool<AggregationWithHeaders<AGG, TJVMAGG>> _pool = new JCOBridgeObjectPool<AggregationWithHeaders<AGG, TJVMAGG>>(Allocate);
 
         Org.Apache.Kafka.Streams.State.AggregationWithHeaders<TJVMAGG> _inner;
         ISerDes<AGG, TJVMAGG> _aggreationSerDes;

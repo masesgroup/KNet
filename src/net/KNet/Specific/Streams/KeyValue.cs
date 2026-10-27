@@ -34,7 +34,7 @@ namespace MASES.KNet.Streams
     {
         [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         static KeyValue<K, V, TJVMK, TJVMV> Allocate() => new KeyValue<K, V, TJVMK, TJVMV>();
-        static JCOBridgeObjectPool<KeyValue<K, V, TJVMK, TJVMV>> _pool = new JCOBridgeObjectPool<KeyValue<K, V, TJVMK, TJVMV>>(Allocate);
+        static readonly JCOBridgeObjectPool<KeyValue<K, V, TJVMK, TJVMV>> _pool = new JCOBridgeObjectPool<KeyValue<K, V, TJVMK, TJVMV>>(Allocate);
 
         struct KeyValueState
         {
@@ -50,14 +50,14 @@ namespace MASES.KNet.Streams
 
             public bool FromPrefetch;
             public bool FromPool;
-            public Org.Apache.Kafka.Streams.KeyValue<TJVMK, TJVMV> Inner;
+			public Org.Apache.Kafka.Streams.KeyValue<TJVMK, TJVMV> Inner;
             public K Key;
             public bool KeyStored;
             public V Value;
             public bool ValueStored;
-            public ISerDes<K, TJVMK> KeySerDes;
-            public ISerDes<V, TJVMV> ValueSerDes;
-            public IGenericSerDesFactory Factory;
+			public ISerDes<K, TJVMK> KeySerDes;
+			public ISerDes<V, TJVMV> ValueSerDes;
+			public IGenericSerDesFactory Factory;
 
             public void Dispose()
             {

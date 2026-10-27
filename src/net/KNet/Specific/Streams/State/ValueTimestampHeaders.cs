@@ -34,7 +34,7 @@ namespace MASES.KNet.Streams.State
     {
         [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         static ValueTimestampHeaders<V, TJVMV> Allocate() => new ValueTimestampHeaders<V, TJVMV>();
-        static JCOBridgeObjectPool<ValueTimestampHeaders<V, TJVMV>> _pool = new JCOBridgeObjectPool<ValueTimestampHeaders<V, TJVMV>>(Allocate);
+        static readonly JCOBridgeObjectPool<ValueTimestampHeaders<V, TJVMV>> _pool = new JCOBridgeObjectPool<ValueTimestampHeaders<V, TJVMV>>(Allocate);
 
         Org.Apache.Kafka.Streams.State.ValueTimestampHeaders<TJVMV> _inner;
         ISerDes<V, TJVMV> _valueSerDes;

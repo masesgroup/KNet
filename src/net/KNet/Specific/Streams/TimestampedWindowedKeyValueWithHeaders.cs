@@ -37,7 +37,7 @@ namespace MASES.KNet.Streams
     {
         [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         static TimestampedWindowedKeyValueWithHeaders<K, V, TJVMK, TJVMV> Allocate() => new TimestampedWindowedKeyValueWithHeaders<K, V, TJVMK, TJVMV>();
-        static JCOBridgeObjectPool<TimestampedWindowedKeyValueWithHeaders<K, V, TJVMK, TJVMV>> _pool = new JCOBridgeObjectPool<TimestampedWindowedKeyValueWithHeaders<K, V, TJVMK, TJVMV>>(Allocate);
+        static readonly JCOBridgeObjectPool<TimestampedWindowedKeyValueWithHeaders<K, V, TJVMK, TJVMV>> _pool = new JCOBridgeObjectPool<TimestampedWindowedKeyValueWithHeaders<K, V, TJVMK, TJVMV>>(Allocate);
 
         struct TimestampedWindowedKeyValueWithHeadersState
         {
