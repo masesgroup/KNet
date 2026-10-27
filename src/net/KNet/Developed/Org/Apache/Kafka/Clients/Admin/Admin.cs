@@ -365,7 +365,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             using var offsetSpec = OffsetSpec.Latest();
             return PartitionOffsetForTopic(topicName, offsetSpec, -1);
         }
-        
+
         System.Collections.Generic.IDictionary<int, long> PartitionOffsetForTopic(string topicName, OffsetSpec offsetSpec, long delta)
         {
             System.Collections.Generic.Dictionary<int, long> dictionary = new();
