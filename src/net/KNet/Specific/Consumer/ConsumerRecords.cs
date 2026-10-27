@@ -33,9 +33,38 @@ namespace MASES.KNet.Consumer
     /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
     public class ConsumerRecords<K, V, TJVMK, TJVMV> : IKNetInnerReference<Org.Apache.Kafka.Clients.Consumer.ConsumerRecords<TJVMK, TJVMV>>, IEnumerable<ConsumerRecord<K, V, TJVMK, TJVMV>>, IAsyncEnumerable<ConsumerRecord<K, V, TJVMK, TJVMV>>, IDisposable
     {
-        ISerDes<K, TJVMK> _keyDeserializer;
-        ISerDes<V, TJVMV> _valueDeserializer;
-        Org.Apache.Kafka.Clients.Consumer.ConsumerRecords<TJVMK, TJVMV> _records;
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
+        static ConsumerRecords<K, V, TJVMK, TJVMV> Allocate() => new ConsumerRecords<K, V, TJVMK, TJVMV>();
+        static readonly JCOBridgeObjectPool<ConsumerRecords<K, V, TJVMK, TJVMV>> _pool = new JCOBridgeObjectPool<ConsumerRecords<K, V, TJVMK, TJVMV>>(Allocate);
+
+        readonly struct ConsumerRecordsState
+        {
+            public ConsumerRecordsState(Org.Apache.Kafka.Clients.Consumer.ConsumerRecords<TJVMK, TJVMV> records, ISerDes<K, TJVMK> keyDeserializer, ISerDes<V, TJVMV> valueDeserializer)
+            {
+                Records = records;
+                KeyDeserializer = keyDeserializer;
+                ValueDeserializer = valueDeserializer;
+            }
+            public readonly Org.Apache.Kafka.Clients.Consumer.ConsumerRecords<TJVMK, TJVMV> Records;
+            public readonly ISerDes<K, TJVMK> KeyDeserializer;
+            public readonly ISerDes<V, TJVMV> ValueDeserializer;
+
+            public void Dispose()
+            {
+                Records?.Dispose();
+            }
+        }
+
+        ConsumerRecordsState _state;
+
+        internal static ConsumerRecords<K, V, TJVMK, TJVMV> Create(Org.Apache.Kafka.Clients.Consumer.ConsumerRecords<TJVMK, TJVMV> record, ISerDes<K, TJVMK> keyDeserializer, ISerDes<V, TJVMV> valueDeserializer)
+        {
+            bool fromPool = false;
+            var instance = _pool.Rent(ref fromPool);
+            instance.Setup(record, keyDeserializer, valueDeserializer, fromPool);
+            return instance;
+        }
+
         /// <summary>
         /// Initialize a new <see cref="ConsumerRecord{K, V, TJVMK, TJVMV}"/>
         /// </summary>

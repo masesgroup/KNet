@@ -34,11 +34,31 @@ namespace MASES.KNet.Streams
     /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
     public sealed class TimestampedWindowedKeyValue<K, V, TJVMK, TJVMV> : IKNetInnerReference<Org.Apache.Kafka.Streams.KeyValue<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV>>>, IGenericSerDesFactoryApplier, IDisposable
     {
-        Org.Apache.Kafka.Streams.KeyValue<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV>> _valueInner;
-        Windowed<K, TJVMK> _key = null;
-        ValueAndTimestamp<V, TJVMV> _value = null;
-        IGenericSerDesFactory _factory;
-        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set => _factory = value; }
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
+        static TimestampedWindowedKeyValue<K, V, TJVMK, TJVMV> Allocate() => new TimestampedWindowedKeyValue<K, V, TJVMK, TJVMV>();
+        static readonly JCOBridgeObjectPool<TimestampedWindowedKeyValue<K, V, TJVMK, TJVMV>> _pool = new JCOBridgeObjectPool<TimestampedWindowedKeyValue<K, V, TJVMK, TJVMV>>(Allocate);
+
+        struct TimestampedWindowedKeyValueState
+        {
+            public TimestampedWindowedKeyValueState(IGenericSerDesFactory factory, Org.Apache.Kafka.Streams.KeyValue<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV>> inner)
+            {
+                Factory = factory;
+                Inner = inner;
+            }
+            public Org.Apache.Kafka.Streams.KeyValue<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV>> Inner;
+            public Windowed<K, TJVMK> Key = null;
+            public ValueAndTimestamp<V, TJVMV> Value = null;
+            public IGenericSerDesFactory Factory;
+
+            public void Dispose()
+            {
+                Inner?.Dispose();
+            }
+        }
+
+        TimestampedWindowedKeyValueState _state;
+
+        IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _state.Factory; set => _state.Factory = value; }
 
         internal TimestampedWindowedKeyValue(IGenericSerDesFactory factory,
                                              Org.Apache.Kafka.Streams.KeyValue<Org.Apache.Kafka.Streams.Kstream.Windowed<TJVMK>, Org.Apache.Kafka.Streams.State.ValueAndTimestamp<TJVMV>> value)
