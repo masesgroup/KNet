@@ -46,7 +46,7 @@ namespace MASES.KNet.Streams.State
             using var disposable0 = r0 as IDisposable;
             using var disposable1 = r1 as IDisposable;
 
-            return new WindowedKeyValueIterator<K, AGG, TJVMK, TJVMAGG>(factory, Store.Fetch(r0, r1));
+            return WindowedKeyValueIterator<K, AGG, TJVMK, TJVMAGG>.Create(factory, Store.Fetch(r0, r1));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/state/ReadOnlySessionStore.html#fetch(java.lang.Object)"/>
@@ -61,7 +61,7 @@ namespace MASES.KNet.Streams.State
             var r0 = _keySerDes.Serialize((Java.Lang.String)null, arg0);
             using var disposable0 = r0 as IDisposable;
 
-            return new WindowedKeyValueIterator<K, AGG, TJVMK, TJVMAGG>(factory, Store.Fetch(r0));
+            return WindowedKeyValueIterator<K, AGG, TJVMK, TJVMAGG>.Create(factory, Store.Fetch(r0));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/state/ReadOnlySessionStore.html#fetchSession(java.lang.Object,java.time.Instant,java.time.Instant)"/>
@@ -119,7 +119,7 @@ namespace MASES.KNet.Streams.State
             using var disposable0 = r0 as IDisposable;
             using var disposable1 = r1 as IDisposable;
 
-            return new WindowedKeyValueIterator<K, AGG, TJVMK, TJVMAGG>(factory, Store.BackwardFetch(r0, r1));
+            return WindowedKeyValueIterator<K, AGG, TJVMK, TJVMAGG>.Create(factory, Store.BackwardFetch(r0, r1));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/state/ReadOnlySessionStore.html#backwardFetch(java.lang.Object)"/>
@@ -134,7 +134,7 @@ namespace MASES.KNet.Streams.State
             var r0 = _keySerDes.Serialize((Java.Lang.String)null, arg0);
             using var disposable0 = r0 as IDisposable;
 
-            return new WindowedKeyValueIterator<K, AGG, TJVMK, TJVMAGG>(factory, Store.BackwardFetch(r0));
+            return WindowedKeyValueIterator<K, AGG, TJVMK, TJVMAGG>.Create(factory, Store.BackwardFetch(r0));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/state/ReadOnlySessionStore.html#backwardFindSessions(java.lang.Object,java.time.Instant,java.time.Instant)"/>
@@ -151,7 +151,7 @@ namespace MASES.KNet.Streams.State
             var r0 = _keySerDes.Serialize((Java.Lang.String)null, arg0);
             using var disposable0 = r0 as IDisposable;
 
-            return new WindowedKeyValueIterator<K, AGG, TJVMK, TJVMAGG>(factory, Store.BackwardFindSessions(r0, arg1, arg2));
+            return WindowedKeyValueIterator<K, AGG, TJVMK, TJVMAGG>.Create(factory, Store.BackwardFindSessions(r0, arg1, arg2));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/state/ReadOnlySessionStore.html#backwardFindSessions(java.lang.Object,java.lang.Object,java.time.Instant,java.time.Instant)"/>
@@ -171,7 +171,7 @@ namespace MASES.KNet.Streams.State
             using var disposable0 = r0 as IDisposable;
             using var disposable1 = r1 as IDisposable;
 
-            return new WindowedKeyValueIterator<K, AGG, TJVMK, TJVMAGG>(factory, Store.BackwardFindSessions(r0, r1, arg2, arg3));
+            return WindowedKeyValueIterator<K, AGG, TJVMK, TJVMAGG>.Create(factory, Store.BackwardFindSessions(r0, r1, arg2, arg3));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/state/ReadOnlySessionStore.html#backwardFindSessions(java.lang.Object,java.lang.Object,long,long)"/>
@@ -191,7 +191,7 @@ namespace MASES.KNet.Streams.State
             using var disposable0 = r0 as IDisposable;
             using var disposable1 = r1 as IDisposable;
 
-            return new WindowedKeyValueIterator<K, AGG, TJVMK, TJVMAGG>(factory, Store.BackwardFindSessions(r0, r1, arg2, arg3));
+            return WindowedKeyValueIterator<K, AGG, TJVMK, TJVMAGG>.Create(factory, Store.BackwardFindSessions(r0, r1, arg2, arg3));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/state/ReadOnlySessionStore.html#backwardFindSessions(java.lang.Object,long,long)"/>
@@ -208,7 +208,7 @@ namespace MASES.KNet.Streams.State
             var r0 = _keySerDes.Serialize((Java.Lang.String)null, arg0);
             using var disposable0 = r0 as IDisposable;
 
-            return new WindowedKeyValueIterator<K, AGG, TJVMK, TJVMAGG>(factory, Store.BackwardFindSessions(r0, arg1, arg2));
+            return WindowedKeyValueIterator<K, AGG, TJVMK, TJVMAGG>.Create(factory, Store.BackwardFindSessions(r0, arg1, arg2));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/state/ReadOnlySessionStore.html#findSessions(java.lang.Object,java.time.Instant,java.time.Instant)"/>
@@ -225,7 +225,7 @@ namespace MASES.KNet.Streams.State
             var r0 = _keySerDes.Serialize((Java.Lang.String)null, arg0);
             using var disposable0 = r0 as IDisposable;
 
-            return new WindowedKeyValueIterator<K, AGG, TJVMK, TJVMAGG>(factory, Store.BackwardFindSessions(r0, arg1, arg2));
+            return WindowedKeyValueIterator<K, AGG, TJVMK, TJVMAGG>.Create(factory, Store.BackwardFindSessions(r0, arg1, arg2));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/state/ReadOnlySessionStore.html#findSessions(java.lang.Object,java.lang.Object,java.time.Instant,java.time.Instant)"/>
@@ -245,7 +245,7 @@ namespace MASES.KNet.Streams.State
             using var disposable0 = r0 as IDisposable;
             using var disposable1 = r1 as IDisposable;
 
-            return new WindowedKeyValueIterator<K, AGG, TJVMK, TJVMAGG>(factory, Store.FindSessions(r0, r1, arg2, arg3));
+            return WindowedKeyValueIterator<K, AGG, TJVMK, TJVMAGG>.Create(factory, Store.FindSessions(r0, r1, arg2, arg3));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/state/ReadOnlySessionStore.html#findSessions(java.lang.Object,java.lang.Object,long,long)"/>
@@ -265,7 +265,7 @@ namespace MASES.KNet.Streams.State
             using var disposable0 = r0 as IDisposable;
             using var disposable1 = r1 as IDisposable;
 
-            return new WindowedKeyValueIterator<K, AGG, TJVMK, TJVMAGG>(factory, Store.FindSessions(r0, r1, arg2, arg3));
+            return WindowedKeyValueIterator<K, AGG, TJVMK, TJVMAGG>.Create(factory, Store.FindSessions(r0, r1, arg2, arg3));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/state/ReadOnlySessionStore.html#findSessions(java.lang.Object,long,long)"/>
@@ -282,7 +282,7 @@ namespace MASES.KNet.Streams.State
             var r0 = _keySerDes.Serialize((Java.Lang.String)null, arg0);
             using var disposable0 = r0 as IDisposable;
 
-            return new WindowedKeyValueIterator<K, AGG, TJVMK, TJVMAGG>(factory, Store.FindSessions(r0, arg1, arg2));
+            return WindowedKeyValueIterator<K, AGG, TJVMK, TJVMAGG>.Create(factory, Store.FindSessions(r0, arg1, arg2));
         }
     }
 

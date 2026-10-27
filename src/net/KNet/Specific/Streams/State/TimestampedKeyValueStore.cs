@@ -39,7 +39,7 @@ namespace MASES.KNet.Streams.State
         /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#all()"/>
         /// </summary>
         /// <returns><see cref="KeyValueIterator{K, V, TJVMK, TJVMV}"/></returns>
-        public virtual TimestampedKeyValueIterator<K, V, TJVMK, TJVMV> All() => new(Factory, Store.All());
+        public virtual TimestampedKeyValueIterator<K, V, TJVMK, TJVMV> All() => TimestampedKeyValueIterator<K, V, TJVMK, TJVMV>.Create(Factory, Store.All());
         /// <summary>
         /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#range(java.lang.Object,java.lang.Object)"/>
         /// </summary>
@@ -56,7 +56,7 @@ namespace MASES.KNet.Streams.State
             using var disposable0 = r0 as IDisposable;
             using var disposable1 = r1 as IDisposable;
 
-            return new(factory, Store.Range(r0, r1));
+            return TimestampedKeyValueIterator<K, V, TJVMK, TJVMV>.Create(factory, Store.Range(r0, r1));
         }
         /// <summary>
         /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#get(java.lang.Object)"/>
@@ -73,7 +73,7 @@ namespace MASES.KNet.Streams.State
             using var disposable0 = r0 as IDisposable;
             using var disposable1 = res as IDisposable;
 
-            return new ValueAndTimestamp<V, TJVMV>(factory, res);
+            return ValueAndTimestamp<V, TJVMV>.Create(factory, res);
         }
         /// <summary>
         /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#prefixScan(java.lang.Object,org.apache.kafka.common.serialization.Serializer)"/>
@@ -84,13 +84,13 @@ namespace MASES.KNet.Streams.State
             var r0 = arg1.Serialize((Java.Lang.String)null, arg0);
             using var disposable0 = r0 as IDisposable;
 
-            return new(Factory, Store.PrefixScan(r0, arg1.KafkaSerializer));
+            return TimestampedKeyValueIterator<K, V, TJVMK, TJVMV>.Create(Factory, Store.PrefixScan(r0, arg1.KafkaSerializer));
         }
         /// <summary>
         /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#reverseAll()"/>
         /// </summary>
         /// <returns><see cref="KeyValueIterator{K, V, TJVMK, TJVMV}"/></returns>
-        public virtual TimestampedKeyValueIterator<K, V, TJVMK, TJVMV> ReverseAll() => new(Factory, Store.ReverseAll());
+        public virtual TimestampedKeyValueIterator<K, V, TJVMK, TJVMV> ReverseAll() => TimestampedKeyValueIterator<K, V, TJVMK, TJVMV>.Create(Factory, Store.ReverseAll());
         /// <summary>
         /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/3.9.2/org/apache/kafka/streams/state/ReadOnlyKeyValueStore.html#reverseRange(java.lang.Object,java.lang.Object)"/>
         /// </summary>
@@ -107,7 +107,7 @@ namespace MASES.KNet.Streams.State
             using var disposable0 = r0 as IDisposable;
             using var disposable1 = r1 as IDisposable;
 
-            return new(factory, Store.ReverseRange(r0, r1));
+            return TimestampedKeyValueIterator<K, V, TJVMK, TJVMV>.Create(factory, Store.ReverseRange(r0, r1));
         }
     }
 
