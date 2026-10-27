@@ -365,12 +365,13 @@ namespace Org.Apache.Kafka.Clients.Admin
             using var offsetSpec = OffsetSpec.Latest();
             return PartitionOffsetForTopic(topicName, offsetSpec, -1);
         }
-
+        
         System.Collections.Generic.IDictionary<int, long> PartitionOffsetForTopic(string topicName, OffsetSpec offsetSpec, long delta)
         {
             System.Collections.Generic.Dictionary<int, long> dictionary = new();
             try
             {
+                using var scope = new JCOBridgeDisposeFastScope();
                 using Java.Lang.String jTopic = topicName;
                 using var coll = Collections.Singleton(jTopic);
                 using DescribeTopicsResult describeTopicsResult = this.DescribeTopics(coll);
@@ -383,7 +384,7 @@ namespace Org.Apache.Kafka.Clients.Admin
                     {
                         using var key = item.Key;
                         using var value = item.Value;
-                        if (key.Equals(jTopic as MASES.JCOBridge.C2JBridge.JVMInterop.IStringJavaObject))
+                        if (Java.Lang.String.Equals(key, jTopic))
                         {
                             using HashMap<TopicPartition, OffsetSpec> hashMap = new();
                             using var partitions = value.Partitions();
@@ -406,7 +407,7 @@ namespace Org.Apache.Kafka.Clients.Admin
                                 using var offsetResultItemKey = offsetResultItem.Key;
                                 using var offsetResultItemValue = offsetResultItem.Value;
                                 using var offsetResultItemTopic = offsetResultItemKey.Topic();
-                                if (offsetResultItemTopic.Equals(jTopic as MASES.JCOBridge.C2JBridge.JVMInterop.IStringJavaObject))
+                                if (Java.Lang.String.Equals(offsetResultItemTopic, jTopic))
                                 {
                                     dictionary.Add(offsetResultItemKey.Partition(), offsetResultItemValue.Offset() + delta); // since latest means the latest used offset (a record in kafka) + 1, here we remove 1 to be in sync with received offset from kafka
                                 }

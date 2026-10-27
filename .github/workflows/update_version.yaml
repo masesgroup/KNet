@@ -43,8 +43,34 @@ jobs:
 
       # Compute pre-release tags with dash (used by nuspec, csproj, props)
       # psd1 uses the raw input directly (no dash)
+      # PowerShell Gallery pre-release rules (SemVer v1.0.0):
+      #   - Only allowed when ModuleVersion has 3 segments (Major.Minor.Build)
+      #   - ASCII alphanumerics only [0-9A-Za-z] plus a single leading hyphen as delimiter
+      #   - Must not contain period (.) or plus (+)
+      #   - Best practice: begin with an alpha character (e.g. alpha, beta, rc)
+      #   - Examples: alpha, alpha1, BETA, update20171020
       - name: Compute pre-release tags
         run: |
+          function Validate-PreRelease {
+            param([string]$tag, [string]$label)
+            if (-not $tag) { return }
+            if ($tag -match '[.+]') {
+              Write-Error "$label '$tag' must not contain '.' or '+'."
+              exit 1
+            }
+            if ($tag -notmatch '^[0-9A-Za-z][0-9A-Za-z]*$') {
+              Write-Error "$label '$tag' contains invalid characters. Only ASCII alphanumerics are allowed (no hyphens inside the string)."
+              exit 1
+            }
+            if ($tag -match '^-') {
+              Write-Error "$label '$tag' must not start with '-': the hyphen is added automatically as delimiter."
+              exit 1
+            }
+          }
+
+          Validate-PreRelease '${{ inputs.PreReleaseCurrentVersion }}' 'PreReleaseCurrentVersion'
+          Validate-PreRelease '${{ inputs.PreReleaseNewVersion }}'     'PreReleaseNewVersion'
+
           $preC = if ('${{ inputs.PreReleaseCurrentVersion }}') { '-${{ inputs.PreReleaseCurrentVersion }}' } else { '' }
           $preN = if ('${{ inputs.PreReleaseNewVersion }}')     { '-${{ inputs.PreReleaseNewVersion }}' }     else { '' }
           echo "PRE_C=$preC" >> $env:GITHUB_ENV
