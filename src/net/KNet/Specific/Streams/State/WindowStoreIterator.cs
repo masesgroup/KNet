@@ -26,8 +26,12 @@ namespace MASES.KNet.Streams.State
     /// </summary>
     /// <typeparam name="V">The value type</typeparam>
     /// <typeparam name="TJVMV">The JVM type of <typeparamref name="V"/></typeparam>
-    public class WindowStoreIterator<V, TJVMV> : IGenericSerDesFactoryApplier
-    { 
+    public sealed class WindowStoreIterator<V, TJVMV> : IGenericSerDesFactoryApplier, IDisposable
+    {
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
+        static WindowStoreIterator<V, TJVMV> Allocate() => new WindowStoreIterator<V, TJVMV>();
+        static readonly JCOBridgeObjectPool<WindowStoreIterator<V, TJVMV>> _pool = new JCOBridgeObjectPool<WindowStoreIterator<V, TJVMV>>(Allocate);
+
         Org.Apache.Kafka.Streams.State.WindowStoreIterator<TJVMV> _iterator;
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set => _factory = value; }

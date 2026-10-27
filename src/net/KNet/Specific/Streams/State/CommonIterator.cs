@@ -40,6 +40,13 @@ namespace MASES.KNet.Streams.State
         {
             _factory = factory;
         }
+
+        /// <summary>
+        /// Pool of objects managed from <see cref="JCOBridgeObjectPool{TIterator}"/>
+        /// </summary>
+        protected static readonly JCOBridgeObjectPool<TIterator> ObjectPool = new JCOBridgeObjectPool<TIterator>(Allocate);
+
+        TNativeIterator _iterator;
         IGenericSerDesFactory _factory;
         IGenericSerDesFactory IGenericSerDesFactoryApplier.Factory { get => _factory; set => _factory = value; }
         /// <summary>
