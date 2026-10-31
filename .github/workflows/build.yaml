@@ -667,7 +667,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ 'macos-14' ] # 'macos-13' removed waiting https://github.com/masesgroup/JNet/issues/518
+        os: [ 'macos-15' ]
         framework: [ 'net8.0', 'net9.0', 'net10.0', 'net11.0' ]
         jdk_vendor: [ 'temurin', 'microsoft', 'corretto', 'zulu', 'oracle', 'graalvm' ]
         jdk_version: [ '11', '17', '21' ] # only supported LTS versions
