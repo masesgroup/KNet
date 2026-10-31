@@ -455,7 +455,7 @@ jobs:
         run: echo "matrix_mac=[ 'macos-15' ]" >> $GITHUB_OUTPUT
       - id: set-matrix-mac-os-ext
         if: ${{ inputs.ExecuteOnMoreOSes == true }}
-        run: echo "matrix_mac=[ 'macos-14', 'macos-15', 'macos-26', 'macos-26-intel' ]" >> $GITHUB_OUTPUT
+        run: echo "matrix_mac=[ 'macos-15', 'macos-15-intel', 'macos-26', 'macos-26-intel' ]" >> $GITHUB_OUTPUT
 
   execute_tests_linux:
     if: ${{ inputs.EnableLinuxTests == true }}
