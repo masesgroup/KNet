@@ -1,4 +1,4 @@
-﻿FROM --platform=$BUILDPLATFORM mcr.microsoft.com/dotnet/sdk:8.0-noble AS build-env
+﻿FROM --platform=$BUILDPLATFORM mcr.microsoft.com/dotnet/sdk:10.0-resolute AS build-env
 ARG TARGETARCH
 WORKDIR /app
 
@@ -10,11 +10,11 @@ ENV KNET_DOCKER_BUILD_ACTIONS=true
 RUN dotnet restore KNetDocker.sln -a $TARGETARCH
 
 # Build and publish a release
-RUN dotnet publish ./KNetCLI/KNetCLI.csproj /p:NoWarn="0108%3B1030%3B0618%3B0612" --framework net8.0 -c Release -o out -a $TARGETARCH
-RUN dotnet publish ./KNetConnect/KNetConnect.csproj /p:NoWarn="0108%3B1030%3B0618%3B0612" --framework net8.0 -c Release -o out -a $TARGETARCH
+RUN dotnet publish ./KNetCLI/KNetCLI.csproj /p:NoWarn="0108%3B1030%3B0618%3B0612" --framework net10.0 -c Release -o out -a $TARGETARCH
+RUN dotnet publish ./KNetConnect/KNetConnect.csproj /p:NoWarn="0108%3B1030%3B0618%3B0612" --framework net10.0 -c Release -o out -a $TARGETARCH
 
 # Build runtime image
-FROM mcr.microsoft.com/dotnet/runtime:8.0-noble
+FROM mcr.microsoft.com/dotnet/runtime:10.0-resolute
 ARG TARGETARCH
 
 LABEL org.opencontainers.image.authors='https://github.com/masesgroup', \

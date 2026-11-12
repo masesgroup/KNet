@@ -8,12 +8,12 @@
 		<Description>PowerShell command line interface of .NET suite for Apache Kafka. KNet is a comprehensive .NET suite for Apache Kafka providing all features: Producer, Consumer, Admin, Streams, Connect, backends (KRaft).</Description>
 		<Product>KNetPS</Product>
 		<OutputPath>..\..\..\MASES.KNetPS\</OutputPath>
-		<TargetFrameworks>net462;net8.0</TargetFrameworks>
+		<TargetFrameworks>net462;net10.0</TargetFrameworks>
 		<RunAnalyzersDuringLiveAnalysis>False</RunAnalyzersDuringLiveAnalysis>
 		<RunAnalyzersDuringBuild>False</RunAnalyzersDuringBuild>
 	</PropertyGroup>
 
-	<PropertyGroup Condition="'$(TargetFramework)' == 'net8.0'">
+	<PropertyGroup Condition="'$(TargetFramework)' == 'net10.0'">
 		<OutputType>Exe</OutputType>
 	</PropertyGroup>
 
@@ -41,7 +41,7 @@
 			<!--<IncludeAssets>All</IncludeAssets>-->
 			<!--<PrivateAssets>None</PrivateAssets>-->
 		</ProjectReference>
-		<PackageReference Include="MASES.JNetPSCore" Version="2.6.10-preview20261110" />
+		<PackageReference Include="MASES.JNetPSCore" Version="2.6.10-preview20261111" />
 		<PackageReference Include="PowerShellStandard.Library" Version="5.1.1">
 			<PrivateAssets>All</PrivateAssets>
 		</PackageReference>
@@ -51,7 +51,7 @@
 		<None Update="MASES.KNetPSFramework.psd1" Condition="'$(TargetFramework)' == 'net462'">
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 		</None>
-		<None Update="MASES.KNetPSCore.psd1" Condition="'$(TargetFramework)' == 'net8.0'">
+		<None Update="MASES.KNetPSCore.psd1" Condition="'$(TargetFramework)' == 'net10.0'">
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 		</None>
 	</ItemGroup>

@@ -46,9 +46,11 @@
 		<jnetVersion>2.6.10.0</jnetVersion>
 		<kafkaVersion>3.9.2</kafkaVersion>
 		<knetVersion>2.9.14.0</knetVersion>
+		<binFolderName>bin</binFolderName>
+		<runtimeFolderName>net10.0</runtimeFolderName>
 		<rootDir>${basedir}/../../../</rootDir>
-		<jcobridgepath>${rootDir}/bin/net8.0/JCOBridge.jar</jcobridgepath>
-		<jnetpath>${rootDir}/bin/net8.0/jars/jnet-${jnetVersion}.jar</jnetpath>
+		<jcobridgepath>${rootDir}/${binFolderName}/${runtimeFolderName}/JCOBridge.jar</jcobridgepath>
+		<jnetpath>${rootDir}/${binFolderName}/${runtimeFolderName}/jars/jnet-${jnetVersion}.jar</jnetpath>
 		<jarsDestination>${rootDir}/jars/</jarsDestination>
 	</properties>
 	<distributionManagement>

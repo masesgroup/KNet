@@ -29,11 +29,11 @@
 	
 	<PropertyGroup Condition="'$(KNET_DOCKER_BUILD_ACTIONS)' != 'true'">
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-		<TargetFrameworks>net462;net8.0;net9.0;net10.0;net11.0</TargetFrameworks>
+		<TargetFrameworks>net462;net10.0;net11.0</TargetFrameworks>
 	</PropertyGroup>
 	<PropertyGroup Condition="'$(KNET_DOCKER_BUILD_ACTIONS)' == 'true'">
 		<GeneratePackageOnBuild>false</GeneratePackageOnBuild>
-		<TargetFramework>net8.0</TargetFramework>
+		<TargetFramework>net10.0</TargetFramework>
 	</PropertyGroup>
 	<ItemGroup Condition="'$(KNET_DOCKER_BUILD_ACTIONS)' != 'true'">
 		<None Include="..\..\..\LICENSE" Pack="true" PackagePath="" />
