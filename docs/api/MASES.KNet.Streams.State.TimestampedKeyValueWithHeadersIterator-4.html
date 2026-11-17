@@ -93,7 +93,7 @@ Class TimestampedKeyValueWithHeadersIterator&lt;K, V, TJVMK, TJVMV&gt;  <a class
   </h1>
 
   <div class="facts text-secondary">
-    <dl><dt>Namespace</dt><dd><a class="xref" href="MASES.html">MASES</a>.<a class="xref" href="MASES.KNet.html">KNet</a>.<a class="xref" href="MASES.KNet.Streams.html">Streams</a>.<a class="xref" href="MASES.KNet.Streams.State.html">State</a></dd></dl>
+    <dl><dt>Namespace</dt><dd><span class="xref">MASES</span>.<a class="xref" href="MASES.KNet.html">KNet</a>.<a class="xref" href="MASES.KNet.Streams.html">Streams</a>.<a class="xref" href="MASES.KNet.Streams.State.html">State</a></dd></dl>
   <dl><dt>Assembly</dt><dd>MASES.KNet.dll</dd></dl>
   </div>
 
@@ -102,7 +102,7 @@ Class TimestampedKeyValueWithHeadersIterator&lt;K, V, TJVMK, TJVMV&gt;  <a class
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class TimestampedKeyValueWithHeadersIterator&lt;K, V, TJVMK, TJVMV&gt; : CommonIterator&lt;TimestampedKeyValueHeaders&lt;K, V, TJVMK, TJVMV&gt;&gt;, IGenericSerDesFactoryApplier, IEnumerable&lt;TimestampedKeyValueHeaders&lt;K, V, TJVMK, TJVMV&gt;&gt;, IEnumerable, IAsyncEnumerable&lt;TimestampedKeyValueHeaders&lt;K, V, TJVMK, TJVMV&gt;&gt;, IDisposable, IAsyncDisposable, IKNetInnerReference&lt;KeyValueIterator&lt;TJVMK, ValueTimestampHeaders&lt;TJVMV&gt;&gt;&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class TimestampedKeyValueWithHeadersIterator&lt;K, V, TJVMK, TJVMV&gt; : CommonIterator&lt;TimestampedKeyValueWithHeadersIterator&lt;K, V, TJVMK, TJVMV&gt;, TimestampedKeyValueHeaders&lt;K, V, TJVMK, TJVMV&gt;, KeyValueIterator&lt;TJVMK, ValueTimestampHeaders&lt;TJVMV&gt;&gt;&gt;, IGenericSerDesFactoryApplier, IEnumerable&lt;TimestampedKeyValueHeaders&lt;K, V, TJVMK, TJVMV&gt;&gt;, IEnumerable, IAsyncEnumerable&lt;TimestampedKeyValueHeaders&lt;K, V, TJVMK, TJVMV&gt;&gt;, IDisposable, IAsyncDisposable, IKNetInnerReference&lt;KeyValueIterator&lt;TJVMK, ValueTimestampHeaders&lt;TJVMV&gt;&gt;&gt;</code></pre>
   </div>
 
 
@@ -127,7 +127,7 @@ Class TimestampedKeyValueWithHeadersIterator&lt;K, V, TJVMK, TJVMV&gt;  <a class
     <dt>Inheritance</dt>
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-      <div><a class="xref" href="MASES.KNet.Streams.State.CommonIterator-1.html">CommonIterator</a>&lt;<a class="xref" href="MASES.KNet.Streams.TimestampedKeyValueHeaders-4.html">TimestampedKeyValueHeaders</a>&lt;K, V, TJVMK, TJVMV&gt;&gt;</div>
+      <div><a class="xref" href="MASES.KNet.Streams.State.CommonIterator-3.html">CommonIterator</a>&lt;<a class="xref" href="MASES.KNet.Streams.State.TimestampedKeyValueWithHeadersIterator-4.html">TimestampedKeyValueWithHeadersIterator</a>&lt;K, V, TJVMK, TJVMV&gt;, <a class="xref" href="MASES.KNet.Streams.TimestampedKeyValueHeaders-4.html">TimestampedKeyValueHeaders</a>&lt;K, V, TJVMK, TJVMV&gt;, <a class="xref" href="Org.Apache.Kafka.Streams.State.KeyValueIterator-2.html">KeyValueIterator</a>&lt;TJVMK, <a class="xref" href="Org.Apache.Kafka.Streams.State.ValueTimestampHeaders-1.html">ValueTimestampHeaders</a>&lt;TJVMV&gt;&gt;&gt;</div>
       <div><span class="xref">TimestampedKeyValueWithHeadersIterator&lt;K, V, TJVMK, TJVMV&gt;</span></div>
     </dd>
   </dl>
@@ -150,60 +150,27 @@ Class TimestampedKeyValueWithHeadersIterator&lt;K, V, TJVMK, TJVMV&gt;  <a class
     <dt>Inherited Members</dt>
     <dd>
     <div>
-      <a class="xref" href="MASES.KNet.Streams.State.CommonIterator-1.html#MASES_KNet_Streams_State_CommonIterator_1_Dispose">CommonIterator&lt;TimestampedKeyValueHeaders&lt;K, V, TJVMK, TJVMV&gt;&gt;.Dispose()</a>
+      <a class="xref" href="MASES.KNet.Streams.State.CommonIterator-3.html#MASES_KNet_Streams_State_CommonIterator_3_InnerReference">CommonIterator&lt;TimestampedKeyValueWithHeadersIterator&lt;K, V, TJVMK, TJVMV&gt;, TimestampedKeyValueHeaders&lt;K, V, TJVMK, TJVMV&gt;, KeyValueIterator&lt;TJVMK, ValueTimestampHeaders&lt;TJVMV&gt;&gt;&gt;.InnerReference</a>
     </div>
     <div>
-      <a class="xref" href="MASES.KNet.Streams.State.CommonIterator-1.html#MASES_KNet_Streams_State_CommonIterator_1_DisposeAsync">CommonIterator&lt;TimestampedKeyValueHeaders&lt;K, V, TJVMK, TJVMV&gt;&gt;.DisposeAsync()</a>
+      <a class="xref" href="MASES.KNet.Streams.State.CommonIterator-3.html#MASES_KNet_Streams_State_CommonIterator_3_Dispose">CommonIterator&lt;TimestampedKeyValueWithHeadersIterator&lt;K, V, TJVMK, TJVMV&gt;, TimestampedKeyValueHeaders&lt;K, V, TJVMK, TJVMV&gt;, KeyValueIterator&lt;TJVMK, ValueTimestampHeaders&lt;TJVMV&gt;&gt;&gt;.Dispose()</a>
     </div>
     <div>
-      <a class="xref" href="MASES.KNet.Streams.State.CommonIterator-1.html#MASES_KNet_Streams_State_CommonIterator_1_UsePrefetch">CommonIterator&lt;TimestampedKeyValueHeaders&lt;K, V, TJVMK, TJVMV&gt;&gt;.UsePrefetch</a>
+      <a class="xref" href="MASES.KNet.Streams.State.CommonIterator-3.html#MASES_KNet_Streams_State_CommonIterator_3_DisposeAsync">CommonIterator&lt;TimestampedKeyValueWithHeadersIterator&lt;K, V, TJVMK, TJVMV&gt;, TimestampedKeyValueHeaders&lt;K, V, TJVMK, TJVMV&gt;, KeyValueIterator&lt;TJVMK, ValueTimestampHeaders&lt;TJVMV&gt;&gt;&gt;.DisposeAsync()</a>
     </div>
     <div>
-      <a class="xref" href="MASES.KNet.Streams.State.CommonIterator-1.html#MASES_KNet_Streams_State_CommonIterator_1_GetEnumerator">CommonIterator&lt;TimestampedKeyValueHeaders&lt;K, V, TJVMK, TJVMV&gt;&gt;.GetEnumerator()</a>
+      <a class="xref" href="MASES.KNet.Streams.State.CommonIterator-3.html#MASES_KNet_Streams_State_CommonIterator_3_UsePrefetch">CommonIterator&lt;TimestampedKeyValueWithHeadersIterator&lt;K, V, TJVMK, TJVMV&gt;, TimestampedKeyValueHeaders&lt;K, V, TJVMK, TJVMV&gt;, KeyValueIterator&lt;TJVMK, ValueTimestampHeaders&lt;TJVMV&gt;&gt;&gt;.UsePrefetch</a>
     </div>
     <div>
-      <a class="xref" href="MASES.KNet.Streams.State.CommonIterator-1.html#MASES_KNet_Streams_State_CommonIterator_1_GetAsyncEnumerator_System_Threading_CancellationToken_">CommonIterator&lt;TimestampedKeyValueHeaders&lt;K, V, TJVMK, TJVMV&gt;&gt;.GetAsyncEnumerator(CancellationToken)</a>
+      <a class="xref" href="MASES.KNet.Streams.State.CommonIterator-3.html#MASES_KNet_Streams_State_CommonIterator_3_GetEnumerator">CommonIterator&lt;TimestampedKeyValueWithHeadersIterator&lt;K, V, TJVMK, TJVMV&gt;, TimestampedKeyValueHeaders&lt;K, V, TJVMK, TJVMV&gt;, KeyValueIterator&lt;TJVMK, ValueTimestampHeaders&lt;TJVMV&gt;&gt;&gt;.GetEnumerator()</a>
     </div>
     <div>
-      <a class="xref" href="MASES.KNet.Streams.State.CommonIterator-1.html#MASES_KNet_Streams_State_CommonIterator_1_ToIEnumerator_System_Boolean_">CommonIterator&lt;TimestampedKeyValueHeaders&lt;K, V, TJVMK, TJVMV&gt;&gt;.ToIEnumerator(bool)</a>
+      <a class="xref" href="MASES.KNet.Streams.State.CommonIterator-3.html#MASES_KNet_Streams_State_CommonIterator_3_GetAsyncEnumerator_System_Threading_CancellationToken_">CommonIterator&lt;TimestampedKeyValueWithHeadersIterator&lt;K, V, TJVMK, TJVMV&gt;, TimestampedKeyValueHeaders&lt;K, V, TJVMK, TJVMV&gt;, KeyValueIterator&lt;TJVMK, ValueTimestampHeaders&lt;TJVMV&gt;&gt;&gt;.GetAsyncEnumerator(CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.KNet.Streams.State.CommonIterator-3.html#MASES_KNet_Streams_State_CommonIterator_3_ToIEnumerator_System_Boolean_">CommonIterator&lt;TimestampedKeyValueWithHeadersIterator&lt;K, V, TJVMK, TJVMV&gt;, TimestampedKeyValueHeaders&lt;K, V, TJVMK, TJVMV&gt;, KeyValueIterator&lt;TJVMK, ValueTimestampHeaders&lt;TJVMV&gt;&gt;&gt;.ToIEnumerator(bool)</a>
     </div>
   </dd></dl>
-
-
-
-
-
-
-  <h2 class="section" id="properties">Properties
-</h2>
-
-
-  <a id="MASES_KNet_Streams_State_TimestampedKeyValueWithHeadersIterator_4_InnerReference_" data-uid="MASES.KNet.Streams.State.TimestampedKeyValueWithHeadersIterator`4.InnerReference*"></a>
-
-  <h3 id="MASES_KNet_Streams_State_TimestampedKeyValueWithHeadersIterator_4_InnerReference" data-uid="MASES.KNet.Streams.State.TimestampedKeyValueWithHeadersIterator`4.InnerReference">
-  InnerReference
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/State/TimestampedKeyValueWithHeadersIterator.cs/#L129"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>The underlying inner reference used from KNet object instance</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public KeyValueIterator&lt;TJVMK, ValueTimestampHeaders&lt;TJVMV&gt;&gt; InnerReference { get; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="Org.Apache.Kafka.Streams.State.KeyValueIterator-2.html">KeyValueIterator</a>&lt;TJVMK, <a class="xref" href="Org.Apache.Kafka.Streams.State.ValueTimestampHeaders-1.html">ValueTimestampHeaders</a>&lt;TJVMV&gt;&gt;</dt>
-    <dd></dd>
-  </dl>
-
-
 
 
 
@@ -218,7 +185,7 @@ Class TimestampedKeyValueWithHeadersIterator&lt;K, V, TJVMK, TJVMV&gt;  <a class
 
   <h3 id="MASES_KNet_Streams_State_TimestampedKeyValueWithHeadersIterator_4_Close" data-uid="MASES.KNet.Streams.State.TimestampedKeyValueWithHeadersIterator`4.Close">
   Close()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/State/TimestampedKeyValueWithHeadersIterator.cs/#L189"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/State/TimestampedKeyValueWithHeadersIterator.cs/#L188"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>KNet implementation of <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/state/KeyValueIterator.html#close()">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/state/KeyValueIterator.html#close()</a></p>
@@ -245,7 +212,7 @@ Class TimestampedKeyValueWithHeadersIterator&lt;K, V, TJVMK, TJVMV&gt;  <a class
 
   <h3 id="MASES_KNet_Streams_State_TimestampedKeyValueWithHeadersIterator_4_Dispose_System_Boolean_" data-uid="MASES.KNet.Streams.State.TimestampedKeyValueWithHeadersIterator`4.Dispose(System.Boolean)">
   Dispose(bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/State/TimestampedKeyValueWithHeadersIterator.cs/#L132"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/State/TimestampedKeyValueWithHeadersIterator.cs/#L131"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Implements the pattern described in <a href="https://learn.microsoft.com/en-en/dotnet/standard/garbage-collection/implementing-dispose">https://learn.microsoft.com/en-en/dotnet/standard/garbage-collection/implementing-dispose</a></p>
@@ -278,7 +245,7 @@ Class TimestampedKeyValueWithHeadersIterator&lt;K, V, TJVMK, TJVMV&gt;  <a class
 
   <h3 id="MASES_KNet_Streams_State_TimestampedKeyValueWithHeadersIterator_4_GetEnumerator_System_Boolean_System_Boolean_System_Threading_CancellationToken_" data-uid="MASES.KNet.Streams.State.TimestampedKeyValueWithHeadersIterator`4.GetEnumerator(System.Boolean,System.Boolean,System.Threading.CancellationToken)">
   GetEnumerator(bool, bool, CancellationToken)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/State/TimestampedKeyValueWithHeadersIterator.cs/#L140"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/State/TimestampedKeyValueWithHeadersIterator.cs/#L139"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Internally gets the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable&lt;T&gt;</a> or <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.iasyncenumerable-1">IAsyncEnumerable&lt;T&gt;</a></p>
@@ -323,7 +290,7 @@ Class TimestampedKeyValueWithHeadersIterator&lt;K, V, TJVMK, TJVMV&gt;  <a class
 
   <h3 id="MASES_KNet_Streams_State_TimestampedKeyValueWithHeadersIterator_4_HasNext" data-uid="MASES.KNet.Streams.State.TimestampedKeyValueWithHeadersIterator`4.HasNext">
   HasNext()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/State/TimestampedKeyValueWithHeadersIterator.cs/#L155"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/State/TimestampedKeyValueWithHeadersIterator.cs/#L154"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>KNet implementation of <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Iterator.html#hasNext()">https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Iterator.html#hasNext()</a></p>
@@ -355,7 +322,7 @@ Class TimestampedKeyValueWithHeadersIterator&lt;K, V, TJVMK, TJVMV&gt;  <a class
 
   <h3 id="MASES_KNet_Streams_State_TimestampedKeyValueWithHeadersIterator_4_Next" data-uid="MASES.KNet.Streams.State.TimestampedKeyValueWithHeadersIterator`4.Next">
   Next()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/State/TimestampedKeyValueWithHeadersIterator.cs/#L159"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/State/TimestampedKeyValueWithHeadersIterator.cs/#L158"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>KNet implementation of <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Iterator.html#next()">https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Iterator.html#next()</a></p>
@@ -387,7 +354,7 @@ Class TimestampedKeyValueWithHeadersIterator&lt;K, V, TJVMK, TJVMV&gt;  <a class
 
   <h3 id="MASES_KNet_Streams_State_TimestampedKeyValueWithHeadersIterator_4_PeekNextKey" data-uid="MASES.KNet.Streams.State.TimestampedKeyValueWithHeadersIterator`4.PeekNextKey">
   PeekNextKey()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/State/TimestampedKeyValueWithHeadersIterator.cs/#L178"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/State/TimestampedKeyValueWithHeadersIterator.cs/#L177"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>KNet implementation of <a href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/state/KeyValueIterator.html#peekNextKey()">https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/state/KeyValueIterator.html#peekNextKey()</a></p>
@@ -420,7 +387,7 @@ Class TimestampedKeyValueWithHeadersIterator&lt;K, V, TJVMK, TJVMV&gt;  <a class
 
   <h3 id="MASES_KNet_Streams_State_TimestampedKeyValueWithHeadersIterator_4_Remove" data-uid="MASES.KNet.Streams.State.TimestampedKeyValueWithHeadersIterator`4.Remove">
   Remove()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/State/TimestampedKeyValueWithHeadersIterator.cs/#L170"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/KNet/blob/master/src/net/KNet/Specific/Streams/State/TimestampedKeyValueWithHeadersIterator.cs/#L169"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Iterator.html#remove()">https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Iterator.html#remove()</a></p>
