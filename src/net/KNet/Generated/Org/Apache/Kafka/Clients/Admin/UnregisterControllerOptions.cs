@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 {
     #region UnregisterControllerOptions declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/admin/UnregisterControllerOptions.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.4.0/org/apache/kafka/clients/admin/UnregisterControllerOptions.html"/>
     /// </summary>
     public partial class UnregisterControllerOptions : Org.Apache.Kafka.Clients.Admin.AbstractOptions<Org.Apache.Kafka.Clients.Admin.UnregisterControllerOptions>
     {
@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Clients.Admin
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/admin/UnregisterControllerOptions.html#%3Cinit%3E()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.4.0/org/apache/kafka/clients/admin/UnregisterControllerOptions.html#%3Cinit%3E()"/>
         /// </summary>
         public UnregisterControllerOptions() : base(JVMBridgeBase.InitializerInstance)
         {

@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Metadata.Properties
 {
     #region MetaPropertiesEnsemble declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/metadata/properties/MetaPropertiesEnsemble.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.4.0/org/apache/kafka/metadata/properties/MetaPropertiesEnsemble.html"/>
     /// </summary>
     public partial class MetaPropertiesEnsemble : MASES.JCOBridge.C2JBridge.JVMBridgeBase<MetaPropertiesEnsemble>
     {
@@ -57,7 +57,7 @@ namespace Org.Apache.Kafka.Metadata.Properties
         // TODO: complete the class
         #region Copier declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/metadata/properties/MetaPropertiesEnsemble.Copier.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.4.0/org/apache/kafka/metadata/properties/MetaPropertiesEnsemble.Copier.html"/>
         /// </summary>
         public partial class Copier : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Copier>
         {
@@ -91,7 +91,7 @@ namespace Org.Apache.Kafka.Metadata.Properties
 
         #region Loader declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/metadata/properties/MetaPropertiesEnsemble.Loader.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.4.0/org/apache/kafka/metadata/properties/MetaPropertiesEnsemble.Loader.html"/>
         /// </summary>
         public partial class Loader : MASES.JCOBridge.C2JBridge.JVMBridgeBase<Loader>
         {
@@ -125,7 +125,7 @@ namespace Org.Apache.Kafka.Metadata.Properties
 
         #region PreWriteHandler declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/metadata/properties/MetaPropertiesEnsemble.PreWriteHandler.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.4.0/org/apache/kafka/metadata/properties/MetaPropertiesEnsemble.PreWriteHandler.html"/>
         /// </summary>
         public partial class PreWriteHandler : MASES.JCOBridge.C2JBridge.JVMBridgeBase<PreWriteHandler>
         {
@@ -159,7 +159,7 @@ namespace Org.Apache.Kafka.Metadata.Properties
 
         #region VerificationFlag declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/metadata/properties/MetaPropertiesEnsemble.VerificationFlag.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.4.0/org/apache/kafka/metadata/properties/MetaPropertiesEnsemble.VerificationFlag.html"/>
         /// </summary>
         public partial class VerificationFlag : Java.Lang.Enum<Org.Apache.Kafka.Metadata.Properties.MetaPropertiesEnsemble.VerificationFlag>
         {
@@ -193,7 +193,7 @@ namespace Org.Apache.Kafka.Metadata.Properties
 
         #region WriteErrorHandler declaration
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/metadata/properties/MetaPropertiesEnsemble.WriteErrorHandler.html"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.4.0/org/apache/kafka/metadata/properties/MetaPropertiesEnsemble.WriteErrorHandler.html"/>
         /// </summary>
         public partial class WriteErrorHandler : MASES.JCOBridge.C2JBridge.JVMBridgeBase<WriteErrorHandler>
         {
@@ -242,11 +242,11 @@ namespace Org.Apache.Kafka.Metadata.Properties
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/metadata/properties/MetaPropertiesEnsemble.html#META_PROPERTIES_NAME"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.4.0/org/apache/kafka/metadata/properties/MetaPropertiesEnsemble.html#META_PROPERTIES_NAME"/>
         /// </summary>
         public static Java.Lang.String META_PROPERTIES_NAME { get { return SGetField<Java.Lang.String>(LocalBridgeClazz, "META_PROPERTIES_NAME"); } set { SSetField(LocalBridgeClazz, "META_PROPERTIES_NAME", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/metadata/properties/MetaPropertiesEnsemble.html#EMPTY"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.4.0/org/apache/kafka/metadata/properties/MetaPropertiesEnsemble.html#EMPTY"/>
         /// </summary>
         public static Org.Apache.Kafka.Metadata.Properties.MetaPropertiesEnsemble EMPTY { get { return SGetField<Org.Apache.Kafka.Metadata.Properties.MetaPropertiesEnsemble>(LocalBridgeClazz, "EMPTY"); } set { SSetField(LocalBridgeClazz, "EMPTY", value); } }
 
@@ -258,7 +258,7 @@ namespace Org.Apache.Kafka.Metadata.Properties
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/metadata/properties/MetaPropertiesEnsemble.html#nonFailedDirectoryProps()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.4.0/org/apache/kafka/metadata/properties/MetaPropertiesEnsemble.html#nonFailedDirectoryProps()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Iterator"/></returns>
         public Java.Util.Iterator<Java.Util.Map.Entry<Java.Lang.String, Java.Util.Optional<Org.Apache.Kafka.Metadata.Properties.MetaProperties>>> NonFailedDirectoryProps()
@@ -266,7 +266,7 @@ namespace Org.Apache.Kafka.Metadata.Properties
             return IExecuteWithSignature<Java.Util.Iterator<Java.Util.Map.Entry<Java.Lang.String, Java.Util.Optional<Org.Apache.Kafka.Metadata.Properties.MetaProperties>>>>("nonFailedDirectoryProps", "()Ljava/util/Iterator;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/metadata/properties/MetaPropertiesEnsemble.html#logDirProps()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.4.0/org/apache/kafka/metadata/properties/MetaPropertiesEnsemble.html#logDirProps()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Map"/></returns>
         public Java.Util.Map<Java.Lang.String, Org.Apache.Kafka.Metadata.Properties.MetaProperties> LogDirProps()
@@ -274,7 +274,7 @@ namespace Org.Apache.Kafka.Metadata.Properties
             return IExecuteWithSignature<Java.Util.Map<Java.Lang.String, Org.Apache.Kafka.Metadata.Properties.MetaProperties>>("logDirProps", "()Ljava/util/Map;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/metadata/properties/MetaPropertiesEnsemble.html#clusterId()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.4.0/org/apache/kafka/metadata/properties/MetaPropertiesEnsemble.html#clusterId()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Optional"/></returns>
         public Java.Util.Optional<Java.Lang.String> ClusterId()
@@ -282,7 +282,7 @@ namespace Org.Apache.Kafka.Metadata.Properties
             return IExecuteWithSignature<Java.Util.Optional<Java.Lang.String>>("clusterId", "()Ljava/util/Optional;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/metadata/properties/MetaPropertiesEnsemble.html#metadataLogDir()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.4.0/org/apache/kafka/metadata/properties/MetaPropertiesEnsemble.html#metadataLogDir()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Optional"/></returns>
         public Java.Util.Optional<Java.Lang.String> MetadataLogDir()
@@ -290,7 +290,7 @@ namespace Org.Apache.Kafka.Metadata.Properties
             return IExecuteWithSignature<Java.Util.Optional<Java.Lang.String>>("metadataLogDir", "()Ljava/util/Optional;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/metadata/properties/MetaPropertiesEnsemble.html#nodeId()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.4.0/org/apache/kafka/metadata/properties/MetaPropertiesEnsemble.html#nodeId()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.OptionalInt"/></returns>
         public Java.Util.OptionalInt NodeId()
@@ -298,7 +298,7 @@ namespace Org.Apache.Kafka.Metadata.Properties
             return IExecuteWithSignature<Java.Util.OptionalInt>("nodeId", "()Ljava/util/OptionalInt;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/metadata/properties/MetaPropertiesEnsemble.html#emptyLogDirs()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.4.0/org/apache/kafka/metadata/properties/MetaPropertiesEnsemble.html#emptyLogDirs()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Set"/></returns>
         public Java.Util.Set<Java.Lang.String> EmptyLogDirs()
@@ -306,7 +306,7 @@ namespace Org.Apache.Kafka.Metadata.Properties
             return IExecuteWithSignature<Java.Util.Set<Java.Lang.String>>("emptyLogDirs", "()Ljava/util/Set;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/metadata/properties/MetaPropertiesEnsemble.html#errorLogDirs()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.4.0/org/apache/kafka/metadata/properties/MetaPropertiesEnsemble.html#errorLogDirs()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Set"/></returns>
         public Java.Util.Set<Java.Lang.String> ErrorLogDirs()
@@ -314,7 +314,7 @@ namespace Org.Apache.Kafka.Metadata.Properties
             return IExecuteWithSignature<Java.Util.Set<Java.Lang.String>>("errorLogDirs", "()Ljava/util/Set;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/metadata/properties/MetaPropertiesEnsemble.html#verify(java.util.Optional,java.util.OptionalInt,java.util.EnumSet)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.4.0/org/apache/kafka/metadata/properties/MetaPropertiesEnsemble.html#verify(java.util.Optional,java.util.OptionalInt,java.util.EnumSet)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Optional"/></param>
         /// <param name="arg1"><see cref="Java.Util.OptionalInt"/></param>
@@ -332,7 +332,7 @@ namespace Org.Apache.Kafka.Metadata.Properties
         {
             #region Constructors
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/metadata/properties/MetaPropertiesEnsemble.Copier.html#%3Cinit%3E(org.apache.kafka.metadata.properties.MetaPropertiesEnsemble)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.4.0/org/apache/kafka/metadata/properties/MetaPropertiesEnsemble.Copier.html#%3Cinit%3E(org.apache.kafka.metadata.properties.MetaPropertiesEnsemble)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Org.Apache.Kafka.Metadata.Properties.MetaPropertiesEnsemble"/></param>
             public Copier(Org.Apache.Kafka.Metadata.Properties.MetaPropertiesEnsemble arg0) : base(JVMBridgeBase.InitializerInstance)
@@ -363,7 +363,7 @@ namespace Org.Apache.Kafka.Metadata.Properties
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/metadata/properties/MetaPropertiesEnsemble.Copier.html#logDirProps()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.4.0/org/apache/kafka/metadata/properties/MetaPropertiesEnsemble.Copier.html#logDirProps()"/>
             /// </summary>
             /// <returns><see cref="Java.Util.Map"/></returns>
             public Java.Util.Map<Java.Lang.String, Org.Apache.Kafka.Metadata.Properties.MetaProperties> LogDirProps()
@@ -371,7 +371,7 @@ namespace Org.Apache.Kafka.Metadata.Properties
                 return IExecuteWithSignature<Java.Util.Map<Java.Lang.String, Org.Apache.Kafka.Metadata.Properties.MetaProperties>>("logDirProps", "()Ljava/util/Map;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/metadata/properties/MetaPropertiesEnsemble.Copier.html#metaLogDir()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.4.0/org/apache/kafka/metadata/properties/MetaPropertiesEnsemble.Copier.html#metaLogDir()"/>
             /// </summary>
             /// <returns><see cref="Java.Util.Optional"/></returns>
             public Java.Util.Optional<Java.Lang.String> MetaLogDir()
@@ -379,7 +379,7 @@ namespace Org.Apache.Kafka.Metadata.Properties
                 return IExecuteWithSignature<Java.Util.Optional<Java.Lang.String>>("metaLogDir", "()Ljava/util/Optional;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/metadata/properties/MetaPropertiesEnsemble.Copier.html#emptyLogDirs()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.4.0/org/apache/kafka/metadata/properties/MetaPropertiesEnsemble.Copier.html#emptyLogDirs()"/>
             /// </summary>
             /// <returns><see cref="Java.Util.Set"/></returns>
             public Java.Util.Set<Java.Lang.String> EmptyLogDirs()
@@ -387,7 +387,7 @@ namespace Org.Apache.Kafka.Metadata.Properties
                 return IExecuteWithSignature<Java.Util.Set<Java.Lang.String>>("emptyLogDirs", "()Ljava/util/Set;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/metadata/properties/MetaPropertiesEnsemble.Copier.html#errorLogDirs()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.4.0/org/apache/kafka/metadata/properties/MetaPropertiesEnsemble.Copier.html#errorLogDirs()"/>
             /// </summary>
             /// <returns><see cref="Java.Util.Set"/></returns>
             public Java.Util.Set<Java.Lang.String> ErrorLogDirs()
@@ -395,7 +395,7 @@ namespace Org.Apache.Kafka.Metadata.Properties
                 return IExecuteWithSignature<Java.Util.Set<Java.Lang.String>>("errorLogDirs", "()Ljava/util/Set;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/metadata/properties/MetaPropertiesEnsemble.Copier.html#generateValidDirectoryId()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.4.0/org/apache/kafka/metadata/properties/MetaPropertiesEnsemble.Copier.html#generateValidDirectoryId()"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Common.Uuid"/></returns>
             public Org.Apache.Kafka.Common.Uuid GenerateValidDirectoryId()
@@ -403,7 +403,7 @@ namespace Org.Apache.Kafka.Metadata.Properties
                 return IExecuteWithSignature<Org.Apache.Kafka.Common.Uuid>("generateValidDirectoryId", "()Lorg/apache/kafka/common/Uuid;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/metadata/properties/MetaPropertiesEnsemble.Copier.html#copy()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.4.0/org/apache/kafka/metadata/properties/MetaPropertiesEnsemble.Copier.html#copy()"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Metadata.Properties.MetaPropertiesEnsemble"/></returns>
             public Org.Apache.Kafka.Metadata.Properties.MetaPropertiesEnsemble Copy()
@@ -411,7 +411,7 @@ namespace Org.Apache.Kafka.Metadata.Properties
                 return IExecuteWithSignature<Org.Apache.Kafka.Metadata.Properties.MetaPropertiesEnsemble>("copy", "()Lorg/apache/kafka/metadata/properties/MetaPropertiesEnsemble;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/metadata/properties/MetaPropertiesEnsemble.Copier.html#setLogDirProps(java.lang.String,org.apache.kafka.metadata.properties.MetaProperties)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.4.0/org/apache/kafka/metadata/properties/MetaPropertiesEnsemble.Copier.html#setLogDirProps(java.lang.String,org.apache.kafka.metadata.properties.MetaProperties)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Lang.String"/></param>
             /// <param name="arg1"><see cref="Org.Apache.Kafka.Metadata.Properties.MetaProperties"/></param>
@@ -421,7 +421,7 @@ namespace Org.Apache.Kafka.Metadata.Properties
                 return IExecuteWithSignature<Org.Apache.Kafka.Metadata.Properties.MetaPropertiesEnsemble.Copier>("setLogDirProps", "(Ljava/lang/String;Lorg/apache/kafka/metadata/properties/MetaProperties;)Lorg/apache/kafka/metadata/properties/MetaPropertiesEnsemble$Copier;", arg0, arg1);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/metadata/properties/MetaPropertiesEnsemble.Copier.html#setMetaLogDir(java.util.Optional)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.4.0/org/apache/kafka/metadata/properties/MetaPropertiesEnsemble.Copier.html#setMetaLogDir(java.util.Optional)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Util.Optional"/></param>
             /// <returns><see cref="Org.Apache.Kafka.Metadata.Properties.MetaPropertiesEnsemble.Copier"/></returns>
@@ -430,7 +430,7 @@ namespace Org.Apache.Kafka.Metadata.Properties
                 return IExecuteWithSignature<Org.Apache.Kafka.Metadata.Properties.MetaPropertiesEnsemble.Copier>("setMetaLogDir", "(Ljava/util/Optional;)Lorg/apache/kafka/metadata/properties/MetaPropertiesEnsemble$Copier;", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/metadata/properties/MetaPropertiesEnsemble.Copier.html#setPreWriteHandler(org.apache.kafka.metadata.properties.MetaPropertiesEnsemble.PreWriteHandler)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.4.0/org/apache/kafka/metadata/properties/MetaPropertiesEnsemble.Copier.html#setPreWriteHandler(org.apache.kafka.metadata.properties.MetaPropertiesEnsemble.PreWriteHandler)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Org.Apache.Kafka.Metadata.Properties.MetaPropertiesEnsemble.PreWriteHandler"/></param>
             /// <returns><see cref="Org.Apache.Kafka.Metadata.Properties.MetaPropertiesEnsemble.Copier"/></returns>
@@ -439,7 +439,7 @@ namespace Org.Apache.Kafka.Metadata.Properties
                 return IExecuteWithSignature<Org.Apache.Kafka.Metadata.Properties.MetaPropertiesEnsemble.Copier>("setPreWriteHandler", "(Lorg/apache/kafka/metadata/properties/MetaPropertiesEnsemble$PreWriteHandler;)Lorg/apache/kafka/metadata/properties/MetaPropertiesEnsemble$Copier;", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/metadata/properties/MetaPropertiesEnsemble.Copier.html#setRandom(java.util.Random)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.4.0/org/apache/kafka/metadata/properties/MetaPropertiesEnsemble.Copier.html#setRandom(java.util.Random)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Util.Random"/></param>
             /// <returns><see cref="Org.Apache.Kafka.Metadata.Properties.MetaPropertiesEnsemble.Copier"/></returns>
@@ -448,7 +448,7 @@ namespace Org.Apache.Kafka.Metadata.Properties
                 return IExecuteWithSignature<Org.Apache.Kafka.Metadata.Properties.MetaPropertiesEnsemble.Copier>("setRandom", "(Ljava/util/Random;)Lorg/apache/kafka/metadata/properties/MetaPropertiesEnsemble$Copier;", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/metadata/properties/MetaPropertiesEnsemble.Copier.html#setWriteErrorHandler(org.apache.kafka.metadata.properties.MetaPropertiesEnsemble.WriteErrorHandler)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.4.0/org/apache/kafka/metadata/properties/MetaPropertiesEnsemble.Copier.html#setWriteErrorHandler(org.apache.kafka.metadata.properties.MetaPropertiesEnsemble.WriteErrorHandler)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Org.Apache.Kafka.Metadata.Properties.MetaPropertiesEnsemble.WriteErrorHandler"/></param>
             /// <returns><see cref="Org.Apache.Kafka.Metadata.Properties.MetaPropertiesEnsemble.Copier"/></returns>
@@ -457,14 +457,14 @@ namespace Org.Apache.Kafka.Metadata.Properties
                 return IExecuteWithSignature<Org.Apache.Kafka.Metadata.Properties.MetaPropertiesEnsemble.Copier>("setWriteErrorHandler", "(Lorg/apache/kafka/metadata/properties/MetaPropertiesEnsemble$WriteErrorHandler;)Lorg/apache/kafka/metadata/properties/MetaPropertiesEnsemble$Copier;", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/metadata/properties/MetaPropertiesEnsemble.Copier.html#verify()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.4.0/org/apache/kafka/metadata/properties/MetaPropertiesEnsemble.Copier.html#verify()"/>
             /// </summary>
             public void Verify()
             {
                 IExecuteWithSignature("verify", "()V");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/metadata/properties/MetaPropertiesEnsemble.Copier.html#writeLogDirChanges()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.4.0/org/apache/kafka/metadata/properties/MetaPropertiesEnsemble.Copier.html#writeLogDirChanges()"/>
             /// </summary>
             /// <exception cref="Java.Io.IOException"/>
             public void WriteLogDirChanges()
@@ -487,7 +487,7 @@ namespace Org.Apache.Kafka.Metadata.Properties
         {
             #region Constructors
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/metadata/properties/MetaPropertiesEnsemble.Loader.html#%3Cinit%3E()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.4.0/org/apache/kafka/metadata/properties/MetaPropertiesEnsemble.Loader.html#%3Cinit%3E()"/>
             /// </summary>
             public Loader() : base(JVMBridgeBase.InitializerInstance)
             {
@@ -517,7 +517,7 @@ namespace Org.Apache.Kafka.Metadata.Properties
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/metadata/properties/MetaPropertiesEnsemble.Loader.html#load()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.4.0/org/apache/kafka/metadata/properties/MetaPropertiesEnsemble.Loader.html#load()"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Metadata.Properties.MetaPropertiesEnsemble"/></returns>
             /// <exception cref="Java.Io.IOException"/>
@@ -526,7 +526,7 @@ namespace Org.Apache.Kafka.Metadata.Properties
                 return IExecuteWithSignature<Org.Apache.Kafka.Metadata.Properties.MetaPropertiesEnsemble>("load", "()Lorg/apache/kafka/metadata/properties/MetaPropertiesEnsemble;");
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/metadata/properties/MetaPropertiesEnsemble.Loader.html#addLogDirs(java.util.Collection)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.4.0/org/apache/kafka/metadata/properties/MetaPropertiesEnsemble.Loader.html#addLogDirs(java.util.Collection)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Util.Collection"/></param>
             /// <returns><see cref="Org.Apache.Kafka.Metadata.Properties.MetaPropertiesEnsemble.Loader"/></returns>
@@ -535,7 +535,7 @@ namespace Org.Apache.Kafka.Metadata.Properties
                 return IExecuteWithSignature<Org.Apache.Kafka.Metadata.Properties.MetaPropertiesEnsemble.Loader>("addLogDirs", "(Ljava/util/Collection;)Lorg/apache/kafka/metadata/properties/MetaPropertiesEnsemble$Loader;", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/metadata/properties/MetaPropertiesEnsemble.Loader.html#addMetadataLogDir(java.lang.String)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.4.0/org/apache/kafka/metadata/properties/MetaPropertiesEnsemble.Loader.html#addMetadataLogDir(java.lang.String)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Lang.String"/></param>
             /// <returns><see cref="Org.Apache.Kafka.Metadata.Properties.MetaPropertiesEnsemble.Loader"/></returns>
@@ -575,7 +575,7 @@ namespace Org.Apache.Kafka.Metadata.Properties
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/metadata/properties/MetaPropertiesEnsemble.PreWriteHandler.html#handle(java.lang.String,boolean,org.apache.kafka.metadata.properties.MetaProperties)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.4.0/org/apache/kafka/metadata/properties/MetaPropertiesEnsemble.PreWriteHandler.html#handle(java.lang.String,boolean,org.apache.kafka.metadata.properties.MetaProperties)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Lang.String"/></param>
             /// <param name="arg1"><see cref="bool"/></param>
@@ -609,15 +609,15 @@ namespace Org.Apache.Kafka.Metadata.Properties
 
             #region Fields
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/metadata/properties/MetaPropertiesEnsemble.VerificationFlag.html#REQUIRE_AT_LEAST_ONE_VALID"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.4.0/org/apache/kafka/metadata/properties/MetaPropertiesEnsemble.VerificationFlag.html#REQUIRE_AT_LEAST_ONE_VALID"/>
             /// </summary>
             public static Org.Apache.Kafka.Metadata.Properties.MetaPropertiesEnsemble.VerificationFlag REQUIRE_AT_LEAST_ONE_VALID { get { return SGetField<Org.Apache.Kafka.Metadata.Properties.MetaPropertiesEnsemble.VerificationFlag>(LocalBridgeClazz, "REQUIRE_AT_LEAST_ONE_VALID"); } set { SSetField(LocalBridgeClazz, "REQUIRE_AT_LEAST_ONE_VALID", value); } }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/metadata/properties/MetaPropertiesEnsemble.VerificationFlag.html#REQUIRE_METADATA_LOG_DIR"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.4.0/org/apache/kafka/metadata/properties/MetaPropertiesEnsemble.VerificationFlag.html#REQUIRE_METADATA_LOG_DIR"/>
             /// </summary>
             public static Org.Apache.Kafka.Metadata.Properties.MetaPropertiesEnsemble.VerificationFlag REQUIRE_METADATA_LOG_DIR { get { return SGetField<Org.Apache.Kafka.Metadata.Properties.MetaPropertiesEnsemble.VerificationFlag>(LocalBridgeClazz, "REQUIRE_METADATA_LOG_DIR"); } set { SSetField(LocalBridgeClazz, "REQUIRE_METADATA_LOG_DIR", value); } }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/metadata/properties/MetaPropertiesEnsemble.VerificationFlag.html#REQUIRE_V0"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.4.0/org/apache/kafka/metadata/properties/MetaPropertiesEnsemble.VerificationFlag.html#REQUIRE_V0"/>
             /// </summary>
             public static Org.Apache.Kafka.Metadata.Properties.MetaPropertiesEnsemble.VerificationFlag REQUIRE_V0 { get { return SGetField<Org.Apache.Kafka.Metadata.Properties.MetaPropertiesEnsemble.VerificationFlag>(LocalBridgeClazz, "REQUIRE_V0"); } set { SSetField(LocalBridgeClazz, "REQUIRE_V0", value); } }
 
@@ -625,7 +625,7 @@ namespace Org.Apache.Kafka.Metadata.Properties
 
             #region Static methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/metadata/properties/MetaPropertiesEnsemble.VerificationFlag.html#valueOf(java.lang.String)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.4.0/org/apache/kafka/metadata/properties/MetaPropertiesEnsemble.VerificationFlag.html#valueOf(java.lang.String)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Lang.String"/></param>
             /// <returns><see cref="Org.Apache.Kafka.Metadata.Properties.MetaPropertiesEnsemble.VerificationFlag"/></returns>
@@ -634,7 +634,7 @@ namespace Org.Apache.Kafka.Metadata.Properties
                 return SExecuteWithSignature<Org.Apache.Kafka.Metadata.Properties.MetaPropertiesEnsemble.VerificationFlag>(LocalBridgeClazz, "valueOf", "(Ljava/lang/String;)Lorg/apache/kafka/metadata/properties/MetaPropertiesEnsemble$VerificationFlag;", arg0);
             }
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/metadata/properties/MetaPropertiesEnsemble.VerificationFlag.html#values()"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.4.0/org/apache/kafka/metadata/properties/MetaPropertiesEnsemble.VerificationFlag.html#values()"/>
             /// </summary>
             /// <returns><see cref="Org.Apache.Kafka.Metadata.Properties.MetaPropertiesEnsemble.VerificationFlag"/></returns>
             public static Org.Apache.Kafka.Metadata.Properties.MetaPropertiesEnsemble.VerificationFlag[] Values()
@@ -677,7 +677,7 @@ namespace Org.Apache.Kafka.Metadata.Properties
 
             #region Instance methods
             /// <summary>
-            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/metadata/properties/MetaPropertiesEnsemble.WriteErrorHandler.html#handle(java.lang.String,java.io.IOException)"/>
+            /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.4.0/org/apache/kafka/metadata/properties/MetaPropertiesEnsemble.WriteErrorHandler.html#handle(java.lang.String,java.io.IOException)"/>
             /// </summary>
             /// <param name="arg0"><see cref="Java.Lang.String"/></param>
             /// <param name="arg1"><see cref="Java.Io.IOException"/></param>

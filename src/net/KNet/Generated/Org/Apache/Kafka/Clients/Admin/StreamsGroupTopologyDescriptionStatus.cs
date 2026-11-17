@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 {
     #region StreamsGroupTopologyDescriptionStatus declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/admin/StreamsGroupTopologyDescriptionStatus.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.4.0/org/apache/kafka/clients/admin/StreamsGroupTopologyDescriptionStatus.html"/>
     /// </summary>
     public partial class StreamsGroupTopologyDescriptionStatus : Java.Lang.Enum<Org.Apache.Kafka.Clients.Admin.StreamsGroupTopologyDescriptionStatus>
     {
@@ -72,19 +72,19 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/admin/StreamsGroupTopologyDescriptionStatus.html#AVAILABLE"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.4.0/org/apache/kafka/clients/admin/StreamsGroupTopologyDescriptionStatus.html#AVAILABLE"/>
         /// </summary>
         public static Org.Apache.Kafka.Clients.Admin.StreamsGroupTopologyDescriptionStatus AVAILABLE { get { return SGetField<Org.Apache.Kafka.Clients.Admin.StreamsGroupTopologyDescriptionStatus>(LocalBridgeClazz, "AVAILABLE"); } set { SSetField(LocalBridgeClazz, "AVAILABLE", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/admin/StreamsGroupTopologyDescriptionStatus.html#ERROR"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.4.0/org/apache/kafka/clients/admin/StreamsGroupTopologyDescriptionStatus.html#ERROR"/>
         /// </summary>
         public static Org.Apache.Kafka.Clients.Admin.StreamsGroupTopologyDescriptionStatus ERROR { get { return SGetField<Org.Apache.Kafka.Clients.Admin.StreamsGroupTopologyDescriptionStatus>(LocalBridgeClazz, "ERROR"); } set { SSetField(LocalBridgeClazz, "ERROR", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/admin/StreamsGroupTopologyDescriptionStatus.html#NOT_REQUESTED"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.4.0/org/apache/kafka/clients/admin/StreamsGroupTopologyDescriptionStatus.html#NOT_REQUESTED"/>
         /// </summary>
         public static Org.Apache.Kafka.Clients.Admin.StreamsGroupTopologyDescriptionStatus NOT_REQUESTED { get { return SGetField<Org.Apache.Kafka.Clients.Admin.StreamsGroupTopologyDescriptionStatus>(LocalBridgeClazz, "NOT_REQUESTED"); } set { SSetField(LocalBridgeClazz, "NOT_REQUESTED", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/admin/StreamsGroupTopologyDescriptionStatus.html#NOT_STORED"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.4.0/org/apache/kafka/clients/admin/StreamsGroupTopologyDescriptionStatus.html#NOT_STORED"/>
         /// </summary>
         public static Org.Apache.Kafka.Clients.Admin.StreamsGroupTopologyDescriptionStatus NOT_STORED { get { return SGetField<Org.Apache.Kafka.Clients.Admin.StreamsGroupTopologyDescriptionStatus>(LocalBridgeClazz, "NOT_STORED"); } set { SSetField(LocalBridgeClazz, "NOT_STORED", value); } }
 
@@ -92,7 +92,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/admin/StreamsGroupTopologyDescriptionStatus.html#forId(byte)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.4.0/org/apache/kafka/clients/admin/StreamsGroupTopologyDescriptionStatus.html#forId(byte)"/>
         /// </summary>
         /// <param name="arg0"><see cref="byte"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.StreamsGroupTopologyDescriptionStatus"/></returns>
@@ -101,7 +101,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return SExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.StreamsGroupTopologyDescriptionStatus>(LocalBridgeClazz, "forId", "(B)Lorg/apache/kafka/clients/admin/StreamsGroupTopologyDescriptionStatus;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/admin/StreamsGroupTopologyDescriptionStatus.html#valueOf(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.4.0/org/apache/kafka/clients/admin/StreamsGroupTopologyDescriptionStatus.html#valueOf(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.StreamsGroupTopologyDescriptionStatus"/></returns>
@@ -110,7 +110,7 @@ namespace Org.Apache.Kafka.Clients.Admin
             return SExecuteWithSignature<Org.Apache.Kafka.Clients.Admin.StreamsGroupTopologyDescriptionStatus>(LocalBridgeClazz, "valueOf", "(Ljava/lang/String;)Lorg/apache/kafka/clients/admin/StreamsGroupTopologyDescriptionStatus;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/admin/StreamsGroupTopologyDescriptionStatus.html#values()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.4.0/org/apache/kafka/clients/admin/StreamsGroupTopologyDescriptionStatus.html#values()"/>
         /// </summary>
         /// <returns><see cref="Org.Apache.Kafka.Clients.Admin.StreamsGroupTopologyDescriptionStatus"/></returns>
         public static Org.Apache.Kafka.Clients.Admin.StreamsGroupTopologyDescriptionStatus[] Values()
@@ -122,7 +122,7 @@ namespace Org.Apache.Kafka.Clients.Admin
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/admin/StreamsGroupTopologyDescriptionStatus.html#id()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.4.0/org/apache/kafka/clients/admin/StreamsGroupTopologyDescriptionStatus.html#id()"/>
         /// </summary>
         /// <returns><see cref="byte"/></returns>
         public byte Id()

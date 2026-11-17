@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Metadata
 {
     #region ConfigRepository declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/metadata/ConfigRepository.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.4.0/org/apache/kafka/metadata/ConfigRepository.html"/>
     /// </summary>
     public partial class ConfigRepository : MASES.JCOBridge.C2JBridge.JVMBridgeBase<ConfigRepository>
     {
@@ -61,7 +61,7 @@ namespace Org.Apache.Kafka.Metadata
 
     #region IConfigRepository
     /// <summary>
-    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/metadata/ConfigRepository.html"/>
+    /// .NET interface skeleton to be manually developed following <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.4.0/org/apache/kafka/metadata/ConfigRepository.html"/>
     /// </summary>
     public partial interface IConfigRepository
     {
@@ -98,7 +98,7 @@ namespace Org.Apache.Kafka.Metadata
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/metadata/ConfigRepository.html#config(org.apache.kafka.common.config.ConfigResource)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.4.0/org/apache/kafka/metadata/ConfigRepository.html#config(org.apache.kafka.common.config.ConfigResource)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Org.Apache.Kafka.Common.Config.ConfigResource"/></param>
         /// <returns><see cref="Java.Util.Properties"/></returns>
@@ -107,7 +107,7 @@ namespace Org.Apache.Kafka.Metadata
             return IExecuteWithSignature<Java.Util.Properties>("config", "(Lorg/apache/kafka/common/config/ConfigResource;)Ljava/util/Properties;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/metadata/ConfigRepository.html#brokerConfig(int)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.4.0/org/apache/kafka/metadata/ConfigRepository.html#brokerConfig(int)"/>
         /// </summary>
         /// <param name="arg0"><see cref="int"/></param>
         /// <returns><see cref="Java.Util.Properties"/></returns>
@@ -116,7 +116,7 @@ namespace Org.Apache.Kafka.Metadata
             return IExecuteWithSignature<Java.Util.Properties>("brokerConfig", "(I)Ljava/util/Properties;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/metadata/ConfigRepository.html#groupConfig(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.4.0/org/apache/kafka/metadata/ConfigRepository.html#groupConfig(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Java.Util.Properties"/></returns>
@@ -125,7 +125,7 @@ namespace Org.Apache.Kafka.Metadata
             return IExecuteWithSignature<Java.Util.Properties>("groupConfig", "(Ljava/lang/String;)Ljava/util/Properties;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/metadata/ConfigRepository.html#topicConfig(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.4.0/org/apache/kafka/metadata/ConfigRepository.html#topicConfig(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Java.Util.Properties"/></returns>

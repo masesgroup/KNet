@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Connect.Util
 {
     #region SafeObjectInputStream declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.3.1/org/apache/kafka/connect/util/SafeObjectInputStream.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.4.0/org/apache/kafka/connect/util/SafeObjectInputStream.html"/>
     /// </summary>
     public partial class SafeObjectInputStream : Java.Io.ObjectInputStream
     {
@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Connect.Util
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.3.1/org/apache/kafka/connect/util/SafeObjectInputStream.html#%3Cinit%3E(java.io.InputStream,java.util.Set)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.4.0/org/apache/kafka/connect/util/SafeObjectInputStream.html#%3Cinit%3E(java.io.InputStream,java.util.Set)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Io.InputStream"/></param>
         /// <param name="arg1"><see cref="Java.Util.Set"/></param>
@@ -81,7 +81,7 @@ namespace Org.Apache.Kafka.Connect.Util
             return JVMBridgeBase.New<SafeObjectInputStream>(arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.3.1/org/apache/kafka/connect/util/SafeObjectInputStream.html#%3Cinit%3E(java.io.InputStream)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.4.0/org/apache/kafka/connect/util/SafeObjectInputStream.html#%3Cinit%3E(java.io.InputStream)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Io.InputStream"/></param>
         /// <exception cref="Java.Io.IOException"/>
@@ -105,7 +105,7 @@ namespace Org.Apache.Kafka.Connect.Util
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.3.1/org/apache/kafka/connect/util/SafeObjectInputStream.html#BASE_TYPES"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/connect-runtime/4.4.0/org/apache/kafka/connect/util/SafeObjectInputStream.html#BASE_TYPES"/>
         /// </summary>
         public static Java.Util.Set BASE_TYPES { get { return SGetField<Java.Util.Set>(LocalBridgeClazz, "BASE_TYPES"); } set { SSetField(LocalBridgeClazz, "BASE_TYPES", value); } }
 

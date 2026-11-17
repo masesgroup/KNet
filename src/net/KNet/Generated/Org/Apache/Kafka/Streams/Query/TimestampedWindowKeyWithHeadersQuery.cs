@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.Query
 {
     #region TimestampedWindowKeyWithHeadersQuery declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/query/TimestampedWindowKeyWithHeadersQuery.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.4.0/org/apache/kafka/streams/query/TimestampedWindowKeyWithHeadersQuery.html"/>
     /// </summary>
     public partial class TimestampedWindowKeyWithHeadersQuery : Org.Apache.Kafka.Streams.Query.Query
     {
@@ -61,7 +61,7 @@ namespace Org.Apache.Kafka.Streams.Query
 
     #region TimestampedWindowKeyWithHeadersQuery<K, V> declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/query/TimestampedWindowKeyWithHeadersQuery.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.4.0/org/apache/kafka/streams/query/TimestampedWindowKeyWithHeadersQuery.html"/>
     /// </summary>
     /// <typeparam name="K"></typeparam>
     /// <typeparam name="V"></typeparam>
@@ -112,7 +112,7 @@ namespace Org.Apache.Kafka.Streams.Query
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/query/TimestampedWindowKeyWithHeadersQuery.html#withKeyAndWindowStartRange(java.lang.Object,java.time.Instant,java.time.Instant)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.4.0/org/apache/kafka/streams/query/TimestampedWindowKeyWithHeadersQuery.html#withKeyAndWindowStartRange(java.lang.Object,java.time.Instant,java.time.Instant)"/>
         /// </summary>
         /// <param name="arg0"><see cref="object"/></param>
         /// <param name="arg1"><see cref="Java.Time.Instant"/></param>
@@ -127,7 +127,7 @@ namespace Org.Apache.Kafka.Streams.Query
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/query/TimestampedWindowKeyWithHeadersQuery.html#timeFrom()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.4.0/org/apache/kafka/streams/query/TimestampedWindowKeyWithHeadersQuery.html#timeFrom()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Optional"/></returns>
         public Java.Util.Optional TimeFrom()
@@ -135,7 +135,7 @@ namespace Org.Apache.Kafka.Streams.Query
             return IExecuteWithSignature<Java.Util.Optional>("timeFrom", "()Ljava/util/Optional;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/query/TimestampedWindowKeyWithHeadersQuery.html#timeTo()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.4.0/org/apache/kafka/streams/query/TimestampedWindowKeyWithHeadersQuery.html#timeTo()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Optional"/></returns>
         public Java.Util.Optional TimeTo()
@@ -143,7 +143,7 @@ namespace Org.Apache.Kafka.Streams.Query
             return IExecuteWithSignature<Java.Util.Optional>("timeTo", "()Ljava/util/Optional;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/query/TimestampedWindowKeyWithHeadersQuery.html#key()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.4.0/org/apache/kafka/streams/query/TimestampedWindowKeyWithHeadersQuery.html#key()"/>
         /// </summary>
         /// <returns><see cref="object"/></returns>
         public object Key()
@@ -182,7 +182,7 @@ namespace Org.Apache.Kafka.Streams.Query
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/query/TimestampedWindowKeyWithHeadersQuery.html#withKeyAndWindowStartRange(java.lang.Object,java.time.Instant,java.time.Instant)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.4.0/org/apache/kafka/streams/query/TimestampedWindowKeyWithHeadersQuery.html#withKeyAndWindowStartRange(java.lang.Object,java.time.Instant,java.time.Instant)"/>
         /// </summary>
         /// <param name="arg0"><typeparamref name="K"/></param>
         /// <param name="arg1"><see cref="Java.Time.Instant"/></param>
@@ -197,7 +197,7 @@ namespace Org.Apache.Kafka.Streams.Query
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/query/TimestampedWindowKeyWithHeadersQuery.html#timeFrom()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.4.0/org/apache/kafka/streams/query/TimestampedWindowKeyWithHeadersQuery.html#timeFrom()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Optional"/></returns>
         public Java.Util.Optional<Java.Time.Instant> TimeFrom()
@@ -205,7 +205,7 @@ namespace Org.Apache.Kafka.Streams.Query
             return IExecuteWithSignature<Java.Util.Optional<Java.Time.Instant>>("timeFrom", "()Ljava/util/Optional;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/query/TimestampedWindowKeyWithHeadersQuery.html#timeTo()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.4.0/org/apache/kafka/streams/query/TimestampedWindowKeyWithHeadersQuery.html#timeTo()"/>
         /// </summary>
         /// <returns><see cref="Java.Util.Optional"/></returns>
         public Java.Util.Optional<Java.Time.Instant> TimeTo()
@@ -213,7 +213,7 @@ namespace Org.Apache.Kafka.Streams.Query
             return IExecuteWithSignature<Java.Util.Optional<Java.Time.Instant>>("timeTo", "()Ljava/util/Optional;");
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/query/TimestampedWindowKeyWithHeadersQuery.html#key()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.4.0/org/apache/kafka/streams/query/TimestampedWindowKeyWithHeadersQuery.html#key()"/>
         /// </summary>
         /// <returns><typeparamref name="K"/></returns>
         public K Key()

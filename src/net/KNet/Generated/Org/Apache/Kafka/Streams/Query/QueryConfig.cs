@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Streams.Query
 {
     #region QueryConfig declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/query/QueryConfig.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.4.0/org/apache/kafka/streams/query/QueryConfig.html"/>
     /// </summary>
     public partial class QueryConfig : MASES.JCOBridge.C2JBridge.JVMBridgeBase<QueryConfig>
     {
@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Streams.Query
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/query/QueryConfig.html#%3Cinit%3E(boolean,org.apache.kafka.common.IsolationLevel)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.4.0/org/apache/kafka/streams/query/QueryConfig.html#%3Cinit%3E(boolean,org.apache.kafka.common.IsolationLevel)"/>
         /// </summary>
         /// <param name="arg0"><see cref="bool"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Common.IsolationLevel"/></param>
@@ -80,7 +80,7 @@ namespace Org.Apache.Kafka.Streams.Query
             return JVMBridgeBase.New<QueryConfig>(arg0, arg1);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/query/QueryConfig.html#%3Cinit%3E(boolean)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.4.0/org/apache/kafka/streams/query/QueryConfig.html#%3Cinit%3E(boolean)"/>
         /// </summary>
         /// <param name="arg0"><see cref="bool"/></param>
         public QueryConfig(bool arg0) : base(JVMBridgeBase.InitializerInstance)
@@ -111,14 +111,14 @@ namespace Org.Apache.Kafka.Streams.Query
 
         #region Instance methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/query/QueryConfig.html#getIsolationLevel()"/> 
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.4.0/org/apache/kafka/streams/query/QueryConfig.html#getIsolationLevel()"/> 
         /// </summary>
         public Org.Apache.Kafka.Common.IsolationLevel IsolationLevel
         {
             get { return IExecuteWithSignature<Org.Apache.Kafka.Common.IsolationLevel>("getIsolationLevel", "()Lorg/apache/kafka/common/IsolationLevel;"); }
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/query/QueryConfig.html#isCollectExecutionInfo()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.4.0/org/apache/kafka/streams/query/QueryConfig.html#isCollectExecutionInfo()"/>
         /// </summary>
         /// <returns><see cref="bool"/></returns>
         public bool IsCollectExecutionInfo()
