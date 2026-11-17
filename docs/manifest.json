@@ -1,4 +1,5 @@
 {
+  "docfx_version": "2.81.0+ba844df625370a6bd7c1ecab0d0ec4d1d9128ac4",
   "source_base_path": "D:/a/KNet/KNet/src/documentation",
   "xrefmap": "xrefmap.yml",
   "files": [
@@ -9,6 +10,16 @@
           "relative_path": "index.json"
         }
       }
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../../llms.txt",
+      "output": {
+        "resource": {
+          "relative_path": "llms.txt"
+        }
+      },
+      "version": ""
     },
     {
       "type": "ManagedReference",
@@ -4198,17 +4209,17 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MASES.KNet.Streams.State.CommonIterator-1.yml",
+      "source_relative_path": "api/MASES.KNet.Streams.State.CommonIterator-3.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MASES.KNet.Streams.State.CommonIterator-1.html"
+          "relative_path": "api/MASES.KNet.Streams.State.CommonIterator-3.html"
         }
       },
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "MASES.KNet.Streams.State.CommonIterator<TIteratorType>",
-      "Summary": "<p sourcefile=\"api/MASES.KNet.Streams.State.CommonIterator-1.yml\" sourcestartlinenumber=\"1\">A common class for all iterators</p>\n"
+      "Title": "MASES.KNet.Streams.State.CommonIterator<TIterator, TIteratorType, TNativeIterator>",
+      "Summary": "<p sourcefile=\"api/MASES.KNet.Streams.State.CommonIterator-3.yml\" sourcestartlinenumber=\"1\">A common class for all iterators</p>\n"
     },
     {
       "type": "ManagedReference",

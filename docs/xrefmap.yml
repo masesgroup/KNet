@@ -10300,23 +10300,6 @@ references:
   fullName.vb: MASES.KNet.Consumer.ConsumerRecord(Of K, V, TJVMK, TJVMV)
   nameWithType: ConsumerRecord<K, V, TJVMK, TJVMV>
   nameWithType.vb: ConsumerRecord(Of K, V, TJVMK, TJVMV)
-- uid: MASES.KNet.Consumer.ConsumerRecord`4.CheckDisposed
-  name: CheckDisposed()
-  href: api/MASES.KNet.Consumer.ConsumerRecord-4.html#MASES_KNet_Consumer_ConsumerRecord_4_CheckDisposed
-  commentId: M:MASES.KNet.Consumer.ConsumerRecord`4.CheckDisposed
-  fullName: MASES.KNet.Consumer.ConsumerRecord<K, V, TJVMK, TJVMV>.CheckDisposed()
-  fullName.vb: MASES.KNet.Consumer.ConsumerRecord(Of K, V, TJVMK, TJVMV).CheckDisposed()
-  nameWithType: ConsumerRecord<K, V, TJVMK, TJVMV>.CheckDisposed()
-  nameWithType.vb: ConsumerRecord(Of K, V, TJVMK, TJVMV).CheckDisposed()
-- uid: MASES.KNet.Consumer.ConsumerRecord`4.CheckDisposed*
-  name: CheckDisposed
-  href: api/MASES.KNet.Consumer.ConsumerRecord-4.html#MASES_KNet_Consumer_ConsumerRecord_4_CheckDisposed_
-  commentId: Overload:MASES.KNet.Consumer.ConsumerRecord`4.CheckDisposed
-  isSpec: "True"
-  fullName: MASES.KNet.Consumer.ConsumerRecord<K, V, TJVMK, TJVMV>.CheckDisposed
-  fullName.vb: MASES.KNet.Consumer.ConsumerRecord(Of K, V, TJVMK, TJVMV).CheckDisposed
-  nameWithType: ConsumerRecord<K, V, TJVMK, TJVMV>.CheckDisposed
-  nameWithType.vb: ConsumerRecord(Of K, V, TJVMK, TJVMV).CheckDisposed
 - uid: MASES.KNet.Consumer.ConsumerRecord`4.DateTime
   name: DateTime
   href: api/MASES.KNet.Consumer.ConsumerRecord-4.html#MASES_KNet_Consumer_ConsumerRecord_4_DateTime
@@ -10342,15 +10325,6 @@ references:
   fullName.vb: MASES.KNet.Consumer.ConsumerRecord(Of K, V, TJVMK, TJVMV).Dispose()
   nameWithType: ConsumerRecord<K, V, TJVMK, TJVMV>.Dispose()
   nameWithType.vb: ConsumerRecord(Of K, V, TJVMK, TJVMV).Dispose()
-- uid: MASES.KNet.Consumer.ConsumerRecord`4.Dispose(System.Boolean)
-  name: Dispose(bool)
-  href: api/MASES.KNet.Consumer.ConsumerRecord-4.html#MASES_KNet_Consumer_ConsumerRecord_4_Dispose_System_Boolean_
-  commentId: M:MASES.KNet.Consumer.ConsumerRecord`4.Dispose(System.Boolean)
-  name.vb: Dispose(Boolean)
-  fullName: MASES.KNet.Consumer.ConsumerRecord<K, V, TJVMK, TJVMV>.Dispose(bool)
-  fullName.vb: MASES.KNet.Consumer.ConsumerRecord(Of K, V, TJVMK, TJVMV).Dispose(Boolean)
-  nameWithType: ConsumerRecord<K, V, TJVMK, TJVMV>.Dispose(bool)
-  nameWithType.vb: ConsumerRecord(Of K, V, TJVMK, TJVMV).Dispose(Boolean)
 - uid: MASES.KNet.Consumer.ConsumerRecord`4.Dispose*
   name: Dispose
   href: api/MASES.KNet.Consumer.ConsumerRecord-4.html#MASES_KNet_Consumer_ConsumerRecord_4_Dispose_
@@ -10590,23 +10564,6 @@ references:
   fullName.vb: MASES.KNet.Consumer.ConsumerRecords(Of K, V, TJVMK, TJVMV)
   nameWithType: ConsumerRecords<K, V, TJVMK, TJVMV>
   nameWithType.vb: ConsumerRecords(Of K, V, TJVMK, TJVMV)
-- uid: MASES.KNet.Consumer.ConsumerRecords`4.CheckDisposed
-  name: CheckDisposed()
-  href: api/MASES.KNet.Consumer.ConsumerRecords-4.html#MASES_KNet_Consumer_ConsumerRecords_4_CheckDisposed
-  commentId: M:MASES.KNet.Consumer.ConsumerRecords`4.CheckDisposed
-  fullName: MASES.KNet.Consumer.ConsumerRecords<K, V, TJVMK, TJVMV>.CheckDisposed()
-  fullName.vb: MASES.KNet.Consumer.ConsumerRecords(Of K, V, TJVMK, TJVMV).CheckDisposed()
-  nameWithType: ConsumerRecords<K, V, TJVMK, TJVMV>.CheckDisposed()
-  nameWithType.vb: ConsumerRecords(Of K, V, TJVMK, TJVMV).CheckDisposed()
-- uid: MASES.KNet.Consumer.ConsumerRecords`4.CheckDisposed*
-  name: CheckDisposed
-  href: api/MASES.KNet.Consumer.ConsumerRecords-4.html#MASES_KNet_Consumer_ConsumerRecords_4_CheckDisposed_
-  commentId: Overload:MASES.KNet.Consumer.ConsumerRecords`4.CheckDisposed
-  isSpec: "True"
-  fullName: MASES.KNet.Consumer.ConsumerRecords<K, V, TJVMK, TJVMV>.CheckDisposed
-  fullName.vb: MASES.KNet.Consumer.ConsumerRecords(Of K, V, TJVMK, TJVMV).CheckDisposed
-  nameWithType: ConsumerRecords<K, V, TJVMK, TJVMV>.CheckDisposed
-  nameWithType.vb: ConsumerRecords(Of K, V, TJVMK, TJVMV).CheckDisposed
 - uid: MASES.KNet.Consumer.ConsumerRecords`4.Count
   name: Count
   href: api/MASES.KNet.Consumer.ConsumerRecords-4.html#MASES_KNet_Consumer_ConsumerRecords_4_Count
@@ -10632,15 +10589,6 @@ references:
   fullName.vb: MASES.KNet.Consumer.ConsumerRecords(Of K, V, TJVMK, TJVMV).Dispose()
   nameWithType: ConsumerRecords<K, V, TJVMK, TJVMV>.Dispose()
   nameWithType.vb: ConsumerRecords(Of K, V, TJVMK, TJVMV).Dispose()
-- uid: MASES.KNet.Consumer.ConsumerRecords`4.Dispose(System.Boolean)
-  name: Dispose(bool)
-  href: api/MASES.KNet.Consumer.ConsumerRecords-4.html#MASES_KNet_Consumer_ConsumerRecords_4_Dispose_System_Boolean_
-  commentId: M:MASES.KNet.Consumer.ConsumerRecords`4.Dispose(System.Boolean)
-  name.vb: Dispose(Boolean)
-  fullName: MASES.KNet.Consumer.ConsumerRecords<K, V, TJVMK, TJVMV>.Dispose(bool)
-  fullName.vb: MASES.KNet.Consumer.ConsumerRecords(Of K, V, TJVMK, TJVMV).Dispose(Boolean)
-  nameWithType: ConsumerRecords<K, V, TJVMK, TJVMV>.Dispose(bool)
-  nameWithType.vb: ConsumerRecords(Of K, V, TJVMK, TJVMV).Dispose(Boolean)
 - uid: MASES.KNet.Consumer.ConsumerRecords`4.Dispose*
   name: Dispose
   href: api/MASES.KNet.Consumer.ConsumerRecords-4.html#MASES_KNet_Consumer_ConsumerRecords_4_Dispose_
@@ -30969,23 +30917,6 @@ references:
   fullName.vb: MASES.KNet.Streams.Kstream.Windowed(Of K, TJVMK)
   nameWithType: Windowed<K, TJVMK>
   nameWithType.vb: Windowed(Of K, TJVMK)
-- uid: MASES.KNet.Streams.Kstream.Windowed`2.CheckDisposed
-  name: CheckDisposed()
-  href: api/MASES.KNet.Streams.Kstream.Windowed-2.html#MASES_KNet_Streams_Kstream_Windowed_2_CheckDisposed
-  commentId: M:MASES.KNet.Streams.Kstream.Windowed`2.CheckDisposed
-  fullName: MASES.KNet.Streams.Kstream.Windowed<K, TJVMK>.CheckDisposed()
-  fullName.vb: MASES.KNet.Streams.Kstream.Windowed(Of K, TJVMK).CheckDisposed()
-  nameWithType: Windowed<K, TJVMK>.CheckDisposed()
-  nameWithType.vb: Windowed(Of K, TJVMK).CheckDisposed()
-- uid: MASES.KNet.Streams.Kstream.Windowed`2.CheckDisposed*
-  name: CheckDisposed
-  href: api/MASES.KNet.Streams.Kstream.Windowed-2.html#MASES_KNet_Streams_Kstream_Windowed_2_CheckDisposed_
-  commentId: Overload:MASES.KNet.Streams.Kstream.Windowed`2.CheckDisposed
-  isSpec: "True"
-  fullName: MASES.KNet.Streams.Kstream.Windowed<K, TJVMK>.CheckDisposed
-  fullName.vb: MASES.KNet.Streams.Kstream.Windowed(Of K, TJVMK).CheckDisposed
-  nameWithType: Windowed<K, TJVMK>.CheckDisposed
-  nameWithType.vb: Windowed(Of K, TJVMK).CheckDisposed
 - uid: MASES.KNet.Streams.Kstream.Windowed`2.Dispose
   name: Dispose()
   href: api/MASES.KNet.Streams.Kstream.Windowed-2.html#MASES_KNet_Streams_Kstream_Windowed_2_Dispose
@@ -30994,15 +30925,6 @@ references:
   fullName.vb: MASES.KNet.Streams.Kstream.Windowed(Of K, TJVMK).Dispose()
   nameWithType: Windowed<K, TJVMK>.Dispose()
   nameWithType.vb: Windowed(Of K, TJVMK).Dispose()
-- uid: MASES.KNet.Streams.Kstream.Windowed`2.Dispose(System.Boolean)
-  name: Dispose(bool)
-  href: api/MASES.KNet.Streams.Kstream.Windowed-2.html#MASES_KNet_Streams_Kstream_Windowed_2_Dispose_System_Boolean_
-  commentId: M:MASES.KNet.Streams.Kstream.Windowed`2.Dispose(System.Boolean)
-  name.vb: Dispose(Boolean)
-  fullName: MASES.KNet.Streams.Kstream.Windowed<K, TJVMK>.Dispose(bool)
-  fullName.vb: MASES.KNet.Streams.Kstream.Windowed(Of K, TJVMK).Dispose(Boolean)
-  nameWithType: Windowed<K, TJVMK>.Dispose(bool)
-  nameWithType.vb: Windowed(Of K, TJVMK).Dispose(Boolean)
 - uid: MASES.KNet.Streams.Kstream.Windowed`2.Dispose*
   name: Dispose
   href: api/MASES.KNet.Streams.Kstream.Windowed-2.html#MASES_KNet_Streams_Kstream_Windowed_2_Dispose_
@@ -32450,189 +32372,221 @@ references:
   commentId: N:MASES.KNet.Streams.State
   fullName: MASES.KNet.Streams.State
   nameWithType: MASES.KNet.Streams.State
-- uid: MASES.KNet.Streams.State.CommonIterator`1
-  name: CommonIterator<TIteratorType>
-  href: api/MASES.KNet.Streams.State.CommonIterator-1.html
-  commentId: T:MASES.KNet.Streams.State.CommonIterator`1
-  name.vb: CommonIterator(Of TIteratorType)
-  fullName: MASES.KNet.Streams.State.CommonIterator<TIteratorType>
-  fullName.vb: MASES.KNet.Streams.State.CommonIterator(Of TIteratorType)
-  nameWithType: CommonIterator<TIteratorType>
-  nameWithType.vb: CommonIterator(Of TIteratorType)
-- uid: MASES.KNet.Streams.State.CommonIterator`1.#ctor(MASES.KNet.Serialization.IGenericSerDesFactory)
-  name: CommonIterator(IGenericSerDesFactory)
-  href: api/MASES.KNet.Streams.State.CommonIterator-1.html#MASES_KNet_Streams_State_CommonIterator_1__ctor_MASES_KNet_Serialization_IGenericSerDesFactory_
-  commentId: M:MASES.KNet.Streams.State.CommonIterator`1.#ctor(MASES.KNet.Serialization.IGenericSerDesFactory)
-  name.vb: New(IGenericSerDesFactory)
-  fullName: MASES.KNet.Streams.State.CommonIterator<TIteratorType>.CommonIterator(MASES.KNet.Serialization.IGenericSerDesFactory)
-  fullName.vb: MASES.KNet.Streams.State.CommonIterator(Of TIteratorType).New(MASES.KNet.Serialization.IGenericSerDesFactory)
-  nameWithType: CommonIterator<TIteratorType>.CommonIterator(IGenericSerDesFactory)
-  nameWithType.vb: CommonIterator(Of TIteratorType).New(IGenericSerDesFactory)
-- uid: MASES.KNet.Streams.State.CommonIterator`1.#ctor*
-  name: CommonIterator
-  href: api/MASES.KNet.Streams.State.CommonIterator-1.html#MASES_KNet_Streams_State_CommonIterator_1__ctor_
-  commentId: Overload:MASES.KNet.Streams.State.CommonIterator`1.#ctor
-  isSpec: "True"
-  name.vb: New
-  fullName: MASES.KNet.Streams.State.CommonIterator<TIteratorType>.CommonIterator
-  fullName.vb: MASES.KNet.Streams.State.CommonIterator(Of TIteratorType).New
-  nameWithType: CommonIterator<TIteratorType>.CommonIterator
-  nameWithType.vb: CommonIterator(Of TIteratorType).New
-- uid: MASES.KNet.Streams.State.CommonIterator`1.CheckDisposed
+- uid: MASES.KNet.Streams.State.CommonIterator`3
+  name: CommonIterator<TIterator, TIteratorType, TNativeIterator>
+  href: api/MASES.KNet.Streams.State.CommonIterator-3.html
+  commentId: T:MASES.KNet.Streams.State.CommonIterator`3
+  name.vb: CommonIterator(Of TIterator, TIteratorType, TNativeIterator)
+  fullName: MASES.KNet.Streams.State.CommonIterator<TIterator, TIteratorType, TNativeIterator>
+  fullName.vb: MASES.KNet.Streams.State.CommonIterator(Of TIterator, TIteratorType, TNativeIterator)
+  nameWithType: CommonIterator<TIterator, TIteratorType, TNativeIterator>
+  nameWithType.vb: CommonIterator(Of TIterator, TIteratorType, TNativeIterator)
+- uid: MASES.KNet.Streams.State.CommonIterator`3.CheckDisposed
   name: CheckDisposed()
-  href: api/MASES.KNet.Streams.State.CommonIterator-1.html#MASES_KNet_Streams_State_CommonIterator_1_CheckDisposed
-  commentId: M:MASES.KNet.Streams.State.CommonIterator`1.CheckDisposed
-  fullName: MASES.KNet.Streams.State.CommonIterator<TIteratorType>.CheckDisposed()
-  fullName.vb: MASES.KNet.Streams.State.CommonIterator(Of TIteratorType).CheckDisposed()
-  nameWithType: CommonIterator<TIteratorType>.CheckDisposed()
-  nameWithType.vb: CommonIterator(Of TIteratorType).CheckDisposed()
-- uid: MASES.KNet.Streams.State.CommonIterator`1.CheckDisposed*
+  href: api/MASES.KNet.Streams.State.CommonIterator-3.html#MASES_KNet_Streams_State_CommonIterator_3_CheckDisposed
+  commentId: M:MASES.KNet.Streams.State.CommonIterator`3.CheckDisposed
+  fullName: MASES.KNet.Streams.State.CommonIterator<TIterator, TIteratorType, TNativeIterator>.CheckDisposed()
+  fullName.vb: MASES.KNet.Streams.State.CommonIterator(Of TIterator, TIteratorType, TNativeIterator).CheckDisposed()
+  nameWithType: CommonIterator<TIterator, TIteratorType, TNativeIterator>.CheckDisposed()
+  nameWithType.vb: CommonIterator(Of TIterator, TIteratorType, TNativeIterator).CheckDisposed()
+- uid: MASES.KNet.Streams.State.CommonIterator`3.CheckDisposed*
   name: CheckDisposed
-  href: api/MASES.KNet.Streams.State.CommonIterator-1.html#MASES_KNet_Streams_State_CommonIterator_1_CheckDisposed_
-  commentId: Overload:MASES.KNet.Streams.State.CommonIterator`1.CheckDisposed
+  href: api/MASES.KNet.Streams.State.CommonIterator-3.html#MASES_KNet_Streams_State_CommonIterator_3_CheckDisposed_
+  commentId: Overload:MASES.KNet.Streams.State.CommonIterator`3.CheckDisposed
   isSpec: "True"
-  fullName: MASES.KNet.Streams.State.CommonIterator<TIteratorType>.CheckDisposed
-  fullName.vb: MASES.KNet.Streams.State.CommonIterator(Of TIteratorType).CheckDisposed
-  nameWithType: CommonIterator<TIteratorType>.CheckDisposed
-  nameWithType.vb: CommonIterator(Of TIteratorType).CheckDisposed
-- uid: MASES.KNet.Streams.State.CommonIterator`1.Dispose
+  fullName: MASES.KNet.Streams.State.CommonIterator<TIterator, TIteratorType, TNativeIterator>.CheckDisposed
+  fullName.vb: MASES.KNet.Streams.State.CommonIterator(Of TIterator, TIteratorType, TNativeIterator).CheckDisposed
+  nameWithType: CommonIterator<TIterator, TIteratorType, TNativeIterator>.CheckDisposed
+  nameWithType.vb: CommonIterator(Of TIterator, TIteratorType, TNativeIterator).CheckDisposed
+- uid: MASES.KNet.Streams.State.CommonIterator`3.Dispose
   name: Dispose()
-  href: api/MASES.KNet.Streams.State.CommonIterator-1.html#MASES_KNet_Streams_State_CommonIterator_1_Dispose
-  commentId: M:MASES.KNet.Streams.State.CommonIterator`1.Dispose
-  fullName: MASES.KNet.Streams.State.CommonIterator<TIteratorType>.Dispose()
-  fullName.vb: MASES.KNet.Streams.State.CommonIterator(Of TIteratorType).Dispose()
-  nameWithType: CommonIterator<TIteratorType>.Dispose()
-  nameWithType.vb: CommonIterator(Of TIteratorType).Dispose()
-- uid: MASES.KNet.Streams.State.CommonIterator`1.Dispose(System.Boolean)
+  href: api/MASES.KNet.Streams.State.CommonIterator-3.html#MASES_KNet_Streams_State_CommonIterator_3_Dispose
+  commentId: M:MASES.KNet.Streams.State.CommonIterator`3.Dispose
+  fullName: MASES.KNet.Streams.State.CommonIterator<TIterator, TIteratorType, TNativeIterator>.Dispose()
+  fullName.vb: MASES.KNet.Streams.State.CommonIterator(Of TIterator, TIteratorType, TNativeIterator).Dispose()
+  nameWithType: CommonIterator<TIterator, TIteratorType, TNativeIterator>.Dispose()
+  nameWithType.vb: CommonIterator(Of TIterator, TIteratorType, TNativeIterator).Dispose()
+- uid: MASES.KNet.Streams.State.CommonIterator`3.Dispose(System.Boolean)
   name: Dispose(bool)
-  href: api/MASES.KNet.Streams.State.CommonIterator-1.html#MASES_KNet_Streams_State_CommonIterator_1_Dispose_System_Boolean_
-  commentId: M:MASES.KNet.Streams.State.CommonIterator`1.Dispose(System.Boolean)
+  href: api/MASES.KNet.Streams.State.CommonIterator-3.html#MASES_KNet_Streams_State_CommonIterator_3_Dispose_System_Boolean_
+  commentId: M:MASES.KNet.Streams.State.CommonIterator`3.Dispose(System.Boolean)
   name.vb: Dispose(Boolean)
-  fullName: MASES.KNet.Streams.State.CommonIterator<TIteratorType>.Dispose(bool)
-  fullName.vb: MASES.KNet.Streams.State.CommonIterator(Of TIteratorType).Dispose(Boolean)
-  nameWithType: CommonIterator<TIteratorType>.Dispose(bool)
-  nameWithType.vb: CommonIterator(Of TIteratorType).Dispose(Boolean)
-- uid: MASES.KNet.Streams.State.CommonIterator`1.Dispose*
+  fullName: MASES.KNet.Streams.State.CommonIterator<TIterator, TIteratorType, TNativeIterator>.Dispose(bool)
+  fullName.vb: MASES.KNet.Streams.State.CommonIterator(Of TIterator, TIteratorType, TNativeIterator).Dispose(Boolean)
+  nameWithType: CommonIterator<TIterator, TIteratorType, TNativeIterator>.Dispose(bool)
+  nameWithType.vb: CommonIterator(Of TIterator, TIteratorType, TNativeIterator).Dispose(Boolean)
+- uid: MASES.KNet.Streams.State.CommonIterator`3.Dispose*
   name: Dispose
-  href: api/MASES.KNet.Streams.State.CommonIterator-1.html#MASES_KNet_Streams_State_CommonIterator_1_Dispose_
-  commentId: Overload:MASES.KNet.Streams.State.CommonIterator`1.Dispose
+  href: api/MASES.KNet.Streams.State.CommonIterator-3.html#MASES_KNet_Streams_State_CommonIterator_3_Dispose_
+  commentId: Overload:MASES.KNet.Streams.State.CommonIterator`3.Dispose
   isSpec: "True"
-  fullName: MASES.KNet.Streams.State.CommonIterator<TIteratorType>.Dispose
-  fullName.vb: MASES.KNet.Streams.State.CommonIterator(Of TIteratorType).Dispose
-  nameWithType: CommonIterator<TIteratorType>.Dispose
-  nameWithType.vb: CommonIterator(Of TIteratorType).Dispose
-- uid: MASES.KNet.Streams.State.CommonIterator`1.DisposeAsync
+  fullName: MASES.KNet.Streams.State.CommonIterator<TIterator, TIteratorType, TNativeIterator>.Dispose
+  fullName.vb: MASES.KNet.Streams.State.CommonIterator(Of TIterator, TIteratorType, TNativeIterator).Dispose
+  nameWithType: CommonIterator<TIterator, TIteratorType, TNativeIterator>.Dispose
+  nameWithType.vb: CommonIterator(Of TIterator, TIteratorType, TNativeIterator).Dispose
+- uid: MASES.KNet.Streams.State.CommonIterator`3.DisposeAsync
   name: DisposeAsync()
-  href: api/MASES.KNet.Streams.State.CommonIterator-1.html#MASES_KNet_Streams_State_CommonIterator_1_DisposeAsync
-  commentId: M:MASES.KNet.Streams.State.CommonIterator`1.DisposeAsync
-  fullName: MASES.KNet.Streams.State.CommonIterator<TIteratorType>.DisposeAsync()
-  fullName.vb: MASES.KNet.Streams.State.CommonIterator(Of TIteratorType).DisposeAsync()
-  nameWithType: CommonIterator<TIteratorType>.DisposeAsync()
-  nameWithType.vb: CommonIterator(Of TIteratorType).DisposeAsync()
-- uid: MASES.KNet.Streams.State.CommonIterator`1.DisposeAsync*
+  href: api/MASES.KNet.Streams.State.CommonIterator-3.html#MASES_KNet_Streams_State_CommonIterator_3_DisposeAsync
+  commentId: M:MASES.KNet.Streams.State.CommonIterator`3.DisposeAsync
+  fullName: MASES.KNet.Streams.State.CommonIterator<TIterator, TIteratorType, TNativeIterator>.DisposeAsync()
+  fullName.vb: MASES.KNet.Streams.State.CommonIterator(Of TIterator, TIteratorType, TNativeIterator).DisposeAsync()
+  nameWithType: CommonIterator<TIterator, TIteratorType, TNativeIterator>.DisposeAsync()
+  nameWithType.vb: CommonIterator(Of TIterator, TIteratorType, TNativeIterator).DisposeAsync()
+- uid: MASES.KNet.Streams.State.CommonIterator`3.DisposeAsync*
   name: DisposeAsync
-  href: api/MASES.KNet.Streams.State.CommonIterator-1.html#MASES_KNet_Streams_State_CommonIterator_1_DisposeAsync_
-  commentId: Overload:MASES.KNet.Streams.State.CommonIterator`1.DisposeAsync
+  href: api/MASES.KNet.Streams.State.CommonIterator-3.html#MASES_KNet_Streams_State_CommonIterator_3_DisposeAsync_
+  commentId: Overload:MASES.KNet.Streams.State.CommonIterator`3.DisposeAsync
   isSpec: "True"
-  fullName: MASES.KNet.Streams.State.CommonIterator<TIteratorType>.DisposeAsync
-  fullName.vb: MASES.KNet.Streams.State.CommonIterator(Of TIteratorType).DisposeAsync
-  nameWithType: CommonIterator<TIteratorType>.DisposeAsync
-  nameWithType.vb: CommonIterator(Of TIteratorType).DisposeAsync
-- uid: MASES.KNet.Streams.State.CommonIterator`1.Factory
+  fullName: MASES.KNet.Streams.State.CommonIterator<TIterator, TIteratorType, TNativeIterator>.DisposeAsync
+  fullName.vb: MASES.KNet.Streams.State.CommonIterator(Of TIterator, TIteratorType, TNativeIterator).DisposeAsync
+  nameWithType: CommonIterator<TIterator, TIteratorType, TNativeIterator>.DisposeAsync
+  nameWithType.vb: CommonIterator(Of TIterator, TIteratorType, TNativeIterator).DisposeAsync
+- uid: MASES.KNet.Streams.State.CommonIterator`3.Factory
   name: Factory
-  href: api/MASES.KNet.Streams.State.CommonIterator-1.html#MASES_KNet_Streams_State_CommonIterator_1_Factory
-  commentId: P:MASES.KNet.Streams.State.CommonIterator`1.Factory
-  fullName: MASES.KNet.Streams.State.CommonIterator<TIteratorType>.Factory
-  fullName.vb: MASES.KNet.Streams.State.CommonIterator(Of TIteratorType).Factory
-  nameWithType: CommonIterator<TIteratorType>.Factory
-  nameWithType.vb: CommonIterator(Of TIteratorType).Factory
-- uid: MASES.KNet.Streams.State.CommonIterator`1.Factory*
+  href: api/MASES.KNet.Streams.State.CommonIterator-3.html#MASES_KNet_Streams_State_CommonIterator_3_Factory
+  commentId: P:MASES.KNet.Streams.State.CommonIterator`3.Factory
+  fullName: MASES.KNet.Streams.State.CommonIterator<TIterator, TIteratorType, TNativeIterator>.Factory
+  fullName.vb: MASES.KNet.Streams.State.CommonIterator(Of TIterator, TIteratorType, TNativeIterator).Factory
+  nameWithType: CommonIterator<TIterator, TIteratorType, TNativeIterator>.Factory
+  nameWithType.vb: CommonIterator(Of TIterator, TIteratorType, TNativeIterator).Factory
+- uid: MASES.KNet.Streams.State.CommonIterator`3.Factory*
   name: Factory
-  href: api/MASES.KNet.Streams.State.CommonIterator-1.html#MASES_KNet_Streams_State_CommonIterator_1_Factory_
-  commentId: Overload:MASES.KNet.Streams.State.CommonIterator`1.Factory
+  href: api/MASES.KNet.Streams.State.CommonIterator-3.html#MASES_KNet_Streams_State_CommonIterator_3_Factory_
+  commentId: Overload:MASES.KNet.Streams.State.CommonIterator`3.Factory
   isSpec: "True"
-  fullName: MASES.KNet.Streams.State.CommonIterator<TIteratorType>.Factory
-  fullName.vb: MASES.KNet.Streams.State.CommonIterator(Of TIteratorType).Factory
-  nameWithType: CommonIterator<TIteratorType>.Factory
-  nameWithType.vb: CommonIterator(Of TIteratorType).Factory
-- uid: MASES.KNet.Streams.State.CommonIterator`1.GetAsyncEnumerator(System.Threading.CancellationToken)
+  fullName: MASES.KNet.Streams.State.CommonIterator<TIterator, TIteratorType, TNativeIterator>.Factory
+  fullName.vb: MASES.KNet.Streams.State.CommonIterator(Of TIterator, TIteratorType, TNativeIterator).Factory
+  nameWithType: CommonIterator<TIterator, TIteratorType, TNativeIterator>.Factory
+  nameWithType.vb: CommonIterator(Of TIterator, TIteratorType, TNativeIterator).Factory
+- uid: MASES.KNet.Streams.State.CommonIterator`3.GetAsyncEnumerator(System.Threading.CancellationToken)
   name: GetAsyncEnumerator(CancellationToken)
-  href: api/MASES.KNet.Streams.State.CommonIterator-1.html#MASES_KNet_Streams_State_CommonIterator_1_GetAsyncEnumerator_System_Threading_CancellationToken_
-  commentId: M:MASES.KNet.Streams.State.CommonIterator`1.GetAsyncEnumerator(System.Threading.CancellationToken)
-  fullName: MASES.KNet.Streams.State.CommonIterator<TIteratorType>.GetAsyncEnumerator(System.Threading.CancellationToken)
-  fullName.vb: MASES.KNet.Streams.State.CommonIterator(Of TIteratorType).GetAsyncEnumerator(System.Threading.CancellationToken)
-  nameWithType: CommonIterator<TIteratorType>.GetAsyncEnumerator(CancellationToken)
-  nameWithType.vb: CommonIterator(Of TIteratorType).GetAsyncEnumerator(CancellationToken)
-- uid: MASES.KNet.Streams.State.CommonIterator`1.GetAsyncEnumerator*
+  href: api/MASES.KNet.Streams.State.CommonIterator-3.html#MASES_KNet_Streams_State_CommonIterator_3_GetAsyncEnumerator_System_Threading_CancellationToken_
+  commentId: M:MASES.KNet.Streams.State.CommonIterator`3.GetAsyncEnumerator(System.Threading.CancellationToken)
+  fullName: MASES.KNet.Streams.State.CommonIterator<TIterator, TIteratorType, TNativeIterator>.GetAsyncEnumerator(System.Threading.CancellationToken)
+  fullName.vb: MASES.KNet.Streams.State.CommonIterator(Of TIterator, TIteratorType, TNativeIterator).GetAsyncEnumerator(System.Threading.CancellationToken)
+  nameWithType: CommonIterator<TIterator, TIteratorType, TNativeIterator>.GetAsyncEnumerator(CancellationToken)
+  nameWithType.vb: CommonIterator(Of TIterator, TIteratorType, TNativeIterator).GetAsyncEnumerator(CancellationToken)
+- uid: MASES.KNet.Streams.State.CommonIterator`3.GetAsyncEnumerator*
   name: GetAsyncEnumerator
-  href: api/MASES.KNet.Streams.State.CommonIterator-1.html#MASES_KNet_Streams_State_CommonIterator_1_GetAsyncEnumerator_
-  commentId: Overload:MASES.KNet.Streams.State.CommonIterator`1.GetAsyncEnumerator
+  href: api/MASES.KNet.Streams.State.CommonIterator-3.html#MASES_KNet_Streams_State_CommonIterator_3_GetAsyncEnumerator_
+  commentId: Overload:MASES.KNet.Streams.State.CommonIterator`3.GetAsyncEnumerator
   isSpec: "True"
-  fullName: MASES.KNet.Streams.State.CommonIterator<TIteratorType>.GetAsyncEnumerator
-  fullName.vb: MASES.KNet.Streams.State.CommonIterator(Of TIteratorType).GetAsyncEnumerator
-  nameWithType: CommonIterator<TIteratorType>.GetAsyncEnumerator
-  nameWithType.vb: CommonIterator(Of TIteratorType).GetAsyncEnumerator
-- uid: MASES.KNet.Streams.State.CommonIterator`1.GetEnumerator
+  fullName: MASES.KNet.Streams.State.CommonIterator<TIterator, TIteratorType, TNativeIterator>.GetAsyncEnumerator
+  fullName.vb: MASES.KNet.Streams.State.CommonIterator(Of TIterator, TIteratorType, TNativeIterator).GetAsyncEnumerator
+  nameWithType: CommonIterator<TIterator, TIteratorType, TNativeIterator>.GetAsyncEnumerator
+  nameWithType.vb: CommonIterator(Of TIterator, TIteratorType, TNativeIterator).GetAsyncEnumerator
+- uid: MASES.KNet.Streams.State.CommonIterator`3.GetEnumerator
   name: GetEnumerator()
-  href: api/MASES.KNet.Streams.State.CommonIterator-1.html#MASES_KNet_Streams_State_CommonIterator_1_GetEnumerator
-  commentId: M:MASES.KNet.Streams.State.CommonIterator`1.GetEnumerator
-  fullName: MASES.KNet.Streams.State.CommonIterator<TIteratorType>.GetEnumerator()
-  fullName.vb: MASES.KNet.Streams.State.CommonIterator(Of TIteratorType).GetEnumerator()
-  nameWithType: CommonIterator<TIteratorType>.GetEnumerator()
-  nameWithType.vb: CommonIterator(Of TIteratorType).GetEnumerator()
-- uid: MASES.KNet.Streams.State.CommonIterator`1.GetEnumerator(System.Boolean,System.Boolean,System.Threading.CancellationToken)
+  href: api/MASES.KNet.Streams.State.CommonIterator-3.html#MASES_KNet_Streams_State_CommonIterator_3_GetEnumerator
+  commentId: M:MASES.KNet.Streams.State.CommonIterator`3.GetEnumerator
+  fullName: MASES.KNet.Streams.State.CommonIterator<TIterator, TIteratorType, TNativeIterator>.GetEnumerator()
+  fullName.vb: MASES.KNet.Streams.State.CommonIterator(Of TIterator, TIteratorType, TNativeIterator).GetEnumerator()
+  nameWithType: CommonIterator<TIterator, TIteratorType, TNativeIterator>.GetEnumerator()
+  nameWithType.vb: CommonIterator(Of TIterator, TIteratorType, TNativeIterator).GetEnumerator()
+- uid: MASES.KNet.Streams.State.CommonIterator`3.GetEnumerator(System.Boolean,System.Boolean,System.Threading.CancellationToken)
   name: GetEnumerator(bool, bool, CancellationToken)
-  href: api/MASES.KNet.Streams.State.CommonIterator-1.html#MASES_KNet_Streams_State_CommonIterator_1_GetEnumerator_System_Boolean_System_Boolean_System_Threading_CancellationToken_
-  commentId: M:MASES.KNet.Streams.State.CommonIterator`1.GetEnumerator(System.Boolean,System.Boolean,System.Threading.CancellationToken)
+  href: api/MASES.KNet.Streams.State.CommonIterator-3.html#MASES_KNet_Streams_State_CommonIterator_3_GetEnumerator_System_Boolean_System_Boolean_System_Threading_CancellationToken_
+  commentId: M:MASES.KNet.Streams.State.CommonIterator`3.GetEnumerator(System.Boolean,System.Boolean,System.Threading.CancellationToken)
   name.vb: GetEnumerator(Boolean, Boolean, CancellationToken)
-  fullName: MASES.KNet.Streams.State.CommonIterator<TIteratorType>.GetEnumerator(bool, bool, System.Threading.CancellationToken)
-  fullName.vb: MASES.KNet.Streams.State.CommonIterator(Of TIteratorType).GetEnumerator(Boolean, Boolean, System.Threading.CancellationToken)
-  nameWithType: CommonIterator<TIteratorType>.GetEnumerator(bool, bool, CancellationToken)
-  nameWithType.vb: CommonIterator(Of TIteratorType).GetEnumerator(Boolean, Boolean, CancellationToken)
-- uid: MASES.KNet.Streams.State.CommonIterator`1.GetEnumerator*
+  fullName: MASES.KNet.Streams.State.CommonIterator<TIterator, TIteratorType, TNativeIterator>.GetEnumerator(bool, bool, System.Threading.CancellationToken)
+  fullName.vb: MASES.KNet.Streams.State.CommonIterator(Of TIterator, TIteratorType, TNativeIterator).GetEnumerator(Boolean, Boolean, System.Threading.CancellationToken)
+  nameWithType: CommonIterator<TIterator, TIteratorType, TNativeIterator>.GetEnumerator(bool, bool, CancellationToken)
+  nameWithType.vb: CommonIterator(Of TIterator, TIteratorType, TNativeIterator).GetEnumerator(Boolean, Boolean, CancellationToken)
+- uid: MASES.KNet.Streams.State.CommonIterator`3.GetEnumerator*
   name: GetEnumerator
-  href: api/MASES.KNet.Streams.State.CommonIterator-1.html#MASES_KNet_Streams_State_CommonIterator_1_GetEnumerator_
-  commentId: Overload:MASES.KNet.Streams.State.CommonIterator`1.GetEnumerator
+  href: api/MASES.KNet.Streams.State.CommonIterator-3.html#MASES_KNet_Streams_State_CommonIterator_3_GetEnumerator_
+  commentId: Overload:MASES.KNet.Streams.State.CommonIterator`3.GetEnumerator
   isSpec: "True"
-  fullName: MASES.KNet.Streams.State.CommonIterator<TIteratorType>.GetEnumerator
-  fullName.vb: MASES.KNet.Streams.State.CommonIterator(Of TIteratorType).GetEnumerator
-  nameWithType: CommonIterator<TIteratorType>.GetEnumerator
-  nameWithType.vb: CommonIterator(Of TIteratorType).GetEnumerator
-- uid: MASES.KNet.Streams.State.CommonIterator`1.ToIEnumerator(System.Boolean)
+  fullName: MASES.KNet.Streams.State.CommonIterator<TIterator, TIteratorType, TNativeIterator>.GetEnumerator
+  fullName.vb: MASES.KNet.Streams.State.CommonIterator(Of TIterator, TIteratorType, TNativeIterator).GetEnumerator
+  nameWithType: CommonIterator<TIterator, TIteratorType, TNativeIterator>.GetEnumerator
+  nameWithType.vb: CommonIterator(Of TIterator, TIteratorType, TNativeIterator).GetEnumerator
+- uid: MASES.KNet.Streams.State.CommonIterator`3.InnerReference
+  name: InnerReference
+  href: api/MASES.KNet.Streams.State.CommonIterator-3.html#MASES_KNet_Streams_State_CommonIterator_3_InnerReference
+  commentId: P:MASES.KNet.Streams.State.CommonIterator`3.InnerReference
+  fullName: MASES.KNet.Streams.State.CommonIterator<TIterator, TIteratorType, TNativeIterator>.InnerReference
+  fullName.vb: MASES.KNet.Streams.State.CommonIterator(Of TIterator, TIteratorType, TNativeIterator).InnerReference
+  nameWithType: CommonIterator<TIterator, TIteratorType, TNativeIterator>.InnerReference
+  nameWithType.vb: CommonIterator(Of TIterator, TIteratorType, TNativeIterator).InnerReference
+- uid: MASES.KNet.Streams.State.CommonIterator`3.InnerReference*
+  name: InnerReference
+  href: api/MASES.KNet.Streams.State.CommonIterator-3.html#MASES_KNet_Streams_State_CommonIterator_3_InnerReference_
+  commentId: Overload:MASES.KNet.Streams.State.CommonIterator`3.InnerReference
+  isSpec: "True"
+  fullName: MASES.KNet.Streams.State.CommonIterator<TIterator, TIteratorType, TNativeIterator>.InnerReference
+  fullName.vb: MASES.KNet.Streams.State.CommonIterator(Of TIterator, TIteratorType, TNativeIterator).InnerReference
+  nameWithType: CommonIterator<TIterator, TIteratorType, TNativeIterator>.InnerReference
+  nameWithType.vb: CommonIterator(Of TIterator, TIteratorType, TNativeIterator).InnerReference
+- uid: MASES.KNet.Streams.State.CommonIterator`3.ObjectPool
+  name: ObjectPool
+  href: api/MASES.KNet.Streams.State.CommonIterator-3.html#MASES_KNet_Streams_State_CommonIterator_3_ObjectPool
+  commentId: F:MASES.KNet.Streams.State.CommonIterator`3.ObjectPool
+  fullName: MASES.KNet.Streams.State.CommonIterator<TIterator, TIteratorType, TNativeIterator>.ObjectPool
+  fullName.vb: MASES.KNet.Streams.State.CommonIterator(Of TIterator, TIteratorType, TNativeIterator).ObjectPool
+  nameWithType: CommonIterator<TIterator, TIteratorType, TNativeIterator>.ObjectPool
+  nameWithType.vb: CommonIterator(Of TIterator, TIteratorType, TNativeIterator).ObjectPool
+- uid: MASES.KNet.Streams.State.CommonIterator`3.Setup(MASES.KNet.Serialization.IGenericSerDesFactory,`2,System.Boolean)
+  name: Setup(IGenericSerDesFactory, TNativeIterator, bool)
+  href: api/MASES.KNet.Streams.State.CommonIterator-3.html#MASES_KNet_Streams_State_CommonIterator_3_Setup_MASES_KNet_Serialization_IGenericSerDesFactory__2_System_Boolean_
+  commentId: M:MASES.KNet.Streams.State.CommonIterator`3.Setup(MASES.KNet.Serialization.IGenericSerDesFactory,`2,System.Boolean)
+  name.vb: Setup(IGenericSerDesFactory, TNativeIterator, Boolean)
+  fullName: MASES.KNet.Streams.State.CommonIterator<TIterator, TIteratorType, TNativeIterator>.Setup(MASES.KNet.Serialization.IGenericSerDesFactory, TNativeIterator, bool)
+  fullName.vb: MASES.KNet.Streams.State.CommonIterator(Of TIterator, TIteratorType, TNativeIterator).Setup(MASES.KNet.Serialization.IGenericSerDesFactory, TNativeIterator, Boolean)
+  nameWithType: CommonIterator<TIterator, TIteratorType, TNativeIterator>.Setup(IGenericSerDesFactory, TNativeIterator, bool)
+  nameWithType.vb: CommonIterator(Of TIterator, TIteratorType, TNativeIterator).Setup(IGenericSerDesFactory, TNativeIterator, Boolean)
+- uid: MASES.KNet.Streams.State.CommonIterator`3.Setup*
+  name: Setup
+  href: api/MASES.KNet.Streams.State.CommonIterator-3.html#MASES_KNet_Streams_State_CommonIterator_3_Setup_
+  commentId: Overload:MASES.KNet.Streams.State.CommonIterator`3.Setup
+  isSpec: "True"
+  fullName: MASES.KNet.Streams.State.CommonIterator<TIterator, TIteratorType, TNativeIterator>.Setup
+  fullName.vb: MASES.KNet.Streams.State.CommonIterator(Of TIterator, TIteratorType, TNativeIterator).Setup
+  nameWithType: CommonIterator<TIterator, TIteratorType, TNativeIterator>.Setup
+  nameWithType.vb: CommonIterator(Of TIterator, TIteratorType, TNativeIterator).Setup
+- uid: MASES.KNet.Streams.State.CommonIterator`3.ToIEnumerator(System.Boolean)
   name: ToIEnumerator(bool)
-  href: api/MASES.KNet.Streams.State.CommonIterator-1.html#MASES_KNet_Streams_State_CommonIterator_1_ToIEnumerator_System_Boolean_
-  commentId: M:MASES.KNet.Streams.State.CommonIterator`1.ToIEnumerator(System.Boolean)
+  href: api/MASES.KNet.Streams.State.CommonIterator-3.html#MASES_KNet_Streams_State_CommonIterator_3_ToIEnumerator_System_Boolean_
+  commentId: M:MASES.KNet.Streams.State.CommonIterator`3.ToIEnumerator(System.Boolean)
   name.vb: ToIEnumerator(Boolean)
-  fullName: MASES.KNet.Streams.State.CommonIterator<TIteratorType>.ToIEnumerator(bool)
-  fullName.vb: MASES.KNet.Streams.State.CommonIterator(Of TIteratorType).ToIEnumerator(Boolean)
-  nameWithType: CommonIterator<TIteratorType>.ToIEnumerator(bool)
-  nameWithType.vb: CommonIterator(Of TIteratorType).ToIEnumerator(Boolean)
-- uid: MASES.KNet.Streams.State.CommonIterator`1.ToIEnumerator*
+  fullName: MASES.KNet.Streams.State.CommonIterator<TIterator, TIteratorType, TNativeIterator>.ToIEnumerator(bool)
+  fullName.vb: MASES.KNet.Streams.State.CommonIterator(Of TIterator, TIteratorType, TNativeIterator).ToIEnumerator(Boolean)
+  nameWithType: CommonIterator<TIterator, TIteratorType, TNativeIterator>.ToIEnumerator(bool)
+  nameWithType.vb: CommonIterator(Of TIterator, TIteratorType, TNativeIterator).ToIEnumerator(Boolean)
+- uid: MASES.KNet.Streams.State.CommonIterator`3.ToIEnumerator*
   name: ToIEnumerator
-  href: api/MASES.KNet.Streams.State.CommonIterator-1.html#MASES_KNet_Streams_State_CommonIterator_1_ToIEnumerator_
-  commentId: Overload:MASES.KNet.Streams.State.CommonIterator`1.ToIEnumerator
+  href: api/MASES.KNet.Streams.State.CommonIterator-3.html#MASES_KNet_Streams_State_CommonIterator_3_ToIEnumerator_
+  commentId: Overload:MASES.KNet.Streams.State.CommonIterator`3.ToIEnumerator
   isSpec: "True"
-  fullName: MASES.KNet.Streams.State.CommonIterator<TIteratorType>.ToIEnumerator
-  fullName.vb: MASES.KNet.Streams.State.CommonIterator(Of TIteratorType).ToIEnumerator
-  nameWithType: CommonIterator<TIteratorType>.ToIEnumerator
-  nameWithType.vb: CommonIterator(Of TIteratorType).ToIEnumerator
-- uid: MASES.KNet.Streams.State.CommonIterator`1.UsePrefetch
+  fullName: MASES.KNet.Streams.State.CommonIterator<TIterator, TIteratorType, TNativeIterator>.ToIEnumerator
+  fullName.vb: MASES.KNet.Streams.State.CommonIterator(Of TIterator, TIteratorType, TNativeIterator).ToIEnumerator
+  nameWithType: CommonIterator<TIterator, TIteratorType, TNativeIterator>.ToIEnumerator
+  nameWithType.vb: CommonIterator(Of TIterator, TIteratorType, TNativeIterator).ToIEnumerator
+- uid: MASES.KNet.Streams.State.CommonIterator`3.UsePrefetch
   name: UsePrefetch
-  href: api/MASES.KNet.Streams.State.CommonIterator-1.html#MASES_KNet_Streams_State_CommonIterator_1_UsePrefetch
-  commentId: P:MASES.KNet.Streams.State.CommonIterator`1.UsePrefetch
-  fullName: MASES.KNet.Streams.State.CommonIterator<TIteratorType>.UsePrefetch
-  fullName.vb: MASES.KNet.Streams.State.CommonIterator(Of TIteratorType).UsePrefetch
-  nameWithType: CommonIterator<TIteratorType>.UsePrefetch
-  nameWithType.vb: CommonIterator(Of TIteratorType).UsePrefetch
-- uid: MASES.KNet.Streams.State.CommonIterator`1.UsePrefetch*
+  href: api/MASES.KNet.Streams.State.CommonIterator-3.html#MASES_KNet_Streams_State_CommonIterator_3_UsePrefetch
+  commentId: P:MASES.KNet.Streams.State.CommonIterator`3.UsePrefetch
+  fullName: MASES.KNet.Streams.State.CommonIterator<TIterator, TIteratorType, TNativeIterator>.UsePrefetch
+  fullName.vb: MASES.KNet.Streams.State.CommonIterator(Of TIterator, TIteratorType, TNativeIterator).UsePrefetch
+  nameWithType: CommonIterator<TIterator, TIteratorType, TNativeIterator>.UsePrefetch
+  nameWithType.vb: CommonIterator(Of TIterator, TIteratorType, TNativeIterator).UsePrefetch
+- uid: MASES.KNet.Streams.State.CommonIterator`3.UsePrefetch*
   name: UsePrefetch
-  href: api/MASES.KNet.Streams.State.CommonIterator-1.html#MASES_KNet_Streams_State_CommonIterator_1_UsePrefetch_
-  commentId: Overload:MASES.KNet.Streams.State.CommonIterator`1.UsePrefetch
+  href: api/MASES.KNet.Streams.State.CommonIterator-3.html#MASES_KNet_Streams_State_CommonIterator_3_UsePrefetch_
+  commentId: Overload:MASES.KNet.Streams.State.CommonIterator`3.UsePrefetch
   isSpec: "True"
-  fullName: MASES.KNet.Streams.State.CommonIterator<TIteratorType>.UsePrefetch
-  fullName.vb: MASES.KNet.Streams.State.CommonIterator(Of TIteratorType).UsePrefetch
-  nameWithType: CommonIterator<TIteratorType>.UsePrefetch
-  nameWithType.vb: CommonIterator(Of TIteratorType).UsePrefetch
+  fullName: MASES.KNet.Streams.State.CommonIterator<TIterator, TIteratorType, TNativeIterator>.UsePrefetch
+  fullName.vb: MASES.KNet.Streams.State.CommonIterator(Of TIterator, TIteratorType, TNativeIterator).UsePrefetch
+  nameWithType: CommonIterator<TIterator, TIteratorType, TNativeIterator>.UsePrefetch
+  nameWithType.vb: CommonIterator(Of TIterator, TIteratorType, TNativeIterator).UsePrefetch
+- uid: MASES.KNet.Streams.State.CommonIterator`3._disposed
+  name: _disposed
+  href: api/MASES.KNet.Streams.State.CommonIterator-3.html#MASES_KNet_Streams_State_CommonIterator_3__disposed
+  commentId: F:MASES.KNet.Streams.State.CommonIterator`3._disposed
+  fullName: MASES.KNet.Streams.State.CommonIterator<TIterator, TIteratorType, TNativeIterator>._disposed
+  fullName.vb: MASES.KNet.Streams.State.CommonIterator(Of TIterator, TIteratorType, TNativeIterator)._disposed
+  nameWithType: CommonIterator<TIterator, TIteratorType, TNativeIterator>._disposed
+  nameWithType.vb: CommonIterator(Of TIterator, TIteratorType, TNativeIterator)._disposed
 - uid: MASES.KNet.Streams.State.IManagedStore`1
   name: IManagedStore<TStore>
   href: api/MASES.KNet.Streams.State.IManagedStore-1.html
@@ -32738,23 +32692,6 @@ references:
   fullName.vb: MASES.KNet.Streams.State.KeyValueIterator(Of K, V, TJVMK, TJVMV).HasNext
   nameWithType: KeyValueIterator<K, V, TJVMK, TJVMV>.HasNext
   nameWithType.vb: KeyValueIterator(Of K, V, TJVMK, TJVMV).HasNext
-- uid: MASES.KNet.Streams.State.KeyValueIterator`4.InnerReference
-  name: InnerReference
-  href: api/MASES.KNet.Streams.State.KeyValueIterator-4.html#MASES_KNet_Streams_State_KeyValueIterator_4_InnerReference
-  commentId: P:MASES.KNet.Streams.State.KeyValueIterator`4.InnerReference
-  fullName: MASES.KNet.Streams.State.KeyValueIterator<K, V, TJVMK, TJVMV>.InnerReference
-  fullName.vb: MASES.KNet.Streams.State.KeyValueIterator(Of K, V, TJVMK, TJVMV).InnerReference
-  nameWithType: KeyValueIterator<K, V, TJVMK, TJVMV>.InnerReference
-  nameWithType.vb: KeyValueIterator(Of K, V, TJVMK, TJVMV).InnerReference
-- uid: MASES.KNet.Streams.State.KeyValueIterator`4.InnerReference*
-  name: InnerReference
-  href: api/MASES.KNet.Streams.State.KeyValueIterator-4.html#MASES_KNet_Streams_State_KeyValueIterator_4_InnerReference_
-  commentId: Overload:MASES.KNet.Streams.State.KeyValueIterator`4.InnerReference
-  isSpec: "True"
-  fullName: MASES.KNet.Streams.State.KeyValueIterator<K, V, TJVMK, TJVMV>.InnerReference
-  fullName.vb: MASES.KNet.Streams.State.KeyValueIterator(Of K, V, TJVMK, TJVMV).InnerReference
-  nameWithType: KeyValueIterator<K, V, TJVMK, TJVMV>.InnerReference
-  nameWithType.vb: KeyValueIterator(Of K, V, TJVMK, TJVMV).InnerReference
 - uid: MASES.KNet.Streams.State.KeyValueIterator`4.Next
   name: Next()
   href: api/MASES.KNet.Streams.State.KeyValueIterator-4.html#MASES_KNet_Streams_State_KeyValueIterator_4_Next
@@ -33593,23 +33530,6 @@ references:
   fullName.vb: MASES.KNet.Streams.State.TimestampedKeyValueIterator(Of K, V, TJVMK, TJVMV).HasNext
   nameWithType: TimestampedKeyValueIterator<K, V, TJVMK, TJVMV>.HasNext
   nameWithType.vb: TimestampedKeyValueIterator(Of K, V, TJVMK, TJVMV).HasNext
-- uid: MASES.KNet.Streams.State.TimestampedKeyValueIterator`4.InnerReference
-  name: InnerReference
-  href: api/MASES.KNet.Streams.State.TimestampedKeyValueIterator-4.html#MASES_KNet_Streams_State_TimestampedKeyValueIterator_4_InnerReference
-  commentId: P:MASES.KNet.Streams.State.TimestampedKeyValueIterator`4.InnerReference
-  fullName: MASES.KNet.Streams.State.TimestampedKeyValueIterator<K, V, TJVMK, TJVMV>.InnerReference
-  fullName.vb: MASES.KNet.Streams.State.TimestampedKeyValueIterator(Of K, V, TJVMK, TJVMV).InnerReference
-  nameWithType: TimestampedKeyValueIterator<K, V, TJVMK, TJVMV>.InnerReference
-  nameWithType.vb: TimestampedKeyValueIterator(Of K, V, TJVMK, TJVMV).InnerReference
-- uid: MASES.KNet.Streams.State.TimestampedKeyValueIterator`4.InnerReference*
-  name: InnerReference
-  href: api/MASES.KNet.Streams.State.TimestampedKeyValueIterator-4.html#MASES_KNet_Streams_State_TimestampedKeyValueIterator_4_InnerReference_
-  commentId: Overload:MASES.KNet.Streams.State.TimestampedKeyValueIterator`4.InnerReference
-  isSpec: "True"
-  fullName: MASES.KNet.Streams.State.TimestampedKeyValueIterator<K, V, TJVMK, TJVMV>.InnerReference
-  fullName.vb: MASES.KNet.Streams.State.TimestampedKeyValueIterator(Of K, V, TJVMK, TJVMV).InnerReference
-  nameWithType: TimestampedKeyValueIterator<K, V, TJVMK, TJVMV>.InnerReference
-  nameWithType.vb: TimestampedKeyValueIterator(Of K, V, TJVMK, TJVMV).InnerReference
 - uid: MASES.KNet.Streams.State.TimestampedKeyValueIterator`4.Next
   name: Next()
   href: api/MASES.KNet.Streams.State.TimestampedKeyValueIterator-4.html#MASES_KNet_Streams_State_TimestampedKeyValueIterator_4_Next
@@ -33825,6 +33745,23 @@ references:
   fullName.vb: MASES.KNet.Streams.State.TimestampedWindowStoreIterator(Of V, TJVMV).Close
   nameWithType: TimestampedWindowStoreIterator<V, TJVMV>.Close
   nameWithType.vb: TimestampedWindowStoreIterator(Of V, TJVMV).Close
+- uid: MASES.KNet.Streams.State.TimestampedWindowStoreIterator`2.Dispose
+  name: Dispose()
+  href: api/MASES.KNet.Streams.State.TimestampedWindowStoreIterator-2.html#MASES_KNet_Streams_State_TimestampedWindowStoreIterator_2_Dispose
+  commentId: M:MASES.KNet.Streams.State.TimestampedWindowStoreIterator`2.Dispose
+  fullName: MASES.KNet.Streams.State.TimestampedWindowStoreIterator<V, TJVMV>.Dispose()
+  fullName.vb: MASES.KNet.Streams.State.TimestampedWindowStoreIterator(Of V, TJVMV).Dispose()
+  nameWithType: TimestampedWindowStoreIterator<V, TJVMV>.Dispose()
+  nameWithType.vb: TimestampedWindowStoreIterator(Of V, TJVMV).Dispose()
+- uid: MASES.KNet.Streams.State.TimestampedWindowStoreIterator`2.Dispose*
+  name: Dispose
+  href: api/MASES.KNet.Streams.State.TimestampedWindowStoreIterator-2.html#MASES_KNet_Streams_State_TimestampedWindowStoreIterator_2_Dispose_
+  commentId: Overload:MASES.KNet.Streams.State.TimestampedWindowStoreIterator`2.Dispose
+  isSpec: "True"
+  fullName: MASES.KNet.Streams.State.TimestampedWindowStoreIterator<V, TJVMV>.Dispose
+  fullName.vb: MASES.KNet.Streams.State.TimestampedWindowStoreIterator(Of V, TJVMV).Dispose
+  nameWithType: TimestampedWindowStoreIterator<V, TJVMV>.Dispose
+  nameWithType.vb: TimestampedWindowStoreIterator(Of V, TJVMV).Dispose
 - uid: MASES.KNet.Streams.State.TimestampedWindowStoreIterator`2.op_Implicit(MASES.KNet.Streams.State.TimestampedWindowStoreIterator{`0,`1})~MASES.KNet.Streams.State.TimestampedKeyValueIterator{System.Int64,`0,Java.Lang.Long,`1}
   name: implicit operator TimestampedKeyValueIterator<long, V, Long, TJVMV>(TimestampedWindowStoreIterator<V, TJVMV>)
   href: api/MASES.KNet.Streams.State.TimestampedWindowStoreIterator-2.html#MASES_KNet_Streams_State_TimestampedWindowStoreIterator_2_op_Implicit_MASES_KNet_Streams_State_TimestampedWindowStoreIterator__0__1___MASES_KNet_Streams_State_TimestampedKeyValueIterator_System_Int64__0_Java_Lang_Long__1_
@@ -34068,23 +34005,6 @@ references:
   fullName.vb: MASES.KNet.Streams.State.TimestampedWindowedKeyValueIterator(Of K, V, TJVMK, TJVMV).HasNext
   nameWithType: TimestampedWindowedKeyValueIterator<K, V, TJVMK, TJVMV>.HasNext
   nameWithType.vb: TimestampedWindowedKeyValueIterator(Of K, V, TJVMK, TJVMV).HasNext
-- uid: MASES.KNet.Streams.State.TimestampedWindowedKeyValueIterator`4.InnerReference
-  name: InnerReference
-  href: api/MASES.KNet.Streams.State.TimestampedWindowedKeyValueIterator-4.html#MASES_KNet_Streams_State_TimestampedWindowedKeyValueIterator_4_InnerReference
-  commentId: P:MASES.KNet.Streams.State.TimestampedWindowedKeyValueIterator`4.InnerReference
-  fullName: MASES.KNet.Streams.State.TimestampedWindowedKeyValueIterator<K, V, TJVMK, TJVMV>.InnerReference
-  fullName.vb: MASES.KNet.Streams.State.TimestampedWindowedKeyValueIterator(Of K, V, TJVMK, TJVMV).InnerReference
-  nameWithType: TimestampedWindowedKeyValueIterator<K, V, TJVMK, TJVMV>.InnerReference
-  nameWithType.vb: TimestampedWindowedKeyValueIterator(Of K, V, TJVMK, TJVMV).InnerReference
-- uid: MASES.KNet.Streams.State.TimestampedWindowedKeyValueIterator`4.InnerReference*
-  name: InnerReference
-  href: api/MASES.KNet.Streams.State.TimestampedWindowedKeyValueIterator-4.html#MASES_KNet_Streams_State_TimestampedWindowedKeyValueIterator_4_InnerReference_
-  commentId: Overload:MASES.KNet.Streams.State.TimestampedWindowedKeyValueIterator`4.InnerReference
-  isSpec: "True"
-  fullName: MASES.KNet.Streams.State.TimestampedWindowedKeyValueIterator<K, V, TJVMK, TJVMV>.InnerReference
-  fullName.vb: MASES.KNet.Streams.State.TimestampedWindowedKeyValueIterator(Of K, V, TJVMK, TJVMV).InnerReference
-  nameWithType: TimestampedWindowedKeyValueIterator<K, V, TJVMK, TJVMV>.InnerReference
-  nameWithType.vb: TimestampedWindowedKeyValueIterator(Of K, V, TJVMK, TJVMV).InnerReference
 - uid: MASES.KNet.Streams.State.TimestampedWindowedKeyValueIterator`4.Next
   name: Next()
   href: api/MASES.KNet.Streams.State.TimestampedWindowedKeyValueIterator-4.html#MASES_KNet_Streams_State_TimestampedWindowedKeyValueIterator_4_Next
@@ -34145,23 +34065,6 @@ references:
   fullName.vb: MASES.KNet.Streams.State.ValueAndTimestamp(Of V, TJVMV)
   nameWithType: ValueAndTimestamp<V, TJVMV>
   nameWithType.vb: ValueAndTimestamp(Of V, TJVMV)
-- uid: MASES.KNet.Streams.State.ValueAndTimestamp`2.CheckDisposed
-  name: CheckDisposed()
-  href: api/MASES.KNet.Streams.State.ValueAndTimestamp-2.html#MASES_KNet_Streams_State_ValueAndTimestamp_2_CheckDisposed
-  commentId: M:MASES.KNet.Streams.State.ValueAndTimestamp`2.CheckDisposed
-  fullName: MASES.KNet.Streams.State.ValueAndTimestamp<V, TJVMV>.CheckDisposed()
-  fullName.vb: MASES.KNet.Streams.State.ValueAndTimestamp(Of V, TJVMV).CheckDisposed()
-  nameWithType: ValueAndTimestamp<V, TJVMV>.CheckDisposed()
-  nameWithType.vb: ValueAndTimestamp(Of V, TJVMV).CheckDisposed()
-- uid: MASES.KNet.Streams.State.ValueAndTimestamp`2.CheckDisposed*
-  name: CheckDisposed
-  href: api/MASES.KNet.Streams.State.ValueAndTimestamp-2.html#MASES_KNet_Streams_State_ValueAndTimestamp_2_CheckDisposed_
-  commentId: Overload:MASES.KNet.Streams.State.ValueAndTimestamp`2.CheckDisposed
-  isSpec: "True"
-  fullName: MASES.KNet.Streams.State.ValueAndTimestamp<V, TJVMV>.CheckDisposed
-  fullName.vb: MASES.KNet.Streams.State.ValueAndTimestamp(Of V, TJVMV).CheckDisposed
-  nameWithType: ValueAndTimestamp<V, TJVMV>.CheckDisposed
-  nameWithType.vb: ValueAndTimestamp(Of V, TJVMV).CheckDisposed
 - uid: MASES.KNet.Streams.State.ValueAndTimestamp`2.DateTime
   name: DateTime
   href: api/MASES.KNet.Streams.State.ValueAndTimestamp-2.html#MASES_KNet_Streams_State_ValueAndTimestamp_2_DateTime
@@ -34187,15 +34090,6 @@ references:
   fullName.vb: MASES.KNet.Streams.State.ValueAndTimestamp(Of V, TJVMV).Dispose()
   nameWithType: ValueAndTimestamp<V, TJVMV>.Dispose()
   nameWithType.vb: ValueAndTimestamp(Of V, TJVMV).Dispose()
-- uid: MASES.KNet.Streams.State.ValueAndTimestamp`2.Dispose(System.Boolean)
-  name: Dispose(bool)
-  href: api/MASES.KNet.Streams.State.ValueAndTimestamp-2.html#MASES_KNet_Streams_State_ValueAndTimestamp_2_Dispose_System_Boolean_
-  commentId: M:MASES.KNet.Streams.State.ValueAndTimestamp`2.Dispose(System.Boolean)
-  name.vb: Dispose(Boolean)
-  fullName: MASES.KNet.Streams.State.ValueAndTimestamp<V, TJVMV>.Dispose(bool)
-  fullName.vb: MASES.KNet.Streams.State.ValueAndTimestamp(Of V, TJVMV).Dispose(Boolean)
-  nameWithType: ValueAndTimestamp<V, TJVMV>.Dispose(bool)
-  nameWithType.vb: ValueAndTimestamp(Of V, TJVMV).Dispose(Boolean)
 - uid: MASES.KNet.Streams.State.ValueAndTimestamp`2.Dispose*
   name: Dispose
   href: api/MASES.KNet.Streams.State.ValueAndTimestamp-2.html#MASES_KNet_Streams_State_ValueAndTimestamp_2_Dispose_
@@ -34282,6 +34176,23 @@ references:
   fullName.vb: MASES.KNet.Streams.State.WindowStoreIterator(Of V, TJVMV).Close
   nameWithType: WindowStoreIterator<V, TJVMV>.Close
   nameWithType.vb: WindowStoreIterator(Of V, TJVMV).Close
+- uid: MASES.KNet.Streams.State.WindowStoreIterator`2.Dispose
+  name: Dispose()
+  href: api/MASES.KNet.Streams.State.WindowStoreIterator-2.html#MASES_KNet_Streams_State_WindowStoreIterator_2_Dispose
+  commentId: M:MASES.KNet.Streams.State.WindowStoreIterator`2.Dispose
+  fullName: MASES.KNet.Streams.State.WindowStoreIterator<V, TJVMV>.Dispose()
+  fullName.vb: MASES.KNet.Streams.State.WindowStoreIterator(Of V, TJVMV).Dispose()
+  nameWithType: WindowStoreIterator<V, TJVMV>.Dispose()
+  nameWithType.vb: WindowStoreIterator(Of V, TJVMV).Dispose()
+- uid: MASES.KNet.Streams.State.WindowStoreIterator`2.Dispose*
+  name: Dispose
+  href: api/MASES.KNet.Streams.State.WindowStoreIterator-2.html#MASES_KNet_Streams_State_WindowStoreIterator_2_Dispose_
+  commentId: Overload:MASES.KNet.Streams.State.WindowStoreIterator`2.Dispose
+  isSpec: "True"
+  fullName: MASES.KNet.Streams.State.WindowStoreIterator<V, TJVMV>.Dispose
+  fullName.vb: MASES.KNet.Streams.State.WindowStoreIterator(Of V, TJVMV).Dispose
+  nameWithType: WindowStoreIterator<V, TJVMV>.Dispose
+  nameWithType.vb: WindowStoreIterator(Of V, TJVMV).Dispose
 - uid: MASES.KNet.Streams.State.WindowStoreIterator`2.op_Implicit(MASES.KNet.Streams.State.WindowStoreIterator{`0,`1})~MASES.KNet.Streams.State.KeyValueIterator{System.Int64,`0,Java.Lang.Long,`1}
   name: implicit operator KeyValueIterator<long, V, Long, TJVMV>(WindowStoreIterator<V, TJVMV>)
   href: api/MASES.KNet.Streams.State.WindowStoreIterator-2.html#MASES_KNet_Streams_State_WindowStoreIterator_2_op_Implicit_MASES_KNet_Streams_State_WindowStoreIterator__0__1___MASES_KNet_Streams_State_KeyValueIterator_System_Int64__0_Java_Lang_Long__1_
@@ -34380,23 +34291,6 @@ references:
   fullName.vb: MASES.KNet.Streams.State.WindowedKeyValueIterator(Of K, V, TJVMK, TJVMV).HasNext
   nameWithType: WindowedKeyValueIterator<K, V, TJVMK, TJVMV>.HasNext
   nameWithType.vb: WindowedKeyValueIterator(Of K, V, TJVMK, TJVMV).HasNext
-- uid: MASES.KNet.Streams.State.WindowedKeyValueIterator`4.InnerReference
-  name: InnerReference
-  href: api/MASES.KNet.Streams.State.WindowedKeyValueIterator-4.html#MASES_KNet_Streams_State_WindowedKeyValueIterator_4_InnerReference
-  commentId: P:MASES.KNet.Streams.State.WindowedKeyValueIterator`4.InnerReference
-  fullName: MASES.KNet.Streams.State.WindowedKeyValueIterator<K, V, TJVMK, TJVMV>.InnerReference
-  fullName.vb: MASES.KNet.Streams.State.WindowedKeyValueIterator(Of K, V, TJVMK, TJVMV).InnerReference
-  nameWithType: WindowedKeyValueIterator<K, V, TJVMK, TJVMV>.InnerReference
-  nameWithType.vb: WindowedKeyValueIterator(Of K, V, TJVMK, TJVMV).InnerReference
-- uid: MASES.KNet.Streams.State.WindowedKeyValueIterator`4.InnerReference*
-  name: InnerReference
-  href: api/MASES.KNet.Streams.State.WindowedKeyValueIterator-4.html#MASES_KNet_Streams_State_WindowedKeyValueIterator_4_InnerReference_
-  commentId: Overload:MASES.KNet.Streams.State.WindowedKeyValueIterator`4.InnerReference
-  isSpec: "True"
-  fullName: MASES.KNet.Streams.State.WindowedKeyValueIterator<K, V, TJVMK, TJVMV>.InnerReference
-  fullName.vb: MASES.KNet.Streams.State.WindowedKeyValueIterator(Of K, V, TJVMK, TJVMV).InnerReference
-  nameWithType: WindowedKeyValueIterator<K, V, TJVMK, TJVMV>.InnerReference
-  nameWithType.vb: WindowedKeyValueIterator(Of K, V, TJVMK, TJVMV).InnerReference
 - uid: MASES.KNet.Streams.State.WindowedKeyValueIterator`4.Next
   name: Next()
   href: api/MASES.KNet.Streams.State.WindowedKeyValueIterator-4.html#MASES_KNet_Streams_State_WindowedKeyValueIterator_4_Next
