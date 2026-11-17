@@ -28,7 +28,7 @@ namespace MASES.KNet.Streams.State
     /// <typeparam name="K">The key type</typeparam>
     /// <typeparam name="AGG">The value type</typeparam>
     /// <typeparam name="TJVMK">The JVM type of <typeparamref name="K"/></typeparam>
-    /// <typeparam name="TJVMAGG">The JVM type of <typeparamref name="V"/></typeparam>
+    /// <typeparam name="TJVMAGG">The JVM type of <typeparamref name="AGG"/></typeparam>
     public class SessionStoreWithHeaders<K, AGG, TJVMK, TJVMAGG> : ManagedStore<Org.Apache.Kafka.Streams.State.ReadOnlySessionStore<TJVMK, Org.Apache.Kafka.Streams.State.AggregationWithHeaders<TJVMAGG>>>
     {
         /// <summary>
@@ -47,7 +47,7 @@ namespace MASES.KNet.Streams.State
             using var disposable0 = r0 as IDisposable;
             using var disposable1 = r1 as IDisposable;
 
-            return new AggregationWithHeadersIterator<K, AGG, TJVMK, TJVMAGG>(factory, Store.Fetch(r0, r1));
+            return AggregationWithHeadersIterator<K, AGG, TJVMK, TJVMAGG>.Create(factory, Store.Fetch(r0, r1));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/state/ReadOnlySessionStore.html#fetch(java.lang.Object)"/>
@@ -62,7 +62,7 @@ namespace MASES.KNet.Streams.State
             var r0 = _keySerDes.Serialize((Java.Lang.String)null, arg0);
             using var disposable0 = r0 as IDisposable;
 
-            return new AggregationWithHeadersIterator<K, AGG, TJVMK, TJVMAGG>(factory, Store.Fetch(r0));
+            return AggregationWithHeadersIterator<K, AGG, TJVMK, TJVMAGG>.Create(factory, Store.Fetch(r0));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/state/ReadOnlySessionStore.html#fetchSession(java.lang.Object,java.time.Instant,java.time.Instant)"/>
@@ -82,7 +82,7 @@ namespace MASES.KNet.Streams.State
             using var disposable0 = r0 as IDisposable;
             using var disposable1 = agg as IDisposable;
 
-            return new AggregationWithHeaders<AGG, TJVMAGG>(Factory, agg);
+            return AggregationWithHeaders<AGG, TJVMAGG>.Create(Factory, agg);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/state/ReadOnlySessionStore.html#fetchSession(java.lang.Object,long,long)"/>
@@ -102,7 +102,7 @@ namespace MASES.KNet.Streams.State
             using var disposable0 = r0 as IDisposable;
             using var disposable1 = agg as IDisposable;
 
-            return new AggregationWithHeaders<AGG, TJVMAGG>(Factory, agg);
+            return AggregationWithHeaders<AGG, TJVMAGG>.Create(Factory, agg);
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/state/ReadOnlySessionStore.html#backwardFetch(java.lang.Object,java.lang.Object)"/>
@@ -120,7 +120,7 @@ namespace MASES.KNet.Streams.State
             using var disposable0 = r0 as IDisposable;
             using var disposable1 = r1 as IDisposable;
 
-            return new AggregationWithHeadersIterator<K, AGG, TJVMK, TJVMAGG>(factory, Store.BackwardFetch(r0, r1));
+            return AggregationWithHeadersIterator<K, AGG, TJVMK, TJVMAGG>.Create(factory, Store.BackwardFetch(r0, r1));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/state/ReadOnlySessionStore.html#backwardFetch(java.lang.Object)"/>
@@ -135,7 +135,7 @@ namespace MASES.KNet.Streams.State
             var r0 = _keySerDes.Serialize((Java.Lang.String)null, arg0);
             using var disposable0 = r0 as IDisposable;
 
-            return new AggregationWithHeadersIterator<K, AGG, TJVMK, TJVMAGG>(factory, Store.BackwardFetch(r0));
+            return AggregationWithHeadersIterator<K, AGG, TJVMK, TJVMAGG>.Create(factory, Store.BackwardFetch(r0));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/state/ReadOnlySessionStore.html#backwardFindSessions(java.lang.Object,java.time.Instant,java.time.Instant)"/>
@@ -152,7 +152,7 @@ namespace MASES.KNet.Streams.State
             var r0 = _keySerDes.Serialize((Java.Lang.String)null, arg0);
             using var disposable0 = r0 as IDisposable;
 
-            return new AggregationWithHeadersIterator<K, AGG, TJVMK, TJVMAGG>(factory, Store.BackwardFindSessions(r0, arg1, arg2));
+            return AggregationWithHeadersIterator<K, AGG, TJVMK, TJVMAGG>.Create(factory, Store.BackwardFindSessions(r0, arg1, arg2));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/state/ReadOnlySessionStore.html#backwardFindSessions(java.lang.Object,java.lang.Object,java.time.Instant,java.time.Instant)"/>
@@ -172,7 +172,7 @@ namespace MASES.KNet.Streams.State
             using var disposable0 = r0 as IDisposable;
             using var disposable1 = r1 as IDisposable;
 
-            return new AggregationWithHeadersIterator<K, AGG, TJVMK, TJVMAGG>(factory, Store.BackwardFindSessions(r0, r1, arg2, arg3));
+            return AggregationWithHeadersIterator<K, AGG, TJVMK, TJVMAGG>.Create(factory, Store.BackwardFindSessions(r0, r1, arg2, arg3));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/state/ReadOnlySessionStore.html#backwardFindSessions(java.lang.Object,java.lang.Object,long,long)"/>
@@ -192,7 +192,7 @@ namespace MASES.KNet.Streams.State
             using var disposable0 = r0 as IDisposable;
             using var disposable1 = r1 as IDisposable;
 
-            return new AggregationWithHeadersIterator<K, AGG, TJVMK, TJVMAGG>(factory, Store.BackwardFindSessions(r0, r1, arg2, arg3));
+            return AggregationWithHeadersIterator<K, AGG, TJVMK, TJVMAGG>.Create(factory, Store.BackwardFindSessions(r0, r1, arg2, arg3));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/state/ReadOnlySessionStore.html#backwardFindSessions(java.lang.Object,long,long)"/>
@@ -209,7 +209,7 @@ namespace MASES.KNet.Streams.State
             var r0 = _keySerDes.Serialize((Java.Lang.String)null, arg0);
             using var disposable0 = r0 as IDisposable;
 
-            return new AggregationWithHeadersIterator<K, AGG, TJVMK, TJVMAGG>(factory, Store.BackwardFindSessions(r0, arg1, arg2));
+            return AggregationWithHeadersIterator<K, AGG, TJVMK, TJVMAGG>.Create(factory, Store.BackwardFindSessions(r0, arg1, arg2));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/state/ReadOnlySessionStore.html#findSessions(java.lang.Object,java.time.Instant,java.time.Instant)"/>
@@ -226,7 +226,7 @@ namespace MASES.KNet.Streams.State
             var r0 = _keySerDes.Serialize((Java.Lang.String)null, arg0);
             using var disposable0 = r0 as IDisposable;
 
-            return new AggregationWithHeadersIterator<K, AGG, TJVMK, TJVMAGG>(factory, Store.BackwardFindSessions(r0, arg1, arg2));
+            return AggregationWithHeadersIterator<K, AGG, TJVMK, TJVMAGG>.Create(factory, Store.BackwardFindSessions(r0, arg1, arg2));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/state/ReadOnlySessionStore.html#findSessions(java.lang.Object,java.lang.Object,java.time.Instant,java.time.Instant)"/>
@@ -246,7 +246,7 @@ namespace MASES.KNet.Streams.State
             using var disposable0 = r0 as IDisposable;
             using var disposable1 = r1 as IDisposable;
 
-            return new AggregationWithHeadersIterator<K, AGG, TJVMK, TJVMAGG>(factory, Store.FindSessions(r0, r1, arg2, arg3));
+            return AggregationWithHeadersIterator<K, AGG, TJVMK, TJVMAGG>.Create(factory, Store.FindSessions(r0, r1, arg2, arg3));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/state/ReadOnlySessionStore.html#findSessions(java.lang.Object,java.lang.Object,long,long)"/>
@@ -266,7 +266,7 @@ namespace MASES.KNet.Streams.State
             using var disposable0 = r0 as IDisposable;
             using var disposable1 = r1 as IDisposable;
 
-            return new AggregationWithHeadersIterator<K, AGG, TJVMK, TJVMAGG>(factory, Store.FindSessions(r0, r1, arg2, arg3));
+            return AggregationWithHeadersIterator<K, AGG, TJVMK, TJVMAGG>.Create(factory, Store.FindSessions(r0, r1, arg2, arg3));
         }
         /// <summary>
         /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/state/ReadOnlySessionStore.html#findSessions(java.lang.Object,long,long)"/>
@@ -283,7 +283,7 @@ namespace MASES.KNet.Streams.State
             var r0 = _keySerDes.Serialize((Java.Lang.String)null, arg0);
             using var disposable0 = r0 as IDisposable;
 
-            return new AggregationWithHeadersIterator<K, AGG, TJVMK, TJVMAGG>(factory, Store.FindSessions(r0, arg1, arg2));
+            return AggregationWithHeadersIterator<K, AGG, TJVMK, TJVMAGG>.Create(factory, Store.FindSessions(r0, arg1, arg2));
         }
     }
 

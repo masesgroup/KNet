@@ -12,6 +12,23 @@ on:
         required: true
         default: false
         type: boolean
+      AvoidParallelBuild:
+        description: 'Avoid parallel build'
+        required: false
+        default: false
+        type: boolean
+      TraceLevel:
+        description: 'Trace level to report'
+        required: false
+        default: '1'
+        type: choice
+        options:
+          - "0"
+          - "1"
+          - "2"
+          - "3"
+          - "4"
+          - "5"
       UseLastRepositoryBuild:
         description: 'Use latest NuGet packages from JNet'
         required: true
@@ -40,8 +57,8 @@ jobs:
       DOTNET_CreateDumpDiagnostics: 1
       DOTNET_CreateDumpVerboseDiagnostics: 1
       DOTNET_EnableCrashReport: 1
-      JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_6_9 }}
-      JNet_Version: 2.6.9
+      JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_6_10 }}
+      JNet_Version: 2.6.10
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -58,9 +75,7 @@ jobs:
 
       - uses: actions/setup-dotnet@v6
         with:
-          dotnet-version: |
-            9.x
-            10.x
+          dotnet-version: '11.x'
 
       - uses: actions/checkout@v7
         if: ${{ inputs.UseLatestJNetReflectorSource == true }}
@@ -140,12 +155,18 @@ jobs:
         if: ${{ inputs.UseLastRepositoryBuild == false && inputs.UseLatestJNetReflectorSource == false }}
         run: dotnet tool update --version ${{ env.JNet_Version }} -g MASES.JNetReflector
 
+      - name: Set avoid parallel build
+        if: ${{ inputs.AvoidParallelBuild == true }}
+        run: |
+          echo "AVOID_PARALLEL_BUILD=$(echo -AvoidParallelBuild)" >> $GITHUB_ENV
+        shell: bash
+
       - name: Build classes with unpublished JNetReflector
         if: ${{ inputs.UseLatestJNetReflectorSource == true }}
         shell: cmd
         run: |
-          cd JNet\binReflector\net8.0
-          MASES.JNetReflector.exe -TraceLevel 1 -TraceTo %GITHUB_WORKSPACE%\JNetReflector.txt -CopyrightFile %GITHUB_WORKSPACE%\src\copyright.txt -OriginRootPath %GITHUB_WORKSPACE%\jars -DestinationRootPath %GITHUB_WORKSPACE%\src\ -ConfigurationFile %GITHUB_WORKSPACE%\src\configuration.json
+          cd JNet\binReflector\net10.0
+          MASES.JNetReflector.exe ${{ env.AVOID_PARALLEL_BUILD }} -TraceLevel ${{ inputs.TraceLevel }} -TraceTo %GITHUB_WORKSPACE%\JNetReflector.txt -CopyrightFile %GITHUB_WORKSPACE%\src\copyright.txt -OriginRootPath %GITHUB_WORKSPACE%\jars -DestinationRootPath %GITHUB_WORKSPACE%\src\ -ConfigurationFile %GITHUB_WORKSPACE%\src\configuration.json
 
       - name: Disable CET for dotnet process
         if: ${{ inputs.UseLatestJNetReflectorSource == false }}
@@ -156,7 +177,7 @@ jobs:
       - name: Build classes with latest published version of JNetReflector
         if: ${{ inputs.UseLatestJNetReflectorSource == false }}
         shell: cmd
-        run: jnetreflector -TraceLevel 1 -TraceTo %GITHUB_WORKSPACE%\JNetReflector.txt -CopyrightFile %GITHUB_WORKSPACE%\src\copyright.txt -OriginRootPath %GITHUB_WORKSPACE%\jars -DestinationRootPath %GITHUB_WORKSPACE%\src\ -ConfigurationFile %GITHUB_WORKSPACE%\src\configuration.json
+        run: jnetreflector ${{ env.AVOID_PARALLEL_BUILD }} -TraceLevel ${{ inputs.TraceLevel }} -TraceTo %GITHUB_WORKSPACE%\JNetReflector.txt -CopyrightFile %GITHUB_WORKSPACE%\src\copyright.txt -OriginRootPath %GITHUB_WORKSPACE%\jars -DestinationRootPath %GITHUB_WORKSPACE%\src\ -ConfigurationFile %GITHUB_WORKSPACE%\src\configuration.json
 
       - uses: actions/upload-artifact@v7
         with:

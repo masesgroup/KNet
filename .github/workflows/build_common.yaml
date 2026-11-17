@@ -122,9 +122,7 @@ jobs:
 
       - uses: actions/setup-dotnet@v6
         with:
-          dotnet-version: |
-            9.x
-            10.x
+          dotnet-version: '11.x'
 
       - name: Download pscp directly
         if: ${{ inputs.UseSpecialSettings == true }}
@@ -239,9 +237,8 @@ jobs:
       - name: Prepare configuration files
         run: |
           Copy-Item .github\workflows\support\* -Destination bin\net462\ -Force
-          Copy-Item .github\workflows\support\* -Destination bin\net8.0\ -Force
-          Copy-Item .github\workflows\support\* -Destination bin\net9.0\ -Force
           Copy-Item .github\workflows\support\* -Destination bin\net10.0\ -Force
+          Copy-Item .github\workflows\support\* -Destination bin\net11.0\ -Force
 
       - name: Save KNet net462 bin in cache
         uses: actions/cache/save@v6
@@ -250,26 +247,19 @@ jobs:
           path: ./bin/net462/
           key: KNet_${{ github.run_number }}_${{ github.run_attempt }}_net462_bin_${{ github.sha }}
           
-      - name: Save KNet net8.0 bin in cache
-        uses: actions/cache/save@v6
-        with:
-          enableCrossOsArchive: true
-          path: ./bin/net8.0/
-          key: KNet_${{ github.run_number }}_${{ github.run_attempt }}_net8.0_bin_${{ github.sha }}
-          
-      - name: Save KNet net9.0 bin in cache
-        uses: actions/cache/save@v6
-        with:
-          enableCrossOsArchive: true
-          path: ./bin/net9.0/
-          key: KNet_${{ github.run_number }}_${{ github.run_attempt }}_net9.0_bin_${{ github.sha }}
-
       - name: Save KNet net10.0 bin in cache
         uses: actions/cache/save@v6
         with:
           enableCrossOsArchive: true
           path: ./bin/net10.0/
           key: KNet_${{ github.run_number }}_${{ github.run_attempt }}_net10.0_bin_${{ github.sha }}
+
+      - name: Save KNet net11.0 bin in cache
+        uses: actions/cache/save@v6
+        with:
+          enableCrossOsArchive: true
+          path: ./bin/net11.0/
+          key: KNet_${{ github.run_number }}_${{ github.run_attempt }}_net11.0_bin_${{ github.sha }}
 
       - name: Save KNet NuGet in cache
         uses: actions/cache/save@v6
@@ -298,9 +288,7 @@ jobs:
 
       - uses: actions/setup-dotnet@v6
         with:
-          dotnet-version: |
-            9.x
-            10.x
+          dotnet-version: '11.x'
 
       - name: Install sshpass
         if: ${{ inputs.UseSpecialSettings == true }}
@@ -377,7 +365,7 @@ jobs:
         uses: docker/setup-buildx-action@v4
 
       - name: Login to GitHub Container Registry
-        uses: docker/login-action@v4.6.0
+        uses: docker/login-action@v4.8.0
         with:
           registry: ghcr.io
           username: ${{ secrets.actor }}
@@ -449,7 +437,7 @@ jobs:
         run: echo "matrix_mac=[ 'macos-15' ]" >> $GITHUB_OUTPUT
       - id: set-matrix-mac-os-ext
         if: ${{ inputs.ExecuteOnMoreOSes == true }}
-        run: echo "matrix_mac=[ 'macos-14', 'macos-15', 'macos-26', 'macos-26-intel' ]" >> $GITHUB_OUTPUT
+        run: echo "matrix_mac=[ 'macos-15', 'macos-15-intel', 'macos-26', 'macos-26-intel' ]" >> $GITHUB_OUTPUT
 
   execute_tests_linux:
     if: ${{ inputs.EnableLinuxTests == true }}
@@ -472,7 +460,7 @@ jobs:
       matrix:
         extra_arguments: [ '', 'withPrefetch' ]
         os: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_linux_os) }}
-        framework: [ 'net8.0', 'net9.0', 'net10.0' ]
+        framework: [ 'net10.0', 'net11.0' ]
         jdk_vendor: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_jdk_vendor) }}
         jdk_version: [ '17', '21', '25' ] # only supported LTS versions
         
@@ -512,16 +500,9 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN_INHERITED }}
 
       - uses: actions/setup-dotnet@v6
-        if: ${{ matrix.framework == 'net9.0' }}
+        if: ${{ matrix.framework == 'net11.0' }}
         with:
-          dotnet-version: |
-            9.x
-
-      - uses: actions/setup-dotnet@v6
-        if: ${{ matrix.framework == 'net10.0' }}
-        with:
-          dotnet-version: |
-            10.x
+          dotnet-version: '11.x'
 
       - name: Execute KNetTest useConsumeCallback randomizeTopicName ${{ matrix.extra_arguments }} on ${{ matrix.os }} with ${{ matrix.jdk_vendor }} ${{ matrix.jdk_version }}
         continue-on-error: ${{ inputs.ForceContinueOnError == true }}
@@ -580,7 +561,7 @@ jobs:
       matrix:
         extra_arguments: [ '', 'withPrefetch' ]
         os: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_win_os) }}
-        framework: [ 'net462', 'net8.0', 'net9.0', 'net10.0' ]
+        framework: [ 'net462', 'net10.0', 'net11.0' ]
         jdk_vendor: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_jdk_vendor) }}
         jdk_version: [ '17', '21', '25' ] # only supported LTS versions
         exclude:
@@ -633,10 +614,9 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN_INHERITED }}
 
       - uses: actions/setup-dotnet@v6
-        if: ${{ matrix.framework == 'net10.0' }}
+        if: ${{ matrix.framework == 'net11.0' }}
         with:
-          dotnet-version: |
-            10.x
+          dotnet-version: '11.x'
 
       - name: Download Procdump and prepare # see https://gist.github.com/Sedeniono/e6d6504e3bf0645937852ee5681ef9ee and https://learn.microsoft.com/it-it/sysinternals/downloads/procdump
         if: ${{ inputs.EnableProcessDump == 1 }}
@@ -716,7 +696,7 @@ jobs:
       matrix:
         extra_arguments: [ '', 'withPrefetch' ]
         os: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_mac_os) }}
-        framework: [ 'net8.0', 'net9.0', 'net10.0' ]
+        framework: [ 'net10.0', 'net11.0' ]
         jdk_vendor: ${{ fromJSON(needs.prepare_matrix_data.outputs.matrix_jdk_vendor) }}
         jdk_version: [ '17', '21', '25' ] # only supported LTS versions
         
@@ -764,22 +744,15 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN_INHERITED }}
 
       - uses: actions/setup-dotnet@v6
-        if: ${{ matrix.framework == 'net8.0' }}
-        with:
-          dotnet-version: |
-            8.x
-
-      - uses: actions/setup-dotnet@v6
-        if: ${{ matrix.framework == 'net9.0' }}
-        with:
-          dotnet-version: |
-            9.x
-
-      - uses: actions/setup-dotnet@v6
-        if: ${{ matrix.framework == 'net10.0' }}
+        if: matrix.framework == 'net10.0'
         with:
           dotnet-version: |
             10.x
+
+      - uses: actions/setup-dotnet@v6
+        if: ${{ matrix.framework == 'net11.0' }}
+        with:
+          dotnet-version: '11.x'
 
       - name: Use latest version of KNetCLI
         run: dotnet tool update -g MASES.KNetCLI --prerelease --source ${{ github.workspace }}/bin

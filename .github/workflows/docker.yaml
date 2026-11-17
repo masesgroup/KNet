@@ -29,9 +29,7 @@ jobs:
 
       - uses: actions/setup-dotnet@v6
         with:
-          dotnet-version: |
-            9.x
-            10.x
+          dotnet-version: '11.x'
 
       - name: Pre compile
         run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" /p:NoWarn="0108%3B1030%3B0618%3B0612" src/net/KNet/KNet.csproj
@@ -55,13 +53,13 @@ jobs:
         uses: docker/setup-buildx-action@v4
 
       - name: Login to Docker Container Registry
-        uses: docker/login-action@v4.6.0
+        uses: docker/login-action@v4.8.0
         with:
           username: ${{ secrets.MASES_DOCKER_HUB_USERNAME }}
           password: ${{ secrets.MASES_DOCKER_HUB_PASSWORD }}
 
       - name: Login to GitHub Container Registry
-        uses: docker/login-action@v4.6.0
+        uses: docker/login-action@v4.8.0
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
