@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Metadata.Properties
 {
     #region PropertiesUtils declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/metadata/properties/PropertiesUtils.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.4.0/org/apache/kafka/metadata/properties/PropertiesUtils.html"/>
     /// </summary>
     public partial class PropertiesUtils : MASES.JCOBridge.C2JBridge.JVMBridgeBase<PropertiesUtils>
     {
@@ -64,7 +64,7 @@ namespace Org.Apache.Kafka.Metadata.Properties
     {
         #region Constructors
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/metadata/properties/PropertiesUtils.html#%3Cinit%3E()"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.4.0/org/apache/kafka/metadata/properties/PropertiesUtils.html#%3Cinit%3E()"/>
         /// </summary>
         public PropertiesUtils() : base(JVMBridgeBase.InitializerInstance)
         {
@@ -90,7 +90,7 @@ namespace Org.Apache.Kafka.Metadata.Properties
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/metadata/properties/PropertiesUtils.html#readPropertiesFile(java.lang.String)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.4.0/org/apache/kafka/metadata/properties/PropertiesUtils.html#readPropertiesFile(java.lang.String)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Lang.String"/></param>
         /// <returns><see cref="Java.Util.Properties"/></returns>
@@ -100,7 +100,7 @@ namespace Org.Apache.Kafka.Metadata.Properties
             return SExecuteWithSignature<Java.Util.Properties>(LocalBridgeClazz, "readPropertiesFile", "(Ljava/lang/String;)Ljava/util/Properties;", arg0);
         }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.3.1/org/apache/kafka/metadata/properties/PropertiesUtils.html#writePropertiesFile(java.util.Properties,java.lang.String,boolean)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-server-common/4.4.0/org/apache/kafka/metadata/properties/PropertiesUtils.html#writePropertiesFile(java.util.Properties,java.lang.String,boolean)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.Properties"/></param>
         /// <param name="arg1"><see cref="Java.Lang.String"/></param>

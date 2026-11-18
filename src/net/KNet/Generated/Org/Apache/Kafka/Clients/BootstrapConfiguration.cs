@@ -27,7 +27,7 @@ namespace Org.Apache.Kafka.Clients
 {
     #region BootstrapConfiguration declaration
     /// <summary>
-    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/BootstrapConfiguration.html"/>
+    /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.4.0/org/apache/kafka/clients/BootstrapConfiguration.html"/>
     /// </summary>
     public partial class BootstrapConfiguration : MASES.JCOBridge.C2JBridge.JVMBridgeBase<BootstrapConfiguration>
     {
@@ -72,23 +72,23 @@ namespace Org.Apache.Kafka.Clients
 
         #region Fields
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/BootstrapConfiguration.html#bootstrapServers"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.4.0/org/apache/kafka/clients/BootstrapConfiguration.html#bootstrapServers"/>
         /// </summary>
         public Java.Util.List bootstrapServers { get { return IGetField<Java.Util.List>("bootstrapServers"); } set { ISetField("bootstrapServers", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/BootstrapConfiguration.html#bootstrapResolveTimeoutMs"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.4.0/org/apache/kafka/clients/BootstrapConfiguration.html#bootstrapResolveTimeoutMs"/>
         /// </summary>
         public long bootstrapResolveTimeoutMs { get { return IGetField<long>("bootstrapResolveTimeoutMs"); } set { ISetField("bootstrapResolveTimeoutMs", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/BootstrapConfiguration.html#retryBackoffMs"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.4.0/org/apache/kafka/clients/BootstrapConfiguration.html#retryBackoffMs"/>
         /// </summary>
         public long retryBackoffMs { get { return IGetField<long>("retryBackoffMs"); } set { ISetField("retryBackoffMs", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/BootstrapConfiguration.html#clientDnsLookup"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.4.0/org/apache/kafka/clients/BootstrapConfiguration.html#clientDnsLookup"/>
         /// </summary>
         public Org.Apache.Kafka.Clients.ClientDnsLookup clientDnsLookup { get { return IGetField<Org.Apache.Kafka.Clients.ClientDnsLookup>("clientDnsLookup"); } set { ISetField("clientDnsLookup", value); } }
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/BootstrapConfiguration.html#DISABLED"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.4.0/org/apache/kafka/clients/BootstrapConfiguration.html#DISABLED"/>
         /// </summary>
         public static Org.Apache.Kafka.Clients.BootstrapConfiguration DISABLED { get { return SGetField<Org.Apache.Kafka.Clients.BootstrapConfiguration>(LocalBridgeClazz, "DISABLED"); } set { SSetField(LocalBridgeClazz, "DISABLED", value); } }
 
@@ -96,7 +96,7 @@ namespace Org.Apache.Kafka.Clients
 
         #region Static methods
         /// <summary>
-        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.3.1/org/apache/kafka/clients/BootstrapConfiguration.html#enabled(java.util.List,org.apache.kafka.clients.ClientDnsLookup,long,long)"/>
+        /// <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-clients/4.4.0/org/apache/kafka/clients/BootstrapConfiguration.html#enabled(java.util.List,org.apache.kafka.clients.ClientDnsLookup,long,long)"/>
         /// </summary>
         /// <param name="arg0"><see cref="Java.Util.List"/></param>
         /// <param name="arg1"><see cref="Org.Apache.Kafka.Clients.ClientDnsLookup"/></param>

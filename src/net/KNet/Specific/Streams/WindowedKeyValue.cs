@@ -136,7 +136,7 @@ namespace MASES.KNet.Streams
         }
 
         /// <summary>
-        /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/KeyValue.html#key"/>
+        /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.4.0/org/apache/kafka/streams/KeyValue.html#key"/>
         /// </summary>
         public Windowed<K, TJVMK> Key
         {
@@ -148,7 +148,7 @@ namespace MASES.KNet.Streams
             }
         }
         /// <summary>
-        /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.3.1/org/apache/kafka/streams/KeyValue.html#value"/>
+        /// KNet implementation of <see href="https://www.javadoc.io/doc/org.apache.kafka/kafka-streams/4.4.0/org/apache/kafka/streams/KeyValue.html#value"/>
         /// </summary>
         public V Value
         {
